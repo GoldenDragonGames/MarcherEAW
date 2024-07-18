@@ -733,7 +733,7 @@
       <description>When rolling to attack with this weapon, if you roll a 10, score an additional hit.</description>
     </rule>
     <rule id="4911-2380-864d-8b44" name="Suppressive" hidden="false">
-      <description>When a Unit is attacked with this weapon, it gains one additional Suppression Token.</description>
+      <description>When a unit is hit by weapon(s) with the &quot;Suppressive&quot; keyword, it gains an additional suppression token. (This effect is cumulative)</description>
     </rule>
     <rule id="5d4a-ecea-623a-a136" name="Blast" hidden="false">
       <description>Blast templates used by this unit are of diameter X. When performing an attack action with this weapon, select a Blast template within this weapon&apos;s range. This attack automatically hits any units that have models within the template.  Remove the template after resolving an attack.</description>
@@ -754,7 +754,7 @@
       <description>This weapon may only be selected to fire x times per unit per game.</description>
     </rule>
     <rule id="73c0-9282-d155-0b35" name="Transport" hidden="false">
-      <description>You may embark X models with the infantry keyword inside this model. Models with three or more hitpoints count as two models.</description>
+      <description>You may embark X models with the infantry keyword inside this model. Models with five or more hitpoints count as two models.</description>
     </rule>
     <rule id="c1ce-d022-923f-3147" name="Logistics" hidden="false">
       <description>At the beginning of each set up phase gain a supply point (SP).</description>
@@ -851,7 +851,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>While making an attack using a weapon with this special rule, if within half range of the target, double your hits, AP, and damage profiles.</description>
     </rule>
     <rule name="Slag" id="aaa4-8ad4-e93e-7ead" hidden="false">
-      <description>When a unit is hit by a weapon with the &quot;Slag&quot; keyword, its armor value is reduced by 1 until the end of the round. (This effect is cumulative)</description>
+      <description>When a unit is hit by weapon(s) with the &quot;Slag&quot; keyword, its armor value is reduced by 1 until the end of the round. (This effect is cumulative)</description>
     </rule>
     <rule name="Searing" id="56bf-a271-a758-6f38" hidden="false">
       <description>Attacks from this weapon ignore armor values less than 5.</description>
@@ -863,7 +863,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>This unit may not control objectives</description>
     </rule>
     <rule name="Aerial Deployment" id="a61e-7e07-d7da-e915" hidden="false">
-      <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 10&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.)</description>
+      <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.)</description>
     </rule>
     <rule name="Light on their feet" id="f708-1439-cbbe-6850" hidden="false">
       <description>This unit may take the flee reaction while losing only a single action during its following activation.</description>
@@ -887,10 +887,19 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>This unit gets +1 to hit when making ranged attacks while in contact with difficult terrain.</description>
     </rule>
     <rule name="Forward Positions" id="239f-191a-232-4894" hidden="false">
-      <description>This unit may be deployed outside of your deployment zone as long as it is more than 9&quot; away from the enemy deployment zone or any enemy models.</description>
+      <description>This unit may be deployed outside of your deployment zone as long as it is more than 8&quot; away from the enemy deployment zone or any enemy models.</description>
     </rule>
     <rule name="Patch-Up" id="5c34-f6f8-aee6-439c" hidden="false">
       <description>As an action, select a friendly infantry unit within 3&quot; (including this unit). That unit either restores all wounds lost by one of its models or revives a destroyed model, returning it to the unit with 1 wound remaining.</description>
+    </rule>
+    <rule name="Elite Infantry" id="12fb-381c-5514-6d51" hidden="false">
+      <description>This unit only becomes suppressed when it has 3 suppression tokens and pinned when it has 6 suppression tokens.</description>
+    </rule>
+    <rule name="Agile" id="7563-c17b-bc3c-4f99" hidden="false">
+      <description>This unit may benefit from cover as though it were infantry.</description>
+    </rule>
+    <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
+      <description>When this unit is deployed, it may immediately take the Build or Destroy action once.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -948,6 +957,14 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Infantry Officer Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="237b-8d1e-014e-539d">
+      <characteristics>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Go Prone</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture, Rally</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
