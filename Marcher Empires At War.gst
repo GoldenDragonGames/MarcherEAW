@@ -80,6 +80,7 @@
   <forceEntries>
     <forceEntry name="Armor Platoon" id="fae0-4a12-4ae4-5f9b" hidden="false">
       <categoryLinks>
+        <categoryLink name="Armor Platoon Configuration" hidden="false" id="4d46-8d92-2967-4294" targetId="8d88-522f-d086-d712" primary="false"/>
         <categoryLink name="Command" hidden="false" id="125f-6646-3405-160a" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="beab-a037-c98d-f6d4" includeChildSelections="false"/>
@@ -91,7 +92,6 @@
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="61af-eb8a-5621-2d51" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Armor Platoon Configuration" hidden="false" id="4d46-8d92-2967-4294" targetId="8d88-522f-d086-d712" primary="false"/>
         <categoryLink name="Unit" hidden="false" id="5eb9-d15d-3b93-5085" targetId="1e39-16b1-cedd-2cc6">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="cab1-e407-7064-7629" includeChildSelections="false"/>
@@ -109,6 +109,7 @@
     </forceEntry>
     <forceEntry name="Artillery Platoon" id="d61b-5a5c-9008-3c0b" hidden="false">
       <categoryLinks>
+        <categoryLink name="Artillery Platoon Configuration" hidden="false" id="f772-61f7-8c62-52b6" targetId="a448-7c15-64c5-b50f" primary="false"/>
         <categoryLink name="Command" hidden="false" id="88e8-dd88-670f-ca67" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="85ef-6c3d-6db5-8195" includeChildSelections="false"/>
@@ -120,7 +121,6 @@
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d249-a21e-6882-50c4" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Artillery Platoon Configuration" hidden="false" id="f772-61f7-8c62-52b6" targetId="a448-7c15-64c5-b50f" primary="false"/>
         <categoryLink name="Unit" hidden="false" id="884d-8c43-7f17-763e" targetId="1e39-16b1-cedd-2cc6">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b928-7251-4f74-704e" includeChildSelections="false"/>
@@ -165,11 +165,6 @@
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <repeats>
-                <repeat value="-1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink name="Unit" hidden="false" id="eb26-8d0c-2f76-c3a5" targetId="1e39-16b1-cedd-2cc6">
@@ -201,6 +196,7 @@
     </forceEntry>
     <forceEntry name="Mechanized Platoon" id="29bb-b3e2-3fbb-9ad5" hidden="false">
       <categoryLinks>
+        <categoryLink name="Mechanized Platoon Configuration" hidden="false" id="b044-04a1-2e36-d6f3" targetId="e281-74c9-b00c-1884" primary="false"/>
         <categoryLink name="Command" hidden="false" id="4924-42e4-59c7-a760" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8967-f9a-ae82-56e0" includeChildSelections="false"/>
@@ -212,6 +208,12 @@
         <categoryLink name="Infantry" hidden="false" id="0a9c-4572-fdc3-8da3" targetId="59ff-44cb-cb53-760d" primary="false">
           <constraints>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f5d6-ee93-6772-3ac6" includeChildSelections="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Support Infantry" hidden="false" id="aff3-8212-198a-042b" targetId="0463-bfe4-198d-b1a5" primary="false"/>
+        <categoryLink name="Infantry Support" hidden="false" id="3c0d-4b38-91d7-17ba" targetId="96e8-513f-beca-e624" primary="false">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="528b-7511-a0c8-6c1c" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Recon Infantry" hidden="false" id="a5c1-4147-a698-935a" targetId="aa05-ee4c-c4d5-7e23" primary="false"/>
@@ -232,11 +234,6 @@
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <repeats>
-                <repeat value="-1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink name="Heavy Transports" hidden="true" id="0867-8d79-172a-8313" targetId="1dd3-025a-e394-fd6b" primary="false">
@@ -246,19 +243,7 @@
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <repeats>
-                <repeat value="-1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
           </modifiers>
-        </categoryLink>
-        <categoryLink name="Mechanized Platoon Configuration" hidden="false" id="b044-04a1-2e36-d6f3" targetId="e281-74c9-b00c-1884" primary="false"/>
-        <categoryLink name="Support Infantry" hidden="false" id="aff3-8212-198a-042b" targetId="0463-bfe4-198d-b1a5" primary="false"/>
-        <categoryLink name="Infantry Support" hidden="false" id="3c0d-4b38-91d7-17ba" targetId="96e8-513f-beca-e624" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="528b-7511-a0c8-6c1c" includeChildSelections="false"/>
-          </constraints>
         </categoryLink>
         <categoryLink name="Unit" hidden="false" id="d62-e7c1-90cc-cc4a" targetId="1e39-16b1-cedd-2cc6">
           <constraints>
@@ -289,6 +274,7 @@
     </forceEntry>
     <forceEntry name="Recon Platoon" id="df9c-5241-555f-2018" hidden="false">
       <categoryLinks>
+        <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
         <categoryLink name="Command" hidden="false" id="d0f1-279b-c2cb-5de6" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="20f4-af70-bb12-ec73" includeChildSelections="false"/>
@@ -306,7 +292,6 @@
           </constraints>
         </categoryLink>
         <categoryLink name="Recon" hidden="false" id="72fb-7f2a-fa2b-0f4f" targetId="481b-63e9-517b-180b" primary="false"/>
-        <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
         <categoryLink name="Unit" hidden="false" id="72c3-98ce-d99b-c489" targetId="1e39-16b1-cedd-2cc6">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="418c-b4e9-fbe2-f1af" includeChildSelections="false"/>
@@ -324,6 +309,7 @@
     </forceEntry>
     <forceEntry name="Support Platoon" id="c571-bda4-1e0f-ed1f" hidden="false">
       <categoryLinks>
+        <categoryLink name="Support Platoon Configuration" hidden="false" id="4f7e-1819-2fb1-7f22" targetId="3cff-c57c-6289-d24c" primary="false"/>
         <categoryLink name="Command" hidden="false" id="fcfb-2bd5-36b0-c375" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a62e-3558-58c-b3bd" includeChildSelections="false"/>
@@ -346,8 +332,15 @@
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="ff14-c0f4-fd8c-f1b6" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Light Transports" hidden="false" id="1cb7-9ef7-51c6-f4a3" targetId="d4be-5aad-8560-5720" primary="false"/>
-        <categoryLink name="Support Platoon Configuration" hidden="false" id="4f7e-1819-2fb1-7f22" targetId="3cff-c57c-6289-d24c" primary="false"/>
+        <categoryLink name="Light Transports" hidden="true" id="1015-0b71-bc64-8b62" targetId="d4be-5aad-8560-5720" primary="false">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
         <categoryLink name="Unit" hidden="false" id="d3a9-6bac-7619-5020" targetId="1e39-16b1-cedd-2cc6">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="578d-b927-9b9c-bcc5" includeChildSelections="false"/>
