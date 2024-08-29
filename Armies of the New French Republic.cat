@@ -1010,7 +1010,6 @@
       </profiles>
       <infoLinks>
         <infoLink name="Armor Actions" id="5d85-f549-14-53de" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
-        <infoLink name="Armored" id="cc00-cb5d-a11f-1e42" hidden="false" type="rule" targetId="17b7-2b07-3f19-2098"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Pintle Weapon" hidden="false" id="f9a1-8ef9-5371-9f0e">
@@ -1174,6 +1173,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c04e-6e84-a337-1ee7-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7763-03e9-57ad-cce4" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Character" id="25a7-5cfc-170a-458c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
@@ -1208,6 +1208,7 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="efc-2caa-9a99-5af0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="bf61-106e-eeb6-089a" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Character" id="1ecb-353d-fdac-ab93" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
@@ -1267,7 +1268,6 @@
       <infoLinks>
         <infoLink name="Steel Legs" id="e6dd-7e0b-affc-da1b" hidden="false" type="rule" targetId="740c-be52-5a59-9265"/>
         <infoLink name="Recon Vehicle Actions" id="1d9a-3fb6-a016-9d" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
-        <infoLink name="Armored" id="5054-f2ea-8c68-d4a7" hidden="false" type="rule" targetId="17b7-2b07-3f19-2098"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Turret Weapons" id="f8ae-2cde-770e-a795" hidden="false" defaultSelectionEntryId="7ab3-51c7-7105-fd99">
@@ -1334,13 +1334,13 @@
       </costs>
       <infoLinks>
         <infoLink name="Canon de 40mm" id="77b1-9794-641c-2566" hidden="false" type="profile" targetId="5616-3c1-90af-9793"/>
+        <infoLink name="High Explosive" id="8ef8-dc42-2df0-21cc" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="CAIM 38 &quot;Danton&quot; Support Walker" hidden="false" id="f48-371e-f0c0-e0ed">
       <infoLinks>
         <infoLink name="Steel Legs" id="605d-189c-54d5-d8f8" hidden="false" type="rule" targetId="740c-be52-5a59-9265"/>
         <infoLink name="Support Artillery Actions" id="ad7f-c97-1125-b36f" hidden="false" type="profile" targetId="1761-68e7-b0e6-e086"/>
-        <infoLink name="Armored" id="a451-6e9f-ab78-1cd2" hidden="false" type="rule" targetId="17b7-2b07-3f19-2098"/>
       </infoLinks>
       <profiles>
         <profile name="CAIM 38 &quot;Danton&quot; Support Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4ea5-7126-5cdf-7de5">
@@ -1506,9 +1506,10 @@
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="20"/>
+                <cost name="Munitions" typeId="Points" value="34"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Carriage Weapons" id="494d-37a3-8e09-34c6" hidden="false" defaultSelectionEntryId="415e-f19a-29b5-5a50">
@@ -1803,14 +1804,20 @@
       </profiles>
       <infoLinks>
         <infoLink name="Transport Actions" id="cca1-a170-c050-6f20" hidden="false" type="profile" targetId="d3bd-9092-41d2-8882"/>
-        <infoLink name="Transport" id="d06d-a7b2-1fec-23d7" hidden="false" type="rule" targetId="73c0-9282-d155-0b35"/>
         <infoLink name="Burrowing" id="2db6-3b30-35f5-600f" hidden="false" type="rule" targetId="ed5f-b19a-332-fe86"/>
-        <infoLink name="Armored" id="f15b-22fc-1b82-13b1" hidden="false" type="rule" targetId="17b7-2b07-3f19-2098"/>
         <infoLink name="Safe Bailout" id="4ab-8e57-b519-8e56" hidden="false" type="rule" targetId="40dd-ac7-61eb-eaf6"/>
+        <infoLink name="Transport" id="30e9-444d-4803-4124" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
+          <modifiers>
+            <modifier type="append" value="16" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Tunneling" id="50e4-2891-a8a0-5ddc" hidden="false">
           <description>This unit may use two actions to tunnel if it is not in engagement range. When it does so, remove it from the board. It may be redeployed using burrowing.</description>
+        </rule>
+        <rule name="Dieu des taupes" id="33f0-e232-9b8c-1662" hidden="false">
+          <description>When this model is deployed using its burrowing ability, place a 100mm Taupe token in contact with it. This token connects to all Taupe tokens on the map.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -1860,9 +1867,12 @@
     <selectionEntry type="unit" import="true" name="P28 Armored Truck" hidden="false" id="c327-8642-c05b-6a6c">
       <infoLinks>
         <infoLink name="Transport Actions" id="69e2-4cf7-a1be-16b4" hidden="false" type="profile" targetId="d3bd-9092-41d2-8882"/>
-        <infoLink name="Transport" id="5a47-b685-7f3d-4415" hidden="false" type="rule" targetId="73c0-9282-d155-0b35"/>
-        <infoLink name="Armored" id="25d5-8973-4ed5-ebac" hidden="false" type="rule" targetId="17b7-2b07-3f19-2098"/>
         <infoLink name="Bailout" id="ae52-7d7c-a4cf-fb60" hidden="false" type="rule" targetId="4f87-d052-cf5f-ceec"/>
+        <infoLink name="Transport" id="466a-73cd-6ed5-abc2" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
+          <modifiers>
+            <modifier type="append" value="16" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="c03b-70fd-e4c3-e943" hidden="false">
@@ -1984,9 +1994,12 @@
     <selectionEntry type="unit" import="true" name="P28 Armored Half-Track" hidden="false" id="c7a6-4dde-4c76-345f">
       <infoLinks>
         <infoLink name="Transport Actions" id="f8d2-a895-3e0b-f3a8" hidden="false" type="profile" targetId="d3bd-9092-41d2-8882"/>
-        <infoLink name="Transport" id="1388-8a26-b4f3-5979" hidden="false" type="rule" targetId="73c0-9282-d155-0b35"/>
-        <infoLink name="Armored" id="56bb-f8a4-be2-4ee5" hidden="false" type="rule" targetId="17b7-2b07-3f19-2098"/>
         <infoLink name="Bailout" id="d252-5ff8-38f5-3f9a" hidden="false" type="rule" targetId="4f87-d052-cf5f-ceec"/>
+        <infoLink name="Transport" id="bee1-b076-9a43-004c" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
+          <modifiers>
+            <modifier type="append" value="16" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Turret Weapons" id="8e2a-7e69-1cb-ee90" hidden="false" defaultSelectionEntryId="377a-3796-7e3c-c0f8">
@@ -2086,6 +2099,9 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a554-2aef-39e0-d6ae" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="a844-f262-bac9-5c11" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Major Marie Courtemanche" hidden="false" id="42b0-6cfa-62df-10c3">
       <entryLinks>
@@ -2107,15 +2123,17 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd4b-8cf9-77d2-9051-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7ae2-fe8c-579a-24c8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Character" id="8e4e-430a-ca22-723c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
         <infoLink name="Infantry Officer Actions" id="0e4c-f021-2a9d-5f1f" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="40"/>
+        <cost name="Munitions" typeId="Points" value="30"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <profiles>
         <profile name="Major Marie Courtemanche" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="65de-cbce-d6c5-627d">
@@ -2526,6 +2544,24 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5b5-5a37-e700-2c51" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="a92f-03c4-0873-5b0c" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="2f5a-0e72-1b81-0c06" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="e7e3-f289-4bc7-d237" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="b229-5565-b7bb-947e" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="d20e-f79d-cbc2-0767" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8eff-c40e-7150-a877" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdf6-96da-e892-54b0" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
               </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Grenade Launcher" hidden="false" id="1ae2-95b4-e90d-4ae" collective="false">
@@ -2556,6 +2592,26 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="a444-dc6f-693f-b007" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="3621-3d20-1047-7b6e" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="3ab7-2945-f199-7d77" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="ab99-bd35-d0b9-16ae" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="ccdc-9994-1338-1f46" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a582-fb95-3b2b-889b" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23a0-027d-d5d3-cac0" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave" hidden="false" id="16be-90a-3a80-ef7c" collective="false">
               <constraints>
@@ -2586,6 +2642,26 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="7e04-167b-e5c1-2b55" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="1215-0933-2965-0840" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="14c9-3283-5b8c-261a" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="45ce-906d-e6e1-7535" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="3af7-99b9-ffe0-4bd8" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c10d-99cf-dd03-b8a7" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ad-befe-e73b-d307" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Marksman Rifle" hidden="false" id="4ab5-d33b-4ad4-ece5" collective="false">
               <constraints>
@@ -2615,6 +2691,26 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="681f-0f7f-21bd-82bf" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="fe6d-8b31-d310-d5b7" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="79c7-640f-a02b-f81d" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="71d5-9987-10e6-c124" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="dfd6-5a9e-9e40-45e4" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6204-ae2b-f6bc-9952" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35a3-b784-989d-4443" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Plasma Launcher" hidden="false" id="59f9-b945-7e9c-98b0" collective="false">
               <constraints>
@@ -2644,6 +2740,26 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="8911-f51f-5d0d-af06" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="09c7-4ebc-973a-00f5" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="e005-2ba7-ec40-5cb5" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="6156-ec3c-fb59-5d71" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="c409-251f-aa52-2c33" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed42-749b-34c6-ef92" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d5c-5507-a516-56ba" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Chaleur" hidden="false" id="27b7-8664-39a4-84b8" collective="false">
               <constraints>
@@ -2673,6 +2789,26 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="def0-d790-0fec-82a4" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="85ad-11ee-5c20-5faa" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="e071-ef9d-fd4d-9545" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="443e-1b7e-140e-e6bb" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="a390-895c-2ea4-f652" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0633-3f8f-9983-d3d9" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b67a-70f5-d41e-8512" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Machine Gun" hidden="false" id="50f0-93e0-5fa3-2cce" collective="false">
               <constraints>
@@ -2702,6 +2838,26 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="8ddc-5daf-4d56-b7e9" collective="true">
+                  <infoLinks>
+                    <infoLink name="Fragmentation Grenade" id="5836-cb17-3040-3e3e" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+                    <infoLink name="Difficult to Use" id="3f5c-aeb0-2827-9a4a" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
+                    <infoLink name="High Explosive" id="e1eb-fd34-6e62-3155" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
+                    <infoLink name="Close In" id="1cea-b82f-6536-1de1" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c3f-0371-acac-1298" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e78-482c-2170-f1d0" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2778,7 +2934,6 @@
       </profiles>
       <infoLinks>
         <infoLink name="Crushing Treads" id="31a8-8a8d-92be-3cc" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
-        <infoLink name="Armored" id="2190-e666-7c39-1984" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink name="Forward Positions" id="6b04-e4a1-6fdd-cd5f" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -2898,6 +3053,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da5a-766b-f6a7-bc46" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7e60-fc2c-f3a2-3233" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Character" id="921e-e66c-e7bc-a8f5" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
@@ -3018,7 +3174,6 @@
       </profiles>
       <infoLinks>
         <infoLink name="Crushing Treads" id="b469-b495-491b-855b" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
-        <infoLink name="Armored" id="a81b-7056-21b6-5cce" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink name="Artillery Actions" id="21d9-aa4a-f587-1ab2" hidden="false" type="profile" targetId="8aaf-072f-5000-d2b9"/>
       </infoLinks>
       <selectionEntryGroups>

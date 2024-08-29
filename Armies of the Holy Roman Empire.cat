@@ -935,7 +935,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="934c-bbcf-241a-a80b" name="Armored" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink id="6b53-554c-155a-0467" name="Crushing Treads" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
         <infoLink id="0ddd-d16e-42f7-fefb" name="Armor Actions" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
         <infoLink id="12c7-ffcb-a0b3-b15a" name="Shielded" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
@@ -982,7 +981,7 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c1f5-6765-874a-4cff" name="Schutzen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c1f5-6765-874a-4cff" name="Schürzen" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c3e-c3c8-ed1f-6bd3" type="max"/>
           </constraints>
@@ -991,6 +990,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Up-Armored" id="e7ae-842a-5739-354d" hidden="false" type="rule" targetId="1f7c-515a-0ef2-8614"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Trench Rails" hidden="false" id="3862-6c15-85e6-8853">
           <costs>
@@ -1551,7 +1553,7 @@
       <infoLinks>
         <infoLink id="d044-9596-6f4d-f9d1" name="Transport" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value="11"/>
+            <modifier type="append" field="name" value="16"/>
           </modifiers>
         </infoLink>
         <infoLink id="07ee-13ba-6ca1-ee7c" name="Transport Actions" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
@@ -1591,7 +1593,7 @@
       <infoLinks>
         <infoLink id="9d8a-905d-fbb6-8e79" name="Transport" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value="11"/>
+            <modifier type="append" field="name" value="16"/>
           </modifiers>
         </infoLink>
         <infoLink id="3cb4-4dff-6a0d-cd52" name="Transport Actions" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
@@ -1673,7 +1675,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="22e7-44bb-2232-75b3" name="Armored" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink id="2807-8054-a48e-c5c5" name="Crushing Treads" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
         <infoLink id="ee51-f845-bbc9-0f5d" name="Armor Actions" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
         <infoLink id="fb21-ee11-f559-2b91" name="Shielded" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
@@ -1683,7 +1684,7 @@
         </infoLink>
         <infoLink id="b0f4-095b-56fe-248c" name="Transport" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value="12"/>
+            <modifier type="append" field="name" value="16"/>
           </modifiers>
         </infoLink>
         <infoLink name="Safe Bailout" id="4879-8377-574a-ab51" hidden="false" type="rule" targetId="40dd-ac7-61eb-eaf6"/>
@@ -1970,7 +1971,7 @@
       </costs>
       <rules>
         <rule name="Form MG36 Team" id="2247-c00d-59a4-4427" hidden="false">
-          <description>You may remove two models from this unit and add one MG36 team model. This unit is equipped with all equipment and hit points from the removed models, as well as one MG36 Medium Machine Gun.</description>
+          <description>You may remove two models from this unit and add one MG36 team model. This unit is equipped with all equipment and hit points from the removed models, as well as one MG36 Medium Machine Gun. Limit one team per unit.</description>
         </rule>
         <rule name="Tűzön-vízen át!" id="aa86-e984-34d7-f568" hidden="false">
           <description>This unit may move through difficult terrain with no penalties.</description>
@@ -1996,7 +1997,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="69a2-4cf8-01ba-3d12" name="Armored" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink id="2109-10a7-227c-c344" name="Crushing Treads" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
         <infoLink id="be50-3080-eeea-1616" name="Armor Actions" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
         <infoLink id="309c-482c-079a-c0dc" name="Shielded" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
@@ -2026,7 +2026,7 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dc3f-0a51-6468-9989" name="Schutzen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dc3f-0a51-6468-9989" name="Schürzen" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="292d-b5b8-c30d-65d4" type="max"/>
           </constraints>
@@ -2035,6 +2035,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Up-Armored" id="7b4c-93a6-992b-7ab0" hidden="false" type="rule" targetId="1f7c-515a-0ef2-8614"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Trench Rails" hidden="false" id="78ef-b454-cd99-340d">
           <costs>
@@ -2100,7 +2103,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="13b8-c46e-cd8e-3577" name="Armored" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink id="e51f-bc93-e690-a5f9" name="Crushing Treads" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
         <infoLink id="f211-525d-f96f-3cc2" name="Armor Actions" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
         <infoLink id="5639-1ce1-aee0-01de" name="Shielded" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
@@ -2128,7 +2130,7 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="56ab-c600-9800-afef" name="Schutzen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="56ab-c600-9800-afef" name="Schürzen" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8964-ab83-f1bf-c812" type="max"/>
           </constraints>
@@ -2402,7 +2404,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="ebeb-c01f-6215-95c8" name="Armored" hidden="false" targetId="17b7-2b07-3f19-2098" type="rule"/>
         <infoLink id="351b-8ffa-4dd4-e366" name="Crushing Treads" hidden="false" targetId="1fc3-97a8-e24a-a084" type="rule"/>
         <infoLink id="7c2e-db40-8c38-0f4b" name="Armor Actions" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
         <infoLink id="a10f-33c0-78b0-b932" name="Shielded" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
@@ -2448,19 +2449,6 @@
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trench Rails" hidden="false" id="d29e-6e7f-2578-186d">
-          <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Stable Firing Position" id="3174-3f13-114a-a55e" hidden="false" type="rule" targetId="21b3-c7af-2fb8-5ab6"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da32-6f1c-60d8-e210" includeChildSelections="false"/>
-          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2992,12 +2980,6 @@
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink id="90f0-4c0f-5a93-bcd2" name="Flanged Mace" hidden="false" collective="false" import="true" targetId="bccd-f35d-9db1-5ba2" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a889-81c3-c151-ffce" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="798e-83c4-28bf-85f9" type="max"/>
-                  </constraints>
-                </entryLink>
                 <entryLink id="30e8-5531-ace7-fc66" name="Meg. 40 Heavy Energy Rifle" hidden="false" collective="false" import="true" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcbe-939f-9975-6db2" type="min"/>
@@ -3011,6 +2993,35 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bergmann Pistol M1938" hidden="false" id="8bca-9d06-002b-b1de">
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="2"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Bergmann Pistol M1938" id="626e-530e-f7df-6337" hidden="false" type="profile" targetId="6696-58ef-7e56-daac"/>
+                    <infoLink name="Sidearm" id="1996-70c5-1c06-d909" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="718b-f856-5490-f839-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="718b-f856-5490-f839-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Melee Weapon" id="0e19-c281-7381-813d" hidden="false" defaultSelectionEntryId="8ac0-fb1c-b92c-ed8b">
+                  <entryLinks>
+                    <entryLink import="true" name="CKF Imperial Greatsword" hidden="false" id="8ac0-fb1c-b92c-ed8b" type="selectionEntry" targetId="0396-a57b-ee52-2c78"/>
+                    <entryLink import="true" name="Flanged Mace" hidden="false" id="0b57-f7f5-2e25-521d" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9b42-02d8-091f-1b45" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2cc-0669-d70e-7516" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry id="0b33-0a8e-e979-fd21" name="Panzergrenadier" hidden="false" collective="false" import="true" type="model">
               <constraints>
@@ -3436,7 +3447,7 @@
         </infoLink>
         <infoLink id="e671-4ed1-9741-0c34" name="Transport" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value="12"/>
+            <modifier type="append" field="name" value="16"/>
           </modifiers>
         </infoLink>
         <infoLink id="a3ae-3747-6d68-19a0" name="Flying" hidden="false" targetId="06f4-93c5-6f93-d4df" type="rule"/>
@@ -3576,6 +3587,13 @@
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="5be3-5f69-0f56-9154" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
               <selectionEntryGroups>
@@ -3635,6 +3653,13 @@
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="2e86-3459-d0a9-be79" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
               <selectionEntryGroups>
@@ -3710,6 +3735,7 @@
     <selectionEntry id="a336-f2d0-a145-aee2" name="Knecht Mace and Shield" hidden="false" collective="true" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="696c-b384-7788-a938" name="Knecht Mace and Shield" hidden="false" targetId="c0ee-8fea-c7af-a6eb" type="profile"/>
+        <infoLink name="Up-Armored" id="c0f6-85b1-6a31-eb2d" hidden="false" type="rule" targetId="1f7c-515a-0ef2-8614"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -3718,7 +3744,7 @@
       </costs>
       <rules>
         <rule name="Knecht Mace and Shield" id="b431-2b4e-4528-ffd0" hidden="false">
-          <description>Increase this unit&apos;s Shield count to 6</description>
+          <description>Increase this unit&apos;s Shield count to 5</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -3812,6 +3838,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c7a-74d9-b9e1-61e4-max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="c957-568d-7554-e7ee" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="25"/>
@@ -3933,6 +3960,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c557-5387-1681-f646-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="54fd-5d63-1ca5-5328" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -3956,7 +3984,7 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Decorated Veteran" hidden="false" id="3110-1120-8faa-08bd">
           <costs>
-            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Munitions" typeId="Points" value="40"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3983,11 +4011,12 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cbf-2170-2325-652d-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="2408-c2ab-bed2-f211" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Decorated Veteran" hidden="false" id="d07f-7ad0-0e04-440e">
           <costs>
-            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Munitions" typeId="Points" value="40"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4019,6 +4048,13 @@
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="73b3-51f6-6076-2dcd" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -4053,6 +4089,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43-d113-d92f-e392-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="581a-2165-1776-2b6c" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="50"/>
@@ -4093,7 +4130,7 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Decorated Veteran" hidden="false" id="1604-c324-63f3-95d8">
           <costs>
-            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Munitions" typeId="Points" value="40"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4135,6 +4172,7 @@
             <modifier type="set" value="Shielded 5" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Reach" id="070a-718f-69a1-2f7b" hidden="false" type="rule" targetId="9b54-8e32-2b8d-c1d6"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="131"/>
@@ -4172,6 +4210,9 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="917f-190e-3c3-7171" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="d62c-9465-08dc-c402" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Knecht Hellebarde" hidden="false" id="37d5-5d34-dfe6-51eb">
       <infoLinks>
@@ -4215,7 +4256,7 @@
       <infoLinks>
         <infoLink name="Transport" id="afe3-f754-efe0-c5ba" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" value="11" field="name"/>
+            <modifier type="append" value="16" field="name"/>
           </modifiers>
         </infoLink>
         <infoLink name="Transport Actions" id="f919-daff-70de-c75" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
@@ -4253,11 +4294,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Transport" id="1ab1-b432-63be-86b3" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
-          <modifiers>
-            <modifier type="append" value="11" field="name"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Transport Actions" id="6ff9-2dce-bf56-45b3" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
         <infoLink name="Shielded" id="481c-4fc6-26c8-d1cb" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
           <modifiers>
@@ -4265,6 +4301,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Dangerous Bailout" id="644a-f857-feba-7901" hidden="false" type="rule" targetId="544-9133-e670-6e0c"/>
+        <infoLink name="Rank has its Privileges" id="1a62-81f1-7547-8888" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="80"/>
@@ -4272,11 +4309,6 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
       </costs>
-      <rules>
-        <rule name="Rank has its Privilages" id="d0b7-19af-689-c286" hidden="false">
-          <description>The Imperial Staff Car may only transport units that include an officer.</description>
-        </rule>
-      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Imperial Recon Officer" hidden="false" id="6be8-2c76-e3b5-9a75">
       <infoLinks>
@@ -4289,11 +4321,12 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e9b-c88f-b79-e999-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="6d94-888f-aaf4-c4be" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Decorated Veteran" hidden="false" id="8d03-88e1-dccb-7676">
           <costs>
-            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Munitions" typeId="Points" value="40"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4320,11 +4353,12 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="410a-dd07-b3f9-4a93-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="35a7-170f-fc50-d3a8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Decorated Veteran" hidden="false" id="ba08-a646-60c4-356f">
           <costs>
-            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Munitions" typeId="Points" value="40"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4771,7 +4805,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Decorated Veteran" hidden="false" id="e494-5348-e2a1-b9b4">
       <costs>
-        <cost name="Munitions" typeId="Points" value="20"/>
+        <cost name="Munitions" typeId="Points" value="40"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4784,6 +4818,22 @@
           <description>This unit may gain one medal from the HRE commendations list at the start of the game.</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bergmann Pistol M1938" hidden="false" id="e85b-5482-785f-59fb">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Bergmann Pistol M1938" id="7f58-7f98-9bf8-f2a1" hidden="false" type="profile" targetId="6696-58ef-7e56-daac"/>
+        <infoLink name="Sidearm" id="57c0-5f41-fecc-f4ec" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="CKF Imperial Greatsword" hidden="false" id="0396-a57b-ee52-2c78">
+      <infoLinks>
+        <infoLink name="CKF Imperial Greatsword" id="600d-b0b4-8f3b-b129" hidden="false" type="profile" targetId="86f3-c506-8612-ef9c"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
@@ -5184,7 +5234,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">8</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Shielded 5</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Shielded 5, Up-Armored</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Melee, Blunt</characteristic>
       </characteristics>
     </profile>
@@ -5306,6 +5356,26 @@
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">N/A</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Gott erhalte, Gott beschütze!</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">N/A</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bergmann Pistol M1938" typeId="Weapon" typeName="Weapon" hidden="false" id="6696-58ef-7e56-daac">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">12&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Sidearm</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Energy</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="CKF Imperial Greatsword" typeId="Weapon" typeName="Weapon" hidden="false" id="86f3-c506-8612-ef9c">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Melee, Blunt</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

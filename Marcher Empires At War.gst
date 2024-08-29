@@ -134,6 +134,19 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink name="Dedicated Transport" hidden="false" id="e711-0b0e-bca3-d7f2" targetId="ec55-b910-8dde-4365">
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="793c-42e1-8084-a3b9" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="793c-42e1-8084-a3b9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry name="Infantry Platoon" id="2250-4111-e2c2-bb10" hidden="false">
@@ -163,6 +176,7 @@
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -188,6 +202,7 @@
             <modifier type="increment" value="1" field="c1cf-3102-78d1-ca7f">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -232,6 +247,7 @@
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -241,6 +257,7 @@
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -266,6 +283,7 @@
             <modifier type="increment" value="1" field="b08e-af2-f107-c230">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -301,6 +319,19 @@
             <modifier type="increment" value="1" field="caeb-65dd-de5a-6d78">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="ec55-b910-8dde-4365" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Dedicated Transport" hidden="false" id="0bf6-befb-94cf-5a2a" targetId="ec55-b910-8dde-4365">
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="b265-8542-8cce-a12a" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="b265-8542-8cce-a12a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -354,14 +385,20 @@
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Dedicated Transport" hidden="false" id="61d1-81b9-b290-98fe" targetId="ec55-b910-8dde-4365">
+        <categoryLink name="Support Vehicle" hidden="false" id="7469-5f86-100a-a655" targetId="5db4-bcb6-9f0f-7062">
           <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="3196-2043-ca74-bda1" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="6c75-84cd-297f-6cb4"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Dedicated Transport" hidden="false" id="5485-26b3-29e3-c5da" targetId="ec55-b910-8dde-4365">
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="fa8e-9d87-df25-9911" includeChildSelections="false"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="1" field="3196-2043-ca74-bda1">
+            <modifier type="increment" value="1" field="fa8e-9d87-df25-9911">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="27cf-5cae-ad71-1584" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -711,28 +748,35 @@
         <cost name="Munitions" typeId="Points" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Nominate Field Commander" hidden="false" id="a8f2-8cd0-efc0-4a1b">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="c29d-9d49-58c7-f962-min" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c29d-9d49-58c7-f962-max" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25b3-36c8-91d4-d1c5"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="2f38-62b3-ba2d-80c4" name="Command" hidden="false">
       <description>This unit may issue x orders per activation to other units with the same CORE keyword.</description>
     </rule>
-    <rule id="17b7-2b07-3f19-2098" name="Armored" hidden="false">
-      <description>This Unit may reroll all failed armor checks against weapons without the Heavy Keyword.</description>
-    </rule>
     <rule id="1fc3-97a8-e24a-a084" name="Crushing Treads" hidden="false">
       <description>This Unit may pass through Light Fortifications when taking the move action, if it does so, remove those objects from the battlefield.</description>
     </rule>
     <rule id="a53f-6c4f-8514-7703" name="Critical Shot" hidden="false">
-      <description>When rolling to attack with this weapon, if you roll a 10, score an additional hit.</description>
+      <description>Critical shot: for each 10 you roll when attacking with this weapon you score an additional hit.</description>
     </rule>
     <rule id="4911-2380-864d-8b44" name="Suppressive" hidden="false">
-      <description>When a unit is hit by weapon(s) with the &quot;Suppressive&quot; keyword, it gains an additional suppression token. (This effect is cumulative)</description>
+      <description>When a unit is attacked by weapon(s) with the &quot;Suppressive&quot; keyword, it receives a Suppression Token. (This effect is cumulative)</description>
     </rule>
     <rule id="5d4a-ecea-623a-a136" name="Blast" hidden="false">
-      <description>Blast templates used by this unit are of diameter X. When performing an attack action with this weapon, select a Blast template within this weapon&apos;s range. This attack automatically hits any units that have models within the template.  Remove the template after resolving an attack.</description>
+      <description>Blast tokens used by this Unit have a range of X” measured from the edge of the 25 mm Blast token. When performing an Attack Action with this weapon, select a Blast token within this weapon&apos;s range that matches their placed token’s Blast value. Roll Attack Action as normal. Remove the token after resolving the attack.
+
+
+*Blast tokens are represented by a 25 mm base.</description>
     </rule>
     <rule id="8dc4-53ff-5b73-403a" name="Explosive" hidden="false">
-      <description>When making an attack with this weapon against a unit without the &quot;Armored&quot; rule, +1 to hit.</description>
+      <description>When making an attack with this weapon against a Unit with the Infantry Keyword, +1 to hit.</description>
     </rule>
     <rule id="1e7a-7634-bb2b-1ff9" name="Sidearm" hidden="false">
       <description>This weapon may be selected to fire even if this unit is Engaged.</description>
@@ -747,10 +791,10 @@
       <description>This weapon may only be selected to fire x times per unit per game.</description>
     </rule>
     <rule id="73c0-9282-d155-0b35" name="Transport" hidden="false">
-      <description>You may embark X models with the infantry keyword inside this model. Models with five or more hitpoints count as two models.</description>
+      <description>You may embark X models with the infantry keyword inside this model. Models with four or more wounds count as two models for the purposes of transport capacity.</description>
     </rule>
     <rule id="c1ce-d022-923f-3147" name="Logistics" hidden="false">
-      <description>At the beginning of each set up phase gain a supply point (SP).</description>
+      <description>At the beginning of each Command phase gain a supply point (SP).</description>
     </rule>
     <rule id="740c-be52-5a59-9265" name="Steel Legs" hidden="false">
       <description>This Unit ignores the effect of Rough Terrain, and may pass through Light Fortifications and other non armored units as if they were not there. They may not end a move action on top of these features.</description>
@@ -777,7 +821,7 @@
       <description>If this weapon is in range when making an attack action this Unit may take the Take Aim action for free.</description>
     </rule>
     <rule id="e5b9-60eb-5275-52a3" name="Shellshock" hidden="false">
-      <description>If a unit moves through or touches a blast template this unit has placed, it immediately gains one suppression token.</description>
+      <description>If a Unit moves within the Blast Value range or touches a Blast token this Unit has placed, it immediately gains one Suppression token. A Unit can only gain one Suppression from Blast tokens per turn.</description>
     </rule>
     <rule id="0648-3007-c58c-c884" name="Indirect" hidden="false">
       <description>During each setup phase, place each blast template this weapon uses within range as if you were to perform an attack. When performing an attack with this weapon you must use this placed blast template.</description>
@@ -850,13 +894,13 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>Attacks from this weapon ignore armor values less than 5.</description>
     </rule>
     <rule name="Burrowing" id="ed5f-b19a-332-fe86" hidden="false">
-      <description>Instead of deploying this unit at the start of the game, you may declare that this model is burrowing. A burrowing model may activate only after all non-burrowing units in your army have activated this turn. The first time a burrowing unit activates, you may deploy it no closer than 8&quot; from an enemy unit.</description>
+      <description>Instead of deploying this unit at the start of the game you may declare that this unit is Burrowing. A burrowing unit may activate only after all non-burrowing in your army have activated this turn. The first time a burrowing unit activates,you may deploy it no closer than 8” from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.”</description>
     </rule>
     <rule name="Auxilliary Unit" id="824b-bf81-ea20-17d4" hidden="false">
       <description>This unit may not control objectives</description>
     </rule>
     <rule name="Aerial Deployment" id="a61e-7e07-d7da-e915" hidden="false">
-      <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.)</description>
+      <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.”</description>
     </rule>
     <rule name="Light on their feet" id="f708-1439-cbbe-6850" hidden="false">
       <description>This unit may take the flee reaction while losing only a single action during its following activation.</description>
@@ -868,7 +912,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>Attacks from this unit reroll hits against enemies with the armored keyword.</description>
     </rule>
     <rule name="Dangerous Bailout" id="544-9133-e670-6e0c" hidden="false">
-      <description>If this model is destroyed while transporting units, roll 1D10 for each model it was transporting. for each roll of 5 or less, destroy one model before placing the unit within 3&quot; of this unit.</description>
+      <description>If this model is destroyed while transporting units, roll 1D10 for each model it was transporting. For each roll of 5 or less, destroy one model before placing the embarked unit within 3” of the destroyed transport”</description>
     </rule>
     <rule name="Safe Bailout" id="40dd-ac7-61eb-eaf6" hidden="false">
       <description>If this model is destroyed while transporting units, roll 1D10 for each model it was transporting. for each roll of 1, destroy one model before placing the unit within 3&quot; of this unit.</description>
@@ -880,7 +924,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>This unit gets +1 to hit when making ranged attacks while in contact with difficult terrain.</description>
     </rule>
     <rule name="Forward Positions" id="239f-191a-232-4894" hidden="false">
-      <description>This unit may be deployed outside of your deployment zone as long as it is more than 8&quot; away from the enemy deployment zone or any enemy models.</description>
+      <description>This unit may be deployed outside of your deployment zone as long as it is more than 8” away from the enemy deployment zone or any enemy unit.</description>
     </rule>
     <rule name="Patch-Up" id="5c34-f6f8-aee6-439c" hidden="false">
       <description>As an action, select a friendly infantry unit within 3&quot; (including this unit). That unit either restores all wounds lost by one of its models or revives a destroyed model, returning it to the unit with 1 wound remaining.</description>
@@ -894,12 +938,27 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
     <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
       <description>When this unit is deployed, it may immediately take the Build or Destroy action once.</description>
     </rule>
+    <rule name="Reach" id="9b54-8e32-2b8d-c1d6" hidden="false">
+      <description>This unit has a melee engagement range of 3&quot;.</description>
+    </rule>
+    <rule name="Open Top" id="6beb-7c97-fe80-09a9" hidden="false">
+      <description>“Infantry units embarked in this transport may still be selected as the target of an attack action”</description>
+    </rule>
+    <rule name="Nominate Field Commander" id="653b-4795-0602-9a08" hidden="false">
+      <description>Nominate this unit as your field commander. (This unit must have the highest officer rank in your army).</description>
+    </rule>
+    <rule name="Rank has its Privileges" id="7d1b-65ee-7808-b26d" hidden="false">
+      <description>An infantry or artillery officer may be attached to this unit instead of a normal squad. That officer’s range for orders is 12”.</description>
+    </rule>
+    <rule name="Up-Armored" id="1f7c-515a-0ef2-8614" hidden="false">
+      <description>This Model&apos;s Armor Profile is increased by 1 (This effect has already been applied)</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="0936-84e8-76d0-501a" name="Infantry Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Go Prone</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture</characteristic>
       </characteristics>
@@ -925,13 +984,13 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture</characteristic>
-        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Adjust Coordinates, Detatch</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Adjust Coordinates, Detach</characteristic>
       </characteristics>
     </profile>
     <profile id="335b-34df-c974-9c3b" name="Support Infantry Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Destroy, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Go Prone, Pop Smoke</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Pop Smoke</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Build</characteristic>
       </characteristics>
@@ -955,7 +1014,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
     <profile name="Infantry Officer Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="237b-8d1e-014e-539d">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Go Prone</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture, Rally</characteristic>
       </characteristics>
