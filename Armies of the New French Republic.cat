@@ -155,23 +155,11 @@
         <categoryLink targetId="1e39-16b1-cedd-2cc6" id="af7-21f0-ce2e-26df" primary="false" name="Unit"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Major Marie Courtemanche" hidden="true" id="8c64-4967-ceb9-778e" type="selectionEntry" targetId="42b0-6cfa-62df-10c3">
+    <entryLink import="true" name="Major Marie Courtemanche" hidden="false" id="8c64-4967-ceb9-778e" type="selectionEntry" targetId="42b0-6cfa-62df-10c3">
       <categoryLinks>
-        <categoryLink targetId="dcc5-ef7f-27fc-a528" id="7506-c470-ce24-cebd" primary="false" name="Infantry Command"/>
-        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="bf31-39a1-8a1a-7c7" primary="true" name="Command"/>
         <categoryLink targetId="7165-cf57-cd9c-93da" id="cd8-3aac-d130-6623" primary="false" name="Character"/>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="7a73-2d8d-e20b-1692" primary="true" name="Heroes"/>
       </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="59ff-44cb-cb53-760d" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Monowheel Chasseur Chief Scout" hidden="true" id="d847-23dd-d30d-4c13" type="selectionEntry" targetId="1de4-fae5-f608-e737">
       <categoryLinks>
@@ -303,6 +291,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="396a-51aa-d488-cea2" type="min"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="f23f-b9f4-5b57-390c" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="6"/>
@@ -323,26 +312,6 @@
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="6206-61f6-1aae-3898" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="3da5-9026-16f3-3a37" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="5537-d6db-8f24-56fe" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="3ac1-54b2-fc1e-2ff9" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="dc3a-02b0-614b-4f75" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f57-50ce-8355-027c-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f57-50ce-8355-027c-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry id="27c0-75c2-6470-d4a2" name="Fantassin with Grenade Launcher" hidden="false" collective="false" import="true" type="model">
               <constraints>
@@ -365,6 +334,8 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a29-a3d7-e0a7-a462" type="min"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="5407-0589-fa9c-f277" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
+                <entryLink import="true" name="Bayonet" hidden="false" id="2def-3537-2f29-7f28" type="selectionEntry" targetId="2e3f-b919-958d-a0f0"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="6"/>
@@ -372,35 +343,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="d96b-29d1-1a94-2cce" collective="true">
-                  <infoLinks>
-                    <infoLink name="Bayonet" id="10fa-7105-f736-469" hidden="false" type="profile" targetId="6357-4507-7c5c-93e6"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eadd-2511-73b0-ddc7-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eadd-2511-73b0-ddc7-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="a3fc-2197-1218-2f91" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="149b-fd99-cb78-7e84" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="b1cb-850e-b13b-540f" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="ff69-f8ad-9f9c-e3e9" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="ecd1-32b9-6a19-24ec" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="35a1-c9c3-024b-c536-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35a1-c9c3-024b-c536-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry id="3a32-d9a5-eaa4-fee2" name="Fantassin" hidden="false" collective="false" import="true" type="model">
               <constraints>
@@ -424,6 +366,8 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="243b-906f-e733-ca80" type="min"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="704d-9494-5016-9222" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
+                <entryLink import="true" name="Bayonet" hidden="false" id="8ec1-4ef3-32cc-be33" type="selectionEntry" targetId="2e3f-b919-958d-a0f0"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="6"/>
@@ -431,35 +375,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="7a82-ad37-2389-e6b2" collective="true">
-                  <infoLinks>
-                    <infoLink name="Bayonet" id="aff9-d23d-b4d6-6357" hidden="false" type="profile" targetId="6357-4507-7c5c-93e6"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3f40-7f4a-acde-bdf6-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3f40-7f4a-acde-bdf6-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="6c3b-9d70-431e-c350" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="5a51-bd62-20df-c02e" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="8a43-ff25-47d6-5b37" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="f4e2-da8a-af21-4adb" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="7b71-63eb-a0dd-aab7" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc54-a703-00e9-375e-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc54-a703-00e9-375e-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Fantassin with Marksman Rifle" hidden="false" id="d43a-d323-bf90-7bca" collective="false">
               <constraints>
@@ -482,6 +397,8 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5fe5-8b18-53b8-c14e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="bac8-c96e-dc1b-4c34" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
+                <entryLink import="true" name="Bayonet" hidden="false" id="3498-3eb1-b8ea-b1e5" type="selectionEntry" targetId="2e3f-b919-958d-a0f0"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="6"/>
@@ -489,35 +406,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="faa3-294e-ddc7-c3bf" collective="true">
-                  <infoLinks>
-                    <infoLink name="Bayonet" id="9b89-4c5a-592b-83cd" hidden="false" type="profile" targetId="6357-4507-7c5c-93e6"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d370-bb37-2035-d020-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d370-bb37-2035-d020-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="08ba-a8eb-3db0-23d2" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="54d5-7ec4-98f4-7bae" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="ba5f-f7fb-e56a-e91f" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="71ac-48b4-29d6-8be0" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="6512-c70b-c7ec-2c5a" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="305c-7eb8-df5f-3bdb-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="305c-7eb8-df5f-3bdb-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Fantassin with Plasma Launcher" hidden="false" id="239-9e36-6eb5-c328" collective="false">
               <constraints>
@@ -540,6 +428,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d31f-f967-3a3e-6350" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="e944-dd9b-ba6f-7e59" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="6"/>
@@ -555,24 +444,6 @@
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b577-8b35-c9a9-1037-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b577-8b35-c9a9-1037-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="7b2b-641e-fb1c-d6c0" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="75ef-301b-780d-4db6" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="ad34-2575-8f3f-e91e" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="a45c-a883-b85a-0e42" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="7ff2-b368-d248-9ed3" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1074-33fd-e2d7-d755-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1074-33fd-e2d7-d755-max" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
               </selectionEntries>
@@ -598,6 +469,8 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e16-d31d-ef12-d03c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="d247-9011-fdd7-00c5" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
+                <entryLink import="true" name="Bayonet" hidden="false" id="221d-0f80-de9f-2b68" type="selectionEntry" targetId="2e3f-b919-958d-a0f0"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="6"/>
@@ -605,35 +478,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="27d7-2745-69f-e42f" collective="true">
-                  <infoLinks>
-                    <infoLink name="Bayonet" id="55a8-2a85-77fb-df04" hidden="false" type="profile" targetId="6357-4507-7c5c-93e6"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5a89-f4b2-9bcf-1e78-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a89-f4b2-9bcf-1e78-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="6a48-3bd4-8672-a0cb" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="3201-1f94-1cd8-1677" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="2756-6cdd-af4d-3cc7" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="86d5-8df0-9849-edfa" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="3318-feb6-da29-3913" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3790-67c2-4681-36dd-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3790-67c2-4681-36dd-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -702,6 +546,13 @@
             <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
           </characteristics>
         </profile>
+        <profile name="Infantry Commissaire Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7cec-e10e-8d2b-1513">
+          <characteristics>
+            <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Infantry Commissaire</characteristic>
+            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, Commissaire</characteristic>
+            <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="89f5-0a26-b905-702a" name="Inspire élan" hidden="false">
@@ -709,7 +560,7 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="6528-4f7d-af13-e900" name="Character" hidden="false" targetId="8e52-a616-aab9-73b8" type="rule"/>
+        <infoLink id="6528-4f7d-af13-e900" name="Designated Leader" hidden="false" targetId="8e52-a616-aab9-73b8" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="9a74-1123-f162-5b98" name="Commissaires" hidden="false" collective="false" import="true">
@@ -994,8 +845,8 @@
       <profiles>
         <profile name="R-1B Liberté Medium Battle Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ba0c-6b5a-9ea5-3706">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">15</characteristic>
           </characteristics>
@@ -1176,7 +1027,7 @@
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7763-03e9-57ad-cce4" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Character" id="25a7-5cfc-170a-458c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+        <infoLink name="Designated Leader" id="25a7-5cfc-170a-458c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="École de Cavalerie Graduate" hidden="false" id="6ebd-45b5-3212-d236">
@@ -1193,6 +1044,15 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <profiles>
+        <profile name="Tank Commander" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7235-6897-2532-6a52">
+          <characteristics>
+            <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Tank Commander</characteristic>
+            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, Command</characteristic>
+            <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Infantry Officer" hidden="false" id="ff85-9e6d-1b0b-36db">
       <entryLinks>
@@ -1211,7 +1071,7 @@
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="bf61-106e-eeb6-089a" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Character" id="1ecb-353d-fdac-ab93" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+        <infoLink name="Designated Leader" id="1ecb-353d-fdac-ab93" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
         <infoLink name="Infantry Officer Actions" id="ae28-5536-5475-ca73" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
       </infoLinks>
       <costs>
@@ -1299,8 +1159,8 @@
         </profile>
         <profile name="CAIM 38 &quot;Danton&quot; Battle Walker" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e673-9030-6bbe-aa75">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
           </characteristics>
@@ -1352,8 +1212,8 @@
         </profile>
         <profile name="CAIM 38 &quot;Danton&quot; Support Walker" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="11d3-63fb-1eb9-37d5">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
           </characteristics>
@@ -1428,7 +1288,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Mitrailleuses à énergie" hidden="false" id="4d87-448c-68a0-fd51" collective="true">
                       <entryLinks>
-                        <entryLink import="true" name="mitrailleuse à énergie" hidden="false" id="19e7-226a-7497-4aa0" type="selectionEntry" targetId="4109-b725-7852-c94" collective="true">
+                        <entryLink import="true" name="Mitrailleuse à énergie" hidden="false" id="19e7-226a-7497-4aa0" type="selectionEntry" targetId="4109-b725-7852-c94" collective="true">
                           <constraints>
                             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5921-6d4e-e1b0-5e89-min"/>
                             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5921-6d4e-e1b0-5e89-max"/>
@@ -1452,8 +1312,8 @@
               <profiles>
                 <profile name="Monowheel Chasseur" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c736-3f8b-a39b-d6e9">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">14&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                   </characteristics>
@@ -1498,8 +1358,8 @@
               <profiles>
                 <profile name="Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8642-cc68-3b07-6caa">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">7</characteristic>
                   </characteristics>
@@ -1788,7 +1648,7 @@
       <profiles>
         <profile name="CSM 38A Breaching Drill" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b8d8-83-ab01-f0d0">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
             <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">15/8</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">20</characteristic>
@@ -1808,7 +1668,7 @@
         <infoLink name="Safe Bailout" id="4ab-8e57-b519-8e56" hidden="false" type="rule" targetId="40dd-ac7-61eb-eaf6"/>
         <infoLink name="Transport" id="30e9-444d-4803-4124" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" value="16" field="name"/>
+            <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1854,14 +1714,14 @@
         <infoLink name="Searing" id="e998-646c-c38f-562d" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="mitrailleuse à énergie" hidden="false" id="4109-b725-7852-c94">
+    <selectionEntry type="upgrade" import="true" name="Mitrailleuse à énergie" hidden="false" id="4109-b725-7852-c94">
       <costs>
         <cost name="Munitions" typeId="Points" value="6"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="mitrailleuse à énergie" id="124-cad1-9d95-8b33" hidden="false" type="profile" targetId="4435-979d-5662-170c"/>
+        <infoLink name="Mitrailleuse à énergie" id="124-cad1-9d95-8b33" hidden="false" type="profile" targetId="4435-979d-5662-170c"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="P28 Armored Truck" hidden="false" id="c327-8642-c05b-6a6c">
@@ -1870,7 +1730,7 @@
         <infoLink name="Bailout" id="ae52-7d7c-a4cf-fb60" hidden="false" type="rule" targetId="4f87-d052-cf5f-ceec"/>
         <infoLink name="Transport" id="466a-73cd-6ed5-abc2" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" value="16" field="name"/>
+            <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1957,8 +1817,8 @@
         </profile>
         <profile name="P28 Armored Truck" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b99d-b745-2346-f59b">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
           </characteristics>
@@ -1997,7 +1857,7 @@
         <infoLink name="Bailout" id="d252-5ff8-38f5-3f9a" hidden="false" type="rule" targetId="4f87-d052-cf5f-ceec"/>
         <infoLink name="Transport" id="bee1-b076-9a43-004c" hidden="false" targetId="73c0-9282-d155-0b35" type="rule">
           <modifiers>
-            <modifier type="append" value="16" field="name"/>
+            <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -2046,8 +1906,8 @@
         </profile>
         <profile name="P28 Armored Half-Track" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f799-5bd4-215c-b7c9">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
           </characteristics>
@@ -2091,7 +1951,7 @@
         <profile name="Colonel Charles De Gaulle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2c14-d3a1-3fb1-38d4">
           <characteristics>
             <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Colonel Charles De Gaulle</characteristic>
-            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">(Core) Character, Officer, NFR</characteristic>
+            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (Core) Armor, Command</characteristic>
             <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
           </characteristics>
         </profile>
@@ -2102,6 +1962,9 @@
       <entryLinks>
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="a844-f262-bac9-5c11" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Designated Leader" id="a4bf-fb4c-5d5c-c3ec" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Major Marie Courtemanche" hidden="false" id="42b0-6cfa-62df-10c3">
       <entryLinks>
@@ -2126,8 +1989,8 @@
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7ae2-fe8c-579a-24c8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Character" id="8e4e-430a-ca22-723c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
         <infoLink name="Infantry Officer Actions" id="0e4c-f021-2a9d-5f1f" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+        <infoLink name="Independent Hero" id="67c4-691b-c183-a143" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="30"/>
@@ -2142,6 +2005,13 @@
             <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Major Marie Courtemanche" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4844-b96d-960d-9eec">
+          <characteristics>
+            <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Major Marie Courtemanche</characteristic>
+            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, Commissaire</characteristic>
+            <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2167,8 +2037,8 @@
         </selectionEntry>
       </selectionEntries>
       <rules>
-        <rule name="L&apos;aigle volera de clocher en clocher jusqu&apos;aux tours de Notre-Dame." id="5e45-a1b0-79b8-e081" hidden="false">
-          <description>Major Marie Courtemanche&apos;s unit may take an extra non-attack action each turn. In addition, whenever a unit within 12&quot; of Major Marie Courtemanche gains suppression as a result of an enemy attack, if at least one model died during the attack, remove one suppression.</description>
+        <rule name="S&apos;engager pour servir" id="5e45-a1b0-79b8-e081" hidden="false">
+          <description>Major Marie Courtemanche&apos;s unit always counts as though it were ordered. In addition, whenever a unit within 12&quot; of Major Marie Courtemanche gains suppression as a result of an enemy attack, if at least one model died during the attack, remove one suppression.</description>
         </rule>
       </rules>
       <constraints>
@@ -2178,7 +2048,6 @@
     <selectionEntry type="upgrade" import="true" name="MAS 35 Inspirateur" hidden="false" id="59cb-4b56-9cbf-d25a" collective="true">
       <infoLinks>
         <infoLink name="MAS 35 Inspirateur" id="4d05-5996-606-8af5" hidden="false" type="profile" targetId="fb11-5534-1d05-42bf"/>
-        <infoLink name="Suppressive" id="68e1-cfd3-f465-c6f1" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="3"/>
@@ -2242,7 +2111,7 @@
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Character" id="4e63-2ba-9017-6972" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+        <infoLink name="Designated Leader" id="4e63-2ba-9017-6972" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="56"/>
@@ -2253,8 +2122,8 @@
       <profiles>
         <profile name="Monowheel Chasseur Chief Scout" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c72d-8040-955d-41ba">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">14&quot;</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
           </characteristics>
@@ -2262,7 +2131,7 @@
         <profile name="Monowheel Chasseurs" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7996-26fe-7bd7-9a65">
           <characteristics>
             <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Monowheel Chasseur Chief Scout</characteristic>
-            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, Vehicle, (CORE) Commander, Character, Officer, Light Vehicle</characteristic>
+            <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Command, Character, Light Vehicle</characteristic>
             <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
           </characteristics>
         </profile>
@@ -2316,7 +2185,7 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mitrailleuses à énergie" hidden="false" id="2566-aa7d-8758-55f8">
               <entryLinks>
-                <entryLink import="true" name="mitrailleuse à énergie" hidden="false" id="6be6-6b7e-b8e3-470b" type="selectionEntry" targetId="4109-b725-7852-c94">
+                <entryLink import="true" name="Mitrailleuse à énergie" hidden="false" id="6be6-6b7e-b8e3-470b" type="selectionEntry" targetId="4109-b725-7852-c94">
                   <constraints>
                     <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a504-23a7-af3d-9479-min"/>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a504-23a7-af3d-9479-max"/>
@@ -2372,7 +2241,7 @@
                 <profile name="Ring Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="db39-d3aa-9676-6809">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
                   </characteristics>
@@ -2407,7 +2276,7 @@
                 <profile name="Partisan" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9839-7ca9-a64e-6a6c">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
                   </characteristics>
@@ -2493,7 +2362,7 @@
                 <profile name="Sergent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5856-b6e-9597-3d73">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2544,25 +2413,10 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5b5-5a37-e700-2c51" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="a92f-03c4-0873-5b0c" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="2f5a-0e72-1b81-0c06" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="e7e3-f289-4bc7-d237" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="b229-5565-b7bb-947e" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="d20e-f79d-cbc2-0767" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8eff-c40e-7150-a877" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdf6-96da-e892-54b0" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
               </selectionEntries>
+              <entryLinks>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="c11c-37f9-2c67-a761" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Grenade Launcher" hidden="false" id="1ae2-95b4-e90d-4ae" collective="false">
               <constraints>
@@ -2572,7 +2426,7 @@
                 <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f5c6-1f51-db48-5291">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2585,6 +2439,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="101d-21e8-cd75-a868" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="87af-be06-2187-f267" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="15"/>
@@ -2592,26 +2447,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="a444-dc6f-693f-b007" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="3621-3d20-1047-7b6e" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="3ab7-2945-f199-7d77" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="ab99-bd35-d0b9-16ae" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="ccdc-9994-1338-1f46" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a582-fb95-3b2b-889b" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23a0-027d-d5d3-cac0" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave" hidden="false" id="16be-90a-3a80-ef7c" collective="false">
               <constraints>
@@ -2622,7 +2457,7 @@
                 <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d5df-f585-c29f-8459">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2635,6 +2470,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7fe-d1c6-a6aa-659f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="ffbf-4141-e1a2-b64b" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="15"/>
@@ -2642,26 +2478,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="7e04-167b-e5c1-2b55" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="1215-0933-2965-0840" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="14c9-3283-5b8c-261a" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="45ce-906d-e6e1-7535" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="3af7-99b9-ffe0-4bd8" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c10d-99cf-dd03-b8a7" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ad-befe-e73b-d307" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Marksman Rifle" hidden="false" id="4ab5-d33b-4ad4-ece5" collective="false">
               <constraints>
@@ -2671,7 +2487,7 @@
                 <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1235-c95c-1ba6-773b">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2684,6 +2500,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32c5-48ed-8b0d-b27e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="8cb1-5278-3dfb-aa5b" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="15"/>
@@ -2691,26 +2508,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="681f-0f7f-21bd-82bf" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="fe6d-8b31-d310-d5b7" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="79c7-640f-a02b-f81d" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="71d5-9987-10e6-c124" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="dfd6-5a9e-9e40-45e4" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6204-ae2b-f6bc-9952" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35a3-b784-989d-4443" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Plasma Launcher" hidden="false" id="59f9-b945-7e9c-98b0" collective="false">
               <constraints>
@@ -2720,7 +2517,7 @@
                 <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a837-b71f-ff91-6cd8">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2733,6 +2530,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2fa9-93da-db61-3ae3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="6382-d478-fc5a-91bd" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="15"/>
@@ -2740,26 +2538,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="8911-f51f-5d0d-af06" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="09c7-4ebc-973a-00f5" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="e005-2ba7-ec40-5cb5" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="6156-ec3c-fb59-5d71" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="c409-251f-aa52-2c33" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed42-749b-34c6-ef92" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d5c-5507-a516-56ba" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Chaleur" hidden="false" id="27b7-8664-39a4-84b8" collective="false">
               <constraints>
@@ -2769,7 +2547,7 @@
                 <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e27e-505f-c6fb-6405">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2782,6 +2560,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdfa-dfe7-ca26-4dc1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="12b1-7d2c-2c1c-1002" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="15"/>
@@ -2789,26 +2568,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="def0-d790-0fec-82a4" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="85ad-11ee-5c20-5faa" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="e071-ef9d-fd4d-9545" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="443e-1b7e-140e-e6bb" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="a390-895c-2ea4-f652" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0633-3f8f-9983-d3d9" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b67a-70f5-d41e-8512" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Zouave with Machine Gun" hidden="false" id="50f0-93e0-5fa3-2cce" collective="false">
               <constraints>
@@ -2818,7 +2577,7 @@
                 <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f9e1-ae31-cb4f-af30">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                   </characteristics>
@@ -2831,6 +2590,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf2f-189f-3497-601e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="7c12-15c7-cbf6-12c0" type="selectionEntry" targetId="9454-4ca5-eb83-4240"/>
               </entryLinks>
               <costs>
                 <cost name="Munitions" typeId="Points" value="15"/>
@@ -2838,26 +2598,6 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="8ddc-5daf-4d56-b7e9" collective="true">
-                  <infoLinks>
-                    <infoLink name="Fragmentation Grenade" id="5836-cb17-3040-3e3e" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
-                    <infoLink name="Difficult to Use" id="3f5c-aeb0-2827-9a4a" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
-                    <infoLink name="High Explosive" id="e1eb-fd34-6e62-3155" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-                    <infoLink name="Close In" id="1cea-b82f-6536-1de1" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c3f-0371-acac-1298" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e78-482c-2170-f1d0" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2911,8 +2651,12 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="2e3f-b919-958d-a0f0" collective="true">
       <infoLinks>
-        <infoLink name="Bayonet" id="d6ba-bbaf-1e05-59cd" hidden="false" type="profile" targetId="6357-4507-7c5c-93e6"/>
+        <infoLink name="Bayonet" id="d6ba-bbaf-1e05-59cd" hidden="false" type="profile" targetId="3137-3620-f900-f5b0"/>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a40d-79f2-3982-134a-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a40d-79f2-3982-134a-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="R35 Marat Light Tank" hidden="false" id="2976-bb51-1920-5967" collective="false">
       <profiles>
@@ -2925,8 +2669,8 @@
         </profile>
         <profile name="R35 Marat Light Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="23b5-7a5b-7b8c-6927">
           <characteristics>
-            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
             <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10/8</characteristic>
             <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
           </characteristics>
@@ -3056,7 +2800,7 @@
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7e60-fc2c-f3a2-3233" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Character" id="921e-e66c-e7bc-a8f5" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+        <infoLink name="Designated Leader" id="921e-e66c-e7bc-a8f5" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="École de Cavalerie Graduate" hidden="false" id="4ace-6aae-689-4a02">
@@ -3084,7 +2828,7 @@
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Character" id="36cb-e729-c036-285b" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+        <infoLink name="Designated Leader" id="36cb-e729-c036-285b" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="105mm Obusier (Direct Fire)" hidden="false" id="d7bd-1c9-fa1b-fc6e">
@@ -3137,7 +2881,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Fragmentation Grenade" hidden="false" id="9454-4ca5-eb83-4240" collective="true">
       <infoLinks>
-        <infoLink name="Fragmentation Grenade" id="238a-3178-16a4-b156" hidden="false" targetId="208a-cb3e-6ce4-5668" type="profile"/>
+        <infoLink name="Fragmentation Grenade" id="238a-3178-16a4-b156" hidden="false" targetId="7d4e-0ba3-86f7-ce2f" type="profile"/>
         <infoLink name="Difficult to Use" id="01ab-506e-40b2-8e8c" hidden="false" targetId="22ca-4520-b3df-c16d" type="rule"/>
         <infoLink name="High Explosive" id="05cf-e05a-bf2c-aeed" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
         <infoLink name="Close In" id="061d-0835-0500-41f7" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
@@ -3153,6 +2897,10 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="647a-7ec7-6159-8174-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="647a-7ec7-6159-8174-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="French self-propelled gun" hidden="false" id="bed3-f8f4-6605-1a18" collective="false">
       <profiles>
@@ -3241,7 +2989,7 @@
     <profile id="1fa0-81d8-d094-539b" name="CKF Sword" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3251,9 +2999,9 @@
     <profile id="7d47-9d65-0931-1807" name="MAS 37 Energy Rifle" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Energy, Ranged</characteristic>
       </characteristics>
@@ -3261,9 +3009,9 @@
     <profile id="f8db-23ca-5463-9dba" name="MAS 37 Grenade Launcher" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive, Close-in</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Kinetic</characteristic>
       </characteristics>
@@ -3271,7 +3019,7 @@
     <profile name="Canon de 75mm" typeId="Weapon" typeName="Weapon" hidden="false" id="5c5d-fd80-7267-fdf3">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">8</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
@@ -3281,7 +3029,7 @@
     <profile name="Canon de Energie" typeId="Weapon" typeName="Weapon" hidden="false" id="643b-cecd-10c0-f485">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">6</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3301,7 +3049,7 @@
     <profile name="Reibel Heavy Machine Gun" typeId="Weapon" typeName="Weapon" hidden="false" id="9947-52c2-a61e-d917">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
@@ -3311,7 +3059,7 @@
     <profile name="Canon de 40mm" typeId="Weapon" typeName="Weapon" hidden="false" id="5616-3c1-90af-9793">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
@@ -3321,7 +3069,7 @@
     <profile name="Gros Canon de Energie" typeId="Weapon" typeName="Weapon" hidden="false" id="ed99-c3cf-5fa8-5e96">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">8</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3351,7 +3099,7 @@
     <profile name="Industrial Drill" typeId="Weapon" typeName="Weapon" hidden="false" id="ecb9-8e0e-b27d-b10">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">Melee</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">10</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3361,7 +3109,7 @@
     <profile name="Canon de Plasma" typeId="Weapon" typeName="Weapon" hidden="false" id="7c9f-8fae-96df-ca72">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
@@ -3371,9 +3119,9 @@
     <profile name="Automatic Grenade Launcher" typeId="Weapon" typeName="Weapon" hidden="false" id="dedf-b1aa-efc1-20c2">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">10</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Explosive, Ranged, Kinetic</characteristic>
       </characteristics>
@@ -3381,17 +3129,17 @@
     <profile name="Canon de Chaleur" typeId="Weapon" typeName="Weapon" hidden="false" id="4b1-d2f8-dbc5-82dd">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">N/A</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Searing</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Energy, Ranged</characteristic>
       </characteristics>
     </profile>
-    <profile name="mitrailleuse à énergie" typeId="Weapon" typeName="Weapon" hidden="false" id="4435-979d-5662-170c">
+    <profile name="Mitrailleuse à énergie" typeId="Weapon" typeName="Weapon" hidden="false" id="4435-979d-5662-170c">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">10</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3401,7 +3149,7 @@
     <profile name="20mm Autocanon" typeId="Weapon" typeName="Weapon" hidden="false" id="c5fe-129d-cd83-8728">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">7</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3411,7 +3159,7 @@
     <profile name="Twin 20mm Autocanon" typeId="Weapon" typeName="Weapon" hidden="false" id="7978-2315-1720-9cd0">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">14</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">7</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
@@ -3421,17 +3169,17 @@
     <profile name="MAS 35 Inspirateur" typeId="Weapon" typeName="Weapon" hidden="false" id="fb11-5534-1d05-42bf">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Energy, Ranged</characteristic>
       </characteristics>
     </profile>
     <profile name="MAS 34 Chaleur" typeId="Weapon" typeName="Weapon" hidden="false" id="9b9f-95e6-5167-dabf">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">N/A</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Searing</characteristic>
@@ -3441,7 +3189,7 @@
     <profile name="MAS 33 Plasma Launcher" typeId="Weapon" typeName="Weapon" hidden="false" id="1a0e-8648-f0e-f625">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
@@ -3452,7 +3200,7 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">45</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Sniper, Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Ranged</characteristic>
@@ -3480,7 +3228,7 @@
     </profile>
     <profile name="Partisan Melee Weapon" typeId="Weapon" typeName="Weapon" hidden="false" id="e48-e929-4df3-e3e1">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">Melee</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
@@ -3491,7 +3239,7 @@
     <profile name="FEM Chauchat" typeId="Weapon" typeName="Weapon" hidden="false" id="768a-a427-ae55-a20">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
@@ -3521,7 +3269,7 @@
     <profile name="Gros Canon de Chaleur" typeId="Weapon" typeName="Weapon" hidden="false" id="ca7c-afde-49ea-6e88">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">10</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">N/A</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Searing</characteristic>
@@ -3531,7 +3279,7 @@
     <profile name="Gros Canon de Plasma" typeId="Weapon" typeName="Weapon" hidden="false" id="2eee-7636-5280-f9c3">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
@@ -3541,7 +3289,7 @@
     <profile name="105mm Obusier (Direct Fire)" typeId="Weapon" typeName="Weapon" hidden="false" id="c158-f237-9a4b-6a67">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">10</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
@@ -3551,7 +3299,7 @@
     <profile name="8.5cm High-Velocity Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="f8b5-1d05-7670-76c9">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">40&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">8</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+8</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
@@ -3561,7 +3309,7 @@
     <profile name="Destructeur de plasma" typeId="Weapon" typeName="Weapon" hidden="false" id="ad30-32b8-2140-df08">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">28&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">8</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
@@ -3571,21 +3319,11 @@
     <profile name="FEM &quot;La Faux&quot; Rotary Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="78dc-4ff1-98f7-d5c0">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">30</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">15</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Ranged</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Fragmentation Grenade" typeId="Weapon" typeName="Weapon" hidden="false" id="208a-cb3e-6ce4-5668">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">8&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ammo 1, High Explosive, Close in, Difficult to Use</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Grenade, Ranged</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

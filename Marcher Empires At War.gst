@@ -791,7 +791,7 @@
       <description>This weapon may only be selected to fire x times per unit per game.</description>
     </rule>
     <rule id="73c0-9282-d155-0b35" name="Transport" hidden="false">
-      <description>You may embark X models with the infantry keyword inside this model. Models with four or more wounds count as two models for the purposes of transport capacity.</description>
+      <description>You may embark x infantry units in this transport.</description>
     </rule>
     <rule id="c1ce-d022-923f-3147" name="Logistics" hidden="false">
       <description>At the beginning of each Command phase gain a supply point (SP).</description>
@@ -824,10 +824,10 @@
       <description>If a Unit moves within the Blast Value range or touches a Blast token this Unit has placed, it immediately gains one Suppression token. A Unit can only gain one Suppression from Blast tokens per turn.</description>
     </rule>
     <rule id="0648-3007-c58c-c884" name="Indirect" hidden="false">
-      <description>During each setup phase, place each blast template this weapon uses within range as if you were to perform an attack. When performing an attack with this weapon you must use this placed blast template.</description>
+      <description>During each Command phase, place each blast template this weapon uses within range as if you were to perform an attack. When performing an attack with this weapon you must use this placed blast template.</description>
     </rule>
     <rule id="9375-d461-c135-9e66" name="High Explosive" hidden="false">
-      <description>When using this weapon to attack a unit with the Infantry keyword, double this weapon&apos;s Hits profile.</description>
+      <description>When attacking a multi-model unit with this weapon, excess damage spills over to other models in that unit.</description>
     </rule>
     <rule id="56bd-18e3-04a1-3227" name="Steel Fortress" hidden="false">
       <description>When Activated, until the end of this round all units in this platoon gain the Capture Action.</description>
@@ -839,13 +839,13 @@
       <description>After activating this ability, when you activate this platoon’s Command Squad, you may also activate any other Units within 4” of it that also belong to this Platoon.</description>
     </rule>
     <rule id="c461-b91e-f6c6-5dd8" name="Flanking Maneuver" hidden="false">
-      <description>After activating this ability, when a Unit in this Platoon attacks an enemy unit, if this Unit is more than 8” away from any other Unit in this Platoon, resolve the attack, and then double the amount of Suppression tokens on the attacked Unit.</description>
+      <description>Units in this platoon can not be suppressed or panic this round while within 8&quot; of a command unit or hero.</description>
     </rule>
     <rule id="9f61-2072-566a-5d02" name="Rounds on Target" hidden="false">
       <description>When you activate this ability until the end of this round Units in this platoon deal twice the number of suppression token to enemies they attack.</description>
     </rule>
     <rule id="3414-34d7-5dfe-51c3" name="Rapid Reconnaissance" hidden="false">
-      <description>When you activate this ability, until the end of this round all units in this platoon gain 3” of Movement.</description>
+      <description>When you activate this ability, until the end of this round all units in this platoon may take the move action more than once.</description>
     </rule>
     <rule id="7e55-a03a-ffb6-e45a" name="Adaptive Control" hidden="false">
       <description>After activating this ability, until the end of this round all Units in this Platoon may make a Capture action for free whenever they make a Move action.</description>
@@ -876,13 +876,13 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>When making an attack with this weapon, if this Unit has taken the &quot;Taken Aim&quot; action this turn, the attacked Unit ignores the benefit of Cover. When resolving damage with this weapon, you may select which model to apply the damage to.</description>
     </rule>
     <rule id="fd2f-2557-0580-c397" name="Jump-Packs" hidden="false">
-      <description>This Unit may perform one free Move action per turn. This Unit may ignore the effects of any terrain it moves across. This unit may make a melee attack against a flying unit in an activation in which it has used the move action, so long as it ended within Engagement range of the Flying Unit&apos;s base.</description>
+      <description>This Unit gains Move as a Free Action. This Unit may ignore the effects of any terrain it moves across.</description>
     </rule>
     <rule id="a795-5b46-bd8b-be03" name="Dig!" hidden="false">
       <description>This Unit may perform the Build action, but only to construct a Prepared Fighting Position.</description>
     </rule>
-    <rule id="8e52-a616-aab9-73b8" name="Character" hidden="false">
-      <description>This model must be attached to a non-command unit that shares a core keyword unit before the game starts.</description>
+    <rule id="8e52-a616-aab9-73b8" name="Designated Leader" hidden="false">
+      <description>This model must be attached to a non-command unit that it shares a core keyword with before the game starts. After this model is attached it must be designated as the Leader of the combined unit</description>
     </rule>
     <rule name="Shotgun" id="20e-bfac-4fc9-44b9" hidden="false">
       <description>While making an attack using a weapon with this special rule, if within half range of the target, double your hits, AP, and damage profiles.</description>
@@ -897,7 +897,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>Instead of deploying this unit at the start of the game you may declare that this unit is Burrowing. A burrowing unit may activate only after all non-burrowing in your army have activated this turn. The first time a burrowing unit activates,you may deploy it no closer than 8” from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.”</description>
     </rule>
     <rule name="Auxilliary Unit" id="824b-bf81-ea20-17d4" hidden="false">
-      <description>This unit may not control objectives</description>
+      <description>This Unit may not control Objectives</description>
     </rule>
     <rule name="Aerial Deployment" id="a61e-7e07-d7da-e915" hidden="false">
       <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.”</description>
@@ -906,10 +906,10 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>This unit may take the flee reaction while losing only a single action during its following activation.</description>
     </rule>
     <rule name="Hunter" id="c061-5561-8d2a-8ab3" hidden="false">
-      <description>When this unit destroys an enemy character unit, gain 1 Intel point.</description>
+      <description>When this Unit destroys an enemy character unit, gain 1 Intel point.</description>
     </rule>
     <rule name="Big Game Hunter" id="22ef-ed51-bdad-4ad4" hidden="false">
-      <description>Attacks from this unit reroll hits against enemies with the armored keyword.</description>
+      <description>Attacks from this Unit reroll hits against enemies with the Armored keyword.</description>
     </rule>
     <rule name="Dangerous Bailout" id="544-9133-e670-6e0c" hidden="false">
       <description>If this model is destroyed while transporting units, roll 1D10 for each model it was transporting. For each roll of 5 or less, destroy one model before placing the embarked unit within 3” of the destroyed transport”</description>
@@ -921,7 +921,7 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>If this model is destroyed while transporting units, roll 1D10 for each model it was transporting. for each roll of 3 or less, destroy one model before placing the unit within 3&quot; of this unit.</description>
     </rule>
     <rule name="Stable Firing Position" id="21b3-c7af-2fb8-5ab6" hidden="false">
-      <description>This unit gets +1 to hit when making ranged attacks while in contact with difficult terrain.</description>
+      <description>This unit gets +1 to hit when making ranged attacks while in contact with terrain.</description>
     </rule>
     <rule name="Forward Positions" id="239f-191a-232-4894" hidden="false">
       <description>This unit may be deployed outside of your deployment zone as long as it is more than 8” away from the enemy deployment zone or any enemy unit.</description>
@@ -930,10 +930,10 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
       <description>As an action, select a friendly infantry unit within 3&quot; (including this unit). That unit either restores all wounds lost by one of its models or revives a destroyed model, returning it to the unit with 1 wound remaining.</description>
     </rule>
     <rule name="Elite Infantry" id="12fb-381c-5514-6d51" hidden="false">
-      <description>This unit only becomes suppressed when it has 3 suppression tokens and pinned when it has 6 suppression tokens.</description>
+      <description>This unit only becomes suppressed when it has 2 suppression tokens and pinned when it has 4 suppression tokens.</description>
     </rule>
     <rule name="Agile" id="7563-c17b-bc3c-4f99" hidden="false">
-      <description>This unit may benefit from cover as though it were infantry.</description>
+      <description>This Unit may benefit from cover as though it were infantry.</description>
     </rule>
     <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
       <description>When this unit is deployed, it may immediately take the Build or Destroy action once.</description>
@@ -953,70 +953,158 @@ Until the end of this round all vehicle Units in this platoon increase their Eva
     <rule name="Up-Armored" id="1f7c-515a-0ef2-8614" hidden="false">
       <description>This Model&apos;s Armor Profile is increased by 1 (This effect has already been applied)</description>
     </rule>
+    <rule name="Independent Hero" id="ba04-cce8-3db9-31d4" hidden="false">
+      <description>This unit may attach to an allied unit as though it has the Designated Leader special rule, or be taken individually. If this unit is not attached to an allied unit, enemy ranged attacks may only target it if it is the closest enemy unit.</description>
+    </rule>
+    <rule name="Fortification Reference" id="b938-f36f-8234-0a26" hidden="false">
+      <description>Prepared Fighting Position (0 SP)
+
+
+Units touching this Fortification gain the benefit of Light Cover.
+Considered Rough and Light Terrain. 5”x3” Flat
+
+
+Hedgehog Tank Trap (1 SP)
+
+
+Deploy three of these per Build Action. Vehicles that touch this
+Fortification must immediately end their Movement Action.
+Considered Heavy Terrain. 1.5” x 1.5” x 1.5”
+
+
+Barbed Wire (1 SP)
+
+
+Drawing Line Of Sight through this structure incurs a -1 to hit
+penalty. Considered Hazardous and Light Terrain. 3” x 1” x 1”
+
+
+Sandbag Wall (1 SP)
+
+
+Units touching this Fortification gain the benefit of Light Cover.
+Considered Rough and Light Terrain.
+Units touching this Fortification can take a Reaction even if they have
+already activated this round. Next time that Unit activates, it only
+loses one Action for doing so. 5” x 1” x 1”
+
+
+Sandbag Bunker (2 SP)
+
+
+Units within this Terrain feature gain the benefit of Heavy Cover, and
+are immune to Suppression until they exit it. Considered Rough and
+Heavy Terrain.
+Units touching this Fortification can take a Reaction even if they have
+already activated this round. Next time that Unit activates, it only
+loses one Action for doing so. 5” x 3” x 2”
+
+
+Anti - Personnel Minefield (3 SP)
+
+
+When a Unit performs a Move Action, if at any point it touches this
+Fortification, perform an attack against it with the Anti-Personnel
+Mine Profile*. Considered Rough and Heavy Terrain. 5’” square, flat.
+
+
+Anti-Tank Minefield (3 SP)
+
+
+When a Unit performs a Move Action, if at any point it touches this
+Fortification, perform an attack against it with the Anti-Tank Mine
+Profile*. Considered Rough and Heavy Terrain. 5” square, flat.</description>
+    </rule>
+    <rule name="Suppressible" id="473a-370d-65e8-1c8d" hidden="false">
+      <description>This Unit can gain Suppression Tokens as though it were Infantry.</description>
+    </rule>
+    <rule name="Dual Wield" id="2082-d275-920b-519d" hidden="false">
+      <description>This weapon may be selected to attack with in addition to another weapon.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="0936-84e8-76d0-501a" name="Infantry Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Dash, Attack, Take Aim</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady Shot</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture</characteristic>
       </characteristics>
     </profile>
     <profile id="ed5a-9492-6407-a9f1" name="Armor Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim,</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady Shot, Capture</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
       </characteristics>
     </profile>
     <profile id="e02c-5a58-9b36-5c37" name="Recon Vehicle Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Capture, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Capture</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady Shot</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
       </characteristics>
     </profile>
     <profile id="8aaf-072f-5000-d2b9" name="Artillery Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture</characteristic>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Take Aim</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Move, Capture, Steady Shot</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Adjust Coordinates, Detach</characteristic>
       </characteristics>
     </profile>
     <profile id="335b-34df-c974-9c3b" name="Support Infantry Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Destroy, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In, Pop Smoke</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
-        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Build</characteristic>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Dig In, Pop Smoke, Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady Shot</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Build, Destroy</characteristic>
       </characteristics>
     </profile>
     <profile id="d3bd-9092-41d2-8882" name="Transport Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim,</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady Shot, Capture</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Tow</characteristic>
       </characteristics>
     </profile>
     <profile id="1761-68e7-b0e6-e086" name="Support Artillery Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture</characteristic>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady Shot</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim</characteristic>
       </characteristics>
     </profile>
     <profile name="Infantry Officer Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="237b-8d1e-014e-539d">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Fall Back</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Flee, Dig In</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Dig In, Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady Shot</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture, Rally</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bayonet" typeId="Weapon" typeName="Weapon" hidden="false" id="3137-3620-f900-f5b0">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Kinetic, Bladed</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Fragmentation Grenade" typeId="Weapon" typeName="Weapon" hidden="false" id="7d4e-0ba3-86f7-ce2f">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">8&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ammo 1, High Explosive, Close in, Difficult to Use</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Grenade, Ranged</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
