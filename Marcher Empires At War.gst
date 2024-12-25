@@ -616,7 +616,7 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Infantry Escort" hidden="false" id="1b17-7d7c-bbce-0d87">
           <infoLinks>
-            <infoLink name="Infantry Screen" id="d9c8-3856-3222-8537" hidden="false" type="rule" targetId="59e4-5ed8-7949-245c"/>
+            <infoLink name="Infantry Escort" id="d9c8-3856-3222-8537" hidden="false" type="rule" targetId="59e4-5ed8-7949-245c"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="69c1-410e-a1f3-59c6-min" includeChildSelections="false"/>
@@ -826,15 +826,35 @@
         <infoLink name="Charge!" id="9963-0d4b-75c7-df97" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
       </infoLinks>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2858-2c85-b0d7-2143-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2858-2c85-b0d7-2143-max" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2858-2c85-b0d7-2143-min-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2858-2c85-b0d7-2143-min-max" includeChildSelections="false"/>
       </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Spotter&apos;s Scope" hidden="false" id="c8d9-2565-a399-59f9">
       <infoLinks>
         <infoLink name="Spotter&apos;s Scope" id="edc9-5baf-ec2e-a81d" hidden="false" type="profile" targetId="09ea-75e9-0221-377b"/>
         <infoLink name="Battlefield Scanners" id="201c-089a-3109-997f" hidden="false" type="rule" targetId="987d-4b9f-03aa-1235"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Fuel Drums" hidden="false" id="721a-6dbd-31f6-b2b9">
+      <infoLinks>
+        <infoLink name="Fuel Drums" id="ef8c-c689-cbd4-4db0" hidden="false" type="rule" targetId="e6e0-df35-6dc6-fb12"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="15"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bec9-ecef-eb7a-7b79" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
@@ -856,7 +876,7 @@
 
 *Blast tokens are represented by a 25 mm base.</description>
     </rule>
-    <rule id="1e7a-7634-bb2b-1ff9" name="Sidearm" hidden="false">
+    <rule id="1e7a-7634-bb2b-1ff9" name="Point Blank" hidden="false">
       <description>This weapon may be selected to fire even if this unit is Engaged.</description>
     </rule>
     <rule id="22ca-4520-b3df-c16d" name="Difficult to Use" hidden="false">
@@ -964,7 +984,7 @@
       <description>When a unit is hit by weapon(s) with the &quot;Slag&quot; keyword, its armor value is reduced by 1 until the end of the round. (This effect is cumulative)</description>
     </rule>
     <rule name="Heat Ray" id="56bf-a271-a758-6f38" hidden="false">
-      <description>Attacks from this weapon ignore armor values less than X.</description>
+      <description>This weapon automatically passes armor checks against Units with Armor Values of X or less.</description>
     </rule>
     <rule name="Burrowing" id="ed5f-b19a-332-fe86" hidden="false">
       <description>Instead of deploying this unit at the start of the game you may declare that this unit is Burrowing. A burrowing unit may activate only after all non-burrowing in your army have activated this turn. The first time a burrowing unit activates, you may deploy it no closer than 8” from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
@@ -1128,13 +1148,22 @@ Profile*. Considered Rough and Heavy Terrain. 5” square, flat.</description>
     </rule>
     <rule name="Pre-Registered Targets" id="b64b-4ada-29c0-088b" hidden="false">
       <description>All Units in the selected Platoon lose the Cumbersome keyword. 
-*This Platoon ability can only be activated on rounds 2-4. </description>
+*This Platoon ability can only be activated on rounds 2-4.</description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
       <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit that is also in the Platoon.</description>
     </rule>
     <rule name="Flak Shells" id="57bd-6e01-9873-bd79" hidden="false">
       <description>Attacks from this Weapon against Units with the Flying Keyword pass Hit Checks on 5s or greater, regardless of the target&apos;s Evasion.</description>
+    </rule>
+    <rule name="Fuel Drums" id="e6e0-df35-6dc6-fb12" hidden="false">
+      <description>Perfom a free Dash Action once per game.</description>
+    </rule>
+    <rule name="Spray" id="b609-fbd4-d0a3-6927" hidden="false">
+      <description>Units with the Troop keyword attacked by this weapon gain the “Under Fire” Condition.
+
+
+Under Fire: Units with this Condition may not take the Move Action. (They may still take the Dash Action). This condition is lost at the end of this Unit&apos;s Activation</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1366,6 +1395,7 @@ Profile*. Considered Rough and Heavy Terrain. 5” square, flat.</description>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9524-f8b6-978b-0d86" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Fuel Drums" hidden="false" id="6fea-7eca-7dc7-49b1" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
