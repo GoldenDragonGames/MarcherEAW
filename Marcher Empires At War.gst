@@ -1246,7 +1246,7 @@ Under Fire: Units with this Condition may not take the Move Action. (They may st
     <rule name="Prototype" id="b4c0-7c13-2254-8ad1" hidden="false">
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
     </rule>
-    <rule name="New Rule" id="b184-aad8-f891-5e36" hidden="false">
+    <rule name="Rupture" id="b184-aad8-f891-5e36" hidden="false">
       <description>When this Unit is destroyed, place a Gas Token on top of it. This token remains for the rest of the game.</description>
     </rule>
   </sharedRules>
