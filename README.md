@@ -1,4 +1,4 @@
-Template Data Repo
+Marcher: Empires at War Repo
 ==================
 
 [![Latest release](https://img.shields.io/github/release/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/releases/latest)
