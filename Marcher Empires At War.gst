@@ -1113,14 +1113,20 @@
 
 Deploy three of these per Build Action. Vehicles that touch this
 Fortification must immediately end their Movement Action.
-Considered Heavy Terrain. 1.5” x 1.5” x 1.5”
+
+
+Heavy Terrain. 1.5” x 1.5” x 1.5”
 
 
 Barbed Wire (1 SP)
 
 
-Drawing Line Of Sight through this structure incurs a -1 to hit
-penalty. Considered Hazardous and Light Terrain. 3” x 1” x 1”
+Deploy three of these per Build Action within 1” of
+each other. Troops that touch this Fortification must
+immediately end their Movement Action.
+
+
+Obscuring, Rough, Light Terrain. 3” x 1” x 1”
 
 
 Sandbag Wall (1 SP)
@@ -1130,34 +1136,55 @@ Units touching this Fortification gain the benefit of Light Cover.
 Considered Rough and Light Terrain.
 Units touching this Fortification can take a Reaction even if they have
 already activated this round. Next time that Unit activates, it only
-loses one Action for doing so. 5” x 1” x 1”
+loses one Action for doing so. 
+
+
+Rough, Medium Terrain. 5” x 1” x 1”
 
 
 Sandbag Bunker (2 SP)
 
 
-Units within this Terrain feature gain the benefit of Heavy Cover, and
-are immune to Suppression until they exit it. Considered Rough and
-Heavy Terrain.
-Units touching this Fortification can take a Reaction even if they have
-already activated this round. Next time that Unit activates, it only
-loses one Action for doing so. 5” x 3” x 2”
+Units touching this Fortification can take a
+Reaction even if they have already activated this
+round. Next time that Unit activates, it only loses
+one Action for doing so.
+
+
+This fortification can be removed by Units with the
+Tracked Keyword or Crashing Footfalls special
+rule.
+
+
+Rough, Heavy Terrain 5” x 3” x 2”
 
 
 Anti - Personnel Minefield (3 SP)
 
+When a Unit performs a Move Action, if at any
+point it touches this Fortification, perform an attack
+against it with the Anti-Personnel Mine Profile*.
 
-When a Unit performs a Move Action, if at any point it touches this
-Fortification, perform an attack against it with the Anti-Personnel
-Mine Profile*. Considered Rough and Heavy Terrain. 5’” square, flat.
+
+Rough, Light Terrain* Units do not gain cover for
+being within this terrain feature
+
+
+3” x 8”, Flat.
 
 
 Anti-Tank Minefield (3 SP)
 
+When a Unit performs a Move Action, if at any
+point it touches this Fortification, perform an attack
+against it with the Anti-Tank Mine Profile*.
 
-When a Unit performs a Move Action, if at any point it touches this
-Fortification, perform an attack against it with the Anti-Tank Mine
-Profile*. Considered Rough and Heavy Terrain. 5” square, flat.</description>
+
+Considered Rough, Light Terrain* Units do not
+gain cover for being within this terrain feature
+
+
+3” x 8”, Flat.</description>
     </rule>
     <rule name="Suppressible" id="473a-370d-65e8-1c8d" hidden="false">
       <description>This unit can gain suppression tokens as though it has the Troops Subtype and can be affected by the “Suppressed” and “Pinned down” conditions.</description>
@@ -1643,5 +1670,5 @@ are in your army only one counter is ticked down at a time.</description>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <readme>Check out our stuff through http://linktr.ee/goldendragongames</readme>
+  <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
 </gameSystem>
