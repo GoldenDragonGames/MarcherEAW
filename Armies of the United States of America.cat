@@ -840,6 +840,19 @@
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="455e-77a8-92d5-740e" primary="false" name="Carriage"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Combat Engineer Officer" hidden="true" id="9d3b-1658-e2ee-8cd2" type="selectionEntry" targetId="1479-daaf-bd1a-467c">
+      <categoryLinks>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="42a1-fbb8-76fa-d532" primary="true" name="Command"/>
+        <categoryLink targetId="4455-94a1-ea5e-b9ec" id="20f2-c843-09c2-650b" primary="false" name="USA"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="edb6-93ec-4edf-b984" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="2a8a-fddf-0126-6a57" name="Officer Seniority" hidden="false" collective="false" import="true" type="upgrade">
@@ -5410,8 +5423,7 @@
             <infoLink name="Cumbersome" id="e066-b466-6e17-a933" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
             <infoLink name="Dial In" id="8411-0c7d-649f-88a7" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
               <modifiers>
-                <modifier type="append" value="12
-" field="name"/>
+                <modifier type="append" value="12" field="name"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6201,7 +6213,7 @@
           </profiles>
           <infoLinks>
             <infoLink name="Recon Vehicle Actions" id="86f9-f323-b4ca-4256" hidden="false" targetId="e02c-5a58-9b36-5c37" type="profile"/>
-            <infoLink name="Light on their feet" id="88ba-60f0-d18f-4ec9" hidden="false" type="rule" targetId="f708-1439-cbbe-6850"/>
+            <infoLink name="Light on their Feet" id="88ba-60f0-d18f-4ec9" hidden="false" type="rule" targetId="f708-1439-cbbe-6850"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="213"/>
@@ -6344,7 +6356,7 @@
           </profiles>
           <infoLinks>
             <infoLink name="Recon Vehicle Actions" id="9247-ae74-1fa0-3fba" hidden="false" targetId="e02c-5a58-9b36-5c37" type="profile"/>
-            <infoLink name="Light on their feet" id="c436-9026-e0be-4621" hidden="false" type="rule" targetId="f708-1439-cbbe-6850"/>
+            <infoLink name="Light on their Feet" id="c436-9026-e0be-4621" hidden="false" type="rule" targetId="f708-1439-cbbe-6850"/>
             <infoLink name="Forward Positions" id="2c0f-84af-9ce3-925b" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
           </infoLinks>
           <costs>
@@ -8299,20 +8311,31 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59ff-1c2b-e1e3-fae0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="6414-eac6-bea0-b2c5" type="selectionEntry" targetId="1235-a73-7cb5-26b4">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="167f-cc7d-ed1a-715a" includeChildSelections="false"/>
-                          </constraints>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="243c-f90a-06f8-2da1" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="M1897 Trench Gun and Bayonet" hidden="false" id="29d5-0507-5a29-976b" collective="true">
                           <entryLinks>
-                            <entryLink import="true" name="Bayonet" hidden="false" id="3691-cf7d-5674-14be" type="selectionEntry" targetId="66fd-b75b-f882-3404">
+                            <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="14e8-0c72-7cf6-31b0" type="selectionEntry" targetId="1235-a73-7cb5-26b4">
                               <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0b30-df05-a44b-5534-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b30-df05-a44b-5534-max" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee44-8780-5863-02b7-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee44-8780-5863-02b7-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Bayonet" hidden="false" id="d000-bbb1-1426-36f9" type="selectionEntry" targetId="66fd-b75b-f882-3404">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ad5-e278-9416-5bc3-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ad5-e278-9416-5bc3-max" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
                           </entryLinks>
-                        </entryLink>
-                      </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cde8-14fc-5825-41d7" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <costs>
@@ -8351,24 +8374,32 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4633-8b7b-7d2a-f2bb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="a846-7d6c-cd71-7496" type="selectionEntry" targetId="1235-a73-7cb5-26b4">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc36-6d32-1f70-fc8a" includeChildSelections="false"/>
-                          </constraints>
-                          <entryLinks>
-                            <entryLink import="true" name="Bayonet" hidden="false" id="8180-d4a1-02a0-cd61" type="selectionEntry" targetId="66fd-b75b-f882-3404">
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1f4b-67dc-cfb0-f1ff-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f4b-67dc-cfb0-f1ff-max" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </entryLink>
                       </entryLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed87-c140-0c35-4ac1-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed87-c140-0c35-4ac1-max" includeChildSelections="false"/>
                       </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="M1897 Trench Gun and Bayonet" hidden="false" id="47d4-0bd1-f790-185c" collective="true">
+                          <entryLinks>
+                            <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="d05e-c9a7-e3d8-2ae0" type="selectionEntry" targetId="1235-a73-7cb5-26b4">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c03-23c8-dfce-8da2-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c03-23c8-dfce-8da2-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Bayonet" hidden="false" id="cc2d-2beb-20a1-5daa" type="selectionEntry" targetId="66fd-b75b-f882-3404">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="713a-7d70-58a9-65e9-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="713a-7d70-58a9-65e9-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82fc-9742-c888-e573" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
@@ -9363,7 +9394,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <rule name="Command Squad " id="6355-c0d3-bd93-9799" hidden="false">
               <description>This unit may only attach to X units.</description>
               <modifiers>
-                <modifier type="append" value="Recon Bikes" field="name"/>
+                <modifier type="append" value="(Cavalry Bike Squad)" field="name"/>
               </modifiers>
             </rule>
           </rules>
@@ -9436,7 +9467,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <rule name="Command Squad " id="88c6-db60-1e1d-ba6c" hidden="false">
               <description>This unit may only attach to X units.</description>
               <modifiers>
-                <modifier type="append" value="Drop-Trooper Infantry" field="name"/>
+                <modifier type="append" value="(Drop-Trooper Infantry Squad)" field="name"/>
               </modifiers>
             </rule>
           </rules>
@@ -9577,7 +9608,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <rule name="Command Squad " id="b532-8f7b-6327-56e4" hidden="false">
               <description>This unit may only attach to X units.</description>
               <modifiers>
-                <modifier type="append" value="X19 Badger Personal Hardsuits" field="name"/>
+                <modifier type="append" value="(X19 Badger Personal Hardsuit Squad)" field="name"/>
               </modifiers>
             </rule>
           </rules>
@@ -9644,7 +9675,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Ranger Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3dc2-4017-6990-9fd7">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Support Officer</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Ranger Officer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Character, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
@@ -9699,7 +9730,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <rule name="Command Squad " id="524c-6ee5-5c96-68dc" hidden="false">
               <description>This unit may only attach to X units.</description>
               <modifiers>
-                <modifier type="append" value="Ranger Infantry Squad" field="name"/>
+                <modifier type="append" value="(Ranger Infantry Squad)" field="name"/>
               </modifiers>
             </rule>
           </rules>
@@ -9905,6 +9936,106 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="9cbb-9f14-50ce-25ed" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Combat Engineer Officer" hidden="false" id="1479-daaf-bd1a-467c" collective="false">
+          <profiles>
+            <profile name="Engineer Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b557-5867-0bc6-3fa5">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Combat Engineer Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b7c0-e73d-fcf7-dffa">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Combat Engineer Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, Character, Command</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="f234-75d4-150d-93cf" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+          </infoLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Sidearm" id="c0f1-6d2b-d906-a192" hidden="false" defaultSelectionEntryId="c84b-3f67-7be8-8957">
+              <entryLinks>
+                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="c84b-3f67-7be8-8957" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="ed2a-a310-c627-4cc0" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5414-b331-992d-a1c1" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60d3-327c-d1f5-fc03" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Weapon" id="3b8a-0c11-a856-603f" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="CKF Saber" hidden="false" id="9c16-f5ba-416b-f3d0" collective="false" targetId="0a39-0114-af7b-36fe" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56f6-e0a8-2798-791a" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="M10 Thompson SMG" hidden="false" id="3c45-8937-78f2-8191" collective="false" targetId="1b17-bf28-08c9-f724" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71a4-7298-f58a-02c1" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="M3X1 Grease Gun" hidden="false" id="2411-9054-04f1-76ab" collective="false" targetId="c12c-e5f0-f4c4-9f1c" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68ff-7ccf-ddc9-e5c3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6de-60a4-2ad5-a118" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="M1897 Trench Gun and Bayonet" hidden="false" id="974b-f49d-e6f4-2b14" collective="true">
+                  <entryLinks>
+                    <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="76ab-26e3-c13b-a930" type="selectionEntry" targetId="1235-a73-7cb5-26b4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cfc5-5549-c632-9d2e-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfc5-5549-c632-9d2e-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Bayonet" hidden="false" id="65d7-1f50-3d73-df21" type="selectionEntry" targetId="66fd-b75b-f882-3404">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da68-13ce-804a-ceed-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da68-13ce-804a-ceed-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b5a-6306-2800-d291" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Officer Seniority" hidden="false" id="d1f7-44aa-5c0b-66ce" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="120f-eb6c-d3a4-7bc6" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f1e-dd23-6fa2-1bc3" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="6e1a-75f6-ac83-9e90" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
+          </entryLinks>
+          <rules>
+            <rule name="Command Squad " id="52c3-02a9-e772-3cd6" hidden="false">
+              <description>This unit may only attach to X units.</description>
+              <modifiers>
+                <modifier type="append" value="(Combat Engineer Squad)" field="name"/>
+              </modifiers>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
