@@ -57,8 +57,6 @@
     <categoryEntry id="baba-9300-79c2-8556" name="Recon Platoon Configuration" hidden="false"/>
     <categoryEntry id="3cff-c57c-6289-d24c" name="Support Platoon Configuration" hidden="false"/>
     <categoryEntry id="e281-74c9-b00c-1884" name="Mechanized Platoon Configuration" hidden="false"/>
-    <categoryEntry id="7165-cf57-cd9c-93da" name="Character" hidden="false"/>
-    <categoryEntry name="Unit" id="1e39-16b1-cedd-2cc6" hidden="false"/>
     <categoryEntry name="Heroes" id="33a5-8b7e-49bb-c30d" hidden="false"/>
     <categoryEntry name="Walker" id="7da2-822e-291f-eccc" hidden="false"/>
     <categoryEntry name="Mounted" id="5363-dec4-5b0e-5504" hidden="false"/>
@@ -145,14 +143,12 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -194,14 +190,12 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -239,14 +233,12 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -289,14 +281,12 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -333,14 +323,12 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -395,14 +383,12 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7165-cf57-cd9c-93da" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -917,6 +903,21 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bec9-ecef-eb7a-7b79" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="false" id="4881-4c15-cfc8-b00c">
+      <infoLinks>
+        <infoLink name="Binoculars" id="fdb4-cb98-ae7f-6b2b" hidden="false" type="rule" targetId="d8aa-96b2-fd3d-8958"/>
+        <infoLink name="Intel Gathering" id="4951-d13d-f0f0-e71c" hidden="false" type="rule" targetId="dc7a-f7c9-a54a-9cbc"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="25"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a8cd-a3cc-489a-81aa" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="2f38-62b3-ba2d-80c4" name="Command" hidden="false">
@@ -998,7 +999,7 @@
       <description>Each time an Enemy Unit is attacked by a Unit in this Platoon, reduce its max cover level by 1 for the round.</description>
     </rule>
     <rule id="9f61-2072-566a-5d02" name="Rounds on Target" hidden="false">
-      <description>All Units in the selected Platoon gain the Satellite Communications Special Rule and the Direct Fire Action as a Standard Action.</description>
+      <description>Anytime you reduce a Dial In counter, move a Blast Token 1”</description>
     </rule>
     <rule id="3414-34d7-5dfe-51c3" name="Rapid Reconnaissance" hidden="false">
       <description>All Units in the selected Platoon can take the Move Action more than once an activation, as a Standard Action.</description>
@@ -1011,7 +1012,7 @@
       <description>All Troop Units in the selected Platoon increase their Armor Value by 2 if they are within 6” of a Vehicle Unit that is also in the Platoon.</description>
     </rule>
     <rule id="9e55-f586-450d-8424" name="Rapid Fortification" hidden="false">
-      <description>All fortifications built by units in this Platoon cost 1 less Supply Point to Build, to a minimum of 1 S.P.</description>
+      <description>When a Unit in the platoon is selected to perform the Build action, Immediately gain 1 Supply Point.</description>
     </rule>
     <rule id="e24c-5c98-fc23-a3eb" name="Tank Hunters" hidden="false">
       <description>Whenever a Unit in this Platoon makes an attack against a Unit with the Vehicle Keyword, they may reroll any failed Armor checks once.</description>
@@ -1055,8 +1056,8 @@
     <rule name="Aerial Deployment" id="a61e-7e07-d7da-e915" hidden="false">
       <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
     </rule>
-    <rule name="Light on their feet" id="f708-1439-cbbe-6850" hidden="false">
-      <description>This unit may take the fallback reaction while losing only a single action during its following activation.</description>
+    <rule name="Light on their Feet" id="f708-1439-cbbe-6850" hidden="false">
+      <description>This Unit may take the Fallback Reaction while losing only a single Action during its following Activation.</description>
     </rule>
     <rule name="Hunter" id="c061-5561-8d2a-8ab3" hidden="false">
       <description>When this Unit destroys an enemy character unit, gain 1 Intel point.</description>
@@ -1092,7 +1093,7 @@
       <description>This unit has a melee engagement range of 3&quot;.</description>
     </rule>
     <rule name="Open Topped " id="6beb-7c97-fe80-09a9" hidden="false">
-      <description>Units inside this transport may be activated as normal and take attack actions while embarked. They may be selected as the target of an attack. These units receive X levels of cover.</description>
+      <description>Units inside this Transport may be activated as normal and may take Ranged Attack Actions while Embarked. They may be selected as the target of a Ranged Attack. These Units receive X levels of cover.</description>
     </rule>
     <rule name="Nominate Field Commander" id="653b-4795-0602-9a08" hidden="false">
       <description>Nominate this unit as your field commander. (This unit must have the highest officer rank in your army).</description>
@@ -1170,7 +1171,7 @@ Profile*. Considered Rough and Heavy Terrain. 5” square, flat.</description>
     <rule name="Hitch" id="320a-d3d0-cf35-7d83" hidden="false">
       <description>This Unit has access to the free action “Tow”.</description>
     </rule>
-    <rule name="Command Squad " id="7a39-d162-eaaa-f019" hidden="false">
+    <rule name="Command Squad" id="7a39-d162-eaaa-f019" hidden="false">
       <description>This unit may only attach to the designated units.</description>
     </rule>
     <rule name="Direct Fire" id="371b-f82b-1fef-54a5" hidden="false">
@@ -1207,8 +1208,8 @@ Profile*. Considered Rough and Heavy Terrain. 5” square, flat.</description>
       <description>When this Model moves through Light or Medium terrain, remove it from the battlefield. When this model is set up onto the battlefield you may remove one piece of Light or Medium terrain that falls under its base’s footprint.</description>
     </rule>
     <rule name="Pre-Registered Targets" id="b64b-4ada-29c0-088b" hidden="false">
-      <description>All Units in the selected Platoon lose the Cumbersome keyword. 
-*This Platoon ability can only be activated on rounds 2-4.</description>
+      <description>Each time you select a unit in this platoon to reduce a Dial In counter reduce it by 2 instead. You may instead reduce a counter by 1 from two
+Units.</description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
       <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit that is also in the Platoon.</description>
@@ -1241,13 +1242,37 @@ Under Fire: Units with this Condition may not take the Move Action. (They may st
       <description>When this Unit is destroyed, roll a D10, on a roll of 8+, perform an Attack Action (Profile:H4, AP4, D4) against all Units within 3&quot;.</description>
     </rule>
     <rule name="Armored Recovery Vehicle" id="3731-64c9-4653-d0bb" hidden="false">
-      <description>As an Action, this Unit may select a destroyed Vehicle Model left on the battlefield, remove that model, then gain 5 Supply Points.</description>
+      <description>As an Action, this Unit may select a destroyed Vehicle Model left on the battlefield that it is within 1&quot; of, remove that model, then gain 5 Supply Points.</description>
     </rule>
     <rule name="Prototype" id="b4c0-7c13-2254-8ad1" hidden="false">
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
     </rule>
     <rule name="Rupture" id="b184-aad8-f891-5e36" hidden="false">
       <description>When this Unit is destroyed, place a Gas Token on top of it. This token remains for the rest of the game.</description>
+    </rule>
+    <rule name="(CORE) Flex" id="05cc-45cd-4600-22d8" hidden="false">
+      <description>This Officer is considered to have all CORE types. If this Officer attaches to a unit, it gains the CORE type of the Unit it attached to and loses all others.</description>
+    </rule>
+    <rule name="Binoculars" id="d8aa-96b2-fd3d-8958" hidden="false">
+      <description>This Unit may take the Steady Action as a Standard Action</description>
+    </rule>
+    <rule name="Mounted Officer" id="421e-d2ba-263f-83f2" hidden="false">
+      <description>This Officer must attach to a Unit in its platoon with the Vehicle, Carriage, or Battery Keywords.</description>
+    </rule>
+    <rule name="Distributed Elements" id="3a38-3263-bf73-12e0" hidden="false">
+      <description>During Deployment, as you declare units in Transports and En Route, the individual Models in this Unit may separate, with each attaching to a different non-Battlesuit Troop Unit within this Platoon. When this happens they become part of those other Units, and this Unit ceases to exist. When Attacks are made against that Unit, you may select this Model as the recipient of that Attack and use its Evasion and Armor, if you do, damage must be applied to this Model first. This ability can only be used if there are equal to or more Troop Units in this platoon than models in this Unit.</description>
+    </rule>
+    <rule name="Ordnance" id="11d9-c53a-4538-6b97" hidden="false">
+      <description>During the Command Phase place one Blast token anywhere on the battlefield per weapon, in the range of this weapons, regardless of Line Of Sight. Blast tokens used by this Unit have a range of X” measured from the edge of the 25 mm Blast token, where X is its Ordnance X value. Each model in a Unit with Ordnance X will place its own token. When the Unit is selected to use the Attack Action it can select any Blast token that matches its designated token’s Blast value; each model in the unit must select a different Blast token and make its own
+separate attack. When a blast token is placed by this unit, any Troop Units within the token radius immediately receive one Suppression token. When attacking a multi-model unit with this weapon, excess damage spills over to other models in that unit, in addition, Units targeted with this attack do not receive the benefit of Cover. When an attack is made using a Blast Token, you must take an attack action against all units within range of that token regardless of if the units are friendly. Remove the token after resolving the attack.</description>
+    </rule>
+    <rule name="Dial In" id="1cc7-7e82-f9f9-df65" hidden="false">
+      <description>This Unit begins the game with a Dial In Counter set to X. Each time a Unit activates, select one Unit in your army, tick down one counter. If that unit
+performs 3 or more actions or uses a difficult action, tick down an additional counter. When this counter reaches 0, this Unit loses Cumbersome.
+
+
+*This effect is not cumulative, regardless of how many Units with Dial In
+are in your army only one counter is ticked down at a time.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1546,6 +1571,76 @@ Under Fire: Units with this Condition may not take the Move Action. (They may st
         </entryLink>
         <entryLink import="true" name="Fuel Drums" hidden="false" id="6fea-7eca-7dc7-49b1" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Cavalry Upgrades" id="09bd-0e27-0bcc-e66a" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Fuel Drums" hidden="false" id="144f-69cd-a545-2ec6" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Radio Pack" hidden="false" id="bcda-d2d7-cc05-272c">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6387-a9a6-9e36-f256" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Radio" id="e03c-26b3-3a2b-87be" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+            <infoLink name="Radio Pack" id="a041-f5f7-5cf3-53f6" hidden="false" type="rule" targetId="9e5e-ab69-3f3f-545f"/>
+            <infoLink name="Forward Observer" id="abc2-8b22-8961-a993" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
+          </infoLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="10"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Grenades" id="eea8-69d6-1142-ff1c" hidden="false" defaultSelectionEntryId="none">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d0a-a68b-985b-10e4" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Anti-Tank Grenade" hidden="false" id="ec8c-c26f-e00a-ca43" type="selectionEntry" targetId="df31-4b9c-2573-ce31">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fae-2aa7-9364-a87a" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="4dd9-5ab3-c9c2-ddef" type="selectionEntry" targetId="47ca-8cd6-8c1a-8b67">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db44-4d39-4448-040e" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Satchel Charge" hidden="false" id="585c-11f8-3dd9-2c40" type="selectionEntry" targetId="c9b6-4225-5278-d6b4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5e0-95ea-3aba-c6c3" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Smoke Grenade" hidden="false" id="37cf-e1dc-4da7-7009" type="selectionEntry" targetId="ef44-d791-e3da-0a08">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a144-3e9e-1053-676a" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Carriage Upgrades" id="d2d4-2fae-45fa-6796" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Radio" hidden="false" id="0b9b-dacd-99a9-dc42">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="908c-993a-4137-cbd8" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Radio" id="9a2d-5a89-fb7d-9ac9" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+          </infoLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="10"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </gameSystem>

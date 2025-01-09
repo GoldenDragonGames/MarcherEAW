@@ -32,7 +32,6 @@
   <entryLinks>
     <entryLink id="b007-dd96-94d4-4b3b" name="Landwehr Squad" hidden="false" collective="false" import="true" targetId="a7a0-9f96-37f9-f36e" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="4796-5c5b-2ea5-40fb" primary="false" name="Unit"/>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="4639-1aea-188c-e7c7" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="a07d-e8c2-3463-46ea" primary="false" name="Troops"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="b35c-244f-c594-acbf" primary="false" name="HRE"/>
@@ -48,7 +47,6 @@
     </entryLink>
     <entryLink id="8320-4c92-7ed1-9fd8" name="Pioneer Squad" hidden="false" collective="false" import="true" targetId="cef1-6e63-8635-a423" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="dc5d-4dd7-603e-9c79" primary="false" name="Unit"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="08df-60f3-6730-2e23" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="ffb9-367e-334f-64f9" primary="true" name="CORE Support"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="b464-5bb0-3a6b-d21f" primary="false" name="Troops"/>
@@ -66,17 +64,23 @@
     <entryLink id="d00d-78d5-2afc-3a9d" name="38M Franz Joseph Battle Tank" hidden="false" collective="false" import="true" targetId="4f49-202f-fad5-9d40" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="d33b-2492-3480-857e" name="CORE Armor" hidden="false" targetId="7950-f6f1-38c2-f2dd" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="f872-25fb-b5d7-3ddd" primary="false" name="Unit"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="b91e-50bb-9aed-e4f8" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="f20e-5e83-470d-aac2" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="79be-5d5e-9fd9-36cd" primary="false" name="HRE"/>
+        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="2b35-eb22-9aae-93dc" primary="false" name="AUX Mechanized"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="551d-863c-ecd7-5887" name="Graf Class Panzerzeppelin" hidden="false" collective="false" import="true" targetId="b550-76d5-fceb-5c41" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="d47a-31ba-bd86-3e70" name="Command" hidden="false" targetId="70eb-c264-a9cb-1bfe" primary="false"/>
         <categoryLink id="4fe8-6321-8d84-59fd" name="CORE Zeppelin" hidden="false" targetId="d3e6-9cfb-4ddb-2020" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="9f43-589f-b1cb-47ae" primary="false" name="Unit"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="061d-0d89-481a-3253" primary="false" name="Vehicle"/>
         <categoryLink targetId="b250-bcf3-850c-e556" id="491d-404f-6e18-6e2c" primary="false" name="Flying"/>
         <categoryLink targetId="6f95-29a9-8d9a-a5fb" id="c900-8aec-40cd-3993" primary="false" name="Superheavy"/>
@@ -85,7 +89,6 @@
     </entryLink>
     <entryLink id="3b85-5a90-a23f-9ead" name="21cm Morser Battery" hidden="false" collective="false" import="true" targetId="2b90-28f4-5032-a79e" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="7aa-d225-77d0-c0ad" primary="false" name="Unit"/>
         <categoryLink targetId="8679-d614-ae03-de2c" id="4004-c598-6d48-6111" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="2450-f84d-0bff-43d8" id="f6fe-6adf-6ea5-62c4" primary="false" name="Battery"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="89a5-7534-6dee-7f74" primary="false" name="HRE"/>
@@ -94,7 +97,6 @@
     <entryLink id="9e74-e6bf-f27b-1971" name="20M Supply Truck" hidden="false" collective="false" import="true" targetId="d807-88e6-8ddb-912b" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="6eca-961b-9444-9aec" name="Transports" hidden="false" targetId="d4be-5aad-8560-5720" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="7bf7-6f7a-5d87-e000" primary="false" name="Unit"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="8c99-1d83-98c0-8de1" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="33a6-b07e-3ce3-b613" primary="false" name="HRE"/>
       </categoryLinks>
@@ -105,7 +107,6 @@
     <entryLink id="58be-b27a-eb16-1e49" name="28M Wallenstein Armored Halftrack" hidden="false" collective="false" import="true" targetId="45bb-9f62-bc39-2e51" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="782e-0f0a-9499-12b0" name="Transports" hidden="false" targetId="d4be-5aad-8560-5720" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="d41-2178-bd6a-1b42" primary="false" name="Unit"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="edf1-ea6d-94ee-6f59" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="7b4a-cab2-c99d-3268" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="2c60-c50d-adae-0b5c" primary="false" name="HRE"/>
@@ -113,7 +114,6 @@
     </entryLink>
     <entryLink id="39a0-c32c-be58-0519" name="28M Wallenstein Armored Halftrack Gun Carrier" hidden="false" collective="false" import="true" targetId="7571-1648-52e0-4709" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="8a58-b88-25b2-2fd0" primary="false" name="Unit"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="b7c3-3c3f-a862-0ffc" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="d5ee-82e7-4bd9-9020" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="59d1-3b25-0e95-8160" primary="false" name="HRE"/>
@@ -129,7 +129,6 @@
     </entryLink>
     <entryLink id="f7bf-9408-6ea1-4199" name="22M Radetzky Armored Car" hidden="false" collective="false" import="true" targetId="96de-d712-d047-637e" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="1071-2b35-99eb-f97f" primary="false" name="Unit"/>
         <categoryLink targetId="54db-5889-a382-77cb" id="f138-584f-0906-b2eb" primary="true" name="CORE Recon"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="d3ec-693e-f0b1-a6ad" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="0835-7921-d09c-7356" primary="false" name="HRE"/>
@@ -144,7 +143,6 @@
     </entryLink>
     <entryLink id="da02-65cb-9234-e3d3" name="Royal Honvéd Squad" hidden="false" collective="false" import="true" targetId="a458-1bf4-bf51-4784" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="1aa0-6eac-a45f-9e20" primary="false" name="Unit"/>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="1cef-ec49-d0e4-4538" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="5a07-7473-d152-0ecb" primary="false" name="Troops"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="40b1-5f1c-0bff-4ebd" primary="false" name="HRE"/>
@@ -160,12 +158,12 @@
     </entryLink>
     <entryLink id="38c7-7a53-c579-59f0" name="43M Árpád Tank Hunter" hidden="false" collective="false" import="true" targetId="30f4-334f-3fa6-795c" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="ae19-4860-852c-447b" primary="false" name="Unit"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="8742-c821-3885-1cdf" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="44c3-8cfb-dd11-66e1" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="797f-e052-2614-0acc" primary="false" name="HRE"/>
         <categoryLink targetId="7950-f6f1-38c2-f2dd" id="4d6e-7ede-23f6-47f2" primary="true" name="CORE Armor"/>
         <categoryLink targetId="48f5-3131-be0b-5951" id="864b-4451-8fba-79f4" primary="false" name="AUX Support"/>
+        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="08c3-85b3-a0c7-451d" primary="false" name="AUX Mechanized"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="48f5-3131-be0b-5951" field="category">
@@ -173,15 +171,19 @@
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="7a00-fe0b-accf-cdca" name="43M Árpád Support Gun" hidden="false" collective="false" import="true" targetId="e5d1-8887-1013-3f91" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="39f4-6621-217-fa98" primary="false" name="Unit"/>
         <categoryLink targetId="8679-d614-ae03-de2c" id="09dc-dbf2-8b68-c1bf" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="d0d5-fd13-3021-81b0" primary="false" name="Tracked"/>
-        <categoryLink targetId="de0d-e12c-a964-4e46" id="a6fd-caf2-b0cb-235c" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="036b-547f-de82-dda7" primary="false" name="HRE"/>
+        <categoryLink targetId="de0d-e12c-a964-4e46" id="be0b-cd77-974f-f172" primary="false" name="Vehicle"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
@@ -193,23 +195,14 @@
     </entryLink>
     <entryLink id="74aa-6358-1175-40b3" name="Landwehr Heavy Machine Gun Squad" hidden="false" collective="false" import="true" targetId="4db9-9f9c-44b5-0fb1" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="fdf1-5b4f-99cf-3312" name="CORE Support" hidden="false" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="8302-54f3-3a41-e56a" primary="false" name="Unit"/>
-        <categoryLink targetId="a74d-0d07-e5d9-0032" id="f448-3d0b-3b68-7be3" primary="false" name="AUX Infantry"/>
-        <categoryLink targetId="6dc4-41a4-7144-d10c" id="7943-56ed-7e80-8b32" primary="false" name="Troops"/>
-        <categoryLink targetId="496e-47e7-7a85-4016" id="aa3f-d7ac-d191-d0ad" primary="false" name="HRE"/>
+        <categoryLink targetId="7110-7fe8-80e2-5e81" id="9ff2-f41f-afc0-eda2" primary="true" name="CORE Support"/>
+        <categoryLink targetId="6dc4-41a4-7144-d10c" id="7a02-d25b-c9f5-4ed7" primary="false" name="Troops"/>
+        <categoryLink targetId="496e-47e7-7a85-4016" id="6567-b7b1-2ce4-dc23" primary="false" name="HRE"/>
+        <categoryLink targetId="a74d-0d07-e5d9-0032" id="0795-2bb8-ee9f-c455" primary="false" name="AUX Infantry"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </entryLink>
     <entryLink id="85ce-302d-b268-9a78" name="Landwehr Mortar Squad" hidden="false" collective="false" import="true" targetId="a697-173f-1d00-fb5b" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="a86a-5d82-d832-a514" primary="false" name="Unit"/>
         <categoryLink targetId="8679-d614-ae03-de2c" id="1f66-7e19-03de-c7d7" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="380c-b79b-9ba2-292e" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="48f5-3131-be0b-5951" id="a78a-3437-c23d-8097" primary="false" name="AUX Support"/>
@@ -232,16 +225,22 @@
     <entryLink id="b9a7-7a57-1075-15ea" name="45M Barbarossa Assault Tank" hidden="false" collective="false" import="true" targetId="7c2e-7afd-ca06-a895" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="a5b4-4009-a123-a20c" name="CORE Armor" hidden="false" targetId="7950-f6f1-38c2-f2dd" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="e2e6-657f-3795-9ec4" primary="false" name="Unit"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="70cb-82d7-7fd3-c23b" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="3811-22ff-85fe-7a5b" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="4c60-53de-b9b9-89e0" primary="false" name="HRE"/>
+        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="e70e-4d84-0858-b46e" primary="false" name="AUX Mechanized"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="0df6-16bc-9d8d-260f" name="18M Towed Gun Carriage" hidden="false" collective="false" import="true" targetId="9670-9757-32b7-b702" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="55bd-4c92-1eef-54f8" name="CORE Support" hidden="false" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="60e6-49aa-9058-e89b" primary="false" name="Unit"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="0995-a189-51bb-0220" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="6ddc-3efe-c888-9db2" primary="false" name="Carriage"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="220e-035d-ac64-da60" primary="false" name="HRE"/>
@@ -256,7 +255,6 @@
     </entryLink>
     <entryLink id="38fb-e5ed-010f-889e" name="27M Höllenwerfer Carriage" hidden="false" collective="false" import="true" targetId="c02a-4296-c9ad-6eb8" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="ccfa-3964-43c1-9241" primary="false" name="Unit"/>
         <categoryLink targetId="8679-d614-ae03-de2c" id="5520-a911-b440-af85" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="48f5-3131-be0b-5951" id="b500-1e53-d552-b6b8" primary="false" name="AUX Support"/>
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="3d85-daac-1454-184a" primary="false" name="Carriage"/>
@@ -272,7 +270,6 @@
     </entryLink>
     <entryLink id="2c00-0e3b-6058-7c1e" name="Scharfschütze Team" hidden="false" collective="false" import="true" targetId="4db9-3228-1699-ef8f" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="3d2f-8de6-43e7-a2b5" primary="false" name="Unit"/>
         <categoryLink targetId="54db-5889-a382-77cb" id="fa2e-503a-257a-fa1d" primary="true" name="CORE Recon"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="b456-8d6f-cd7d-12e6" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="f25f-6a81-ce50-38be" primary="false" name="Troops"/>
@@ -288,7 +285,6 @@
     </entryLink>
     <entryLink id="8e31-b29f-02e9-e739" name="Panzergrenadier Squad" hidden="false" collective="false" import="true" targetId="45f2-6f9d-f25c-ac62" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="30db-6c86-272d-7d7d" primary="false" name="Unit"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="ee31-dba5-9ce7-0548" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="c12c-bd4f-80b9-030c" primary="false" name="Troops"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="03aa-8194-3d96-b373" primary="false" name="HRE"/>
@@ -304,7 +300,6 @@
     </entryLink>
     <entryLink id="6e31-f5e3-562f-8822" name="Zeppelinjäger Squad" hidden="false" collective="false" import="true" targetId="bcf8-9f0c-021d-2a01" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="4664-ee52-ccd8-4480" primary="false" name="Unit"/>
         <categoryLink targetId="54db-5889-a382-77cb" id="c96a-e18a-7f07-6797" primary="true" name="CORE Recon"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="37f7-cfb7-c07d-befa" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="97b9-06a9-b13a-32e9" primary="false" name="Troops"/>
@@ -331,7 +326,6 @@
     </entryLink>
     <entryLink id="6ac7-1a13-f993-c3e3" name="Zeppelinjäger Scharfschütze Team" hidden="false" collective="false" import="true" targetId="8977-05aa-cd6e-8a24" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="41e4-3bd5-2294-2c4e" primary="false" name="Unit"/>
         <categoryLink targetId="54db-5889-a382-77cb" id="fd3f-9651-afc4-26da" primary="true" name="CORE Recon"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="89f3-ed1b-2488-c30d" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="2be8-e673-7bc3-fb2f" primary="false" name="Troops"/>
@@ -353,11 +347,11 @@
     </entryLink>
     <entryLink id="7a08-0557-2ce4-dad2" name="Knecht Battlesuit Squad" hidden="false" collective="false" import="true" targetId="72da-15ed-1a55-d98a" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="1e0f-1695-eacf-9379" primary="false" name="Unit"/>
         <categoryLink targetId="4ec9-47a4-5562-ea3b" id="7303-8f1b-62ea-d88e" primary="false" name="Battlesuit"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="4e54-6e56-1fdb-1fde" primary="false" name="HRE"/>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="1e0e-8801-de19-fd31" primary="true" name="CORE Mechanized"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="86df-0228-ac7d-489b" primary="false" name="AUX Infantry"/>
+        <categoryLink targetId="6dc4-41a4-7144-d10c" id="b7f5-a57d-8c31-af22" primary="false" name="Troops"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
@@ -379,15 +373,13 @@
     </entryLink>
     <entryLink id="9377-d93b-c74d-0eca" name="Franz Von Trotta" hidden="false" collective="false" import="true" targetId="d6bb-21c6-c241-bfe6" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="ee1c-d220-c3b4-b946" primary="false" name="Character"/>
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="9a1a-49ad-96bd-08c4" primary="true" name="Heroes"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="d5f4-78cf-02bd-d6e1" primary="false" name="HRE"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Infantry Officer" hidden="true" id="18ca-6b6a-265-3eb2" type="selectionEntry" targetId="1686-ad0d-1d5f-63f8">
+    <entryLink import="true" name="Landwehr Officer" hidden="true" id="18ca-6b6a-265-3eb2" type="selectionEntry" targetId="1686-ad0d-1d5f-63f8">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="e6a9-61cb-807e-a8ec" primary="true" name="Command"/>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="218a-fdf4-ad9f-3010" primary="false" name="Character"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="f905-9181-abc5-4a8d" primary="false" name="HRE"/>
       </categoryLinks>
       <modifierGroups>
@@ -402,28 +394,41 @@
         </modifierGroup>
       </modifierGroups>
     </entryLink>
-    <entryLink import="true" name="Tank Officer" hidden="true" id="a45f-c562-eee7-1b59" type="selectionEntry" targetId="918b-b96f-ee87-c9b1">
+    <entryLink import="true" name="Mounted Officer" hidden="true" id="a45f-c562-eee7-1b59" type="selectionEntry" targetId="918b-b96f-ee87-c9b1">
       <categoryLinks>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="8725-793d-ab8c-ecce" primary="false" name="Character"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="d0a6-f7b1-9357-72b4" primary="true" name="Command"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="a3d9-9742-0714-c49b" primary="false" name="HRE"/>
       </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="de0d-e12c-a964-4e46" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="c2bc-81f4-b62b-dc46" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="2450-f84d-0bff-43d8" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="8679-d614-ae03-de2c" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="7110-7fe8-80e2-5e81" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="54db-5889-a382-77cb" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="7ce6-55a5-44aa-7258" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Ritter Class Sturmzeppelin" hidden="false" id="93eb-ef61-d810-203d" collective="false" targetId="68a5-d0c4-b069-0a80" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Zeppelin" hidden="false" id="deff-dda9-a91e-b872" targetId="d3e6-9cfb-4ddb-2020" primary="false"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="1101-5c80-dea7-3848" primary="false" name="Unit"/>
         <categoryLink targetId="d4be-5aad-8560-5720" id="5ef7-b309-4aa7-5595" primary="true" name="Transports"/>
         <categoryLink targetId="b250-bcf3-850c-e556" id="ae90-6627-2449-3648" primary="false" name="Flying"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="de95-a719-826f-549a" primary="false" name="Vehicle"/>
@@ -439,7 +444,6 @@
     </entryLink>
     <entryLink import="true" name="Knecht Officer" hidden="true" id="6670-7e8c-f845-b5ec" type="selectionEntry" targetId="73b3-51f6-6076-2dcd">
       <categoryLinks>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="772b-bacd-75f-5b68" primary="false" name="Character"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="3fa8-a47b-7dcc-e782" primary="true" name="Command"/>
         <categoryLink targetId="4ec9-47a4-5562-ea3b" id="499f-d9af-75e6-8446" primary="false" name="Battlesuit"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="f5b8-3ee8-2cf1-357f" primary="false" name="HRE"/>
@@ -458,7 +462,6 @@
     </entryLink>
     <entryLink import="true" name="Chaim Drescher: The Maccabean Knight" hidden="false" id="c5f0-9ac-bb2-2123" type="selectionEntry" targetId="65f3-ca93-8947-17fd">
       <categoryLinks>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="c0c-70ee-f7e0-2ad7" primary="false" name="Character"/>
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="d1fc-e96b-1f18-a471" primary="true" name="Heroes"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="abd7-0704-7112-1ab4" primary="false" name="Command"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="b064-fdea-57b3-1dd9" primary="false" name="HRE"/>
@@ -467,7 +470,6 @@
     <entryLink import="true" name="Pinzgauer Supply Truck" hidden="false" id="c4ec-fcb9-5f86-4c39" type="selectionEntry" targetId="ed6d-c907-b932-1d25">
       <categoryLinks>
         <categoryLink targetId="d4be-5aad-8560-5720" id="b2d2-6706-b5ac-f437" primary="true" name="Transports"/>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="244f-c0f8-c415-7f9e" primary="false" name="Unit"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="c66e-b784-0420-270d" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="5e00-7c18-3e95-8a3f" primary="false" name="HRE"/>
       </categoryLinks>
@@ -477,51 +479,13 @@
     </entryLink>
     <entryLink import="true" name="22M Radetzky Armored Command Car" hidden="false" id="d6b6-53e3-6ae1-44ed" type="selectionEntry" targetId="44dc-ba58-8626-0f81">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="46ab-c075-2f80-ebdb" primary="false" name="Unit"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="28e0-e077-1d5f-3f1a" primary="false" name="Vehicle"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="0859-8bae-bd2a-d0dc" primary="false" name="HRE"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="6645-c191-a6f7-7437" primary="true" name="Command"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Recon Officer" hidden="true" id="88a5-8599-4235-d7de" type="selectionEntry" targetId="6be8-2c76-e3b5-9a75">
-      <categoryLinks>
-        <categoryLink name="Character" hidden="false" id="98c8-a3ae-fe4-8f38" targetId="7165-cf57-cd9c-93da" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="8562-ef66-aac4-eebc" targetId="70eb-c264-a9cb-1bfe" primary="true"/>
-        <categoryLink targetId="496e-47e7-7a85-4016" id="1ce7-c212-8e15-6fb4" primary="false" name="HRE"/>
-      </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="54db-5889-a382-77cb" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Artillery Officer" hidden="true" id="db4c-2911-e82d-2ebd" type="selectionEntry" targetId="812f-944d-9ee8-bd90">
-      <categoryLinks>
-        <categoryLink name="Character" hidden="false" id="e2b6-24ee-8c87-db1b" targetId="7165-cf57-cd9c-93da" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="5cb1-74c7-14d4-6517" targetId="70eb-c264-a9cb-1bfe" primary="true"/>
-        <categoryLink targetId="496e-47e7-7a85-4016" id="596c-2107-231b-48eb" primary="false" name="HRE"/>
-      </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="8679-d614-ae03-de2c" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
     <entryLink import="true" name="Towable Shield Generator" hidden="false" id="915-9119-8199-b829" type="selectionEntry" targetId="1ab8-48c1-fc90-8e5f">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="e27d-b668-4579-797f" primary="false" name="Unit"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="8383-dd5e-eb51-9c85" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="666f-da23-2e1e-b668" primary="false" name="Carriage"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="539c-59b6-1d56-8777" primary="false" name="HRE"/>
@@ -543,7 +507,6 @@
     </entryLink>
     <entryLink import="true" name="Veteran Landwehr" hidden="false" id="4f43-e2e6-f017-5c7f" type="selectionEntry" targetId="67bf-4e27-a001-9987">
       <categoryLinks>
-        <categoryLink targetId="1e39-16b1-cedd-2cc6" id="37ab-158d-fd-be65" primary="false" name="Unit"/>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="1c85-8f60-f1d5-9220" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="ac77-6b41-a4b6-edaf" primary="false" name="Troops"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="0739-ce1c-fe0d-588e" primary="false" name="HRE"/>
@@ -575,7 +538,6 @@
     <entryLink import="true" name="Baron Lajos Dolmán de Szolnok" hidden="true" id="13d7-7662-cb4b-d6c6" type="selectionEntry" targetId="f29d-24f2-1ce9-e727">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="3a2f-9b2d-8ed8-6656" primary="true" name="Command"/>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="260f-804d-e56c-da6c" primary="false" name="Character"/>
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="4926-e579-2b57-aefa" primary="false" name="Heroes"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="339c-cffd-a18c-51e9" primary="false" name="HRE"/>
       </categoryLinks>
@@ -596,7 +558,6 @@
     <entryLink import="true" name="Zeppelinjägermeister" hidden="true" id="c18f-c74a-cc5b-1eb4" type="selectionEntry" targetId="4322-9857-41a3-370f">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="3d13-828d-8eec-65b1" primary="true" name="Command"/>
-        <categoryLink targetId="7165-cf57-cd9c-93da" id="5d32-c852-9e78-6265" primary="false" name="Character"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="81a1-52c3-74db-4069" primary="false" name="HRE"/>
       </categoryLinks>
       <modifierGroups>
@@ -613,7 +574,6 @@
     </entryLink>
     <entryLink import="true" name="32M Hunyadi Armored Personnel Carrier" hidden="false" id="f166-f456-331a-68aa" collective="false" targetId="5030-3495-b40b-fc19" type="selectionEntry">
       <categoryLinks>
-        <categoryLink name="Unit" hidden="false" id="4f3f-7443-c63b-13e4" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="Transports" hidden="false" id="726c-5776-2a9c-cdc3" targetId="d4be-5aad-8560-5720" primary="false"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="fe83-11fc-5e1d-6a9e" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="d79e-b952-ea87-fec4" primary="false" name="Vehicle"/>
@@ -623,7 +583,6 @@
     </entryLink>
     <entryLink import="true" name="27M Höllenwerfer Battery" hidden="false" id="4b9f-4d25-7d34-af19" collective="false" targetId="29d3-9b34-9029-9322" type="selectionEntry">
       <categoryLinks>
-        <categoryLink name="Unit" hidden="false" id="cbc2-1c83-1e73-ddb8" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="CORE Artillery" hidden="false" id="ffb8-d2d6-4ba7-edf8" targetId="8679-d614-ae03-de2c" primary="true"/>
         <categoryLink targetId="2450-f84d-0bff-43d8" id="c930-21f3-65ba-d90c" primary="false" name="Battery"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="f33f-daf5-abce-2419" primary="false" name="HRE"/>
@@ -631,7 +590,6 @@
     </entryLink>
     <entryLink import="true" name="21cm Morser Carriage" hidden="false" id="122d-add4-8d44-67e7" collective="false" targetId="6aa0-04c6-a45b-b6c5" type="selectionEntry">
       <categoryLinks>
-        <categoryLink name="Unit" hidden="false" id="0e7e-c4b1-e6f3-4927" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="AUX Support" hidden="false" id="8924-23d9-de3f-3301" targetId="48f5-3131-be0b-5951" primary="false"/>
         <categoryLink name="CORE Artillery" hidden="false" id="02a6-3bfb-3ea5-716f" targetId="8679-d614-ae03-de2c" primary="true"/>
         <categoryLink name="Carriage" hidden="false" id="d574-a237-7022-5516" targetId="c2bc-81f4-b62b-dc46" primary="false"/>
@@ -648,7 +606,6 @@
     <entryLink import="true" name="18M Towed Gun Battery" hidden="false" id="9568-5ff3-67a9-7491" collective="false" targetId="c82b-b723-248d-80d4" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Support" hidden="false" id="9c03-290e-17ab-a7b2" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink name="Unit" hidden="false" id="6528-2630-c17e-2226" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="AUX Infantry" hidden="false" id="7636-a7e4-23e9-600c" targetId="a74d-0d07-e5d9-0032" primary="false"/>
         <categoryLink targetId="2450-f84d-0bff-43d8" id="e478-2c91-28e2-198e" primary="false" name="Battery"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="5bf4-27a5-f4ee-8c13" primary="false" name="HRE"/>
@@ -657,7 +614,6 @@
     <entryLink import="true" name="Landwehr Automatic Grenade Launcher Squad" hidden="false" id="0b0b-e5e4-490c-4a8c" collective="false" targetId="9bb9-862b-17e6-66a1" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Support" hidden="false" id="e969-036c-94e8-4939" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink name="Unit" hidden="false" id="f9ae-d166-281e-dc79" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="AUX Infantry" hidden="false" id="0f87-3da8-7e68-fbf2" targetId="a74d-0d07-e5d9-0032" primary="false"/>
         <categoryLink name="Troops" hidden="false" id="bde1-8dc8-7147-ab12" targetId="6dc4-41a4-7144-d10c" primary="false"/>
         <categoryLink name="HRE" hidden="false" id="9770-0745-ddc8-d1da" targetId="496e-47e7-7a85-4016" primary="false"/>
@@ -673,7 +629,6 @@
     <entryLink import="true" name="Landwehr Autocannon Squad" hidden="false" id="3729-a342-3a62-9d35" collective="false" targetId="450f-e138-2c3d-b1f9" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Support" hidden="false" id="e52b-ca1e-b65e-8cc7" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink name="Unit" hidden="false" id="acbc-171c-bc3e-3356" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="AUX Infantry" hidden="false" id="099c-63e1-473d-667b" targetId="a74d-0d07-e5d9-0032" primary="false"/>
         <categoryLink name="Troops" hidden="false" id="3bf6-dc1c-c165-a302" targetId="6dc4-41a4-7144-d10c" primary="false"/>
         <categoryLink name="HRE" hidden="false" id="6fe4-4886-54f8-e3d1" targetId="496e-47e7-7a85-4016" primary="false"/>
@@ -689,7 +644,6 @@
     <entryLink import="true" name="Landwehr Rocket Launcher Squad" hidden="false" id="665b-3808-8a32-a77f" collective="false" targetId="7486-a074-82e7-53e4" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Support" hidden="false" id="49f8-2317-ed32-d028" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink name="Unit" hidden="false" id="fcd8-5963-e4b3-8170" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="AUX Infantry" hidden="false" id="e8e0-fe3a-e079-8423" targetId="a74d-0d07-e5d9-0032" primary="false"/>
         <categoryLink name="Troops" hidden="false" id="3418-d95e-984e-7c0d" targetId="6dc4-41a4-7144-d10c" primary="false"/>
         <categoryLink name="HRE" hidden="false" id="88d6-c9ad-1ba2-bd15" targetId="496e-47e7-7a85-4016" primary="false"/>
@@ -702,55 +656,8 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Support Officer (On Foot)" hidden="true" id="2180-c88f-8a6c-0403" type="selectionEntry" targetId="240c-50ff-d662-33de">
-      <categoryLinks>
-        <categoryLink name="Character" hidden="false" id="bbb9-21b3-bfec-ca57" targetId="7165-cf57-cd9c-93da" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="1208-0520-b31f-9b9b" targetId="70eb-c264-a9cb-1bfe" primary="true"/>
-        <categoryLink name="HRE" hidden="false" id="4e38-7c2c-2c7c-aa60" targetId="496e-47e7-7a85-4016" primary="false"/>
-      </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="7110-7fe8-80e2-5e81" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="6dc4-41a4-7144-d10c" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Support Officer (Mounted)" hidden="true" id="21e6-1b47-5d5a-b690" type="selectionEntry" targetId="54c2-a820-8c8e-a9f4">
-      <categoryLinks>
-        <categoryLink name="Command" hidden="false" id="c365-d45d-0e57-086b" targetId="70eb-c264-a9cb-1bfe" primary="true"/>
-        <categoryLink name="HRE" hidden="false" id="1910-9635-b8ab-f006" targetId="496e-47e7-7a85-4016" primary="false"/>
-        <categoryLink targetId="5363-dec4-5b0e-5504" id="7006-48c8-03a8-2354" primary="false" name="Mounted"/>
-      </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="7110-7fe8-80e2-5e81" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="de0d-e12c-a964-4e46" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
     <entryLink import="true" name="Pinzgauer Staff Car" hidden="false" id="b63a-ae9e-e2de-554f" type="selectionEntry" targetId="19a-a31b-29e3-1f0b">
       <categoryLinks>
-        <categoryLink name="Unit" hidden="false" id="b51c-8ba1-9576-c726" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="Vehicle" hidden="false" id="c618-cf99-ddd3-43ce" targetId="de0d-e12c-a964-4e46" primary="false"/>
         <categoryLink name="HRE" hidden="false" id="c461-8d49-551d-1506" targetId="496e-47e7-7a85-4016" primary="false"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="68ce-4931-219b-3902" primary="true" name="Command"/>
@@ -759,7 +666,6 @@
     <entryLink import="true" name="Landwehr Light Energy Gun Squad" hidden="false" id="7b8c-ee6e-5f49-633e" collective="false" targetId="0c58-7418-3faa-3a73" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Support" hidden="false" id="3767-772f-00c2-8d47" targetId="7110-7fe8-80e2-5e81" primary="true"/>
-        <categoryLink name="Unit" hidden="false" id="2124-5727-f5b1-115a" targetId="1e39-16b1-cedd-2cc6" primary="false"/>
         <categoryLink name="AUX Infantry" hidden="false" id="40db-25fd-6835-ca5c" targetId="a74d-0d07-e5d9-0032" primary="false"/>
         <categoryLink name="Troops" hidden="false" id="31d4-f803-5a39-0518" targetId="6dc4-41a4-7144-d10c" primary="false"/>
         <categoryLink name="HRE" hidden="false" id="8a83-3416-1d63-c1ab" targetId="496e-47e7-7a85-4016" primary="false"/>
@@ -787,6 +693,40 @@
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="e99c-6676-d74e-f2fa" primary="true" name="CORE Mechanized"/>
         <categoryLink targetId="8136-fed2-db8d-c7a0" id="6524-22b7-9733-dfe4" primary="false" name="AUX Armor"/>
       </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Panzergrenadier Officer" hidden="true" id="6830-fb86-d2d7-a505" type="selectionEntry" targetId="3038-234e-e995-734b">
+      <categoryLinks>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="35ed-1ffc-a107-070a" primary="true" name="Command"/>
+        <categoryLink targetId="496e-47e7-7a85-4016" id="c77e-76c0-6227-51a9" primary="false" name="HRE"/>
+      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="45f2-6f9d-f25c-ac62" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Pioneer Officer" hidden="true" id="808c-32ab-cf14-259b" type="selectionEntry" targetId="b6e5-f77f-a7fb-bb7f">
+      <categoryLinks>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="8d02-300f-efa9-a61b" primary="true" name="Command"/>
+        <categoryLink targetId="496e-47e7-7a85-4016" id="be03-dd92-ce30-2df9" primary="false" name="HRE"/>
+      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="cef1-6e63-8635-a423" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
@@ -968,14 +908,12 @@
     <selectionEntry type="upgrade" import="true" name="10.5cm Howitzer (Direct Fire)" hidden="false" id="d8ab-eda4-2739-0434" collective="false">
       <infoLinks>
         <infoLink name="10.5cm Howitzer (Direct Fire)" id="cf82-232b-c72c-d9df" hidden="false" targetId="d615-540c-a5a8-4c7d" type="profile"/>
-        <infoLink name="Blast" id="494e-69e8-4875-41a3" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Direct Fire" id="2e80-ba0d-fef3-4c86" hidden="false" targetId="371b-f82b-1fef-54a5" type="rule"/>
+        <infoLink name="Ordnance" id="f073-2ed5-46d1-2e17" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="High Explosive" id="7f62-0364-af0f-4e25" hidden="false" targetId="9375-d461-c135-9e66" type="rule"/>
-        <infoLink name="Direct Fire" id="2e80-ba0d-fef3-4c86" hidden="false" targetId="371b-f82b-1fef-54a5" type="rule"/>
-        <infoLink name="Difficult to Use" id="22c8-9677-5417-3d5f" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="49"/>
@@ -987,16 +925,11 @@
     <selectionEntry type="upgrade" import="true" name="21cm Morser M.26" hidden="false" id="2519-29f7-86c3-eddc" collective="true">
       <infoLinks>
         <infoLink name="21cm Morser M.26" id="816c-3152-0fd0-9f45" hidden="false" targetId="050d-65d0-57af-3350" type="profile"/>
-        <infoLink name="Indirect" id="c532-398a-7779-d912" hidden="false" targetId="0648-3007-c58c-c884" type="rule"/>
-        <infoLink name="Shellshock" id="8ae9-1e77-c9bb-ec3b" hidden="false" targetId="e5b9-60eb-5275-52a3" type="rule"/>
-        <infoLink name="Blast" id="9824-5874-5ded-d5f4" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="42bc-60a0-edf9-c1c5" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="3" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="High Explosive" id="2bee-3487-4b37-47f3" hidden="false" targetId="9375-d461-c135-9e66" type="rule"/>
-        <infoLink name="Close In" id="b470-5cab-5025-20ac" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-        <infoLink name="Difficult to Use" id="140b-43ac-4a8a-0bda" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="90"/>
@@ -1008,16 +941,11 @@
     <selectionEntry type="upgrade" import="true" name="27m Höllenwerfer Rocket Launcher" hidden="false" id="e2eb-ba2e-1f1e-49c7" collective="true">
       <infoLinks>
         <infoLink name="27m Höllenwerfer Rocket Launcher" id="0d83-a09b-2b3c-8992" hidden="false" targetId="cb17-69ad-9aa2-5809" type="profile"/>
-        <infoLink name="High Explosive" id="5072-831e-2b12-77a1" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Blast" id="0855-eaf7-4b14-cd90" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="9791-3246-392a-3817" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Indirect" id="2c84-d0e1-629e-59bd" hidden="false" targetId="0648-3007-c58c-c884" type="rule"/>
-        <infoLink name="Shellshock" id="81d7-c0de-d505-74b6" hidden="false" targetId="e5b9-60eb-5275-52a3" type="rule"/>
-        <infoLink name="Difficult to Use" id="6a2e-fefc-c43f-5d9c" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
-        <infoLink name="Close In" id="7bc2-f270-83ac-6609" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="122"/>
@@ -1050,16 +978,11 @@
     <selectionEntry type="upgrade" import="true" name="32M Granatewerfer" hidden="false" id="6590-aa79-2464-7435" collective="true">
       <infoLinks>
         <infoLink name="32M Granatewerfer" id="941f-55b8-6bf5-ed8a" hidden="false" targetId="f4ae-6218-f063-bfac" type="profile"/>
-        <infoLink name="Blast" id="342c-e8bf-18d8-09f3" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="9421-e29b-53f3-1ad7" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Close In" id="6084-a337-28ab-495a" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-        <infoLink name="Difficult to Use" id="0cba-a5a7-ddb0-f9ed" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
-        <infoLink name="High Explosive" id="4490-11e5-1a00-cd26" hidden="false" targetId="9375-d461-c135-9e66" type="rule"/>
-        <infoLink name="Indirect" id="20b4-791a-347b-76aa" hidden="false" targetId="0648-3007-c58c-c884" type="rule"/>
-        <infoLink name="Shellshock" id="ff95-9783-a2f9-fdd3" hidden="false" targetId="e5b9-60eb-5275-52a3" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="55"/>
@@ -1826,7 +1749,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 3, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1856,7 +1779,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 2, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1886,7 +1809,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 2, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Ranged, Rocket</characteristic>
       </characteristics>
     </profile>
@@ -1946,7 +1869,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 2, Difficult to Use, Direct Fire</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2294,7 +2217,7 @@
             <profile name="45M Barbarossa Assault Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="32aa-7659-8405-5139">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 45M Barbarossa Assault Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, Superheavy, Tracked, Vehicle</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -2578,7 +2501,7 @@
             <profile name="38M Franz Joseph Battle Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3c78-b03c-3a8f-bb72">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 38M Franz Joseph Battle Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, Vehicle, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -2865,7 +2788,7 @@
             <profile name="43M Árpád Tank Hunter" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f385-34a3-f3fd-9fd0">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 43M Árpád Tank Hunter</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Support, Vehicle, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Support, (AUX) Mechanized, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -3009,7 +2932,7 @@
                     <profile name="Veteran Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="78c5-e6ef-3cd5-5e46">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3024,7 +2947,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3062,7 +2985,7 @@
                     <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="de68-fcde-96b0-a293">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3083,7 +3006,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3098,7 +3021,7 @@
                     <profile name="Veteran Gefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a8c-d8c0-8352-6491">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3119,7 +3042,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3133,7 +3056,7 @@
                     <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b0cc-1ffb-be63-f5e8">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3154,7 +3077,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3168,7 +3091,7 @@
                     <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8a62-e5ca-3fb0-82bc">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3189,7 +3112,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3203,7 +3126,7 @@
                     <profile name="Veteran Sanitäter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="63d5-1a60-6317-56c6">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3224,7 +3147,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3238,7 +3161,7 @@
                     <profile name="Veteran Gefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8a2f-ff28-bd0b-3732">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3259,7 +3182,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3292,7 +3215,7 @@
                     <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fffc-bd70-6ae0-ac4d">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3313,7 +3236,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
+                    <cost name="Munitions" typeId="Points" value="16"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3370,7 +3293,7 @@
                     <profile name="Tizedes" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="26c7-d836-287c-9186">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
                       </characteristics>
@@ -3407,9 +3330,10 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="2"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Honvéd" hidden="false" id="e940-1b1a-1b06-0002" collective="false">
@@ -3442,9 +3366,10 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="2"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -3466,7 +3391,6 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="30"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -3559,7 +3483,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3574,7 +3498,7 @@
                     <profile name="Gefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="450a-3dff-04e1-cb99">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3609,7 +3533,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3644,7 +3568,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3679,7 +3603,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3714,7 +3638,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3749,7 +3673,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3784,7 +3708,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3819,7 +3743,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3892,9 +3816,10 @@
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="14"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Loadout" id="861b-1490-80f2-2c56" hidden="false" collective="false" import="true" defaultSelectionEntryId="30a9-1920-851a-e33b">
@@ -3949,16 +3874,17 @@
                     <profile name="Jäger" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="eac6-a678-0cb5-26af">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="14"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapons" id="995f-0335-646c-b79e" hidden="false" defaultSelectionEntryId="a3c0-d5ef-6c36-0c5a">
@@ -4026,9 +3952,10 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="14"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Jäger Scharfschütze" hidden="false" id="d6a2-a1db-b864-3b0c" collective="false">
@@ -4054,9 +3981,10 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="14"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -4087,7 +4015,6 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="92"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4134,7 +4061,7 @@
                     <profile name="Jäger Scharfschützer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="97dc-7b05-ae48-4213">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -4187,9 +4114,10 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <costs>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="14"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Jäger Spotter" hidden="false" id="3d38-bb1a-09e5-37ae" collective="false">
@@ -4222,16 +4150,16 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="14"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="43"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4298,7 +4226,7 @@
                     <profile name="Scharfschützer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d665-46fe-7dd4-794e">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -4313,7 +4241,7 @@
                       <selectionEntries>
                         <selectionEntry type="upgrade" import="true" name="Offiziersjäger" hidden="false" id="c522-3a43-c41e-28cd" collective="false">
                           <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="910c-0925-f345-1ab3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5fe-e54a-a67f-cd57" includeChildSelections="false"/>
                           </constraints>
                           <entryLinks>
                             <entryLink import="true" name="M1931 Mannlicher Rifle (Scoped)" hidden="false" id="c7c6-0539-cd54-02c1" collective="false" targetId="135a-d05a-161e-d241" type="selectionEntry">
@@ -4331,7 +4259,7 @@
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Rüstungsjäger" hidden="false" id="ab60-36a7-a609-18b6" collective="false">
                           <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d4d-889c-ca36-2fb7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2079-a22f-937c-871d" includeChildSelections="false"/>
                           </constraints>
                           <entryLinks>
                             <entryLink import="true" name="Solothurn M.220 (Scoped)" hidden="false" id="3232-2b82-ff3a-c967" collective="false" targetId="5fc9-0e8f-9c76-8932" type="selectionEntry">
@@ -4351,9 +4279,10 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <costs>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Spotter" hidden="false" id="0aa9-f444-46a2-c7e0" collective="false">
@@ -4365,7 +4294,7 @@
                     <profile name="Scharfschützer Spotter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3740-32d3-3777-80c4">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -4386,16 +4315,16 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="9"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="22"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4519,6 +4448,11 @@
               </modifiers>
             </infoLink>
             <infoLink name="Cumbersome" id="ed28-cf40-c881-4f10" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
+            <infoLink name="Dial In" id="c44d-a93a-0184-79f0" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="4" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="5768-3a67-f64f-7ab1" hidden="false" collective="false" import="true">
@@ -4622,6 +4556,11 @@
             </infoLink>
             <infoLink name="Cumbersome" id="b79f-5b10-0c31-46bd" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
             <infoLink name="Cook Off" id="f2cf-38cb-1e46-6cca" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
+            <infoLink name="Dial In" id="dfc9-efbb-cf5b-bc4b" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="8" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="156"/>
@@ -4729,6 +4668,11 @@
               </modifiers>
             </infoLink>
             <infoLink name="Cumbersome" id="18d6-0814-4187-2853" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
+            <infoLink name="Dial In" id="76ea-d872-1220-5c96" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="6" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="81"/>
@@ -4790,6 +4734,11 @@
             </infoLink>
             <infoLink name="Artillery Carriage Actions" id="ade6-1467-cd39-240a" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
             <infoLink name="Cumbersome" id="dfa0-6e3d-3463-0a28" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
+            <infoLink name="Dial In" id="4555-2149-2c8f-1116" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="6" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="38"/>
@@ -4816,6 +4765,7 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dce6-fb3f-0a2e-e6ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="7dda-d100-8d32-a7b9" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="21cm Morser Battery" hidden="false" id="2b90-28f4-5032-a79e" collective="false">
@@ -4834,6 +4784,11 @@
             <infoLink name="Towable" id="d757-87ad-3113-34ca" hidden="false" targetId="9e88-6c38-3a57-c010" type="rule"/>
             <infoLink name="Artillery Carriage Actions" id="6513-e0c5-32c5-e0cf" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
             <infoLink name="Cumbersome" id="0ca1-06d4-69c2-6855" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
+            <infoLink name="Dial In" id="4671-908b-42af-da42" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="12" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="9c7d-02b8-5dec-37d1" hidden="false" collective="false" import="true" defaultSelectionEntryId="5df5-cc83-c2a4-63a8">
@@ -4887,6 +4842,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="a301-787e-d5ac-28a1" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="21cm Morser Carriage" hidden="false" id="6aa0-04c6-a45b-b6c5" collective="false">
           <profiles>
@@ -4912,6 +4870,11 @@
             <infoLink name="Artillery Carriage Actions" id="77dd-5b10-f0f7-6365" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
             <infoLink name="Cumbersome" id="cfe4-f42a-d69f-93a8" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
             <infoLink name="Heavy Carriage" id="3ac3-ed0d-cc31-e7ae" hidden="false" type="rule" targetId="4d43-378e-5e18-f124"/>
+            <infoLink name="Dial In" id="8795-ba84-d9f5-aa03" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="6" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="38"/>
@@ -4932,6 +4895,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2863-3a19-9655-c5e3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="1d8b-734a-6f09-8639" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="27M Höllenwerfer Battery" hidden="false" id="29d3-9b34-9029-9322" collective="false">
@@ -4952,6 +4916,11 @@
             </infoLink>
             <infoLink name="Artillery Carriage Actions" id="3273-c8fa-967a-e28d" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
             <infoLink name="Cumbersome" id="c128-9823-d477-555c" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
+            <infoLink name="Dial In" id="cb28-b581-48dd-fad2" hidden="false" type="rule" targetId="1cc7-7e82-f9f9-df65">
+              <modifiers>
+                <modifier type="append" value="12" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="3e51-006f-b9a1-aa3c" hidden="false" collective="false" import="true">
@@ -5011,6 +4980,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="b88e-4571-24a4-f1d1" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5085,16 +5057,17 @@
             <rule name="Command Squad " id="54c8-26e8-2a74-8b3a" hidden="false">
               <description>This unit may only attach to the designated units.</description>
               <modifiers>
-                <modifier type="append" value="Zeppelinjäger" field="name"/>
+                <modifier type="append" value="(Zeppelinjäger Squad)" field="name" join=":"/>
               </modifiers>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tank Officer" hidden="false" id="918b-b96f-ee87-c9b1">
+        <selectionEntry type="upgrade" import="true" name="Mounted Officer" hidden="false" id="918b-b96f-ee87-c9b1">
           <infoLinks>
-            <infoLink name="Designated Leader" id="1f2d-7a0f-40f2-9290" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="(CORE) Flex" id="1f2d-7a0f-40f2-9290" hidden="false" type="rule" targetId="05cc-45cd-4600-22d8"/>
             <infoLink name="Veteran Crew" id="e51f-026e-4832-e2e4" hidden="false" type="rule" targetId="fe62-95d4-4af0-7a99"/>
             <infoLink name="Command Actions" id="94eb-3686-8a26-dac7" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Mounted Officer" id="80ef-fb5c-c9a2-b8a8" hidden="false" type="rule" targetId="421e-d2ba-263f-83f2"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Officer Seniority" hidden="false" id="d85b-ffd3-3594-f011" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
@@ -5106,58 +5079,10 @@
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="1b67-77bc-2471-a437" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <profiles>
-            <profile name="Tank Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="df2c-61a8-4820-8b03">
+            <profile name="Mounted Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="df2c-61a8-4820-8b03">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Imperial Tank Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, Support, Command, Mounted</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Support Officer (Mounted)" hidden="false" id="54c2-a820-8c8e-a9f4">
-          <infoLinks>
-            <infoLink name="Designated Leader" id="9812-403e-f19d-b43b" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
-            <infoLink name="Command Actions" id="e7a3-edaf-de42-1d85" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="4fda-dcd3-3d2b-ffa9" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6bf7-5403-a637-7e2f" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c474-724b-7836-857c" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="2d53-1b6e-d250-3c13" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
-          </entryLinks>
-          <profiles>
-            <profile name="Support Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c127-0af0-eed3-ecd3">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Support Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Support, Command, Mounted</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Recon Officer" hidden="false" id="6be8-2c76-e3b5-9a75">
-          <infoLinks>
-            <infoLink name="Designated Leader" id="9eb4-c20f-7fcd-442d" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
-            <infoLink name="Command Actions" id="dd76-3065-f340-2341" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="f8c7-4a16-a28-7e1d" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e9b-c88f-b79-e999-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e9b-c88f-b79-e999-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="d9d3-200d-ebde-3f55" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
-          </entryLinks>
-          <profiles>
-            <profile name="Recon Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1e72-7b65-df70-a563">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Imperial Recon Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, Command, Mounted</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">N/A</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Flex, Command, Mounted</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -5175,7 +5100,7 @@
             <profile name="Knecht Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4739-a707-890d-106d">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
               </characteristics>
@@ -5223,7 +5148,7 @@
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="246e-2143-f0c0-cf0a" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="50"/>
+            <cost name="Munitions" typeId="Points" value="47"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5262,14 +5187,14 @@
             <rule name="Command Squad " id="7933-abda-967b-c57f" hidden="false">
               <description>This unit may only attach to the designated units.</description>
               <modifiers>
-                <modifier type="append" value="Knecht" field="name"/>
+                <modifier type="append" value="(Knecht Battlesuit Squad)" field="name" join=":"/>
               </modifiers>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="Infantry Officer" hidden="false" id="1686-ad0d-1d5f-63f8" collective="false">
+        <selectionEntry type="model" import="true" name="Landwehr Officer" hidden="false" id="1686-ad0d-1d5f-63f8" collective="false">
           <profiles>
-            <profile name="Infantry Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cfb0-95f2-ae72-ccce">
+            <profile name="Landwehr Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cfb0-95f2-ae72-ccce">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
@@ -5277,9 +5202,9 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
-            <profile name="Infantry Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d1b-e9b9-af96-b181">
+            <profile name="Landwehr Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d1b-e9b9-af96-b181">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Imperial Infantry Officer</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Landwehr Officer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, Character, Command, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -5347,42 +5272,19 @@
             <infoLink name="Independent Hero" id="50f0-eacf-fe12-bd14" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
             <infoLink name="Slippery" id="ca41-2495-f919-5cc9" hidden="false" type="rule" targetId="d4e3-7a13-502a-ecd5"/>
             <infoLink name="Veteran Crew" id="2e04-d74d-db44-f80d" hidden="false" type="rule" targetId="fe62-95d4-4af0-7a99"/>
+            <infoLink name="Shielded" id="1d36-d300-9026-9bed" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule">
+              <modifiers>
+                <modifier type="append" value="3" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Munitions" typeId="Points" value="20"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Compact Kinetic Field (CKF) Blade" hidden="false" id="431d-174d-3e47-5b3d" collective="true">
-              <infoLinks>
-                <infoLink name="CKF Saber" id="1823-e8b8-997f-6d8b" hidden="false" targetId="ce1a-9c5f-9023-70b8" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="Munitions" typeId="Points" value="0"/>
-                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf69-b168-7d2d-0eea"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d75-eefb-5364-a681"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="MP33 SMG" hidden="false" id="19bf-99d5-f0b2-e007" collective="true">
-              <infoLinks>
-                <infoLink name="MP33 SMG" id="767d-8bf6-ba12-c248" hidden="false" targetId="a377-d534-5c8c-a988" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="Munitions" typeId="Points" value="1"/>
-                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41de-d466-b94c-2991"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b6a6-702d-47c1-99b4"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Officer Seniority" hidden="false" id="cd1d-683b-bb27-4768" collective="false">
               <selectionEntryGroups>
                 <selectionEntryGroup name="Officer Seniority" id="d763-3ebe-aa81-bbe5" hidden="false" collective="false" import="true" defaultSelectionEntryId="3e2e-64ec-5ae8-5ffe">
@@ -5430,103 +5332,15 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c543-f549-5e86-e552" includeChildSelections="true"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sidearm" id="e5ed-fc8e-d430-f33d" hidden="false" defaultSelectionEntryId="90c1-009c-3fae-deaf">
-              <entryLinks>
-                <entryLink import="true" name="M1936 Plasma Pistol" hidden="false" id="5fff-292c-0c40-0c33" type="selectionEntry" targetId="a111-e815-6c81-e7d7"/>
-                <entryLink import="true" name="Bergmann Pistol M1938" hidden="false" id="90c1-009c-3fae-deaf" type="selectionEntry" targetId="e85b-5482-785f-59fb"/>
-                <entryLink import="true" name="M1933 Magazine-Fed Slug Pistol" hidden="false" id="25fa-82c9-85e7-de34" type="selectionEntry" targetId="65f8-cca6-982-44d"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7de1-566f-3654-e1d4" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60fe-1861-f4a1-234f" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <entryLinks>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="0868-c332-fa9b-5151" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Artillery Officer" hidden="false" id="812f-944d-9ee8-bd90">
-          <infoLinks>
-            <infoLink name="Designated Leader" id="345-c00c-da9e-235d" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
-            <infoLink name="Command Actions" id="b032-1a32-301a-b3fa" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="f011-eb4b-5204-183e" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
+            <entryLink import="true" name="CKF Saber" hidden="false" id="afde-0479-5478-9fd1" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="410a-dd07-b3f9-4a93-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="410a-dd07-b3f9-4a93-max" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad7d-be76-0d31-e09a" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bea-f1db-bd99-1358" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="99b7-7e64-fd59-6c63" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
-          <profiles>
-            <profile name="Artillery Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1619-3bc9-c5e3-1919">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Artillery Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, Command, Mounted</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Support Officer (On Foot)" hidden="false" id="240c-50ff-d662-33de" collective="false">
-          <profiles>
-            <profile name="Support Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="247b-3d94-8e16-3787">
-              <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Support Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="6d2c-4f68-4d26-ce65">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Imperial Infantry Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Support, Command, Character</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Designated Leader" id="0832-b2e8-921d-e1c4" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
-            <infoLink name="Command Actions" id="5569-ee44-0e34-8ca1" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink import="true" name="CKF Saber" hidden="false" id="786b-a113-8575-997b" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="041b-1d1e-7a9e-457d" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b19f-9871-a4ed-9ec7" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="1364-9e6a-adc6-7447" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f9cb-3838-0a61-55ee" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="83d7-b4e6-9540-a897" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="bf0a-f0a7-91f7-1f71" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
-          </entryLinks>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sidearm" id="f9cf-fbef-f6bb-92a2" hidden="false" defaultSelectionEntryId="0ded-dca8-c293-84ce">
-              <entryLinks>
-                <entryLink import="true" name="M1922 Steyr-Roth" hidden="false" id="0ded-dca8-c293-84ce" type="selectionEntry" targetId="f6b0-733b-4270-9164"/>
-                <entryLink import="true" name="M1933 Magazine-Fed Slug Pistol" hidden="false" id="edea-9e6a-454f-a437" type="selectionEntry" targetId="65f8-cca6-982-44d"/>
-                <entryLink import="true" name="M1936 Plasma Pistol" hidden="false" id="a730-0d6c-c477-dc50" type="selectionEntry" targetId="a111-e815-6c81-e7d7"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="410d-7cff-d3d2-0d1f" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b53-b8dd-fb07-6c9c" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="22M Radetzky Armored Command Car" hidden="false" id="44dc-ba58-8626-0f81" collective="false">
           <profiles>
@@ -5602,7 +5416,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
               </characteristics>
               <modifiers>
@@ -5621,7 +5435,7 @@
             <profile name="Pinzgauer Staff Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5bee-fcb6-e604-9923">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Pinzgauer Staff Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Transport, Vehicle</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Flex, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -5635,7 +5449,6 @@
             </infoLink>
             <infoLink name="Rank has its Privileges" id="1a62-81f1-7547-8888" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
             <infoLink name="Hitch" id="cfb1-d383-f7d6-e2b5" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
-            <infoLink name="Dangerous Bailout" id="d443-77fa-0392-e490" hidden="false" type="rule" targetId="544-9133-e670-6e0c"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="40"/>
@@ -5653,6 +5466,226 @@
             </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="7190-f0c0-6c80-330b" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Pioneer Officer" hidden="false" id="b6e5-f77f-a7fb-bb7f" collective="false">
+          <profiles>
+            <profile name="Pioneer Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9386-da88-b11d-a81a">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Pioneer Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, Character, Command, Troop</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Pioneer Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9832-9f63-a939-3d60">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="6f60-52ff-7f4c-d26c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Command Actions" id="d024-52d9-8557-88ff" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="CKF Saber" hidden="false" id="0c1d-0e5f-7f44-8526" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2ea-96b5-0da8-1a7d" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a05b-9801-7563-c69c" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Officer Seniority" hidden="false" id="4c94-7289-f696-1f6c" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d633-6e7b-7cc4-bfdc" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61d4-4e6c-4f84-e91d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="2799-d0ab-a7e4-4b1f" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
+            <entryLink import="true" name="MP33 SMG" hidden="false" id="39ab-6807-148d-f705" collective="false" targetId="1d72-b2ee-fef5-7d5b" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5611-7f2c-1885-64f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a1d-1db5-dd4d-3dc7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="27"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Sidearm" id="1817-42ef-b13a-5dae" hidden="false" defaultSelectionEntryId="f1a6-a6c7-4df1-924f">
+              <entryLinks>
+                <entryLink import="true" name="M1922 Steyr-Roth" hidden="false" id="f1a6-a6c7-4df1-924f" type="selectionEntry" targetId="f6b0-733b-4270-9164"/>
+                <entryLink import="true" name="M1933 Magazine-Fed Slug Pistol" hidden="false" id="1e06-840e-79f3-0dbf" type="selectionEntry" targetId="65f8-cca6-982-44d"/>
+                <entryLink import="true" name="M1936 Plasma Pistol" hidden="false" id="5064-94bb-01e8-84cb" type="selectionEntry" targetId="a111-e815-6c81-e7d7"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f8a6-620b-13ac-d60a" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c025-80b2-e31b-852b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Command Squad " id="edf5-c794-7a7d-2f42" hidden="false">
+              <description>This unit may only attach to the designated units.</description>
+              <modifiers>
+                <modifier type="append" value="(Pioneer Squad)" field="name" join=":"/>
+              </modifiers>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Panzergrenadier Officer" hidden="false" id="3038-234e-e995-734b" collective="false">
+          <profiles>
+            <profile name="Panzergrenadier Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7d34-ab89-2ee1-953f">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Panzergrenadier Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, Command, Troop</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Panzergrenadier Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f068-6997-f14e-0fbc">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="3038-234e-e995-734b" childId="efb4-5926-da44-5f41" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="7246-3b1d-2cbf-39e8" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Command Actions" id="7772-c153-f4bc-e253" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Officer Seniority" hidden="false" id="1967-b234-4595-9d47" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f404-692f-3d54-8fba" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f21-be65-28d4-aa27" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="be05-9d25-0047-f0d4" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
+            <entryLink import="true" name="Bergmann Pistol M1938" hidden="false" id="2f71-0bfd-ea74-cd78" type="selectionEntry" targetId="e85b-5482-785f-59fb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="03b1-1a03-af7d-d9ba" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c03-885b-34d0-d3a6" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="33"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Primary Weapon" id="c38f-0d30-dd7f-6cbe" hidden="false" defaultSelectionEntryId="76ca-13ca-cd00-71ac">
+              <entryLinks>
+                <entryLink import="true" name="CKF Greatsword" hidden="false" id="76ca-13ca-cd00-71ac" type="selectionEntry" targetId="0396-a57b-ee52-2c78">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d17a-d68c-9fde-d3d4" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Flanged Mace and Shield" hidden="false" id="77e1-d046-8e58-0e53" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08f3-7307-7cf4-7bc7" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="85b8-d44c-a837-ea04" collective="false" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40c0-58ab-27bf-695e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5497-6e79-b8ee-bd5c" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9e2-fc31-64fb-179e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Command Squad " id="c746-6b0b-181e-6ee8" hidden="false">
+              <description>This unit may only attach to the designated units.</description>
+              <modifiers>
+                <modifier type="append" value="(Panzergrenadier Squad)" field="name" join=":"/>
+              </modifiers>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Honvéd Officer" hidden="false" id="6df3-873d-931a-bb36" collective="false">
+          <profiles>
+            <profile name="Honvéd Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="eec8-348b-558b-b724">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Honvéd Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="31ac-d8b4-99bb-849b">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Landwehr Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, Character, Command, Troop</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="1e77-7358-6545-4274" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Command Actions" id="4288-6747-ed69-a13b" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="CKF Saber" hidden="false" id="e71b-b4a1-7859-f87d" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1cd5-5a32-1233-8f61" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7818-a93f-b6c4-630b" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Officer Seniority" hidden="false" id="0248-0d6b-5b67-a1c3" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32f7-a926-9370-766b" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6538-3e31-8b42-2336" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="5d16-80ed-c367-a44c" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
+          </entryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="5"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Sidearm" id="0dc7-b4ed-99d9-9b80" hidden="false" defaultSelectionEntryId="3a82-ff3d-3c47-620">
+              <entryLinks>
+                <entryLink import="true" name="M1922 Steyr-Roth" hidden="false" id="2082-2f1a-d62c-ddca" type="selectionEntry" targetId="f6b0-733b-4270-9164"/>
+                <entryLink import="true" name="M1933 Magazine-Fed Slug Pistol" hidden="false" id="f6cf-5e7a-fe59-c39d" type="selectionEntry" targetId="65f8-cca6-982-44d"/>
+                <entryLink import="true" name="M1936 Plasma Pistol" hidden="false" id="aebd-b58b-71cf-6ea1" type="selectionEntry" targetId="a111-e815-6c81-e7d7"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f47c-f0ad-d8dd-b605" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7319-37b3-e790-5f64" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Command Squad " id="f6e2-8b8d-708e-433e" hidden="false">
+              <description>This unit may only attach to the designated units.</description>
+              <modifiers>
+                <modifier type="append" value="(Royal Honvéd Squad)" field="name" join=":"/>
+              </modifiers>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5722,7 +5755,7 @@
             <infoLink name="Elite Infantry" id="a749-eeef-1ce0-9889" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Squad Members" id="8d18-8cf9-447b-f036" hidden="false" collective="false" import="true" defaultSelectionEntryId="b491-1ff7-9b01-8abd">
+            <selectionEntryGroup name="Squad Members" id="8d18-8cf9-447b-f036" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
               <constraints>
                 <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="fb44-f9e9-fea8-f86d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="acba-a7ea-9d84-f26a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -5737,7 +5770,7 @@
                     <profile name="Pioneer Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a571-5c0b-f0bb-bc31">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -5764,7 +5797,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Munitions" typeId="Points" value="18"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5786,14 +5819,12 @@
                 <selectionEntry type="model" import="true" name="Pioneer" hidden="false" id="b491-1ff7-9b01-8abd" collective="false" defaultAmount="">
                   <constraints>
                     <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="09ab-ae66-1947-f335" includeChildSelections="false"/>
-                    <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="63ad-cc60-1fda-61a6-min"/>
-                    <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="63ad-cc60-1fda-61a6-max"/>
                   </constraints>
                   <profiles>
                     <profile name="Pioneer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a34e-654e-5e68-a512">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -5820,7 +5851,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Munitions" typeId="Points" value="18"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5886,7 +5917,7 @@
                     <profile name="Landwehr Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5568-59b5-994a-92a7">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -5913,7 +5944,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5957,26 +5988,6 @@
             </infoLink>
             <infoLink name="Support Carriage Actions" id="3348-56da-ee98-aea5" hidden="false" targetId="1761-68e7-b0e6-e086" type="profile"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Main Weapon" id="5698-d0ac-4ecc-34de" hidden="false" collective="false" import="true" defaultSelectionEntryId="e370-6c66-3fa3-8e3e">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a27-3dc2-d46e-533b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70d9-2047-5a69-5603" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="7.5cm High-Velocity Cannon" hidden="false" id="e370-6c66-3fa3-8e3e" collective="false" targetId="943f-5cd1-afda-1572" type="selectionEntry">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1ab-b899-d6bb-cd01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Epak. 34 Energy Cannon" hidden="false" id="5dd5-de56-8cca-beb8" collective="false" targetId="4be2-4855-7d77-5acf" type="selectionEntry">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e38a-c36a-1a91-032c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <costs>
             <cost name="Munitions" typeId="Points" value="38"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -5996,7 +6007,36 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfab-3bc7-e8bc-003a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="848e-f258-52de-566e" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Cannon Mount" hidden="false" id="23de-89e0-1ff7-fbc9">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon Options" id="5698-d0ac-4ecc-34de" hidden="false" collective="false" import="true" defaultSelectionEntryId="e370-6c66-3fa3-8e3e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a27-3dc2-d46e-533b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70d9-2047-5a69-5603" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="7.5cm High-Velocity Cannon" hidden="false" id="e370-6c66-3fa3-8e3e" collective="false" targetId="943f-5cd1-afda-1572" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1ab-b899-d6bb-cd01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Epak. 34 Energy Cannon" hidden="false" id="5dd5-de56-8cca-beb8" collective="false" targetId="4be2-4855-7d77-5acf" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e38a-c36a-1a91-032c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d145-9e0f-95c4-eaae-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d145-9e0f-95c4-eaae-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="18M Towed Gun Battery" hidden="false" id="c82b-b723-248d-80d4" collective="false">
           <profiles>
@@ -6087,6 +6127,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="4c70-2c02-24b1-865a" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Landwehr Rocket Launcher Squad" hidden="false" id="7486-a074-82e7-53e4" collective="false">
           <profiles>
@@ -6122,7 +6165,7 @@
                     <profile name="Landwehr Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="38d9-bd5d-2e2a-3533">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -6149,7 +6192,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6201,7 +6244,7 @@
                     <profile name="Landwehr Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="18aa-e43f-6476-791b">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -6228,9 +6271,10 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -6279,7 +6323,7 @@
                     <profile name="Landwehr Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="68a8-9d61-d303-2f6b">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -6306,7 +6350,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6358,7 +6402,7 @@
                     <profile name="Landwehr Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f2ad-7753-fc47-1e37">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -6384,7 +6428,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6537,6 +6581,10 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="672f-0491-91e1-d282-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="672f-0491-91e1-d282-max" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -6581,8 +6629,8 @@
             <profile name="Pinzgauer Supply Truck" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2368-9a04-3e36-73a8">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
               </characteristics>
               <modifiers>
@@ -6598,7 +6646,7 @@
                 </modifier>
               </modifiers>
             </profile>
-            <profile name="PinzgauerSupply Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c5bf-6196-5759-3d8c">
+            <profile name="Pinzgauer Supply Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c5bf-6196-5759-3d8c">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Pinzgauer Supply Truck</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Transport, Vehicle</characteristic>
@@ -6617,7 +6665,7 @@
             <infoLink name="Hitch" id="af2f-40a2-97c1-87eb" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="34"/>
+            <cost name="Munitions" typeId="Points" value="32"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -7342,6 +7390,7 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="35a7-170f-fc50-d3a8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+        <entryLink import="true" name="Binoculars" hidden="false" id="a280-36aa-1bfd-e319" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Mechanized" id="be06-f10f-14bd-28ae" hidden="false">
@@ -7466,7 +7515,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="32"/>
+                    <cost name="Munitions" typeId="Points" value="26"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7506,7 +7555,7 @@
                     <profile name="Panzergrenadier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="24ec-20d0-95b9-404e">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -7520,7 +7569,7 @@
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="32"/>
+                    <cost name="Munitions" typeId="Points" value="26"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7563,7 +7612,7 @@
           </costs>
           <rules>
             <rule name="Europas Bollwerk!" id="5135-9c38-b5e5-fe5e" hidden="false">
-              <description>Attacks made against this unit have -1 to hit.</description>
+              <description>Attacks made against this Unit by Weapons with 3AP or lower reduce their Damage profile by 1, to a minimum of 1.</description>
             </rule>
             <rule name="Independently Minded" id="b2cc-2015-6271-e8e9" hidden="false">
               <description>This unit always counts as having been ordered.</description>
@@ -7592,8 +7641,8 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="c8ac-6db9-53f7-ce7f" hidden="false" collective="false" import="true">
               <constraints>
-                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e299-03ee-656e-76ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="e379-7aa5-d6d1-e90a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e299-03ee-656e-76ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e379-7aa5-d6d1-e90a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Knecht Battlesuit Offizier" hidden="false" id="5be3-5f69-0f56-9154" collective="false">
@@ -7605,7 +7654,7 @@
                     <profile name="Knecht Battlesuit Offizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7f12-0645-8435-d37c">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
@@ -7657,21 +7706,22 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="47"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Knecht Battlesuit" hidden="false" id="2e86-3459-d0a9-be79" collective="false">
                   <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f4d1-04a2-ca78-a281" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="463b-4271-ca78-5ef1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="f4d1-04a2-ca78-a281" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="463b-4271-ca78-5ef1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Knecht Battlesuit" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="64db-8e62-3318-e0ec">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
@@ -7723,16 +7773,16 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Munitions" typeId="Points" value="47"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="156"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
