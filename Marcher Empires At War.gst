@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.5.2" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.6.0" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -78,7 +78,7 @@
     <categoryEntry name="Flying" id="b250-bcf3-850c-e556" hidden="false"/>
     <categoryEntry name="Superheavy" id="6f95-29a9-8d9a-a5fb" hidden="false"/>
     <categoryEntry name="Tracked" id="7616-a9f8-6205-af0e" hidden="false"/>
-    <categoryEntry name="Troops" id="6dc4-41a4-7144-d10c" hidden="false"/>
+    <categoryEntry name="Troop" id="6dc4-41a4-7144-d10c" hidden="false"/>
     <categoryEntry name="Vehicle" id="de0d-e12c-a964-4e46" hidden="false"/>
     <categoryEntry name="Engineer" id="fea7-21e6-bb88-f8ed" hidden="false"/>
   </categoryEntries>
@@ -221,7 +221,7 @@
         </categoryLink>
         <categoryLink name="AUX Mechanized" hidden="false" id="931f-b95a-7068-3aa4" targetId="c87d-0c37-d91f-b4cd" primary="false">
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="679a-2d-6b10-7e7b" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="679a-2d-6b10-7e7b" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Transports" hidden="true" id="c544-9294-5dcb-25c9" targetId="d4be-5aad-8560-5720">
@@ -918,6 +918,17 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a8cd-a3cc-489a-81aa" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Entrenching Tool" hidden="false" id="109e-cea5-0e25-727b" collective="true">
+      <infoLinks>
+        <infoLink name="Entrenching Tool" id="191c-8f4c-0552-4711" hidden="false" targetId="0b5d-250c-1a7d-1270" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="2f38-62b3-ba2d-80c4" name="Command" hidden="false">
@@ -963,7 +974,7 @@
       <description>When an attack is made with this weapon, you may, instead of dealing damage, choose to move one enemy unit that this unit is engaged with 2&quot; in a direction of your choice.</description>
     </rule>
     <rule id="9e88-6c38-3a57-c010" name="Towable" hidden="false">
-      <description>This Unit may be deployed attached to a Unit with the &quot;Tow&quot; action.</description>
+      <description>This Unit may towed as if it were a Carriage Unit.</description>
     </rule>
     <rule id="a57a-9c2f-704e-9847" name="Front Facing" hidden="false">
       <description>This Unit may only select units that are in front of it to attack. It may make a 90 degree pivot for free whenever it activates.</description>
@@ -1039,7 +1050,7 @@
       <description>This model must be attached to a non-command unit that it shares a core keyword with before the game starts. After this model is attached it must be designated as the Leader of the combined unit</description>
     </rule>
     <rule name="Scattershot" id="20e-bfac-4fc9-44b9" hidden="false">
-      <description>While making an attack using a weapon with this special rule, if within half range of the target, double your hits, AP, and damage profiles.</description>
+      <description>While making an attack using a weapon with this special rule, if within half range of the target, double your Hits and AP Profile.</description>
     </rule>
     <rule name="Slag" id="aaa4-8ad4-e93e-7ead" hidden="false">
       <description>When a unit is hit by weapon(s) with the &quot;Slag&quot; keyword, its armor value is reduced by 1 until the end of the round. (This effect is cumulative)</description>
@@ -1204,8 +1215,8 @@ gain cover for being within this terrain feature
     <rule name="Direct Fire" id="371b-f82b-1fef-54a5" hidden="false">
       <description>Blast tokens for this weapon are placed when this weapon is selected to attack rather than in the command phase.</description>
     </rule>
-    <rule name="Beam" id="a397-8716-ab3d-2773" hidden="false">
-      <description>After resolving an attack with this weapon, you may make an additional attack against another enemy unit within 6&quot; of the original target. (Line of sight required)</description>
+    <rule name="Disintegration Beam" id="a397-8716-ab3d-2773" hidden="false">
+      <description>For each successful Hit Check made by this Weapon, score an additional Hit and increase this Weapon&apos;s AP Profile by 1 for the rest of this Attack.</description>
     </rule>
     <rule name="Radio" id="97d3-d9ed-af71-d4d6" hidden="false">
       <description>This Unit may send or receive orders to or from any other units with the Radio Special Rule.</description>
@@ -1235,7 +1246,7 @@ gain cover for being within this terrain feature
       <description>When this Model moves through Light or Medium terrain, remove it from the battlefield. When this model is set up onto the battlefield you may remove one piece of Light or Medium terrain that falls under its base’s footprint.</description>
     </rule>
     <rule name="Pre-Registered Targets" id="b64b-4ada-29c0-088b" hidden="false">
-      <description>Each time you select a unit in this platoon to reduce a Dial In counter reduce it by 2 instead. You may instead reduce a counter by 1 from two
+      <description>Each time you select a Unit in this platoon to reduce a Dial In counter reduce it by 2 instead. You may instead reduce a counter by 1 from two
 Units.</description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
@@ -1263,13 +1274,13 @@ Under Fire: Units with this Condition may not take the Move Action. (They may st
       <description>Weapons equipped in a Sponson Mount may select targets for their attacks independently of other weapons.</description>
     </rule>
     <rule name="Catastrophic Detonation" id="ed65-6e21-b743-aab2" hidden="false">
-      <description>When this Unit is destroyed, roll a D10, on a roll of 6+, perform an Attack Action (Profile:H5, AP5, D5) against all Units within 3&quot;.</description>
+      <description>When this Unit is destroyed, roll a D10, on a roll of 6+, perform an Attack Action (Profile:H5, AP5, D5) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
     </rule>
     <rule name="Cook Off" id="218f-bd27-8f75-09f4" hidden="false">
-      <description>When this Unit is destroyed, roll a D10, on a roll of 8+, perform an Attack Action (Profile:H4, AP4, D4) against all Units within 3&quot;.</description>
+      <description>When this Unit is destroyed, roll a D10, on a roll of 8+, perform an Attack Action (Profile:H4, AP4, D4) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
     </rule>
     <rule name="Armored Recovery Vehicle" id="3731-64c9-4653-d0bb" hidden="false">
-      <description>As an Action, this Unit may select a destroyed Vehicle Model left on the battlefield that it is within 1&quot; of, remove that model, then gain 5 Supply Points.</description>
+      <description>As an Action, this Unit may select a piece of Vehicle Wreckage Terrain that it is within 1&quot; of, remove that model. Gain 5 Supply Points.</description>
     </rule>
     <rule name="Prototype" id="b4c0-7c13-2254-8ad1" hidden="false">
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
@@ -1300,6 +1311,30 @@ performs 3 or more actions or uses a difficult action, tick down an additional 
 
 *This effect is not cumulative, regardless of how many Units with Dial In
 are in your army only one counter is ticked down at a time.</description>
+    </rule>
+    <rule name="Coaxial Mount" id="df90-d7be-6a7f-ad4e" hidden="false">
+      <description>Weapons equipped in Coaxial Mounts may be selected to fire alongside a Difficult to Use Weapon, so long as they select the same target.</description>
+    </rule>
+    <rule name="Warding" id="f86d-acd5-05b1-927c" hidden="false">
+      <description>When an Enemy Unit enters engagement range with a Unit equipped with this Weapon, immediately perform a Free Attack Action with this weapon against that Unit. This Attack occurs before all others are resolved.</description>
+    </rule>
+    <rule name="Reliable" id="6859-e990-52c3-68cb" hidden="false">
+      <description>When you make an Attack with this Weapon, for each failed Hit Check, reroll that Check. This may only be done once per Check.</description>
+    </rule>
+    <rule name="Trailer" id="7a67-4ab9-90c2-ed3d" hidden="false">
+      <description>This Unit does not activate as normal and may not perform actions. It may be detached from a Unit towing it on that Unit&apos;s turn as a free action.</description>
+    </rule>
+    <rule name="On Assignment" id="e2b8-2d66-35a1-c0c3" hidden="false">
+      <description>This Unit always counts as having been Ordered.</description>
+    </rule>
+    <rule name="Bulwark" id="4946-e1a2-4529-60dc" hidden="false">
+      <description>Attacks made against this Unit lower their damage profile by X to a minimum of 1.</description>
+    </rule>
+    <rule name="Protector" id="0791-8292-e0cd-26c1" hidden="false">
+      <description>Damage dealt to Friendly Troop or Cavalry Units within 6&quot; of this Unit may instead be applied to this Unit&apos;s Models.</description>
+    </rule>
+    <rule name="Rear Turret Mount" id="aba1-049d-c59a-7c9e" hidden="false">
+      <description>Weapons Equipped in a Rear Turret Mount may select targets for Attacks independently of other Weapons.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1335,7 +1370,7 @@ are in your army only one counter is ticked down at a time.</description>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Adjust Coordinates</characteristic>
       </characteristics>
     </profile>
-    <profile id="335b-34df-c974-9c3b" name="Support Engineer Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
+    <profile id="335b-34df-c974-9c3b" name="Support Engineer Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Dash</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Dig In, Brace, Fallback</characteristic>
@@ -1489,6 +1524,24 @@ are in your army only one counter is ticked down at a time.</description>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
       </characteristics>
     </profile>
+    <profile name="Support Engineer Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="ba32-3e2e-765c-654b">
+      <characteristics>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Take Aim, Move</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Build, Demolish</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Entrenching Tool" typeId="Weapon" typeName="Weapon" hidden="false" id="0b5d-250c-1a7d-1270">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Troops Upgrades" id="c42e-5415-a1c5-e2d8" hidden="false">
@@ -1508,6 +1561,22 @@ are in your army only one counter is ticked down at a time.</description>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fresh Wool Socks" hidden="false" id="9f80-6b28-06f9-a20a">
+          <rules>
+            <rule name="Fresh Wool Socks" id="6823-e999-b097-91b7" hidden="false">
+              <description>Your troops are nice and cozy and your list looks neat and tidy.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="1"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d514-51b5-f213-0b68" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1584,6 +1653,22 @@ are in your army only one counter is ticked down at a time.</description>
             <infoLink name="Veteran Crew" id="4cc8-098d-d289-db95" hidden="false" type="rule" targetId="fe62-95d4-4af0-7a99"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fresh Paint Job" hidden="false" id="b267-74fb-a3e8-93a2">
+          <rules>
+            <rule name="Fresh Paint Job" id="5878-219b-323c-6733" hidden="false">
+              <description>The paint on this vehicle is well applied and your list looks neat and tidy.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="1"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5265-f3b7-2f15-9d74" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Smoke Launchers" hidden="false" id="8617-347f-f1b5-c98c" type="selectionEntry" targetId="cdfc-fb66-7530-44d8">
@@ -1619,6 +1704,22 @@ are in your army only one counter is ticked down at a time.</description>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Well-Stocked Saddlebags" hidden="false" id="3d72-9380-b9df-ff8d">
+          <rules>
+            <rule name="Well-Stocked Saddlebags" id="9ee3-0244-445d-2577" hidden="false">
+              <description>These saddlebags are stocked with some nice treats and your list looks neat and tidy.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="1"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1f8-5098-5e12-f502" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1666,6 +1767,22 @@ are in your army only one counter is ticked down at a time.</description>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hot Cup of Coffee" hidden="false" id="c9ee-f6a4-4c1b-418b">
+          <rules>
+            <rule name="Hot Cup of Coffee" id="9d85-af77-0e95-ea34" hidden="false">
+              <description>This coffee is steaming and your list looks neat and tidy.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="1"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="749d-15eb-1bd9-deab" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
