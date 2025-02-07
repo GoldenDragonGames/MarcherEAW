@@ -2048,6 +2048,18 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="3.3tsk Beam Cannon" hidden="false" id="d256-197a-3cf4-30bc" collective="true">
+      <infoLinks>
+        <infoLink name="3.3tsk Beam Cannon" id="f55e-322a-814d-b753" hidden="false" targetId="3e23-2871-3e37-b2f4" type="profile"/>
+        <infoLink name="Ablation Beam" id="dece-f424-cb14-da7f" hidden="false" type="rule" targetId="a397-8716-ab3d-2773"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="54"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="fa72-2a0f-e8b0-46c0" name="Rally &apos;round the Flag" hidden="false">
@@ -2882,6 +2894,16 @@
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="3.3tsk Beam Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="3e23-2871-3e37-b2f4">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">30&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Ablation Beam</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Beam</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -6330,6 +6352,11 @@
                     <entryLink import="true" name="A1 Medium Heat Cannon" hidden="false" id="db45-b34e-ef0d-150e" type="selectionEntry" targetId="8762-30cb-fe8a-3d3e">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1120-6cd3-4b59-213b" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="3.3tsk Beam Cannon" hidden="false" id="2765-d7f3-e331-46c8" type="selectionEntry" targetId="d256-197a-3cf4-30bc">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46af-bd64-c39d-592e" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
