@@ -131,7 +131,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="31ef-b935-5a3f-4972" name="Ranger Infantry Squad" hidden="false" collective="false" import="true" targetId="cc2a-284c-e58b-fc7a" type="selectionEntry">
+    <entryLink id="31ef-b935-5a3f-4972" name="Ranger Squad" hidden="false" collective="false" import="true" targetId="cc2a-284c-e58b-fc7a" type="selectionEntry">
       <categoryLinks>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="f978-47a0-60bb-4aee" primary="false" name="Troop"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="1bf4-b160-51af-a37c" primary="false" name="USA"/>
@@ -369,8 +369,9 @@
     </entryLink>
     <entryLink import="true" name="Warrant Officer Jethro Madison" hidden="true" id="ccc2-598a-73ac-aa7a" type="selectionEntry" targetId="1220-7aa0-481c-9f7b">
       <categoryLinks>
-        <categoryLink name="Command" hidden="false" id="b247-957e-e5fa-9055" targetId="70eb-c264-a9cb-1bfe" primary="true"/>
+        <categoryLink name="Command" hidden="false" id="b247-957e-e5fa-9055" targetId="70eb-c264-a9cb-1bfe" primary="false"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="0cda-797f-d2ee-784a" primary="false" name="USA"/>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="eeb0-c2c6-0fe5-bfb7" primary="true" name="Heroes"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -461,6 +462,7 @@
         <modifier type="set" value="false" field="hidden">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="force" childId="c905-4b27-69d3-1aca" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="c40e-8251-b022-3e0e" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -580,12 +582,13 @@
       <categoryLinks>
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="9a07-b3e7-e018-540" primary="true" name="Heroes"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="b669-f585-694b-e53d" primary="false" name="USA"/>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="5a4e-6678-db5b-1ec2" primary="false" name="Command"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="General Nicholas Winters" hidden="true" id="3d5d-7f86-4d54-113" type="selectionEntry" targetId="6cf8-10bc-b257-32b4">
       <categoryLinks>
-        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="5c73-6c95-6d18-17f5" primary="true" name="Command"/>
-        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="5f2e-1a0f-ac7e-263e" primary="false" name="Heroes"/>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="5c73-6c95-6d18-17f5" primary="false" name="Command"/>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="5f2e-1a0f-ac7e-263e" primary="true" name="Heroes"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="cb03-ebcc-c6f7-48a9" primary="false" name="Troop"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="664e-1ec7-8b3c-cde8" primary="false" name="USA"/>
       </categoryLinks>
@@ -655,7 +658,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Jump-Master" hidden="true" id="017a-0954-6e3d-0bd6" type="selectionEntry" targetId="c5a0-001e-849a-bcb8">
+    <entryLink import="true" name="Drop-Trooper Jump-Master" hidden="true" id="017a-0954-6e3d-0bd6" type="selectionEntry" targetId="c5a0-001e-849a-bcb8">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <repeats>
@@ -905,6 +908,13 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="M13 Light Rocket Artillery Battery" hidden="false" id="c5d5-c44f-62c8-28ca" type="selectionEntry" targetId="6c39-8dde-1935-c4bb">
+      <categoryLinks>
+        <categoryLink targetId="2450-f84d-0bff-43d8" id="6632-e0a6-e6a4-cb72" primary="false" name="Battery"/>
+        <categoryLink targetId="4455-94a1-ea5e-b9ec" id="fa5a-5fa3-130d-950f" primary="false" name="USA"/>
+        <categoryLink targetId="8679-d614-ae03-de2c" id="e8cb-8dfe-dc32-ad86" primary="true" name="CORE Artillery"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="2a8a-fddf-0126-6a57" name="Officer Seniority" hidden="false" collective="false" import="true" type="upgrade">
@@ -939,7 +949,7 @@
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="60"/>
+                <cost name="Munitions" typeId="Points" value="55"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -954,7 +964,7 @@
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="90"/>
+                <cost name="Munitions" typeId="Points" value="75"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -969,7 +979,7 @@
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="120"/>
+                <cost name="Munitions" typeId="Points" value="90"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1527,16 +1537,11 @@
     <selectionEntry type="upgrade" import="true" name="M13 Cloudbuster Light Rocket Launcher" hidden="false" id="be62-9a0e-9c7f-6de8" collective="true">
       <infoLinks>
         <infoLink name="M13 Cloudbuster Light Rocket Launcher" id="c0c7-5576-7113-4687" hidden="false" type="profile" targetId="394f-b8ef-e5e2-7b0b"/>
-        <infoLink name="Blast" id="4cfe-1854-90f4-33ce" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="4cfe-1854-90f4-33ce" hidden="false" targetId="11d9-c53a-4538-6b97" type="rule">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Close In" id="e5c7-f531-9169-7ee9" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-        <infoLink name="Difficult to Use" id="e35b-e828-9825-f37e" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
-        <infoLink name="High Explosive" id="efbb-cd67-db98-6872" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Indirect" id="f56d-d2f9-cfb6-630e" hidden="false" type="rule" targetId="0648-3007-c58c-c884"/>
-        <infoLink name="Shellshock" id="a4c8-8b02-59b4-95ba" hidden="false" type="rule" targetId="e5b9-60eb-5275-52a3"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="65"/>
@@ -1624,16 +1629,11 @@
     <selectionEntry type="upgrade" import="true" name="M20 Mortar" hidden="false" id="84c9-ecbb-93b1-77e2" collective="true">
       <infoLinks>
         <infoLink name="M20 Mortar" id="93c5-2470-daa4-4c53" hidden="false" targetId="9d16-acd1-4d5a-f0aa" type="profile"/>
-        <infoLink name="Blast" id="711e-a1f4-37aa-6e51" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="711e-a1f4-37aa-6e51" hidden="false" targetId="11d9-c53a-4538-6b97" type="rule">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Indirect" id="6278-b425-298c-5845" hidden="false" targetId="0648-3007-c58c-c884" type="rule"/>
-        <infoLink name="Shellshock" id="1866-e950-c662-432c" hidden="false" targetId="e5b9-60eb-5275-52a3" type="rule"/>
-        <infoLink name="High Explosive" id="0e89-96e4-53bb-54fc" hidden="false" targetId="9375-d461-c135-9e66" type="rule"/>
-        <infoLink name="Close In" id="134d-a1e8-b5e7-f9c8" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-        <infoLink name="Difficult to Use" id="cdcc-aa32-9658-7958" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="38"/>
@@ -1645,16 +1645,11 @@
     <selectionEntry type="upgrade" import="true" name="M21 155mm Long Tom" hidden="false" id="87f0-e50f-a345-2804" collective="false">
       <infoLinks>
         <infoLink name="M21 155mm Long Tom" id="90b4-4ce3-203d-9472" hidden="false" targetId="9754-8eac-5837-1b15" type="profile"/>
-        <infoLink name="Blast" id="1d52-90a4-e99d-12ff" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="1d52-90a4-e99d-12ff" hidden="false" targetId="11d9-c53a-4538-6b97" type="rule">
           <modifiers>
             <modifier type="append" value="3" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Indirect" id="bc39-a396-ffb-c0c0" hidden="false" type="rule" targetId="0648-3007-c58c-c884"/>
-        <infoLink name="Shellshock" id="b477-e80a-69a9-af45" hidden="false" type="rule" targetId="e5b9-60eb-5275-52a3"/>
-        <infoLink name="High Explosive" id="74a8-e3a7-8626-b3b2" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Difficult to Use" id="e872-ef19-f2eb-9af1" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
-        <infoLink name="Close In" id="d756-7364-55d3-5ec6" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="418"/>
@@ -1716,16 +1711,11 @@
     <selectionEntry type="upgrade" import="true" name="M78 &quot;Dust Devil&quot; Heavy Missile Launcher" hidden="false" id="923f-dbd-1372-92c0">
       <infoLinks>
         <infoLink name="M78 &quot;Dust Devil&quot; Heavy Missile Launcher" id="9459-b390-3817-2725" hidden="false" type="profile" targetId="9363-8377-16fb-cdd3"/>
-        <infoLink name="High Explosive" id="1f13-fc6c-3056-a5ee" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Blast" id="bd89-7f30-96d2-38d6" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="bd89-7f30-96d2-38d6" hidden="false" targetId="11d9-c53a-4538-6b97" type="rule">
           <modifiers>
             <modifier type="append" value="3" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Shellshock" id="dc65-829c-3426-1e0d" hidden="false" type="rule" targetId="e5b9-60eb-5275-52a3"/>
-        <infoLink name="Indirect" id="7d3f-c7ee-ce41-83f4" hidden="false" type="rule" targetId="0648-3007-c58c-c884"/>
-        <infoLink name="Close In" id="4f24-4738-360d-b252" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-        <infoLink name="Difficult to Use" id="ab55-e27d-5c46-5dab" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="154"/>
@@ -1752,14 +1742,11 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="M333 Heavy Howitzer" hidden="false" id="2f75-d57b-8089-ed4e" collective="true">
       <infoLinks>
-        <infoLink name="Blast" id="f47b-2fc4-404f-3a89" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="f47b-2fc4-404f-3a89" hidden="false" targetId="11d9-c53a-4538-6b97" type="rule">
           <modifiers>
             <modifier type="append" value="3" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="High Explosive" id="98b6-47cb-cd74-6e44" hidden="false" targetId="9375-d461-c135-9e66" type="rule"/>
-        <infoLink name="Indirect" id="97a3-f1d7-0a3c-57e8" hidden="false" targetId="0648-3007-c58c-c884" type="rule"/>
-        <infoLink name="Shellshock" id="506a-7a44-907e-61d2" hidden="false" targetId="e5b9-60eb-5275-52a3" type="rule"/>
         <infoLink name="M333 Heavy Howitzer" id="022d-d57d-975d-ba9f" hidden="false" targetId="8d0c-a18b-5bd5-cc11" type="profile"/>
       </infoLinks>
       <costs>
@@ -1820,16 +1807,18 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="M1932 Energy Pistol" hidden="false" id="0e45-d997-a2ae-b07d" collective="true">
+    <selectionEntry type="upgrade" import="true" name="M1911 Energy Pistol" hidden="false" id="0e45-d997-a2ae-b07d" collective="true">
       <infoLinks>
-        <infoLink name="M1932 Energy Pistol" id="1375-bcf6-2b85-bc16" hidden="false" targetId="bab3-2c2f-1727-057c" type="profile"/>
+        <infoLink name="M1911 Energy Pistol" id="1375-bcf6-2b85-bc16" hidden="false" targetId="bab3-2c2f-1727-057c" type="profile"/>
         <infoLink name="Point Blank" id="87b4-b554-6e7f-c637" hidden="false" targetId="1e7a-7634-bb2b-1ff9" type="rule"/>
         <infoLink name="Dual Wield" id="e61d-3858-7421-2041" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="Reliable" id="2130-42c5-7d09-65cf" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
+        <cost name="Munitions" typeId="Points" value="1"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="M1935 Heavy Energy AT-Cannon" hidden="false" id="73d0-94b5-d180-ac4e">
@@ -1852,23 +1841,6 @@
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Old Glory" hidden="false" id="0b3e-c7ab-0382-1e7b">
-      <infoLinks>
-        <infoLink name="Old Glory" id="264a-d6d1-6f0d-40d2" hidden="false" type="profile" targetId="2f33-6d15-5cbf-099f"/>
-        <infoLink name="Rally &apos;round the Flag" id="28e8-eda5-e1bc-a853" hidden="false" type="rule" targetId="fa72-2a0f-e8b0-46c0"/>
-      </infoLinks>
-      <rules>
-        <rule name="The Land of the Free" id="4477-fd62-6afc-fb59" hidden="false">
-          <description>This unit may capture enemy objectives even while contested by a superior enemy.</description>
-        </rule>
-      </rules>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="25"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1927,21 +1899,16 @@
     <selectionEntry type="upgrade" import="true" name="XM-31 &quot;Honest John&quot; Missile Launcher" hidden="false" id="74b9-e8a0-10a4-d85d">
       <infoLinks>
         <infoLink name="XM-31&quot;Honest John&quot; Missile Launcher" id="fd15-59-7fc0-629b" hidden="false" type="profile" targetId="2606-3939-6e-4de6"/>
-        <infoLink name="Blast" id="15ac-e090-d24c-9be0" hidden="false" targetId="5d4a-ecea-623a-a136" type="rule">
+        <infoLink name="Ordnance" id="15ac-e090-d24c-9be0" hidden="false" targetId="11d9-c53a-4538-6b97" type="rule">
           <modifiers>
             <modifier type="append" value="3" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="High Explosive" id="7fc6-c43a-817f-c53d" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Indirect" id="4739-ac70-f26e-477d" hidden="false" type="rule" targetId="0648-3007-c58c-c884"/>
-        <infoLink name="Shellshock" id="f02-84ef-cbed-1a0a" hidden="false" type="rule" targetId="e5b9-60eb-5275-52a3"/>
         <infoLink name="Ammo" id="c908-9d95-f1bc-26f1" hidden="false" targetId="2056-c454-be5c-ea02" type="rule">
           <modifiers>
             <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Close In" id="3b89-9d9b-3975-48bd" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
-        <infoLink name="Difficult to Use" id="e5f5-e9b7-2a28-ea35" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="874"/>
@@ -2127,13 +2094,13 @@
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
-    <profile id="bab3-2c2f-1727-057c" name="M1932 Energy Pistol" hidden="false" typeId="Weapon" typeName="Weapon">
+    <profile id="bab3-2c2f-1727-057c" name="M1911 Energy Pistol" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">12&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Dual Wield, Point Blank</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Dual Wield, Point Blank, Reliable</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Pistol, Energy</characteristic>
       </characteristics>
     </profile>
@@ -2413,7 +2380,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 2, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2423,7 +2390,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 3, Close In, Difficult to Use, Indirect, High Explosive Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2443,7 +2410,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">8</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 3, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2573,7 +2540,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 3, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2593,7 +2560,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Blast 2, Close In, Difficult to Use, Indirect, High Explosive, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2733,7 +2700,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5D10+5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ammo 1, Blast 3, Close In, Difficult to Use, High Explosive, Indirect, Shellshock</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ammo 1, Ordnance 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2925,7 +2892,7 @@
           <profiles>
             <profile name="Veteran Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="efe7-b5df-5363-0cea">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Veteran Staff Sergeant, 5-9 Veteran Riflemen, 0-2 Specialists, 0-1 Flagbearers, 0-1 Medics</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Veteran Staff Sergeant, 5-9x Veteran Riflemen, 0-2x Specialists, 0-1x Flagbearers, &amp; 0-1x Medics</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -3105,7 +3072,7 @@
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Sidearm" id="f3ba-4f53-177e-fc88" hidden="false" defaultSelectionEntryId="9781-1c0f-cad8-b035">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="9781-1c0f-cad8-b035" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="9781-1c0f-cad8-b035" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="3720-8517-7d4e-a5c5" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -3235,7 +3202,7 @@
                     </selectionEntryGroup>
                     <selectionEntryGroup name="Sidearm" id="5e1e-3f21-5097-7d01" hidden="false" defaultSelectionEntryId="8fa8-6d5e-58b9-34fb">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="8fa8-6d5e-58b9-34fb" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="8fa8-6d5e-58b9-34fb" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="2770-47d7-f20c-7ddc" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -3293,7 +3260,7 @@
           </costs>
           <rules>
             <rule name="Trench Rats" id="f368-e784-5160-6323" hidden="false">
-              <description>When this unit moves into range of a contested objective, it may make ranged attacks against enemy units it is engaged with until the end of the round.</description>
+              <description>When this Unit selects the nearest Enemy Unit as the target of an Attack, it gains an Aim Token.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -3304,7 +3271,7 @@
           <profiles>
             <profile name="Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7027-d11c-027a-d22f">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Ssgt. &amp; 9 Riflemen</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Staff Sergeant, 7-9x Riflemen, 0-2x Specialists, &amp; 0-1x Medic</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -3353,7 +3320,7 @@
                     <selectionEntryGroup name="Sidearm" id="abaf-3dc0-0433-5bfd" hidden="false" defaultSelectionEntryId="ec5d-af7e-f36d-8062">
                       <entryLinks>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="aa23-dbb6-f498-17d6" collective="false" targetId="4a8b-3bde-f59d-f8c2" type="selectionEntry"/>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="ec5d-af7e-f36d-8062" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="ec5d-af7e-f36d-8062" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                       </entryLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9dda-a59d-c9a4-e2ef" includeChildSelections="false"/>
@@ -3663,7 +3630,7 @@
           </costs>
           <rules>
             <rule name="No Guts, No Glory." id="fab9-165f-bc20-a28" hidden="false">
-              <description>While this unit has fewer than half of its starting models, it may perform an additional action each round.</description>
+              <description>This Unit may receive more than one Order per turn.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -3707,7 +3674,7 @@
             </profile>
             <profile name="M82A1 Kodiak Superheavy Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8f3d-7dc2-17ea-3f1b">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M82A1 Kodiak Superheavy Tank</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M82A1 Kodiak Superheavy Tank</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, Superheavy, Tracked, Vehicle,</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -3924,7 +3891,7 @@
             </profile>
             <profile name="M68 Timberwolf Heavy Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a260-d7c8-51bd-9d34">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M68 Timberwolf Heavy Tank</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M68 Timberwolf Heavy Tank</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized,Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -4174,12 +4141,17 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <rules>
+            <rule name="Wolf Pack" id="bf1c-d427-f309-c918" hidden="false">
+              <description>Tracked Vehicle Units within 6&quot; of this Unit may reroll 1s to Hit.</description>
+            </rule>
+          </rules>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="M48 Caprina Crocodile" hidden="false" id="3ea6-d5a4-2dc5-72bb" collective="false">
           <profiles>
             <profile name="M48 Caprina Crocodile" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3a2b-5c86-e162-2d91">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M48 Caprina Crocodile</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M48 Caprina Crocodile</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -4329,9 +4301,9 @@
             </profile>
             <profile name="M46 Grizzly Heavy Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3387-5fb7-77fd-69b9">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M46 Grizzly Heavy Tank</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M46 Grizzly Heavy Tank</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4346,8 +4318,8 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="Drive Fast, Take Chances." id="26fd-b48c-cd37-2b4a" hidden="false">
-              <description>When this unit destroys an enemy unit, increase its movement characteristic by 4&quot; until the end of the round.</description>
+            <rule name="Gyroscopic Stabilization" id="26fd-b48c-cd37-2b4a" hidden="false">
+              <description>When this Unit moves at least 10&quot; away from its position at the start of the Round, it may perform a Free Attack Action</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4621,7 +4593,7 @@
             </profile>
             <profile name="M40A2 Sherman Medium Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="deb0-9474-0883-25e5">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M40A2 Sherman Medium Tank</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M40A2 Sherman Medium Tank</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -4842,8 +4814,8 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="Death before dismount!" id="6769-86aa-795c-36b3" hidden="false">
-              <description>When this unit is destroyed, if it has not yet activated this round, it may make a ranged attack using a single ranged weapon before being destroyed.</description>
+            <rule name="Death before Dismount!" id="6769-86aa-795c-36b3" hidden="false">
+              <description>When this Unit is Destroyed it may immediately perform a Free Attack Action using a single Ranged Weapon before being removed from the Battlefield</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4893,7 +4865,7 @@
             </profile>
             <profile name="M30 Jackrabbit Light Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a265-e0ca-64d1-2665">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M30 Jackrabbit Light Tank</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M30 Jackrabbit Light Tank</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -5007,7 +4979,7 @@
           </costs>
           <rules>
             <rule name="Cloud of Debris" id="3004-aaa6-ab53-98db" hidden="false">
-              <description>When this unit removes a terrain feature or light fortification, attacks that target it gain -1 to hit until the end of the round.</description>
+              <description>When this Unit removes a Terrain Feature or Light Fortification with its Movement, Attacks that target this Unit are taken as if this Unit was behind Obscuring Terrain.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -5026,8 +4998,8 @@
           <profiles>
             <profile name="M150 Heavy Gun Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="312b-d1db-143f-f5c9">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M150 Heavy Gun Carriage</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Towable, Carriage</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M150 Heavy Gun Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Carriage</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -5098,8 +5070,8 @@
           <profiles>
             <profile name="M333 Heavy Howitzer Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1f2f-a737-efe7-a7d6">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M333 Heavy Howitzer Carriage</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Carriage, Towable</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M333 Heavy Howitzer Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Carriage</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
@@ -5150,7 +5122,7 @@
           <profiles>
             <profile name="Mortar Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b8c8-e8f8-2fd0-54a9">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Mortar Teams</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Mortar Teams</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, (AUX) Infantry, (AUX) Support, Troops</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
               </characteristics>
@@ -5230,7 +5202,7 @@
           <profiles>
             <profile name="M105 MLRS Caprina" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9350-fc55-765f-4f39">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M105 MLRS Caprina</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M105 MLRS Caprina</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, (AUX) Support, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -5355,7 +5327,7 @@
           <profiles>
             <profile name="M48D2 &quot;Rolling Tom&quot; Gun Carriage Caprina" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b7e1-16f0-3d92-b7bf">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M48D2 &quot;Rolling Tom&quot; Gun Carriage Caprina</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M48D2 &quot;Rolling Tom&quot; Gun Carriage Caprina</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, (AUX) Support, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -5464,8 +5436,8 @@
           <profiles>
             <profile name="M13 Light Rocket Artillery Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="402d-8321-7dde-ae30">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3 M13 Light Rocket Artillery Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, (AUX) Infantry, (AUX) Support, Battery</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x M13 Light Rocket Artillery Carriages</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Battery</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
@@ -5539,8 +5511,8 @@
           <profiles>
             <profile name="M13 Light Rocket Artillery Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c0c-ddf5-ddf9-7080">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M13 Light Rocket Artillery Carriage</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, (AUX) Infantry, (AUX) Support, Carriage, Towable</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M13 Light Rocket Artillery Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, (AUX) Infantry, (AUX) Support, Carriage</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
@@ -5589,7 +5561,7 @@
           <profiles>
             <profile name="M333 Heavy Howitzer Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="47b6-fa84-873f-19bc">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3 M333 Heavy Howitzer Carriages</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x M333 Heavy Howitzer Carriages</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Battery</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
@@ -5666,7 +5638,7 @@
           <profiles>
             <profile name="XM-31 &quot;Honest John&quot; Caprina" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e50d-aa30-309b-e8a4">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">XM-31 &quot;Honest John&quot; Caprina</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x XM-31 &quot;Honest John&quot; Caprina</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -5788,7 +5760,7 @@
             </profile>
             <profile name="M62 Burro Artillery Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8761-6747-1d25-4417">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M62 Burro Artillery Tractor</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M62 Burro Artillery Tractor</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -5835,7 +5807,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6dd-5934-66ac-afd4" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink name="Intel Gathering" id="e949-4f7a-5b5f-d96b" hidden="false" targetId="dc7a-f7c9-a54a-9cbc" type="rule"/>
+                        <infoLink name="Intelligence" id="e949-4f7a-5b5f-d96b" hidden="false" targetId="dc7a-f7c9-a54a-9cbc" type="rule"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="cc89-43ad-67e2-bef1">
@@ -5984,8 +5956,8 @@
           <profiles>
             <profile name="M120 Quad Cannon Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e8d6-888e-9453-c918">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M120 Quad Cannon Carriage</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Carriage, Towable</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M120 Quad Cannon Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Carriage</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
@@ -6045,9 +6017,9 @@
           <profiles>
             <profile name="X74 Sheridan Heavy Battle Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="30f2-3d19-cc1a-1a39">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 X53 X74 Sheridan Heavy Battle Walker</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x X74 Sheridan Heavy Battle Walker</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Walker, Vehicle, Superheavy</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">110x170mm</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">110x170mm Oval</characteristic>
               </characteristics>
             </profile>
             <profile name="X74 Sheridan Heavy Battle Walker" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fb95-3bd5-e60e-d489">
@@ -6238,7 +6210,7 @@
           <profiles>
             <profile name="X53 Lynx Battle Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="575c-e3b7-cd24-0d39">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 X53 Lynx Battle Walker</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x X53 Lynx Battle Walker</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Walker, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
@@ -6401,7 +6373,7 @@
           <profiles>
             <profile name="X32 Rhea Light Battle Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0fc1-8e5a-db87-78fc">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 X32 Rhea Battlesuits</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x X32 Rhea Light Battle Walkers</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Walker, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
               </characteristics>
@@ -6426,13 +6398,13 @@
             </entryLink>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="X32 Rhea Battlesuit" hidden="false" id="82c6-bb81-2374-797b" collective="false">
+            <selectionEntry type="model" import="true" name="X32 Rhea Light Battle Walkers" hidden="false" id="82c6-bb81-2374-797b" collective="false">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c998-1277-3fcc-e555-min-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c998-1277-3fcc-e555-min-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="X32 Rhea Battlesuit" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="db36-f559-a664-ce06">
+                <profile name="X32 Rhea Light Battle Walkers" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="db36-f559-a664-ce06">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
@@ -6583,7 +6555,7 @@
           <profiles>
             <profile name="Willys GPV Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="86cb-4896-61af-b762">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Willys GPVs</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Willys GPVs</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -6593,6 +6565,7 @@
             <infoLink name="Recon Vehicle Actions" id="64cf-a4a1-7502-8a71" hidden="false" targetId="e02c-5a58-9b36-5c37" type="profile"/>
             <infoLink name="Forward Positions" id="b58d-903f-2397-7dbc" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
             <infoLink name="Hitch" id="9db5-362d-002c-9a06" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
+            <infoLink name="Intel Gathering" id="139f-17e6-181b-2d0d" hidden="false" type="rule" targetId="5845-b3b2-62ef-1d40"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="f048-6adb-22e6-c0a0" hidden="false" collective="false" import="true">
@@ -6687,7 +6660,7 @@
           </costs>
           <rules>
             <rule name="Eyes and Ears" id="1f18-fdd8-a7a4-4d2f" hidden="false">
-              <description>When a friendly unit makes an attack against an enemy unit within 12&quot; of a Willys GPV Squad, you may spend one Intel point. If you do, that unit&apos;s ranged attacks get +1 to hit until the end of its activation.</description>
+              <description>When a Friendly Unit makes an attack against an Enemy Unit that is within 12&quot; of a Willys GPV Squad it gains an Aim Token.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -6702,7 +6675,7 @@
           <profiles>
             <profile name="Recon Bike Sniper Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9971-fab2-1064-280d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Recon Bike Snipers</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Cavalry Biker Sniper &amp; 1x Cavalry Biker Spotter</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Cavalry</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
               </characteristics>
@@ -6732,7 +6705,7 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="731f-e029-bf35-3f89" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="731f-e029-bf35-3f89" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="80a8-e40d-3951-49e4-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80a8-e40d-3951-49e4-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -6798,7 +6771,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7aa7-bd74-4e40-83a9-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="ffc5-9bcb-516d-d3e4" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="ffc5-9bcb-516d-d3e4" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86ca-bcb7-de84-a511-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86ca-bcb7-de84-a511-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -6830,9 +6803,9 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Cavalry Bike Squad" hidden="false" id="c905-4b27-69d3-1aca" collective="false">
           <profiles>
-            <profile name="Recon Biker Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4636-fb57-ce92-1b5e">
+            <profile name="Cavalry Bike Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4636-fb57-ce92-1b5e">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Recon Biker Ssgt, 2 Recon Bikers</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Cavalry Biker Sergeant, 2-4x Cavalry Bike Troopers</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Cavalry</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
               </characteristics>
@@ -6844,7 +6817,7 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="bdaf-f5eb-fa31-2924" hidden="false" collective="false" import="true" defaultSelectionEntryId="a3d5-1954-e1d1-8e7e">
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Recon Biker" hidden="false" id="a3d5-1954-e1d1-8e7e" collective="false" defaultAmount="2">
+                <selectionEntry type="model" import="true" name="Cavalry Bike Trooper" hidden="false" id="a3d5-1954-e1d1-8e7e" collective="false" defaultAmount="2">
                   <constraints>
                     <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="fc72-1136-2472-1912" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7a81-90ad-6525-66dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -6866,7 +6839,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7133-2b76-2b68-3664" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="6c10-2d66-d72a-6454" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="6c10-2d66-d72a-6454" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="561c-ab78-225b-8d65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f119-c8c9-722a-06c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -6892,7 +6865,7 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Recon Biker Ssgt" hidden="false" id="1668-f835-d77f-ced0" collective="false">
+                <selectionEntry type="model" import="true" name="Cavalry Biker Sergeant" hidden="false" id="1668-f835-d77f-ced0" collective="false">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b18-cdd7-f274-824f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9b6-adce-46d7-282a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -6936,7 +6909,7 @@
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Sidearm" id="a546-999b-f77b-336c" hidden="false" defaultSelectionEntryId="cdf2-9a6a-653d-be91">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="cdf2-9a6a-653d-be91" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="cdf2-9a6a-653d-be91" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="f58f-52f-5549-f552" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -6959,8 +6932,8 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="Breakthrough" id="e1d9-c6b5-9637-4f43" hidden="false">
-              <description>If this unit destroys an enemy unit in melee and is not in engagement range of any other enemy units, it may make a free movement action.</description>
+            <rule name="Rough Riders" id="e1d9-c6b5-9637-4f43" hidden="false">
+              <description>If this Unit destroys an Enemy Unit in Melee and is not in Engagement Range of any other Enemy Units, it may make a Free Movement Action.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -6971,7 +6944,7 @@
           <profiles>
             <profile name="Drop-Trooper Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5870-7524-bf21-45ca">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Ssgt. &amp; 4 Riflemen</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Drop-Trooper Staff Sergeant, 2-9x Drop-Trooper Riflemen, 0-2x Drop-Trooper Specialists</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, (AUX) Infantry, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
@@ -6984,11 +6957,11 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="2528-28ff-92e4-dfb4" hidden="false" collective="false" import="true" defaultSelectionEntryId="9a54-cc7c-020e-2b00">
               <constraints>
-                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="964e-2be1-73e9-f8e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="964e-2be1-73e9-f8e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="22ad-b2f8-a405-0c01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Drop Trooper Staff Sergeant" hidden="false" id="fa0f-2445-8464-ca3a" collective="false">
+                <selectionEntry type="model" import="true" name="Drop-Trooper Staff Sergeant" hidden="false" id="fa0f-2445-8464-ca3a" collective="false" sortIndex="1">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe31-1f1c-e328-5757" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1665-cdb2-14b8-1d9b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7026,7 +6999,7 @@
                     </selectionEntryGroup>
                     <selectionEntryGroup name="Sidearm" id="563b-162e-d5af-8be9" hidden="false" defaultSelectionEntryId="6149-2acf-56e2-a478">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="6149-2acf-56e2-a478" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="6149-2acf-56e2-a478" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="ca19-1554-6c21-c105" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -7050,9 +7023,9 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Drop Trooper Rifleman" hidden="false" id="9a54-cc7c-020e-2b00" collective="false">
+                <selectionEntry type="model" import="true" name="Drop-Trooper Rifleman" hidden="false" id="9a54-cc7c-020e-2b00" collective="false">
                   <constraints>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="118a-1b8c-7795-fba2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="118a-1b8c-7795-fba2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1c4f-f90c-a527-a8ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
@@ -7066,7 +7039,7 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="c1e4-f742-fa26-90fc" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="c1e4-f742-fa26-90fc" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d35f-60f3-3fa3-24fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d71-d3f0-5cb3-5a36" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7110,9 +7083,9 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Drop Trooper Specialist with Bazooka" hidden="false" id="2e21-2586-0308-0275" collective="false">
+                <selectionEntry type="model" import="true" name="Drop-Trooper Specialist with Bazooka" hidden="false" id="2e21-2586-0308-0275" collective="false">
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9874-e8c0-5acc-b591" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9874-e8c0-5acc-b591" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Drop Trooper Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f616-df36-8da8-98fc">
@@ -7125,7 +7098,7 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="f2a4-736f-1e7f-b415" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="f2a4-736f-1e7f-b415" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e314-0c14-3125-5f56" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac99-bedf-50ba-0cbc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7151,9 +7124,9 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Drop Trooper Specialist with EMG" hidden="false" id="b899-0ae7-d6b3-8eee" collective="false">
+                <selectionEntry type="model" import="true" name="Drop-Trooper Specialist with EMG" hidden="false" id="b899-0ae7-d6b3-8eee" collective="false">
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b948-a812-bf7c-1d3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b948-a812-bf7c-1d3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Drop Trooper Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bcee-b2b4-4a88-6d58">
@@ -7166,7 +7139,7 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="86c1-a4e7-68b3-b150" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="86c1-a4e7-68b3-b150" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a89-7880-ec3d-90d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f08e-d0a2-0b24-83c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7202,7 +7175,7 @@
           </costs>
           <rules>
             <rule name="Geronimo!" id="a36b-2706-c61a-4323" hidden="false">
-              <description>When this Unit exits a Flying Transport or Aerial Deployment, all Enemy Units within 12&quot; gain one Suppression.</description>
+              <description>When this Unit exits a Flying Transport or Aerial Deployment, all Enemy Units within 10&quot; gain one Suppression.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -7246,8 +7219,8 @@
             </profile>
             <profile name="T12-W4L33 (WALLY) Demolition Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bbe4-3f51-c1e9-90ee">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 T12-W4L33 (WALLY) Demolition Vehicle</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Automaton, (AUX) Support, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x T12-W4L33 (WALLY) Demolition Vehicle</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (AUX) Support, Automaton, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -7293,7 +7266,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Rear-Echelon Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2d41-911f-16c1-1fe9">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Rear-Echelon Ssgt. &amp; 9 Rear-Echelon Riflemen</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Rear-Echelon Staff Sergeant &amp; 9 Rear-Echelon Riflemen</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop, Engineer</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -7301,6 +7274,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           </profiles>
           <infoLinks>
             <infoLink name="Support Engineer Troop Actions" id="8ac0-f6d7-be33-5d83" hidden="false" targetId="335b-34df-c974-9c3b" type="profile"/>
+            <infoLink name="Supply Gathering" id="7091-56fd-3e85-8ed9" hidden="false" type="rule" targetId="5b95-9cb8-8f48-e3ed"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="1913-744f-4d2a-0582" hidden="false" collective="false" import="true" defaultSelectionEntryId="00e3-a6a4-70cb-26de">
@@ -7333,7 +7307,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="2"/>
+                    <cost name="Munitions" typeId="Points" value="3"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7341,7 +7315,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Sidearm" id="b7ff-d034-4333-9fef" hidden="false" defaultSelectionEntryId="2ea1-ce33-8d84-8fe">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="2ea1-ce33-8d84-8fe" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="2ea1-ce33-8d84-8fe" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="e49c-406-19f5-4bf8" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -7375,7 +7349,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="2"/>
+                    <cost name="Munitions" typeId="Points" value="3"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7406,8 +7380,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M133 Towed Gun Carriage Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c35e-6d21-76b0-42e8">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M133 Towed Gun Carriage</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Battery</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M133 Towed Gun Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Carriage</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
@@ -7465,8 +7439,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M133 Towed Gun Carriage Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ad92-caff-a625-eac8">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3 M133 Towed Gun Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Towable, Carriage</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x M133 Towed Gun Carriages</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Battery</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
@@ -7566,7 +7540,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M82A3 Nanook Superheavy Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="14c1-22b2-3428-f062">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M82A3 Nanook Superheavy Tank</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M82A3 Nanook Superheavy Tank</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Armor, Superheavy, Tracked, Vehicle,</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -7733,8 +7707,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M54 Bruin Heavy Tank Destroyer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fe27-a0f4-d4df-8ed3">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M54 Bruin Heavy Tank Destroyer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Armor, Tracked, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M54 Bruin Heavy Tank Destroyer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Armor, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -7918,7 +7892,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M12 Light Anti-Tank Gun Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b8dd-0657-df75-6248">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3 M12 Light Anti-Tank Gun Carriages</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x M12 Light Anti-Tank Gun Carriages</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, Battery</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
               </characteristics>
@@ -7987,7 +7961,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M12 Light Anti-Tank Gun Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7f35-0766-8229-96c1">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M12 Light Anti-Tank Gun Carriage</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M12 Light Anti-Tank Gun Carriage</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Carriage, Towable</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
               </characteristics>
@@ -8073,9 +8047,9 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="M11 20mm Autocannon Battery" hidden="false" id="fc2d-f22f-2ff5-e8b0" collective="false">
           <profiles>
-            <profile name="M12 Light Anti-Tank Gun Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4151-4d78-b817-0ef5">
+            <profile name="M11 20mm Autocannon Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4151-4d78-b817-0ef5">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3 M11 20mm Autocannon Carriage</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x M11 20mm Autocannon Carriages</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, Battery</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
               </characteristics>
@@ -8160,8 +8134,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M6 Autonomous Turret" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="be9e-7817-b10f-7977">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Gun Platform</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Automaton, (AUX) Support, Towable</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M6 Autonomous Turret</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (AUX) Support, Automaton, Carriage</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -8170,7 +8144,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <infoLink name="One Track Programming" id="8367-0dbc-8b31-10eb" hidden="false" targetId="b193-2930-d1eb-db82" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Loadout" id="471d-d318-c4d7-de20" hidden="false" collective="false" import="true" defaultSelectionEntryId="a03a-8d9f-deb9-dd6f">
+            <selectionEntryGroup name="Weapons" id="471d-d318-c4d7-de20" hidden="false" collective="false" import="true" defaultSelectionEntryId="a03a-8d9f-deb9-dd6f">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="01bb-8180-8f87-1186" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a39b-3821-6636-fc77" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8260,7 +8234,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           </costs>
           <rules>
             <rule name="Automated Kill-Zone" id="ca08-d689-6d66-6402" hidden="false">
-              <description>When an Enemy Unit moves within 12&quot; of this Unit, this Unit may make a free attack against it.</description>
+              <description>When an Enemy Unit moves within 12&quot; of this Unit, this Unit may make a Free Attack Action against it.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -8268,7 +8242,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Automatic Grenade Launcher Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="19c0-fb85-592d-54b5">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Automatic Grenade Launcher Teams</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Infantry Heavy Weapon Teams</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
               </characteristics>
@@ -8341,7 +8315,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Engineer Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="77a9-cdde-a68c-21f6">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Ssgt. &amp; 4-9 Engineers</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Engineer Staff Sergeant &amp; 4-9x Combat Engineers</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop, Engineer</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
@@ -8379,7 +8353,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Sidearm" id="107d-7605-7ce3-30e2" hidden="false" defaultSelectionEntryId="83d9-2787-f66b-ac3a">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="83d9-2787-f66b-ac3a" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="83d9-2787-f66b-ac3a" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="cc9d-dd72-57c8-b6c2" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -8550,15 +8524,17 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Heavy Machine Gun Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fa0f-b3fd-22fe-cf3c">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Heavy Machine Gun Teams</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Infantry Heavy Weapon Teams</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Deployed Weapon" id="86ec-6800-8d9a-af98" hidden="false" targetId="49c6-4812-80b8-83cf" type="rule"/>
             <infoLink name="Support Troop Actions" id="574f-5d85-9750-f4a4" hidden="false" targetId="7959-03e6-fdc4-3adf" type="profile"/>
+            <infoLink name="Deployed Weapon" id="c6d5-3a0d-6dd3-cc40" hidden="false" type="rule" targetId="49c6-4812-80b8-83cf"/>
+            <infoLink name="Front Facing" id="0f87-8c36-93c5-075d" hidden="false" type="rule" targetId="a57a-9c2f-704e-9847"/>
+            <infoLink name="Overwatch" id="e2a1-7dea-efe7-1844" hidden="false" type="rule" targetId="4693-38cf-194e-db7d"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="b2c6-084d-ccd8-4369" hidden="false" collective="true" import="true">
@@ -8623,15 +8599,17 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Heavy Weapon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c4c0-56c1-39c3-e91d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Light EMG Teams</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Infantry Heavy Weapon Teams</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Deployed Weapon" id="2124-c0e3-89ae-3b90" hidden="false" targetId="49c6-4812-80b8-83cf" type="rule"/>
             <infoLink name="Support Troop Actions" id="6ea2-20b3-d62d-cb63" hidden="false" targetId="7959-03e6-fdc4-3adf" type="profile"/>
+            <infoLink name="Deployed Weapon" id="4d4e-57a5-a471-9f37" hidden="false" type="rule" targetId="49c6-4812-80b8-83cf"/>
+            <infoLink name="Front Facing" id="aa51-a708-3098-5a0d" hidden="false" type="rule" targetId="a57a-9c2f-704e-9847"/>
+            <infoLink name="Overwatch" id="ee7a-8465-b17e-2ee0" hidden="false" type="rule" targetId="4693-38cf-194e-db7d"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="23de-b3ba-3079-3751" hidden="false" collective="true" import="true">
@@ -8696,15 +8674,17 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Recoilless Rifle Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0c00-7846-8896-5e5b">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2 Recoilless Rifle Teams</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Infantry Heavy Weapon Teams</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Deployed Weapon" id="20fe-1423-82d0-c6aa" hidden="false" targetId="49c6-4812-80b8-83cf" type="rule"/>
             <infoLink name="Support Troop Actions" id="f8ea-e66c-28ca-5cb6" hidden="false" targetId="7959-03e6-fdc4-3adf" type="profile"/>
+            <infoLink name="Deployed Weapon" id="5353-eb18-3b0d-cf52" hidden="false" type="rule" targetId="49c6-4812-80b8-83cf"/>
+            <infoLink name="Front Facing" id="4380-af97-2ee8-06ff" hidden="false" type="rule" targetId="a57a-9c2f-704e-9847"/>
+            <infoLink name="Overwatch" id="dc8a-d3ed-dd38-7326" hidden="false" type="rule" targetId="4693-38cf-194e-db7d"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="75e1-9409-aa85-61ef" hidden="false" collective="true" import="true" defaultSelectionEntryId="5f30-0c58-a541-571d">
@@ -8793,7 +8773,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M50 Percheron Halftrack" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a380-e7f8-7cca-1484">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M50 Percheron Halftrack</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M50 Percheron Halftrack</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Tracked, Transport, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -8805,7 +8785,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 <modifier type="append" value="1" field="name"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Logistics" id="5f05-00c8-5ec5-08ac" hidden="false" targetId="c1ce-d022-923f-3147" type="rule"/>
+            <infoLink name="Supply Gathering" id="5f05-00c8-5ec5-08ac" hidden="false" targetId="5b95-9cb8-8f48-e3ed" type="rule"/>
             <infoLink name="Transport Vehicle Actions" id="700e-a67f-f038-9f27" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
             <infoLink name="Bailout" id="13ee-310-3944-2a63" hidden="false" type="rule" targetId="4f87-d052-cf5f-ceec"/>
             <infoLink name="Hitch" id="f672-ad95-e914-0c7a" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
@@ -8843,11 +8823,6 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
-          <rules>
-            <rule name="Limited leg-room" id="ccb3-bdbf-3506-26cc" hidden="false">
-              <description>This unit only receives the benefit of its logistics ability while it has no friendly units embarked.</description>
-            </rule>
-          </rules>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="b270-f4d8-2a87-2559" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9">
               <entryLinks>
@@ -8911,7 +8886,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M56 Supply Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5182-2d5c-a516-acd4">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M56 Supply Truck</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M56 Supply Truck</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Transport, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -8924,7 +8899,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
               </modifiers>
             </infoLink>
             <infoLink name="Transport Vehicle Actions" id="403a-5b73-3ac4-ea92" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
-            <infoLink name="Logistics" id="a333-2880-cee1-c7e8" hidden="false" targetId="c1ce-d022-923f-3147" type="rule"/>
+            <infoLink name="Supply Gathering" id="a333-2880-cee1-c7e8" hidden="false" targetId="5b95-9cb8-8f48-e3ed" type="rule"/>
             <infoLink name="Dangerous Bailout" id="5b7a-6b42-4b8b-1cd6" hidden="false" type="rule" targetId="544-9133-e670-6e0c"/>
             <infoLink name="Hitch" id="4550-66cd-c1d4-11e5" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
           </infoLinks>
@@ -8934,11 +8909,6 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
-          <rules>
-            <rule name="Limited leg-room" id="9015-f9c4-9938-8282" hidden="false">
-              <description>This unit only receives the benefit of its logistics ability while it has no friendly units embarked.</description>
-            </rule>
-          </rules>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f137-83f7-26be-9504" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9">
               <entryLinks>
@@ -8998,7 +8968,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="C-15 Rock Dove Light Cargo Shuttle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ad9c-39a-52c-c557">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 C-15 Rock Dove Light Cargo Shuttle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x C-15 Rock Dove Light Cargo Shuttle</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Flying, Transport, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -9010,7 +8980,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 <modifier type="append" value="1" field="name"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Logistics" id="a77e-57a1-312c-f511" hidden="false" targetId="c1ce-d022-923f-3147" type="rule"/>
+            <infoLink name="Supply Gathering" id="a77e-57a1-312c-f511" hidden="false" targetId="5b95-9cb8-8f48-e3ed" type="rule"/>
             <infoLink name="Transport Flying Actions" id="5aeb-c6ea-9fb2-1e20" hidden="false" targetId="07b0-ee2d-89df-de07" type="profile"/>
             <infoLink name="Flying" id="fc45-b418-74e9-d57c" hidden="false" type="rule" targetId="06f4-93c5-6f93-d4df"/>
             <infoLink name="Aerial Deployment" id="9a2-8f13-e977-a40f" hidden="false" type="rule" targetId="a61e-7e07-d7da-e915"/>
@@ -9054,7 +9024,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="B-47 Starhawk Gunship" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="de57-f469-f7a8-8a7f">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 B-47 Starhawk Gunship</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x B-47 Starhawk Gunship</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Flying, Vehicle, Transport</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -9127,7 +9097,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           </costs>
           <rules>
             <rule name="Coming in Hot!" id="7967-9837-b7ca-c7b8" hidden="false">
-              <description>Attacks that target units that disembarked from a B-47 Starhawk Gunship that round gain -1 to hit.</description>
+              <description>Attacks that target Units that disembarked from a B-47 Starhawk Gunship this round are considered to be through Obscuring Terrain.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -9154,41 +9124,25 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Sergeant Douglas Donahue" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="480a-bf6-a1a0-ac6">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Sergeant Douglas Donahue</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, Character, Hero, Troop</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Sergeant Douglas Donahue</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, Hero, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Command Actions" id="cdd0-3483-6463-d33f" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
-            <infoLink name="Independent Hero" id="279c-8bf7-22a6-bd17" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
+            <infoLink name="Hero Actions" id="cdd0-3483-6463-d33f" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+            <infoLink name="Designated Leader" id="279c-8bf7-22a6-bd17" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="45"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
           </costs>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="CKF Blade" hidden="false" id="d9ba-bd20-2ceb-b0" collective="true">
-              <infoLinks>
-                <infoLink name="CKF Saber" id="3d60-ae6e-96d8-100a" hidden="false" targetId="07a8-f625-0a6c-58fa" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="Munitions" typeId="Points" value="0"/>
-                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e5a-c7e9-873d-f7fc"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="119f-4e7d-94cc-a841"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="f853-c5c5-a887-144" hidden="false" defaultSelectionEntryId="fab2-caab-ff78-8bda">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="fab2-caab-ff78-8bda" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="fab2-caab-ff78-8bda" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="5cda-d7b7-584f-5228" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9199,18 +9153,17 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           </selectionEntryGroups>
           <rules>
             <rule name="Color Sergeant" id="2cdb-20d8-c89b-71ef" hidden="false">
-              <description>When an infantry model in this unit is destroyed, it may make a melee or ranged attack before being removed from play. This attack does not cause suppression.</description>
-            </rule>
-            <rule name="Rally &apos;round the Flag" id="f6df-c572-82eb-16b9" hidden="false">
-              <description>This Unit may take the &quot;Rally&quot; action.</description>
-            </rule>
-            <rule name="Command Squad " id="c943-e323-3273-faaf" hidden="false">
-              <description>This unit may only attach to X units.</description>
-              <modifiers>
-                <modifier type="append" value="Ranger Infantry" field="name"/>
-              </modifiers>
+              <description>Troop Units within 6&quot; of this Model may take Reactions at a cost of 1 Action instead of 2.</description>
             </rule>
           </rules>
+          <entryLinks>
+            <entryLink import="true" name="CKF Saber" hidden="false" id="f8bc-023c-21f0-45e2" type="selectionEntry" targetId="0a39-0114-af7b-36fe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2933-9e14-12c4-5c04-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2933-9e14-12c4-5c04-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="General Nicholas Winters" hidden="false" id="6cf8-10bc-b257-32b4" collective="false">
           <profiles>
@@ -9224,8 +9177,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="General Nicholas Winters" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d07e-ed8d-962c-622d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 General Nicholas Winters</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Recon, Support, Character, Command, Hero, Troop</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x General Nicholas Winters</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Command, Hero, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
@@ -9236,38 +9189,27 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <infoLink name="Logistics" id="5871-ae2b-1e52-bb71" hidden="false" type="rule" targetId="c1ce-d022-923f-3147"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="148"/>
+            <cost name="Munitions" typeId="Points" value="110"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="M10 Thompson SMG" hidden="false" id="fd86-4d19-607e-73bf" collective="true">
-              <infoLinks>
-                <infoLink name="M10 Thompson Submachine Gun" id="dc6f-7117-8daf-4422" hidden="false" targetId="02d6-0edc-7302-4486" type="profile"/>
-                <infoLink name="Suppressive" id="358a-d8c6-ba9f-3fee" hidden="false" targetId="4911-2380-864d-8b44" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="Munitions" typeId="Points" value="2"/>
-                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4926-ef2c-cbf1-b620-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4926-ef2c-cbf1-b620-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
           <rules>
             <rule name="Gifts from Command" id="2c92-554b-a828-4d1e" hidden="false">
-              <description>As an action, General Nicholas Winters may resupply the Ammo of a friendly unit within 6&quot; by 1.</description>
+              <description>As an action, General Nicholas Winters may resupply the Ammo of a Friendly Unit within 6&quot; by 1.</description>
             </rule>
             <rule name="3 Star General" id="fad5-8fb-6a5b-8c23" hidden="false">
-              <description>General Nicholas Winters may issue orders to each eligible unit in his platoon.</description>
+              <description>General Nicholas Winters may issue orders to each eligible Unit in his Platoon.</description>
             </rule>
           </rules>
           <entryLinks>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="1c55-e427-fa7a-74b6" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+            <entryLink import="true" name="M10 Thompson SMG" hidden="false" id="fe55-610d-7f45-7af0" type="selectionEntry" targetId="1b17-bf28-08c9-f724">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f72-5194-60b1-5b73-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f72-5194-60b1-5b73-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Warrant Officer Jethro Madison" hidden="false" id="1220-7aa0-481c-9f7b" collective="false">
@@ -9282,15 +9224,15 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Warrant Officer Jethro Madison" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fa04-8d00-5747-eb53">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Warrant Officer Jethro Madison</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, Character, Command, Mounted, Hero, Troop</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Warrant Officer Jethro Madison</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, Command, Mounted, Hero, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Command Actions" id="9169-5e0-134c-836e" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
-            <infoLink name="Independent Hero" id="03dd-ab1f-ca86-d2b3" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
+            <infoLink name="Hero Actions" id="9169-5e0-134c-836e" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+            <infoLink name="Flexible Hero" id="03dd-ab1f-ca86-d2b3" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
             <infoLink name="Slippery" id="30e9-e8e4-3bf6-b935" hidden="false" type="rule" targetId="d4e3-7a13-502a-ecd5"/>
             <infoLink name="Veteran Crew" id="af74-9d32-c2b8-60f4" hidden="false" type="rule" targetId="fe62-95d4-4af0-7a99"/>
           </infoLinks>
@@ -9335,7 +9277,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
               <description>This Unit may be nominated as your Field Commander, regardless of the rank of other officers.</description>
             </rule>
             <rule name="Battlefield Mechanic" id="f2be-f2b3-87a4-c46d" hidden="false">
-              <description>Attacks made against this Unit reduce their Damage profile by 2, to a minimum of 1.</description>
+              <description>The Unit that is Mounted by Warrant Officer Jethro Madison gains Warding 2</description>
             </rule>
             <rule name="Walker Expert" id="02fe-40a0-f287-3753" hidden="false">
               <description>Warrant Officer Jethro Madison can be attached to a unit with the Walker Keyword. A Unit Mounted by W.O. Jethro Madison always counts as having been ordered.</description>
@@ -9347,7 +9289,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="8934-a931-e833-4b49" hidden="false" defaultSelectionEntryId="1534-869a-fdcd-108c">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="1534-869a-fdcd-108c" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="1534-869a-fdcd-108c" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="9978-d52f-b35d-96f4" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9376,7 +9318,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Morale Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2dfa-678b-aec7-2fea">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Morale Officer</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Morale Officer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Recon, Character, Command, Support, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -9387,7 +9329,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <infoLink name="Designated Leader" id="e221-f0ab-b57c-ed1f" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="15"/>
+            <cost name="Munitions" typeId="Points" value="20"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -9395,7 +9337,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="8653-a4a5-5e2-4c2a" hidden="false" defaultSelectionEntryId="1cab-e539-bf79-5021">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="1cab-e539-bf79-5021" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="1cab-e539-bf79-5021" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="c712-1bfc-35c3-73d4" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9405,8 +9347,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </selectionEntryGroup>
           </selectionEntryGroups>
           <rules>
-            <rule name="No Man Left Behind" id="ec77-bcc7-560f-65c4" hidden="false">
-              <description>The first time each Round a Model in this Unit would be destroyed, prevent that damage.</description>
+            <rule name="Lead From the Front" id="ec77-bcc7-560f-65c4" hidden="false">
+              <description>As a Standard Action this Unit may Sound the Charge! If it does, this Unit and all other Troop Units within 6&quot; may immediately make a Free Dash Action.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -9431,8 +9373,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Recon Bike Commander" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d58a-e60-65c9-d931">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Recon Bike Commander</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Character, Command, Cavalry</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Recon Bike Commander</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Recon, Command, Cavalry</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
               </characteristics>
             </profile>
@@ -9451,7 +9393,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="268a-6e07-6c1d-331a" hidden="false" defaultSelectionEntryId="4eac-cd28-71e2-e55">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="4eac-cd28-71e2-e55" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="4eac-cd28-71e2-e55" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="42ef-5dd9-b979-33c3" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9493,9 +9435,9 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="Jump-Master" hidden="false" id="c5a0-001e-849a-bcb8" collective="false">
+        <selectionEntry type="model" import="true" name="Drop-Trooper Jump-Master" hidden="false" id="c5a0-001e-849a-bcb8" collective="false">
           <profiles>
-            <profile name="Jump-Master" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9a01-1072-24b2-e33d">
+            <profile name="Drop-Trooper Jump-Master" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9a01-1072-24b2-e33d">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
@@ -9503,10 +9445,10 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
             </profile>
-            <profile name="Jump-Master" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0c53-7663-7bbf-260c">
+            <profile name="Drop-Trooper Jump-Master" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0c53-7663-7bbf-260c">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">Jump-Master</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Recon, Character, Command, Troop</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Drop-Trooper Jump-Master</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Recon, Command, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
@@ -9524,7 +9466,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="8ec2-babd-f2d4-23cb" hidden="false" defaultSelectionEntryId="5e9d-f85f-abe0-6b92">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="5e9d-f85f-abe0-6b92" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="5e9d-f85f-abe0-6b92" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="18af-db7d-fcce-00d7" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9578,7 +9520,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Infantry Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ccd2-74a4-aaba-2296">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Infantry Officer</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Infantry Officer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Command, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -9597,7 +9539,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="3488-2b09-5265-bfe9" hidden="false" defaultSelectionEntryId="e2d2-a232-e9a9-f47b">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="e2d2-a232-e9a9-f47b" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="e2d2-a232-e9a9-f47b" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="5727-8457-4947-3e50" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9674,8 +9616,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="X19 Badger Hardsuit Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ce13-a57e-de39-3381">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 X19 Badger Hardsuit Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Battlesuit, Character, Command</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x X19 Badger Hardsuit Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Battlesuit, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
               </characteristics>
             </profile>
@@ -9791,8 +9733,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Ranger Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3dc2-4017-6990-9fd7">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Ranger Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Character, Command</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Ranger Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
             </profile>
@@ -9818,7 +9760,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="bb16-663d-0075-0384" hidden="false" defaultSelectionEntryId="43d1-8777-2bca-c555">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="43d1-8777-2bca-c555" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="43d1-8777-2bca-c555" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="4617-584b-0f61-020e" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -9846,7 +9788,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <rule name="Command Squad " id="524c-6ee5-5c96-68dc" hidden="false">
               <description>This unit may only attach to X units.</description>
               <modifiers>
-                <modifier type="append" value="(Ranger Infantry Squad)" field="name"/>
+                <modifier type="append" value="(Ranger Squad)" field="name"/>
               </modifiers>
             </rule>
           </rules>
@@ -9855,8 +9797,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="Willys GPV Staff Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4f2f-8b15-2e64-9bf8">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Willys GPV Staff Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Flex, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Willys GPV Staff Car</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Flex, Command, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -9883,11 +9825,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           </profiles>
           <infoLinks>
             <infoLink name="Transport Vehicle Actions" id="37eb-0a3d-43bf-3407" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
-            <infoLink name="Rank has its Privileges" id="edb0-40d8-43ae-5afd" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden"/>
-              </modifiers>
-            </infoLink>
+            <infoLink name="Rank has its Privileges" id="edb0-40d8-43ae-5afd" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
             <infoLink name="Hitch" id="7fc8-ba8d-0c48-1a91" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
             <infoLink name="(CORE) Flex" id="e2ec-702f-1ef5-fa6c" hidden="false" type="rule" targetId="05cc-45cd-4600-22d8"/>
           </infoLinks>
@@ -9936,8 +9874,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M62 Burro Artillery Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="640f-1ba4-e80b-5968">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M62 Burro Artillery Tractor</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M62 Burro Artillery Tractor</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Command, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -9983,7 +9921,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3be3-3074-f3da-2e6d" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink name="Intel Gathering" id="e4d0-7226-d9dd-fc24" hidden="false" targetId="dc7a-f7c9-a54a-9cbc" type="rule"/>
+                        <infoLink name="Intelligence" id="e4d0-7226-d9dd-fc24" hidden="false" targetId="dc7a-f7c9-a54a-9cbc" type="rule"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="c759-0527-e3da-f358">
@@ -10065,8 +10003,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Combat Engineer Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b7c0-e73d-fcf7-dffa">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Combat Engineer Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, Character, Command</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Combat Engineer Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
             </profile>
@@ -10083,7 +10021,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="c0f1-6d2b-d906-a192" hidden="false" defaultSelectionEntryId="c84b-3f67-7be8-8957">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="c84b-3f67-7be8-8957" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="c84b-3f67-7be8-8957" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="ed2a-a310-c627-4cc0" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -10176,7 +10114,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="4ab0-0009-4342-7768" hidden="false" defaultSelectionEntryId="b314-43ec-816c-e0a4">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="b314-43ec-816c-e0a4" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="b314-43ec-816c-e0a4" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="924f-15c1-4b4f-e653" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -10196,7 +10134,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Rear-Echelon Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1e85-5d9b-cd18-380c">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Rear-Echelon Officer</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Rear-Echelon Officer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, Command, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -10221,7 +10159,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="Veteran Infantry Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="6280-cd9f-d1f1-4fe8">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Veteran Infantry Officer</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Veteran Infantry Officer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Command, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
@@ -10240,7 +10178,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <selectionEntryGroups>
             <selectionEntryGroup name="Sidearm" id="fd60-9420-c433-66e5" hidden="false" defaultSelectionEntryId="aa3e-f161-df92-d964">
               <entryLinks>
-                <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="aa3e-f161-df92-d964" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="aa3e-f161-df92-d964" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                 <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="1448-b0f0-3240-5a4f" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
               </entryLinks>
               <constraints>
@@ -10305,7 +10243,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 </rule>
               </rules>
               <costs>
-                <cost name="Munitions" typeId="Points" value="25"/>
+                <cost name="Munitions" typeId="Points" value="40"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -10328,7 +10266,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 </rule>
               </rules>
               <costs>
-                <cost name="Munitions" typeId="Points" value="25"/>
+                <cost name="Munitions" typeId="Points" value="40"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -10351,7 +10289,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 </rule>
               </rules>
               <costs>
-                <cost name="Munitions" typeId="Points" value="25"/>
+                <cost name="Munitions" typeId="Points" value="40"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -10388,11 +10326,11 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
     </selectionEntryGroup>
     <selectionEntryGroup name="Mechanized" id="6815-c960-253e-6c13" hidden="false">
       <selectionEntries>
-        <selectionEntry type="unit" import="true" name="Ranger Infantry Squad" hidden="false" id="cc2a-284c-e58b-fc7a" collective="false">
+        <selectionEntry type="unit" import="true" name="Ranger Squad" hidden="false" id="cc2a-284c-e58b-fc7a" collective="false">
           <profiles>
-            <profile name="Ranger Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5137-7141-22a7-290f">
+            <profile name="Ranger Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5137-7141-22a7-290f">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Ranger Ssgt., 1-2 Ranger Specialists, &amp; 3-7 Rangers</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Ranger Staff Sergeant, 3-7x Rangers, &amp; 1-2x Ranger Specialists</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, (AUX) Infantry, (AUX) Recon, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
@@ -10428,7 +10366,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Sidearm" id="4e0f-cc19-d92-2f43" hidden="false" defaultSelectionEntryId="a87b-d29b-34ea-aeeb">
                       <entryLinks>
-                        <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="a87b-d29b-34ea-aeeb" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
+                        <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="a87b-d29b-34ea-aeeb" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="7a03-2384-d8ee-70d" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
                       </entryLinks>
                       <constraints>
@@ -10486,7 +10424,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="4f4c-392c-72df-be23" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="4f4c-392c-72df-be23" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74b9-530c-049a-09e8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d15-15a6-8f95-b6ce" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -10542,7 +10480,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="M1932 Energy Pistol" hidden="false" id="6267-4b51-2d08-f95b" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
+                    <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="6267-4b51-2d08-f95b" collective="false" targetId="0e45-d997-a2ae-b07d" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c76-03f6-23bb-dedf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b35f-750c-900d-6fb9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -10577,8 +10515,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="First in, Last out" id="c849-31bf-6f41-f1a" hidden="false">
-              <description>When this Unit selects the nearest Enemy Unit as the target of an Attack, it gains an Aim Token.</description>
+            <rule name="Rangers Lead the Way!" id="c849-31bf-6f41-f1a" hidden="false">
+              <description>This Unit counts as double its total HP for the purposes of controlling Objectives</description>
             </rule>
           </rules>
           <entryLinks>
@@ -10618,8 +10556,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M82A2 Mukwa Superheavy Transport" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1b0-6a8b-77e4-24b0">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M82A2 Mukwa Superheavy Transport</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, (AUX) Armor, Superheavy, Tracked, Vehicle,</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M82A2 Mukwa Superheavy Transport</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, (AUX) Armor, Superheavy, Transport, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -10811,7 +10749,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           </costs>
           <rules>
             <rule name="Riding in Style" id="9a6b-e927-31e8-67f6" hidden="false">
-              <description>When this unit is destroyed, all units disembark with no casualties.</description>
+              <description>When this Unit is Destroyed, all Embarked Units Disembark with no casualties.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -10826,8 +10764,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M48 Caprina APC" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1b73-42dd-5bcc-bcdd">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M48 Caprina APC</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Tracked, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M48 Caprina APC</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Transport, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -10975,7 +10913,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">18</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">22</characteristic>
               </characteristics>
               <modifiers>
                 <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba" scope="parent">
@@ -11033,14 +10971,14 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="134"/>
+            <cost name="Munitions" typeId="Points" value="164"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="Amphibious Fortress" id="e0fc-20b1-41b9-609f" hidden="false">
-              <description>The M39 Bison Landing Vehicle may only fire its main armament weapons while an infantry unit is embarked within it.</description>
+            <rule name="Landing Craft" id="e0fc-20b1-41b9-609f" hidden="false">
+              <description>Units that disembark from this Unit may be setup within 6&quot; of this Unit instead of 3&quot;</description>
             </rule>
           </rules>
           <entryLinks>
@@ -11231,7 +11169,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="X19 Badger Personal Hardsuit Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="121a-3eb9-5135-55b3">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3 X19 Badger Personal Hardsuits</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x X19 Badger Hardsuit Sergeant, &amp; 1-3x X19 Badger Hardsuits</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Support, Battlesuit</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
               </characteristics>
@@ -11503,8 +11441,8 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             </profile>
             <profile name="M56 Fuel Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0948-dc14-8698-9f40">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M56 Fuel Truck</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA,(CORE) Mechanized, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M56 Fuel Truck</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
@@ -11538,7 +11476,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M48 Caprina Multiple Gun Motor Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a2d4-521b-a951-1f85">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M48 Caprina Multiple Gun Motor Carriage</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M48 Caprina Multiple Gun Motor Carriage</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, (AUX) Armor, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
@@ -11628,7 +11566,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <profiles>
             <profile name="M48 Bison Armored Recovery Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e4db-b224-d6fd-ffd0">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 M48 Bison Armored Recovery Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M48 Bison Armored Recovery Vehicle</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, (AUX) Armor, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>

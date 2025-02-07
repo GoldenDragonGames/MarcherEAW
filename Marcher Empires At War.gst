@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.6.0" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.6.1" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -394,9 +394,6 @@
           </modifiers>
         </categoryLink>
       </categoryLinks>
-      <constraints>
-        <constraint type="min" value="2" field="selections" scope="force" shared="true" id="6f72-ffa5-2721-d125"/>
-      </constraints>
     </forceEntry>
   </forceEntries>
   <entryLinks>
@@ -906,7 +903,7 @@
     <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="false" id="4881-4c15-cfc8-b00c">
       <infoLinks>
         <infoLink name="Binoculars" id="fdb4-cb98-ae7f-6b2b" hidden="false" type="rule" targetId="d8aa-96b2-fd3d-8958"/>
-        <infoLink name="Intel Gathering" id="4951-d13d-f0f0-e71c" hidden="false" type="rule" targetId="dc7a-f7c9-a54a-9cbc"/>
+        <infoLink name="Intelligence" id="4951-d13d-f0f0-e71c" hidden="false" type="rule" targetId="dc7a-f7c9-a54a-9cbc"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="25"/>
@@ -929,6 +926,41 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flexible Hero" hidden="false" id="6b7f-275e-7716-94b3">
+      <infoLinks>
+        <infoLink name="Flexible Hero" id="86ca-45a3-4d3b-4b71" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Options" id="0d3a-bb88-f390-449e" hidden="false" defaultSelectionEntryId="174f-e958-5411-0477">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Attached" hidden="false" id="174f-e958-5411-0477">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23ca-b0b8-0ee8-b150" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Independent" hidden="false" id="1633-6860-58d3-737a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1593-4856-c5bf-b250" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="0"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2bfe-1e59-9a78-aa3d-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bfe-1e59-9a78-aa3d-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="02d3-7730-e55a-87ce-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02d3-7730-e55a-87ce-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="2f38-62b3-ba2d-80c4" name="Command" hidden="false">
@@ -938,7 +970,7 @@
       <description>This Unit may pass through Light Fortifications when taking the move action, if it does so, remove those objects from the battlefield.</description>
     </rule>
     <rule id="a53f-6c4f-8514-7703" name="Critical Shot" hidden="false">
-      <description>For each 10 you roll when attacking with this weapon you score an additional hit.</description>
+      <description>For each unmodified 10 you roll when Attacking with this Weapon, score an additional Hit.</description>
     </rule>
     <rule id="4911-2380-864d-8b44" name="Suppressive" hidden="false">
       <description>When a unit is attacked by weapon(s) with the &quot;Suppressive&quot; keyword, it receives a Suppression Token. (This effect is cumulative)</description>
@@ -977,13 +1009,13 @@
       <description>This Unit may towed as if it were a Carriage Unit.</description>
     </rule>
     <rule id="a57a-9c2f-704e-9847" name="Front Facing" hidden="false">
-      <description>This Unit may only select units that are in front of it to attack. It may make a 90 degree pivot for free whenever it activates.</description>
+      <description>This Unit&apos;s primary Weapon has a 90 degree Firing Arc. When this Unit Activates, it may make a Free 90 degree Pivot.</description>
     </rule>
     <rule id="4c9f-32f0-9723-17cb" name="Cumbersome" hidden="false">
       <description>Units with this keyword can not activate until all other units in your army have activated this round.</description>
     </rule>
     <rule id="49c6-4812-80b8-83cf" name="Deployed Weapon" hidden="false">
-      <description>This Unit may not take the Attack Action if it has also taken the Move action this turn</description>
+      <description>This Unit may not take the Attack Action if it has also taken the Move Action this turn</description>
     </rule>
     <rule id="987d-4b9f-03aa-1235" name="Battlefield Scanners" hidden="false">
       <description>If this Weapon is in range when making an Attack Action this Unit gains an Aim Token.</description>
@@ -1037,7 +1069,7 @@
     <rule id="6f53-dabe-1243-14cf" name="Close In" hidden="false">
       <description>When making an Attack with this weapon, Units targeted by this attack do not receive the benefit of cover.</description>
     </rule>
-    <rule id="dc7a-f7c9-a54a-9cbc" name="Intel Gathering" hidden="false">
+    <rule id="dc7a-f7c9-a54a-9cbc" name="Intelligence" hidden="false">
       <description>At the beginning of each command phase gain an Intel point (IP).</description>
     </rule>
     <rule id="3a32-9522-280e-50ce" name="Sniper" hidden="false">
@@ -1047,7 +1079,7 @@
       <description>This Unit gains Move as a Free Action. This Unit may ignore the effects of any terrain it moves across.</description>
     </rule>
     <rule id="8e52-a616-aab9-73b8" name="Designated Leader" hidden="false">
-      <description>This model must be attached to a non-command unit that it shares a core keyword with before the game starts. After this model is attached it must be designated as the Leader of the combined unit</description>
+      <description>This Model must be attached to a non-Command Unit that it shares a CORE Keyword with in this Platoon before the Game starts. After this Model is attached it must be designated as the Leader of the combined Unit. A Unit may not have more than one additional Model attached to it in this way.</description>
     </rule>
     <rule name="Scattershot" id="20e-bfac-4fc9-44b9" hidden="false">
       <description>While making an attack using a weapon with this special rule, if within half range of the target, double your Hits and AP Profile.</description>
@@ -1071,7 +1103,7 @@
       <description>This Unit may take the Fallback Reaction while losing only a single Action during its following Activation.</description>
     </rule>
     <rule name="Hunter" id="c061-5561-8d2a-8ab3" hidden="false">
-      <description>When this Unit destroys an enemy character unit, gain 1 Intel point.</description>
+      <description>When this Unit destroys the Leader Model of an Enemy Command Unit, gain 1 Intel point.</description>
     </rule>
     <rule name="Big Game Hunter" id="22ef-ed51-bdad-4ad4" hidden="false">
       <description>Attacks from this Unit reroll hits against Enemy Units with the vehicle keyword.</description>
@@ -1100,9 +1132,6 @@
     <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
       <description>When this Unit is deployed, it may immediately take the Build or Destroy Action once.</description>
     </rule>
-    <rule name="Reach" id="9b54-8e32-2b8d-c1d6" hidden="false">
-      <description>This unit has a melee engagement range of 3&quot;.</description>
-    </rule>
     <rule name="Open Topped " id="6beb-7c97-fe80-09a9" hidden="false">
       <description>Units inside this Transport may be activated as normal and may take Ranged Attack Actions while Embarked. They may be selected as the target of a Ranged Attack. These Units receive X levels of cover.</description>
     </rule>
@@ -1115,8 +1144,8 @@
     <rule name="Up-Armored" id="1f7c-515a-0ef2-8614" hidden="false">
       <description>This Model&apos;s Armor Profile is increased by 1</description>
     </rule>
-    <rule name="Independent Hero" id="ba04-cce8-3db9-31d4" hidden="false">
-      <description>This unit may attach to an allied unit as though it has the Designated Leader special rule, or be taken individually. If this unit is not attached to an allied unit, enemy ranged attacks may only target it if it is the closest enemy unit.</description>
+    <rule name="Flexible Hero" id="ba04-cce8-3db9-31d4" hidden="false">
+      <description>This Unit may attach to a Unit in this Platoon as though it has the Designated Leader Special Rule, or be taken as a separate Unit.</description>
     </rule>
     <rule name="Fortification Reference" id="b938-f36f-8234-0a26" hidden="false">
       <description>Hedgehog Tank Trap (1 SP)
@@ -1204,7 +1233,7 @@ gain cover for being within this terrain feature
       <description>This weapon may be selected to attack with in addition to another weapon.</description>
     </rule>
     <rule name="Slippery" id="d4e3-7a13-502a-ecd5" hidden="false">
-      <description>If a vehicle-mounted by this unit is destroyed, place this unit&apos;s infantry model in base-to-base contact with it at the end of the current activation. While not attached to another unit, this unit activates independently and gains the “Troop” keyword.</description>
+      <description>If a Vehicle Mounted by this Unit is destroyed, place this Unit&apos;s Infantry Model in base-to-base contact with it at the end of the current activation. While not attached to another Unit, this Unit activates independently and gains the “Troop” Keyword.</description>
     </rule>
     <rule name="Hitch" id="320a-d3d0-cf35-7d83" hidden="false">
       <description>This Unit has access to the free action “Tow”.</description>
@@ -1215,7 +1244,7 @@ gain cover for being within this terrain feature
     <rule name="Direct Fire" id="371b-f82b-1fef-54a5" hidden="false">
       <description>Blast tokens for this weapon are placed when this weapon is selected to attack rather than in the command phase.</description>
     </rule>
-    <rule name="Disintegration Beam" id="a397-8716-ab3d-2773" hidden="false">
+    <rule name="Ablation Beam" id="a397-8716-ab3d-2773" hidden="false">
       <description>For each successful Hit Check made by this Weapon, score an additional Hit and increase this Weapon&apos;s AP Profile by 1 for the rest of this Attack.</description>
     </rule>
     <rule name="Radio" id="97d3-d9ed-af71-d4d6" hidden="false">
@@ -1336,6 +1365,42 @@ are in your army only one counter is ticked down at a time.</description>
     <rule name="Rear Turret Mount" id="aba1-049d-c59a-7c9e" hidden="false">
       <description>Weapons Equipped in a Rear Turret Mount may select targets for Attacks independently of other Weapons.</description>
     </rule>
+    <rule name="Supply Gathering" id="5b95-9cb8-8f48-e3ed" hidden="false">
+      <description>As a Standard Action, gain a Supply Point (SP)</description>
+    </rule>
+    <rule name="Intel Gathering" id="5845-b3b2-62ef-1d40" hidden="false">
+      <description>As a Standard Action, gain a Supply Point (SP)</description>
+    </rule>
+    <rule name="Low Profile" id="06ae-c996-2397-250a" hidden="false">
+      <description>This Unit may only be selected as the target of an Attack if it is the closest Enemy Unit to the Attacker.</description>
+    </rule>
+    <rule name="Hero" id="6113-1992-c13f-9ef1" hidden="false">
+      <description>This Unit counts as one of your Command Selections. This Unit is always considered to be Ordered.</description>
+    </rule>
+    <rule name="Independent Hero" id="87d1-b519-3107-ac0d" hidden="false">
+      <description>This Hero may not attach to other Units.</description>
+    </rule>
+    <rule name="Motorized" id="f132-fc42-e5e5-451e" hidden="false">
+      <description>This Commander may be attached to any Vehicle Unit.</description>
+    </rule>
+    <rule name="Silenced" id="7bc9-bfc2-1e2e-ca13" hidden="false">
+      <description>Reactions cannot be taken in response to Attacks from this Weapon.</description>
+    </rule>
+    <rule name="Overwatch" id="4693-38cf-194e-db7d" hidden="false">
+      <description>As a Difficult Action, this Unit may Overwatch. If it does, until this Unit&apos;s next Activation, if an Enemy Unit moves within half-Range and Firing Arc of this Unit&apos;s primary weapon, it may immediately perform a Free Attack Action with one of its equipped Weapons. It may only perform one Free Attack in this way.</description>
+    </rule>
+    <rule name="Emplaced Unit" id="2a7d-25c4-050d-de07" hidden="false">
+      <description>This Unit must be deployed as if it were a Fortification with Supply Cost X.</description>
+    </rule>
+    <rule name="Dishonorable Conduct" id="bc57-9a28-d90d-c8b6" hidden="false">
+      <description>If this Unit is destroyed, the Player who selected it as the target of an Attack loses 1 Victory Point. 
+
+
+(If this Unit is selected as the target unintentionally, such as due to the Cook Off Special Rule, no points are deducted. If this Unit is intentionally moved into danger, such as through a minefield or into range of a Blast token, and is destroyed as a result, no points are deducted.)</description>
+    </rule>
+    <rule name="Hippocratic Oath" id="14f0-63cf-f0f4-79b4" hidden="false">
+      <description>This Unit may not take the Attack Action. This Unit may not Move into Engagement with another Unit.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="0936-84e8-76d0-501a" name="Infantry Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
@@ -1372,7 +1437,7 @@ are in your army only one counter is ticked down at a time.</description>
     </profile>
     <profile id="335b-34df-c974-9c3b" name="Support Engineer Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Dash</characteristic>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Dig In, Take Aim, Dash</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Dig In, Brace, Fallback</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture, Build, Demolish</characteristic>
@@ -1471,7 +1536,7 @@ are in your army only one counter is ticked down at a time.</description>
     <profile name="Support Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="f3ad-8ceb-aaf2-040d">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Take Aim, Move</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
       </characteristics>
@@ -1540,6 +1605,14 @@ are in your army only one counter is ticked down at a time.</description>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hero Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="ca2a-7f10-72a9-2a56">
+      <characteristics>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in, Move, Take Aim</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
