@@ -92,6 +92,7 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba6a-c5a4-a551-3580" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
+        <categoryLink name="Heroes" hidden="false" id="3743-e631-0685-3b76" targetId="33a5-8b7e-49bb-c30d"/>
         <categoryLink name="CORE Armor" hidden="false" id="6eed-d29d-0cfc-4d40" targetId="7950-f6f1-38c2-f2dd" primary="false">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="61af-eb8a-5621-2d51" includeChildSelections="false"/>
@@ -121,6 +122,7 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="158e-4dc3-eef8-441e" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
+        <categoryLink name="Heroes" hidden="false" id="d656-c8f5-c8aa-0237" targetId="33a5-8b7e-49bb-c30d"/>
         <categoryLink name="CORE Artillery" hidden="false" id="1ece-36c4-7a7d-dfa4" targetId="8679-d614-ae03-de2c" primary="false">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d249-a21e-6882-50c4" includeChildSelections="false"/>
@@ -133,6 +135,11 @@
               </conditions>
             </modifier>
           </modifiers>
+        </categoryLink>
+        <categoryLink name="AUX Artillery" hidden="false" id="4ea6-6da4-8cd4-4144" targetId="9565-ab3a-3c1b-b959" primary="false">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0295-94da-a785-2e47" includeChildSelections="false"/>
+          </constraints>
         </categoryLink>
         <categoryLink name="Transports" hidden="true" id="e711-0b0e-bca3-d7f2" targetId="d4be-5aad-8560-5720">
           <constraints>
@@ -153,11 +160,7 @@
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="AUX Artillery" hidden="false" id="4ea6-6da4-8cd4-4144" targetId="9565-ab3a-3c1b-b959" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0295-94da-a785-2e47" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
+        <categoryLink name="Heroes" hidden="false" id="c1aa-f03e-0576-78a1" targetId="33a5-8b7e-49bb-c30d"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry name="Infantry Platoon" id="2250-4111-e2c2-bb10" hidden="false">
