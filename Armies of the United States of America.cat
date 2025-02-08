@@ -584,6 +584,18 @@
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="b669-f585-694b-e53d" primary="false" name="USA"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="5a4e-6678-db5b-1ec2" primary="false" name="Command"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="General Nicholas Winters" hidden="true" id="3d5d-7f86-4d54-113" type="selectionEntry" targetId="6cf8-10bc-b257-32b4">
       <categoryLinks>
@@ -9152,7 +9164,7 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <profile name="Sergeant Douglas Donahue" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="480a-bf6-a1a0-ac6">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Sergeant Douglas Donahue</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, Hero, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Mechanized, (CORE) Infantry, Hero, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>

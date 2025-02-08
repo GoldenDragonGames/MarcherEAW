@@ -1604,6 +1604,18 @@
         <categoryLink targetId="51a0-4deb-b01b-931e" id="d103-4cdd-a65b-2be7" primary="false" name="RUS"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="1528-8ebf-5bfc-4d24" primary="false" name="Command"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="AT-28 Cloud Engine" hidden="false" id="91ba-d11e-a93d-1c81" type="selectionEntry" targetId="f103-0efa-bdc9-15c3">
       <categoryLinks>
@@ -7140,7 +7152,7 @@
             <profile name="Lieutenant Lyudmila Pavlichenko" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="220d-6e66-e322-f19a">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Lieutenant Lyudmila Pavlichenko</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, Hero, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (CORE) Recon, Hero, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
               </characteristics>
             </profile>

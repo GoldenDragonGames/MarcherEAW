@@ -1667,13 +1667,20 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="IJN Captain Kaeda Goemon" hidden="false" id="735e-f7c1-c9e7-3ee0" type="selectionEntry" targetId="a1c7-61ad-e73c-8753">
+    <entryLink import="true" name="IJN Captain Kaeda Goemon" hidden="true" id="735e-f7c1-c9e7-3ee0" type="selectionEntry" targetId="a1c7-61ad-e73c-8753">
       <categoryLinks>
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="7cc9-a17e-fbac-3624" primary="true" name="Heroes"/>
         <categoryLink targetId="f273-43c7-03e5-764e" id="f916-183a-5103-c5cc" primary="false" name="EOJ"/>
         <categoryLink targetId="7b62-662e-b4a3-f92f" id="9947-af08-3804-ac15" primary="false" name="IJN"/>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="faca-b6d4-c9c2-9ade" primary="false" name="Command"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="IJA Colonel Kaeda Harunobu" hidden="true" id="6013-62ec-414f-41c4" type="selectionEntry" targetId="ee6f-332f-50a7-3f31">
       <categoryLinks>
@@ -1688,6 +1695,7 @@
             <modifier type="set" value="false" field="hidden">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="7ce6-55a5-44aa-7258" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
           </modifiers>
