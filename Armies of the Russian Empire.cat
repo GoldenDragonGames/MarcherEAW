@@ -1503,12 +1503,18 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Guards Officer" hidden="false" id="8b1a-04e3-54ed-38aa" type="selectionEntry" targetId="9e7a-7b8b-6c58-3560">
+    <entryLink import="true" name="Guards Officer" hidden="true" id="8b1a-04e3-54ed-38aa" type="selectionEntry" targetId="9e7a-7b8b-6c58-3560">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="26e4-4a63-6d92-582d" primary="true" name="Command"/>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="9d00-9ab8-d3c3-a9e0" primary="false" name="RUS"/>
-        <categoryLink targetId="6dc4-41a4-7144-d10c" id="c9e3-ca75-cbe2-62e4" primary="false" name="Troop"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="26a5-76cb-5d13-b4a7" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="T-30 &quot;Ul. Dmitry&quot; Battle Tank" hidden="false" id="2e4d-60b6-51fe-8ead" type="selectionEntry" targetId="6ccd-c864-1e7e-48af">
       <categoryLinks>
@@ -1578,7 +1584,7 @@
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="6dc4-41a4-7144-d10c" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6dc4-41a4-7144-d10c" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2080,6 +2086,19 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Assault Engineer-Sapper Officer" hidden="false" id="1406-2d38-1328-c4b7" type="selectionEntry" targetId="ec9d-a2c2-8070-c527">
+      <categoryLinks>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="5c36-282f-18f1-00e8" primary="true" name="Command"/>
+        <categoryLink targetId="51a0-4deb-b01b-931e" id="4dac-ab7f-5f6d-9a99" primary="false" name="RUS"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="7486-125d-202f-371b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedRules>
     <rule name="Corporate Sear" id="9c29-d160-9e29-625e" hidden="false">
@@ -2158,7 +2177,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="621d-bf9b-1dbc-559a" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="3.3dlv Beam Cannon" hidden="false" id="4ab5-cfac-1d95-17e7" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
+                    <entryLink import="true" name="3.3tsk Beam Cannon" hidden="false" id="4ab5-cfac-1d95-17e7" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1da5-0db3-488b-0278" includeChildSelections="false"/>
                       </constraints>
@@ -2550,6 +2569,7 @@
           <infoLinks>
             <infoLink name="Armor Vehicle Actions" id="ab0e-5961-aed7-e8c9" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
             <infoLink name="Catastrophic Detonation" id="96f5-6843-6121-d3ca" hidden="false" type="rule" targetId="ed65-6e21-b743-aab2"/>
+            <infoLink name="Prototype" id="fdd9-ea30-296a-0df1" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <rules>
             <rule name="Heavy Casting" id="038e-2093-1bbb-62ed" hidden="false">
@@ -2683,6 +2703,7 @@
             <infoLink name="Deployed Weapon" id="505b-5592-e47c-a57a" hidden="false" targetId="49c6-4812-80b8-83cf" type="rule"/>
             <infoLink name="Towable" id="fc34-4eb4-7348-5a1c" hidden="false" type="rule" targetId="9e88-6c38-3a57-c010"/>
             <infoLink name="Heavy Carriage" id="e29d-7b17-7709-d0c2" hidden="false" type="rule" targetId="4d43-378e-5e18-f124"/>
+            <infoLink name="Prototype" id="a9d7-ad2b-cde1-d3c3" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <profiles>
             <profile name=" U-19 &quot;Ul. Barbara&quot; Motorized Howitzer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="74df-9d5f-5f11-cd5b">
@@ -2915,14 +2936,14 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Command" id="320e-4632-32a8-a1a1" hidden="false">
       <selectionEntries>
-        <selectionEntry type="unit" import="true" name="Guards Officer" hidden="true" id="9e7a-7b8b-6c58-3560" collective="false">
+        <selectionEntry type="unit" import="true" name="Guards Officer" hidden="false" id="9e7a-7b8b-6c58-3560" collective="false">
           <profiles>
             <profile name="Guards Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2977-ac09-0cca-1dac">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
             <profile name="Guards Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3b78-cd61-13f4-7181">
@@ -2938,7 +2959,7 @@
             <infoLink name="Designated Leader" id="e655-1eb7-6519-e929" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="6"/>
+            <cost name="Munitions" typeId="Points" value="12"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2961,7 +2982,7 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c759-cac2-f26e-17ad" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="3270-16d8-48b0-1ae5" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="3270-16d8-48b0-1ae5" type="selectionEntry" targetId="0522-b673-582a-ca69">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7926-6e6d-4978-d0db" includeChildSelections="false"/>
                   </constraints>
@@ -3061,7 +3082,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40ff-c9e6-ade5-88c6" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="84ca-8f80-5308-6f2d" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                        <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="84ca-8f80-5308-6f2d" type="selectionEntry" targetId="0522-b673-582a-ca69">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5316-2994-9e23-b697" includeChildSelections="false"/>
                           </constraints>
@@ -3271,7 +3292,7 @@
             </infoLink>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="8efc-aeef-487c-c8e2" type="selectionEntry" targetId="0522-b673-582a-ca69">
+            <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="8efc-aeef-487c-c8e2" type="selectionEntry" targetId="0522-b673-582a-ca69">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a91b-3307-d5be-1f7a-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a91b-3307-d5be-1f7a-max" includeChildSelections="false"/>
@@ -3390,6 +3411,11 @@
           <infoLinks>
             <infoLink name="Command Actions" id="b70e-a60f-4da1-be30" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
             <infoLink name="Designated Leader" id="4d1f-0198-9a30-8772" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Command Squad" id="a714-3f78-932c-344f" hidden="false" type="rule" targetId="7a39-d162-eaaa-f019">
+              <modifiers>
+                <modifier type="append" value="(Assault Engineer-Sapper Squad)" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="17"/>
@@ -3415,7 +3441,7 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6dc3-9ebe-0a67-8655" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="be56-46ae-36de-dec5" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="be56-46ae-36de-dec5" type="selectionEntry" targetId="0522-b673-582a-ca69">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a00-bf54-84f2-fad0" includeChildSelections="false"/>
                   </constraints>
@@ -3500,6 +3526,96 @@
             </entryLink>
           </entryLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Streltsy Sotnik" hidden="false" id="d64f-bb9d-977e-1e7a">
+          <entryLinks>
+            <entryLink import="true" name="Officer Seniority" hidden="false" id="f7e6-1e32-cd7c-093d" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="7af6-08bc-93f7-b107" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
+            <entryLink import="true" name="CKF Bardiche" hidden="false" id="1e9a-d9ee-dd29-8e55" type="selectionEntry" targetId="f355-47da-f4ee-5052">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c8f2-247c-287d-18f7" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4330-e755-4713-29e1" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Sidearm" id="8b9b-d69f-c00a-837d" hidden="false" defaultSelectionEntryId="efd6-ca86-f2ae-f7fd">
+              <entryLinks>
+                <entryLink import="true" name="FT-33 Plasma Pistol" hidden="false" id="bea1-4e57-45e2-2dd4" type="selectionEntry" targetId="0a66-62b1-69b2-b273">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="705f-1771-376c-34ed" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Nagant M1895 Revolver" hidden="false" id="56cd-8eab-4796-b444" type="selectionEntry" targetId="d779-79c6-140c-22bd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41ac-8c4f-89f1-b468" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="MT-38 Shotgun Revolver" hidden="false" id="23cb-0fa6-619b-ea8b" type="selectionEntry" targetId="0a03-0c2e-123d-7fc6">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3c3-c463-5bd3-61e8" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="6d2e-39ae-6532-d849" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a8c-750f-01d1-ddba" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9cd-d981-fb93-8491" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a9f-36e9-8268-1bba" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Weapon Options" id="f465-3115-163c-fb40" hidden="false" defaultSelectionEntryId="19f6-751c-9d5a-53a4">
+              <entryLinks>
+                <entryLink import="true" name="PTRS-37 Anti-tank Rifle" hidden="false" id="a67a-a6a4-15ac-e309" type="selectionEntry" targetId="8356-26cc-634f-dbfd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad80-8bc7-11bc-7b73" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="1.3tsk Beam Rifle" hidden="false" id="dc62-7991-dae2-d7b7" type="selectionEntry" targetId="db2c-195d-c7cb-2dc8">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d7a-7293-5af6-38a7" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Chernayazvezda TPV-X Heavy Plasma Rifle" hidden="false" id="10c4-bc04-6e56-cbca" type="selectionEntry" targetId="bae6-c43b-b200-ac83">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f97-5b2a-7498-84c8" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8ed-8661-34b5-6cff" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e49-bcf7-ba99-aa22" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <infoLinks>
+            <infoLink name="Command Actions" id="895b-7388-b705-5a38" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
+            <infoLink name="Designated Leader" id="854e-6a44-3d98-2f46" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Command Squad" id="4592-6bc7-8da5-beb8" hidden="false" type="rule" targetId="7a39-d162-eaaa-f019">
+              <modifiers>
+                <modifier type="append" value="(Streltsy Tank Hunter Squad)" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <profiles>
+            <profile name="Streltsy Sotnik" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a5f-026c-2679-d16b">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="19"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Infantry" id="f8f9-cd16-8f9f-679a" hidden="false">
@@ -3582,7 +3698,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f881-c020-36da-38d1" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="8aa1-8fd5-2f96-d06e" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                        <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="8aa1-8fd5-2f96-d06e" type="selectionEntry" targetId="0522-b673-582a-ca69">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="617f-49b7-f048-415c" includeChildSelections="false"/>
                           </constraints>
@@ -4065,7 +4181,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d2b-00b7-89b4-f7e8" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="a717-cd97-5cb4-a3fb" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                        <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="a717-cd97-5cb4-a3fb" type="selectionEntry" targetId="0522-b673-582a-ca69">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8860-1600-f632-2b35" includeChildSelections="false"/>
                           </constraints>
@@ -4524,6 +4640,7 @@
           <infoLinks>
             <infoLink name="Recon Troop Actions" id="cef3-548f-f946-fb17" hidden="false" type="profile" targetId="8759-1f21-a918-3ebe"/>
             <infoLink name="On Assignment" id="da5e-7f47-a59e-ed1b" hidden="false" type="rule" targetId="e2b8-2d66-35a1-c0c3"/>
+            <infoLink name="Prototype" id="f9b3-a840-16a1-5d91" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="246e-f914-caca-0c96" hidden="false">
@@ -4540,7 +4657,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6eb3-ea50-877e-e5c0-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="acee-9d09-1300-3e4c" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                    <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="acee-9d09-1300-3e4c" type="selectionEntry" targetId="0522-b673-582a-ca69">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e24-4a7f-1eaf-1f95-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e24-4a7f-1eaf-1f95-max" includeChildSelections="false"/>
@@ -4572,7 +4689,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="901e-f4dc-eff5-0d4d-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="fb61-de24-9fa0-4d5a" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                    <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="fb61-de24-9fa0-4d5a" type="selectionEntry" targetId="0522-b673-582a-ca69">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="79ed-663f-dd3b-2c88-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ed-663f-dd3b-2c88-max" includeChildSelections="false"/>
@@ -4657,6 +4774,7 @@
               </modifiers>
             </infoLink>
             <infoLink name="Cook Off" id="05e9-7373-789e-472e" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
+            <infoLink name="Prototype" id="1eba-db59-52de-a6a8" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Pintle Mount" hidden="false" id="06ed-0e04-86a7-018e">
@@ -4708,7 +4826,7 @@
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapon Option" id="5808-54de-7e80-7f0d" hidden="false" defaultSelectionEntryId="0cbc-80ad-f6fa-70fd">
                   <entryLinks>
-                    <entryLink import="true" name="3.3dlv Beam Cannon" hidden="false" id="756a-f5a1-56c2-7cfa" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
+                    <entryLink import="true" name="3.3tsk Beam Cannon" hidden="false" id="756a-f5a1-56c2-7cfa" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87c2-8c28-49b9-b684" includeChildSelections="false"/>
                       </constraints>
@@ -4850,6 +4968,7 @@
           <infoLinks>
             <infoLink name="Recon Vehicle Actions" id="ac59-72ea-3115-0d0c" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
             <infoLink name="Intelligence" id="ab17-d8ff-ea04-8be6" hidden="false" type="rule" targetId="dc7a-f7c9-a54a-9cbc"/>
+            <infoLink name="Prototype" id="3482-32b2-0a1f-b755" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Turret" hidden="false" id="341d-d39d-4533-442d">
@@ -4874,7 +4993,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a1b-656f-e1d4-7184" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="2.1dlv Beam Cannon" hidden="false" id="3c25-fccb-b4ac-c289" type="selectionEntry" targetId="13ee-564c-8497-d049">
+                    <entryLink import="true" name="2.1tsk Beam Cannon" hidden="false" id="3c25-fccb-b4ac-c289" type="selectionEntry" targetId="13ee-564c-8497-d049">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce22-aea6-f6a8-28e4" includeChildSelections="false"/>
                       </constraints>
@@ -4984,6 +5103,7 @@
                 <modifier type="append" value="1" field="name"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Prototype" id="a16a-8e77-26f3-7bf1" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="BS-41 &quot;Ul. Ilya&quot; Light Recon Walker" hidden="false" id="14d2-621e-3c23-3af4" collective="false">
@@ -5010,7 +5130,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2099-13a8-1556-06ff" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="2.1dlv Beam Cannon" hidden="false" id="de30-ec69-8aa7-7bf0" type="selectionEntry" targetId="13ee-564c-8497-d049">
+                        <entryLink import="true" name="2.1tsk Beam Cannon" hidden="false" id="de30-ec69-8aa7-7bf0" type="selectionEntry" targetId="13ee-564c-8497-d049">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35d2-c10b-b2d6-c33a" includeChildSelections="false"/>
                           </constraints>
@@ -5257,6 +5377,7 @@
             <infoLink name="Support Troop Actions" id="a0f6-428a-80d6-99d2" hidden="false" type="profile" targetId="7959-03e6-fdc4-3adf"/>
             <infoLink name="Elite Infantry" id="7030-d8cf-e733-2d3a" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
             <infoLink name="Overwatch" id="849c-d632-7330-1201" hidden="false" type="rule" targetId="4693-38cf-194e-db7d"/>
+            <infoLink name="Prototype" id="5e12-f7a2-2cd0-2ab2" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Troops Upgrades" hidden="false" id="503d-e65e-a2c4-319e" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
@@ -5500,7 +5621,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c81d-faf0-fd09-59ef" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="426d-4def-02d4-d74b" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                        <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="426d-4def-02d4-d74b" type="selectionEntry" targetId="0522-b673-582a-ca69">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff6d-882a-724e-7db0" includeChildSelections="false"/>
                           </constraints>
@@ -5707,6 +5828,7 @@
             <infoLink name="Battlefield Preparation" id="d0e6-1689-b5bf-a7b9" hidden="false" type="rule" targetId="ea06-55d8-62e2-4f31"/>
             <infoLink name="Forward Positions" id="73f1-8114-1d04-3fff" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
             <infoLink name="Logistics" id="62eb-e6bb-af74-1988" hidden="false" type="rule" targetId="c1ce-d022-923f-3147"/>
+            <infoLink name="Prototype" id="e778-754c-9d86-3ced" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <profiles>
             <profile name="Assault Engineer-Sapper Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ce2e-2a38-cdd8-bffd">
@@ -5778,6 +5900,7 @@
           <infoLinks>
             <infoLink name="Support Engineer Vehicle Actions" id="922b-c476-17f1-1e08" hidden="false" type="profile" targetId="ba32-3e2e-765c-654b"/>
             <infoLink name="Catastrophic Detonation" id="91a8-a948-7cf4-deed" hidden="false" type="rule" targetId="ed65-6e21-b743-aab2"/>
+            <infoLink name="Prototype" id="7e97-6f5b-8048-022e" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Hull Gun" hidden="false" id="fcf8-0ce7-b554-f40a">
@@ -5891,6 +6014,7 @@
                 <modifier type="append" value="12" field="name"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Prototype" id="f3ce-f8cf-cad6-a7d7" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="40"/>
@@ -5921,6 +6045,7 @@
               </modifiers>
             </infoLink>
             <infoLink name="Protector" id="4bf4-f5bf-383d-6c83" hidden="false" type="rule" targetId="0791-8292-e0cd-26c1"/>
+            <infoLink name="Prototype" id="2035-f7ce-b8bd-e439" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="d4f9-1f19-530a-7210" hidden="false">
@@ -6163,6 +6288,7 @@
               </modifiers>
             </infoLink>
             <infoLink name="Safe Bailout" id="8795-4501-c9bf-e3f6" hidden="false" type="rule" targetId="40dd-ac7-61eb-eaf6"/>
+            <infoLink name="Prototype" id="e05b-d636-cfcd-2a00" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Hull Gun" hidden="false" id="4f3f-c469-3723-d4a1">
@@ -6223,7 +6349,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6e8-4ce1-f19c-6502" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="2.1dlv Beam Cannon" hidden="false" id="e212-7a35-4ca2-9018" type="selectionEntry" targetId="13ee-564c-8497-d049">
+                    <entryLink import="true" name="2.1tsk Beam Cannon" hidden="false" id="e212-7a35-4ca2-9018" type="selectionEntry" targetId="13ee-564c-8497-d049">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b432-0965-34d5-17f6" includeChildSelections="false"/>
                       </constraints>
@@ -6312,6 +6438,7 @@
             <infoLink name="Mechanized Vehicle Actions" id="6359-55b3-01df-d445" hidden="false" type="profile" targetId="dd9a-09a9-4488-0f28"/>
             <infoLink name="Armored Recovery Vehicle" id="1b68-fa72-b029-292c" hidden="false" type="rule" targetId="3731-64c9-4653-d0bb"/>
             <infoLink name="Hitch" id="d6f8-da0d-29ee-54e2" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
+            <infoLink name="Prototype" id="1dae-2516-d6b2-6977" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Hull Gun" hidden="false" id="aa68-6736-14c7-b674">
@@ -6462,7 +6589,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf87-4a89-8e29-669d" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="0.5dlv Beam Pistol" hidden="false" id="76db-ef96-d1d2-75b0" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                        <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="76db-ef96-d1d2-75b0" type="selectionEntry" targetId="0522-b673-582a-ca69">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fef-881b-5892-e058" includeChildSelections="false"/>
                           </constraints>
@@ -6836,6 +6963,7 @@
           <infoLinks>
             <infoLink name="Mechanized Troop Actions" id="2467-4fe4-6f92-c2ff" hidden="false" type="profile" targetId="a01c-c851-0047-239a"/>
             <infoLink name="Elite Infantry" id="237e-baf3-4bed-50d1" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
+            <infoLink name="Prototype" id="22c6-4526-3cc4-1c2b" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Lend-Lease 20M Ambulance" hidden="false" id="539d-f23d-cf0b-60e1" collective="false">
@@ -7629,7 +7757,7 @@
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a59b-88c9-0b99-d7bc" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
-                            <entryLink import="true" name="3.3dlv Beam Cannon" hidden="false" id="5fb4-e62b-607e-0e8a" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
+                            <entryLink import="true" name="3.3tsk Beam Cannon" hidden="false" id="5fb4-e62b-607e-0e8a" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
                               <constraints>
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87e8-031e-b6a7-3a9e" includeChildSelections="false"/>
                               </constraints>
@@ -7795,7 +7923,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b40b-2591-2fc5-b01c" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="3.3dlv Beam Cannon" hidden="false" id="34f8-e16b-0cf2-deb1" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
+                        <entryLink import="true" name="3.3tsk Beam Cannon" hidden="false" id="34f8-e16b-0cf2-deb1" type="selectionEntry" targetId="f17e-085f-cd9f-654f">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa48-2638-adcf-c226" includeChildSelections="false"/>
                           </constraints>
@@ -7943,6 +8071,9 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Prototype" id="3914-5b8c-dc5d-a1ba" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
