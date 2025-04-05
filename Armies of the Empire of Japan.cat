@@ -236,7 +236,7 @@
         <infoLink name="Difficult to Use" id="5774-6e6c-257b-3576" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="30"/>
+        <cost name="Munitions" typeId="Points" value="35"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -298,7 +298,7 @@
         <infoLink name="Difficult to Use" id="6b32-6237-a8df-43df" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="70"/>
+        <cost name="Munitions" typeId="Points" value="87"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -392,6 +392,11 @@
             <modifier type="append" value="3" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Bombard" id="f515-4353-be8e-db57" hidden="false" type="rule" targetId="0091-17ea-a67a-1ae9">
+          <modifiers>
+            <modifier type="append" value="1" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="128"/>
@@ -407,7 +412,7 @@
         <infoLink name="Spray" id="1db4-86c6-f3fd-e335" hidden="false" type="rule" targetId="b609-fbd4-d0a3-6927"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="3"/>
+        <cost name="Munitions" typeId="Points" value="7"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -490,21 +495,21 @@
     <selectionEntry type="upgrade" import="true" name="Inter-service Rivalry (Army)" hidden="false" id="0119-cccb-3175-b7d5">
       <rules>
         <rule name="Land-Based Supply lines" id="e6f1-4aca-5a59-8623" hidden="false">
-          <description>As long as this commander&apos;s platoon includes no units with the IJN keyword, gain logistics.</description>
+          <description>As long as this Commander&apos;s Platoon includes no Units with the IJN keyword, gain Supply Gathering</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink name="Logistics" id="ba66-ba0d-20c7-98b5" hidden="false" type="rule" targetId="c1ce-d022-923f-3147"/>
+        <infoLink name="Supply Gathering" id="ba66-ba0d-20c7-98b5" hidden="false" type="rule" targetId="5b95-9cb8-8f48-e3ed"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Inter-service Rivalry (Navy)" hidden="false" id="37c3-c285-9532-0f42">
       <rules>
         <rule name="Sea-plane Reconnaissance" id="40a6-e734-cfdd-5f13" hidden="false">
-          <description>As long as this commander&apos;s platoon includes no units with the IJA keyword, gain Intel Gathering.</description>
+          <description>As long as this Commander&apos;s Platoon includes no Units with the IJA keyword, gain Intel Gathering.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink name="Intelligence" id="142f-cba4-e68d-3901" hidden="false" type="rule" targetId="dc7a-f7c9-a54a-9cbc"/>
+        <infoLink name="Intel Gathering" id="142f-cba4-e68d-3901" hidden="false" type="rule" targetId="5845-b3b2-62ef-1d40"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Type 98 “Rekka” Energy Machine Gun" hidden="false" id="0067-5ab2-1dd9-0020" collective="true">
@@ -525,7 +530,7 @@
         <infoLink name="Point Blank" id="d20a-f820-bb8c-40a0" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Munitions" typeId="Points" value="3"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -537,6 +542,11 @@
         <infoLink name="Ordnance" id="f093-c430-62db-0ae4" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Bombard" id="efb1-a34b-74c0-3d50" hidden="false" type="rule" targetId="0091-17ea-a67a-1ae9">
+          <modifiers>
+            <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -584,7 +594,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sokusha 45 Pounder Naval Gun" hidden="false" id="18c7-50c5-4cf4-5bd5">
       <costs>
-        <cost name="Munitions" typeId="Points" value="182"/>
+        <cost name="Munitions" typeId="Points" value="206"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -617,7 +627,7 @@
         <infoLink name="Dual Wield" id="20e0-d4d9-f2bc-3d29" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="4"/>
+        <cost name="Munitions" typeId="Points" value="5"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -630,7 +640,7 @@
         <infoLink name="Shin-Gunto" id="17fc-1011-a70b-4780" hidden="false" type="profile" targetId="9b9b-8a0-eedf-d316"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="4"/>
+        <cost name="Munitions" typeId="Points" value="5"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -807,6 +817,11 @@
         <infoLink name="Ordnance" id="8679-3d00-0204-5c83" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="2" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Bombard" id="2e3f-1b74-e5ba-5e6c" hidden="false" type="rule" targetId="0091-17ea-a67a-1ae9">
+          <modifiers>
+            <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1001,7 +1016,7 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">38&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">10</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Critical Shot, Difficult to Use</characteristic>
@@ -1041,7 +1056,7 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">50&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">10</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">13</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
@@ -1123,7 +1138,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">8</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3, Bombard 2</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1233,7 +1248,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2, Bombard 1</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1271,7 +1286,7 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">48&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">7</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10+5</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, High Explosive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
@@ -1343,7 +1358,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2, Bombard 1</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1641,6 +1656,7 @@
         <categoryLink targetId="7da2-822e-291f-eccc" id="559d-3c65-2db0-9777" primary="false" name="Walker"/>
         <categoryLink targetId="8136-fed2-db8d-c7a0" id="e592-4f87-eee7-884f" primary="false" name="AUX Armor"/>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="6b71-ab33-a051-a5c6" primary="true" name="CORE Mechanized"/>
+        <categoryLink targetId="de0d-e12c-a964-4e46" id="905b-e489-2765-2094" primary="false" name="Vehicle"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
@@ -1974,7 +1990,7 @@
       <selectionEntries>
         <selectionEntry type="unit" import="true" name="IJM Type 87 Chi-Wo-Kai Battle Tank" hidden="false" id="d9d3-ea3a-dda-8be">
           <costs>
-            <cost name="Munitions" typeId="Points" value="92"/>
+            <cost name="Munitions" typeId="Points" value="123"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -1984,7 +2000,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">11</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">14</characteristic>
               </characteristics>
               <modifiers>
@@ -2014,7 +2030,7 @@
           </infoLinks>
           <rules>
             <rule name="Flanking" id="9fd9-5059-26de-c9a7" hidden="false">
-              <description>Attacks made by this unit get +1 to hit as long as there are no friendly infantry within 6&quot;.</description>
+              <description>If this Unit ends a Move Action more than 10&quot; away from its position at the start of the Round, it may take a Free Capture Action.</description>
             </rule>
           </rules>
           <selectionEntries>
@@ -2235,7 +2251,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 90 O-Ni Heavy Tank" hidden="false" id="6ba6-22ae-2c07-1df">
           <costs>
-            <cost name="Munitions" typeId="Points" value="264"/>
+            <cost name="Munitions" typeId="Points" value="293"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2245,8 +2261,8 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">22</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">16</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">26</characteristic>
               </characteristics>
               <modifiers>
                 <modifier type="increment" value="1" field="c7f9-7a63-2269-6a82" scope="parent">
@@ -2275,7 +2291,7 @@
           </infoLinks>
           <rules>
             <rule name="Infantry Assault Support" id="c4fb-700c-aa06-7b4" hidden="false">
-              <description>Infantry Units whose Leader is in direct contact with this Unit receive +1 for their Armor Score.</description>
+              <description>Infantry Units whose Leader is in Base contact with this Unit receive +1 Levels of Cover</description>
             </rule>
           </rules>
           <selectionEntries>
@@ -2457,7 +2473,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 89 Ke-Ni Gas Dispersion Vehicle" hidden="false" id="cc23-c797-f85e-f92f">
           <costs>
-            <cost name="Munitions" typeId="Points" value="56"/>
+            <cost name="Munitions" typeId="Points" value="72"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2467,7 +2483,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
               </characteristics>
               <modifiers>
@@ -2527,7 +2543,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJN Type 100 ShinHōtō Heike Self Propelled Gun" hidden="false" id="1309-39e7-78ed-f94e">
           <costs>
-            <cost name="Munitions" typeId="Points" value="151"/>
+            <cost name="Munitions" typeId="Points" value="150"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2536,7 +2552,7 @@
             <profile name="IJN Type 100 ShinHōtō Heike Self Propelled Gun" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="35de-b880-22fe-1ae3">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">18</characteristic>
               </characteristics>
@@ -2597,7 +2613,7 @@
           </selectionEntries>
           <rules>
             <rule name="Dug In Hull" id="5241-0595-c67a-8f35" hidden="false">
-              <description>If this unit has not activated it is considered to be in heavy cover. (Ignore the rule stating that vehicles cannot gain the benefit of cover)</description>
+              <description>If this Unit has not activated it is considered to be in Medium Cover. (Ignore the rule stating that Vehicles cannot gain the benefit of Cover)</description>
             </rule>
           </rules>
           <entryLinks>
@@ -2644,7 +2660,7 @@
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6/4</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
                     </profile>
@@ -2688,7 +2704,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="46"/>
+            <cost name="Munitions" typeId="Points" value="69"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2786,9 +2802,9 @@
             </profile>
             <profile name="Light Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="447b-904c-487f-3eec">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
             </profile>
@@ -2804,7 +2820,7 @@
             </infoLink>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="9"/>
+            <cost name="Munitions" typeId="Points" value="12"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2841,7 +2857,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
               </characteristics>
               <modifiers>
@@ -2893,7 +2909,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="42"/>
+            <cost name="Munitions" typeId="Points" value="49"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2958,9 +2974,9 @@
               <profiles>
                 <profile name="Light Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="61c5-f89b-587c-c0db">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                   </characteristics>
                 </profile>
@@ -2970,7 +2986,7 @@
                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="be8b-8e5a-6714-aa04-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="9"/>
+                <cost name="Munitions" typeId="Points" value="12"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2983,7 +2999,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 89 Ho-He Motorized Howitzer" hidden="false" id="4a44-ecf5-20e4-cf65">
           <costs>
-            <cost name="Munitions" typeId="Points" value="57"/>
+            <cost name="Munitions" typeId="Points" value="70"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -2993,7 +3009,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
               </characteristics>
               <modifiers>
@@ -3225,7 +3241,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
               <modifiers>
@@ -3253,9 +3269,10 @@
             <infoLink name="Transport Vehicle Actions" id="79e8-5a4c-5a30-4f10" hidden="false" targetId="d3bd-9092-41d2-8882" type="profile"/>
             <infoLink name="Rank has its Privileges" id="ba36-e1cd-eb26-e5cf" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
             <infoLink name="(CORE) Flex" id="04a7-ef8c-0473-e9fe" hidden="false" type="rule" targetId="05cc-45cd-4600-22d8"/>
+            <infoLink name="Low Profile" id="be68-20ea-d590-25b2" hidden="false" type="rule" targetId="06ae-c996-2397-250a"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="25"/>
+            <cost name="Munitions" typeId="Points" value="27"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -3321,6 +3338,11 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Command Car" id="0220-f501-8f06-62cd" hidden="false">
+              <description>When this Unit issues an Order, choose an unordered Unit within 8&quot; of that one, that Unit is also ordered.</description>
+            </rule>
+          </rules>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="IJM Shugo-Yoroi Warsuit Commander" hidden="false" id="ffb8-1c2d-2796-d72a">
           <entryLinks>
@@ -3712,7 +3734,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 89 Ke-Ni Armored Vehicle" hidden="false" id="7eef-e1cf-207a-f501">
           <costs>
-            <cost name="Munitions" typeId="Points" value="57"/>
+            <cost name="Munitions" typeId="Points" value="70"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -3722,7 +3744,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
               </characteristics>
               <modifiers>
@@ -3884,7 +3906,7 @@
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                   </characteristics>
                   <modifiers>
@@ -3902,7 +3924,7 @@
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="25"/>
+                <cost name="Munitions" typeId="Points" value="29"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3935,9 +3957,11 @@
             <infoLink name="Support Engineer Troop Actions" id="9936-c9f6-db99-f0b0" hidden="false" targetId="335b-34df-c974-9c3b" type="profile"/>
             <infoLink name="Forward Positions" id="091c-1f67-7cf2-edf7" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
             <infoLink name="Battlefield Preparation" id="dc0e-64e4-991d-fda8" hidden="false" type="rule" targetId="ea06-55d8-62e2-4f31"/>
+            <infoLink name="Elite Infantry" id="5cd0-a242-ffa5-f928" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
+            <infoLink name="Logistics" id="3cc4-5358-a960-d8ed" hidden="false" type="rule" targetId="c1ce-d022-923f-3147"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Squad Members" id="11a7-db1e-c8ba-8096" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
+            <selectionEntryGroup name="Squad Members" id="11a7-db1e-c8ba-8096" hidden="false" collective="false" import="true" defaultSelectionEntryId="12de-d454-2e50-175a">
               <constraints>
                 <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="9821-b8cd-4ebd-c6a5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="518c-1c98-6d7b-b6ca" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3999,7 +4023,7 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Breaching Engineer" hidden="false" id="12de-d454-2e50-175a" collective="false" defaultAmount="">
+                <selectionEntry type="model" import="true" name="Breaching Engineer" hidden="false" id="12de-d454-2e50-175a" collective="false">
                   <constraints>
                     <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="8059-c961-12dd-6609-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="8059-c961-12dd-6609-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4049,7 +4073,7 @@
                     </entryLink>
                   </entryLinks>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Breaching Engineer Specialist" hidden="false" id="24c6-038d-63d7-9c33" collective="false" defaultAmount="">
+                <selectionEntry type="model" import="true" name="Breaching Engineer Specialist" hidden="false" id="24c6-038d-63d7-9c33" collective="false">
                   <constraints>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7e24-579c-a147-319d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
@@ -4343,7 +4367,7 @@
             </profile>
             <profile name="Light Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8247-8b47-47b0-799b">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
@@ -4374,7 +4398,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="16"/>
+            <cost name="Munitions" typeId="Points" value="12"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4393,7 +4417,7 @@
           <profiles>
             <profile name="Light Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="012e-fb16-808b-1d12">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
@@ -4412,7 +4436,7 @@
             <infoLink name="Deployed Weapon" id="f2b4-a686-3e0e-d8d1" hidden="false" type="rule" targetId="49c6-4812-80b8-83cf"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="16"/>
+            <cost name="Munitions" typeId="Points" value="12"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4472,7 +4496,7 @@
               <profiles>
                 <profile name="Light Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="61c5-52d0-27db-358d">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
@@ -4484,7 +4508,7 @@
                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="4b17-3f6c-0f88-0495-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="16"/>
+                <cost name="Munitions" typeId="Points" value="12"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4559,7 +4583,7 @@
                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="9011-6c21-79c1-7e34-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="16"/>
+                <cost name="Munitions" typeId="Points" value="12"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4601,7 +4625,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">0&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
               </characteristics>
             </profile>
@@ -4614,7 +4638,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="Munitions" typeId="Points" value="26"/>
+            <cost name="Munitions" typeId="Points" value="39"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4630,7 +4654,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
               </characteristics>
               <modifiers>
@@ -4666,7 +4690,7 @@
             <infoLink name="Hitch" id="3eae-40d9-f7db-b21c" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="44"/>
+            <cost name="Munitions" typeId="Points" value="50"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4786,7 +4810,7 @@
           </selectionEntries>
           <rules>
             <rule name="Higuchi Sokudo" id="6af3-71fc-e820-b3f7" hidden="false">
-              <description>At the beginning of the Action Phase, before any other units are activated, each Unit who received an Order from Captain Higuchi Ryuusuke may immediately make a Free Move or Melee Attack Action.</description>
+              <description>When they activate, each Unit who received an Order from Captain Higuchi Ryuusuke may immediately make a Free Move Action. If Captain Higuchi Ryuusuke is your Field Commander, they may also make a Free Melee Attack Action.</description>
             </rule>
           </rules>
           <constraints>
@@ -4856,7 +4880,7 @@
           </profiles>
           <rules>
             <rule name="Command Gunbai" id="afa9-7784-3c4a-082e" hidden="false">
-              <description>IJA Colonel Kaeda Harunobu may issue up to four orders to any Allied Units within his line of sight. After issuing Orders, select one Unit ordered by IJA Colonel Kaeda Harunobu, that Unit activates before all other Units. When that Unit finishes its activation, if it was your turn to activate, you may activate another Unit.</description>
+              <description>During the Command Phase Colonel Kaeda Harunobu may issue an Order to up to four Allied Troop Units within his line of sight. Each Unit issued an Order in this way may immediately make a 3&quot; Move directly towards an Enemy Unit you select. If Colonel Kaeda Harunobu is your Field Commander, they may instead make a 6&quot; Move.</description>
             </rule>
           </rules>
           <selectionEntryGroups>
@@ -4930,7 +4954,7 @@
           </profiles>
           <rules>
             <rule name="Objective Acquired" id="d68c-a6c9-3225-6674" hidden="false">
-              <description>This Unit may not attach to any Allied Units. As an Action, this Unit may pick up an Uncontested Objective you control that it is in base-to-base contact with. While holding this Objective, it moves with this Unit as if it were a squad member in cohesion. This Unit may not take the Move Action while holding the Objective, but may take the Dash Action.</description>
+              <description>As an Action, Captain Kaeda Goemon may pick up an Uncontested Objective you control that it is in base-to-base contact with. While holding this Objective, the Objective moves with Captain Kaeda Goemon as if it were a squad member in cohesion. Captain Kaeda Goemon may not take the Move Action while holding the Objective, but may take the Dash Action. If Captain Kaeda Goemon is your Field Commander, Units with the IJN Keyword on the Objective he is holding count as double their HP for the purpose of holding or capturing Objectives.</description>
             </rule>
           </rules>
           <constraints>
@@ -4949,6 +4973,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e639-ee16-47d5-5a3e-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="df9a-26f3-2550-9a26" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="IJN Lieutenant Matsumaru Atoi" hidden="false" id="c8a1-c04c-7f08-4f81">
@@ -4981,7 +5006,7 @@
           </profiles>
           <rules>
             <rule name="Yukidanuki" id="7003-ccf5-4573-b6e9" hidden="false">
-              <description>While IJN Lieutenant Matsumaru Atoi&apos;s Model is on the battlefield, Engineer Units in your Army may Build Anti-Tank and Anti-Personnel Minefields for 1 fewer Supply Points.</description>
+              <description>While Lieutenant Matsumaru Atoi&apos;s Model is on the battlefield, Engineer Units in your Army may Build Anti-Tank and Anti-Personnel Minefields for 1 fewer Supply Points. If Lieutenant Matsumaru Atoi is your Field Commander, Engineer Units may Build Anti-Tank and Anti-Personnel Minefields up to 6&quot; away from themselves instead of 3&quot;.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4991,6 +5016,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ab8-c582-03d0-fe0b-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="d6cd-af43-c836-5797" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="C2 - Kaigun-Tai-i" hidden="false" id="f48b-2a3a-8d67-5782" collective="false">
@@ -5275,7 +5301,7 @@
           </costs>
           <rules>
             <rule name="Hōjutsu" id="c50c-79cf-d844-0c9b" hidden="false">
-              <description>After this Unit performs an Attack Action, it may perform a Free Dash Action.</description>
+              <description>If this Unit begins its Activation in Cover or Moves into Cover, it gains an Aim Token.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -5735,7 +5761,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
               </characteristics>
               <modifiers>
@@ -5756,7 +5782,7 @@
             <infoLink name="Mechanized Vehicle Actions" id="caca-aa6e-ecce-e2f6" hidden="false" type="profile" targetId="dd9a-09a9-4488-0f28"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="42"/>
+            <cost name="Munitions" typeId="Points" value="49"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -5840,7 +5866,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJN Type 100 Soki Heike AA Vehicle" hidden="false" id="464d-230f-df45-d644">
           <costs>
-            <cost name="Munitions" typeId="Points" value="151"/>
+            <cost name="Munitions" typeId="Points" value="178"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -5850,7 +5876,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">18</characteristic>
               </characteristics>
               <modifiers>
@@ -5954,7 +5980,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">18</characteristic>
               </characteristics>
               <modifiers>
@@ -5986,7 +6012,7 @@
             </infoLink>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="134"/>
+            <cost name="Munitions" typeId="Points" value="145"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -6262,7 +6288,7 @@
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                 <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
               </characteristics>
               <modifiers>
@@ -6283,7 +6309,7 @@
             <infoLink name="Mechanized Vehicle Actions" id="f960-6545-b861-7a0a" hidden="false" type="profile" targetId="dd9a-09a9-4488-0f28"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="42"/>
+            <cost name="Munitions" typeId="Points" value="49"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>

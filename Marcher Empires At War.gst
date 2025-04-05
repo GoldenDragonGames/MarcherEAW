@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.6.1" revision="2" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.7.0" revision="2" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -160,7 +160,6 @@
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Heroes" hidden="false" id="c1aa-f03e-0576-78a1" targetId="33a5-8b7e-49bb-c30d"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry name="Infantry Platoon" id="2250-4111-e2c2-bb10" hidden="false">
@@ -529,13 +528,13 @@
     </selectionEntry>
     <selectionEntry id="86bb-e1be-717a-6587" name="Armor Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntries>
-        <selectionEntry id="d8f0-8db4-353b-6d68" name="On the Prowl" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d8f0-8db4-353b-6d68" name="On the Way!" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7d9-c855-71a4-7e84-min" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7d9-c855-71a4-7e84-max" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="8ebf-05e8-fca1-8b94" name="On the Prowl" hidden="false" targetId="0d92-4ab7-f17c-0286" type="rule"/>
+            <infoLink id="8ebf-05e8-fca1-8b94" name="On the Way!" hidden="false" targetId="0d92-4ab7-f17c-0286" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -647,7 +646,7 @@
         <categoryLink id="607c-0d72-084a-867c" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1642-3b94-5a95-75ae" name="Combined Arms" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1642-3b94-5a95-75ae" name="Rolling Wall" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f9ac-703c-dafe-6545-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9ac-703c-dafe-6545-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -785,7 +784,7 @@
         <infoLink name="Critical Shot" id="4cc2-b695-a59f-cdd2" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Munitions" typeId="Points" value="20"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -997,7 +996,7 @@
       <description>This weapon may only be selected to fire x times per Unit per game.</description>
     </rule>
     <rule id="73c0-9282-d155-0b35" name="Transport" hidden="false">
-      <description>You may embark x infantry units in this transport.</description>
+      <description>You may Embark X Troops Units in this Transport.</description>
     </rule>
     <rule id="c1ce-d022-923f-3147" name="Logistics" hidden="false">
       <description>At the beginning of each Command phase gain a supply point (SP).</description>
@@ -1035,8 +1034,8 @@
     <rule id="56bd-18e3-04a1-3227" name="Steel Fortress" hidden="false">
       <description>All Units in the selected Platoon can perform the Capture Action as a Free Action.</description>
     </rule>
-    <rule id="0d92-4ab7-f17c-0286" name="On the Prowl" hidden="false">
-      <description>All Units in the selected Platoon reroll all Hit rolls against Units with the Vehicle keyword.</description>
+    <rule id="0d92-4ab7-f17c-0286" name="On the Way!" hidden="false">
+      <description>All Weapons equipped to Units in the selected Platoon lose Difficult to Use for this round.</description>
     </rule>
     <rule id="3897-33c2-b987-e81d" name="Coordinated Attack" hidden="false">
       <description>When you activate the selected Platoon’s Command Squad, you may also activate any other Units within 8” of it that also belong to this Platoon.</description>
@@ -1055,7 +1054,7 @@
 *Units can use this Free Action at the end or beginning of a Move Action</description>
     </rule>
     <rule id="bc6a-e3fc-4eb5-a422" name="Rolling Wall" hidden="false">
-      <description>All Troop Units in the selected Platoon increase their Armor Value by 2 if they are within 6” of a Vehicle Unit that is also in the Platoon.</description>
+      <description>All Troop Units in the selected Platoon increase their Armor Value by 2 if they are within 6” of a Vehicle Unit.</description>
     </rule>
     <rule id="9e55-f586-450d-8424" name="Rapid Fortification" hidden="false">
       <description>When a Unit in the platoon is selected to perform the Build action, Immediately gain 1 Supply Point.</description>
@@ -1066,8 +1065,8 @@
     <rule id="06f4-93c5-6f93-d4df" name="Flying" hidden="false">
       <description>This Unit ignores all terrain. This Unit may not receive the benefit of Cover. This Unit may move through other Units. This Unit may not be engaged by other Units unless they also have the Flying keyword. Weapons with less than 12&quot; of Range cannot target this unit for an attack. All ranged attacks that target this Unit receive -1 to hit.</description>
     </rule>
-    <rule id="6db2-42c0-b23d-3b14" name="Shielded" hidden="false">
-      <description>Ignore the first X damage this Unit takes per round. If a Unit with this Special Rule takes the move action more than once in an activation, Shielded turns off until the end of the round. The Shielded ability cannot prevent damage from weapons with the Flamethrower, Gas, or Melee keyword or from the Burning Condition.</description>
+    <rule id="6db2-42c0-b23d-3b14" name="Shield Generator" hidden="false">
+      <description>Once per round, as a Reaction, this Unit may Activate its Shield Generator. This Reaction only costs one Action. If it is activated, the next time it is Attacked the Attacker must first roll an unmodified 4+ Shield Check. Shield Checks are performed as if they were Evasion Checks. Attacks from Weapons with the Flames, Gas, or Melee Keywords do not incur Shield Checks.</description>
     </rule>
     <rule id="6f53-dabe-1243-14cf" name="Close In" hidden="false">
       <description>When making an Attack with this weapon, Units targeted by this attack do not receive the benefit of cover.</description>
@@ -1097,10 +1096,10 @@
       <description>Instead of deploying this unit at the start of the game you may declare that this unit is Burrowing. A burrowing unit may activate only after all non-burrowing in your army have activated this turn. The first time a burrowing unit activates, you may deploy it no closer than 8” from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
     </rule>
     <rule name="Not My Job" id="824b-bf81-ea20-17d4" hidden="false">
-      <description>This Unit may not control Objectives.</description>
+      <description>This Unit may not take the Capture Action.</description>
     </rule>
     <rule name="Aerial Deployment" id="a61e-7e07-d7da-e915" hidden="false">
-      <description>Instead of deploying this unit at the start of the game, you may declare that this model is using aerial deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
+      <description>Instead of deploying this Unit at the start of the game, you may declare that this model is using Aerial Deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
     </rule>
     <rule name="Light on their Feet" id="f708-1439-cbbe-6850" hidden="false">
       <description>This Unit may take the Fallback Reaction while losing only a single Action during its following Activation.</description>
@@ -1109,7 +1108,7 @@
       <description>When this Unit destroys the Leader Model of an Enemy Command Unit, gain 1 Intel point.</description>
     </rule>
     <rule name="Big Game Hunter" id="22ef-ed51-bdad-4ad4" hidden="false">
-      <description>Attacks from this Unit reroll hits against Enemy Units with the vehicle keyword.</description>
+      <description>Attacks from this Unit reroll failed Hits against Enemy Units with the Vehicle Keyword.</description>
     </rule>
     <rule name="Dangerous Bailout" id="544-9133-e670-6e0c" hidden="false">
       <description>If this model is destroyed while transporting units, roll 1D10 for each model it was transporting. For each roll of 5 or less, destroy one model before placing the embarked unit within 3” of the destroyed transport”</description>
@@ -1124,13 +1123,13 @@
       <description>If this Unit begins its activation in contact with terrain it gains an Aim Token.</description>
     </rule>
     <rule name="Forward Positions" id="239f-191a-232-4894" hidden="false">
-      <description>This unit may be deployed outside of your deployment zone as long as it is more than 8” away from the enemy deployment zone or any enemy unit.</description>
+      <description>This Unit may be Deployed outside of your Deployment Zone as long as it is more than 8” away from the Enemy Deployment Zone or any Enemy Unit.</description>
     </rule>
     <rule name="Patch-Up" id="5c34-f6f8-aee6-439c" hidden="false">
       <description>As an action, select a friendly Troop Unit within 3&quot; (including this unit). That Unit either restores all hitpoints lost by one of its models or revives a destroyed model, returning it to the Unit with 1 hitpoint remaining.</description>
     </rule>
     <rule name="Elite Infantry" id="12fb-381c-5514-6d51" hidden="false">
-      <description>This unit only loses one action per two suppression tokens.</description>
+      <description>This Unit only loses one Action per two Suppression Tokens.</description>
     </rule>
     <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
       <description>When this Unit is deployed, it may immediately take the Build or Destroy Action once.</description>
@@ -1282,7 +1281,7 @@ gain cover for being within this terrain feature
 Units.</description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
-      <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit that is also in the Platoon.</description>
+      <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit.</description>
     </rule>
     <rule name="Flak Shells" id="57bd-6e01-9873-bd79" hidden="false">
       <description>Attacks from this Weapon against Units with the Flying Keyword pass Hit Checks on 5s or greater, regardless of the target&apos;s Evasion.</description>
@@ -1333,12 +1332,10 @@ Under Fire: Units with this Condition may not take the Move Action. (They may st
       <description>During Deployment, as you declare units in Transports and En Route, the individual Models in this Unit may separate, with each attaching to a different non-Battlesuit Troop Unit within this Platoon. When this happens they become part of those other Units, and this Unit ceases to exist. When Attacks are made against that Unit, you may select this Model as the recipient of that Attack and use its Evasion and Armor, if you do, damage must be applied to this Model first. This ability can only be used if there are equal to or more Troop Units in this platoon than models in this Unit.</description>
     </rule>
     <rule name="Ordnance" id="11d9-c53a-4538-6b97" hidden="false">
-      <description>During the Command Phase place one Blast token anywhere on the battlefield per weapon, in the range of this weapons, regardless of Line Of Sight. Blast tokens used by this Unit have a range of X” measured from the edge of the 25 mm Blast token, where X is its Ordnance X value. Each model in a Unit with Ordnance X will place its own token. When the Unit is selected to use the Attack Action it can select any Blast token that matches its designated token’s Blast value; each model in the unit must select a different Blast token and make its own
-separate attack. When a blast token is placed by this unit, any Troop Units within the token radius immediately receive one Suppression token. When attacking a multi-model unit with this weapon, excess damage spills over to other models in that unit, in addition, Units targeted with this attack do not receive the benefit of Cover. When an attack is made using a Blast Token, you must take an attack action against all units within range of that token regardless of if the units are friendly. Remove the token after resolving the attack.</description>
+      <description>During the Command Phase, Units with the Ordnance keyword will place one Blast X tokens anywhere on the battlefield per weapon, in the range of their weapons, regardless of Line Of Sight. Blast tokens used by this Unit have a range of X” measured from the edge of the 25 mm Blast token, where X is its Ordinace X value. Each model in a Unit with Ordnance X will place its own token. When the Unit is selected to use the Attack Action it can select any Blast token that matches its designated token’s Blast value; each model in the unit must select a different Blast token and make its own separate attack. When a blast token is placed by this unit, any Troop Units within the token radius immediately receive one Suppression token. When attacking a multi-model unit with this weapon, excess damage spills over to other models in that unit. When an attack is made using a Blast Token, you must take an attack action against all units within range of that token regardless of if the units are friendly. Remove the token after resolving the attack.</description>
     </rule>
     <rule name="Dial In" id="1cc7-7e82-f9f9-df65" hidden="false">
-      <description>This Unit begins the game with a Dial In Counter set to X. Each time a Unit activates, select one Unit in your army, tick down one counter. If that unit
-performs 3 or more actions or uses a difficult action, tick down an additional counter. When this counter reaches 0, this Unit loses Cumbersome.
+      <description>This Unit begins the game with a Dial In Counter set to X. When this Counter reaches 0, this Unit loses Cumbersome. Each time a Unit activates, select one Unit with Dial In in your army, tick down one Counter. If a Unit performs 3 or more Actions or uses a Difficult Action, tick this Counter down an additional time. 
 
 
 *This effect is not cumulative, regardless of how many Units with Dial In
@@ -1357,7 +1354,7 @@ are in your army only one counter is ticked down at a time.</description>
       <description>This Unit does not activate as normal and may not perform actions. It may be detached from a Unit towing it on that Unit&apos;s turn as a free action.</description>
     </rule>
     <rule name="On Assignment" id="e2b8-2d66-35a1-c0c3" hidden="false">
-      <description>This Unit always counts as having been Ordered.</description>
+      <description>This Unit has a base of three Actions.</description>
     </rule>
     <rule name="Bulwark" id="4946-e1a2-4529-60dc" hidden="false">
       <description>Attacks made against this Unit lower their damage profile by X to a minimum of 1.</description>
@@ -1403,6 +1400,12 @@ are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Hippocratic Oath" id="14f0-63cf-f0f4-79b4" hidden="false">
       <description>This Unit may not take the Attack Action. This Unit may not Move into Engagement with another Unit.</description>
+    </rule>
+    <rule name="Bombard" id="0091-17ea-a67a-1ae9" hidden="false">
+      <description>Whenever a Unit makes an Attack with this Weapon, after the Attack has been resolved, you may apply a Bombard Token to all Terrain Features within the zone of this Weapon&apos;s Blast Token. Tokens may only be applied to Terrain Features with a Cover Score of X or less. For each Bombard Token a Terrain Feature has, its Cover Score is reduced by one. If a Terrain Feature&apos;s Cover Score is lowered to 0, it is removed from the Battlefield.</description>
+    </rule>
+    <rule name="Concussive" id="2535-84fb-dcc0-f3ac" hidden="false">
+      <description>When making an Attack with this Weapon, you may choose to roll a Concussion Check instead of an Evasion Check. If you do, roll XD5 for each copy of this Weapon in the Attack Pool. If the sum of all Concussion Checks in the Attack Pool is equal to or greater than the current HP of the Target of the Attack, apply a Concussed Token. When that Unit next Activates, it loses one Action for each Concussed Token applied to it, then discards the Token. </description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1502,7 +1505,7 @@ are in your army only one counter is ticked down at a time.</description>
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">4&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">8</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">6</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Grenade</characteristic>
