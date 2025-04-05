@@ -1369,7 +1369,7 @@ are in your army only one counter is ticked down at a time.</description>
       <description>As a Standard Action, gain a Supply Point (SP)</description>
     </rule>
     <rule name="Intel Gathering" id="5845-b3b2-62ef-1d40" hidden="false">
-      <description>As a Standard Action, gain a Supply Point (SP)</description>
+      <description>As a Standard Action, gain an Intel Point (IP)</description>
     </rule>
     <rule name="Low Profile" id="06ae-c996-2397-250a" hidden="false">
       <description>This Unit may only be selected as the target of an Attack if it is the closest Enemy Unit to the Attacker.</description>
