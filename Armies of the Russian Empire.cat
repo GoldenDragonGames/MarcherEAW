@@ -172,6 +172,7 @@
         <infoLink name="Mosin-Nagant Energy Rifle (Scoped)" id="a024-6dbf-e859-d299" hidden="false" type="profile" targetId="b94c-9d34-3ca5-a7f3"/>
         <infoLink name="Critical Shot" id="f027-63b6-5b50-36a5" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
         <infoLink name="Sniper" id="ff80-6283-0b67-6b52" hidden="false" type="rule" targetId="3a32-9522-280e-50ce"/>
+        <infoLink name="Headshot" id="abfa-f9ff-7ee5-4519" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="9"/>
@@ -407,6 +408,7 @@
         <infoLink name="PTRS-37 Anti-tank Rifle (Scoped)" id="8673-c251-2a31-30f2" hidden="false" type="profile" targetId="91e2-fade-3646-a684"/>
         <infoLink name="Critical Shot" id="00f8-14a1-f0a7-a2d9" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
         <infoLink name="Sniper" id="c416-ba0b-083a-2b24" hidden="false" type="rule" targetId="3a32-9522-280e-50ce"/>
+        <infoLink name="Headshot" id="d6e2-1f18-683f-2adc" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="16"/>
@@ -1092,7 +1094,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Sniper, Critical Shot</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Sniper, Critical Shot, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Energy</characteristic>
       </characteristics>
     </profile>
@@ -1232,7 +1234,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Sniper, Critical Shot</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Sniper, Critical Shot, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Heavy, Ranged</characteristic>
       </characteristics>
     </profile>
@@ -2582,8 +2584,8 @@
                   <entryLinks>
                     <entryLink import="true" name="DP-28 Light Machine Gun" hidden="false" id="243e-84a7-c830-95d1" type="selectionEntry" targetId="0c5b-ce5c-b57f-78d4">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d894-8707-ddb2-b563-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d894-8707-ddb2-b563-max" includeChildSelections="false"/>
+                        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d894-8707-ddb2-b563-min" includeChildSelections="false"/>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d894-8707-ddb2-b563-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -3758,11 +3760,6 @@
             <infoLink name="(CORE) Flex" id="05ea-ebc4-0290-f0a4" hidden="false" type="rule" targetId="05cc-45cd-4600-22d8"/>
             <infoLink name="Low Profile" id="5ecb-ba10-7fb8-a46d" hidden="false" type="rule" targetId="06ae-c996-2397-250a"/>
             <infoLink name="Rank has its Privileges" id="ed52-8402-e1d4-424b" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
-            <infoLink name="Novaya Zemlya Cloud Engine" id="9642-9642-331e-7b4d" hidden="false" type="rule" targetId="ffea-d5ff-f989-1a15">
-              <modifiers>
-                <modifier type="append" value="12" field="name"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Machine Gun Mount" hidden="false" id="c427-7054-0f24-b4df">
@@ -3778,6 +3775,24 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2960-4793-6e0f-dbc1" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fa9-7699-1a69-05b9" includeChildSelections="false"/>
               </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cloud Engine" hidden="false" id="9a14-f038-236a-6e3f">
+              <infoLinks>
+                <infoLink name="Novaya Zemlya Cloud Engine" id="9642-9642-331e-7b4d" hidden="false" type="rule" targetId="ffea-d5ff-f989-1a15">
+                  <modifiers>
+                    <modifier type="append" value="12" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="342f-fd1d-6bfa-79e6" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="24"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <profiles>

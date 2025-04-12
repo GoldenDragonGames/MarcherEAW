@@ -386,6 +386,7 @@
                 <condition type="instanceOf" value="1" field="selections" scope="force" childId="94df-db09-3266-46a5" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1291,6 +1292,7 @@
         <infoLink name="Sniper" id="0f1f-96cf-dce6-3f31" hidden="false" targetId="3a32-9522-280e-50ce" type="rule"/>
         <infoLink name="Adjustable Sights" id="260d-d816-91a5-a1eb" hidden="false" targetId="4565-e3f5-c290-9d99" type="rule"/>
         <infoLink name="Critical Shot" id="0e52-0e77-362f-d40d" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
+        <infoLink name="Headshot" id="f80e-1a79-d9ae-74e9" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="20"/>
@@ -1462,13 +1464,13 @@
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="20"/>
+        <cost name="Munitions" typeId="Points" value="13"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0c4-ac41-3c68-62c3" includeChildSelections="false"/>
+        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c0c4-ac41-3c68-62c3" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Papk. 34 Light Plasma Cannon" hidden="false" id="0f3d-425a-8831-e986" collective="true">
@@ -1514,6 +1516,7 @@
         <infoLink name="Sniper" id="921c-efee-a4b6-1ab9" hidden="false" targetId="3a32-9522-280e-50ce" type="rule"/>
         <infoLink name="Adjustable Sights" id="4df4-396b-4a5e-c1fa" hidden="false" targetId="4565-e3f5-c290-9d99" type="rule"/>
         <infoLink name="Critical Shot" id="da83-00ce-a044-49cf" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
+        <infoLink name="Headshot" id="7452-25a2-812d-a8b4" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="60"/>
@@ -1539,6 +1542,7 @@
         <infoLink name="Sniper" id="66d4-ba55-bac2-b16d" hidden="false" targetId="3a32-9522-280e-50ce" type="rule"/>
         <infoLink name="Adjustable Sights" id="4325-6323-d81c-8734" hidden="false" targetId="4565-e3f5-c290-9d99" type="rule"/>
         <infoLink name="Critical Shot" id="a999-c458-2299-3ed5" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
+        <infoLink name="Headshot" id="8e6a-c197-4602-e6bf" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="48"/>
@@ -1820,7 +1824,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">6</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Sniper Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1970,7 +1974,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Sniper Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2020,7 +2024,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Sniper Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -6918,7 +6922,7 @@
           </costs>
           <rules>
             <rule name="The Kaiser&apos;s Bidding" id="a3ba-7973-9faa-886f" hidden="false">
-              <description>At the end of the first Setup Phase, select one Enemy Command or Hero Unit and designate them as an Enemy of the State. When a designated Unit is eliminated by Franz Von Trotta&apos;s Unit, you gain one Victory Point (VP).  If Franz Von Trotta is your Field Commander, when an Enemy of the State is Eliminated, select a new Unit to be designated.</description>
+              <description>At the end of the first Setup Phase, select one Enemy Command or Hero Model and designate them as an Enemy of the State. When a designated Model is eliminated by Franz Von Trotta&apos;s Unit, you gain one Victory Point (VP).  If Franz Von Trotta is your Field Commander, when an Enemy of the State is Eliminated, select a new Model to be designated.</description>
             </rule>
             <rule name="Pet Pseudodrachen" id="ae10-a999-c0c4-e875" hidden="false">
               <description>At the end of Franz Von Trotta&apos;s activation, his pet Pseudodrachen Stefan applies one Suppression to one Enemy Unit within 20&quot;.</description>
@@ -7888,6 +7892,7 @@
               </modifiers>
             </infoLink>
             <infoLink name="Safe Bailout" id="4879-8377-574a-ab51" hidden="false" type="rule" targetId="40dd-ac7-61eb-eaf6"/>
+            <infoLink name="Hitch" id="d501-94be-e8f4-ca40" hidden="false" type="rule" targetId="320a-d3d0-cf35-7d83"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Bow Gun" id="7a02-e3de-9db0-61a4" hidden="false" collective="false" import="true" defaultSelectionEntryId="610d-6d2c-deee-9db2">

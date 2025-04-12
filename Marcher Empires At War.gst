@@ -950,6 +950,9 @@
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Low Profile" id="cfe0-8d97-5855-8067" hidden="false" type="rule" targetId="06ae-c996-2397-250a"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -1066,7 +1069,7 @@
       <description>This Unit ignores all terrain. This Unit may not receive the benefit of Cover. This Unit may move through other Units. This Unit may not be engaged by other Units unless they also have the Flying keyword. Weapons with less than 12&quot; of Range cannot target this unit for an attack. All ranged attacks that target this Unit receive -1 to hit.</description>
     </rule>
     <rule id="6db2-42c0-b23d-3b14" name="Shield Generator" hidden="false">
-      <description>Once per round, as a Reaction, this Unit may Activate its Shield Generator. This Reaction only costs one Action. If it is activated, the next time it is Attacked the Attacker must first roll an unmodified 4+ Shield Check. Shield Checks are performed as if they were Evasion Checks. Attacks from Weapons with the Flames, Gas, or Melee Keywords do not incur Shield Checks.</description>
+      <description>Once per round, as a Reaction, this Unit may Activate its Shield Generator. This Reaction only costs one Action. If it is activated, the next time it is Attacked the Attacker must first roll an unmodified 4+ Shield Check for each Hit. On a failure the Hit is prevented before moving to the Evasion Check. Attacks from Weapons with the Flames, Gas, or Melee Keywords do not incur Shield Checks.</description>
     </rule>
     <rule id="6f53-dabe-1243-14cf" name="Close In" hidden="false">
       <description>When making an Attack with this weapon, Units targeted by this attack do not receive the benefit of cover.</description>
@@ -1099,7 +1102,7 @@
       <description>This Unit may not take the Capture Action.</description>
     </rule>
     <rule name="Aerial Deployment" id="a61e-7e07-d7da-e915" hidden="false">
-      <description>Instead of deploying this Unit at the start of the game, you may declare that this model is using Aerial Deployment. An aerial model may activate only after all non-aerial units in your army have activated this turn. The first time an aerial unit activates, you may deploy it no closer than 8&quot; from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
+      <description>Instead of deploying this Unit at the start of the game, you may declare that this model is in En Route. During any Setup Phase after the first Round you may deploy this unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
     </rule>
     <rule name="Light on their Feet" id="f708-1439-cbbe-6850" hidden="false">
       <description>This Unit may take the Fallback Reaction while losing only a single Action during its following Activation.</description>
@@ -1405,7 +1408,10 @@ are in your army only one counter is ticked down at a time.</description>
       <description>Whenever a Unit makes an Attack with this Weapon, after the Attack has been resolved, you may apply a Bombard Token to all Terrain Features within the zone of this Weapon&apos;s Blast Token. Tokens may only be applied to Terrain Features with a Cover Score of X or less. For each Bombard Token a Terrain Feature has, its Cover Score is reduced by one. If a Terrain Feature&apos;s Cover Score is lowered to 0, it is removed from the Battlefield.</description>
     </rule>
     <rule name="Concussive" id="2535-84fb-dcc0-f3ac" hidden="false">
-      <description>When making an Attack with this Weapon, you may choose to roll a Concussion Check instead of an Evasion Check. If you do, roll XD5 for each copy of this Weapon in the Attack Pool. If the sum of all Concussion Checks in the Attack Pool is equal to or greater than the current HP of the Target of the Attack, apply a Concussed Token. When that Unit next Activates, it loses one Action for each Concussed Token applied to it, then discards the Token. </description>
+      <description>When making an Attack with this Weapon, you may choose to roll a Concussion Check instead of an Evasion Check. If you do, roll XD5 for each copy of this Weapon in the Attack Pool. If the sum of all Concussion Checks in the Attack Pool is equal to or greater than the current HP of the Target of the Attack, apply a Concussed Token. When that Unit next Activates, it loses one Action for each Concussed Token applied to it, then discards the Token.</description>
+    </rule>
+    <rule name="Headshot" id="9d6c-a49e-e767-123d" hidden="false">
+      <description>When resolving an Attack with this Weapon against a Unit with the Troops Keywords, for each Hit which is an unmodified 10, automatically pass the following Armor Check.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

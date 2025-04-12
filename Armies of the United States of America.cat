@@ -1826,6 +1826,7 @@
         <infoLink name="M1915 Springfield Energy Rifle (Scoped)" id="8434-e33a-cde1-bc6d" hidden="false" type="profile" targetId="9df5-be93-ea79-930f"/>
         <infoLink name="Sniper" id="1c2e-14c4-e4bc-4732" hidden="false" type="rule" targetId="3a32-9522-280e-50ce"/>
         <infoLink name="Critical Shot" id="3692-f687-8fec-d825" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
+        <infoLink name="Headshot" id="1b0a-087f-07f6-2cd5" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="13"/>
@@ -2559,7 +2560,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Sniper</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Sniper, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Sniper Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -11096,6 +11097,173 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
+            <selectionEntryGroup name="Sponsons" id="7a38-0987-a05b-7237" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Dual Sponsons" hidden="false" id="0937-f4a8-e878-c60c">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb86-4235-66ff-72ed" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="fb91-74c1-5910-8491" hidden="false" defaultSelectionEntryId="dcaa-538a-6bb7-253b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e253-7d9c-68fd-2880-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e253-7d9c-68fd-2880-max" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Plasma Sponsons" hidden="false" id="bde9-dca6-9e21-7ce">
+                          <entryLinks>
+                            <entryLink import="true" name="M3E1 Plasma Rifle" hidden="false" id="baa-f2c7-ae3b-a93b" type="selectionEntry" targetId="5695-23f6-6fb9-f5ef">
+                              <constraints>
+                                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="b003-ec11-9f7f-b127-min"/>
+                                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="b003-ec11-9f7f-b127-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7255-2381-62e5-4fa0" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Flamethrower Sponsons" hidden="false" id="feac-d41d-a054-edad">
+                          <entryLinks>
+                            <entryLink import="true" name="M14 Flamethrower" hidden="false" id="7854-b8cc-ebc8-4404" type="selectionEntry" targetId="c916-b9df-1c74-77ed">
+                              <constraints>
+                                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="c6a5-c9da-306c-3dd9-min"/>
+                                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c6a5-c9da-306c-3dd9-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8151-bf1b-6e9c-31b0" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Heat Rifle Sponsons" hidden="false" id="dcaa-538a-6bb7-253b">
+                          <entryLinks>
+                            <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="db26-e71a-2a38-57bb" type="selectionEntry" targetId="9c94-6672-7752-ea3d">
+                              <constraints>
+                                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="df42-24e8-ca0e-7ce9-min"/>
+                                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="df42-24e8-ca0e-7ce9-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="322a-ee90-29ca-5670" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="HMG Sponsons" hidden="false" id="94db-22ae-bd22-8d41">
+                          <entryLinks>
+                            <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="94c2-8546-a40e-297f" type="selectionEntry" targetId="59ef-e9be-bbab-1232">
+                              <constraints>
+                                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="486d-62cc-843a-2d96-min"/>
+                                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="486d-62cc-843a-2d96-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc96-42d7-9a0b-c749" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Automatic Grenade Launcher Sponsons" hidden="false" id="7bbf-4521-dbc8-e479">
+                          <entryLinks>
+                            <entryLink import="true" name="Automatic Grenade Launcher" hidden="false" id="803f-eb5c-a57f-1f66" type="selectionEntry" targetId="6542-a2c5-73fb-4926">
+                              <constraints>
+                                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="7a9f-9e66-66d7-23c0-min"/>
+                                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7a9f-9e66-66d7-23c0-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="096d-3433-cf94-de29" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Singular Sponsons" hidden="false" id="afc8-3b00-08d7-70f2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="810f-d41a-9710-afd8" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="5693-743d-70f3-e4ec" hidden="false" defaultSelectionEntryId="d4b2-854c-5be4-22a1">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c18-9273-ede4-ad68-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c18-9273-ede4-ad68-max" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Plasma Sponsons" hidden="false" id="b893-2eea-c6ce-0f8e">
+                          <entryLinks>
+                            <entryLink import="true" name="M3E1 Plasma Rifle" hidden="false" id="00f2-508d-94d0-f315" type="selectionEntry" targetId="5695-23f6-6fb9-f5ef">
+                              <constraints>
+                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="eab6-ac53-ccc0-de19-min"/>
+                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="eab6-ac53-ccc0-de19-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ac9-00f0-a50b-5a71" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Flamethrower Sponsons" hidden="false" id="de77-faa5-b3c7-cecf">
+                          <entryLinks>
+                            <entryLink import="true" name="M14 Flamethrower" hidden="false" id="58b6-63ad-ebf1-bd0f" type="selectionEntry" targetId="c916-b9df-1c74-77ed">
+                              <constraints>
+                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f666-cfc9-543d-6c92-min"/>
+                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f666-cfc9-543d-6c92-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="903c-53d9-afa9-93a2" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Heat Rifle Sponsons" hidden="false" id="d4b2-854c-5be4-22a1">
+                          <entryLinks>
+                            <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="1f01-7532-0bb0-608a" type="selectionEntry" targetId="9c94-6672-7752-ea3d">
+                              <constraints>
+                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d373-946f-0c9a-269b-min"/>
+                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d373-946f-0c9a-269b-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eac2-6d9a-b37b-ed8a" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="HMG Sponsons" hidden="false" id="7d52-5eeb-8eb0-334c">
+                          <entryLinks>
+                            <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="fa47-0709-6197-e0ee" type="selectionEntry" targetId="59ef-e9be-bbab-1232">
+                              <constraints>
+                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="236b-2b2e-1574-dfab-min"/>
+                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="236b-2b2e-1574-dfab-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef34-06d1-ab4c-f57b" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Automatic Grenade Launcher Sponsons" hidden="false" id="15f7-fd52-efe8-1ac6">
+                          <entryLinks>
+                            <entryLink import="true" name="Automatic Grenade Launcher" hidden="false" id="572d-dd02-f2b1-e1d4" type="selectionEntry" targetId="6542-a2c5-73fb-4926">
+                              <constraints>
+                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="562b-90ce-81e6-8255-min"/>
+                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="562b-90ce-81e6-8255-max"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71d8-49cc-89ee-996a" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38a4-414e-4fa9-b8db" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
             <cost name="Munitions" typeId="Points" value="157"/>
@@ -11129,166 +11297,6 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c724-d62f-b0e6-ec0e-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c724-d62f-b0e6-ec0e-max" includeChildSelections="false"/>
               </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dual Sponsons" hidden="false" id="0937-f4a8-e878-c60c">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb86-4235-66ff-72ed" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon Options" id="fb91-74c1-5910-8491" hidden="false" defaultSelectionEntryId="dcaa-538a-6bb7-253b">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e253-7d9c-68fd-2880-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e253-7d9c-68fd-2880-max" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Plasma Sponsons" hidden="false" id="bde9-dca6-9e21-7ce">
-                      <entryLinks>
-                        <entryLink import="true" name="M3E1 Plasma Rifle" hidden="false" id="baa-f2c7-ae3b-a93b" type="selectionEntry" targetId="5695-23f6-6fb9-f5ef">
-                          <constraints>
-                            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="b003-ec11-9f7f-b127-min"/>
-                            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="b003-ec11-9f7f-b127-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7255-2381-62e5-4fa0" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Flamethrower Sponsons" hidden="false" id="feac-d41d-a054-edad">
-                      <entryLinks>
-                        <entryLink import="true" name="M14 Flamethrower" hidden="false" id="7854-b8cc-ebc8-4404" type="selectionEntry" targetId="c916-b9df-1c74-77ed">
-                          <constraints>
-                            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="c6a5-c9da-306c-3dd9-min"/>
-                            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c6a5-c9da-306c-3dd9-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8151-bf1b-6e9c-31b0" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Heat Rifle Sponsons" hidden="false" id="dcaa-538a-6bb7-253b">
-                      <entryLinks>
-                        <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="db26-e71a-2a38-57bb" type="selectionEntry" targetId="9c94-6672-7752-ea3d">
-                          <constraints>
-                            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="df42-24e8-ca0e-7ce9-min"/>
-                            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="df42-24e8-ca0e-7ce9-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="322a-ee90-29ca-5670" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="HMG Sponsons" hidden="false" id="94db-22ae-bd22-8d41">
-                      <entryLinks>
-                        <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="94c2-8546-a40e-297f" type="selectionEntry" targetId="59ef-e9be-bbab-1232">
-                          <constraints>
-                            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="486d-62cc-843a-2d96-min"/>
-                            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="486d-62cc-843a-2d96-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc96-42d7-9a0b-c749" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Automatic Grenade Launcher Sponsons" hidden="false" id="7bbf-4521-dbc8-e479">
-                      <entryLinks>
-                        <entryLink import="true" name="Automatic Grenade Launcher" hidden="false" id="803f-eb5c-a57f-1f66" type="selectionEntry" targetId="6542-a2c5-73fb-4926">
-                          <constraints>
-                            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="7a9f-9e66-66d7-23c0-min"/>
-                            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7a9f-9e66-66d7-23c0-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="096d-3433-cf94-de29" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sponsons" hidden="false" id="afc8-3b00-08d7-70f2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="810f-d41a-9710-afd8" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon Options" id="5693-743d-70f3-e4ec" hidden="false" defaultSelectionEntryId="d4b2-854c-5be4-22a1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c18-9273-ede4-ad68-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c18-9273-ede4-ad68-max" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Plasma Sponsons" hidden="false" id="b893-2eea-c6ce-0f8e">
-                      <entryLinks>
-                        <entryLink import="true" name="M3E1 Plasma Rifle" hidden="false" id="00f2-508d-94d0-f315" type="selectionEntry" targetId="5695-23f6-6fb9-f5ef">
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="eab6-ac53-ccc0-de19-min"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="eab6-ac53-ccc0-de19-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ac9-00f0-a50b-5a71" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Flamethrower Sponsons" hidden="false" id="de77-faa5-b3c7-cecf">
-                      <entryLinks>
-                        <entryLink import="true" name="M14 Flamethrower" hidden="false" id="58b6-63ad-ebf1-bd0f" type="selectionEntry" targetId="c916-b9df-1c74-77ed">
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f666-cfc9-543d-6c92-min"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f666-cfc9-543d-6c92-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="903c-53d9-afa9-93a2" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Heat Rifle Sponsons" hidden="false" id="d4b2-854c-5be4-22a1">
-                      <entryLinks>
-                        <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="1f01-7532-0bb0-608a" type="selectionEntry" targetId="9c94-6672-7752-ea3d">
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d373-946f-0c9a-269b-min"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d373-946f-0c9a-269b-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eac2-6d9a-b37b-ed8a" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="HMG Sponsons" hidden="false" id="7d52-5eeb-8eb0-334c">
-                      <entryLinks>
-                        <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="fa47-0709-6197-e0ee" type="selectionEntry" targetId="59ef-e9be-bbab-1232">
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="236b-2b2e-1574-dfab-min"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="236b-2b2e-1574-dfab-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef34-06d1-ab4c-f57b" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Automatic Grenade Launcher Sponsons" hidden="false" id="15f7-fd52-efe8-1ac6">
-                      <entryLinks>
-                        <entryLink import="true" name="Automatic Grenade Launcher" hidden="false" id="572d-dd02-f2b1-e1d4" type="selectionEntry" targetId="6542-a2c5-73fb-4926">
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="562b-90ce-81e6-8255-min"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="562b-90ce-81e6-8255-max"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71d8-49cc-89ee-996a" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
