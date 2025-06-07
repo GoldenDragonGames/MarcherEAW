@@ -674,7 +674,7 @@
             <profile name="Automaton Infantry Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a3fd-55ff-d437-7391">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Tommybots Section Leader, 7-9x Tommybots, 0-2x Tommybot Gunners</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, Automaton, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, (AUX) Mechanized, Automaton, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
@@ -697,6 +697,7 @@
                 <entryLink import="true" name="Lewes Bomb" hidden="false" id="2032-cfe4-e509-6533" type="selectionEntry" targetId="8562-0c68-8fd5-1e47"/>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="Automaton Upgrades" hidden="false" id="53c3-cbee-4910-16d3" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -765,7 +766,12 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="Bren LMG" hidden="false" id="a4e6-da13-5e2f-41e5" type="selectionEntry" targetId="9138-1b74-f2f0-8736"/>
+                    <entryLink import="true" name="Bren LMG" hidden="false" id="a4e6-da13-5e2f-41e5" type="selectionEntry" targetId="9138-1b74-f2f0-8736">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="543e-77ad-1635-b618-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="543e-77ad-1635-b618-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Corporal" hidden="false" id="da69-f6a2-bedc-dd78">
@@ -825,7 +831,7 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="Plasma Gun" hidden="false" id="16b9-0101-28ca-ce26" type="selectionEntry" targetId="9393-a79b-42e8-6b1a">
+                    <entryLink import="true" name="MC 1.2 Inch Plasma Gun" hidden="false" id="16b9-0101-28ca-ce26" type="selectionEntry" targetId="9393-a79b-42e8-6b1a">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74a9-f027-f7d9-f2cf-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="74a9-f027-f7d9-f2cf-max" includeChildSelections="false"/>
@@ -854,7 +860,12 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="Boys AT Rifle" hidden="false" id="84a5-0702-4f02-bc48" type="selectionEntry" targetId="7ca7-f823-b0ef-2183"/>
+                    <entryLink import="true" name="Boys AT Rifle" hidden="false" id="84a5-0702-4f02-bc48" type="selectionEntry" targetId="7ca7-f823-b0ef-2183">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fa09-c0dc-4cb0-b8ea-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa09-c0dc-4cb0-b8ea-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Specialist with Heat Ray" hidden="false" id="0757-49d3-03e2-3fa0">
@@ -878,7 +889,7 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="Heat Rifle" hidden="false" id="5b67-db24-5115-fa11" type="selectionEntry" targetId="c44c-2dae-39d1-c37b">
+                    <entryLink import="true" name="No. 7 Heat Rifle" hidden="false" id="5b67-db24-5115-fa11" type="selectionEntry" targetId="c44c-2dae-39d1-c37b">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f2a-f668-b4f5-c4b4-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f2a-f668-b4f5-c4b4-max" includeChildSelections="false"/>
@@ -907,7 +918,12 @@
                     </profile>
                   </profiles>
                   <entryLinks>
-                    <entryLink import="true" name="Arc Rifle" hidden="false" id="41cd-9304-10c2-8bea" type="selectionEntry" targetId="a2ed-bd57-faf6-8d30"/>
+                    <entryLink import="true" name="3.3 KJ Arc Rifle" hidden="false" id="41cd-9304-10c2-8bea" type="selectionEntry" targetId="a2ed-bd57-faf6-8d30">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="91ff-2e5d-4c51-7728-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91ff-2e5d-4c51-7728-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -927,9 +943,9 @@
           <profiles>
             <profile name="Colonial Rifle Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c429-794c-a170-fa98">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac"/>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14"/>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Corporal, 7-9x Private, 0-2x Specialist</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, Troop</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1215,7 +1231,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fec-09d7-6980-0f02-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Plasma Gun" hidden="false" id="96fd-e4b4-3f3c-0505" type="selectionEntry" targetId="9393-a79b-42e8-6b1a">
+                    <entryLink import="true" name="MC 1.2 Inch Plasma Gun" hidden="false" id="96fd-e4b4-3f3c-0505" type="selectionEntry" targetId="9393-a79b-42e8-6b1a">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="823a-e9fc-c096-b129-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="823a-e9fc-c096-b129-max" includeChildSelections="false"/>
@@ -1250,7 +1266,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2676-3f99-55ee-738a-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Arc Rifle" hidden="false" id="d13f-8d35-1bd2-35aa" type="selectionEntry" targetId="a2ed-bd57-faf6-8d30">
+                    <entryLink import="true" name="3.3 KJ Arc Rifle" hidden="false" id="d13f-8d35-1bd2-35aa" type="selectionEntry" targetId="a2ed-bd57-faf6-8d30">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b7e-a03c-4b5a-0b3c-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b7e-a03c-4b5a-0b3c-max" includeChildSelections="false"/>
@@ -1276,7 +1292,7 @@
             <profile name="Grenadiers Guard Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1b42-d680-908b-c5e4">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Grenadiers Guard Sergeant, 5-9x Guardsmen, 0-2x Guard Specialist, 0-1x Guard Flagbearer, 0-1x Guard Musician</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
               </characteristics>
             </profile>
@@ -1435,7 +1451,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Arc Cannon and Coaxial Machine Gun" hidden="false" id="86e1-149e-692d-718b">
                       <entryLinks>
-                        <entryLink import="true" name="Heavy Arc Launcher" hidden="false" id="7c7a-ad19-e82d-d840" type="selectionEntry" targetId="9012-0f06-6be6-8722">
+                        <entryLink import="true" name="16.2 KJ Arc Cannon" hidden="false" id="7c7a-ad19-e82d-d840" type="selectionEntry" targetId="9012-0f06-6be6-8722">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5061-05e7-1125-2100-min" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5061-05e7-1125-2100-max" includeChildSelections="false"/>
@@ -1826,7 +1842,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26db-8e3d-8045-c9b6" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Light Arc Launcher" hidden="false" id="b26b-e539-1d98-77dc" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
+                    <entryLink import="true" name="6 KJ Arc Cannon" hidden="false" id="b26b-e539-1d98-77dc" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c7f-d99b-54b3-a23e" includeChildSelections="false"/>
                       </constraints>
@@ -1939,7 +1955,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b8f-3208-555b-711c-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Arc Rifle" hidden="false" id="a2bc-4ebb-96cc-2fec" type="selectionEntry" targetId="a2ed-bd57-faf6-8d30">
+                    <entryLink import="true" name="3.3 KJ Arc Rifle" hidden="false" id="a2bc-4ebb-96cc-2fec" type="selectionEntry" targetId="a2ed-bd57-faf6-8d30">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a05b-9712-da64-c326-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a05b-9712-da64-c326-max" includeChildSelections="false"/>
@@ -2167,9 +2183,9 @@
           <profiles>
             <profile name="Mk. V &apos;&apos;Gareth&apos;&apos; Drop Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="775d-9d57-32c1-b047">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac"/>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14"/>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Mk. V &apos;&apos;Gareth&apos;&apos; Drop Tank</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Mechanized, (AUX) Armor, Tracked, Vehicle</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
             <profile name="Mk. V &apos;&apos;Gareth&apos;&apos; Drop Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6781-db2c-083a-907c">
@@ -2201,7 +2217,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f6c-fc2f-b8fb-e39f" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Medium Arc Launcher" hidden="false" id="0351-26fb-4e7a-2ba2" type="selectionEntry" targetId="3998-f006-6895-72df">
+                    <entryLink import="true" name="10.1 KJ  Arc Cannon" hidden="false" id="0351-26fb-4e7a-2ba2" type="selectionEntry" targetId="3998-f006-6895-72df">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b02f-1364-c8e9-bbd4" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="851e-65ec-7fe8-9005" includeChildSelections="false"/>
@@ -2212,9 +2228,8 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0dd1-9980-d548-7e17" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Light Energy Cannon" hidden="false" id="f7d8-8db8-8359-408b" type="selectionEntry" targetId="54fa-106a-6f0b-2ba7">
+                    <entryLink import="true" name="PL No. 3 Light Energy Cannon" hidden="false" id="f7d8-8db8-8359-408b" type="selectionEntry" targetId="54fa-106a-6f0b-2ba7">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="92c5-f7d6-0929-b546-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92c5-f7d6-0929-b546-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
@@ -2293,7 +2308,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84aa-2b55-9438-d089" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="Light Arc Launcher" hidden="false" id="9ef9-7c4f-a018-d4b6" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
+                        <entryLink import="true" name="6 KJ Arc Cannon" hidden="false" id="9ef9-7c4f-a018-d4b6" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08b6-d98f-838e-4cfc" includeChildSelections="false"/>
                           </constraints>
@@ -2310,7 +2325,12 @@
                     <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2a95-31b9-3650-66ae" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Tower Shield" hidden="false" id="2020-3e77-2807-5d61" type="selectionEntry" targetId="7997-33c6-3293-7cfe"/>
+                    <entryLink import="true" name="Tower Shield" hidden="false" id="2020-3e77-2807-5d61" type="selectionEntry" targetId="7997-33c6-3293-7cfe">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6327-ceb9-f3ab-abce-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6327-ceb9-f3ab-abce-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="&quot;Little John&quot; Armoured Support Automaton Leader" hidden="false" id="2644-abd5-70c6-1939">
@@ -2348,7 +2368,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a88f-4a37-7f39-5a06" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="Light Arc Launcher" hidden="false" id="56bf-9c0e-eb51-dc9a" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
+                        <entryLink import="true" name="6 KJ Arc Cannon" hidden="false" id="56bf-9c0e-eb51-dc9a" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaf0-d4dd-9f73-3f47" includeChildSelections="false"/>
                           </constraints>
@@ -2365,7 +2385,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bcad-befe-6152-44e7-max" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Tower Shield" hidden="false" id="cd3f-c4fa-54be-91c3" type="selectionEntry" targetId="7997-33c6-3293-7cfe"/>
+                    <entryLink import="true" name="Tower Shield" hidden="false" id="cd3f-c4fa-54be-91c3" type="selectionEntry" targetId="7997-33c6-3293-7cfe">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9aaf-ee7b-4776-badc-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9aaf-ee7b-4776-badc-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -2480,7 +2505,7 @@
             <profile name="Automaton Heavy Machine Gun Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a41c-fef0-dcd7-b72f">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Automaton Machine Gun Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, Automaton, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, (AUX) Infantry, Automaton, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
               </characteristics>
             </profile>
@@ -2784,9 +2809,9 @@
           <profiles>
             <profile name="Royal Engineers Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b4e8-6fc8-20a9-ac09">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac"/>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14"/>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Engineer Sergeant, 2-9x Engineers, 0-2x Engineer Welder, 0-2x Engineer Specialist</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, (AUX) Infantry, Engineer, Troop</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2900,7 +2925,7 @@
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Mk.II &quot;Vortigern&quot; Area Control Tripod</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, Automaton, Walker, Vehicle</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
               </characteristics>
             </profile>
             <profile name="Mk.II &quot;Vortigern&quot; Area Control Tripod" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ef24-6743-2ea6-678f">
@@ -2915,7 +2940,7 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Bottom Turret" hidden="false" id="a20c-d71f-bc34-1e60">
               <entryLinks>
-                <entryLink import="true" name="Light Heat Cannon" hidden="false" id="e616-d589-64d2-0883" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
+                <entryLink import="true" name="No. 9 Light Heat Cannon" hidden="false" id="e616-d589-64d2-0883" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d26e-7a75-4b6c-133f-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d26e-7a75-4b6c-133f-max" includeChildSelections="false"/>
@@ -2951,7 +2976,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Modules" id="9815-72dc-e3e8-e023" hidden="false" defaultSelectionEntryId="1235-4345-df8a-3787">
+            <selectionEntryGroup name="Modules" id="9815-72dc-e3e8-e023" hidden="false">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Heavy Weapon Ring" hidden="false" id="09f6-3858-c022-4f83" collective="true">
                   <selectionEntryGroups>
@@ -2959,7 +2984,7 @@
                       <selectionEntries>
                         <selectionEntry type="upgrade" import="true" name="Triple Heat Cannons" hidden="false" id="d105-a743-2857-777e">
                           <entryLinks>
-                            <entryLink import="true" name="Light Heat Cannon" hidden="false" id="cd6f-6360-8c57-30d9" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
+                            <entryLink import="true" name="No. 9 Light Heat Cannon" hidden="false" id="cd6f-6360-8c57-30d9" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
                               <constraints>
                                 <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="a01e-654d-1857-e2b5-min" includeChildSelections="false"/>
                                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="a01e-654d-1857-e2b5-max" includeChildSelections="false"/>
@@ -2994,7 +3019,7 @@
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d0b6-3dc5-0f0e-068f" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Light Weapon Ring" hidden="false" id="1235-4345-df8a-3787" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Light Weapon Ring" hidden="false" id="1235-4345-df8a-3787" collective="true" defaultAmount="3">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="6d8a-4895-2570-4d90" hidden="false" defaultSelectionEntryId="7383-7c0d-fe60-91c4">
                       <selectionEntries>
@@ -3040,7 +3065,7 @@
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Heavy Weapon Mount" hidden="false" id="825d-8723-e338-480f" collective="true">
                   <entryLinks>
-                    <entryLink import="true" name="Big Scary Arc Launcher" hidden="false" id="94bb-8a2a-38a6-567a" type="selectionEntry" targetId="610e-757e-0032-4813">
+                    <entryLink import="true" name="23.7 KJ Arc Launcher" hidden="false" id="94bb-8a2a-38a6-567a" type="selectionEntry" targetId="610e-757e-0032-4813">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc29-0ea4-7b05-252a-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc29-0ea4-7b05-252a-max" includeChildSelections="false"/>
@@ -3051,7 +3076,7 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59ab-69ba-a020-d0ee" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Targeting Module" hidden="false" id="7f2c-5a0a-5c02-1a1c">
+                <selectionEntry type="upgrade" import="true" name="Targeting Module" hidden="false" id="7f2c-5a0a-5c02-1a1c" defaultAmount="1">
                   <infoLinks>
                     <infoLink name="Target Painting" id="006d-bf2a-d1ba-0fcb" hidden="false" type="rule" targetId="3847-0d44-1c44-21fe"/>
                   </infoLinks>
@@ -3103,7 +3128,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Heavy Arc Launcher" hidden="false" id="136e-8880-d74b-5d1c" type="selectionEntry" targetId="9012-0f06-6be6-8722">
+            <entryLink import="true" name="16.2 KJ Arc Cannon" hidden="false" id="136e-8880-d74b-5d1c" type="selectionEntry" targetId="9012-0f06-6be6-8722">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc7a-bd6e-954c-1701-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc7a-bd6e-954c-1701-max" includeChildSelections="false"/>
@@ -3193,6 +3218,120 @@
               <infoLinks>
                 <infoLink name="Distributed Elements" id="34da-b83f-752f-f6a8" hidden="false" type="rule" targetId="3a38-3263-bf73-12e0"/>
               </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="2 Pdr. AT Gun Battery" hidden="false" id="4a6a-64e1-8018-054e">
+          <infoLinks>
+            <infoLink name="Support Carriage Actions" id="7869-3bd5-0ca0-322d" hidden="false" type="profile" targetId="1761-68e7-b0e6-e086"/>
+            <infoLink name="Autonomous Anti-Tank Gun" id="e7b7-9a16-3b40-3116" hidden="false" type="rule" targetId="6ada-912d-2faa-97b8"/>
+            <infoLink name="Deployed Weapon" id="f496-c922-ca53-35f6" hidden="false" targetId="49c6-4812-80b8-83cf" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="2 Pdr. AT Gun Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ba8f-d5a1-cbc5-eb02">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x 2 Pdr. AT Gun Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, Automaton, Battery</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="8ee1-22b4-55b0-0b5c" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Automaton Upgrades" hidden="false" id="d12e-33c7-2915-c3c2" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="2 Pdr. AT Gun Carriage" hidden="false" id="89e0-7a9e-bba6-32be">
+              <profiles>
+                <profile name="2 Pdr. AT Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2e72-47d6-608f-a468">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="QF 2-Pounder Cannon" hidden="false" id="d53e-3695-6bfd-c491" type="selectionEntry" targetId="a032-28b9-782f-09fd">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4014-4bda-0231-5146" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a4e-1642-93dc-9636" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="18"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="8e1a-92e3-889e-bebb-min" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="8e1a-92e3-889e-bebb-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="17 Pdr. AT Gun Battery" hidden="false" id="6956-f550-eea6-b4e4">
+          <infoLinks>
+            <infoLink name="Support Carriage Actions" id="a25f-07a7-b8ba-9f89" hidden="false" type="profile" targetId="1761-68e7-b0e6-e086"/>
+            <infoLink name="Autonomous Anti-Tank Gun" id="ef79-04dd-a0d4-41c3" hidden="false" type="rule" targetId="6ada-912d-2faa-97b8"/>
+            <infoLink name="Deployed Weapon" id="450a-6d59-fcd6-8200" hidden="false" targetId="49c6-4812-80b8-83cf" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="17 Pdr. AT Gun Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2b4d-fd8d-0e25-5bfd">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">3x 17 Pdr. AT Gun Battery</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, Automaton, Battery</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="14cf-7b16-6ca9-405f" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Automaton Upgrades" hidden="false" id="74c8-5631-a113-38c0" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="17 Pdr. AT Gun Carriage" hidden="false" id="73da-5d31-9e23-69d1">
+              <entryLinks>
+                <entryLink import="true" name="QF 17-Pounder High Velocity Gun" hidden="false" id="92dd-4465-6e6f-6483" type="selectionEntry" targetId="f37b-e24f-0aa6-ca84">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e984-59b1-d592-97ff" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="672c-2913-23fe-4f82" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <profiles>
+                <profile name="17 Pdr. AT Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="aa53-5fe8-d64c-470e">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="40"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="fb13-c643-0518-1ca3-min" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="fb13-c643-0518-1ca3-max" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -3592,7 +3731,7 @@
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d7a-3609-4033-d00e" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
-                            <entryLink import="true" name="Light Arc Launcher" hidden="false" id="e1b6-c706-c54e-ba26" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
+                            <entryLink import="true" name="6 KJ Arc Cannon" hidden="false" id="e1b6-c706-c54e-ba26" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7">
                               <constraints>
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e65-fd53-6a98-f7ab" includeChildSelections="false"/>
                               </constraints>
@@ -3656,6 +3795,11 @@
           </rules>
           <infoLinks>
             <infoLink name="Dangerous Bailout" id="974c-2112-e52a-b57e" hidden="false" type="rule" targetId="544-9133-e670-6e0c"/>
+            <infoLink name="Transport" id="5bb6-f2b5-2380-66ab" hidden="false" type="rule" targetId="73c0-9282-d155-0b35">
+              <modifiers>
+                <modifier type="append" value="1" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Mk. VII &quot;Merlin&quot; Orbital Insertion Capsule" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d56e-2121-5902-cb80">
@@ -3971,7 +4115,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7424-ab12-d8cd-2c46" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="Plasma Gun" hidden="false" id="472b-991b-db5e-13d0" type="selectionEntry" targetId="9393-a79b-42e8-6b1a">
+                        <entryLink import="true" name="MC 1.2 Inch Plasma Gun" hidden="false" id="472b-991b-db5e-13d0" type="selectionEntry" targetId="9393-a79b-42e8-6b1a">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67c1-cda4-c1fc-b387" includeChildSelections="false"/>
                           </constraints>
@@ -4322,7 +4466,7 @@
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Triple Heat Cannons" hidden="false" id="9a82-60d9-4c57-f8e7">
                       <entryLinks>
-                        <entryLink import="true" name="Light Heat Cannon" hidden="false" id="8029-74c9-597a-4e76" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
+                        <entryLink import="true" name="No. 9 Light Heat Cannon" hidden="false" id="8029-74c9-597a-4e76" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
                           <constraints>
                             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f784-b1d5-0cf2-07a1" includeChildSelections="false"/>
                             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1897-4ab5-6885-2d9d" includeChildSelections="false"/>
@@ -4457,9 +4601,9 @@
           <profiles>
             <profile name="SAS Land Rover" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fba4-0d4f-97c9-d04d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac"/>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14"/>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x SAS Land Rovers</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Recon, Vehicle</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4488,8 +4632,8 @@
             <profile name="Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="de67-e022-c947-2f57">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14"/>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624"/>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Recon, (AUX) Armor, Vehicle</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
               </characteristics>
             </profile>
             <profile name="Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="14c4-e7e6-5ed2-79bd">
@@ -4518,7 +4662,7 @@
                       </constraints>
                     </entryLink>
                     <entryLink import="true" name="Pom-Pom 20mm Autocannon" hidden="false" id="06e2-c899-40e5-3eb7" type="selectionEntry" targetId="40ec-3caa-bdb6-f6ba"/>
-                    <entryLink import="true" name="Light Arc Launcher" hidden="false" id="a08e-ae80-3266-0ce5" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7"/>
+                    <entryLink import="true" name="6 KJ Arc Cannon" hidden="false" id="a08e-ae80-3266-0ce5" type="selectionEntry" targetId="8d6f-2a48-8b36-cdc7"/>
                   </entryLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8983-91bf-8142-4088-min" includeChildSelections="false"/>
@@ -4551,7 +4695,11 @@
     <selectionEntryGroup name="Automaton Upgrades" id="f82e-a04f-2c6c-b71c" hidden="false">
       <entryLinks>
         <entryLink import="true" name="Hardened Electronics" hidden="false" id="874f-5f42-e806-9a12" type="selectionEntry" targetId="8bb1-1e78-84bf-59a7"/>
-        <entryLink import="true" name="Oil Change" hidden="false" id="33b8-8b81-8b74-3a35" type="selectionEntry" targetId="d948-1227-9215-7524"/>
+        <entryLink import="true" name="Oil Change" hidden="false" id="33b8-8b81-8b74-3a35" type="selectionEntry" targetId="d948-1227-9215-7524">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="615f-aa71-f1a6-8a2b" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -4562,8 +4710,15 @@
         <categoryLink targetId="b100-ce4e-c964-af8d" id="2361-d2a2-e7ab-d6ec" primary="false" name="BRE"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="9dc8-ed46-f556-e84c" primary="false" name="Vehicle"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="1504-1afa-f34d-273c" primary="false" name="Tracked"/>
-        <categoryLink targetId="54db-5889-a382-77cb" id="f3f4-6941-02ca-be57" primary="false" name="CORE Recon"/>
+        <categoryLink targetId="dc85-2f8f-8f0d-4b19" id="ef0b-614a-26d5-32b5" primary="false" name="AUX Recon"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="dc85-2f8f-8f0d-4b19" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Mk. VII &apos;&apos;Gawain&apos;&apos; Infantry Tank" hidden="false" id="841b-ecdf-0b1f-8b7b" type="selectionEntry" targetId="6125-f338-2b93-9226">
       <categoryLinks>
@@ -4573,6 +4728,13 @@
         <categoryLink targetId="b100-ce4e-c964-af8d" id="5df7-e017-c0cd-0390" primary="false" name="BRE"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="1bd1-b686-17d6-a69b" primary="false" name="Tracked"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="25 Pdr. Field Artillery Battery" hidden="false" id="634f-c1f4-982b-cfef" type="selectionEntry" targetId="9794-ce40-0a7b-d23b">
       <categoryLinks>
@@ -4596,6 +4758,18 @@
         <categoryLink targetId="239b-db47-17c9-4f36" id="50c4-f53b-a5ca-2413" primary="false" name="Automaton"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="a047-8c54-3a78-736e" primary="false" name="BRE"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="48f5-3131-be0b-5951" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Land Mattress Battery" hidden="false" id="0cb0-14d6-d19b-28e6" type="selectionEntry" targetId="8f90-0fa2-a61e-d2d9">
       <categoryLinks>
@@ -4701,6 +4875,13 @@
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="e64d-d223-e4a2-9752" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="239b-db47-17c9-4f36" id="0386-3c08-d4f2-586a" primary="false" name="Automaton"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Colonial Rifle Section" hidden="false" id="e28a-98fc-42d5-dade" type="selectionEntry" targetId="92e9-bd70-810b-e25a">
       <categoryLinks>
@@ -4715,6 +4896,13 @@
         <categoryLink targetId="b100-ce4e-c964-af8d" id="ca2e-5257-955c-6cae" primary="false" name="BRE"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="b205-96d2-1cd3-9a8d" primary="false" name="Troop"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Mk. V &apos;&apos;Gareth&apos;&apos; Drop Tank" hidden="false" id="d228-b93a-8bc8-f65e" type="selectionEntry" targetId="9cd2-4d7e-b58d-77fa">
       <categoryLinks>
@@ -4724,6 +4912,13 @@
         <categoryLink targetId="de0d-e12c-a964-4e46" id="4d7c-6614-1522-ac1b" primary="false" name="Vehicle"/>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="572d-99a5-d477-10eb" primary="true" name="CORE Mechanized"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Mk. I &quot;Palamedes&quot; Wheeled APC" hidden="false" id="1a3f-de53-c56e-e149" type="selectionEntry" targetId="021d-6375-82fa-a88d">
       <categoryLinks>
@@ -4739,6 +4934,13 @@
         <categoryLink targetId="7616-a9f8-6205-af0e" id="c544-ade0-f920-521f" primary="false" name="Tracked"/>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="540e-36b9-66aa-5d8e" primary="true" name="CORE Mechanized"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="SAS Orbital Dragoon Section" hidden="false" id="d4a5-6308-95db-b7ca" type="selectionEntry" targetId="964c-ac3f-4809-a123">
       <categoryLinks>
@@ -4752,13 +4954,22 @@
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="e7a2-f6a1-b499-2d3a" primary="false" name="Carriage"/>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="7d50-3af1-dd7b-6a6a" primary="true" name="CORE Support"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="db9e-8086-6888-1f9a" primary="false" name="BRE"/>
+        <categoryLink targetId="239b-db47-17c9-4f36" id="3fd8-1558-47b6-3c13" primary="false" name="Automaton"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="17 Pdr. AT Gun Carriage" hidden="false" id="9bfb-2126-2cd8-d118" type="selectionEntry" targetId="8cae-e36c-039d-7c57">
       <categoryLinks>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="d15f-52de-542e-0ee6" primary="true" name="CORE Support"/>
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="a778-248e-e263-087e" primary="false" name="Carriage"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="3ac4-66cc-3d81-de9e" primary="false" name="BRE"/>
+        <categoryLink targetId="239b-db47-17c9-4f36" id="2bd2-2381-8ead-a7ca" primary="false" name="Automaton"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Automaton Heavy Machine Gun Section" hidden="false" id="1865-8a11-a8b6-3fbf" type="selectionEntry" targetId="b133-398a-1712-f888">
@@ -4768,6 +4979,13 @@
         <categoryLink targetId="239b-db47-17c9-4f36" id="37b8-839d-c57d-575e" primary="false" name="Automaton"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="3ec0-dece-4a93-adff" primary="false" name="BRE"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="GREMLIN Autonomous Sabotage Unit" hidden="false" id="4d61-4890-dff1-bfb4" type="selectionEntry" targetId="2790-8f27-e3a0-b452">
       <categoryLinks>
@@ -4783,6 +5001,13 @@
         <categoryLink targetId="fea7-21e6-bb88-f8ed" id="7a26-388a-bef0-61f0" primary="false" name="Engineer"/>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="977c-dd51-1a63-a077" primary="true" name="CORE Support"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Bedford Truck" hidden="false" id="c307-2232-2110-4a46" type="selectionEntry" targetId="d6d6-259a-1e81-4a20">
       <categoryLinks>
@@ -4820,6 +5045,13 @@
         <categoryLink targetId="de0d-e12c-a964-4e46" id="7443-1d6b-a1e4-6f22" primary="false" name="Vehicle"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="68fa-30c0-c9a1-06fa" primary="false" name="BRE"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod" hidden="false" id="1ab3-4728-041d-1653" type="selectionEntry" targetId="cdf6-d1dd-3a96-ef43">
       <categoryLinks>
@@ -4889,6 +5121,7 @@
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="9ecb-c61e-9d34-4620" primary="true" name="CORE Support"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="acc0-534b-9dbe-c13e" primary="false" name="BRE"/>
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="003d-9d11-fa4d-6ac3" primary="false" name="Carriage"/>
+        <categoryLink targetId="239b-db47-17c9-4f36" id="6ee6-7d2a-01a4-c9b4" primary="false" name="Automaton"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="&quot;Little John&quot; Automaton Armoured Support Section" hidden="false" id="e585-0ab0-8e11-a1b7" type="selectionEntry" targetId="6039-1c0c-e69d-d0e9">
@@ -4897,12 +5130,42 @@
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="8f8c-05e5-c6a3-1c54" primary="false" name="Troop"/>
         <categoryLink targetId="4ec9-47a4-5562-ea3b" id="f005-4d96-2238-b60a" primary="false" name="Battlesuit"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="a7cf-580b-18a5-d416" primary="false" name="BRE"/>
+        <categoryLink targetId="a74d-0d07-e5d9-0032" id="dfcb-8779-7420-9d8e" primary="false" name="AUX Infantry"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Mk. X &quot;Catigern&quot; Infantry Coordination Tripods" hidden="false" id="2b25-1442-b62f-2eea" type="selectionEntry" targetId="b05b-2fec-a325-3ce5">
       <categoryLinks>
         <categoryLink targetId="48f5-3131-be0b-5951" id="ca59-f24e-ec70-f0a5" primary="false" name="AUX Support"/>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="7120-4bb6-37e9-ba59" primary="true" name="CORE Support"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="2 Pdr. AT Gun Battery" hidden="false" id="71ad-b570-6a06-e1fd" type="selectionEntry" targetId="4a6a-64e1-8018-054e">
+      <categoryLinks>
+        <categoryLink targetId="b100-ce4e-c964-af8d" id="515e-ce30-8605-75a4" primary="false" name="BRE"/>
+        <categoryLink targetId="2450-f84d-0bff-43d8" id="a9ee-0986-f1dd-f618" primary="false" name="Battery"/>
+        <categoryLink targetId="7110-7fe8-80e2-5e81" id="c525-5461-8c8e-6159" primary="true" name="CORE Support"/>
+        <categoryLink targetId="239b-db47-17c9-4f36" id="1275-f4b0-6681-70f6" primary="false" name="Automaton"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="17 Pdr. AT Gun Battery" hidden="false" id="4385-9658-1100-3197" type="selectionEntry" targetId="6956-f550-eea6-b4e4">
+      <categoryLinks>
+        <categoryLink targetId="7110-7fe8-80e2-5e81" id="652e-89ef-8b94-e587" primary="true" name="CORE Support"/>
+        <categoryLink targetId="2450-f84d-0bff-43d8" id="19e0-0e03-2701-a83d" primary="false" name="Battery"/>
+        <categoryLink targetId="b100-ce4e-c964-af8d" id="7b27-f06e-5b9a-2077" primary="false" name="BRE"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -5062,12 +5325,12 @@
     </profile>
     <profile name="Pom-Pom 20mm Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="febe-5beb-83bd-a80a">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b"/>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4"/>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8"/>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca"/>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f"/>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
     <profile name="Bofors 40mm Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="f40e-8097-aa3c-c0d1">
@@ -5086,7 +5349,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2, Bombard 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2, Bombard 2, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -5096,7 +5359,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+8</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -5126,7 +5389,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2, Bombard 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2, Bombard 2, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -5136,7 +5399,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -5146,7 +5409,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">14</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10+4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -5196,7 +5459,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">15</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5+3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 5, Innacurate</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 5, Inaccurate, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -5206,7 +5469,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">12</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5+2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 5, Innacurate</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 5, Inaccurate, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -5223,8 +5486,8 @@
     <profile name="QF 2-Pounder Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="ac82-01da-9991-a5c4">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosve</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
@@ -5256,7 +5519,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">18</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5+4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc-Lightning 6, Inaccurate, Close In</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc-Lightning 6, Inaccurate, Close In, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -5326,7 +5589,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2, Bombard 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 2, Bombard 2, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -5336,7 +5599,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2D5+3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -5366,7 +5629,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">16</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Close In, Flames</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Close In, Flames, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Flamethrower, Ranged</characteristic>
       </characteristics>
     </profile>
@@ -5606,7 +5869,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="6 KJ Arc Cannon" hidden="false" id="8d6f-2a48-8b36-cdc7" collective="true">
       <infoLinks>
-        <infoLink name="Light Arc Launcher" id="3c8b-a376-3967-1f2e" hidden="false" type="profile" targetId="e13d-3eb8-2893-c1ac"/>
+        <infoLink name="6 KJ Arc Cannon" id="3c8b-a376-3967-1f2e" hidden="false" type="profile" targetId="e13d-3eb8-2893-c1ac"/>
         <infoLink name="Arc-Lightning" id="aa9c-edd8-5bf4-f987" hidden="false" type="rule" targetId="38d0-e689-0a64-8c94">
           <modifiers>
             <modifier type="append" value="6" field="name"/>
@@ -5647,6 +5910,8 @@
     <selectionEntry type="upgrade" import="true" name="QF 14-Pounder Battle Cannon" hidden="false" id="bd59-5f81-84d7-6116">
       <infoLinks>
         <infoLink name="QF 14-Pounder Battle Cannon" id="00df-6c7a-a0eb-3bd7" hidden="false" type="profile" targetId="8f6f-3b98-1445-f0e6"/>
+        <infoLink name="Difficult to Use" id="3879-25fd-c389-eec1" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
+        <infoLink name="High Explosive" id="a1ed-e1c7-7a79-b47a" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="21"/>
@@ -5655,9 +5920,11 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="QF 17-Pounder High Velocity Gun" hidden="false" id="f37b-e24f-0aa6-ca84">
+    <selectionEntry type="upgrade" import="true" name="QF 17-Pounder High Velocity Gun" hidden="false" id="f37b-e24f-0aa6-ca84" collective="true">
       <infoLinks>
         <infoLink name="QF 17-Pounder High Velocity Gun" id="529d-b725-925a-3643" hidden="false" type="profile" targetId="c398-bd65-7823-663d"/>
+        <infoLink name="Critical Shot" id="3656-5b92-fae1-62ab" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
+        <infoLink name="Difficult to Use" id="3dfa-9afb-4091-9de6" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="84"/>
@@ -5703,6 +5970,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Direct Fire" id="3fc2-f842-7689-72fa" hidden="false" type="rule" targetId="371b-f82b-1fef-54a5"/>
+        <infoLink name="Difficult to Use" id="03f5-6c11-6fff-75e9" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="40"/>
@@ -5724,6 +5992,7 @@
             <modifier type="append" value="2" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Difficult to Use" id="b7d0-a6c9-577a-33e3" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="60"/>
@@ -5736,6 +6005,7 @@
       <infoLinks>
         <infoLink name="MC 3.3 Inch Plasma Cannon" id="2e93-d0b2-d405-a4d4" hidden="false" type="profile" targetId="c38a-d809-602b-69f3"/>
         <infoLink name="Slag" id="19e2-9e70-c28a-8c86" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
+        <infoLink name="Difficult to Use" id="f89a-55d0-8e92-d3a6" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="38"/>
@@ -5747,6 +6017,8 @@
     <selectionEntry type="upgrade" import="true" name="QF 20-Pounder High Velocity Gun" hidden="false" id="d45b-f424-c17e-339e">
       <infoLinks>
         <infoLink name="QF 20-Pounder High Velocity Gun" id="a691-3265-8a06-fff8" hidden="false" type="profile" targetId="0369-b68c-d917-35b6"/>
+        <infoLink name="Critical Shot" id="2388-ae72-dc68-b54d" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
+        <infoLink name="Difficult to Use" id="5852-af88-1bbd-dc00" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="108"/>
@@ -5825,7 +6097,7 @@
         <infoLink name="High Explosive" id="b2ad-ff76-eeb3-67e1" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="27"/>
+        <cost name="Munitions" typeId="Points" value="15"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5833,7 +6105,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="No. 9 Light Heat Cannon" hidden="false" id="712a-78db-f4ca-d2fa">
       <infoLinks>
-        <infoLink name="Light Heat Cannon" id="f832-503d-72cc-228d" hidden="false" type="profile" targetId="9e89-7072-738f-8842"/>
+        <infoLink name="No. 9 Light Heat Cannon" id="f832-503d-72cc-228d" hidden="false" type="profile" targetId="9e89-7072-738f-8842"/>
         <infoLink name="Heat Ray" id="dbd0-6614-0c6d-0c82" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
@@ -5845,15 +6117,16 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="MC 2.6 Inch Plasma Cannon" hidden="false" id="0e16-084e-5247-f87a">
       <infoLinks>
-        <infoLink name="Light Plasma Cannon" id="85dd-fe24-7ca9-1495" hidden="false" type="profile" targetId="a3f1-5f62-43d3-211a"/>
+        <infoLink name="MC 2.6 Inch Plasma Cannon" id="85dd-fe24-7ca9-1495" hidden="false" type="profile" targetId="a3f1-5f62-43d3-211a"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="23.7 KJ Arc Launcher" hidden="false" id="610e-757e-0032-4813">
       <infoLinks>
-        <infoLink name="Big Scary Arc Launcher" id="8556-eb32-99af-9446" hidden="false" type="profile" targetId="b874-00ad-867e-be1e"/>
+        <infoLink name="23.7 KJ Arc Launcher" id="8556-eb32-99af-9446" hidden="false" type="profile" targetId="b874-00ad-867e-be1e"/>
         <infoLink name="Inaccurate" id="ddcc-7a5a-bf24-3d59" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
         <infoLink name="Arc-Lightning" id="02ed-1aee-74cd-d9a3" hidden="false" type="rule" targetId="38d0-e689-0a64-8c94"/>
         <infoLink name="Close In" id="78ad-1f88-27be-2582" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+        <infoLink name="Difficult to Use" id="e173-f4ba-1b9a-f11b" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="237"/>
@@ -5889,7 +6162,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="3.3 KJ Arc Rifle" hidden="false" id="a2ed-bd57-faf6-8d30" collective="true">
       <infoLinks>
-        <infoLink name="Arc Rifle" id="24e1-f476-d019-ba88" hidden="false" type="profile" targetId="d269-c8ed-e66c-db7b"/>
+        <infoLink name="3.3 KJ Arc Rifle" id="24e1-f476-d019-ba88" hidden="false" type="profile" targetId="d269-c8ed-e66c-db7b"/>
         <infoLink name="Arc-Lightning" id="d856-e8c1-f881-8235" hidden="false" type="rule" targetId="38d0-e689-0a64-8c94">
           <modifiers>
             <modifier type="append" value="7" field="name"/>
@@ -5906,13 +6179,14 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="10.1 KJ  Arc Cannon" hidden="false" id="3998-f006-6895-72df">
       <infoLinks>
-        <infoLink name="Medium Arc Launcher" id="628f-24e6-a85d-c422" hidden="false" type="profile" targetId="fbd4-3867-1ace-ece0"/>
+        <infoLink name="10.1 KJ  Arc Cannon" id="628f-24e6-a85d-c422" hidden="false" type="profile" targetId="fbd4-3867-1ace-ece0"/>
         <infoLink name="Arc-Lightning" id="84ab-23af-29b6-70c6" hidden="false" type="rule" targetId="38d0-e689-0a64-8c94">
           <modifiers>
             <modifier type="append" value="5" field="name"/>
           </modifiers>
         </infoLink>
         <infoLink name="Inaccurate" id="a7f9-ebe3-bdd3-79b5" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
+        <infoLink name="Difficult to Use" id="4936-539c-ff7e-5f9c" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="101"/>
@@ -5923,13 +6197,14 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="16.2 KJ Arc Cannon" hidden="false" id="9012-0f06-6be6-8722">
       <infoLinks>
-        <infoLink name="Heavy Arc Launcher" id="9694-393a-f116-8eae" hidden="false" type="profile" targetId="9ca5-5da9-ee81-b91f"/>
+        <infoLink name="16.2 KJ Arc Cannon" id="9694-393a-f116-8eae" hidden="false" type="profile" targetId="9ca5-5da9-ee81-b91f"/>
         <infoLink name="Arc-Lightning" id="33da-9b45-63cf-6882" hidden="false" type="rule" targetId="38d0-e689-0a64-8c94">
           <modifiers>
             <modifier type="append" value="5" field="name"/>
           </modifiers>
         </infoLink>
         <infoLink name="Inaccurate" id="c763-9e82-a4cf-3eb7" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
+        <infoLink name="Difficult to Use" id="16b5-755e-6c00-3d7c" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="162"/>
@@ -6012,7 +6287,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="MC 1.2 Inch Plasma Gun" hidden="false" id="9393-a79b-42e8-6b1a" collective="true">
       <infoLinks>
-        <infoLink name="Plasma Gun" id="2751-5796-4dda-a3ff" hidden="false" type="profile" targetId="f3fa-016f-ffec-0f6f"/>
+        <infoLink name="MC 1.2 Inch Plasma Gun" id="2751-5796-4dda-a3ff" hidden="false" type="profile" targetId="f3fa-016f-ffec-0f6f"/>
         <infoLink name="Slag" id="a5e0-7ec4-2734-7218" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
       </infoLinks>
       <costs>
@@ -6024,7 +6299,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="No. 7 Heat Rifle" hidden="false" id="c44c-2dae-39d1-c37b" collective="true">
       <infoLinks>
-        <infoLink name="Heat Rifle" id="944c-0d62-1fb7-b292" hidden="false" type="profile" targetId="cf7e-2c2c-8e70-8c9f"/>
+        <infoLink name="No. 7 Heat Rifle" id="944c-0d62-1fb7-b292" hidden="false" type="profile" targetId="cf7e-2c2c-8e70-8c9f"/>
         <infoLink name="Heat Ray" id="bbb1-87c0-bb3c-5459" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
@@ -6048,6 +6323,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Direct Fire" id="62c3-9d6c-2995-340b" hidden="false" type="rule" targetId="371b-f82b-1fef-54a5"/>
+        <infoLink name="Difficult to Use" id="61fb-0e52-6846-9a44" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="28"/>
@@ -6064,6 +6340,7 @@
             <modifier type="append" value="4" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Difficult to Use" id="1d0b-f28f-893b-1085" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="112"/>
@@ -6103,6 +6380,9 @@
     <selectionEntry type="upgrade" import="true" name="No. 2 Dragonfire Flamethrower" hidden="false" id="5094-74cb-ee18-f627">
       <infoLinks>
         <infoLink name="No. 2 Dragonfire Flamethrower" id="1005-990a-0b61-21d0" hidden="false" type="profile" targetId="8580-1514-d6aa-4387"/>
+        <infoLink name="Difficult to Use" id="6241-bdc4-5c08-d113" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
+        <infoLink name="Close In" id="a9cc-1a94-cd68-4864" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
+        <infoLink name="Flames" id="854d-f26d-7d31-64fc" hidden="false" type="rule" targetId="7235-63bc-0668-6ac4"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="32"/>
@@ -6125,7 +6405,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="PL No. 3 Light Energy Cannon" hidden="false" id="54fa-106a-6f0b-2ba7">
       <infoLinks>
-        <infoLink name="Light Energy Cannon" id="013b-e09b-1158-740d" hidden="false" type="profile" targetId="a3a3-893a-b6d9-8582"/>
+        <infoLink name="PL No. 3 Light Energy Cannon" id="013b-e09b-1158-740d" hidden="false" type="profile" targetId="a3a3-893a-b6d9-8582"/>
         <infoLink name="Critical Shot" id="5308-318d-67b7-b54d" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
       </infoLinks>
       <costs>
