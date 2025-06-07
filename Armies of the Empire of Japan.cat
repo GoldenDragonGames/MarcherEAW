@@ -114,16 +114,13 @@
     <selectionEntry type="upgrade" import="true" name="Type 97 “Kagutsuchi” Heat Rifle" hidden="false" id="ac80-33fe-24ab-4717" collective="true">
       <infoLinks>
         <infoLink name="Type 97 “Kagutsuchi” Heat Rifle" id="8507-b431-563a-59d3" hidden="false" type="profile" targetId="3404-977f-e900-b528"/>
-        <infoLink name="Heat Ray" id="f029-f5a7-50f3-1a54" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="5" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="f029-f5a7-50f3-1a54" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="9"/>
+        <cost name="Munitions" typeId="Points" value="14"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Type 93 Marksman Rifle" hidden="false" id="e001-184c-595a-bb80" collective="true">
@@ -272,10 +269,10 @@
     <selectionEntry type="upgrade" import="true" name="Type 8 Taiko Autocannon" hidden="false" id="7e0a-ca1a-94fa-74b7">
       <infoLinks>
         <infoLink name="Type 8 Taiko Autocannon" id="bfd8-1f12-9da0-496b" hidden="false" type="profile" targetId="bd79-452f-2488-4e87"/>
-        <infoLink name="Flak Shells" id="2c1a-38bc-338a-6fee" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Concussive" id="2c1a-38bc-338a-6fee" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="15"/>
+        <cost name="Munitions" typeId="Points" value="24"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -558,13 +555,13 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Ondeko Autocannon Array" hidden="false" id="7248-6012-888a-1365">
+    <selectionEntry type="upgrade" import="true" name="Ondeko Autocannon" hidden="false" id="7248-6012-888a-1365">
       <infoLinks>
-        <infoLink name="Ondeko Autocannon Array" id="2999-3db5-d24f-9a29" hidden="false" type="profile" targetId="0c2f-bdc1-2d59-6498"/>
-        <infoLink name="Flak Shells" id="c0a7-69db-a6e0-4cda" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Ondeko Autocannon" id="2999-3db5-d24f-9a29" hidden="false" type="profile" targetId="0c2f-bdc1-2d59-6498"/>
+        <infoLink name="Concussive" id="c0a7-69db-a6e0-4cda" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="64"/>
+        <cost name="Munitions" typeId="Points" value="25"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -895,11 +892,11 @@
     </profile>
     <profile name="Type 97 “Kagutsuchi” Heat Rifle" typeId="Weapon" typeName="Weapon" hidden="false" id="3404-977f-e900-b528">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 5</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Ray</characteristic>
       </characteristics>
     </profile>
@@ -1005,11 +1002,11 @@
     </profile>
     <profile name="Type 8 Taiko Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="bd79-452f-2488-4e87">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1229,7 +1226,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Point Blank</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, SMG, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1253,13 +1250,13 @@
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
-    <profile name="Ondeko Autocannon Array" typeId="Weapon" typeName="Weapon" hidden="false" id="0c2f-bdc1-2d59-6498">
+    <profile name="Ondeko Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="0c2f-bdc1-2d59-6498">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">48&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -3974,11 +3971,11 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="529c-40ba-cbaa-a04e-max-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="76d5-880f-80d8-019a">
+                    <profile name="Breaching Engineer Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="76d5-880f-80d8-019a">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
                     </profile>
@@ -3998,7 +3995,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="11"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4030,11 +4027,11 @@
                     <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="8059-c961-12dd-6609-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Naval Infantryman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5f03-5176-f253-5c01">
+                    <profile name="Breaching Engineer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5f03-5176-f253-5c01">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
                     </profile>
@@ -4060,7 +4057,7 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="11"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4079,17 +4076,17 @@
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7e24-579c-a147-319d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Naval Infantryman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2e44-2075-90dc-874d">
+                    <profile name="Breaching Engineer Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2e44-2075-90dc-874d">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="11"/>
+                    <cost name="Munitions" typeId="Points" value="13"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5923,10 +5920,10 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Turret" hidden="false" id="7e4d-8239-6af8-16c4">
               <entryLinks>
-                <entryLink import="true" name="Ondeko Autocannon Array" hidden="false" id="6584-16de-8dbf-1193" type="selectionEntry" targetId="7248-6012-888a-1365">
+                <entryLink import="true" name="Ondeko Autocannon" hidden="false" id="6584-16de-8dbf-1193" type="selectionEntry" targetId="7248-6012-888a-1365">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="437e-8ae9-a423-147f-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="437e-8ae9-a423-147f-max" includeChildSelections="false"/>
+                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="437e-8ae9-a423-147f-min" includeChildSelections="false"/>
+                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="437e-8ae9-a423-147f-max" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
               </entryLinks>

@@ -104,6 +104,7 @@
         <categoryLink targetId="54db-5889-a382-77cb" id="9dc9-0147-df21-333f" primary="true" name="CORE Recon"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="3450-4ada-88e4-ede1" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="2018-9722-0c01-f30e" id="f308-5fd5-8d98-411d" primary="false" name="NFR"/>
+        <categoryLink targetId="de0d-e12c-a964-4e46" id="58be-4ab3-54c3-2a37" primary="false" name="Vehicle"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
@@ -807,7 +808,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="LeMat 12 FC" hidden="false" id="10aa-dc43-91ed-2faa" collective="true">
       <costs>
-        <cost name="Munitions" typeId="Points" value="6"/>
+        <cost name="Munitions" typeId="Points" value="7"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -834,11 +835,7 @@
     <selectionEntry type="upgrade" import="true" name="Industrial Drill" hidden="false" id="ed45-160e-b1d8-3a37">
       <infoLinks>
         <infoLink name="Industrial Drill" id="49a7-1464-b07b-625d" hidden="false" type="profile" targetId="ecb9-8e0e-b27d-b10"/>
-        <infoLink name="Heat Ray" id="d032-7ba0-d9d8-03e4" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="7" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="d032-7ba0-d9d8-03e4" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="29"/>
@@ -873,18 +870,14 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Canon à Chaleur" hidden="false" id="7fcc-2bdf-e932-b1fc" collective="true">
       <costs>
-        <cost name="Munitions" typeId="Points" value="14"/>
+        <cost name="Munitions" typeId="Points" value="31"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <infoLinks>
         <infoLink name="Canon à Chaleur" id="bd83-da8f-57ce-5e10" hidden="false" type="profile" targetId="4b1-d2f8-dbc5-82dd"/>
-        <infoLink name="Heat Ray" id="e998-646c-c38f-562d" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="7" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="e998-646c-c38f-562d" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mitrailleuse à énergie" hidden="false" id="4109-b725-7852-c94" collective="true">
@@ -903,26 +896,14 @@
     <selectionEntry type="upgrade" import="true" name="20mm Autocanon" hidden="false" id="8fc6-964b-9e3b-7fe6" collective="true">
       <infoLinks>
         <infoLink name="20mm Autocanon" id="90b5-a0f5-305c-11ab" hidden="false" type="profile" targetId="c5fe-129d-cd83-8728"/>
-        <infoLink name="Flak Shells" id="df90-133f-9363-c396" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Concussive" id="df90-133f-9363-c396" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="15"/>
+        <cost name="Munitions" typeId="Points" value="24"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Twin 20mm Autocanon" hidden="false" id="47ea-d1f3-8806-48c8">
-      <costs>
-        <cost name="Munitions" typeId="Points" value="26"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Twin 20mm Autocanon" id="e811-ab67-f0ea-fdd6" hidden="false" type="profile" targetId="7978-2315-1720-9cd0"/>
-        <infoLink name="Flak Shells" id="b65d-8cfb-8df2-61f5" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="MAS 35 Inspirateur" hidden="false" id="59cb-4b56-9cbf-d25a" collective="true">
       <infoLinks>
@@ -940,14 +921,10 @@
     <selectionEntry type="upgrade" import="true" name="MAS 34 Chaleur" hidden="false" id="6c7f-f595-2ad4-144e" collective="true">
       <infoLinks>
         <infoLink name="MAS 34 Chaleur" id="cf1c-4069-e8e6-976b" hidden="false" type="profile" targetId="9b9f-95e6-5167-dabf"/>
-        <infoLink name="Heat Ray" id="2707-1456-fbba-1e9f" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="5" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="2707-1456-fbba-1e9f" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="8"/>
+        <cost name="Munitions" typeId="Points" value="14"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1067,11 +1044,7 @@
       </costs>
       <infoLinks>
         <infoLink name="Gros Canon à Chaleur" id="4957-fdb-d04d-e85c" hidden="false" type="profile" targetId="ca7c-afde-49ea-6e88"/>
-        <infoLink name="Heat Ray" id="7dd0-1133-15cc-5349" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="7" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="7dd0-1133-15cc-5349" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="105mm Obusier (Direct Fire)" hidden="false" id="d7bd-1c9-fa1b-fc6e">
@@ -1184,7 +1157,7 @@
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="121"/>
+        <cost name="Munitions" typeId="Points" value="139"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1490,7 +1463,7 @@
         <infoLink name="Brandt Mle 29/35 Mortier" id="e035-f4a6-ceba-cedb" hidden="false" type="profile" targetId="a125-446e-820a-c95f"/>
         <infoLink name="Ordnance" id="c650-4b85-2aea-576b" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
-            <modifier type="append" value="2" field="name"/>
+            <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1645,7 +1618,7 @@
     <profile name="LeMat 12 FC" typeId="Weapon" typeName="Weapon" hidden="false" id="8a04-d4ec-82d9-516d">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Point Blank, Scattershot</characteristic>
@@ -1694,11 +1667,11 @@
     </profile>
     <profile name="Canon à Chaleur" typeId="Weapon" typeName="Weapon" hidden="false" id="4b1-d2f8-dbc5-82dd">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 7</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Ray</characteristic>
       </characteristics>
     </profile>
@@ -1714,18 +1687,8 @@
     </profile>
     <profile name="20mm Autocanon" typeId="Weapon" typeName="Weapon" hidden="false" id="c5fe-129d-cd83-8728">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Twin 20mm Autocanon" typeId="Weapon" typeName="Weapon" hidden="false" id="7978-2315-1720-9cd0">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">7</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
@@ -1744,11 +1707,11 @@
     </profile>
     <profile name="MAS 34 Chaleur" typeId="Weapon" typeName="Weapon" hidden="false" id="9b9f-95e6-5167-dabf">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">N/A</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 5</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Ray</characteristic>
       </characteristics>
     </profile>
@@ -1824,11 +1787,11 @@
     </profile>
     <profile name="Gros Canon à Chaleur" typeId="Weapon" typeName="Weapon" hidden="false" id="ca7c-afde-49ea-6e88">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 7</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Energy, Ranged</characteristic>
       </characteristics>
     </profile>
@@ -1896,7 +1859,7 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">600&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">8</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3, Bombard 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
@@ -2068,7 +2031,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2335,7 +2298,11 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3a9-5e5a-a9e0-c12a" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="FEM &quot;La Faux&quot; Rotary Cannon" hidden="false" id="df62-fe32-ceb4-1444" type="selectionEntry" targetId="ff0d-12b3-9965-ccd4"/>
+                    <entryLink import="true" name="FEM &quot;La Faux&quot; Rotary Cannon" hidden="false" id="df62-fe32-ceb4-1444" type="selectionEntry" targetId="ff0d-12b3-9965-ccd4">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cc9-c99a-bf93-1302" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Twin 20mm Autocanon" hidden="false" id="8ef0-219b-214e-fa4b">
@@ -2344,12 +2311,17 @@
                         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Twin 20mm Autocanon" id="908a-6337-1ea5-1d89" hidden="false" type="profile" targetId="7978-2315-1720-9cd0"/>
-                      </infoLinks>
                       <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b18-2e87-a6f5-42ea" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d05d-6358-0025-1a07" includeChildSelections="false"/>
                       </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="20mm Autocanon" hidden="false" id="f0f1-fe95-aa6d-ddfe" type="selectionEntry" targetId="8fc6-964b-9e3b-7fe6">
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="7952-6b48-67b0-b680-min" includeChildSelections="false"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7952-6b48-67b0-b680-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -3790,14 +3762,9 @@
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule name="Inspire Élan" id="89f5-0a26-b905-702a" hidden="false">
-              <description>This Unit cannot gain more than one Suppression Token in a round.</description>
-            </rule>
-          </rules>
           <infoLinks>
-            <infoLink name="Designated Leader" id="6528-4f7d-af13-e900" hidden="false" targetId="8e52-a616-aab9-73b8" type="rule"/>
             <infoLink name="Command Actions" id="1fc2-2fbc-09b9-3c46" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Distributed Command" id="920f-5317-4975-1133" hidden="false" type="rule" targetId="71be-d9b3-dff9-cc7e"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Commissaires" id="9a74-1123-f162-5b98" hidden="false" collective="false" import="true">
@@ -3847,6 +3814,14 @@
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <rules>
+                    <rule name="Inspire Élan" id="89f5-0a26-b905-702a" hidden="false">
+                      <description>This Unit cannot gain more than one Suppression Token in a round.</description>
+                    </rule>
+                  </rules>
+                  <infoLinks>
+                    <infoLink name="Designated Leader" id="6528-4f7d-af13-e900" hidden="false" targetId="8e52-a616-aab9-73b8" type="rule"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -4450,6 +4425,35 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry type="model" import="true" name="Fantassin with LMG" hidden="false" id="662b-cdde-4282-a56c" collective="false">
+                  <constraints>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="055c-1845-2e4f-ef75" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Fantassin" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2025-d169-3bfc-c757">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <entryLinks>
+                    <entryLink import="true" name="FEM Chauchat" hidden="false" id="6621-a5c9-78a8-875e" collective="false" targetId="1781-669c-fd8e-e2ab" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bfba-1399-ae19-e5ce" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7de1-c6ec-16e8-d2cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="6"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -4618,7 +4622,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fffb-c16f-76f7-603f" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Looted Machine Gun" hidden="false" id="f74d-c3e1-696e-0013" type="selectionEntry" targetId="4e69-8b7e-80c8-537e"/>
+                    <entryLink import="true" name="Looted Machine Gun" hidden="false" id="f74d-c3e1-696e-0013" type="selectionEntry" targetId="4e69-8b7e-80c8-537e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a2e0-8a7e-f393-214f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a2e0-8a7e-f393-214f-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                     <entryLink import="true" name="Partisan Melee Weapon" hidden="false" id="d198-9bca-cf83-784e" collective="false" targetId="37d4-c-cf7d-d7cd" type="selectionEntry">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a6b5-f76a-e8fa-d9bb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7255,12 +7264,22 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model. He may activat
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bade-ce08-2e23-7780" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Twin 20mm Autocanon" hidden="false" id="36a6-c04e-8958-8eaa" type="selectionEntry" targetId="47ea-d1f3-8806-48c8">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3bfc-e0ff-7246-1042" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Twin 20mm Autocannons" hidden="false" id="0184-780f-c52b-f4d8">
+                      <entryLinks>
+                        <entryLink import="true" name="20mm Autocanon" hidden="false" id="7232-616f-a810-53ca" type="selectionEntry" targetId="8fc6-964b-9e3b-7fe6">
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="db54-2640-e62b-d50e-min" includeChildSelections="false"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="db54-2640-e62b-d50e-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="311e-fb86-3f67-c1de" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <selectionEntries>

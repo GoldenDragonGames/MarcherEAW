@@ -542,7 +542,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Veteran Landwehr" hidden="false" id="4f43-e2e6-f017-5c7f" type="selectionEntry" targetId="67bf-4e27-a001-9987">
+    <entryLink import="true" name="Veteran Landwehr Squad" hidden="false" id="4f43-e2e6-f017-5c7f" type="selectionEntry" targetId="67bf-4e27-a001-9987">
       <categoryLinks>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="1c85-8f60-f1d5-9220" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="ac77-6b41-a4b6-edaf" primary="false" name="Troop"/>
@@ -875,13 +875,13 @@
         <categoryLink id="af88-47ec-7407-4015" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="8328-5870-ad86-ba38" name="Looming Behemoth" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8328-5870-ad86-ba38" name="Stahlschutz" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e812-1e88-16d0-1d6b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a301-3ea8-14eb-3187" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="172d-33af-831c-7b10" name="Flieg für den Thron – Sieg für die Krone!" hidden="false" targetId="7498-ac28-f25d-82d8" type="rule"/>
+            <infoLink id="172d-33af-831c-7b10" name="Stahlschutz" hidden="false" targetId="7498-ac28-f25d-82d8" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -899,10 +899,10 @@
     <selectionEntry type="upgrade" import="true" name="2cm Autocannon" hidden="false" id="c7ef-dc76-d58d-4167" collective="true">
       <infoLinks>
         <infoLink name="2cm Autocannon" id="80ff-bab2-e8f4-6cf9" hidden="false" targetId="2e0c-9e71-c3ee-6e5b" type="profile"/>
-        <infoLink name="Flak Shells" id="fa52-7377-7af5-3026" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Concussive" id="fa52-7377-7af5-3026" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="29"/>
+        <cost name="Munitions" typeId="Points" value="39"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -911,10 +911,10 @@
     <selectionEntry type="upgrade" import="true" name="4cm Autocannon" hidden="false" id="6a2b-198d-743e-54ea" collective="true">
       <infoLinks>
         <infoLink name="4cm Autocannon" id="ad2f-b2d3-125e-8ccd" hidden="false" targetId="364f-9d78-f5a9-ea45" type="profile"/>
-        <infoLink name="Flak Shells" id="086b-1309-3c26-7579" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Concussive" id="086b-1309-3c26-7579" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="31"/>
+        <cost name="Munitions" typeId="Points" value="60"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -963,10 +963,9 @@
       <infoLinks>
         <infoLink name="12cm High Velocity Cannon" id="2a15-4529-9cb4-b541" hidden="false" targetId="a1ed-00f9-94fc-fc87" type="profile"/>
         <infoLink name="Critical Shot" id="8aa5-4c6-4767-7859" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
-        <infoLink name="High Explosive" id="7431-bbb6-af97-a905" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="143"/>
+        <cost name="Munitions" typeId="Points" value="78"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1020,12 +1019,12 @@
         <infoLink name="27m Höllenwerfer Rocket Launcher" id="0d83-a09b-2b3c-8992" hidden="false" targetId="cb17-69ad-9aa2-5809" type="profile"/>
         <infoLink name="Ordnance" id="9791-3246-392a-3817" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
-            <modifier type="append" value="2" field="name"/>
+            <modifier type="append" value="4" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="122"/>
+        <cost name="Munitions" typeId="Points" value="74"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1057,7 +1056,7 @@
         <infoLink name="32M Granatewerfer" id="941f-55b8-6bf5-ed8a" hidden="false" targetId="f4ae-6218-f063-bfac" type="profile"/>
         <infoLink name="Ordnance" id="9421-e29b-53f3-1ad7" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
-            <modifier type="append" value="2" field="name"/>
+            <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1230,11 +1229,6 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-      <rules>
-        <rule name="Knecht Mace and Shield" id="2878-6601-dd75-dd41" hidden="false">
-          <description>When rolling Shield Checks against a Unit equipped with this Weapon, the Checks must be made as 5+</description>
-        </rule>
-      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="M1920 WS Flammenwerfer" hidden="false" id="a566-91a1-5d24-abdc" collective="true">
       <infoLinks>
@@ -1329,14 +1323,10 @@
     <selectionEntry type="upgrade" import="true" name="M1935 Heat Torch" hidden="false" id="dfd5-e186-26ed-5aa2" collective="true">
       <infoLinks>
         <infoLink name="M1935 Heat Torch" id="8d75-d158-d58d-e819" hidden="false" type="profile" targetId="4e65-47cd-f562-c549"/>
-        <infoLink name="Heat Ray" id="a5c4-197d-8d4c-70c5" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="5" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="a5c4-197d-8d4c-70c5" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="8"/>
+        <cost name="Munitions" typeId="Points" value="14"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1655,14 +1645,10 @@
     <selectionEntry type="upgrade" import="true" name="22M Heat Cannon" hidden="false" id="8bfe-af51-51c3-82c1">
       <infoLinks>
         <infoLink name="22M Heat Cannon" id="b8ab-9170-ca43-a506" hidden="false" type="profile" targetId="1c00-4621-075b-f314"/>
-        <infoLink name="Heat Ray" id="14fb-2cc7-6c3c-810d" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="6" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="14fb-2cc7-6c3c-810d" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="15"/>
+        <cost name="Munitions" typeId="Points" value="31"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1673,8 +1659,8 @@
     <rule id="4565-e3f5-c290-9d99" name="Adjustable Sights" hidden="false">
       <description>When making an attack action with this weapon at less than half of its maximum range, this unit gains an Aim Token.</description>
     </rule>
-    <rule id="7498-ac28-f25d-82d8" name="Flieg für den Thron – Sieg für die Krone!" hidden="false">
-      <description>Ranged attacks from units without the flying keyword have -2 to hit Zeppelin units this round.</description>
+    <rule id="7498-ac28-f25d-82d8" name="Stahlschutz" hidden="false">
+      <description>After activating this ability, all allied Troop Units that are within 20&quot; of this model may activate their shield one additional time this round.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1830,12 +1816,12 @@
     </profile>
     <profile id="2e0c-9e71-c3ee-6e5b" name="2cm Autocannon" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Heavy, Cannon, Ranged</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
     <profile id="f4ae-6218-f063-bfac" name="32M Granatewerfer" hidden="false" typeId="Weapon" typeName="Weapon">
@@ -1844,7 +1830,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Ordnance, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1870,11 +1856,11 @@
     </profile>
     <profile id="cb17-69ad-9aa2-5809" name="27m Höllenwerfer Rocket Launcher" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">48&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 2</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1D5+3</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Ranged, Rocket</characteristic>
       </characteristics>
     </profile>
@@ -1900,11 +1886,11 @@
     </profile>
     <profile id="364f-9d78-f5a9-ea45" name="4cm Autocannon" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2091,10 +2077,10 @@
     <profile name="M1935 Heat Torch" typeId="Weapon" typeName="Weapon" hidden="false" id="4e65-47cd-f562-c549">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 5</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Ray</characteristic>
       </characteristics>
     </profile>
@@ -2241,10 +2227,10 @@
     <profile name="22M Heat Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="1c00-4621-075b-f314">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 6</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Ray</characteristic>
       </characteristics>
     </profile>
@@ -2289,7 +2275,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Armor Vehicle Actions" id="7c2e-db40-8c38-0f4b" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
-            <infoLink name="Shield Generator" id="a10f-33c0-78b0-b932" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule"/>
             <infoLink name="Cook Off" id="39a1-287d-8f95-57a6" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
           </infoLinks>
           <selectionEntries>
@@ -2528,7 +2513,7 @@
           </entryLinks>
           <rules>
             <rule name="Directed Shields" id="e38f-ecde-4496-9277" hidden="false">
-              <description>If this Unit Activates its Shield Generator as a Reaction to an Attack against its Frontal Armor Profile, the Shield Check must be made as a 6+ instead.</description>
+              <description>If this Unit Activates its Shield Generator against an Attack against its Frontal Armor Profile, it gains Bulwark 4 until the attack is resolved.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -2574,7 +2559,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Armor Vehicle Actions" id="0ddd-d16e-42f7-fefb" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
-            <infoLink name="Shield Generator" id="12c7-ffcb-a0b3-b15a" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule"/>
             <infoLink name="Cook Off" id="2f27-419f-87e7-9b7f" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
           </infoLinks>
           <selectionEntries>
@@ -2857,7 +2841,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Armor Vehicle Actions" id="be50-3080-eeea-1616" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
-            <infoLink name="Shield Generator" id="309c-482c-079a-c0dc" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule"/>
             <infoLink name="Big Game Hunter" id="b35c-651a-d235-3385" hidden="false" type="rule" targetId="22ef-ed51-bdad-4ad4"/>
             <infoLink name="Forward Positions" id="fb39-cbeb-6e83-e9b4" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
             <infoLink name="Cook Off" id="f3f8-1fbd-5680-a0c0" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
@@ -2956,9 +2939,9 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Infantry" id="3c7e-bc8e-c290-542e" hidden="false">
       <selectionEntries>
-        <selectionEntry type="unit" import="true" name="Veteran Landwehr" hidden="false" id="67bf-4e27-a001-9987" collective="false">
+        <selectionEntry type="unit" import="true" name="Veteran Landwehr Squad" hidden="false" id="67bf-4e27-a001-9987" collective="false">
           <profiles>
-            <profile name="Veteran Landwehr" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c007-d178-f284-6874">
+            <profile name="Veteran Landwehr Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c007-d178-f284-6874">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Unteroffizier , 5-9x  Veterans, 0-2x Stabsgrefrieters, 0-1x Flagbearer, &amp; 0-1x Sanitäter</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
@@ -3335,6 +3318,19 @@
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
+            <selectionEntryGroup name="Form MG36 Team" id="f731-346c-2f67-e0fb" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="MG36 Medium Machine Gun" hidden="false" id="04c0-f608-3514-f300" type="selectionEntry" targetId="71b3-782b-df7f-f847"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="868a-6c76-f2c7-cfd7"/>
+              </constraints>
+              <rules>
+                <rule name="Form MG36 Team" id="f67a-fbd9-3562-38a3" hidden="false">
+                  <description>You may remove two models from this unit and add one MG36 team model. This unit is equipped with all equipment and hit points from the removed models, as well as one MG36 Medium Machine Gun. Limit one team per unit.</description>
+                </rule>
+              </rules>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -3387,7 +3383,7 @@
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3439,7 +3435,7 @@
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3473,6 +3469,11 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="48db-ca76-5a24-8bc5"/>
               </constraints>
+              <rules>
+                <rule name="Form MG36 Team" id="2247-c00d-59a4-4427" hidden="false">
+                  <description>You may remove two models from this unit and add one MG36 team model. This unit is equipped with all equipment and hit points from the removed models, as well as one MG36 Medium Machine Gun. Limit one team per unit.</description>
+                </rule>
+              </rules>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
@@ -3488,11 +3489,8 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="Form MG36 Team" id="2247-c00d-59a4-4427" hidden="false">
-              <description>You may remove two models from this unit and add one MG36 team model. This unit is equipped with all equipment and hit points from the removed models, as well as one MG36 Medium Machine Gun. Limit one team per unit.</description>
-            </rule>
             <rule name="Mozgósítási Menetrend" id="aa86-e984-34d7-f568" hidden="false">
-              <description>When this Unit makes an Attack Action, if it is not the First Round, it gains an Aim Token.</description>
+              <description>When you use the Reinforcement Special Requisition targeting this Unit, it is deployed at full strength.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -3839,6 +3837,19 @@
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
+            <selectionEntryGroup name="Form MG36 Team" id="9ff1-0b5f-2c0d-540a" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="MG36 Medium Machine Gun" hidden="false" id="f10f-0882-e1a8-a4bb" type="selectionEntry" targetId="71b3-782b-df7f-f847"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d83-cbb3-0fce-26fc"/>
+              </constraints>
+              <rules>
+                <rule name="Form MG36 Team" id="c93c-1ebe-a911-7f86" hidden="false">
+                  <description>You may remove two models from this unit and add one MG36 team model. This unit is equipped with all equipment and hit points from the removed models, as well as one MG36 Medium Machine Gun. Limit one team per unit.</description>
+                </rule>
+              </rules>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
             <entryLink import="true" name="Troops Upgrades" hidden="false" id="c0e6-acb1-fcbc-09ee" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
@@ -3855,7 +3866,7 @@
           </costs>
           <rules>
             <rule name="Festung Doctrine" id="5c64-c258-adab-319c" hidden="false">
-              <description>This Unit may activate its Shield Generator an additional time each Round, even after its own Activation. If it does, it gains a Suppression Token.</description>
+              <description>This Unit may activate its Shield Generator an additional time each Round.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -6631,7 +6642,7 @@
           </entryLinks>
           <rules>
             <rule name="High-Powered Shield Generator" id="c790-801a-7652-e4c7" hidden="false">
-              <description>When Shield Checks are made against this Unit, they are performed as a 6+</description>
+              <description>When this Unit activates its Shield Generator, it may reduce incoming weapons AP by an additional 2 once without spending an Action. It may do this even if it has already Activated.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -7121,7 +7132,6 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Shield Generator" id="a5eb-1fc5-fbc6-152f" hidden="false" targetId="6db2-42c0-b23d-3b14" type="rule"/>
             <infoLink name="Flying" id="9a43-e029-0715-34b9" hidden="false" targetId="06f4-93c5-6f93-d4df" type="rule"/>
             <infoLink name="Cumbersome" id="94ac-4b97-f9c1-994d" hidden="false" targetId="4c9f-32f0-9723-17cb" type="rule"/>
             <infoLink name="Intelligence" id="469c-d600-640f-eee7" hidden="false" targetId="dc7a-f7c9-a54a-9cbc" type="rule"/>
@@ -7362,7 +7372,7 @@
               <description>You may use the Well Informed Special Requisition any number of times per Round, so long as the the additional uses apply to Friendly Units within 12&quot; of this one.</description>
             </rule>
             <rule name="High-Powered Shield Generator" id="f726-0287-b9b2-1dce" hidden="false">
-              <description>When Shield Checks are made against this Unit, they are performed as a 6+</description>
+              <description>When this Unit activates its Shield Generator, it may reduce incoming weapons AP by an additional 2 once without spending an Action. It may do this even if it has already Activated.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -7378,7 +7388,7 @@
             <selectionEntry type="upgrade" import="true" name="Cross of Merit" hidden="false" id="bac3-ec44-f375-7d43">
               <rules>
                 <rule name="Cross of Merit" id="e478-e832-6267-6219" hidden="false">
-                  <description>Units in this Commander&apos;s Platoon recieve an Aim Token when they take a Reaction.</description>
+                  <description>Units in this Commander&apos;s Platoon gain a Level of Cover when they activate their Shield Generator until the next time they take a Movement Action.</description>
                 </rule>
               </rules>
               <costs>

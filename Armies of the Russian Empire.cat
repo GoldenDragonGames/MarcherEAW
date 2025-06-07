@@ -234,14 +234,10 @@
     <selectionEntry type="upgrade" import="true" name="TV-18 Heat Rifle" hidden="false" id="4942-5519-ab04-07a7" collective="true">
       <infoLinks>
         <infoLink name="TV-18 Heat Rifle" id="ca86-cb87-fcb1-ceda" hidden="false" type="profile" targetId="7064-a18e-f755-44ca"/>
-        <infoLink name="Heat Ray" id="bd2f-ca4b-758d-4ce7" hidden="false" type="rule" targetId="56bf-a271-a758-6f38">
-          <modifiers>
-            <modifier type="append" value="5" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Heat Ray" id="bd2f-ca4b-758d-4ce7" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="9"/>
+        <cost name="Munitions" typeId="Points" value="14"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -477,10 +473,10 @@
     <selectionEntry type="upgrade" import="true" name="2.5cm Autocannon" hidden="false" id="28a4-7b12-e3cf-4eb8" collective="true">
       <infoLinks>
         <infoLink name="2.5cm Autocannon" id="ca7f-d4a1-926b-3129" hidden="false" type="profile" targetId="c7dc-5d08-9dc2-07bc"/>
-        <infoLink name="Flak Shells" id="e58e-3820-a09c-c02e" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Concussive" id="e58e-3820-a09c-c02e" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="20"/>
+        <cost name="Munitions" typeId="Points" value="24"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -658,10 +654,10 @@
     <selectionEntry type="upgrade" import="true" name="3.7cm Autocannon" hidden="false" id="a00c-34ea-5ba9-45d0" collective="true">
       <infoLinks>
         <infoLink name="3.7cm Autocannon" id="1598-5973-1654-4755" hidden="false" type="profile" targetId="436d-87c2-a8bc-9ee4"/>
-        <infoLink name="Flak Shells" id="c37a-0911-d829-49e5" hidden="false" type="rule" targetId="57bd-6e01-9873-bd79"/>
+        <infoLink name="Concussive" id="c37a-0911-d829-49e5" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="24"/>
+        <cost name="Munitions" typeId="Points" value="32"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -966,13 +962,42 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Armored Train Detachment Abilities" hidden="false" id="e64d-2383-e16f-1dff" collective="false">
+      <categoryLinks>
+        <categoryLink name="Infantry Platoon Configuration" hidden="false" id="0f37-0faf-e940-6d52" targetId="85c7-9688-a121-1bdc" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Full Steam Ahead!" hidden="false" id="e9f0-ee5e-7db0-8424" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51bd-44c5-6029-1757" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e660-acdc-2fd9-d2b5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+          </costs>
+          <rules>
+            <rule name="Full Steam Ahead!" id="1bb2-0867-1d62-3133" hidden="false">
+              <description>When you select an Armored Train Carriage to Activate this Round, you may immediately Activate another as soon as the first resolves all of its Actions. No more than 2 Carriages may Activate back-to-back.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="0"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="2.5cm Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="c7dc-5d08-9dc2-07bc">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">16&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
@@ -1035,7 +1060,7 @@
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Machine Gun, Ranged</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Machine Gun, Kinetic</characteristic>
       </characteristics>
     </profile>
     <profile name="Kulakov Infantry Grenade Launcher" typeId="Weapon" typeName="Weapon" hidden="false" id="9dd8-b7da-a316-4d55">
@@ -1112,9 +1137,9 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray 5</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Ray</characteristic>
       </characteristics>
     </profile>
@@ -1281,7 +1306,7 @@
     <profile name="BM-13 Katyusha Multiple Rocket Launcher" typeId="Weapon" typeName="Weapon" hidden="false" id="4862-ae90-c4ef-09ab">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">10</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3D5+1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 6</characteristic>
@@ -1330,11 +1355,11 @@
     </profile>
     <profile name="3.7cm Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="436d-87c2-a8bc-9ee4">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">20&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Flak Shells</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2198,17 +2223,16 @@
       <description>Each individual weapon in this Unit with Enhanced Plasma applies a Slag Token, as if it were a separate instance of Slag.</description>
     </rule>
     <rule name="Novaya Zemlya Cloud Engine" id="ffea-d5ff-f989-1a15" hidden="false">
-      <description>Apply the Blizzard Battlefield Condition to any Unit wholly within X inches of this Unit. 
-- All Weapons ranges are reduced by 2 inches. 
-- Maximum range for all Weapons becomes 28 inches (except for weapons with Ordnance). 
-- Any Movement taken is considered to be over Rough terrain. 
-- Each Unit that can, gains a Suppression Token if they move more than once in a Round.</description>
+      <description>This Unit may take the Freeze Action. Units within X inches of this model are subject to the effects of one additional category level of the Blizzard.</description>
     </rule>
     <rule name="Blessed Relic" id="6ba4-7959-19ce-304b" hidden="false">
       <description>Whenever this Unit would receive a Suppression Token, roll a D10, on a roll of 7+, that token is not applied.</description>
     </rule>
     <rule name="Adjustable Sights" id="58d3-a00a-c0c4-e7d9" hidden="false">
       <description>When making an attack action with this weapon at less than half of its maximum range, this unit gains an Aim Token.</description>
+    </rule>
+    <rule name="Freeze" id="f31c-1dc3-9251-1d62" hidden="false">
+      <description>As a standard Action, this unit may attempt to intensify the Blizzard to the next Category. If it does, roll a D10, then consult the Blizzard Chart. You may reroll failed rolls once for every Freeze Action that has been taken this round. To take this action, for every Category Level of the Blizzard, this Unit must be 6&quot; away from all other units that may take this action. The Blizzard may not gain more than one Category Level per round.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntryGroups>
@@ -2482,7 +2506,7 @@
           </costs>
           <rules>
             <rule name="General Winter" id="64a7-77f0-4508-cbaa" hidden="false">
-              <description>If this Unit is within the Blizzard Condition, increase its Evasion Profile by 2.</description>
+              <description>For every two total Category levels of the Blizzard this Unit is within, increase this Unit&apos;s Evasion by 1.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -2681,7 +2705,6 @@
           <infoLinks>
             <infoLink name="Armor Vehicle Actions" id="ab0e-5961-aed7-e8c9" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
             <infoLink name="Catastrophic Detonation" id="96f5-6843-6121-d3ca" hidden="false" type="rule" targetId="ed65-6e21-b743-aab2"/>
-            <infoLink name="Prototype" id="fdd9-ea30-296a-0df1" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
           <rules>
             <rule name="Heavy Casting" id="038e-2093-1bbb-62ed" hidden="false">
@@ -3250,14 +3273,9 @@
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule name="Prototype Product Testing" id="5aa5-7867-9e2c-8025" hidden="false">
-              <description>When this Model is attached to another Unit, choose one of its equipped Weapons, Attacks made by that Weapon profile improve their AP by 1.</description>
-            </rule>
-          </rules>
           <infoLinks>
-            <infoLink name="Designated Leader" id="8e65-5b1e-a5a7-7158" hidden="false" targetId="8e52-a616-aab9-73b8" type="rule"/>
             <infoLink name="Command Actions" id="b545-9631-eca6-7cf1" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
+            <infoLink name="Distributed Command" id="244c-1b87-df63-0b32" hidden="false" type="rule" targetId="71be-d9b3-dff9-cc7e"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Corporate Officers" id="cca7-8be6-a367-5e60" hidden="false" collective="true" import="true">
@@ -3325,6 +3343,14 @@
                       </constraints>
                     </entryLink>
                   </entryLinks>
+                  <rules>
+                    <rule name="Prototype Product Testing" id="5aa5-7867-9e2c-8025" hidden="false">
+                      <description>When this Model is attached to another Unit, choose one of its equipped Weapons, Attacks made by that Weapon profile improve their AP by 1.</description>
+                    </rule>
+                  </rules>
+                  <infoLinks>
+                    <infoLink name="Designated Leader" id="8e65-5b1e-a5a7-7158" hidden="false" targetId="8e52-a616-aab9-73b8" type="rule"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -3388,6 +3414,9 @@
           <rules>
             <rule name="Forwards for Russia!" id="f6e5-e1ed-79d5-c8ff" hidden="false">
               <description>As a Standard Action, select two Cavalry Units within 6&quot; of this Unit, they may immediately perform a Free Dash Action.</description>
+            </rule>
+            <rule name="Runners" id="196f-401b-7b90-515b" hidden="false">
+              <description>This Unit ignores the effects of Rough Terrain.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -3760,6 +3789,7 @@
             <infoLink name="(CORE) Flex" id="05ea-ebc4-0290-f0a4" hidden="false" type="rule" targetId="05cc-45cd-4600-22d8"/>
             <infoLink name="Low Profile" id="5ecb-ba10-7fb8-a46d" hidden="false" type="rule" targetId="06ae-c996-2397-250a"/>
             <infoLink name="Rank has its Privileges" id="ed52-8402-e1d4-424b" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
+            <infoLink name="Command Car" id="f748-527d-a824-a0d1" hidden="false" type="rule" targetId="1cbf-8529-3a35-86c6"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Machine Gun Mount" hidden="false" id="c427-7054-0f24-b4df">
@@ -3812,11 +3842,6 @@
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule name="Command Car" id="2a61-91c5-d0e6-d4ef" hidden="false">
-              <description>When this Unit issues an Order, choose an unordered Unit within 8&quot; of that one, that Unit is also ordered.</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4274,8 +4299,8 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <rules>
-            <rule name="Outnumber" id="3e44-3a59-7df2-bd1e" hidden="false">
-              <description>Attacks made by this unit which target enemy units with fewer models get +1 to hit. If the enemy unit is outnumbered by 10 or more models, this unit gets an additional +1 to hit.</description>
+            <rule name="Uraaa!" id="3e44-3a59-7df2-bd1e" hidden="false">
+              <description>If this Unit moves more than 4&quot; in a straight line, all of its equipped weapons with the Melee keyword gain Charge.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4706,7 +4731,7 @@
           </profiles>
           <rules>
             <rule name="Pavlovsky Life Guard" id="83ad-ae19-a4ea-0124" hidden="false">
-              <description>When this unit attacks a unit that is within 8&apos;&apos; of it, this unit gains an aim token.</description>
+              <description>For every two total Category levels of the Blizzard this Unit is within, increase each Models HP by 1 for the purposes of Objective Control.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -4928,7 +4953,7 @@
           </selectionEntryGroups>
           <rules>
             <rule name="Dogs of War" id="d6d2-eb8f-1cf2-505d" hidden="false">
-              <description>Each time this Unit eliminates a Troop Unit, it may immediately perform a Free Dash Action.</description>
+              <description>Each time this Unit Destroys a Troop Unit, it may immediately perform a Free Dash Action.</description>
             </rule>
             <rule name="In the Name of the Tsar" id="3e35-e9e5-ab09-595c" hidden="false">
               <description>As an Action, after Destroying an Enemy Troop Unit, this Unit may Extract Intel. If it does, gain 2 Intel Points.</description>
@@ -5587,7 +5612,7 @@
           </costs>
           <rules>
             <rule name="Braced Firing Position" id="75b6-cf93-aaf2-ae23" hidden="false">
-              <description>If this Unit has not taken the Move Action this activation, they may take a Free Aim Action.</description>
+              <description>If this Unit has not taken the Move Action this Activation, they may reroll failed Hits.</description>
             </rule>
             <rule name="Technik Arms" id="a987-c29b-18a1-0deb" hidden="false">
               <description>This Unit may reroll failed Armor Checks made during Melee Attacks. If it does, gain a Suppression Token.</description>
@@ -7239,7 +7264,7 @@
             <infoLink name="Hippocratic Oath" id="25be-6364-6998-b8e7" hidden="false" type="rule" targetId="14f0-63cf-f0f4-79b4"/>
           </infoLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="38"/>
+            <cost name="Munitions" typeId="Points" value="100"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -7788,9 +7813,9 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Cars" id="489a-3c34-53ef-5b50" hidden="false">
+            <selectionEntryGroup name="Carriages" id="489a-3c34-53ef-5b50" hidden="false">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Artillery Car" hidden="false" id="ffc1-f3be-f269-04ff">
+                <selectionEntry type="upgrade" import="true" name="Artillery Carriage" hidden="false" id="ffc1-f3be-f269-04ff">
                   <costs>
                     <cost name="Munitions" typeId="Points" value="133"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -7833,11 +7858,12 @@
                       </modifiers>
                     </infoLink>
                     <infoLink name="Cook Off" id="4305-af24-58a3-2239" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
+                    <infoLink name="Cumbersome" id="d877-1524-1701-19c0" hidden="false" type="rule" targetId="4c9f-32f0-9723-17cb"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Command Car" hidden="false" id="e973-e89d-6022-7f82">
+                <selectionEntry type="upgrade" import="true" name="Command Carriage" hidden="false" id="e973-e89d-6022-7f82">
                   <profiles>
-                    <profile name="Command Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bdf1-4948-b12f-4087">
+                    <profile name="Command Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bdf1-4948-b12f-4087">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">N/A</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
@@ -7871,6 +7897,7 @@
                   </entryLinks>
                   <infoLinks>
                     <infoLink name="Rank has its Privileges" id="7648-0ad9-5171-1fa5" hidden="false" type="rule" targetId="7d1b-65ee-7808-b26d"/>
+                    <infoLink name="Command Car" id="f35e-f590-b970-a15b" hidden="false" type="rule" targetId="1cbf-8529-3a35-86c6"/>
                   </infoLinks>
                   <costs>
                     <cost name="Munitions" typeId="Points" value="133"/>
@@ -7879,7 +7906,7 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Cloud Engine Car" hidden="false" id="c311-7fbf-e03a-e370">
+                <selectionEntry type="upgrade" import="true" name="Cloud Engine Carriage" hidden="false" id="c311-7fbf-e03a-e370">
                   <profiles>
                     <profile name="Cloud Engine Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2753-4f44-6842-b3a4">
                       <characteristics>
@@ -7923,7 +7950,7 @@
                     </infoLink>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Troop Car" hidden="false" id="d41d-944c-c130-de84">
+                <selectionEntry type="upgrade" import="true" name="Troop Carriage" hidden="false" id="d41d-944c-c130-de84">
                   <costs>
                     <cost name="Munitions" typeId="Points" value="133"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -7949,7 +7976,7 @@
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="bd39-a3ea-8823-b579" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Armed Car" hidden="false" id="ec3a-7d0a-7954-33db">
+                <selectionEntry type="upgrade" import="true" name="Armed Carriage" hidden="false" id="ec3a-7d0a-7954-33db">
                   <costs>
                     <cost name="Munitions" typeId="Points" value="133"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -8065,7 +8092,7 @@
                     <infoLink name="Cook Off" id="d1fa-7889-a410-ea29" hidden="false" type="rule" targetId="218f-bd27-8f75-09f4"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Firing Car" hidden="false" id="d908-4498-5b60-8f49">
+                <selectionEntry type="upgrade" import="true" name="Firing Carriage" hidden="false" id="d908-4498-5b60-8f49">
                   <costs>
                     <cost name="Munitions" typeId="Points" value="133"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -8266,7 +8293,7 @@
           </selectionEntries>
           <rules>
             <rule name="Railhead" id="fdb1-7091-984a-ad49" hidden="false">
-              <description>During Deployment, place a Railhead terrain feature fully within your Deployment Zone. This section and all pieces connected to it form a Rail Network. Once you have placed the Railhead and all Rail Sections, place this Unit&apos;s Engine on the Rail Network, then place all cars that will fit onto the Rail Network. All Cars must be connected either to the Engine, or to a Car that is connected to the Engine itself or through any number of other Cars.If this Unit has Cars that do not fit on the rails, they may not be deployed, instead, they must be deployed when this Unit moves down the rails enough to where they now fit.
+              <description>During Deployment, place a Railhead terrain feature fully within your Deployment Zone. This section and all pieces connected to it form a Rail Network. Once you have placed the Railhead and all Rail Sections, place this Unit&apos;s Engine on the Rail Network, then place all cars that will fit onto the Rail Network. All Carriages must be connected either to the Engine, or to a Carriage that is connected to the Engine itself or through any number of other Cars.If this Unit has Carriages that do not fit on the rails, they may not be deployed, instead, they must be deployed when this Unit moves down the rails enough to where they now fit.
 
 
 When this Unit Moves, it may only move forwards or backwards along the Rail Network. 
@@ -8274,7 +8301,7 @@ When this Unit Moves, it may only move forwards or backwards along the Rail Netw
 
 Additional Rail Segments may be built by Engineer Units at the cost of 2SP per Rail Segment.</description>
             </rule>
-            <rule name="Train Cars" id="c662-e154-fc43-0ced" hidden="false">
+            <rule name="Train Carriages" id="c662-e154-fc43-0ced" hidden="false">
               <description>Each Model in this Unit activates, behaves, and must be selected for Attacks as if it were a separate Unit. If one of these Models are destroyed, it may no longer be selected to activate, but remains on the battlefield and moves along with the Engine.</description>
             </rule>
             <rule name="Rolling Might" id="302b-8478-e4f8-f998" hidden="false">
@@ -8308,6 +8335,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
     <categoryEntry name="RUS" id="51a0-4deb-b01b-931e" hidden="false"/>
     <categoryEntry name="CORE Rail" id="368f-586d-f503-841e" hidden="false"/>
     <categoryEntry name="AUX Rail" id="66f8-133e-bf09-29ff" hidden="false"/>
+    <categoryEntry name="Rail Configuration" id="42f4-579a-a43d-b8cc" hidden="false"/>
   </categoryEntries>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
   <forceEntries>
@@ -8322,6 +8350,11 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
         <categoryLink name="AUX Rail" hidden="false" id="7d41-c080-c6f2-9246" targetId="66f8-133e-bf09-29ff">
           <constraints>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="9505-30eb-0db1-6d84" includeChildSelections="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Rail Configuration" hidden="false" id="5c67-eb2a-3796-decb" targetId="42f4-579a-a43d-b8cc">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a7f-c9e3-dc43-98a5"/>
           </constraints>
         </categoryLink>
       </categoryLinks>

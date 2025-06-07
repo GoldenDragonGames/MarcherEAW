@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.7.1" revision="2" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.8.0" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -250,9 +250,11 @@
     <forceEntry name="Recon Platoon" id="df9c-5241-555f-2018" hidden="false">
       <categoryLinks>
         <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="d0f1-279b-c2cb-5de6" targetId="70eb-c264-a9cb-1bfe">
+        <categoryLink name="Command" hidden="false" id="85ce-3a90-edf6-5152" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="20f4-af70-bb12-ec73" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="482d-b182-d748-b861" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e5fb-2f20-d278-9fbc" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1f9a-cd1e-e58c-ceec" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Heroes" hidden="false" id="7c5e-509d-4afa-375f" targetId="33a5-8b7e-49bb-c30d"/>
@@ -993,7 +995,7 @@
       <description>If this Model selects this weapon to attack with. It may not attack with any other differently named weapons this activation.</description>
     </rule>
     <rule id="7235-63bc-0668-6ac4" name="Flames" hidden="false">
-      <description>When making an attack with this weapon, all hits succeed automatically. Apply the Burning condition to any Units attacked with this weapon.</description>
+      <description>When making an Attack with this weapon, all Hits succeed automatically. Apply the Burning condition to any Units attacked with this weapon. When a Model carrying a Weapon with this Special Rule is Destroyed, apply the Burning Condition to the Unit it was a part of, and any Units within 3&quot;.</description>
     </rule>
     <rule id="2056-c454-be5c-ea02" name="Ammo" hidden="false">
       <description>This weapon may only be selected to fire x times per Unit per game.</description>
@@ -1069,7 +1071,7 @@
       <description>This Unit ignores all terrain. This Unit may not receive the benefit of Cover. This Unit may move through other Units. This Unit may not be engaged by other Units unless they also have the Flying keyword. Weapons with less than 12&quot; of Range cannot target this unit for an attack. All ranged attacks that target this Unit receive -1 to hit.</description>
     </rule>
     <rule id="6db2-42c0-b23d-3b14" name="Shield Generator" hidden="false">
-      <description>Once per round, as a Reaction, this Unit may Activate its Shield Generator. This Reaction only costs one Action. If it is activated, the next time it is Attacked the Attacker must first roll an unmodified 4+ Shield Check for each Hit. On a failure the Hit is prevented before moving to the Evasion Check. Attacks from Weapons with the Flames, Gas, or Melee Keywords do not incur Shield Checks.</description>
+      <description>Once per round, as a Reaction, this Unit may Activate its Shield Generator. If it is activated, the next time it is Attacked the Attacker must first roll an unmodified 4+ Shield Check for each Hit. On a failure the Hit is prevented before moving to the Evasion Check. Attacks from Weapons with the Flames, Gas, or Melee Keywords do not incur Shield Checks.</description>
     </rule>
     <rule id="6f53-dabe-1243-14cf" name="Close In" hidden="false">
       <description>When making an Attack with this weapon, Units targeted by this attack do not receive the benefit of cover.</description>
@@ -1081,7 +1083,7 @@
       <description>This weapon ignores Cover and Units targeted with an attack by it do not gain the benefit of Cover. If you&apos;ve taken aim this turn, choose a model in the targeted unit and use its evasion and armor for the attack rolls, that model also takes the damage from the attack.</description>
     </rule>
     <rule id="fd2f-2557-0580-c397" name="Jump-Packs" hidden="false">
-      <description>This Unit gains Move as a Free Action. This Unit may ignore the effects of any terrain it moves across.</description>
+      <description>Once per activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword until its next activation.</description>
     </rule>
     <rule id="8e52-a616-aab9-73b8" name="Designated Leader" hidden="false">
       <description>This Model must be attached to a non-Command Unit that it shares a CORE Keyword with in this Platoon before the Game starts. After this Model is attached it must be designated as the Leader of the combined Unit. A Unit may not have more than one additional Model attached to it in this way.</description>
@@ -1093,10 +1095,10 @@
       <description>When a unit is hit by weapon(s) with the &quot;Slag&quot; keyword, its armor value is reduced by 1 until the end of the round. (This effect is cumulative)</description>
     </rule>
     <rule name="Heat Ray" id="56bf-a271-a758-6f38" hidden="false">
-      <description>This weapon automatically passes armor checks against Units with Armor Values of X or less.</description>
+      <description>Apply the Burning Condition to Units attacked by this Weapon. When making an Attack with this weapon, you may choose to Modulate. If you do, half this weapon&apos;s Hits profile and double its Armor Penetration until this Attack is resolved.</description>
     </rule>
     <rule name="Burrowing" id="ed5f-b19a-332-fe86" hidden="false">
-      <description>Instead of deploying this unit at the start of the game you may declare that this unit is Burrowing. A burrowing unit may activate only after all non-burrowing in your army have activated this turn. The first time a burrowing unit activates, you may deploy it no closer than 8” from an enemy unit. (This ability must be resolved before activating units with cumbersome.) A unit deployed this way gets one less action on the turn it enters the battlefield.</description>
+      <description>Instead of deploying this Unit at the start of the game, you may declare that this model is in En Route. During any Setup Phase after the first Round, you may deploy this unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
     </rule>
     <rule name="Not My Job" id="824b-bf81-ea20-17d4" hidden="false">
       <description>This Unit may not take the Capture Action.</description>
@@ -1135,7 +1137,7 @@
       <description>This Unit only loses one Action per two Suppression Tokens.</description>
     </rule>
     <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
-      <description>When this Unit is deployed, it may immediately take the Build or Destroy Action once.</description>
+      <description>When this Unit is set up during the Setup Phase, it may immediately take the Build or Destroy Action once.</description>
     </rule>
     <rule name="Open Topped " id="6beb-7c97-fe80-09a9" hidden="false">
       <description>Units inside this Transport may be activated as normal and may take Ranged Attack Actions while Embarked. They may be selected as the target of a Ranged Attack. These Units receive X levels of cover.</description>
@@ -1235,7 +1237,7 @@ gain cover for being within this terrain feature
       <description>This unit can gain suppression tokens as though it has the Troops Subtype and can be affected by the “Suppressed” and “Pinned down” conditions.</description>
     </rule>
     <rule name="Dual Wield" id="2082-d275-920b-519d" hidden="false">
-      <description>This weapon may be selected to attack with in addition to another weapon.</description>
+      <description>In Melee, this Weapon may be selected to Attack with in addition to another Weapon.</description>
     </rule>
     <rule name="Slippery" id="d4e3-7a13-502a-ecd5" hidden="false">
       <description>If a Vehicle Mounted by this Unit is destroyed, place this Unit&apos;s Infantry Model in base-to-base contact with it at the end of the current activation. While not attached to another Unit, this Unit activates independently and gains the “Troop” Keyword.</description>
@@ -1244,7 +1246,7 @@ gain cover for being within this terrain feature
       <description>This Unit has access to the free action “Tow”.</description>
     </rule>
     <rule name="Command Squad" id="7a39-d162-eaaa-f019" hidden="false">
-      <description>This unit may only attach to the designated units.</description>
+      <description>This Model may only Attach to the Units with the Names and Keywords listed.</description>
     </rule>
     <rule name="Direct Fire" id="371b-f82b-1fef-54a5" hidden="false">
       <description>Blast tokens for this weapon are placed when this weapon is selected to attack rather than in the command phase.</description>
@@ -1287,7 +1289,7 @@ Units.</description>
       <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit.</description>
     </rule>
     <rule name="Flak Shells" id="57bd-6e01-9873-bd79" hidden="false">
-      <description>Attacks from this Weapon against Units with the Flying Keyword pass Hit Checks on 5s or greater, regardless of the target&apos;s Evasion.</description>
+      <description>Attacks from this Weapon against Units with the Flying Keyword ignore the Range penalty from Flying. pass Evasion Checks on 5s or greater, regardless of the target&apos;s Evasion.</description>
     </rule>
     <rule name="Fuel Drums" id="e6e0-df35-6dc6-fb12" hidden="false">
       <description>Perfom a free Dash Action once per game.</description>
@@ -1332,7 +1334,7 @@ Under Fire: Units with this Condition may not take the Move Action. (They may st
       <description>This Officer must attach to a Unit in its platoon with the Vehicle, Carriage, or Battery Keywords.</description>
     </rule>
     <rule name="Distributed Elements" id="3a38-3263-bf73-12e0" hidden="false">
-      <description>During Deployment, as you declare units in Transports and En Route, the individual Models in this Unit may separate, with each attaching to a different non-Battlesuit Troop Unit within this Platoon. When this happens they become part of those other Units, and this Unit ceases to exist. When Attacks are made against that Unit, you may select this Model as the recipient of that Attack and use its Evasion and Armor, if you do, damage must be applied to this Model first. This ability can only be used if there are equal to or more Troop Units in this platoon than models in this Unit.</description>
+      <description>At the beginning of the first Setup Phase, this Unit may separate, with each Model attaching to a different non-Battlesuit Troop Unit within this Platoon. When this happens they become part of those other Units as if they were Attached, and this Unit ceases to exist. This ability can only be used if there are a number of Troop Units in this platoon equal to or greater than the number of models in this Unit. You may only have one model Attached to a Unit in this way. If there are no Units in this platoon to Attach models to from unit, you may not use this ability. Each Unit with Distributed Elements that is Distributed no longer counts towards your total activation limit.</description>
     </rule>
     <rule name="Ordnance" id="11d9-c53a-4538-6b97" hidden="false">
       <description>During the Command Phase, Units with the Ordnance keyword will place one Blast X tokens anywhere on the battlefield per weapon, in the range of their weapons, regardless of Line Of Sight. Blast tokens used by this Unit have a range of X” measured from the edge of the 25 mm Blast token, where X is its Ordinace X value. Each model in a Unit with Ordnance X will place its own token. When the Unit is selected to use the Attack Action it can select any Blast token that matches its designated token’s Blast value; each model in the unit must select a different Blast token and make its own separate attack. When a blast token is placed by this unit, any Troop Units within the token radius immediately receive one Suppression token. When attacking a multi-model unit with this weapon, excess damage spills over to other models in that unit. When an attack is made using a Blast Token, you must take an attack action against all units within range of that token regardless of if the units are friendly. Remove the token after resolving the attack.</description>
@@ -1408,10 +1410,31 @@ are in your army only one counter is ticked down at a time.</description>
       <description>Whenever a Unit makes an Attack with this Weapon, after the Attack has been resolved, you may apply a Bombard Token to all Terrain Features within the zone of this Weapon&apos;s Blast Token. Tokens may only be applied to Terrain Features with a Cover Score of X or less. For each Bombard Token a Terrain Feature has, its Cover Score is reduced by one. If a Terrain Feature&apos;s Cover Score is lowered to 0, it is removed from the Battlefield.</description>
     </rule>
     <rule name="Concussive" id="2535-84fb-dcc0-f3ac" hidden="false">
-      <description>When making an Attack with this Weapon, you may choose to roll a Concussion Check instead of an Evasion Check. If you do, roll XD5 for each copy of this Weapon in the Attack Pool. If the sum of all Concussion Checks in the Attack Pool is equal to or greater than the current HP of the Target of the Attack, apply a Concussed Token. When that Unit next Activates, it loses one Action for each Concussed Token applied to it, then discards the Token.</description>
+      <description>After resolving an Attack with Concussive Weapons, you may roll a Concussion Check. To roll a Concussion Check, roll 1D5 for each Weapon with Concussive in the Attack Pool. If the sum of this roll is equal to or greater than the current HP of the Unit Targeted by the Attack, apply a Concussed Token. When a Unit activates with one or more Concussion Tokens, it must spend one Action per Token to discard them.</description>
     </rule>
     <rule name="Headshot" id="9d6c-a49e-e767-123d" hidden="false">
       <description>When resolving an Attack with this Weapon against a Unit with the Troops Keywords, for each Hit which is an unmodified 10, automatically pass the following Armor Check.</description>
+    </rule>
+    <rule name="Command Car" id="1cbf-8529-3a35-86c6" hidden="false">
+      <description>When this Unit issues an Order, choose an unordered Unit within 8&quot; of that one, that Unit is also ordered.</description>
+    </rule>
+    <rule name="Arc-Lightning" id="38d0-e689-0a64-8c94" hidden="false">
+      <description>After resolving an Attack with this Weapon, you may roll a X+ check to see if the lightning jumps. On a success, select the nearest Unit that is no more than 8&quot; away from the previously Attacked Unit and that has not been targeted by this Weapon this Activation. Roll an Attack with this Weapon against that Unit as well. This may be done multiple times. Each time the lightning jumps, increase the Check requirement by +1.</description>
+    </rule>
+    <rule name="Embarkable" id="0f77-5a99-6029-38d0" hidden="false">
+      <description>This Unit may be Embarked in a Transport. Taking this Unit adds a Transport slot to this platoon.</description>
+    </rule>
+    <rule name="Distributed Command" id="71be-d9b3-dff9-cc7e" hidden="false">
+      <description>Before the Game Starts, the Models in this Unit separate and individually Attach to different Units. That Unit gains all Special Rules associated with that Model. A Unit may not have more than one Model from a Distributed Command Unit attached to it.</description>
+    </rule>
+    <rule name="Inaccurate" id="3da9-a39d-1d0c-5ea1" hidden="false">
+      <description>When making an Attack with this Weapon, -2 to Hit.</description>
+    </rule>
+    <rule name="Automated Kill-Zone" id="1c50-6813-1996-73d9" hidden="false">
+      <description>Once per Round, when an Enemy Unit moves within 12&quot; of this Unit, this Unit may make a Free Attack Action against it.</description>
+    </rule>
+    <rule name="Unmanageable" id="a09d-3ff7-60ce-ef92" hidden="false">
+      <description>No other Units or Commanders may be attached to this one.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1496,7 +1519,7 @@ are in your army only one counter is ticked down at a time.</description>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive, Close in</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Grenade, Ranged</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Grenade, Kinetic</characteristic>
       </characteristics>
     </profile>
     <profile name="Artillery Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="ad55-69e8-9339-6df7">
@@ -1624,6 +1647,14 @@ are in your army only one counter is ticked down at a time.</description>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in, Move, Take Aim</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Command Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="8bc2-5843-ca96-b11b">
+      <characteristics>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Move, Take Aim</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
       </characteristics>
     </profile>
@@ -1857,6 +1888,17 @@ are in your army only one counter is ticked down at a time.</description>
           <rules>
             <rule name="Hot Cup of Coffee" id="9d85-af77-0e95-ea34" hidden="false">
               <description>This coffee is steaming and your list looks neat and tidy.</description>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="Hot Cup of Tea" field="name">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </rule>
           </rules>
           <costs>
@@ -1868,6 +1910,17 @@ are in your army only one counter is ticked down at a time.</description>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="749d-15eb-1bd9-deab" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="Hot Cup of Tea" field="name">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
