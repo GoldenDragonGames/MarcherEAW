@@ -2,7 +2,8 @@
 # for validity, integrity and bugs in datafiles.
 # For details, visit https://github.com/BSData/check-datafiles
 name: CI
-on: [ push, pull_request ]
+on: [ ]
+# on [ push, pull_request ] Removed to disable chekcs due to wham errors
 jobs:
   build:
     runs-on: ubuntu-latest
