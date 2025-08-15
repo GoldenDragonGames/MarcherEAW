@@ -1044,7 +1044,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Gros Canon à Energie" hidden="false" id="6ff7-b9a4-ae90-c49c" collective="true">
       <costs>
-        <cost name="Munitions" typeId="Points" value="61"/>
+        <cost name="Munitions" typeId="Points" value="54"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1875,7 +1875,7 @@
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">8</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D5+8</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Reliable</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Energy, Ranged</characteristic>
       </characteristics>
@@ -5085,7 +5085,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Troop Actions" id="19b7-f88-5f5e-3973" hidden="false" targetId="0936-84e8-76d0-501a" type="profile"/>
-            <infoLink name="Elite Infantry" id="a58a-97e1-3046-4b3c" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="c467-354c-219-3f3a" hidden="false" collective="false" import="true" defaultSelectionEntryId="16be-90a-3a80-ef7c">
@@ -5987,7 +5986,6 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Zouave Sniper Team" hidden="false" id="649b-687c-ac7e-1cf6">
           <infoLinks>
-            <infoLink name="Elite Infantry" id="cee2-7a61-c24d-2113" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
             <infoLink name="Not My Job" id="e919-2b64-99b8-b9f7" hidden="false" type="rule" targetId="824b-bf81-ea20-17d4"/>
             <infoLink name="Forward Positions" id="466d-78c3-65cc-2fe7" hidden="false" type="rule" targetId="239f-191a-232-4894"/>
             <infoLink name="Hunter" id="ef4c-0697-081e-ceb9" hidden="false" type="rule" targetId="c061-5561-8d2a-8ab3"/>
@@ -8208,7 +8206,6 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Dragoons Vanguard Squad" hidden="false" id="e4c3-053d-4c2b-c4f6">
           <infoLinks>
-            <infoLink name="Elite Infantry" id="ad92-9a22-44ba-bdd1" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
             <infoLink name="Troop Actions" id="9a8e-061a-892b-0722" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
             <infoLink name="Prototype" id="e34c-fbb4-c9c1-6bfe" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
           </infoLinks>
@@ -9318,8 +9315,21 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
         <categoryLink name="Partisan Cell Configuration" hidden="false" id="b945-3ff7-5bd7-c270" targetId="8720-8576-acb1-c08e"/>
         <categoryLink name="Command" hidden="false" id="8d9b-9c2f-3f13-d3f8" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e0e6-2094-8d5b-cd57"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="26a6-8d37-62c2-77e6" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c38-2c8f-0c25-2cda" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="26a6-8d37-62c2-77e6">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="4c38-2c8f-0c25-2cda">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="44a1-fa85-2d94-4d6f" targetId="33a5-8b7e-49bb-c30d">
           <constraints>

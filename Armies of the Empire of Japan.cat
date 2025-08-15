@@ -4656,7 +4656,7 @@
             <infoLink name="Command Actions" id="9301-c5b8-022b-3d06" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
             <infoLink name="Command Squad" id="61b6-e463-36bc-7a5b" hidden="false" type="rule" targetId="7a39-d162-eaaa-f019">
               <modifiers>
-                <modifier type="append" value="(Shugo-yoroi Warsuit Squad)" field="name" join=":"/>
+                <modifier type="append" value="(IJN Breaching Engineer Squad)" field="name" join=":"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5874,7 +5874,6 @@
             <infoLink name="Engineer Troop Actions" id="9936-c9f6-db99-f0b0" hidden="false" targetId="335b-34df-c974-9c3b" type="profile"/>
             <infoLink name="Rapid Deployment" id="091c-1f67-7cf2-edf7" hidden="false" type="rule" targetId="9776-f4fe-ef62-3956"/>
             <infoLink name="Battlefield Preparation" id="dc0e-64e4-991d-fda8" hidden="false" type="rule" targetId="ea06-55d8-62e2-4f31"/>
-            <infoLink name="Elite Infantry" id="5cd0-a242-ffa5-f928" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
             <infoLink name="Logistics" id="3cc4-5358-a960-d8ed" hidden="false" type="rule" targetId="c1ce-d022-923f-3147"/>
           </infoLinks>
           <selectionEntryGroups>
@@ -8838,22 +8837,6 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Distributed Elements" hidden="false" id="e822-b793-1320-da9b">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e1f-dfe8-888e-e506" includeChildSelections="false"/>
-              </constraints>
-              <costs>
-                <cost name="Munitions" typeId="Points" value="0"/>
-                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="-1"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Distributed Elements" id="b559-657b-434b-a047" hidden="false" type="rule" targetId="3a38-3263-bf73-12e0"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
           <rules>
             <rule name="Dohyō-iri" id="7d70-a2e5-21de-9a02" hidden="false">
               <description>While this Unit is within 3&quot; of an Objective and either performs or is the target of a Melee Attack Action, it may choose to Wrestle. If it does, after the entire attack is resolved, each player much roll a D10, and then add the number of HP of their Unit that participated in the attack to the result. The Unit whose total result is lowest is moved 3&quot; straight away from the Objective.</description>
@@ -9244,6 +9227,7 @@
           </rules>
           <infoLinks>
             <infoLink name="Prototype" id="40f2-dbec-0b6c-5738" hidden="false" type="rule" targetId="b4c0-7c13-2254-8ad1"/>
+            <infoLink name="Vehicle Actions" id="1c53-b775-0170-c3a6" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
           </infoLinks>
           <profiles>
             <profile name="IJA Daiyoroi Heavy Warsuit Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f537-bdaf-9518-b91c">
@@ -9378,6 +9362,13 @@
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="01fa-72e4-44c1-dc51" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9">
+              <entryLinks>
+                <entryLink import="true" name="Sashimono" hidden="false" id="6c26-708f-735b-2ab5" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Gokiri Daiyoroi Superheavy Warsuit" hidden="false" id="7718-4a77-ef2e-02e7">
           <rules>
@@ -9548,6 +9539,11 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c761-652e-c87c-9ea2-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c761-652e-c87c-9ea2-max" includeChildSelections="false"/>
               </constraints>
+            </entryLink>
+            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="1f3d-2173-176b-0215" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9">
+              <entryLinks>
+                <entryLink import="true" name="Sashimono" hidden="false" id="88dc-0140-6a62-3fe4" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de"/>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -10067,8 +10063,21 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
         <categoryLink name="Urinke Detachment Configuration" hidden="false" id="2dad-2adb-e964-cfa1" targetId="1c45-7994-0d13-1fdd"/>
         <categoryLink name="Command" hidden="false" id="3b00-4084-4032-9acc" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7fa8-7c79-836f-7e10"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e557-d702-7a20-f0ad" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad5-0a90-97c8-d80f" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="e557-d702-7a20-f0ad">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="bad5-0a90-97c8-d80f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="b61c-d21a-4156-8efd" targetId="33a5-8b7e-49bb-c30d">
           <constraints>

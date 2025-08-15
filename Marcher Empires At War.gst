@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.0" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.1" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -56,15 +56,9 @@
     <categoryEntry id="70eb-c264-a9cb-1bfe" name="Command" hidden="false">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42e5-b83b-401a-1b12" type="min"/>
-        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5b9c-e92e-4542-44bd" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="0" field="42e5-b83b-401a-1b12">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="5b9c-e92e-4542-44bd">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -126,7 +120,20 @@
         <categoryLink name="Command" hidden="false" id="125f-6646-3405-160a" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beab-a037-c98d-f6d4" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5b9c-e92e-4542-44bd" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="5b9c-e92e-4542-44bd">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="beab-a037-c98d-f6d4">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="3743-e631-0685-3b76" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
@@ -169,8 +176,21 @@
         <categoryLink name="Artillery Platoon Configuration" hidden="false" id="f772-61f7-8c62-52b6" targetId="a448-7c15-64c5-b50f" primary="false"/>
         <categoryLink name="Command" hidden="false" id="88e8-dd88-670f-ca67" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85ef-6c3d-6db5-8195" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="1a5e-3a41-33ef-0b84" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7690-b39c-7e8a-30a4" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="1a5e-3a41-33ef-0b84">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7690-b39c-7e8a-30a4">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="d656-c8f5-c8aa-0237" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
@@ -232,8 +252,21 @@
         <categoryLink name="Infantry Platoon Configuration" hidden="false" id="e852-1fd2-77ea-6fc3" targetId="85c7-9688-a121-1bdc" primary="false"/>
         <categoryLink name="Command" hidden="false" id="e4c1-dc1e-d31f-7065" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26cc-2105-222e-39c0" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="71be-21e1-b51a-cdcc" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7e3-e9fc-2600-e754" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="71be-21e1-b51a-cdcc">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="b7e3-e9fc-2600-e754">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="e9ab-289-2a22-9f66" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
@@ -295,8 +328,21 @@
         <categoryLink name="Mechanized Platoon Configuration" hidden="false" id="b044-04a1-2e36-d6f3" targetId="e281-74c9-b00c-1884" primary="false"/>
         <categoryLink name="Command" hidden="false" id="4924-42e4-59c7-a760" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8967-f9a-ae82-56e0" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="7650-e1e6-938e-7490" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37e9-450b-ba63-3d6f" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="7650-e1e6-938e-7490">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="37e9-450b-ba63-3d6f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="1898-9002-611f-d2db" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
@@ -358,8 +404,21 @@
         <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
         <categoryLink name="Command" hidden="false" id="85ce-3a90-edf6-5152" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="482d-b182-d748-b861" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4889-5867-3a08-7e9f" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3e9-bad6-36ae-291c" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="4889-5867-3a08-7e9f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="a3e9-bad6-36ae-291c">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="7c5e-509d-4afa-375f" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
@@ -421,8 +480,21 @@
         <categoryLink name="Support Platoon Configuration" hidden="false" id="4f7e-1819-2fb1-7f22" targetId="3cff-c57c-6289-d24c" primary="false"/>
         <categoryLink name="Command" hidden="false" id="fcfb-2bd5-36b0-c375" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a62e-3558-58c-b3bd" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e399-8a37-db84-87a3" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7823-156b-acd5-68c0" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="e399-8a37-db84-87a3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7823-156b-acd5-68c0">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="f976-e1cd-f502-94b8" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
@@ -476,8 +548,21 @@
       <categoryLinks>
         <categoryLink name="Command" hidden="false" id="8d83-88f9-81c5-e167" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8796-2124-7c65-4f6e" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="c723-a9ef-7e38-fc07" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d621-c177-7fcc-6a5d" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="c723-a9ef-7e38-fc07">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="d621-c177-7fcc-6a5d">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="54f6-e749-30c5-aaaf" targetId="33a5-8b7e-49bb-c30d"/>
         <categoryLink name="CORE Armor" hidden="false" id="5f24-2641-842a-57ec" targetId="7950-f6f1-38c2-f2dd" primary="false">
@@ -1307,16 +1392,13 @@
       <description>This Unit ignores all terrain. This Unit may not receive the benefit of Cover. This Unit may move through other Units. This Unit may not be engaged by other Units unless they also have the Flying keyword. Weapons with less than 12&quot; of Range cannot target this unit for an attack. All ranged attacks that target this Unit receive -1 to hit.</description>
     </rule>
     <rule id="6db2-42c0-b23d-3b14" name="Shield Generator" hidden="false">
-      <description>Reduce the A.P. of all incoming Weapon Profiles by 2. 
+      <description>Once per Round, as a Reaction, you may Activate this Unit&apos;s Shield Generator. If you do, gain the following effects:
 
+Reduce the A.P. of all incoming Weapon Profiles by 2. 
 
 • If this Unit has not Activated this Round it may spend any number of it’s Actions for the turn to reduce the A.P. by an additional 1
 
-
 • Bulwark 3
-
-
-
 
 Hits, Range, and A.P. may be decreased only to a minimum of 1.
 These rules do not apply to Weapons with the Flames or Gas Special Rules.</description>
@@ -1380,9 +1462,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </rule>
     <rule name="Patch-Up" id="5c34-f6f8-aee6-439c" hidden="false">
       <description>As an action, select a friendly Troop Unit within 3&quot; (including this unit). That Unit either restores all hitpoints lost by one of its models or revives a destroyed model, returning it to the Unit with 1 hitpoint remaining.</description>
-    </rule>
-    <rule name="Elite Infantry" id="12fb-381c-5514-6d51" hidden="false">
-      <description>This Unit only loses one Action per two Suppression Tokens.</description>
     </rule>
     <rule name="Battlefield Preparation" id="ea06-55d8-62e2-4f31" hidden="false">
       <description>At the beginning of the first Action Phase, this Unit may immediately take the Build or Destroy Action once.</description>
@@ -1664,7 +1743,7 @@ are in your army only one counter is ticked down at a time.</description>
       <description>This Unit issues Orders at 12&quot; instead of 8&quot;. When this Unit issues an Order, choose an unordered Unit within 8&quot; of that one, that Unit is also Ordered.</description>
     </rule>
     <rule name="Arc-Lightning" id="38d0-e689-0a64-8c94" hidden="false">
-      <description>After resolving an Attack with this Weapon, you may roll a X+ check to see if the lightning jumps. On a success, select the nearest Unit that is no more than 8&quot; away from the previously Attacked Unit and that has not been targeted by this Weapon this Activation. Roll an Attack with this Weapon against that Unit as well. This may be done multiple times. Each time the lightning jumps, increase the Check requirement by +1.</description>
+      <description>After resolving an Attack with this Weapon, you may roll a X+ check to see if the lightning jumps. On a success, select the nearest non-Flying Unit that is no more than 8&quot; away from any Model in the previously Attacked Unit and that has not been targeted by this Weapon this Activation. Roll an Attack with this Weapon against that Unit as well. This may be done multiple times. Each time the lightning jumps, increase the Check requirement by +1.</description>
     </rule>
     <rule name="Embarkable" id="0f77-5a99-6029-38d0" hidden="false">
       <description>This Unit may be Embarked in a Transport. Taking this Unit adds a Transport slot to this platoon.</description>
@@ -1698,6 +1777,9 @@ are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Rally &apos;round the Flag" id="75c3-fdd5-ba8e-0baa" hidden="false">
       <description>This Unit may take the &quot;Rally&quot; Action as a standard Action.</description>
+    </rule>
+    <rule name="Cleave" id="039c-7032-df73-62bf" hidden="false">
+      <description>Damage from this Weapon may spill over to one additional Model.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

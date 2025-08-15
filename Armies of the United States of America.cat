@@ -1077,6 +1077,18 @@
         <categoryLink targetId="4ec9-47a4-5562-ea3b" id="dfe1-de63-92ff-4d13" primary="false" name="Battlesuit"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="7f4f-881a-ff8e-58a6" primary="false" name="USA"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Tank Ace" hidden="false" id="8931-4db5-2761-ad8d" type="selectionEntry" targetId="09b0-a76c-b06c-467e">
       <categoryLinks>
@@ -3298,6 +3310,11 @@
                         <entryLink import="true" name="M1X1 Garand" hidden="false" id="26b1-8168-74db-c871" collective="false" targetId="7e32-9348-35f1-d530" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb3e-fc38-e4f2-57c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="a33f-2118-891a-c5b3" collective="true" targetId="1235-a73-7cb5-26b4" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="00b5-5ab8-68d0-b9ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
@@ -7056,7 +7073,11 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="dced-ce2d-71d2-76bb" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a"/>
+            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="dced-ce2d-71d2-76bb" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a">
+              <entryLinks>
+                <entryLink import="true" name="Veteran NCO" hidden="false" id="efcd-3536-8e40-0362" type="selectionEntry" targetId="33fe-eb6d-9e95-e663"/>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="prepend" value="Veteran" field="name">
@@ -7217,7 +7238,11 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="471d-dd74-42a2-6a84" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a"/>
+            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="471d-dd74-42a2-6a84" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a">
+              <entryLinks>
+                <entryLink import="true" name="Veteran NCO" hidden="false" id="4a7f-808c-d867-8b35" type="selectionEntry" targetId="33fe-eb6d-9e95-e663"/>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="prepend" value="Veteran" field="name">
@@ -7240,7 +7265,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Troop Actions" id="af04-87f1-2ca1-a99f" hidden="false" targetId="0936-84e8-76d0-501a" type="profile"/>
-            <infoLink name="Elite Infantry" id="6bd1-9484-9d90-1b59" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="2528-28ff-92e4-dfb4" hidden="false" collective="false" import="true" defaultSelectionEntryId="9a54-cc7c-020e-2b00">
@@ -8737,7 +8761,6 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
             <infoLink name="Logistics" id="5ac0-277d-1f5e-7aad" hidden="false" targetId="c1ce-d022-923f-3147" type="rule"/>
             <infoLink name="Rapid Deployment" id="26e2-79c2-bfc4-ea2d" hidden="false" type="rule" targetId="9776-f4fe-ef62-3956"/>
             <infoLink name="Battlefield Preparation" id="c0af-b9a5-0ebe-554e" hidden="false" type="rule" targetId="ea06-55d8-62e2-4f31"/>
-            <infoLink name="Elite Infantry" id="a8fb-e2ab-ae5e-7d0f" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="4338-bebf-aa8e-e7f3" hidden="false" collective="false" import="true" defaultSelectionEntryId="dc9e-f9fd-9f54-661d">
@@ -10215,6 +10238,11 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a296-dcdb-37e0-cb2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="M1897 Trench Gun" hidden="false" id="e1e5-83bf-9475-022a" collective="true" targetId="1235-a73-7cb5-26b4" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f39d-0ff5-84d7-9849" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b58b-5921-9f7b-f826" includeChildSelections="false"/>
@@ -10918,7 +10946,6 @@ If this model is destroyed as a result of an enemy attack, roll a D10. If the re
           <infoLinks>
             <infoLink name="Troop Actions" id="59ff-c156-9e87-7f7b" hidden="false" targetId="0936-84e8-76d0-501a" type="profile"/>
             <infoLink name="Rapid Deployment" id="700e-e28b-bb67-17bd" hidden="false" type="rule" targetId="9776-f4fe-ef62-3956"/>
-            <infoLink name="Elite Infantry" id="5e78-5265-1a61-4bdc" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="cd92-200b-0cb2-e5e3" hidden="false" collective="false" import="true">
@@ -12956,9 +12983,21 @@ Units with the USA Keyword may receive two Orders each Round.</description>
         <categoryLink name="Starborne Platoon Configuration" hidden="false" id="e3a6-4112-32e9-fcfd" targetId="0b49-4c06-5cea-c6a0"/>
         <categoryLink name="Command" hidden="false" id="935f-90ea-16b7-42d4" targetId="70eb-c264-a9cb-1bfe">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="415a-6a36-994b-59f5"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ea8d-8864-7e80-ec90"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5afc-7f0e-1325-4fe6" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb93-892b-cffc-a9b5" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="5afc-7f0e-1325-4fe6">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="cb93-892b-cffc-a9b5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Hero" hidden="false" id="6f46-a7ec-622f-4dd3" targetId="33a5-8b7e-49bb-c30d">
           <constraints>

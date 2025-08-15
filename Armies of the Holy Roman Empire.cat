@@ -15,7 +15,18 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63fc-7113-979d-2c8d" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Command" hidden="false" id="f002-cc6b-e643-2364" targetId="70eb-c264-a9cb-1bfe"/>
+        <categoryLink name="Command" hidden="false" id="f002-cc6b-e643-2364" targetId="70eb-c264-a9cb-1bfe">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="fafe-dd68-46b2-f21b" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="fafe-dd68-46b2-f21b">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
         <categoryLink name="Hero" hidden="false" id="537e-e7d7-3fc9-df31" targetId="33a5-8b7e-49bb-c30d">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6031-d722-e0a4-a174"/>
@@ -1759,6 +1770,19 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Knecht Zweihander" hidden="false" id="3fc8-84ad-d8b6-e09d">
+      <infoLinks>
+        <infoLink name="Knecht Zweihander" id="84d3-55c2-2980-1bb4" hidden="false" type="profile" targetId="2ebb-3ece-b142-76ed"/>
+        <infoLink name="Warding" id="333e-0dce-a6a8-3e4a" hidden="false" type="rule" targetId="f86d-acd5-05b1-927c"/>
+        <infoLink name="Cleave" id="3751-d030-9d87-daed" hidden="false" type="rule" targetId="039c-7032-df73-62bf"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="23"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="4565-e3f5-c290-9d99" name="Adjustable Sights" hidden="false">
@@ -2337,6 +2361,16 @@
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Ray</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Knecht Zweihander" typeId="Weapon" typeName="Weapon" hidden="false" id="2ebb-3ece-b142-76ed">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Cleave, Warding</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -3084,417 +3118,6 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Infantry" id="3c7e-bc8e-c290-542e" hidden="false">
       <selectionEntries>
-        <selectionEntry type="unit" import="true" name="Veteran Landwehr Squad" hidden="false" id="67bf-4e27-a001-9987" collective="false">
-          <profiles>
-            <profile name="Veteran Landwehr Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c007-d178-f284-6874">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Unteroffizier , 5-9x  Veterans, 0-2x Stabsgrefrieters, 0-1x Flagbearer, &amp; 0-1x Sanitäter</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Troop Actions" id="a27b-cefe-f12b-20c3" hidden="false" targetId="0936-84e8-76d0-501a" type="profile"/>
-          </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Squad Members" id="2a10-7c58-8db8-adbb" hidden="false" collective="false" import="true" defaultSelectionEntryId="318-3d41-7b16-749b">
-              <constraints>
-                <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="9461-3272-df68-e631" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="7258-578e-22e4-3ef3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="model" import="true" name="Veteran Unteroffizier" hidden="false" id="eb0-1112-8c99-db98" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a91-7904-1f2d-160e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b807-359d-fb11-c915" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="78c5-e6ef-3cd5-5e46">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="ca1a-27ba-196b-9f8d" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="533-76d5-1fe9-9a56" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7656-7ec8-a177-a58" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="CKF Saber" hidden="false" id="f0b5-4fa1-7daa-86ce" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d7a-1b01-7c0b-6620-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d7a-1b01-7c0b-6620-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon" id="43b2-439c-4360-13af" hidden="false" collective="false" import="true" defaultSelectionEntryId="a5e3-ced4-aa18-c46c">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="810-159b-5ae2-7342" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca44-3818-6f38-ec31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="MP33 SMG" hidden="false" id="1bfb-b39a-8118-3bf" collective="false" targetId="1d72-b2ee-fef5-7d5b" type="selectionEntry">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b586-2cdd-a358-85cc" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="VZ. 38 Heavy Rifle" hidden="false" id="a5e3-ced4-aa18-c46c" collective="false" targetId="8da2-f265-a840-eb38" type="selectionEntry">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="636c-cdb6-ebd0-79a2" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="M1931 Mannlicher Rifle" hidden="false" id="0fda-4891-f1b0-388a" type="selectionEntry" targetId="07f8-196b-cb38-5891">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dece-91eb-024a-2e1c" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                    <selectionEntryGroup name="Sidearm" id="a814-cf65-2898-b941" hidden="false" defaultSelectionEntryId="ffb-eccb-ac23-fb95">
-                      <entryLinks>
-                        <entryLink import="true" name="M1922 Steyr-Roth" hidden="false" id="ffb-eccb-ac23-fb95" type="selectionEntry" targetId="f6b0-733b-4270-9164"/>
-                        <entryLink import="true" name="M1933 Magazine-Fed Slug Pistol" hidden="false" id="a318-2840-f5dc-4614" type="selectionEntry" targetId="65f8-cca6-982-44d"/>
-                        <entryLink import="true" name="M1936 Plasma Pistol" hidden="false" id="1672-4a99-8b23-ad67" type="selectionEntry" targetId="a111-e815-6c81-e7d7"/>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="266a-d8da-f2ad-7df2" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b42f-554e-f71c-2b00" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Stabsgefreiter with Grenade Launcher" hidden="false" id="9298-cf17-e77d-8279" collective="false">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6fdb-ac7e-bc19-6169" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="de68-fcde-96b0-a293">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="M1931 Granatewerfer" hidden="false" id="80d2-660f-e922-a422" collective="false" targetId="74d5-e395-7784-134f" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="baf9-f165-8a7b-423" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19b9-ffa2-e29f-e2f0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="5c6d-3960-7deb-160d" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fbe9-65a3-887-4998" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b0c-321c-5802-2c60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Gefreiter" hidden="false" id="318-3d41-7b16-749b" collective="false">
-                  <constraints>
-                    <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="7358-a4d8-ff5-6b16" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="9392-ed37-c3ad-87a2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Gefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a8c-d8c0-8352-6491">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="9358-149b-c917-a4ef" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7249-4e01-18c8-9228" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f21-d34b-cf8-75a3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon" id="42c9-69f7-a1ec-0689" hidden="false" defaultSelectionEntryId="ec8b-3fbf-1b49-d689">
-                      <entryLinks>
-                        <entryLink import="true" name="VZ. 38 Heavy Rifle" hidden="false" id="ec8b-3fbf-1b49-d689" collective="false" targetId="8da2-f265-a840-eb38" type="selectionEntry">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b6ca-8b6a-defb-2720" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="MP33 SMG" hidden="false" id="71b5-007d-45c2-be1e" type="selectionEntry" targetId="1d72-b2ee-fef5-7d5b">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec0d-3895-497f-d56f" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="M1931 Mannlicher Rifle" hidden="false" id="0bc0-e36e-046a-b424" type="selectionEntry" targetId="07f8-196b-cb38-5891">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43f4-977d-d46e-f7d6" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d249-10a4-17f5-71fa-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d249-10a4-17f5-71fa-max" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Stabsgefreiter with Marksman Rifle" hidden="false" id="1ccd-ce9d-3928-eb71" collective="false">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ddef-4262-f1cb-3c39" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b0cc-1ffb-be63-f5e8">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="M1931 Mannlicher Rifle (Scoped)" hidden="false" id="7f96-21bd-ac63-f862" collective="true" targetId="135a-d05a-161e-d241" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4c1-bc80-d7b6-2cd6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c24d-cd8c-d440-a163" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="5bf8-b34c-31a1-430" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7698-94d3-daaa-eac5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5a0-dd3b-8fd-fbc3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Stabsgefreiter with Plasma Launcher" hidden="false" id="f23a-2057-3326-f4be" collective="false">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="47a0-919b-c450-776e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8a62-e5ca-3fb0-82bc">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="M1934 Plasma Thrower" hidden="false" id="2c51-a4e4-1a5d-9549" collective="false" targetId="d6c1-540b-58ca-ea76" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d8a2-f025-36b5-1b66" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9421-96e7-6fab-5158" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="12e0-e8cf-15c5-7994" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f36-3502-7294-728b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3079-3be3-64d5-9464" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Sanitäter" hidden="false" id="bbae-a9b7-5327-618a" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80d1-2f4-5d81-17d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Sanitäter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="63d5-1a60-6317-56c6">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Medical Bag" hidden="false" id="f64a-35e4-e6b9-d705" collective="false" targetId="a47-9473-676d-f96" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="717b-6040-a37-14c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f261-d22f-1bd5-bffa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="18e0-30dd-98e6-1443" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="807-be52-18d4-3f60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1ca-24c9-81f7-cf7b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Gefreiter with Habsburg Banner" hidden="false" id="d828-1be8-ac75-360a" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd3a-5ff-fb7f-6dda" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Gefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8a2f-ff28-bd0b-3732">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="73cf-efc0-6d35-ff16" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4324-143d-875-ab22" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d95-22ab-5261-faa5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="CKF Saber" hidden="false" id="ae6c-699c-d853-f7e1" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c818-23cc-9a80-44f3-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c818-23cc-9a80-44f3-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Habsburg Banner" hidden="false" id="9b8e-51c3-9e8b-1020">
-                      <rules>
-                        <rule name="Gott erhalte, Gott beschütze!" id="8478-8e83-8939-37ea" hidden="false">
-                          <description>Objectives within 3&quot; of the Habsburg Banner can not be captured by Enemy Units.</description>
-                        </rule>
-                      </rules>
-                      <costs>
-                        <cost name="Munitions" typeId="Points" value="25"/>
-                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                      </costs>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3c82-87f8-9f88-dd09-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c82-87f8-9f88-dd09-max" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Veteran Stabsgefreiter with Energy Torch" hidden="false" id="d6eb-b2a3-d092-c6e6" collective="true">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b7c9-61e3-da0a-3582" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Veteran Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fffc-bd70-6ae0-ac4d">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="df0c-e62a-a40e-adef" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8a2a-e052-8be0-4eb0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0ee-fe41-6823-fc5d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="M1935 Heat Torch" hidden="false" id="b31b-34e7-2827-efc1" type="selectionEntry" targetId="dfd5-e186-26ed-5aa2">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e89a-0f5e-e00f-53a7" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f691-726f-6133-2ed5" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="18"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="0"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
-          </costs>
-          <rules>
-            <rule name="A Life for the Kaiser!" id="df03-7860-51ca-b581" hidden="false">
-              <description>If this Unit is destroyed while within 3&quot; of an Objective that you Control, you can not lose Control of that Objective until the end of the current Round.</description>
-            </rule>
-          </rules>
-          <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="1d97-fb59-97d0-b697" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
-              <entryLinks>
-                <entryLink import="true" name="Panzerfaust" hidden="false" id="a1cd-b880-f4a1-b22e" collective="false" targetId="73bb-0e52-5af2-462c" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Veteran" field="name">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="b068-de68-7a68-a938" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </modifier>
-            <modifier type="prepend" value="Command" field="name">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
         <selectionEntry type="unit" import="true" name="Royal Honvéd Squad" hidden="false" id="a458-1bf4-bf51-4784" collective="false">
           <profiles>
             <profile name="Royal Honvéd Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="da54-49bd-a646-cf3d">
@@ -3655,7 +3278,7 @@
           <profiles>
             <profile name="Landwehr Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="09c3-1ea2-655c-d0c6">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Unteroffizier, 7-9x Gefreiters, 0-2x Stabsgefreiters, &amp; 0-1x Sanitäter</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Unteroffizier, 7-9x Gefreiters, &amp; 0-2x Stabsgefreiters</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10 (9 with team)</characteristic>
@@ -3954,41 +3577,6 @@
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b2fa-c156-bc41-c410-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2fa-c156-bc41-c410-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="10"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Sanitäter" hidden="false" id="9864-ec0f-8849-2314" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea6a-825c-1a35-555d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Sanitäter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d40b-9a2f-b376-f66f">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Medical Bag" hidden="false" id="bdac-9e88-5d55-3dd5" collective="false" targetId="a47-9473-676d-f96" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9894-1c6b-7be6-b936" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cefa-1c47-9296-9d8f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Entrenching Tool" hidden="false" id="b5c5-d5e3-de2a-032c" collective="false" targetId="109e-cea5-0e25-727b" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc49-0ac6-d84c-5b10" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c70b-c875-99e0-b810" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -5546,6 +5134,11 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e45-aa8a-2f4a-87b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Knecht Zweihander" hidden="false" id="3f8e-6b3a-7de7-3a67" type="selectionEntry" targetId="3fc8-84ad-d8b6-e09d">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41db-5f0f-a2db-f8da" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -6022,7 +5615,6 @@
             <infoLink name="Rapid Deployment" id="9574-6387-7355-db86" hidden="false" type="rule" targetId="9776-f4fe-ef62-3956"/>
             <infoLink name="Battlefield Preparation" id="b9e2-cea7-6840-2280" hidden="false" type="rule" targetId="ea06-55d8-62e2-4f31"/>
             <infoLink name="Logistics" id="73c1-5f80-5395-0cfd" hidden="false" type="rule" targetId="c1ce-d022-923f-3147"/>
-            <infoLink name="Elite Infantry" id="a749-eeef-1ce0-9889" hidden="false" type="rule" targetId="12fb-381c-5514-6d51"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="8d18-8cf9-447b-f036" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
@@ -8184,6 +7776,11 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9454-e453-9da7-c3c8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
+                        <entryLink import="true" name="Knecht Zweihander" hidden="false" id="1414-e10f-1473-320b" type="selectionEntry" targetId="3fc8-84ad-d8b6-e09d">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c500-5d1a-16aa-0b96" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -8251,6 +7848,11 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16ce-5905-692b-c4b1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
+                        <entryLink import="true" name="Knecht Zweihander" hidden="false" id="07e3-5187-c2d5-0256" type="selectionEntry" targetId="3fc8-84ad-d8b6-e09d">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a138-4e9c-a0b6-b41e" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -8290,6 +7892,13 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Troops Upgrades" hidden="false" id="78f8-3e16-a64a-77e5" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
+              <entryLinks>
+                <entryLink import="true" name="Panzerfaust" hidden="false" id="b772-83c7-0767-228a" collective="false" targetId="73bb-0e52-5af2-462c" type="selectionEntry"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="32M Hunyadi Armored Personnel Carrier" hidden="false" id="5030-3495-b40b-fc19" collective="false">
           <profiles>
@@ -8814,23 +8423,23 @@ Honvéd, Landwehr, and Veteran Landwehr in this Army may ignore up to 1 Suppress
     </selectionEntryGroup>
     <selectionEntryGroup name="Specialists" id="d806-bff7-1bba-9572" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Medic Element" hidden="false" id="12a3-87a4-430a-b357">
+        <selectionEntry type="upgrade" import="true" name="Sanitäter Element" hidden="false" id="12a3-87a4-430a-b357">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5ed5-d5f9-94f9-eb8f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Medic Group" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="0eec-e6e4-e602-d113">
+            <profile name="Sanitäter Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="0eec-e6e4-e602-d113">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">USA, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache, Troop</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache, Troop</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Medics" id="7f7c-4b12-2e88-9b84" hidden="false">
+            <selectionEntryGroup name="Elements" id="7f7c-4b12-2e88-9b84" hidden="false">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Medic" hidden="false" id="50af-0b43-03a6-65fb">
+                <selectionEntry type="upgrade" import="true" name="Sanitäter" hidden="false" id="50af-0b43-03a6-65fb">
                   <entryLinks>
                     <entryLink import="true" name="Medical Bag" hidden="false" id="17d6-5a8f-9b9a-da7b" collective="false" targetId="d619-a81c-0ed7-a998" type="selectionEntry">
                       <constraints>
@@ -8840,17 +8449,17 @@ Honvéd, Landwehr, and Veteran Landwehr in this Army may ignore up to 1 Suppress
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Medic" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="881c-0280-54f1-651b">
+                    <profile name="Sanitäter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="881c-0280-54f1-651b">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="7"/>
+                    <cost name="Munitions" typeId="Points" value="10"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
