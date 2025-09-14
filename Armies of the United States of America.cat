@@ -1123,6 +1123,10 @@
         <cost name="Munitions" typeId="Points" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb0d-4501-664a-83d5-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb0d-4501-664a-83d5-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Oerlikon 20mm Autocannon" hidden="false" id="6157-18d5-7978-5946" collective="true">
       <infoLinks>
@@ -1561,7 +1565,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="M3E1 Plasma Rifle" hidden="false" id="5695-23f6-6fb9-f5ef" collective="true">
+    <selectionEntry type="upgrade" import="true" name="M3E1 Plasma Rifle" hidden="false" id="5695-23f6-6fb9-f5ef" collective="false">
       <infoLinks>
         <infoLink name="M3E1 Plasma Rifle" id="4d4f-2522-e2a0-f9d4" hidden="false" type="profile" targetId="9575-1b49-2c7-71b6"/>
         <infoLink name="Slag" id="ecf3-4957-d3a5-a366" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
@@ -1584,7 +1588,7 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="9c94-6672-7752-ea3d" collective="true">
+    <selectionEntry type="upgrade" import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="9c94-6672-7752-ea3d" collective="false">
       <infoLinks>
         <infoLink name="M5E2 &quot;Red Glare&quot; Heat Rifle" id="d628-8df8-534c-4065" hidden="false" type="profile" targetId="2b8f-b42c-891d-3a6b"/>
         <infoLink name="Heat Ray" id="4c3e-6cc7-db39-8e63" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
@@ -1935,7 +1939,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="M1929 Rotary Grenade Launcher" hidden="false" id="aff0-3308-b4a9-2d4d" collective="true">
+    <selectionEntry type="upgrade" import="true" name="M1929 Rotary Grenade Launcher" hidden="false" id="aff0-3308-b4a9-2d4d" collective="false">
       <infoLinks>
         <infoLink name="M1929 Rotary Grenade Launcher" id="3885-c3e0-beda-c8d2" hidden="false" type="profile" targetId="ff24-0c69-3598-691f"/>
         <infoLink name="High Explosive" id="3c0a-5a25-6820-d33a" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
@@ -3231,7 +3235,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8625-1a7e-10ef-2146" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="be1c-3161-195e-4e08" collective="true" targetId="9c94-6672-7752-ea3d" type="selectionEntry">
+                        <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="be1c-3161-195e-4e08" collective="false" targetId="9c94-6672-7752-ea3d" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03d9-603a-1b4d-25d2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
@@ -3247,6 +3251,10 @@
                           </constraints>
                         </entryLink>
                       </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a868-d579-17f1-3118" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4516-f26f-fb68-7d0a" includeChildSelections="false"/>
+                      </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
@@ -6448,7 +6456,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4873-6dcc-893c-42b4-max" includeChildSelections="false"/>
                       </constraints>
                     </selectionEntryGroup>
-                    <selectionEntryGroup name="Sidearm" id="c20c-a783-9acd-5839" hidden="false" defaultSelectionEntryId="cdf2-9a6a-653d-be91">
+                    <selectionEntryGroup name="Sidearm" id="c20c-a783-9acd-5839" hidden="false" defaultSelectionEntryId="8560-49f1-0888-ee49">
                       <entryLinks>
                         <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="8560-49f1-0888-ee49" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="3cbf-bbf0-6dbf-147b" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
@@ -6520,7 +6528,7 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Cavalry Bike Specialist" hidden="false" id="25dc-6054-3b31-407a" collective="false" defaultAmount="2">
+                <selectionEntry type="model" import="true" name="Cavalry Bike Specialist" hidden="false" id="25dc-6054-3b31-407a" collective="false" defaultAmount="" sortIndex="3">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9520-865c-ddd4-fc1c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
@@ -6554,33 +6562,8 @@
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
-                  <modifiers>
-                    <modifier type="decrement" value="1" field="098c-c753-b0d0-6523">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="4f50-ceb9-f07a-86c0" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Option" id="de02-3cf4-48bf-68d8" hidden="false" defaultSelectionEntryId="9d1c-1110-442c-0eb4">
-                      <entryLinks>
-                        <entryLink import="true" name="M10 Thompson SMG" hidden="false" id="f8e5-32ef-7bfc-0a39" type="selectionEntry" targetId="1b17-bf28-08c9-f724">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d3a-444c-f54d-6156" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="M1X1 Garand" hidden="false" id="c423-cf2a-dd4c-d6b7" type="selectionEntry" targetId="7e32-9348-35f1-d530">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a03b-b5b5-aaa8-7b5a" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="430b-d7cd-9244-e23f" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="831f-9e38-091e-1091" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntryGroup>
-                    <selectionEntryGroup name="Sidearm" id="56b3-14f4-3580-2fbb" hidden="false" defaultSelectionEntryId="cdf2-9a6a-653d-be91">
+                    <selectionEntryGroup name="Sidearm" id="56b3-14f4-3580-2fbb" hidden="false" defaultSelectionEntryId="2df6-9f39-7957-051d">
                       <entryLinks>
                         <entryLink import="true" name="M1911 Energy Pistol" hidden="false" id="2df6-9f39-7957-051d" type="selectionEntry" targetId="0e45-d997-a2ae-b07d"/>
                         <entryLink import="true" name="M77 Plasma Pistol" hidden="false" id="7138-2d36-115c-f545" type="selectionEntry" targetId="4a8b-3bde-f59d-f8c2"/>
@@ -8294,7 +8277,7 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="New Group" id="80c4-3c24-a0d5-e0b8" hidden="false" defaultSelectionEntryId="e231-ac11-7490-7db7">
+                    <selectionEntryGroup name="Weapon Options" id="80c4-3c24-a0d5-e0b8" hidden="false" defaultSelectionEntryId="e231-ac11-7490-7db7">
                       <entryLinks>
                         <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="e231-ac11-7490-7db7" collective="false" targetId="59ef-e9be-bbab-1232" type="selectionEntry">
                           <constraints>
@@ -9069,12 +9052,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5185-ea50-817b-2421-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="2231-60fe-748f-8716" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3020-9f18-fe98-a047" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc80-0021-84b6-a111" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Drop-Trooper Jump-Master" hidden="false" id="c5a0-001e-849a-bcb8" collective="false">
@@ -9123,12 +9100,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="697e-f9f2-06c6-d363" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49bb-6938-7161-3f17" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce1c-f787-a20c-2137" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="M18 BAER" hidden="false" id="ab7c-c95b-e9df-8b98" collective="false" targetId="4857-8265-15c4-eebe" type="selectionEntry">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a2a-e437-67cb-4a50" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9212,12 +9183,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="9ade-5590-2dd1-7542" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37f8-2235-4309-5d07-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37f8-2235-4309-5d07-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="b81c-b16d-aca3-1009" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="CKF Saber" hidden="false" id="fde3-3516-3919-a401" type="selectionEntry" targetId="0a39-0114-af7b-36fe">
               <constraints>
@@ -9232,12 +9197,6 @@
             <infoLink name="Command Actions" id="0774-a533-5045-0e07" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="26d2-7dd3-aca2-f136" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="69b7-2db8-449f-3056-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="69b7-2db8-449f-3056-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="ada6-fe34-bc21-b0c5" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="700e-92d7-c182-78a8" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
           </entryLinks>
@@ -9285,12 +9244,6 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="742d-f723-5e21-c952" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a94-8059-4c74-9047" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d0f-ee5b-ee62-204a" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="d84c-65a2-b09f-18c6" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="Steel Fists" hidden="false" id="a0ce-c42e-793a-f6b7" collective="false" targetId="7331-ef5d-7185-bbb8" type="selectionEntry">
               <constraints>
@@ -9404,12 +9357,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="4de4-80ee-e715-1d46" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="000d-a838-d0db-e8d2" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a778-f7b7-3093-3d6a" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="2709-aabf-861f-bd6b" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="CKF Saber" hidden="false" id="c624-86e4-3c31-3a79" type="selectionEntry" targetId="0a39-0114-af7b-36fe">
               <constraints>
@@ -9449,12 +9396,6 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="5a46-943e-fc0d-ff12" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="b809-6be3-696f-bd77" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6cdb-0ad1-1be3-863f-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cdb-0ad1-1be3-863f-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="2f88-de74-7c5f-0136" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="Command Car" hidden="false" id="87f2-d2cd-21cf-5c8d" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="bf9f-970e-249d-7eb7" type="selectionEntry" targetId="502b-c542-355b-8804"/>
@@ -9582,12 +9523,6 @@
           </rules>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="b612-de2e-aef2-ca8e" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="ac31-c6dd-77bf-d705" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a3f1-27c1-527b-d8e5-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3f1-27c1-527b-d8e5-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="9cbb-9f14-50ce-25ed" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="Hitch" hidden="false" id="470e-e4c6-4db3-fd35" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Low Profile" hidden="false" id="e610-fe41-5d5d-98e2" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
@@ -9683,23 +9618,11 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="d1f7-44aa-5c0b-66ce" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="120f-eb6c-d3a4-7bc6" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f1e-dd23-6fa2-1bc3" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="6e1a-75f6-ac83-9e90" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Rear-Echelon Officer" hidden="false" id="e64a-a477-582d-5963">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="cb0b-c002-17a1-0542" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a1d-4a10-1111-7931" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ea9-0e0e-76ad-2e20" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="628b-d317-26b0-e588" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="e3f4-9eba-4cc1-47cb" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
               <constraints>
@@ -9828,12 +9751,6 @@
             <entryLink import="true" name="Intel Gathering" hidden="false" id="e266-bd89-c79e-6d5d" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="bc29-9a62-6ca2-cb51" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="0585-e076-0494-29b7" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="1025-f81e-7147-2f6f" type="selectionEntry" targetId="2a8a-fddf-0126-6a57">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0974-52cc-1e42-9b95" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4aac-27e6-307d-fb85" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="0912-ca69-074d-b4a3" type="selectionEntryGroup" targetId="e22e-b451-8b64-66d8"/>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="4ba8-526e-cd60-f922" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
           </entryLinks>
@@ -9844,7 +9761,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Officer Upgrades" id="e22e-b451-8b64-66d8" hidden="false">
+    <selectionEntryGroup name="Officer Upgrades" id="e22e-b451-8b64-66d8" hidden="true">
       <selectionEntryGroups>
         <selectionEntryGroup name="Higher Education" id="5f8a-6f73-0ecb-4396" hidden="false">
           <selectionEntries>
@@ -9934,7 +9851,15 @@
       <entryLinks>
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="956e-db5c-50f1-d512" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
         <entryLink import="true" name="Binoculars" hidden="false" id="80bb-e8e0-4f15-2a29" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
+        <entryLink import="true" name="Officer Seniority" hidden="false" id="11b7-960a-8813-4d0d" type="selectionEntry" targetId="2a8a-fddf-0126-6a57"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Mechanized" id="6815-c960-253e-6c13" hidden="false">
       <selectionEntries>
@@ -11421,7 +11346,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6603-ec1a-d62e-f04b" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="1ea9-684f-4512-8999" collective="true" targetId="9c94-6672-7752-ea3d" type="selectionEntry">
+                        <entryLink import="true" name="M5E2 &quot;Red Glare&quot; Heat Rifle" hidden="false" id="1ea9-684f-4512-8999" collective="false" targetId="9c94-6672-7752-ea3d" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fe9-7f08-2c5f-4594" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
@@ -12085,68 +12010,27 @@ In the fourth Round Setup Phase, if there are still platoons En Route, and eithe
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <categoryEntries>
-    <categoryEntry name="USA" id="4455-94a1-ea5e-b9ec" hidden="false"/>
-    <categoryEntry name="CORE Starborne" id="4c05-06c2-f6ab-92b1" hidden="false"/>
-    <categoryEntry name="AUX Starborne" id="b3c6-65b4-b49c-a828" hidden="false"/>
-    <categoryEntry name="Starborne Platoon Configuration" id="0b49-4c06-5cea-c6a0" hidden="false"/>
-  </categoryEntries>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
   <rules>
-    <rule name="Fire and Maneuver" id="1046-71bc-6291-4abd" hidden="false">
+    <rule name="Fire and Maneuver" id="1046-71bc-6291-4abd" hidden="true">
       <description>All Units with the USA Keyword may be issued an order, regardless of range from a Command Unit.
 
 
 Units with the USA Keyword may receive two Orders each Round.</description>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="01ba-2120-7904-bce7" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </rule>
   </rules>
-  <forceEntries>
-    <forceEntry name="Starborne Air Support Platoon" id="34ba-1720-6fa5-fe76" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Starborne Platoon Configuration" hidden="false" id="e3a6-4112-32e9-fcfd" targetId="0b49-4c06-5cea-c6a0"/>
-        <categoryLink name="Command" hidden="false" id="935f-90ea-16b7-42d4" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5afc-7f0e-1325-4fe6" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb93-892b-cffc-a9b5" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="0" field="5afc-7f0e-1325-4fe6">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="cb93-892b-cffc-a9b5">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="6f46-a7ec-622f-4dd3" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89c2-8277-8294-6c6c"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Starborne" hidden="false" id="2ab9-51d8-5609-a5ec" targetId="4c05-06c2-f6ab-92b1">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f308-3952-279b-4c73"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="d657-bf1e-989c-1746"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="AUX Starborne" hidden="false" id="2acc-eee1-9d35-e7ae" targetId="b3c6-65b4-b49c-a828">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8f11-7567-d867-239b"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-  </forceEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Special Rules" id="31c9-c5bf-db3f-5b08" targetId="1270-948e-6bd6-7ecc"/>
     <catalogueLink type="catalogue" name="Unit Upgrades" id="8725-94a0-be6d-8a77" targetId="d60b-3dc1-aadc-8f9c"/>

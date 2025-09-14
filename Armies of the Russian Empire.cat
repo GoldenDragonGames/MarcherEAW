@@ -123,7 +123,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Kulakov Infantry Grenade Launcher" hidden="false" id="0861-166d-4d87-e4ad" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Kulakov Infantry Grenade Launcher" hidden="false" id="0861-166d-4d87-e4ad" collective="false">
       <infoLinks>
         <infoLink name="Kulakov Infantry Grenade Launcher" id="c95d-0251-23f3-a2ea" hidden="false" targetId="9dd8-b7da-a316-4d55" type="profile"/>
         <infoLink name="Close In" id="533e-5c50-53e4-55f9" hidden="false" targetId="6f53-dabe-1243-14cf" type="rule"/>
@@ -186,7 +186,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="RO-2 Infantry Flamethrower" hidden="false" id="ce08-38ff-080f-9e97" collective="true">
+    <selectionEntry type="upgrade" import="true" name="RO-2 Infantry Flamethrower" hidden="false" id="ce08-38ff-080f-9e97" collective="false">
       <infoLinks>
         <infoLink name="RO-2 Infantry Flamethrower" id="bd41-c767-3ce1-3256" hidden="false" type="profile" targetId="e253-e8fc-9c57-872b"/>
         <infoLink name="Flames" id="7979-fdaa-9ee6-46af" hidden="false" type="rule" targetId="7235-63bc-0668-6ac4"/>
@@ -665,7 +665,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Chernayazvezda TPV-Z Light Plasma Rifle" hidden="false" id="689e-f062-63aa-96ed" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Chernayazvezda TPV-Z Light Plasma Rifle" hidden="false" id="689e-f062-63aa-96ed" collective="false">
       <infoLinks>
         <infoLink name="Chernaya Zvezda TPV-Z Light Plasma Rifle" id="9454-b612-ae16-fa55" hidden="false" type="profile" targetId="e150-4730-c0ee-8fac"/>
         <infoLink name="Slag" id="9c95-c868-3516-9613" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
@@ -1606,7 +1606,7 @@
         </modifier>
         <modifier type="set-primary" value="66f8-133e-bf09-29ff" field="category">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="cd9f-9d4b-8425-d8ca" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="cd9f-9d4b-8425-d8ca" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2212,6 +2212,9 @@
       <modifiers>
         <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Officer Upgrades" hidden="false" id="1bf6-7b51-9185-538c" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Corporate Assassin Team" hidden="false" id="cd1d-580b-0b05-bb00" type="selectionEntry" targetId="9628-15cd-26c3-0a39">
       <categoryLinks>
@@ -3203,7 +3206,6 @@ This Unit may not take Upgrades.</description>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="f5b4-5c61-3d36-ada3" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="6f97-e4fc-b390-c2e0" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
             <entryLink import="true" name="Personal Shield Generator" hidden="false" id="2868-6b0c-9cae-e308" type="selectionEntry" targetId="09b9-0f8f-b6e7-9daf"/>
           </entryLinks>
@@ -3276,7 +3278,6 @@ This Unit may not take Upgrades.</description>
             <infoLink name="(CORE) Flex" id="f58a-b3b9-9a9b-471a" hidden="false" type="rule" targetId="18aa-27f1-0ef7-3fa1"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="5b60-7acc-6c12-9539" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="a96d-cdb1-fceb-aaf3" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
           </entryLinks>
           <profiles>
@@ -3434,6 +3435,9 @@ This Unit may not take Upgrades.</description>
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="94c7-5fdf-b16b-20e2" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Assault Engineer-Sapper Officer" hidden="true" id="ec9d-a2c2-8070-c527" collective="false">
           <profiles>
@@ -3460,7 +3464,6 @@ This Unit may not take Upgrades.</description>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="6747-280e-815d-23fe" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="f523-6cfd-b784-5ec8" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
           </entryLinks>
           <selectionEntries>
@@ -3565,7 +3568,6 @@ This Unit may not take Upgrades.</description>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="21a4-9708-f717-a969" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="1f06-d6b8-44e6-0b7f" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
           </entryLinks>
           <selectionEntries>
@@ -3615,7 +3617,6 @@ This Unit may not take Upgrades.</description>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Streltsy Sotnik" hidden="false" id="d64f-bb9d-977e-1e7a">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="f7e6-1e32-cd7c-093d" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="7af6-08bc-93f7-b107" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
             <entryLink import="true" name="CKF Bardiche" hidden="false" id="1e9a-d9ee-dd29-8e55" type="selectionEntry" targetId="f355-47da-f4ee-5052">
               <constraints>
@@ -3721,7 +3722,6 @@ This Unit may not take Upgrades.</description>
         <selectionEntry type="unit" import="true" name="BA-36 Armored Command Car" hidden="false" id="0ea0-df92-fd1a-52d6">
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="39e5-7579-24cd-d846" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="8d0e-0847-d5f7-abd1" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="df4e-5fae-9dfb-5202" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="8e5f-492c-b746-09d4" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="fba2-3027-55d0-2477" type="selectionEntry" targetId="502b-c542-355b-8804"/>
@@ -6965,10 +6965,11 @@ This Unit may not take Upgrades.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Officer Upgrades" id="76a7-ae12-5d20-f79a" hidden="false">
+    <selectionEntryGroup name="Officer Upgrades" id="76a7-ae12-5d20-f79a" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Binoculars" hidden="false" id="8e9b-8715-15e0-5574" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="590d-3ffe-07a8-859e" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+        <entryLink import="true" name="Officer Seniority" hidden="false" id="c148-2861-96bd-04dc" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Factional Conviction" id="8c07-2ca0-061e-967d" hidden="false">
@@ -7056,6 +7057,13 @@ This Unit may not take Upgrades.</description>
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Rail" id="447c-962b-407c-35b0" hidden="false">
       <selectionEntries>
@@ -8355,54 +8363,39 @@ Ul. Ilya: When a Unit performs the Fallback Reaction, it may move towards an ene
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <categoryEntries>
-    <categoryEntry name="RUS" id="51a0-4deb-b01b-931e" hidden="false"/>
-    <categoryEntry name="CORE Rail" id="368f-586d-f503-841e" hidden="false"/>
-    <categoryEntry name="AUX Rail" id="66f8-133e-bf09-29ff" hidden="false"/>
-    <categoryEntry name="Rail Configuration" id="42f4-579a-a43d-b8cc" hidden="false"/>
-  </categoryEntries>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
-  <forceEntries>
-    <forceEntry name="Armored Train Detachment" id="cd9f-9d4b-8425-d8ca" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Rail Configuration" hidden="false" id="5c67-eb2a-3796-decb" targetId="42f4-579a-a43d-b8cc">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a7f-c9e3-dc43-98a5"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Command" hidden="false" id="6534-ad9c-72d9-f391" targetId="70eb-c264-a9cb-1bfe"/>
-        <categoryLink name="CORE Rail" hidden="false" id="0530-f1e2-7339-3262" targetId="368f-586d-f503-841e">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a4c6-864c-aaf7-cbe6-min" includeChildSelections="false"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="a4c6-864c-aaf7-cbe6-max" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="AUX Rail" hidden="false" id="7d41-c080-c6f2-9246" targetId="66f8-133e-bf09-29ff">
-          <constraints>
-            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="9505-30eb-0db1-6d84" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="2"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-  </forceEntries>
-  <rules>
-    <rule name="Acclimated" id="0b7f-a7e1-4825-868d" hidden="false">
-      <description>Units with the RUS keyword are affected by two fewer Category Levels of the Blizzard Condition.</description>
-    </rule>
-    <rule name="General Winter" id="3604-5784-f6dc-34e0" hidden="false">
-      <description>At the beginning of the game, before any units are placed on the battlefield, the Blizzard condition is applied to the entire battlefield, starting at Category 1. The Blizzard may not gain more than one Category Level per Round. At the end of each Round, if the Blizzard Category has not been increased or maintained, it loses one Category.</description>
-    </rule>
-  </rules>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armies of the Holy Roman Empire" id="6ab1-cbb9-9ebb-b14b" targetId="83f3-eeee-b9fd-f78b"/>
     <catalogueLink type="catalogue" name="Special Rules" id="9b55-e5d8-416e-a7af" targetId="1270-948e-6bd6-7ecc"/>
     <catalogueLink type="catalogue" name="Unit Upgrades" id="6622-b350-8fcf-1cda" targetId="d60b-3dc1-aadc-8f9c"/>
     <catalogueLink type="catalogue" name="Shared Weapons and Weapon Special Rules" id="c971-876c-8f21-70c0" targetId="54dd-0c6d-c00e-e51f"/>
   </catalogueLinks>
+  <sharedInfoGroups>
+    <infoGroup name="Russian Faction Rules" id="e589-1e04-d9d6-0a03" hidden="false">
+      <rules>
+        <rule name="General Winter" id="3604-5784-f6dc-34e0" hidden="false">
+          <description>At the beginning of the game, before any units are placed on the battlefield, the Blizzard condition is applied to the entire battlefield, starting at Category 1. The Blizzard may not gain more than one Category Level per Round. At the end of each Round, if the Blizzard Category has not been increased or maintained, it loses one Category.</description>
+        </rule>
+        <rule name="Acclimated" id="0b7f-a7e1-4825-868d" hidden="false">
+          <description>Units with the RUS keyword are affected by two fewer Category Levels of the Blizzard Condition.</description>
+        </rule>
+      </rules>
+    </infoGroup>
+  </sharedInfoGroups>
+  <infoLinks>
+    <infoLink name="Russian Faction Rules" id="3bd0-b7d0-47b6-cf84" hidden="true" type="infoGroup" targetId="e589-1e04-d9d6-0a03">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="01ba-2120-7904-bce7" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </infoLink>
+  </infoLinks>
 </catalogue>

@@ -62,7 +62,7 @@
     <categoryEntry id="d4be-5aad-8560-5720" name="Transport" hidden="false"/>
     <categoryEntry id="70eb-c264-a9cb-1bfe" name="Command" hidden="false">
       <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42e5-b83b-401a-1b12" type="min"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="42e5-b83b-401a-1b12" type="min"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="0" field="42e5-b83b-401a-1b12">
@@ -72,7 +72,6 @@
         </modifier>
       </modifiers>
     </categoryEntry>
-    <categoryEntry id="662c-810b-f0f7-8258" name="Configuration" hidden="false"/>
     <categoryEntry id="8d88-522f-d086-d712" name="Armor Platoon Configuration" hidden="false"/>
     <categoryEntry id="a448-7c15-64c5-b50f" name="Artillery Platoon Configuration" hidden="false"/>
     <categoryEntry id="85c7-9688-a121-1bdc" name="Infantry Platoon Configuration" hidden="false"/>
@@ -102,7 +101,6 @@
     <categoryEntry name="Vehicle" id="de0d-e12c-a964-4e46" hidden="false"/>
     <categoryEntry name="Engineer" id="fea7-21e6-bb88-f8ed" hidden="false"/>
     <categoryEntry name="Crewed Weapon" id="0210-dcc7-546b-3981" hidden="false"/>
-    <categoryEntry name="Specialist" id="65b3-23be-2255-a9f6" hidden="false"/>
     <categoryEntry name="Siege" id="6458-4093-473e-e12f" hidden="false"/>
     <categoryEntry name="Veteran" id="7cbc-7bcb-5750-df1d" hidden="false"/>
     <categoryEntry name="Attache" id="6cee-690d-b6de-aa15" hidden="false"/>
@@ -120,536 +118,1246 @@
       </constraints>
     </categoryEntry>
     <categoryEntry name="Embarkable" id="14e2-5d10-257c-7ecb" hidden="false"/>
+    <categoryEntry name="AUX Pacification" id="1ce8-430c-2a91-31fb" hidden="false"/>
+    <categoryEntry name="BRE" id="b100-ce4e-c964-af8d" hidden="false"/>
+    <categoryEntry name="CORE Pacification" id="a9bf-60cd-c79d-de30" hidden="false"/>
+    <categoryEntry name="Pacification Task Force Configuration" id="7596-4716-5606-8a68" hidden="false"/>
+    <categoryEntry name="SPC Pacification" id="a56a-77ef-ff07-8a8f" hidden="false"/>
+    <categoryEntry name="CORE Retainer" id="5300-59e6-6db3-c957" hidden="false"/>
+    <categoryEntry name="EOJ" id="f273-43c7-03e5-764e" hidden="false"/>
+    <categoryEntry name="IJA" id="d34f-eedb-f296-27aa" hidden="false"/>
+    <categoryEntry name="IJN" id="7b62-662e-b4a3-f92f" hidden="false"/>
+    <categoryEntry name="Urinke Detachment Configuration" id="1c45-7994-0d13-1fdd" hidden="false"/>
+    <categoryEntry name="AUX Zeppelin" id="f250-22aa-20d6-46a7" hidden="false"/>
+    <categoryEntry name="CORE Zeppelin" id="d3e6-9cfb-4ddb-2020" hidden="false"/>
+    <categoryEntry name="HRE" id="496e-47e7-7a85-4016" hidden="false"/>
+    <categoryEntry name="Zeppelin Configuration" id="fb3d-fd4e-cbbf-62d7" hidden="false"/>
+    <categoryEntry name="CORE Partisan" id="ab0f-f79b-bc5d-a312" hidden="false"/>
+    <categoryEntry name="NFR" id="2018-9722-0c01-f30e" hidden="false"/>
+    <categoryEntry name="Partisan Cell Configuration" id="8720-8576-acb1-c08e" hidden="false"/>
+    <categoryEntry name="AUX Rail" id="66f8-133e-bf09-29ff" hidden="false"/>
+    <categoryEntry name="CORE Rail" id="368f-586d-f503-841e" hidden="false"/>
+    <categoryEntry name="Rail Configuration" id="42f4-579a-a43d-b8cc" hidden="false"/>
+    <categoryEntry name="RUS" id="51a0-4deb-b01b-931e" hidden="false"/>
+    <categoryEntry name="AUX Starborne" id="b3c6-65b4-b49c-a828" hidden="false"/>
+    <categoryEntry name="CORE Starborne" id="4c05-06c2-f6ab-92b1" hidden="false"/>
+    <categoryEntry name="Starborne Platoon Configuration" id="0b49-4c06-5cea-c6a0" hidden="false"/>
+    <categoryEntry name="USA" id="4455-94a1-ea5e-b9ec" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Armor Platoon" id="fae0-4a12-4ae4-5f9b" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Armor Platoon Configuration" hidden="false" id="4d46-8d92-2967-4294" targetId="8d88-522f-d086-d712" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="125f-6646-3405-160a" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beab-a037-c98d-f6d4" includeChildSelections="false"/>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5b9c-e92e-4542-44bd" includeChildSelections="true"/>
-          </constraints>
+    <forceEntry name="Company" id="01ba-2120-7904-bce7" hidden="false" childForcesLabel="Platoons">
+      <forceEntries>
+        <forceEntry name="Infantry Platoon" id="2250-4111-e2c2-bb10" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Infantry Platoon Configuration" hidden="false" id="e852-1fd2-77ea-6fc3" targetId="85c7-9688-a121-1bdc" primary="false"/>
+            <categoryLink name="Command" hidden="false" id="e4c1-dc1e-d31f-7065" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="71be-21e1-b51a-cdcc" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7e3-e9fc-2600-e754" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="71be-21e1-b51a-cdcc">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="b7e3-e9fc-2600-e754">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="e9ab-289-2a22-9f66" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="155a-4dbd-0cdb-52cc"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Infantry" hidden="false" id="8aaf-1ee2-beaa-4f41" targetId="eae9-4e17-22cb-4491">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a530-1aeb-51e2-0e7a"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Infantry" hidden="false" id="e84a-3154-3391-7316" targetId="26a5-76cb-5d13-b4a7" primary="false">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e12e-dfb1-d241-43fc" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="858d-72e7-6ab4-d909" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Infantry" hidden="false" id="b5c2-124e-68d9-f5ed" targetId="a74d-0d07-e5d9-0032" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7421-ba37-56dc-b535" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="5e21-1453-8bf5-0af3" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="abff-7223-f6ea-7adf" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="abff-7223-f6ea-7adf">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
           <modifiers>
-            <modifier type="set" value="0" field="5b9c-e92e-4542-44bd">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="beab-a037-c98d-f6d4">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="3743-e631-0685-3b76" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8751-b495-524f-c137"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Armor" hidden="false" id="da17-3405-b817-5a30" targetId="c650-aa93-b1ce-0970">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dd77-3d7e-e6a2-8422"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Armor" hidden="false" id="6eed-d29d-0cfc-4d40" targetId="7950-f6f1-38c2-f2dd" primary="false">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="61af-eb8a-5621-2d51" includeChildSelections="false"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c4b4-926c-3450-bd94" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="1" field="61af-eb8a-5621-2d51">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="AUX Armor" hidden="false" id="2bb1-941c-bc98-bcbe" targetId="8136-fed2-db8d-c7a0" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7139-b185-c779-7e9d" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Artillery Platoon" id="d61b-5a5c-9008-3c0b" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Artillery Platoon Configuration" hidden="false" id="f772-61f7-8c62-52b6" targetId="a448-7c15-64c5-b50f" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="88e8-dd88-670f-ca67" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="1a5e-3a41-33ef-0b84" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7690-b39c-7e8a-30a4" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="0" field="1a5e-3a41-33ef-0b84">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="7690-b39c-7e8a-30a4">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="d656-c8f5-c8aa-0237" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="283a-2a05-a1d8-2eff"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Artillery" hidden="false" id="4bdd-15d5-43b5-643c" targetId="adc7-9c83-fa3a-e7da">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f25d-b77c-27da-eeab"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Artillery" hidden="false" id="1ece-36c4-7a7d-dfa4" targetId="8679-d614-ae03-de2c" primary="false">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d249-a21e-6882-50c4" includeChildSelections="false"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="632e-f737-c507-cb4f" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="1" field="d249-a21e-6882-50c4">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="AUX Artillery" hidden="false" id="4ea6-6da4-8cd4-4144" targetId="9565-ab3a-3c1b-b959" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0295-94da-a785-2e47" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="true" id="e711-0b0e-bca3-d7f2" targetId="d4be-5aad-8560-5720">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="793c-42e1-8084-a3b9" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="793c-42e1-8084-a3b9">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Infantry Platoon" id="2250-4111-e2c2-bb10" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Infantry Platoon Configuration" hidden="false" id="e852-1fd2-77ea-6fc3" targetId="85c7-9688-a121-1bdc" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="e4c1-dc1e-d31f-7065" targetId="70eb-c264-a9cb-1bfe">
+        </forceEntry>
+        <forceEntry name="Armor Platoon" id="fae0-4a12-4ae4-5f9b" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Armor Platoon Configuration" hidden="false" id="4d46-8d92-2967-4294" targetId="8d88-522f-d086-d712" primary="false"/>
+            <categoryLink name="Command" hidden="false" id="125f-6646-3405-160a" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beab-a037-c98d-f6d4" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5b9c-e92e-4542-44bd" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="5b9c-e92e-4542-44bd">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="beab-a037-c98d-f6d4">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="3743-e631-0685-3b76" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8751-b495-524f-c137"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Armor" hidden="false" id="da17-3405-b817-5a30" targetId="c650-aa93-b1ce-0970">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dd77-3d7e-e6a2-8422"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Armor" hidden="false" id="6eed-d29d-0cfc-4d40" targetId="7950-f6f1-38c2-f2dd" primary="false">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="61af-eb8a-5621-2d51" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c4b4-926c-3450-bd94" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="61af-eb8a-5621-2d51">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="AUX Armor" hidden="false" id="2bb1-941c-bc98-bcbe" targetId="8136-fed2-db8d-c7a0" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7139-b185-c779-7e9d" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="71be-21e1-b51a-cdcc" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7e3-e9fc-2600-e754" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="forces" scope="parent" shared="true" id="5c83-3f87-8549-1980" includeChildSelections="false"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="0" field="71be-21e1-b51a-cdcc">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="b7e3-e9fc-2600-e754">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="e9ab-289-2a22-9f66" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="155a-4dbd-0cdb-52cc"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Infantry" hidden="false" id="8aaf-1ee2-beaa-4f41" targetId="eae9-4e17-22cb-4491">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a530-1aeb-51e2-0e7a"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Infantry" hidden="false" id="e84a-3154-3391-7316" targetId="26a5-76cb-5d13-b4a7" primary="false">
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e12e-dfb1-d241-43fc" includeChildSelections="false"/>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="858d-72e7-6ab4-d909" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="AUX Infantry" hidden="false" id="b5c2-124e-68d9-f5ed" targetId="a74d-0d07-e5d9-0032" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7421-ba37-56dc-b535" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="true" id="5e21-1453-8bf5-0af3" targetId="d4be-5aad-8560-5720">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="abff-7223-f6ea-7adf" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="abff-7223-f6ea-7adf">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Mechanized Platoon" id="29bb-b3e2-3fbb-9ad5" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Mechanized Platoon Configuration" hidden="false" id="b044-04a1-2e36-d6f3" targetId="e281-74c9-b00c-1884" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="4924-42e4-59c7-a760" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="7650-e1e6-938e-7490" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37e9-450b-ba63-3d6f" includeChildSelections="false"/>
-          </constraints>
+        </forceEntry>
+        <forceEntry name="Artillery Platoon" id="d61b-5a5c-9008-3c0b" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Artillery Platoon Configuration" hidden="false" id="f772-61f7-8c62-52b6" targetId="a448-7c15-64c5-b50f" primary="false"/>
+            <categoryLink name="Command" hidden="false" id="88e8-dd88-670f-ca67" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="1a5e-3a41-33ef-0b84" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7690-b39c-7e8a-30a4" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="1a5e-3a41-33ef-0b84">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="7690-b39c-7e8a-30a4">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="d656-c8f5-c8aa-0237" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="283a-2a05-a1d8-2eff"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Artillery" hidden="false" id="4bdd-15d5-43b5-643c" targetId="adc7-9c83-fa3a-e7da">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f25d-b77c-27da-eeab"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Artillery" hidden="false" id="1ece-36c4-7a7d-dfa4" targetId="8679-d614-ae03-de2c" primary="false">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d249-a21e-6882-50c4" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="632e-f737-c507-cb4f" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="d249-a21e-6882-50c4">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="AUX Artillery" hidden="false" id="4ea6-6da4-8cd4-4144" targetId="9565-ab3a-3c1b-b959" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0295-94da-a785-2e47" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="e711-0b0e-bca3-d7f2" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="793c-42e1-8084-a3b9" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="793c-42e1-8084-a3b9">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
           <modifiers>
-            <modifier type="set" value="0" field="7650-e1e6-938e-7490">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="37e9-450b-ba63-3d6f">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="1898-9002-611f-d2db" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5f3-8c3a-0f2c-6012"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Mechanized" hidden="false" id="958a-4fcf-e83a-a6f5" targetId="cf6f-f672-129a-1bfb">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="36ec-e3b9-607a-1e0b"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Mechanized" hidden="false" id="0a9c-4572-fdc3-8da3" targetId="7ce6-55a5-44aa-7258" primary="false">
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f5d6-ee93-6772-3ac6" includeChildSelections="false"/>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b42c-1d50-26c5-3c90"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="AUX Mechanized" hidden="false" id="931f-b95a-7068-3aa4" targetId="c87d-0c37-d91f-b4cd" primary="false">
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="679a-2d-6b10-7e7b" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="true" id="c544-9294-5dcb-25c9" targetId="d4be-5aad-8560-5720">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="a44d-e3ab-9d0f-9329" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="a44d-e3ab-9d0f-9329">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Recon Platoon" id="df9c-5241-555f-2018" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="85ce-3a90-edf6-5152" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4889-5867-3a08-7e9f" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3e9-bad6-36ae-291c" includeChildSelections="false"/>
-          </constraints>
+        </forceEntry>
+        <forceEntry name="Mechanized Platoon" id="29bb-b3e2-3fbb-9ad5" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Mechanized Platoon Configuration" hidden="false" id="b044-04a1-2e36-d6f3" targetId="e281-74c9-b00c-1884" primary="false"/>
+            <categoryLink name="Command" hidden="false" id="4924-42e4-59c7-a760" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="7650-e1e6-938e-7490" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37e9-450b-ba63-3d6f" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="7650-e1e6-938e-7490">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="37e9-450b-ba63-3d6f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="1898-9002-611f-d2db" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5f3-8c3a-0f2c-6012"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Mechanized" hidden="false" id="958a-4fcf-e83a-a6f5" targetId="cf6f-f672-129a-1bfb">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="36ec-e3b9-607a-1e0b"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Mechanized" hidden="false" id="0a9c-4572-fdc3-8da3" targetId="7ce6-55a5-44aa-7258" primary="false">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f5d6-ee93-6772-3ac6" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b42c-1d50-26c5-3c90"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Mechanized" hidden="false" id="931f-b95a-7068-3aa4" targetId="c87d-0c37-d91f-b4cd" primary="false">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="679a-2d-6b10-7e7b" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="c544-9294-5dcb-25c9" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="a44d-e3ab-9d0f-9329" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="a44d-e3ab-9d0f-9329">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
           <modifiers>
-            <modifier type="set" value="0" field="4889-5867-3a08-7e9f">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="a3e9-bad6-36ae-291c">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="7c5e-509d-4afa-375f" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2905-d55c-72c5-28a9"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Recon" hidden="false" id="ac56-00da-aa45-1569" targetId="893b-458b-4e03-6e5e">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5809-5c32-3d1f-decf"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Recon" hidden="false" id="c950-a3cd-d372-f174" targetId="54db-5889-a382-77cb" primary="false">
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="4f8-6ba7-7b4d-88c" includeChildSelections="false"/>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="cc57-25d0-a105-f341" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="1" field="cc57-25d0-a105-f341">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="AUX Recon" hidden="false" id="72c3-98ce-d99b-c489" targetId="dc85-2f8f-8f0d-4b19">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="418c-b4e9-fbe2-f1af" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="true" id="a3a7-bc60-b742-3060" targetId="d4be-5aad-8560-5720">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="14c4-500d-55f8-b10f" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="14c4-500d-55f8-b10f">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Support Platoon" id="c571-bda4-1e0f-ed1f" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Support Platoon Configuration" hidden="false" id="4f7e-1819-2fb1-7f22" targetId="3cff-c57c-6289-d24c" primary="false"/>
-        <categoryLink name="Command" hidden="false" id="fcfb-2bd5-36b0-c375" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e399-8a37-db84-87a3" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7823-156b-acd5-68c0" includeChildSelections="false"/>
-          </constraints>
+        </forceEntry>
+        <forceEntry name="Recon Platoon" id="df9c-5241-555f-2018" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
+            <categoryLink name="Command" hidden="false" id="85ce-3a90-edf6-5152" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4889-5867-3a08-7e9f" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3e9-bad6-36ae-291c" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="4889-5867-3a08-7e9f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="a3e9-bad6-36ae-291c">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="7c5e-509d-4afa-375f" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2905-d55c-72c5-28a9"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Recon" hidden="false" id="ac56-00da-aa45-1569" targetId="893b-458b-4e03-6e5e">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5809-5c32-3d1f-decf"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Recon" hidden="false" id="c950-a3cd-d372-f174" targetId="54db-5889-a382-77cb" primary="false">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="4f8-6ba7-7b4d-88c" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="cc57-25d0-a105-f341" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="cc57-25d0-a105-f341">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="AUX Recon" hidden="false" id="72c3-98ce-d99b-c489" targetId="dc85-2f8f-8f0d-4b19">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="418c-b4e9-fbe2-f1af" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="a3a7-bc60-b742-3060" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="14c4-500d-55f8-b10f" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="14c4-500d-55f8-b10f">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
           <modifiers>
-            <modifier type="set" value="0" field="e399-8a37-db84-87a3">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="7823-156b-acd5-68c0">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="f976-e1cd-f502-94b8" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5060-289c-cec0-8ae1"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Support" hidden="false" id="1635-4c0b-6ed5-0d6a" targetId="869c-51f1-d04f-a8ce">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1dfc-105e-83a1-d600"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Support" hidden="false" id="a522-66b7-f6d9-edd1" targetId="7110-7fe8-80e2-5e81" primary="false">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4f28-f1a3-12bb-a1b" includeChildSelections="false"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8af2-3def-99a8-0424" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="AUX Support" hidden="false" id="a0ef-3c31-3647-9092" targetId="48f5-3131-be0b-5951" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9f03-7e78-6e9c-727a" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="true" id="5da9-f146-dfea-78b7" targetId="d4be-5aad-8560-5720">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="6065-b29f-f473-d9d1" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="6065-b29f-f473-d9d1">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="2"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Combined Arms Platoon" id="e78b-876f-a197-77ad" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Command" hidden="false" id="8d83-88f9-81c5-e167" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="c723-a9ef-7e38-fc07" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d621-c177-7fcc-6a5d" includeChildSelections="false"/>
-          </constraints>
+        </forceEntry>
+        <forceEntry name="Support Platoon" id="c571-bda4-1e0f-ed1f" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Support Platoon Configuration" hidden="false" id="4f7e-1819-2fb1-7f22" targetId="3cff-c57c-6289-d24c" primary="false"/>
+            <categoryLink name="Command" hidden="false" id="fcfb-2bd5-36b0-c375" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e399-8a37-db84-87a3" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7823-156b-acd5-68c0" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="e399-8a37-db84-87a3">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="7823-156b-acd5-68c0">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="f976-e1cd-f502-94b8" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5060-289c-cec0-8ae1"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Support" hidden="false" id="1635-4c0b-6ed5-0d6a" targetId="869c-51f1-d04f-a8ce">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1dfc-105e-83a1-d600"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Support" hidden="false" id="a522-66b7-f6d9-edd1" targetId="7110-7fe8-80e2-5e81" primary="false">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4f28-f1a3-12bb-a1b" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8af2-3def-99a8-0424" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Support" hidden="false" id="a0ef-3c31-3647-9092" targetId="48f5-3131-be0b-5951" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9f03-7e78-6e9c-727a" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="5da9-f146-dfea-78b7" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="6065-b29f-f473-d9d1" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="6065-b29f-f473-d9d1">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="2"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
           <modifiers>
-            <modifier type="set" value="0" field="c723-a9ef-7e38-fc07">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="d621-c177-7fcc-6a5d">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="54f6-e749-30c5-aaaf" targetId="33a5-8b7e-49bb-c30d"/>
-        <categoryLink name="SPC Armor" hidden="false" id="403e-2fa4-00a1-e84a" targetId="c650-aa93-b1ce-0970">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6cb-fbc7-db8d-bfab"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Artillery" hidden="false" id="c99b-4b8f-2187-5573" targetId="adc7-9c83-fa3a-e7da">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b756-0e6f-5b6d-a5c7"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Infantry" hidden="false" id="9de9-96a1-4a86-9ca4" targetId="eae9-4e17-22cb-4491">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9884-5a11-7e7b-482f"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Mechanized" hidden="false" id="24fb-0a1d-ce64-4b42" targetId="cf6f-f672-129a-1bfb">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc1a-21d4-be9a-ea09"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Recon" hidden="false" id="4a30-edc0-8280-5e8b" targetId="893b-458b-4e03-6e5e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff49-54ff-b9bd-cf79"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="SPC Support" hidden="false" id="0a1b-dc8c-4249-8f8a" targetId="869c-51f1-d04f-a8ce">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebbf-611c-bb4c-fae6"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Armor" hidden="false" id="5f24-2641-842a-57ec" targetId="7950-f6f1-38c2-f2dd" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6ad3-2275-216f-3fa1" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Artillery" hidden="false" id="8b49-47f6-93bd-1a85" targetId="8679-d614-ae03-de2c" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a1da-646e-c0a7-1a90" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Infantry" hidden="false" id="f29d-ce48-a901-60a7" targetId="26a5-76cb-5d13-b4a7" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4fdf-fa14-58b2-8977" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Mechanized" hidden="false" id="8f24-2c70-e195-9ee6" targetId="7ce6-55a5-44aa-7258" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="806c-187f-79f9-e85e" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Recon" hidden="false" id="6f0f-508a-7433-1fa1" targetId="54db-5889-a382-77cb" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="213d-16cd-4808-d57b" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Support" hidden="false" id="36d5-27d9-e6e8-4b29" targetId="7110-7fe8-80e2-5e81" primary="false">
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5e73-14a5-0588-688e" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="true" id="1465-3432-296a-09b5" targetId="d4be-5aad-8560-5720">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="c24b-29fa-eb68-fe43" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="c24b-29fa-eb68-fe43">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
-              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry name="Army Specialization" id="2e26-17bf-8119-1fdc" hidden="false">
+        </forceEntry>
+        <forceEntry name="Automated Pacification Task Force" id="d6f3-788c-2c4c-503b" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Pacification Task Force Configuration" hidden="false" id="86af-77be-b20f-d5ee" targetId="7596-4716-5606-8a68"/>
+            <categoryLink name="CORE Pacification" hidden="false" id="3a0c-64f0-cd4d-e6fd" targetId="a9bf-60cd-c79d-de30">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="2182-f27c-83b0-ca61"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="861f-a5e2-4214-e026"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Pacification" hidden="false" id="f2fe-7f1c-fecf-0807" targetId="a56a-77ef-ff07-8a8f">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ece-7ecc-9347-8c0f"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Pacification" hidden="false" id="7b6b-e486-bc6f-f0df" targetId="1ce8-430c-2a91-31fb">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="3b28-a3b1-96f9-0476"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="ce62-29ea-ed3f-283e" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="4715-c1d0-088f-aade" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="4715-c1d0-088f-aade">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="1"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntry>
+        <forceEntry name="Urinke Imperial Command Detachment" id="b546-2955-e4ad-2f31" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Urinke Detachment Configuration" hidden="false" id="2dad-2adb-e964-cfa1" targetId="1c45-7994-0d13-1fdd"/>
+            <categoryLink name="Command" hidden="false" id="3b00-4084-4032-9acc" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e557-d702-7a20-f0ad" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad5-0a90-97c8-d80f" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="e557-d702-7a20-f0ad">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="bad5-0a90-97c8-d80f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="b61c-d21a-4156-8efd" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7cf-d4f8-7aab-ccea"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Retainer" hidden="false" id="c8b5-2666-450b-2eaf" targetId="5300-59e6-6db3-c957">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="44f6-8d70-939d-845e"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e9f7-db86-8061-5ef6"/>
+              </constraints>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntry>
+        <forceEntry name="Zeppelin Task Force" id="94df-db09-3266-46a5" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Zeppelin Configuration" hidden="false" id="2f19-5c59-42df-d336" targetId="fb3d-fd4e-cbbf-62d7" primary="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cacb-dfe6-6484-b4ef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63fc-7113-979d-2c8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Command" hidden="false" id="f002-cc6b-e643-2364" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="fafe-dd68-46b2-f21b" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="fafe-dd68-46b2-f21b">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="537e-e7d7-3fc9-df31" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6031-d722-e0a4-a174"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Zeppelin" hidden="false" id="96fb-d65a-9c59-07ec" targetId="d3e6-9cfb-4ddb-2020" primary="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7d2-7502-bcb4-ff8a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Zeppelin" hidden="false" id="6567-7bc1-c163-b973" targetId="f250-22aa-20d6-46a7" primary="false">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9419-ab99-87d8-a60a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </categoryLink>
+          </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Partisan Cell" id="32f9-f13e-ea22-42ec" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Partisan Cell Configuration" hidden="false" id="b945-3ff7-5bd7-c270" targetId="8720-8576-acb1-c08e"/>
+            <categoryLink name="Command" hidden="false" id="8d9b-9c2f-3f13-d3f8" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="26a6-8d37-62c2-77e6" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c38-2c8f-0c25-2cda" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="26a6-8d37-62c2-77e6">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="4c38-2c8f-0c25-2cda">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="44a1-fa85-2d94-4d6f" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f295-8938-d352-84b6"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Partisan" hidden="false" id="c886-1fda-c27c-1039" targetId="ab0f-f79b-bc5d-a312">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8b88-f31a-e4ba-0cea"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0d85-ac93-7543-c201"/>
+              </constraints>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntry>
+        <forceEntry name="Armored Train Detachment" id="cd9f-9d4b-8425-d8ca" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Rail Configuration" hidden="false" id="5c67-eb2a-3796-decb" targetId="42f4-579a-a43d-b8cc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a7f-c9e3-dc43-98a5"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Command" hidden="false" id="6534-ad9c-72d9-f391" targetId="70eb-c264-a9cb-1bfe"/>
+            <categoryLink name="CORE Rail" hidden="false" id="0530-f1e2-7339-3262" targetId="368f-586d-f503-841e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a4c6-864c-aaf7-cbe6-min" includeChildSelections="false"/>
+                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="a4c6-864c-aaf7-cbe6-max" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Rail" hidden="false" id="7d41-c080-c6f2-9246" targetId="66f8-133e-bf09-29ff">
+              <constraints>
+                <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="9505-30eb-0db1-6d84" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="2"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntry>
+        <forceEntry name="Starborne Air Support Platoon" id="34ba-1720-6fa5-fe76" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Starborne Platoon Configuration" hidden="false" id="e3a6-4112-32e9-fcfd" targetId="0b49-4c06-5cea-c6a0"/>
+            <categoryLink name="Command" hidden="false" id="935f-90ea-16b7-42d4" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5afc-7f0e-1325-4fe6" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb93-892b-cffc-a9b5" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="5afc-7f0e-1325-4fe6">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="cb93-892b-cffc-a9b5">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="6f46-a7ec-622f-4dd3" targetId="33a5-8b7e-49bb-c30d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89c2-8277-8294-6c6c"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Starborne" hidden="false" id="2ab9-51d8-5609-a5ec" targetId="4c05-06c2-f6ab-92b1">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f308-3952-279b-4c73"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="d657-bf1e-989c-1746"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="AUX Starborne" hidden="false" id="2acc-eee1-9d35-e7ae" targetId="b3c6-65b4-b49c-a828">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8f11-7567-d867-239b"/>
+              </constraints>
+            </categoryLink>
+          </categoryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntry>
+        <forceEntry name="Combined Arms Platoon" id="e78b-876f-a197-77ad" hidden="true">
+          <categoryLinks>
+            <categoryLink name="Command" hidden="false" id="8d83-88f9-81c5-e167" targetId="70eb-c264-a9cb-1bfe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="force" shared="true" id="c723-a9ef-7e38-fc07" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d621-c177-7fcc-6a5d" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="c723-a9ef-7e38-fc07">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="d621-c177-7fcc-6a5d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+            <categoryLink name="Hero" hidden="false" id="54f6-e749-30c5-aaaf" targetId="33a5-8b7e-49bb-c30d"/>
+            <categoryLink name="SPC Armor" hidden="false" id="403e-2fa4-00a1-e84a" targetId="c650-aa93-b1ce-0970">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6cb-fbc7-db8d-bfab"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Artillery" hidden="false" id="c99b-4b8f-2187-5573" targetId="adc7-9c83-fa3a-e7da">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b756-0e6f-5b6d-a5c7"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Infantry" hidden="false" id="9de9-96a1-4a86-9ca4" targetId="eae9-4e17-22cb-4491">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9884-5a11-7e7b-482f"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Mechanized" hidden="false" id="24fb-0a1d-ce64-4b42" targetId="cf6f-f672-129a-1bfb">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc1a-21d4-be9a-ea09"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Recon" hidden="false" id="4a30-edc0-8280-5e8b" targetId="893b-458b-4e03-6e5e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff49-54ff-b9bd-cf79"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="SPC Support" hidden="false" id="0a1b-dc8c-4249-8f8a" targetId="869c-51f1-d04f-a8ce">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebbf-611c-bb4c-fae6"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Armor" hidden="false" id="5f24-2641-842a-57ec" targetId="7950-f6f1-38c2-f2dd" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6ad3-2275-216f-3fa1" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Artillery" hidden="false" id="8b49-47f6-93bd-1a85" targetId="8679-d614-ae03-de2c" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a1da-646e-c0a7-1a90" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Infantry" hidden="false" id="f29d-ce48-a901-60a7" targetId="26a5-76cb-5d13-b4a7" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4fdf-fa14-58b2-8977" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Mechanized" hidden="false" id="8f24-2c70-e195-9ee6" targetId="7ce6-55a5-44aa-7258" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="806c-187f-79f9-e85e" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Recon" hidden="false" id="6f0f-508a-7433-1fa1" targetId="54db-5889-a382-77cb" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="213d-16cd-4808-d57b" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="CORE Support" hidden="false" id="36d5-27d9-e6e8-4b29" targetId="7110-7fe8-80e2-5e81" primary="false">
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5e73-14a5-0588-688e" includeChildSelections="false"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="1465-3432-296a-09b5" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="c24b-29fa-eb68-fe43" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="c24b-29fa-eb68-fe43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </categoryLink>
+          </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="381c-41bb-e273-4cf0" shared="true"/>
+                      </conditions>
+                      <comment>BRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5850-c931-4187-f520" shared="true"/>
+                      </conditions>
+                      <comment>EOJ</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                      </conditions>
+                      <comment>HRE</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="dd1d-4e84-685a-d547" shared="true"/>
+                      </conditions>
+                      <comment>RUS</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d372-9028-aa84-9c11" shared="true"/>
+                      </conditions>
+                      <comment>USA</comment>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4fc5-7684-3b46-838d" shared="true"/>
+                      </conditions>
+                      <comment>NFR</comment>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntry>
+      </forceEntries>
+      <constraints>
+        <constraint type="min" value="1" field="forces" scope="parent" shared="true" id="5914-9c8a-1c82-c892-min"/>
+        <constraint type="max" value="1" field="forces" scope="parent" shared="true" id="5914-9c8a-1c82-c892-max"/>
+        <constraint type="max" value="1" field="selections" scope="primary-catalogue" shared="true" id="7885-85c5-675c-28c7"/>
+      </constraints>
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="5c42-63b0-1c59-f99f" targetId="b200-6914-09f3-4db0"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="5bc2-286b-7695-7cea"/>
-        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="a438-fbe7-9f1f-da9f"/>
-      </constraints>
     </forceEntry>
   </forceEntries>
   <entryLinks>
@@ -748,10 +1456,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1238-8c88-8030-8d02" name="Infantry Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="dc32-f51b-c702-ad1c" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="true"/>
-        <categoryLink id="852e-0745-593d-9c61" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
-      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e355-1035-2a08-355e" name="Coordinated Attack" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -790,10 +1494,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6d9a-4874-8e9b-1268" name="Artillery Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="aee4-15ae-6ae9-68a4" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="true"/>
-        <categoryLink id="4df2-54a4-c0ab-5a57" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
-      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="33cd-48a7-8c3a-8bfa" name="Rounds on Target" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -827,10 +1527,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f751-4a6b-6442-3376" name="Mechanized Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="9636-3364-140e-28f1" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="true"/>
-        <categoryLink id="607c-0d72-084a-867c" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
-      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1642-3b94-5a95-75ae" name="Rolling Wall" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -862,10 +1558,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c1ca-082a-de8f-6bb5" name="Recon Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="911c-5363-860d-3b04" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="true"/>
-        <categoryLink id="8afe-11fb-5dd9-d3bb" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
-      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0db9-8274-57c5-fa4c" name="Rapid Reconnaissance" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -903,10 +1595,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3181-08f3-ad0b-84db" name="Support Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="939d-ebd0-3fd7-c6b5" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="true"/>
-        <categoryLink id="9eaa-fad0-a1a1-6503" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="false"/>
-      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="191b-2898-f815-cf40" name="Rapid Fortification" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>

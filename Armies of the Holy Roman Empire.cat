@@ -1,50 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="83f3-eeee-b9fd-f78b" name="Armies of the Holy Roman Empire" revision="3" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
-  <categoryEntries>
-    <categoryEntry id="d3e6-9cfb-4ddb-2020" name="CORE Zeppelin" hidden="false"/>
-    <categoryEntry id="fb3d-fd4e-cbbf-62d7" name="Zeppelin Configuration" hidden="false"/>
-    <categoryEntry name="HRE" id="496e-47e7-7a85-4016" hidden="false"/>
-    <categoryEntry name="AUX Zeppelin" id="f250-22aa-20d6-46a7" hidden="false"/>
-  </categoryEntries>
-  <forceEntries>
-    <forceEntry id="94df-db09-3266-46a5" name="Zeppelin Task Force" hidden="false">
-      <categoryLinks>
-        <categoryLink id="2f19-5c59-42df-d336" name="Zeppelin Configuration" hidden="false" targetId="fb3d-fd4e-cbbf-62d7" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cacb-dfe6-6484-b4ef" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63fc-7113-979d-2c8d" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Command" hidden="false" id="f002-cc6b-e643-2364" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="fafe-dd68-46b2-f21b" includeChildSelections="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="0" field="fafe-dd68-46b2-f21b">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="537e-e7d7-3fc9-df31" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6031-d722-e0a4-a174"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="96fb-d65a-9c59-07ec" name="CORE Zeppelin" hidden="false" targetId="d3e6-9cfb-4ddb-2020" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7d2-7502-bcb4-ff8a" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="6567-7bc1-c163-b973" name="AUX Zeppelin" hidden="false" targetId="f250-22aa-20d6-46a7" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9419-ab99-87d8-a60a" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-  </forceEntries>
   <entryLinks>
     <entryLink id="b007-dd96-94d4-4b3b" name="Landwehr Squad" hidden="false" collective="false" import="true" targetId="a7a0-9f96-37f9-f36e" type="selectionEntry">
       <categoryLinks>
@@ -896,6 +851,10 @@
         <cost name="Munitions" typeId="Points" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7cdc-111c-79ac-59e9-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cdc-111c-79ac-59e9-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="684a-d6eb-8497-815b" name="Zeppelin Task Force Abilities" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
@@ -1195,7 +1154,6 @@
     <selectionEntry type="upgrade" import="true" name="Flanged Mace and Shield" hidden="false" id="bccd-f35d-9db1-5ba2" collective="true">
       <infoLinks>
         <infoLink name="Flanged Mace and Shield" id="ee49-5bff-00fb-d534" hidden="false" targetId="fefd-219b-b1fe-1f43" type="profile"/>
-        <infoLink name="Up-Armored" id="2657-6cc2-ea3c-0e36" hidden="false" type="rule" targetId="1f7c-515a-0ef2-8614"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="2"/>
@@ -1203,6 +1161,9 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="565a-554e-cf6c-a681" type="selectionEntry" targetId="01e5-5a61-0629-9f24"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="GKB38 Assault Rifle" hidden="false" id="a757-fa09-f338-77e1" collective="true">
       <infoLinks>
@@ -1274,7 +1235,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="M1931 Granatewerfer" hidden="false" id="74d5-e395-7784-134f" collective="true">
+    <selectionEntry type="upgrade" import="true" name="M1931 Granatewerfer" hidden="false" id="74d5-e395-7784-134f" collective="false">
       <infoLinks>
         <infoLink name="M1931 Granatewerfer" id="fd62-d379-9a01-ecb1" hidden="false" type="profile" targetId="9789-98e3-60c8-a9ee"/>
         <infoLink name="Close In" id="316f-7bb7-6500-537" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
@@ -1608,7 +1569,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Knecht Zweihander" hidden="false" id="3fc8-84ad-d8b6-e09d">
+    <selectionEntry type="upgrade" import="true" name="Knecht Zweihander" hidden="false" id="3fc8-84ad-d8b6-e09d" collective="true">
       <infoLinks>
         <infoLink name="Knecht Zweihander" id="84d3-55c2-2980-1bb4" hidden="false" type="profile" targetId="2ebb-3ece-b142-76ed"/>
         <infoLink name="Warding" id="333e-0dce-a6a8-3e4a" hidden="false" type="rule" targetId="f86d-acd5-05b1-927c"/>
@@ -1654,7 +1615,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="CKF Dagger" hidden="false" id="371e-2729-f101-9fb9">
+    <selectionEntry type="upgrade" import="true" name="CKF Dagger" hidden="false" id="371e-2729-f101-9fb9" collective="true">
       <infoLinks>
         <infoLink name="CKF Dagger" id="7a5a-741f-482f-3c1d" hidden="false" type="profile" targetId="9183-5e80-158c-7024"/>
       </infoLinks>
@@ -1672,6 +1633,27 @@
     </rule>
     <rule id="7498-ac28-f25d-82d8" name="Stahlschutz" hidden="false">
       <description>After activating this ability, all allied Troop Units that are within 20&quot; of this model may activate their shield one additional time this round.</description>
+    </rule>
+    <rule name="Shield Generator" id="344f-2329-dd70-0840" hidden="false">
+      <description>Each Unit in this army may choose to Activate their Shield Generator once per Round when they are selected as the target of a Ranged Attack. When they do, they gain the following benefits until the Attack is resolved.
+
+
+Non vehicle units:
+• Reduce the number of Hits of all incoming Weapon Profiles by 1.
+• If this Unit has not Activated this Round it may spend any number of its Actions for the
+turn to reduce the Hits by an additional 1.
+• Bulwark 1
+
+
+Vehicle Units:
+• Reduce the A.P. of all incoming Weapon Profiles by 2.
+• If this Unit has not Activated this Round it may spend any number of it’s Actions for the
+turn to reduce the A.P. by an additional 1
+• Bulwark 3
+
+
+Hits, Range, and A.P. may be decreased only to a minimum of 1.
+These rules do not apply to Weapons with the Flames or Gas Special Rules.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1961,7 +1943,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reinforced</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -3147,7 +3129,7 @@
                     </modifier>
                   </modifiers>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Landwehr Stabsgefreiter" hidden="false" id="be17-9a98-eded-4898" collective="true" sortIndex="3">
+                <selectionEntry type="model" import="true" name="Landwehr Stabsgefreiter" hidden="false" id="be17-9a98-eded-4898" collective="false" sortIndex="3">
                   <constraints>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a52a-6a0f-feaf-6e5e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
@@ -4400,12 +4382,6 @@
             <infoLink name="Command Actions" id="f50c-fed2-72c8-617e" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="7388-a1a8-6682-5bbd" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d35-543a-fdd0-92ae" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8da0-a64f-1ae0-0b8a" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="e9d8-4ce3-00e1-0f38" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="CKF Dagger" hidden="false" id="5d6f-7d35-a11b-c835" type="selectionEntry" targetId="371e-2729-f101-9fb9">
               <constraints>
@@ -4472,12 +4448,6 @@
             <infoLink name="Command Actions" id="94eb-3686-8a26-dac7" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="d85b-ffd3-3594-f011" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6cbf-2170-2325-652d-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cbf-2170-2325-652d-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="1b67-77bc-2471-a437" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="8937-185d-742e-c001" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
           </entryLinks>
@@ -4509,13 +4479,6 @@
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
               </characteristics>
-              <modifiers>
-                <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="73b3-51f6-6076-2dcd" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -4535,7 +4498,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43-d113-d92f-e392-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="246e-2143-f0c0-cf0a" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="52"/>
@@ -4615,12 +4577,6 @@
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b2b9-b39b-e6a0-27d7-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2b9-b39b-e6a0-27d7-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="13a7-f663-92ec-8416" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c557-5387-1681-f646-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c557-5387-1681-f646-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="cc79-9751-97ea-c07e" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
@@ -4703,12 +4659,6 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="e1de-739d-9809-f910" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="0a61-10c6-a58f-ce3c" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="29a5-c370-dc04-80e6" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb58-ec39-9502-eca1" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="0f58-99b9-5c55-38e9" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="09c4-0894-6524-e535" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Command Car" hidden="false" id="8a67-c493-8398-2c77" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -4736,12 +4686,6 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="499a-4000-934b-28a2" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="61b6-f2ba-1498-9f74" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="680a-78a0-f0f5-3773" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdca-0e01-1d0d-7d85" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="7190-f0c0-6c80-330b" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="10de-5d46-5d1c-7d8e" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="9c9d-5302-f526-7dce" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -4803,12 +4747,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a05b-9801-7563-c69c" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="4c94-7289-f696-1f6c" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d633-6e7b-7cc4-bfdc" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61d4-4e6c-4f84-e91d" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="2799-d0ab-a7e4-4b1f" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="MP33 SMG" hidden="false" id="39ab-6807-148d-f705" collective="false" targetId="1d72-b2ee-fef5-7d5b" type="selectionEntry">
               <constraints>
@@ -4861,13 +4799,6 @@
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
               </characteristics>
-              <modifiers>
-                <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba">
-                  <conditions>
-                    <condition type="greaterThan" value="0" field="selections" scope="3038-234e-e995-734b" childId="efb4-5926-da44-5f41" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -4875,12 +4806,6 @@
             <infoLink name="Command Actions" id="7772-c153-f4bc-e253" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="1967-b234-4595-9d47" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f404-692f-3d54-8fba" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f21-be65-28d4-aa27" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="be05-9d25-0047-f0d4" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="Bergmann Pistol M1938" hidden="false" id="2f71-0bfd-ea74-cd78" type="selectionEntry" targetId="e85b-5482-785f-59fb">
               <constraints>
@@ -4971,7 +4896,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6538-3e31-8b42-2336" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="5d16-80ed-c367-a44c" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="6"/>
@@ -5278,7 +5202,7 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2ae-a44c-b910-9ef0" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="2e99-f5f7-d082-15f9" type="selectionEntry" targetId="f68c-2258-e3ec-0109">
+                        <entryLink import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="2e99-f5f7-d082-15f9" type="selectionEntry" targetId="f68c-2258-e3ec-0109" collective="true">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cddd-51fa-fb16-b056" includeChildSelections="false"/>
                           </constraints>
@@ -5635,6 +5559,10 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f06-f80c-631b-8afe-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f06-f80c-631b-8afe-max" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -6370,6 +6298,13 @@
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="35a7-170f-fc50-d3a8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
         <entryLink import="true" name="Binoculars" hidden="false" id="a280-36aa-1bfd-e319" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Mechanized" id="be06-f10f-14bd-28ae" hidden="false">
       <selectionEntries>
@@ -6464,13 +6399,6 @@
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
-                      <modifiers>
-                        <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba">
-                          <conditions>
-                            <condition type="greaterThan" value="0" field="selections" scope="29c7-bd81-c560-580c" childId="efb4-5926-da44-5f41" shared="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
                       <comment>Small, Normal</comment>
                     </profile>
                   </profiles>
@@ -6538,13 +6466,6 @@
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
-                      <modifiers>
-                        <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba">
-                          <conditions>
-                            <condition type="greaterThan" value="0" field="selections" scope="0b33-0a8e-e979-fd21" childId="efb4-5926-da44-5f41" shared="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
                     </profile>
                   </profiles>
                   <costs>
@@ -6554,7 +6475,7 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Option" id="ac53-825a-9b89-a35e" hidden="false" defaultSelectionEntryId="9731-dd0b-ff0f-6587">
+                    <selectionEntryGroup name="Weapon Option" id="ac53-825a-9b89-a35e" hidden="false" defaultSelectionEntryId="9731-dd0b-ff0f-6587" collective="false">
                       <entryLinks>
                         <entryLink import="true" name="Flanged Mace and Shield" hidden="false" id="efb4-5926-da44-5f41" collective="false" targetId="bccd-f35d-9db1-5ba2" type="selectionEntry">
                           <constraints>
@@ -6574,7 +6495,7 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
-                    <entryLink import="true" name="CKF Dagger" hidden="false" id="16e2-d3aa-dae4-d902" type="selectionEntry" targetId="371e-2729-f101-9fb9">
+                    <entryLink import="true" name="CKF Dagger" hidden="false" id="16e2-d3aa-dae4-d902" type="selectionEntry" targetId="371e-2729-f101-9fb9" collective="false">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e110-bc76-eaee-027d-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e110-bc76-eaee-027d-max" includeChildSelections="false"/>
@@ -6637,13 +6558,6 @@
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
-                      <modifiers>
-                        <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
-                          <repeats>
-                            <repeat value="1" repeats="1" field="selections" scope="5be3-5f69-0f56-9154" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
                     </profile>
                   </profiles>
                   <selectionEntryGroups>
@@ -6700,7 +6614,6 @@
                 <selectionEntry type="model" import="true" name="Knecht Doppelsöldner" hidden="false" id="2e86-3459-d0a9-be79" collective="false" sortIndex="2">
                   <constraints>
                     <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="f4d1-04a2-ca78-a281" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="463b-4271-ca78-5ef1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Knecht Doppelsöldner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="64db-8e62-3318-e0ec">
@@ -6710,13 +6623,6 @@
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
-                      <modifiers>
-                        <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
-                          <repeats>
-                            <repeat value="1" repeats="1" field="selections" scope="2e86-3459-d0a9-be79" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
                     </profile>
                   </profiles>
                   <selectionEntryGroups>
@@ -6762,7 +6668,6 @@
                 <selectionEntry type="model" import="true" name="Knecht Schützer" hidden="false" id="b747-810a-502a-a8c0" collective="false" sortIndex="3">
                   <constraints>
                     <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7945-4c38-2a96-5749" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a451-27aa-f426-cef1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Knecht Schützer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7388-47c5-de4f-768a">
@@ -6772,13 +6677,6 @@
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
-                      <modifiers>
-                        <modifier type="set" value="11" field="af2e-1c49-9a61-0dba">
-                          <repeats>
-                            <repeat value="1" repeats="1" field="selections" scope="b747-810a-502a-a8c0" childId="a336-f2d0-a145-aee2" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
                     </profile>
                   </profiles>
                   <selectionEntryGroups>
@@ -6823,8 +6721,7 @@
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Knecht Cornet" hidden="false" id="eadb-96c3-9d96-d63c" collective="false" sortIndex="4">
                   <constraints>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2dcb-b376-a448-4ccc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e141-16b8-fedd-73dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2dcb-b376-a448-4ccc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Knecht Cornet" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4de2-10b6-6f7a-71f9">
@@ -7671,8 +7568,20 @@ Honvéd, Landwehr, and Veteran Landwehr in this Army may ignore up to 1 Suppress
   </sharedSelectionEntryGroups>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
   <rules>
-    <rule name="Gott Erhalte, Gott Beschütze" id="c7e0-f286-613c-77b8" hidden="false">
+    <rule name="Gott Erhalte, Gott Beschütze" id="c7e0-f286-613c-77b8" hidden="true">
       <description>All Units with the HRE Keyword have the Shield Generator Special Rule.</description>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="01ba-2120-7904-bce7" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </rule>
   </rules>
   <catalogueLinks>
@@ -7680,4 +7589,20 @@ Honvéd, Landwehr, and Veteran Landwehr in this Army may ignore up to 1 Suppress
     <catalogueLink type="catalogue" name="Unit Upgrades" id="69fa-550a-3712-6330" targetId="d60b-3dc1-aadc-8f9c"/>
     <catalogueLink type="catalogue" name="Shared Weapons and Weapon Special Rules" id="7c61-7cc2-a4b3-31b7" targetId="54dd-0c6d-c00e-e51f"/>
   </catalogueLinks>
+  <infoLinks>
+    <infoLink name="Shield Generator" id="3168-28ed-e4e7-bad9" hidden="true" type="rule" targetId="344f-2329-dd70-0840">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="01ba-2120-7904-bce7" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </infoLink>
+  </infoLinks>
 </catalogue>

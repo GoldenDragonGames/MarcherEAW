@@ -537,7 +537,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Dragoons Vanguard Officer" hidden="false" id="3ecd-af0a-1d93-46af" type="selectionEntry" targetId="78af-f7e6-b1ca-8ff1">
+    <entryLink import="true" name="Dragoons Vanguard Officer" hidden="true" id="3ecd-af0a-1d93-46af" type="selectionEntry" targetId="78af-f7e6-b1ca-8ff1">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="8de4-2f39-0b07-49e8" primary="true" name="Command"/>
         <categoryLink targetId="2018-9722-0c01-f30e" id="8272-8f87-a8e2-dab4" primary="false" name="NFR"/>
@@ -882,6 +882,9 @@
       <modifiers>
         <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Officer Upgrades" hidden="false" id="929b-865f-711c-8c4e" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="M333 Heavy Howitzer" hidden="false" id="ba39-3060-7d63-f5fc" collective="false" targetId="9265-2145-51a9-bbc5" type="selectionEntry">
       <categoryLinks>
@@ -931,7 +934,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c88f-26c2-d780-97f2" name="MAS 37 Grenade Launcher" hidden="false" collective="true" import="true" type="upgrade">
+    <selectionEntry id="c88f-26c2-d780-97f2" name="MAS 37 Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="ff34-4810-9869-a684" name="MAS 37 Grenade Launcher" hidden="false" targetId="f8db-23ca-5463-9dba" type="profile"/>
         <infoLink id="c267-9943-7460-b47b" name="Close In" hidden="false" targetId="6f53-dabe-1243-14cf" type="rule"/>
@@ -1050,6 +1053,10 @@
         <cost name="Munitions" typeId="Points" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c60c-5bb2-8516-c76e-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c60c-5bb2-8516-c76e-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Canon de 40mm" hidden="false" id="8552-c026-dbbf-76ae" collective="true">
       <costs>
@@ -2973,12 +2980,6 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Zouave Officer" hidden="false" id="a1f0-f9c6-2fa3-bbab">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="137e-cef8-6fe0-f413" type="selectionEntry" targetId="5354-e9b5-1b87-4595">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83fc-0a26-fc40-80ce" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6387-ddac-4ed2-0d54" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="CKF Sword" hidden="false" id="d6b7-546b-f182-cbac" collective="false" targetId="6bda-666f-54ca-bd29" type="selectionEntry">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f68-cf18-3752-2ae6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3046,12 +3047,6 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mounted Officer" hidden="false" id="6ec0-8f0f-9e79-28ee">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="4b54-9fa5-e636-bdfd" type="selectionEntry" targetId="5354-e9b5-1b87-4595">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c04e-6e84-a337-1ee7-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c04e-6e84-a337-1ee7-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="9266-ec49-0c48-aba2" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="École de Cavalerie Graduate" hidden="false" id="6ebd-45b5-3212-d236">
@@ -3093,12 +3088,6 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Monowheel Chasseur Chief Scout" hidden="false" id="1de4-fae5-f608-e737">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="a25b-6b02-c85a-fe95" type="selectionEntry" targetId="5354-e9b5-1b87-4595">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5413-bfba-63-4cdc-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5413-bfba-63-4cdc-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="a28d-889a-fa2e-94fd" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
             <entryLink import="true" name="Spinning Tread" hidden="false" id="9da4-c94c-e80a-e441" type="selectionEntry" targetId="5c22-a7d5-dcf9-1283">
               <constraints>
@@ -3225,12 +3214,6 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Republican Guard Officer" hidden="false" id="ff85-9e6d-1b0b-36db">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="794a-508f-73a1-4d95" type="selectionEntry" targetId="5354-e9b5-1b87-4595">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb8b-aff3-8d5a-686c-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb8b-aff3-8d5a-686c-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="CKF Sword" hidden="false" id="e114-2f1c-109f-1e59" collective="false" targetId="6bda-666f-54ca-bd29" type="selectionEntry">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9914-2437-6884-1575" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3283,12 +3266,6 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Sapeur Officer" hidden="false" id="a2d6-f551-598c-4664">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="016b-d079-e795-86ba" type="selectionEntry" targetId="5354-e9b5-1b87-4595">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4f1-6dca-8c42-3ac3" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="680e-2aa5-cfc1-fc7e" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="5821-0e90-c7be-cdf8" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
             <entryLink import="true" name="LeMat 12 FC" hidden="false" id="d38f-ba68-85cc-813e" collective="false" targetId="10aa-dc43-91ed-2faa" type="selectionEntry">
               <constraints>
@@ -3346,7 +3323,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fce-c4e9-8ce1-b070-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Upgrades" hidden="false" id="de0e-8d92-9f98-07ca" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="7b89-040f-2d62-93f3" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
           </entryLinks>
           <costs>
@@ -3376,12 +3352,6 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Dragoons Vanguard Officer" hidden="false" id="78af-f7e6-b1ca-8ff1">
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="b86a-ca51-ce75-a4c7" type="selectionEntry" targetId="5354-e9b5-1b87-4595">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff40-e8bc-9abf-cc65" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7806-8992-df2c-d100" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="CKF Sword" hidden="false" id="79fc-0ef2-aedb-100b" collective="false" targetId="6bda-666f-54ca-bd29" type="selectionEntry">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8912-ed43-c160-8ad2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3611,6 +3581,11 @@
                         <entryLink import="true" name="MAS 37 Marksman Rifle" hidden="false" id="2bf2-57a-e010-855e" collective="true" targetId="4afb-2429-6be9-7f01" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf3c-62c3-7662-183a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="MAS 33 Plasma Launcher" hidden="false" id="f430-075f-ff73-d31a" type="selectionEntry" targetId="f169-5c99-d909-87c5">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="742c-db3b-7d25-10c3" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
@@ -3965,7 +3940,7 @@
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Zouave Specialist" hidden="false" id="27b7-8664-39a4-84b8" collective="false" sortIndex="3">
                   <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="89dc-e29c-4c3c-e3dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="89dc-e29c-4c3c-e3dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Zouave Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e27e-505f-c6fb-6405">
@@ -4968,7 +4943,7 @@
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Mle 1933 Towed Gun Carriage" hidden="false" id="74bd-1c91-1d9e-8f76" defaultAmount="2" collective="true">
+            <selectionEntry type="model" import="true" name="Mle 1933 Towed Gun Carriage" hidden="false" id="74bd-1c91-1d9e-8f76" defaultAmount="" collective="true">
               <profiles>
                 <profile name="Mle 1933 Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c39b-ce9f-ba96-1507">
                   <characteristics>
@@ -5658,11 +5633,12 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Officer Upgrades" id="f47a-1969-42c7-e147" hidden="false">
+    <selectionEntryGroup name="Officer Upgrades" id="f47a-1969-42c7-e147" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Flare Gun" hidden="false" id="171b-387c-b61b-aee8" type="selectionEntry" targetId="6752-4fbf-1ef8-74f1"/>
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="a844-f262-bac9-5c11" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
         <entryLink import="true" name="Binoculars" hidden="false" id="0ced-cce4-f67a-9c9b" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
+        <entryLink import="true" name="Officer Seniority" hidden="false" id="c254-4773-e574-2cff" type="selectionEntry" targetId="5354-e9b5-1b87-4595"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Ideology" id="722d-5387-69b5-220f" hidden="false">
@@ -5715,7 +5691,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Syndicalist Idealogue" hidden="false" id="d18c-28f5-39f1-88b4">
               <costs>
-                <cost name="Munitions" typeId="Points" value="40"/>
+                <cost name="Munitions" typeId="Points" value="35"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5724,7 +5700,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67c3-1ae0-5fd2-8545" includeChildSelections="false"/>
               </constraints>
               <modifiers>
-                <modifier type="set" value="0" field="Points">
+                <modifier type="set" value="-5" field="Points">
                   <conditions>
                     <condition type="greaterThan" value="0" field="selections" scope="parent" childId="a8f2-8cd0-efc0-4a1b" shared="true"/>
                   </conditions>
@@ -5753,6 +5729,13 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Mechanized" id="4061-8075-dcaa-8085" hidden="false">
       <selectionEntries>
@@ -7029,60 +7012,25 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <categoryEntries>
-    <categoryEntry name="NFR" id="2018-9722-0c01-f30e" hidden="false"/>
-    <categoryEntry name="CORE Partisan" id="ab0f-f79b-bc5d-a312" hidden="false"/>
-    <categoryEntry name="Partisan Cell Configuration" id="8720-8576-acb1-c08e" hidden="false"/>
-  </categoryEntries>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
-  <forceEntries>
-    <forceEntry name="Partisan Cell" id="32f9-f13e-ea22-42ec" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Partisan Cell Configuration" hidden="false" id="b945-3ff7-5bd7-c270" targetId="8720-8576-acb1-c08e"/>
-        <categoryLink name="Command" hidden="false" id="8d9b-9c2f-3f13-d3f8" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="26a6-8d37-62c2-77e6" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c38-2c8f-0c25-2cda" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="0" field="26a6-8d37-62c2-77e6">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="4c38-2c8f-0c25-2cda">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="44a1-fa85-2d94-4d6f" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f295-8938-d352-84b6"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Partisan" hidden="false" id="c886-1fda-c27c-1039" targetId="ab0f-f79b-bc5d-a312">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8b88-f31a-e4ba-0cea"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0d85-ac93-7543-c201"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-  </forceEntries>
   <rules>
-    <rule name="Levée En Masse" id="da6c-ffc6-6ce0-9ee7" hidden="false">
+    <rule name="Levée En Masse" id="da6c-ffc6-6ce0-9ee7" hidden="true">
       <description>When an NFR Unit performs an Attack Action they may spend Aim Tokens from friendly units within 6“ in addition to their own tokens.
 
 
 When a Unit with the NFR Keyword performs an Attack Action, they may spend Aim tokens to increase the A.P. of one of their weapon profiles by one up to two times.</description>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="01ba-2120-7904-bce7" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </rule>
   </rules>
   <catalogueLinks>

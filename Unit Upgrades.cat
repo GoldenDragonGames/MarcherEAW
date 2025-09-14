@@ -1111,9 +1111,14 @@
       </constraints>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <repeats>
@@ -1169,7 +1174,7 @@
         <infoLink name="Reinforced" id="fe8c-4c8e-b291-e5ef" hidden="false" type="rule" targetId="8980-2d6d-00bc-ee76"/>
       </infoLinks>
       <modifiers>
-        <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba" affects="profiles.Model" scope="model"/>
+        <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba" affects="self.entries.profiles.Model" scope="model"/>
       </modifiers>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-min" includeChildSelections="false"/>

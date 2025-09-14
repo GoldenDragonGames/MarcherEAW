@@ -133,7 +133,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Type 94 Rifle Grenade" hidden="false" id="27f0-da89-cb17-6803" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Type 94 Rifle Grenade" hidden="false" id="27f0-da89-cb17-6803" collective="false">
       <infoLinks>
         <infoLink name="Type 94 Rifle Grenade" id="199c-96f7-70a3-c19c" hidden="false" type="profile" targetId="bd46-7fb3-bc03-f4ef"/>
         <infoLink name="High Explosive" id="8599-29f7-e5bc-8e5b" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
@@ -264,7 +264,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Type 91 Energy Cannon" hidden="false" id="64bb-13cd-aeb2-566e" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Type 91 Energy Cannon" hidden="false" id="64bb-13cd-aeb2-566e" collective="false">
       <infoLinks>
         <infoLink name="Type 91 Energy Cannon" id="8ea9-3a64-c39a-3b93" hidden="false" type="profile" targetId="c2f6-af93-c119-c277"/>
       </infoLinks>
@@ -643,7 +643,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Type 88 Grenade Discharger" hidden="false" id="028e-03e6-dc86-a496" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Type 88 Grenade Discharger" hidden="false" id="028e-03e6-dc86-a496" collective="false">
       <infoLinks>
         <infoLink name="Type 88 Grenade Discharger" id="ed52-34bd-10db-bfcd" hidden="false" type="profile" targetId="1b88-0a3f-436e-7880"/>
         <infoLink name="High Explosive" id="196c-2968-3dad-18bb" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
@@ -948,6 +948,46 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Officer Seniority" hidden="false" id="bd6b-34d2-7fb7-ea66">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Branch" id="ad6b-7d33-678c-0b05" hidden="false" defaultSelectionEntryId="f847-80b3-a835-3951">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="767a-d654-f648-dd54" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="65c3-c045-f1f4-e388" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Army Officer Seniority" hidden="false" id="d8fe-a430-c33c-69c7" type="selectionEntry" targetId="cadb-378d-321-459d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4203-eaec-7d47-a45d" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7b62-662e-b4a3-f92f" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Naval Officer Seniority" hidden="false" id="07d3-75a9-0509-4578" type="selectionEntry" targetId="bb9c-c47e-8887-90ad">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="949f-2d46-aed7-57ce" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d34f-eedb-f296-27aa" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9069-8ab5-fad3-ce75" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d8b3-9771-5b32-be54" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -2345,6 +2385,9 @@
       <modifiers>
         <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Officer Upgrades" hidden="false" id="7e6c-c52d-2073-0749" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Land Mattress" hidden="false" id="c19f-a00e-8818-ce59" type="selectionEntry" targetId="8f90-0fa2-a61e-d2d9">
       <categoryLinks>
@@ -2387,6 +2430,9 @@
       <modifiers>
         <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Officer Upgrades" hidden="false" id="a344-0976-4d21-c9f5" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="IJM Type 1 Tekkiba Walker Sniper" hidden="false" id="36f9-f323-3b1c-4b60" type="selectionEntry" targetId="47d6-360b-b5d9-f6a0">
       <categoryLinks>
@@ -3398,13 +3444,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd5e-58ae-1c25-2b06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Naval Officer Seniority" hidden="false" id="781c-c96f-4f2e-ddfb" type="selectionEntry" targetId="bb9c-c47e-8887-90ad">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a923-6c67-cdf4-4c2c" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fd3-c9a4-68f2-6731" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="664d-ccf2-c6e3-8959" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="46c9-5e95-5275-eb36" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
             <entryLink import="true" name="Naval Kaiken" hidden="false" id="ffa8-c46b-86ee-25cc" type="selectionEntry" targetId="4677-025a-9bcb-79e2">
               <constraints>
@@ -3469,13 +3508,6 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="72d8-edff-f4-47fa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Army Officer Seniority" hidden="false" id="6fda-7636-6c15-45fa" type="selectionEntry" targetId="cadb-378d-321-459d">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2034-59da-4871-1137-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2034-59da-4871-1137-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="537d-1c97-8654-787e" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="8b99-d867-d66c-7cef" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
             <entryLink import="true" name="Inter-service Rivalry (Army)" hidden="false" id="c0c7-7bd7-8e64-4c5e" type="selectionEntry" targetId="0119-cccb-3175-b7d5"/>
           </entryLinks>
@@ -3547,39 +3579,12 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7a47-2944-953e-f898" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="4ef2-67a7-8ecf-3460" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="0184-5820-ae05-c831" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="68fa-1422-b064-76f0" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="c4d0-09e3-6cf5-3cf7" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
             <entryLink import="true" name="Low Profile" hidden="false" id="41ef-d22b-216f-2bcc" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Officer Seniority" hidden="false" id="c24a-d47f-e26d-048c">
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Branch" id="04b6-d17c-4a72-eb03" hidden="false" defaultSelectionEntryId="57b0-f4d4-7050-53d7">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a158-b9c4-c7f0-29bb" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e7c-142d-f50e-e6b2" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Army Officer Seniority" hidden="false" id="0cce-01bf-80d4-a187" type="selectionEntry" targetId="cadb-378d-321-459d">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6be9-aff3-510d-c311" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Naval Officer Seniority" hidden="false" id="96c2-de12-92fe-262b" type="selectionEntry" targetId="bb9c-c47e-8887-90ad">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1dd3-96d7-8a19-897a" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7543-1783-1c42-e9d5" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68f2-d75e-8235-b5b3" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="model" import="true" name="IJM Yonki Staff Car" hidden="false" id="8e56-b46c-4fe4-b389">
               <costs>
                 <cost name="Munitions" typeId="Points" value="30"/>
@@ -3631,7 +3636,6 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="IJM Shugo-Yoroi Warsuit Commander" hidden="false" id="ffb8-1c2d-2796-d72a">
           <entryLinks>
-            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="cfc6-ae3a-c043-9205" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="34fe-2351-f377-247a" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
             <entryLink import="true" name="Gaburi-yori " hidden="false" id="a797-9cfd-4e75-65fc" type="selectionEntry" targetId="4c16-36b2-2a67-87db">
               <constraints>
@@ -3714,41 +3718,12 @@
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Officer Seniority" hidden="false" id="144f-4dff-1203-1d7a">
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Branch" id="560e-d68d-c31e-f46b" hidden="false" defaultSelectionEntryId="f847-80b3-a835-3951">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6733-a83d-3f65-c14b" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fee-7b23-d91d-fa25" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Army Officer Seniority" hidden="false" id="39d1-b4f8-dbd2-9a03" type="selectionEntry" targetId="cadb-378d-321-459d">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b1e-7528-8910-bb06" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Naval Officer Seniority" hidden="false" id="c1b0-887f-6246-b51e" type="selectionEntry" targetId="bb9c-c47e-8887-90ad">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eebb-b2f7-a777-7a3d" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e230-42c2-d019-cfc7" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0dc7-151e-8f89-5494" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="IJM Mounted Commander" hidden="false" id="3ac2-48ba-5000-1a44">
           <infoLinks>
             <infoLink name="Command Actions" id="fd1f-75ca-bdf3-cdd5" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="b893-fc25-e4d1-4d8e" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="8805-68e2-0c0c-20d9" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="14f7-f442-e4a2-a089" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
           </entryLinks>
@@ -3762,38 +3737,9 @@
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Officer Seniority" hidden="false" id="ea70-0ccc-45b0-b408">
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Branch" id="d296-e265-7ad1-79a3" hidden="false" defaultSelectionEntryId="f847-80b3-a835-3951">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9abb-1eea-1854-705e" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f2a0-5e20-4594-7350" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Army Officer Seniority" hidden="false" id="365c-8858-6d98-1985" type="selectionEntry" targetId="cadb-378d-321-459d">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b29e-1129-f089-7c6a" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Naval Officer Seniority" hidden="false" id="989d-8a81-117a-a05d" type="selectionEntry" targetId="bb9c-c47e-8887-90ad">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e76-9f35-5a27-da48" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e475-b210-aa82-e269" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af32-8b17-3666-9bb7" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="IJN Breaching Engineer Officer" hidden="false" id="3eaf-b39a-87aa-d169">
           <entryLinks>
-            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="2f3b-7b9c-d332-c8d7" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
             <entryLink import="true" name="Engineer&apos;s Nata" hidden="false" id="b1a5-61cb-8198-170c" type="selectionEntry" targetId="9f3d-2ccd-1470-98cd">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac02-8829-67a6-1f86" includeChildSelections="false"/>
@@ -3807,12 +3753,6 @@
               </constraints>
             </entryLink>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="95cf-6ac3-f50c-8114" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
-            <entryLink import="true" name="Naval Officer Seniority" hidden="false" id="99db-2a19-33ec-f372" type="selectionEntry" targetId="bb9c-c47e-8887-90ad">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13f9-4eaf-da8a-22ce" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a972-a95b-22ca-8e21" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Inter-service Rivalry (Navy)" hidden="false" id="ae6e-4e46-7338-ac09" type="selectionEntry" targetId="37c3-c285-9532-0f42"/>
           </entryLinks>
           <infoLinks>
@@ -5923,7 +5863,7 @@
                     <profile name="Naval Hōshu" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0c9b-140f-ce82-6e8d">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -5994,7 +5934,7 @@
                     <profile name="Naval Infantryman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9bc2-1907-07bc-46b0">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -6327,7 +6267,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Officer Upgrades" id="6b0a-1371-5928-3820" hidden="false">
+    <selectionEntryGroup name="Officer Upgrades" id="6b0a-1371-5928-3820" hidden="true">
       <selectionEntryGroups>
         <selectionEntryGroup name="Martial Focus" id="eba1-4156-b123-e2a8" hidden="false">
           <selectionEntries>
@@ -6416,7 +6356,16 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Binoculars" hidden="false" id="ce50-ba8d-b59b-939c" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
+        <entryLink import="true" name="Nominate Field Commander" hidden="false" id="537d-1c97-8654-787e" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+        <entryLink import="true" name="Officer Seniority" hidden="false" id="31f8-a2d1-327d-21ab" type="selectionEntry" targetId="bd6b-34d2-7fb7-ea66"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Mechanized" id="bbd6-ae53-92f0-0867" hidden="false">
       <selectionEntries>
@@ -8062,68 +8011,39 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <categoryEntries>
-    <categoryEntry name="EOJ" id="f273-43c7-03e5-764e" hidden="false"/>
-    <categoryEntry name="IJA" id="d34f-eedb-f296-27aa" hidden="false"/>
-    <categoryEntry name="IJN" id="7b62-662e-b4a3-f92f" hidden="false"/>
-    <categoryEntry name="CORE Retainer" id="5300-59e6-6db3-c957" hidden="false"/>
-    <categoryEntry name="Urinke Detachment Configuration" id="1c45-7994-0d13-1fdd" hidden="false"/>
-  </categoryEntries>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
-  <rules>
-    <rule name="Kimigayo" id="2048-f057-4388-76a7" hidden="false">
-      <description>When a Unit with the EOJ Keyword performs the Dash Action, they may use their entire movement speed rather than half.</description>
-    </rule>
-    <rule name="Trained Reflexes" id="5842-2d29-8809-2708" hidden="false">
-      <description>When a Unit with the EOJ Keyword performs a Reaction, they may perform a Reflex Check. To do so, roll a die for each Action they would lose when performing the Reaction. On a 7+, they do not lose that Action.</description>
-    </rule>
-  </rules>
-  <forceEntries>
-    <forceEntry name="Urinke Imperial Command Detachment" id="b546-2955-e4ad-2f31" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Urinke Detachment Configuration" hidden="false" id="2dad-2adb-e964-cfa1" targetId="1c45-7994-0d13-1fdd"/>
-        <categoryLink name="Command" hidden="false" id="3b00-4084-4032-9acc" targetId="70eb-c264-a9cb-1bfe">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e557-d702-7a20-f0ad" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad5-0a90-97c8-d80f" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="0" field="e557-d702-7a20-f0ad">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="e517-0471-12d3-3343" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="bad5-0a90-97c8-d80f">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Hero" hidden="false" id="b61c-d21a-4156-8efd" targetId="33a5-8b7e-49bb-c30d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7cf-d4f8-7aab-ccea"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="CORE Retainer" hidden="false" id="c8b5-2666-450b-2eaf" targetId="5300-59e6-6db3-c957">
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="44f6-8d70-939d-845e"/>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e9f7-db86-8061-5ef6"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </forceEntry>
-  </forceEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armies of the British Empire" id="84cf-d6aa-cad2-a628" targetId="381c-41bb-e273-4cf0"/>
     <catalogueLink type="catalogue" name="Special Rules" id="571b-9108-f56e-1cf8" targetId="1270-948e-6bd6-7ecc"/>
     <catalogueLink type="catalogue" name="Unit Upgrades" id="7ec9-7056-44bc-540d" targetId="d60b-3dc1-aadc-8f9c"/>
     <catalogueLink type="catalogue" name="Shared Weapons and Weapon Special Rules" id="08b5-e4d5-4adc-e6c3" targetId="54dd-0c6d-c00e-e51f"/>
   </catalogueLinks>
+  <sharedInfoGroups>
+    <infoGroup name="Japanese Faction Rules" id="98f7-f462-1297-93de" hidden="false">
+      <rules>
+        <rule name="Trained Reflexes" id="5842-2d29-8809-2708" hidden="false">
+          <description>When a Unit with the EOJ Keyword performs a Reaction, they may perform a Reflex Check. To do so, roll a die for each Action they would lose when performing the Reaction. On a 7+, they do not lose that Action.</description>
+        </rule>
+        <rule name="Kimigayo" id="2048-f057-4388-76a7" hidden="false">
+          <description>When a Unit with the EOJ Keyword performs the Dash Action, they may use their entire movement speed rather than half.</description>
+        </rule>
+      </rules>
+    </infoGroup>
+  </sharedInfoGroups>
+  <infoLinks>
+    <infoLink name="Japanese Faction Rules" id="8709-f90f-0f35-c41c" hidden="true" type="infoGroup" targetId="98f7-f462-1297-93de">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="01ba-2120-7904-bce7" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </infoLink>
+  </infoLinks>
 </catalogue>
