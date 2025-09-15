@@ -793,6 +793,18 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Honvéd Officer" hidden="false" id="d38b-9312-2b60-0792" type="selectionEntry" targetId="6df3-873d-931a-bb36">
+      <categoryLinks>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="8044-ae09-23c6-fc21" primary="true" name="Command"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="da02-65cb-9234-e3d3" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c7-8ea6-b7ab-64be" name="Officer Seniority" hidden="false" collective="false" import="true" type="upgrade">
@@ -4880,8 +4892,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Designated Leader" id="1e77-7358-6545-4274" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Designated Leader" id="1e77-7358-6545-4274" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
             <infoLink name="Command Actions" id="4288-6747-ed69-a13b" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Command Squad" id="8210-fb56-ac64-6883" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="(Royal Honvéd Squad)" field="name" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="CKF Saber" hidden="false" id="e71b-b4a1-7859-f87d" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
@@ -4893,7 +4910,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="34ea-be48-92dc-3f4a" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <costs>
-            <cost name="Munitions" typeId="Points" value="6"/>
+            <cost name="Munitions" typeId="Points" value="7"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4910,14 +4927,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="f6e2-8b8d-708e-433e" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="(Royal Honvéd Squad)" field="name" join=":"/>
-              </modifiers>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6295,9 +6304,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <entryLink import="true" name="Officer Seniority" hidden="false" id="eb5d-8202-2d1b-12a3" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>

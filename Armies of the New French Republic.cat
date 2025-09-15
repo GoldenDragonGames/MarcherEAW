@@ -897,6 +897,20 @@
         <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Égalité Mobile Power Suit Officer" hidden="true" id="3fe7-6a09-5775-21ed" type="selectionEntry" targetId="efe3-9144-1ce5-86f7">
+      <categoryLinks>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="f2e2-6bf6-31dd-3e89" primary="true" name="Command"/>
+        <categoryLink targetId="2018-9722-0c01-f30e" id="2e89-b518-bd92-2b58" primary="false" name="NFR"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="66da-d9ec-630e-e97f" primary="false" name="Attache"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="c6c1-71b0-266a-ac52" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="da28-df59-a553-5d18" name="Modele 1921 Energy Pistol" hidden="false" collective="true" import="true" type="upgrade">
@@ -2541,7 +2555,7 @@
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="6a4f-a60e-6ef9-eff8" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="ARL-40 Robespierre Heavy Tank" hidden="false" id="5bc4-c454-c13c-d341">
+        <selectionEntry type="unit" import="true" name="ARL-40 Robespierre Heavy Tank" hidden="false" id="5bc4-c454-c13c-d341">
           <infoLinks>
             <infoLink name="Prototype" id="3726-5478-9e3b-c7a5" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
             <infoLink name="Cook Off" id="d2dc-14aa-ab96-fbcb" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
@@ -2989,8 +3003,13 @@
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="22d3-18ec-98a9-a33f" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Designated Leader" id="fe9a-eb58-b6c6-f842" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Designated Leader" id="fe9a-eb58-b6c6-f842" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
             <infoLink name="Command Actions" id="6d8b-ed14-cf86-c99d" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Command Squad" id="2fc5-a993-8dce-2cad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Zouave Squad" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="14"/>
@@ -3010,7 +3029,7 @@
             <profile name="Zouave Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="20dc-a59d-77bc-d468">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Zouave Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Attache, Command</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Attache (Troop), Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
               </characteristics>
@@ -3036,14 +3055,6 @@
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="a0ac-dceb-d389-22e7" hidden="false">
-              <description>This unit may only attach to X units.</description>
-              <modifiers>
-                <modifier type="append" value="Zouave Squad" field="name"/>
-              </modifiers>
-            </rule>
-          </rules>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mounted Officer" hidden="false" id="6ec0-8f0f-9e79-28ee">
           <entryLinks>
@@ -3420,6 +3431,60 @@
               </modifiers>
             </rule>
           </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Égalité Mobile Power Suit Officer" hidden="false" id="efe3-9144-1ce5-86f7">
+          <entryLinks>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="6126-dcad-c9ad-86cd" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="6d8c-a972-3c52-e2a5" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
+            <infoLink name="Command Actions" id="d3bb-f987-5e1c-47b7" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Command Squad" id="4dc4-5f14-8cdf-3161" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Égalité Mobile Power Suit Team" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="29"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Égalité Power Suit Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="651c-6d01-30dc-c9a2">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Égalité Power Suit Officer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Égalité Power Suit Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c3ba-e8f9-79cd-ac6e">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Twin SMGs" hidden="false" id="486d-2035-9836-2012" collective="true">
+              <entryLinks>
+                <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="9eda-84a1-4b0b-d0bc" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a29f-7cfe-2f4d-8b9b-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a29f-7cfe-2f4d-8b9b-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3781-2d22-0523-b99a-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3781-2d22-0523-b99a-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4335,7 +4400,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Partisan Tireurs" hidden="false" id="2020-e82f-9b17-7a2f">
+        <selectionEntry type="unit" import="true" name="Partisan Tireurs" hidden="false" id="2020-e82f-9b17-7a2f">
           <infoLinks>
             <infoLink name="Prototype" id="8e4d-ed7b-38d7-2034" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
             <infoLink name="Troop Actions" id="a619-5548-3416-9d79" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
@@ -4433,7 +4498,7 @@
             <entryLink import="true" name="Not My Job" hidden="false" id="356b-e8e2-3085-034e" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Zouave Sniper Team" hidden="false" id="649b-687c-ac7e-1cf6">
+        <selectionEntry type="unit" import="true" name="Zouave Sniper Team" hidden="false" id="649b-687c-ac7e-1cf6">
           <infoLinks>
             <infoLink name="Troop Actions" id="ac40-f96e-0749-5041" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
           </infoLinks>
@@ -4542,7 +4607,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="AM40 Lafayette Armored Car" hidden="false" id="c40c-5ffc-b5f7-4799">
+        <selectionEntry type="unit" import="true" name="AM40 Lafayette Armored Car" hidden="false" id="c40c-5ffc-b5f7-4799">
           <profiles>
             <profile name="AM40 Lafayette Armored Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="883b-f10f-d8d2-4b47">
               <characteristics>
@@ -5136,7 +5201,7 @@
             <entryLink import="true" name="Forward Positions" hidden="false" id="83d4-a294-c53c-5610" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Republican Guard Heavy Weapon Squad" hidden="false" id="7af3-29a8-3287-839f">
+        <selectionEntry type="unit" import="true" name="Republican Guard Heavy Weapon Squad" hidden="false" id="7af3-29a8-3287-839f">
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="6808-1ec3-c6c1-56d5" hidden="false">
               <selectionEntries>
@@ -5468,7 +5533,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Colonel Charles De Gaulle" hidden="false" id="2ac7-d8ba-713c-c7e2">
+        <selectionEntry type="model" import="true" name="Colonel Charles De Gaulle" hidden="false" id="2ac7-d8ba-713c-c7e2">
           <costs>
             <cost name="Munitions" typeId="Points" value="170"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -6029,7 +6094,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <entryLink import="true" name="Hitch" hidden="false" id="fa18-6124-4de0-414c" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Dragoons Vanguard Squad" hidden="false" id="e4c3-053d-4c2b-c4f6">
+        <selectionEntry type="unit" import="true" name="Dragoons Vanguard Squad" hidden="false" id="e4c3-053d-4c2b-c4f6">
           <infoLinks>
             <infoLink name="Troop Actions" id="9a8e-061a-892b-0722" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
             <infoLink name="Prototype" id="e34c-fbb4-c9c1-6bfe" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
@@ -6234,7 +6299,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <entryLink import="true" name="Troops Upgrades" hidden="false" id="1b46-756b-3438-48fb" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Égalité Mobile Power Suits" hidden="false" id="c6c1-71b0-266a-ac52">
+        <selectionEntry type="unit" import="true" name="Égalité Mobile Power Suit Team" hidden="false" id="c6c1-71b0-266a-ac52">
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="8999-5987-1d23-0e4e" hidden="false">
               <selectionEntries>
@@ -6256,21 +6321,6 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                   </rules>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="29af-c37d-a831-0999" hidden="false" defaultSelectionEntryId="486d-2035-9836-2012">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Twin SMGs" hidden="false" id="486d-2035-9836-2012" collective="true">
-                          <entryLinks>
-                            <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="9eda-84a1-4b0b-d0bc" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
-                              <constraints>
-                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a29f-7cfe-2f4d-8b9b-min" includeChildSelections="false"/>
-                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a29f-7cfe-2f4d-8b9b-max" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3781-2d22-0523-b99a" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
                       <entryLinks>
                         <entryLink import="true" name="Power Suit Pickaxe" hidden="false" id="ff97-50ee-5e8f-9ccc" type="selectionEntry" targetId="cb93-3868-c86c-2434">
                           <constraints>
@@ -6344,7 +6394,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             </selectionEntryGroup>
           </selectionEntryGroups>
           <profiles>
-            <profile name="Égalité Mobile Power Suits" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c46d-ebe1-8b00-5b37">
+            <profile name="Égalité Mobile Power Suit Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c46d-ebe1-8b00-5b37">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-2x Égalité Power Suit Gunner, 1-2x Égalité Power Suit Protectors</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit</characteristic>
