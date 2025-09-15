@@ -1723,6 +1723,56 @@ Area, Light Terrain*, Rough 
         <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ce19-c686-cf09-d332" includeChildSelections="false" automatic="false" percentValue="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pacification Task Force Abilities" hidden="false" id="f857-ea90-bae3-e4cf" collective="false">
+      <categoryLinks>
+        <categoryLink name="Infantry Platoon Configuration" hidden="false" id="4dd9-1503-ac3a-1f9e" targetId="85c7-9688-a121-1bdc" primary="true"/>
+        <categoryLink name="Infantry Platoon Configuration" hidden="false" id="197e-d36e-4e57-970f" targetId="85c7-9688-a121-1bdc" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Seek and Destroy" hidden="false" id="91ba-6429-018b-8ce7" collective="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb8d-166b-0f2e-18c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc36-f97a-f25a-4ff1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+          </costs>
+          <rules>
+            <rule name="Seek and Destroy" id="da2d-84c7-e3c0-5326" hidden="false">
+              <description>All Units in this Platoon are Ordered, and benefit from Orders. When making an Attack Action against the nearest enemy Unit, Units in this Platoon gain +1 to Hit rolls against that Unit.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Protect and Preserve" hidden="false" id="89ec-4da1-33ba-8c02" collective="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e737-8a74-67fa-98cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d1e-75a7-d96c-06ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+          </costs>
+          <rules>
+            <rule name="Protect and Preserve" id="2efa-1a5e-c846-2f30" hidden="false">
+              <description>Units in this Platoon can benefit from Cover, and increase their level of Cover by 1. Units that make Movement Actions in this Platoon may choose to move towards the nearest Cover, rather than the nearest Objective or enemy Unit.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="0"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da4f-dab7-67ac-150d-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da4f-dab7-67ac-150d-max"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="56bd-18e3-04a1-3227" name="Steel Fortress" hidden="false">

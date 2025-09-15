@@ -1382,7 +1382,7 @@
                 </selectionEntry>
               </selectionEntries>
               <profiles>
-                <profile name="Mk. I &quot;Lancelot&quot; Main Battle Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9180-9b0f-b7a9-357d">
+                <profile name="Mk. I &quot;Galahad&quot; Main Battle Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9180-9b0f-b7a9-357d">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
@@ -3117,11 +3117,6 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <rules>
-            <rule name="Radial Weaponry" id="4390-0460-a09a-8c37" hidden="false">
-              <description>Weapons equipped to this Unit may select targets independently from weapons they do not share a Firing Arc with.</description>
-            </rule>
-          </rules>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f209-1621-5e8b-ed93" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
           </entryLinks>
@@ -3131,6 +3126,10 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Radial Armor" id="75a2-99ba-e3d7-a226" hidden="false" type="rule" targetId="86dd-9760-cb5e-1b10"/>
+            <infoLink name="Radial Weaponry" id="4ff4-e570-9fa7-7fd3" hidden="false" type="rule" targetId="0f85-3bd7-821f-4d64"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="No. 4 Light Support Gun" hidden="false" id="4a6a-64e1-8018-054e">
           <infoLinks>
@@ -3849,7 +3848,7 @@
               <description>During the Setup Phase, place a Drop Token on the Battlefield to represent where this Unit intends to land. You may choose to activate this Unit as normal. When you do, this Token Drifts, then check the Rough Landing Special Rule. After resolving those possible effects, place this Unit as close to the Token as is legal. After this Unit is Deployed, on following Activations, Units Embarked within it may choose to Disembark as from a normal Transport. Once this Unit is deployed it is no longer considered to be a Unit, and is not targetable as such. Once it has no Units embarked within it, it becomes an Area Fortification that provides Medium Cover.</description>
             </rule>
             <rule name="Rough Landing" id="868a-827d-2bb3-48f3" hidden="false">
-              <description>When this Unit is deployed, if it is in contact with a fortification or another Unit, both it and the Units that it is in contact with suffer an Attack from the Rough Landing Weapon Profile. Then apply a Concussed Token to each Unit attacked in this way, and any Units embarked in this Unit.</description>
+              <description>When this Unit is deployed, if it is in contact with a Fortification or another Unit, both it and the Units that it is in contact with suffer an Attack from the Rough Landing Weapon Profile. Then apply a Concussed Token to each Unit attacked in this way, and any Units embarked in this Unit.</description>
             </rule>
           </rules>
           <profiles>
@@ -4525,6 +4524,8 @@
             <infoLink name="Scout Vehicle Actions" id="e541-c64b-823c-d3e3" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
             <infoLink name="Orbital Drop Vehicle" id="f385-a7f1-2473-2e08" hidden="false" type="rule" targetId="87cb-9806-204d-cf21"/>
             <infoLink name="Target Painting" id="ffb9-9f10-56fe-2d59" hidden="false" type="rule" targetId="3847-0d44-1c44-21fe"/>
+            <infoLink name="Radial Armor" id="1e26-8fed-9fb5-4a67" hidden="false" type="rule" targetId="86dd-9760-cb5e-1b10"/>
+            <infoLink name="Radial Weaponry" id="1cbe-f7b6-492a-f11a" hidden="false" type="rule" targetId="0f85-3bd7-821f-4d64"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="58d3-713a-76c9-99a7" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
@@ -4548,9 +4549,6 @@
           <rules>
             <rule name="G.R.A.I.L Node" id="42c5-2ac0-c607-eb96" hidden="false">
               <description>When G.R.A.I.L Dice are spent within 6&quot; of this Unit, roll a 6+ check, on a success, gain a G.R.A.I.L die. If this Unit is within 12&quot; of a Mk.II &quot;Vortigern&quot; Area Control Tripod, increase the range of this ability to 12&quot;.</description>
-            </rule>
-            <rule name="Radial Weaponry" id="f740-ff62-57f9-8d03" hidden="false">
-              <description>Weapons equipped to this Unit may select targets independently from weapons they do not share a Firing Arc with.</description>
             </rule>
           </rules>
           <selectionEntries>
@@ -5317,7 +5315,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <profiles>
             <profile name="&quot;Little John&quot; Automaton Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c414-ca2f-4cd2-4890">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, Attache, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Pacification, Attache, Battlesuit</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -6359,6 +6357,11 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="a56a-77ef-ff07-8a8f" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d6f3-788c-2c4c-503b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7689,56 +7692,6 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Pacification Task Force Abilities" hidden="false" id="f857-ea90-bae3-e4cf" collective="false">
-      <categoryLinks>
-        <categoryLink name="Infantry Platoon Configuration" hidden="false" id="4dd9-1503-ac3a-1f9e" targetId="85c7-9688-a121-1bdc" primary="true"/>
-        <categoryLink name="Infantry Platoon Configuration" hidden="false" id="197e-d36e-4e57-970f" targetId="85c7-9688-a121-1bdc" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Seek and Destroy" hidden="false" id="91ba-6429-018b-8ce7" collective="false">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb8d-166b-0f2e-18c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc36-f97a-f25a-4ff1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Munitions" typeId="Points" value="0"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-          </costs>
-          <rules>
-            <rule name="Seek and Destroy" id="da2d-84c7-e3c0-5326" hidden="false">
-              <description>All Units in this Platoon are Ordered, and benefit from Ordered. When making an Attack Action against the nearest enemy Unit, Units in this Platoon gain +1 to Hit rolls against that Unit.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Protect and Preserve" hidden="false" id="89ec-4da1-33ba-8c02" collective="false">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e737-8a74-67fa-98cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d1e-75a7-d96c-06ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Munitions" typeId="Points" value="0"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-          </costs>
-          <rules>
-            <rule name="Saboteurs!" id="2efa-1a5e-c846-2f30" hidden="false">
-              <description>All Units in this Platoon can benefit from Cover, and increase their level of Cover by 1. Units that make Movement Actions in this Platoon may choose to move towards the nearest Cover, rather than the nearest Objective or enemy Unit.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="0"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da4f-dab7-67ac-150d-min"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da4f-dab7-67ac-150d-max"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mine Flail" hidden="false" id="e799-4c2e-dd2a-8421">
       <infoLinks>
         <infoLink name="Mine Flail" id="2426-2288-9776-175b" hidden="false" type="profile" targetId="c568-baed-d37c-7cd9"/>
@@ -7850,6 +7803,12 @@ Attacks made against friendly Units in your Army count as having one level of Ob
     </rule>
     <rule name="Behind Enemy Lines" id="1d68-9bc2-f4f4-a58b" hidden="false">
       <description>Instead of deploying this Unit at the start of the game, you may declare that this model is in En Route. During any Setup Phase after the first Round you may deploy this unit in your Opponent&apos;s Deployment Zone, no closer than 4&quot; from an Enemy Model.</description>
+    </rule>
+    <rule name="Radial Weaponry" id="0f85-3bd7-821f-4d64" hidden="false">
+      <description>Each of this Model&apos;s Weapon Rings is considered to be a Turret. Weapons equipped to this Unit may select targets independently from Weapons they do not share a Firing Arc with.</description>
+    </rule>
+    <rule name="Radial Armor" id="86dd-9760-cb5e-1b10" hidden="false">
+      <description>This Unit&apos;s Armor does not have Side or Rear facing.</description>
     </rule>
   </sharedRules>
   <rules>

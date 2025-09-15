@@ -4943,7 +4943,7 @@
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Mle 1933 Towed Gun Carriage" hidden="false" id="74bd-1c91-1d9e-8f76" defaultAmount="" collective="true">
+            <selectionEntry type="model" import="true" name="Mle 1933 Towed Gun Carriage" hidden="false" id="74bd-1c91-1d9e-8f76" collective="true">
               <profiles>
                 <profile name="Mle 1933 Towed Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c39b-ce9f-ba96-1507">
                   <characteristics>
@@ -5358,6 +5358,28 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="321d-71bd-747-c4d8" includeChildSelections="true"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tricolor" hidden="false" id="f8d7-0631-6c35-518e">
+              <rules>
+                <rule name="Tricolor" id="f777-00c2-e27d-aa0b" hidden="false">
+                  <description>When a Unit within 12&quot; of this Unit shares an Aim token, if it is the first time this Round, it gains an Aim token.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="25"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d02d-4254-cab4-3832" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9b6-1e32-89da-b4ae" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Rally &apos;round the Flag" id="de2c-4d76-42fa-34af" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Agent Fabien" hidden="false" id="0d58-a47e-6324-028d">
           <entryLinks>
@@ -6317,7 +6339,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="bfcf-edd5-65b3-f683" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="bfcf-edd5-65b3-f683" includeChildSelections="false"/>
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>

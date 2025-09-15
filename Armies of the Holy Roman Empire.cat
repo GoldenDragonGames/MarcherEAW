@@ -2275,20 +2275,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Schürzen" hidden="false" id="cf76-39df-0335-e63f" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e2a-7466-4961-abb0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="15"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Up-Armored" id="ef19-04b8-dd4c-f0e0" hidden="false" type="rule" targetId="1f7c-515a-0ef2-8614"/>
-                  </infoLinks>
-                </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Sponsons" hidden="false" id="d7b2-e582-bc2b-54bc">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Sponson Weapons" id="4890-88b0-ad43-1ded" hidden="false" defaultSelectionEntryId="a27d-317d-af42-f348">
@@ -2427,6 +2413,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9de5-24bf-af69-37f4" includeChildSelections="false"/>
                           </constraints>
                         </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Twin Rotary Cannons" hidden="false" id="88d5-406b-87b2-79ac">
+                          <entryLinks>
+                            <entryLink import="true" name="MK 213 Rotary Cannon" hidden="false" id="03a1-01cd-160f-fc78" type="selectionEntry" targetId="8530-e1a8-0300-916e">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c270-4687-c43e-9aa7-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c270-4687-c43e-9aa7-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8f6-d887-b400-2aa1" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
                       </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -2469,6 +2468,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Schürzen" hidden="false" id="6577-6869-9ff5-7906" type="selectionEntry" targetId="8578-045a-cf73-5c17"/>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
           <costs>
@@ -4105,6 +4107,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Schürzen" hidden="false" id="d4b3-b481-87df-bd8d" type="selectionEntry" targetId="8578-045a-cf73-5c17"/>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -4492,12 +4497,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="289f-4e9d-2e5e-e50" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="7a0f-7f8d-9ee0-dfe1" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="43-d113-d92f-e392-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43-d113-d92f-e392-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="33ed-770a-d477-3ffa" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="52"/>
@@ -4890,12 +4890,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7818-a93f-b6c4-630b" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="0248-0d6b-5b67-a1c3" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32f7-a926-9370-766b" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6538-3e31-8b42-2336" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="34ea-be48-92dc-3f4a" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="6"/>
@@ -6297,6 +6292,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <entryLinks>
         <entryLink import="true" name="Nominate Field Commander" hidden="false" id="35a7-170f-fc50-d3a8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
         <entryLink import="true" name="Binoculars" hidden="false" id="a280-36aa-1bfd-e319" type="selectionEntry" targetId="4881-4c15-cfc8-b00c"/>
+        <entryLink import="true" name="Officer Seniority" hidden="false" id="eb5d-8202-2d1b-12a3" type="selectionEntry" targetId="f6c7-8ea6-b7ab-64be"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
