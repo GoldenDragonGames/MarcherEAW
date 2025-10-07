@@ -817,7 +817,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Treadbike Ulans" hidden="false" id="aff8-593a-5e9c-a5ce" type="selectionEntry" targetId="4c03-5835-534e-1ca2">
+    <entryLink import="true" name="Treadbike Ulan Lance" hidden="false" id="aff8-593a-5e9c-a5ce" type="selectionEntry" targetId="4c03-5835-534e-1ca2">
       <categoryLinks>
         <categoryLink targetId="54db-5889-a382-77cb" id="b94d-31cb-2339-3b9b" primary="true" name="CORE Recon"/>
         <categoryLink targetId="c87d-0c37-d91f-b4cd" id="4aad-f82e-5b97-13f7" primary="false" name="AUX Mechanized"/>
@@ -826,6 +826,13 @@
         <categoryLink targetId="4ec9-47a4-5562-ea3b" id="310e-045d-fb35-37b7" primary="false" name="Battlesuit"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="1e1c-6462-3f5b-7efd" primary="false" name="HRE"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Treadbike Ulan Officer" hidden="true" id="5ccc-1273-f7a8-ee61" type="selectionEntry" targetId="a0da-261c-d950-68a6">
       <modifierGroups>

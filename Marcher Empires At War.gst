@@ -1419,7 +1419,7 @@
   <sharedSelectionEntries>
     <selectionEntry id="86bb-e1be-717a-6587" name="Armor Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntries>
-        <selectionEntry id="d8f0-8db4-353b-6d68" name="On the Way!" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d8f0-8db4-353b-6d68" name="Hatches Down" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7d9-c855-71a4-7e84-min" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7d9-c855-71a4-7e84-max" type="max"/>
@@ -1509,9 +1509,9 @@
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Pre-Registered Targets" hidden="false" id="937c-73c6-b008-f7fb">
+        <selectionEntry type="upgrade" import="true" name="Phosphorous Shells" hidden="false" id="937c-73c6-b008-f7fb">
           <infoLinks>
-            <infoLink name="Pre-Registered Targets" id="5f14-9502-12fc-de91" hidden="false" type="rule" targetId="b64b-4ada-29c0-088b"/>
+            <infoLink name="Phosphorous Shells" id="5f14-9502-12fc-de91" hidden="false" type="rule" targetId="b64b-4ada-29c0-088b"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="10bc-44b7-660c-08e2-min" includeChildSelections="false"/>
@@ -1559,7 +1559,7 @@
     </selectionEntry>
     <selectionEntry id="c1ca-082a-de8f-6bb5" name="Recon Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntries>
-        <selectionEntry id="0db9-8274-57c5-fa4c" name="Rapid Reconnaissance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0db9-8274-57c5-fa4c" name="Eyes Ahead" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="63c5-f3c7-f476-27a8-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63c5-f3c7-f476-27a8-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1778,20 +1778,20 @@ Area, Light Terrain*, Rough 
     <rule id="56bd-18e3-04a1-3227" name="Steel Fortress" hidden="false">
       <description>All Units in the selected Platoon can perform the Capture Action as a Free Action.</description>
     </rule>
-    <rule id="0d92-4ab7-f17c-0286" name="On the Way!" hidden="false">
-      <description>All Weapons equipped to Units in the selected Platoon lose Difficult to Use for this round.</description>
+    <rule id="0d92-4ab7-f17c-0286" name="Hatches Down" hidden="false">
+      <description>All Units in the selected Platoon can perform the Button Up Reaction as a Free Action.</description>
     </rule>
     <rule id="3897-33c2-b987-e81d" name="Coordinated Attack" hidden="false">
-      <description>When you activate the selected Platoon’s Command Squad, you may also activate any other Units within 8” of it that also belong to this Platoon.</description>
+      <description>When you activate the selected Platoon’s Command Unit, you may also activate any other Units within 8” of it that also belong to this Platoon.</description>
     </rule>
     <rule id="c461-b91e-f6c6-5dd8" name="Flanking Maneuver" hidden="false">
-      <description>Each time an Enemy Unit is attacked by a Unit in this Platoon, reduce its max cover level by 1 for the round.</description>
+      <description>Each time an Enemy Unit is attacked by a Unit in this Platoon, reduce its max Cover level by 1 for the Round.</description>
     </rule>
     <rule id="9f61-2072-566a-5d02" name="Rounds on Target" hidden="false">
       <description>Anytime you reduce a Dial In counter, move a Blast Token 1”</description>
     </rule>
-    <rule id="3414-34d7-5dfe-51c3" name="Rapid Reconnaissance" hidden="false">
-      <description>All Units in the selected Platoon can take the Move Action more than once an activation, as a Standard Action.</description>
+    <rule id="3414-34d7-5dfe-51c3" name="Eyes Ahead" hidden="false">
+      <description>Units in this Platoon can, as a Free Action, Spot an enemy Unit in their Line of Sight. Until the end of the Round, any unit not from this Platoon may re-roll hit rolls of 1 when making Attacks against a Spotted Unit.</description>
     </rule>
     <rule id="7e55-a03a-ffb6-e45a" name="Adaptive Control" hidden="false">
       <description>All Units in the selected Platoon may make a Capture Action as a Free Action, whenever they make a Move Action. 
@@ -1801,7 +1801,7 @@ Area, Light Terrain*, Rough 
       <description>All Troop Units in the selected Platoon increase their Armor Value by 2 if they are within 6” of a Vehicle Unit.</description>
     </rule>
     <rule id="9e55-f586-450d-8424" name="Rapid Fortification" hidden="false">
-      <description>When a Unit in the platoon is selected to perform the Build action, Immediately gain 1 Supply Point.</description>
+      <description>When a Unit in the platoon builds a fortification that costs 1SP, you may build an additional 1SP fortification touching it for no additional Supply Cost. </description>
     </rule>
     <rule id="e24c-5c98-fc23-a3eb" name="Tank Hunters" hidden="false">
       <description>Whenever a Unit in this Platoon makes an attack against a Unit with the Vehicle Keyword, they may reroll any failed Armor checks once.</description>
@@ -1809,9 +1809,8 @@ Area, Light Terrain*, Rough 
     <rule id="8e52-a616-aab9-73b8" name="Designated Leader" hidden="false">
       <description>This Model must be attached to a non-Command Unit that it shares a CORE Keyword with in this Platoon before the Game starts. After this Model is attached it must be designated as the Leader of the combined Unit. A Unit may not have more than one additional Model attached to it in this way.</description>
     </rule>
-    <rule name="Pre-Registered Targets" id="b64b-4ada-29c0-088b" hidden="false">
-      <description>Each time you select a Unit in this platoon to reduce a Dial In counter reduce it by 2 instead. You may instead reduce a counter by 1 from two
-Units.</description>
+    <rule name="Phosphorous Shells" id="b64b-4ada-29c0-088b" hidden="false">
+      <description>After resolving any Attack Action with an Ordnance X weapon made by a Unit in this Platoon, replace the Blast Token with a Smoke Token. </description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
       <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit.</description>
