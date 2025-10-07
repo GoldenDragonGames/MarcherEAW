@@ -1065,6 +1065,19 @@
         <categoryLink targetId="de0d-e12c-a964-4e46" id="9a1f-de40-e3fa-a375" primary="false" name="Vehicle"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Flagbearer with Old Glory" hidden="false" id="f853-8d93-4002-79eb" type="selectionEntry" targetId="4edc-a6bc-cf5c-32c9">
+      <categoryLinks>
+        <categoryLink targetId="eae9-4e17-22cb-4491" id="5f57-fde2-4125-460e" primary="true" name="SPC Infantry"/>
+        <categoryLink targetId="cf6f-f672-129a-1bfb" id="2180-1998-1622-7046" primary="false" name="SPC Mechanized"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="2a8a-fddf-0126-6a57" name="Officer Seniority" hidden="false" collective="false" import="true" type="upgrade">
@@ -1769,6 +1782,7 @@
             <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Fixed Elevation" id="bd6e-e82c-c778-55c4" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="22"/>
@@ -2541,7 +2555,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -3903,18 +3917,30 @@
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
-                  <entryLinks>
-                    <entryLink import="true" name="M15 Heavy Flamethrower" hidden="false" id="fd81-8a35-5821-d9bc" collective="false" targetId="c9cd-187d-ca1a-f373" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed9c-e702-9172-ff32-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed9c-e702-9172-ff32-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4855-b316-fcb1-5ba4-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4855-b316-fcb1-5ba4-max" includeChildSelections="false"/>
                   </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Main Cannon" id="10ef-bf58-a1e0-1724" hidden="false" defaultSelectionEntryId="fd81-8a35-5821-d9bc">
+                      <entryLinks>
+                        <entryLink import="true" name="M15 Heavy Flamethrower" hidden="false" id="fd81-8a35-5821-d9bc" collective="false" targetId="c9cd-187d-ca1a-f373" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed9c-e702-9172-ff32-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="A1 Medium Heat Cannon" hidden="false" id="3e78-bdae-1ca1-a5f2" type="selectionEntry" targetId="8762-30cb-fe8a-3d3e">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5779-ca9c-39b1-22fd" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9fd-642d-e0d9-7164-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9fd-642d-e0d9-7164-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
               </selectionEntries>
               <profiles>
@@ -5228,57 +5254,52 @@
                 <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="append" value="Battery" field="name">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Carriages" id="faa7-6a24-adbf-e4aa" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="model" import="true" name="M333 Heavy Howitzer Carriage" hidden="false" id="600c-32ed-0a8d-d370" collective="false">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef5a-aa37-a231-94b8" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d24e-2cdd-e796-06c5" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="M333 Heavy Howitzer Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d022-cba3-e4ec-2f6e">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="M333 Heavy Howitzer" hidden="false" id="63d5-14ca-23b9-3068" collective="false" targetId="2f75-d57b-8089-ed4e" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="958d-495b-e418-395e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f9a-9fc7-a7b7-1171" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="22d1-e78a-138b-f488" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7e5-281d-0eec-32a1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="53a3-dcb5-9e0e-cb2c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="22"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="M333 Heavy Howitzer Carriage" hidden="false" id="600c-32ed-0a8d-d370" collective="false">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="model" shared="true" id="5e98-e4b3-8ff8-382c"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4b3-e431-1c9e-0686" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a8a5-5883-4e72-01b3" includeChildSelections="false"/>
               </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+              <profiles>
+                <profile name="M333 Heavy Howitzer Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d022-cba3-e4ec-2f6e">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="M333 Heavy Howitzer" hidden="false" id="63d5-14ca-23b9-3068" collective="false" targetId="2f75-d57b-8089-ed4e" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="958d-495b-e418-395e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f9a-9fc7-a7b7-1171" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="22d1-e78a-138b-f488" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7e5-281d-0eec-32a1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="53a3-dcb5-9e0e-cb2c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="22"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="3" field="a8a5-5883-4e72-01b3">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="XM-31 &quot;Honest John&quot; " hidden="false" id="62da-9811-a3ab-5f1e" collective="false">
           <profiles>
@@ -5813,7 +5834,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="X53 Lynx Battle Walker" hidden="false" id="d390-3371-5d0c-7440" collective="false">
+        <selectionEntry type="unit" import="true" name="X53 Lynx Battle Walker" hidden="false" id="d390-3371-5d0c-7440" collective="false">
           <profiles>
             <profile name="X53 Lynx Battle Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="575c-e3b7-cd24-0d39">
               <characteristics>
@@ -5837,7 +5858,7 @@
             <entryLink import="true" name="Light on their Feet" hidden="false" id="1a0b-4c0e-ad4a-868f" type="selectionEntry" targetId="30ee-72db-2e7c-ce0a"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="X53 Lynx Battle Walker" hidden="false" id="5f3e-4e4b-9b1b-5dcb">
+            <selectionEntry type="model" import="true" name="X53 Lynx Battle Walker" hidden="false" id="5f3e-4e4b-9b1b-5dcb">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Left Arm" hidden="false" id="c924-1510-aa72-6b20">
                   <constraints>
@@ -6528,7 +6549,7 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Cavalry Bike Specialist" hidden="false" id="25dc-6054-3b31-407a" collective="false" defaultAmount="" sortIndex="3">
+                <selectionEntry type="model" import="true" name="Cavalry Bike Specialist" hidden="false" id="25dc-6054-3b31-407a" collective="false" sortIndex="3">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9520-865c-ddd4-fc1c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
@@ -7218,14 +7239,6 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="2323-7334-66a4-b7ec" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef1c-cdca-7804-68dd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e560-9e72-cbcb-ca7d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <costs>
                     <cost name="Munitions" typeId="Points" value="3"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -7242,6 +7255,20 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2da9-8b07-e6ba-514e" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="723f-98ea-7f75-8e12" includeChildSelections="false"/>
                       </constraints>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Weapon Options" id="a29c-f58f-c49b-f594" hidden="false" defaultSelectionEntryId="9bf4-ef45-ff79-cb22">
+                      <entryLinks>
+                        <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="2de2-5f55-c335-09d8" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d35-48a8-15d6-78cd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="M3X1 Grease Gun" hidden="false" id="4d48-66af-23d1-6254" type="selectionEntry" targetId="c12c-e5f0-f4c4-9f1c">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a3d-41b0-1090-e95a" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
@@ -7260,14 +7287,6 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="9bf4-ef45-ff79-cb22" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e3f1-79ed-25a8-63ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e36b-5c6d-87ff-003d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <costs>
                     <cost name="Munitions" typeId="Points" value="3"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -7281,6 +7300,22 @@
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="6022-e5cd-0ea5-7f07" hidden="false" defaultSelectionEntryId="9bf4-ef45-ff79-cb22">
+                      <entryLinks>
+                        <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="9bf4-ef45-ff79-cb22" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e36b-5c6d-87ff-003d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="M3X1 Grease Gun" hidden="false" id="f758-6ff9-c4d0-e8ee" type="selectionEntry" targetId="c12c-e5f0-f4c4-9f1c">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="053d-9afc-3859-5ede" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
               </selectionEntries>
               <modifiers>
@@ -8351,6 +8386,24 @@
                   <entryLinks>
                     <entryLink import="true" name="Open Topped 2" hidden="false" id="1902-e4a0-5796-6eca" type="selectionEntry" targetId="632b-f2b5-80c9-02b4"/>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Gun Rails" hidden="false" id="1ce5-2ff2-6764-4b31">
+                      <infoLinks>
+                        <infoLink name="Pintle Mount" id="810d-d74e-4ff4-bd83" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
+                      </infoLinks>
+                      <entryLinks>
+                        <entryLink import="true" name="M1931 Energy Machine Gun" hidden="false" id="c73c-f249-a1d7-ccbb" type="selectionEntry" targetId="a1be-a916-a94b-f4e5">
+                          <constraints>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8405-9817-b9f5-237b" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="95e6-8333-acba-ab0c-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95e6-8333-acba-ab0c-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Closed" hidden="false" id="1e40-5ed5-68db-08a4">
                   <constraints>
@@ -8379,7 +8432,7 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="M50A1 Palomino Halftrack" hidden="false" id="7022-3bab-1cf6-d96f">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Pulpit Gun" hidden="false" id="af6b-9e31-90a8-2459">
+                <selectionEntry type="upgrade" import="true" name="Gun Mount" hidden="false" id="af6b-9e31-90a8-2459">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Option" id="09f1-8000-45b6-c681" hidden="false" collective="false" import="true" defaultSelectionEntryId="c5fa-d019-25ea-0945">
                       <constraints>
@@ -8802,6 +8855,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd05-a4a3-b584-acb5-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="6c66-c489-7acc-ff31" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="General Nicholas Winters" hidden="false" id="6cf8-10bc-b257-32b4" collective="false">
@@ -11588,7 +11642,7 @@ In the fourth Round Setup Phase, if there are still platoons En Route, and eithe
     </selectionEntryGroup>
     <selectionEntryGroup name="Specialists" id="355b-b876-329e-8dea" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Flagbearer with Old Glory" hidden="false" id="4edc-a6bc-cf5c-32c9">
+        <selectionEntry type="model" import="true" name="Flagbearer with Old Glory" hidden="false" id="4edc-a6bc-cf5c-32c9">
           <entryLinks>
             <entryLink import="true" name="Old Glory" hidden="false" id="f61b-da02-10a9-ad80" type="selectionEntry" targetId="f9e4-81c4-d69b-a56b">
               <constraints>
@@ -11660,7 +11714,7 @@ In the fourth Round Setup Phase, if there are still platoons En Route, and eithe
           <selectionEntryGroups>
             <selectionEntryGroup name="Medics" id="7f9f-d790-2537-ecc1" hidden="false">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Medic" hidden="false" id="8d5a-4d69-4c48-2194">
+                <selectionEntry type="model" import="true" name="Medic" hidden="false" id="8d5a-4d69-4c48-2194">
                   <entryLinks>
                     <entryLink import="true" name="Medical Bag" hidden="false" id="776b-deb4-17d9-eae7" collective="false" targetId="d619-a81c-0ed7-a998" type="selectionEntry">
                       <constraints>

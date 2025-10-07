@@ -525,7 +525,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Égalité Mobile Power Suits" hidden="false" id="39c4-ae9b-633a-c4a4" type="selectionEntry" targetId="c6c1-71b0-266a-ac52">
+    <entryLink import="true" name="Égalité Mobile Power Suit Team" hidden="false" id="39c4-ae9b-633a-c4a4" type="selectionEntry" targetId="c6c1-71b0-266a-ac52">
       <categoryLinks>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="0862-932b-ffbf-476f" primary="true" name="CORE Mechanized"/>
       </categoryLinks>
@@ -909,6 +909,17 @@
             <condition type="atLeast" value="1" field="selections" scope="parent" childId="c6c1-71b0-266a-ac52" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="M50A1 Palomino Halftrack" hidden="false" id="68c8-6cd0-07a9-282b" collective="false" targetId="7be1-d408-85f7-efac" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Transport" hidden="false" id="7ac4-a4c7-3bb6-8694" targetId="d4be-5aad-8560-5720" primary="true"/>
+        <categoryLink name="Tracked" hidden="false" id="9874-4491-305e-303d" targetId="7616-a9f8-6205-af0e" primary="false"/>
+        <categoryLink name="Vehicle" hidden="false" id="2657-9ea8-ea7d-f242" targetId="de0d-e12c-a964-4e46" primary="false"/>
+        <categoryLink name="USA" hidden="false" id="878a-2024-38c8-650c" targetId="4455-94a1-ea5e-b9ec" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
     </entryLink>
   </entryLinks>
@@ -1525,6 +1536,7 @@
             <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Fixed Elevation" id="c5a4-7748-6abd-a531" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="22"/>
@@ -1606,7 +1618,7 @@
           </costs>
           <rules>
             <rule name="Saboteurs!" id="d16a-fefb-e148-2afc" hidden="false">
-              <description>All CORE Partisan Units equipped with Grenades may, instead of throwing one Grenade per Attack Action, throw a number of grenades equal to half of the models in the Unit, rounding up.</description>
+              <description>All CORE Partisan Units equipped with Grenades may, instead of throwing one Grenade per Attack Action, throw a number of grenades equal to half of the models in the Unit, rounding up to a maximum of 5. These Grenades may not be modified with Aim Tokens.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -1640,6 +1652,28 @@
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trench Weapon" hidden="false" id="3995-2166-a0b3-f919" collective="true">
+      <infoLinks>
+        <infoLink name="Trench Weapon" id="fb03-3057-8af6-3108" hidden="false" type="profile" targetId="c141-d5fa-f6cd-a631"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Berthier Carbine" hidden="false" id="046d-7900-a372-2acf" collective="true">
+      <infoLinks>
+        <infoLink name="Berthier Carbine" id="c454-d9fb-b43b-4ba9" hidden="false" type="profile" targetId="8038-2b0d-397e-3261"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="3"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2043,7 +2077,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2105,6 +2139,26 @@
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Pistol, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Trench Weapon" typeId="Weapon" typeName="Weapon" hidden="false" id="c141-d5fa-f6cd-a631">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Berthier Carbine" typeId="Weapon" typeName="Weapon" hidden="false" id="8038-2b0d-397e-3261">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -2950,16 +3004,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="0e2e-5ad3-af96-0688" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
-              <entryLinks>
-                <entryLink import="true" name="Pocket Manifesto" hidden="false" id="ddc6-8dab-dd75-9f11" type="selectionEntry" targetId="46fd-c4d3-83b6-4137"/>
-                <entryLink import="true" name="Feu de Lis" hidden="false" id="5982-7c1a-cc66-8577" type="selectionEntry" targetId="abe7-e36e-04a4-2300">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4de-1de2-6fbc-3a37" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
+            <entryLink import="true" name="Troops Upgrades" hidden="false" id="0e2e-5ad3-af96-0688" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
             <entryLink import="true" name="Cumbersome" hidden="false" id="6c29-ee0b-677e-664b" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
           </entryLinks>
           <profiles>
@@ -3335,6 +3380,7 @@
               </constraints>
             </entryLink>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="7b89-040f-2d62-93f3" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="e305-1dcc-df2d-c8ed" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="10"/>
@@ -3551,7 +3597,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b538-9101-a1d1-d59-max" includeChildSelections="false"/>
                       </constraints>
                     </selectionEntryGroup>
-                    <selectionEntryGroup name="Primary Weapon" id="37ae-a82b-889c-6a42" hidden="false" defaultSelectionEntryId="00c6-0e17-6a78-e5ea">
+                    <selectionEntryGroup name="Primary Weapon" id="37ae-a82b-889c-6a42" hidden="false" defaultSelectionEntryId="1f1d-dd01-a21f-9654">
                       <entryLinks>
                         <entryLink import="true" name="MAS 37 Energy Rifle" hidden="false" id="00c6-0e17-6a78-e5ea" collective="false" targetId="acb7-0598-9e75-af49" type="selectionEntry">
                           <constraints>
@@ -3582,15 +3628,6 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="MAS 37 Energy Rifle" hidden="false" id="83ac-bd61-0162-fb80" collective="false" targetId="acb7-0598-9e75-af49" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="981c-ffeb-8f72-824c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="243b-906f-e733-ca80" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Bayonet" hidden="false" id="8ec1-4ef3-32cc-be33" type="selectionEntry" targetId="66fd-b75b-f882-3404"/>
-                  </entryLinks>
                   <costs>
                     <cost name="Munitions" typeId="Points" value="6"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3604,6 +3641,64 @@
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="ed4f-6e82-1cdb-785a" hidden="false" defaultSelectionEntryId="83ac-bd61-0162-fb80">
+                      <entryLinks>
+                        <entryLink import="true" name="MAS 37 Energy Rifle" hidden="false" id="83ac-bd61-0162-fb80" collective="false" targetId="acb7-0598-9e75-af49" type="selectionEntry" sortIndex="1">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="981c-ffeb-8f72-824c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Bayonet" hidden="false" id="8ec1-4ef3-32cc-be33" type="selectionEntry" targetId="66fd-b75b-f882-3404"/>
+                          </entryLinks>
+                          <modifiers>
+                            <modifier type="append" value="and Bayonet" field="name"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Berthier Carbine" hidden="false" id="5e54-fb65-8060-e6d1" type="selectionEntry" targetId="046d-7900-a372-2acf" sortIndex="2">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="653e-a865-bbdf-558a" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Bayonet" hidden="false" id="9282-9a93-acfe-1ec7" type="selectionEntry" targetId="66fd-b75b-f882-3404"/>
+                          </entryLinks>
+                          <modifiers>
+                            <modifier type="append" value="and Bayonet" field="name"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f21b-0168-7c98-8be9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f21b-0168-7c98-8be9-max" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Pistol and Trench Weapon" hidden="false" id="323c-9f3f-56bc-dbf8" collective="true" sortIndex="3">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d3ba-a382-0a91-4607" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Modele 1921 Energy Pistol" hidden="false" id="df43-b521-a102-39fd" type="selectionEntry" targetId="da28-df59-a553-5d18">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6b3-d145-28e5-4535-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6b3-d145-28e5-4535-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Trench Weapon" hidden="false" id="7ed3-eeac-e543-bb13" type="selectionEntry" targetId="3995-2166-a0b3-f919">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e5c-bb14-f306-51b5-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e5c-bb14-f306-51b5-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <costs>
+                            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                          </costs>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Republican Guard Fantassin Specialist" hidden="false" id="6b10-7907-25fe-1638" collective="false" sortIndex="3">
                   <constraints>
@@ -3654,6 +3749,10 @@
                           </constraints>
                         </entryLink>
                       </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f641-3eda-a7e8-56e8-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f641-3eda-a7e8-56e8-max" includeChildSelections="false"/>
+                      </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
@@ -5293,7 +5392,7 @@
             <infoLink name="Cook Off" id="e76e-c6ae-40c4-0055" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
           </infoLinks>
           <profiles>
-            <profile name="AMR 35 Flamethrower Tankette" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b043-900b-12ff-494b">
+            <profile name="AMR 36 Flamethrower Tankettes" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b043-900b-12ff-494b">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x AMR 36 Flamethrower Tankette</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Armor, (AUX) Infantry, Tracked, Vehicle</characteristic>
@@ -6337,6 +6436,22 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99bc-04d5-15f8-37d4-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99bc-04d5-15f8-37d4-max" includeChildSelections="false"/>
                       </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Twin SMGs" hidden="false" id="444d-db05-15eb-2e54" collective="true">
+                          <entryLinks>
+                            <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="083e-deb0-48a0-ea7f" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
+                              <constraints>
+                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4c55-185c-019d-4f03" includeChildSelections="false"/>
+                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="440e-59db-17ea-2b07" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c214-580c-0a6b-ad51" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e84c-b96e-83e8-629e" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <costs>
@@ -6508,7 +6623,7 @@ Units in this army with the Tracked keyword may pass through terrain and choose 
         <selectionEntry type="upgrade" import="true" name="7e Division de Chasseurs Canadiens “Coureur des Bois”" hidden="false" id="f142-1c3c-2324-7bd8">
           <rules>
             <rule name="Defenders of the North" id="2cfc-9e1a-2309-b6eb" hidden="false">
-              <description>Monowheels, Danton de Chasseurs, and Lafayette Tank Destroyers gain an Aim Token after making an Attack Action
+              <description>Monowheel Chasseurs, CAIM 38 &quot;Danton&quot; Chasseur de Char Walkers, and AM40 Lafayette Armored Cars gain an Aim Token after making an Attack Action
 
 
 Troops units gain an Aim Token after performing the Capture Action

@@ -205,16 +205,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db44-4d39-4448-040e" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Satchel Charge" hidden="false" id="585c-11f8-3dd9-2c40" type="selectionEntry" targetId="c9b6-4225-5278-d6b4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5e0-95ea-3aba-c6c3" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Smoke Grenade" hidden="false" id="37cf-e1dc-4da7-7009" type="selectionEntry" targetId="ef44-d791-e3da-0a08">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a144-3e9e-1053-676a" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Feu de Lis" hidden="false" id="4e2b-d950-ad60-83f9" type="selectionEntry" targetId="abe7-e36e-04a4-2300">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="edc8-f86b-b8e8-5ec4" includeChildSelections="false"/>
@@ -223,15 +213,6 @@
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Panzerfaust" hidden="false" id="c18a-a7d6-095c-46a9" type="selectionEntry" targetId="73bb-0e52-5af2-462c">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -245,10 +226,21 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="RPG-3" hidden="false" id="0b13-9b80-0a47-4596" type="selectionEntry" targetId="3689-bd98-b082-788a">
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="52e1-c41b-a803-aa33" includeChildSelections="false"/>
-              </constraints>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Panzerfaust" hidden="false" id="972c-9669-2948-59c9">
+              <entryLinks>
+                <entryLink import="true" name="Panzerfaust" hidden="false" id="7c4d-d1d2-d09f-4830" type="selectionEntry" targetId="73bb-0e52-5af2-462c"/>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="RPG-3" hidden="false" id="cb49-5b55-df19-e9eb">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -256,8 +248,26 @@
                   </conditions>
                 </modifier>
               </modifiers>
-            </entryLink>
-          </entryLinks>
+              <entryLinks>
+                <entryLink import="true" name="RPG-3" hidden="false" id="e86d-b87f-c651-b339" type="selectionEntry" targetId="3689-bd98-b082-788a">
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0615-ac43-3f59-5dd6" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a55d-c840-d4b8-db86" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="false" id="9384-5a04-0960-d5d0">
+              <entryLinks>
+                <entryLink import="true" name="Satchel Charge" hidden="false" id="c88a-82e6-cfa5-fa59" type="selectionEntry" targetId="c9b6-4225-5278-d6b4"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Smoke Grenade" hidden="false" id="f764-eb0d-3571-9772">
+              <entryLinks>
+                <entryLink import="true" name="Smoke Grenade" hidden="false" id="d7c1-d9a0-0b7e-0dae" type="selectionEntry" targetId="ef44-d791-e3da-0a08"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -312,28 +322,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6554-67e8-bbd6-81e7" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Satchel Charge" hidden="false" id="fd3b-2fb0-007f-d52c" type="selectionEntry" targetId="c9b6-4225-5278-d6b4">
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="2835-747c-bc0f-6724" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Smoke Grenade" hidden="false" id="d977-fefb-8805-634e" type="selectionEntry" targetId="ef44-d791-e3da-0a08">
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a656-3ec2-40fa-b65b" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="RPG-3" hidden="false" id="3d4c-6055-4ce1-d657" type="selectionEntry" targetId="3689-bd98-b082-788a">
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="aabb-3e03-8649-6e49" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
             <entryLink import="true" name="Feu de Lis" hidden="false" id="2dc4-dcbe-4a75-6e37" type="selectionEntry" targetId="abe7-e36e-04a4-2300">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55d6-7858-98b2-e1bb" includeChildSelections="false"/>
@@ -342,15 +330,6 @@
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Panzerfaust" hidden="false" id="7474-e686-fdad-ff39" type="selectionEntry" targetId="73bb-0e52-5af2-462c">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -374,6 +353,47 @@
               </modifiers>
             </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Panzerfaust" hidden="false" id="8d00-fd2f-b9c1-e5f9">
+              <entryLinks>
+                <entryLink import="true" name="Panzerfaust" hidden="false" id="7f05-0fcd-f38f-a599" type="selectionEntry" targetId="73bb-0e52-5af2-462c"/>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="RPG-3" hidden="false" id="6312-ba24-34b1-1b68">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="RPG-3" hidden="false" id="3d4c-6055-4ce1-d657" type="selectionEntry" targetId="3689-bd98-b082-788a">
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="aabb-3e03-8649-6e49" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae19-4e5e-a2c5-bbed" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="false" id="9f12-5901-9fd0-edd7">
+              <entryLinks>
+                <entryLink import="true" name="Satchel Charge" hidden="false" id="fd3b-2fb0-007f-d52c" type="selectionEntry" targetId="c9b6-4225-5278-d6b4"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Smoke Grenade" hidden="false" id="e670-4f66-f9c7-e9ae">
+              <entryLinks>
+                <entryLink import="true" name="Smoke Grenade" hidden="false" id="d977-fefb-8805-634e" type="selectionEntry" targetId="ef44-d791-e3da-0a08"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -651,7 +671,7 @@
         </rule>
       </rules>
       <modifiers>
-        <modifier type="prepend" value="Battery" field="name" scope="parent"/>
+        <modifier type="append" value="Battery" field="name" scope="parent"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Emplaced Gun" hidden="false" id="6300-3b6e-778a-86ce">
@@ -805,7 +825,8 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <constraints>
-        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c0c4-ac41-3c68-62c3" includeChildSelections="false"/>
+        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="91ef-5499-4d9d-501a" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c6ac-7881-dd80-72a8" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Pervitin" hidden="false" id="f451-0409-7336-476c">
@@ -927,6 +948,10 @@
           <description>As a Free Action, you may expend this Weapon&apos;s Ammo, if you do, this Unit performs a Free Demolish Action.</description>
         </rule>
       </rules>
+      <constraints>
+        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f8d0-3cfb-c484-5e9a" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="98a3-794a-a6e9-1918" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Senninbari" hidden="false" id="93a9-1025-0d91-9941">
       <rules>
@@ -977,6 +1002,10 @@
         <infoLink name="Pop Smoke" id="7f0a-8778-e625-0ffb" hidden="false" type="rule" targetId="2789-0a67-eb65-f149"/>
         <infoLink name="Smoke Token" id="d7dc-e9d6-7a96-6fc6" hidden="false" type="rule" targetId="3041-2233-c962-765d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3d2-9519-deb6-f18a" includeChildSelections="false"/>
+        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="33ce-6ddc-1c76-069f" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Snow Chains" hidden="false" id="0b82-fe2e-417f-0d5b">
       <rules>

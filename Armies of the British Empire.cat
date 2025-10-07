@@ -1935,7 +1935,7 @@
                 <selectionEntry type="model" import="true" name="Dragoon" hidden="false" id="3c02-a380-6724-4066" sortIndex="2">
                   <constraints>
                     <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="8404-0aa2-9196-a79c" includeChildSelections="false"/>
-                    <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="f19d-95bb-4410-7372" includeChildSelections="false"/>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f19d-95bb-4410-7372" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
                     <entryLink import="true" name="EM-2 Assault Rifle" hidden="false" id="fce0-f12f-07fa-c247" type="selectionEntry" targetId="a620-63c4-b513-095e">
@@ -5180,7 +5180,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a767-f0f7-843f-e818" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Heavy Weapon Element" hidden="false" id="8d8d-f796-4ac8-c309">
+        <selectionEntry type="upgrade" import="true" name="Automaton Heavy Weapon Element" hidden="false" id="8d8d-f796-4ac8-c309">
           <selectionEntryGroups>
             <selectionEntryGroup name="Elements" id="fc5d-4070-6cbc-8f40" hidden="false">
               <selectionEntries>
@@ -5237,7 +5237,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <profiles>
             <profile name="Heavy Weapon Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="5e54-38a4-72fb-babf">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Infantry, (SPC) Support, (SPC) Mechanized, Attache (Troop)</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Infantry, (SPC) Support, (SPC) Mechanized, (SPC) Pacification, Attache (Troop)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">50mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -5678,7 +5678,8 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="b100-ce4e-c964-af8d" id="2361-d2a2-e7ab-d6ec" primary="false" name="BRE"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="9dc8-ed46-f556-e84c" primary="false" name="Vehicle"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="1504-1afa-f34d-273c" primary="false" name="Tracked"/>
-        <categoryLink targetId="dc85-2f8f-8f0d-4b19" id="ef0b-614a-26d5-32b5" primary="false" name="AUX Recon"/>
+        <categoryLink targetId="54db-5889-a382-77cb" id="32d5-d997-b6d3-bdb3" primary="false" name="CORE Recon"/>
+        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="96b2-f4ba-1e08-eaf5" primary="false" name="AUX Mechanized"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="54db-5889-a382-77cb" field="category">
@@ -6035,6 +6036,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="de0d-e12c-a964-4e46" id="7443-1d6b-a1e4-6f22" primary="false" name="Vehicle"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="68fa-30c0-c9a1-06fa" primary="false" name="BRE"/>
         <categoryLink targetId="2aa2-d811-87ac-0844" id="2244-05f1-2562-4f1f" primary="false" name="Scout"/>
+        <categoryLink targetId="8136-fed2-db8d-c7a0" id="3663-a837-6b27-2c0a" primary="false" name="AUX Armor"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
@@ -6306,13 +6308,14 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Heavy Weapon Element" hidden="false" id="4ecf-6ad5-bce3-55a6" type="selectionEntry" targetId="8d8d-f796-4ac8-c309">
+    <entryLink import="true" name="Automaton Heavy Weapon Element" hidden="false" id="4ecf-6ad5-bce3-55a6" type="selectionEntry" targetId="8d8d-f796-4ac8-c309">
       <categoryLinks>
         <categoryLink name="Attache" hidden="false" id="937f-2d65-b0e6-028a" targetId="6cee-690d-b6de-aa15" primary="false"/>
         <categoryLink name="SPC Infantry" hidden="false" id="e1d6-48d1-b911-0c2e" targetId="eae9-4e17-22cb-4491" primary="true"/>
         <categoryLink name="SPC Support" hidden="false" id="ad7f-1868-734a-f3e4" targetId="869c-51f1-d04f-a8ce" primary="false"/>
         <categoryLink name="SPC Mechanized" hidden="false" id="3be5-3b73-a08e-5bf4" targetId="cf6f-f672-129a-1bfb" primary="false"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="83dd-757b-da65-aedd" primary="false" name="BRE"/>
+        <categoryLink targetId="a56a-77ef-ff07-8a8f" id="7ed0-9359-5132-1f11" primary="false" name="SPC Pacification"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
@@ -6323,6 +6326,11 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="a56a-77ef-ff07-8a8f" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d6f3-788c-2c4c-503b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6854,7 +6862,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -7584,6 +7592,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
             <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Fixed Elevation" id="ad0a-5fb1-3437-61e5" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="22"/>

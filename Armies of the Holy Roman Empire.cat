@@ -805,6 +805,16 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Treadbike Ulans" hidden="false" id="aff8-593a-5e9c-a5ce" type="selectionEntry" targetId="4c03-5835-534e-1ca2">
+      <categoryLinks>
+        <categoryLink targetId="54db-5889-a382-77cb" id="b94d-31cb-2339-3b9b" primary="true" name="CORE Recon"/>
+        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="4aad-f82e-5b97-13f7" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="7616-a9f8-6205-af0e" id="2282-2583-9599-d709" primary="false" name="Tracked"/>
+        <categoryLink targetId="71cc-1c64-2438-4030" id="4224-a89c-707d-6cfa" primary="false" name="Cavalry"/>
+        <categoryLink targetId="4ec9-47a4-5562-ea3b" id="310e-045d-fb35-37b7" primary="false" name="Battlesuit"/>
+        <categoryLink targetId="496e-47e7-7a85-4016" id="1e1c-6462-3f5b-7efd" primary="false" name="HRE"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c7-8ea6-b7ab-64be" name="Officer Seniority" hidden="false" collective="false" import="true" type="upgrade">
@@ -1057,6 +1067,7 @@
             <modifier type="append" value="1" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Fixed Elevation" id="315b-f191-827c-ecfe" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="31"/>
@@ -1532,7 +1543,7 @@
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="f68c-2258-e3ec-0109">
+    <selectionEntry type="upgrade" import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="f68c-2258-e3ec-0109" collective="true">
       <infoLinks>
         <infoLink name="Epak. 29 Light Energy Gun" id="8a91-ad66-7d10-a727" hidden="false" type="profile" targetId="9858-3318-6d7b-4720"/>
         <infoLink name="Reliable" id="e413-0c64-c9e5-b98a" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
@@ -1633,6 +1644,31 @@
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="CKF Lance" hidden="false" id="799b-56cb-59d4-8050" collective="true">
+      <infoLinks>
+        <infoLink name="CKF Lance" id="fb40-319d-3b85-6c1b" hidden="false" type="profile" targetId="431c-a016-cf0b-6b55"/>
+        <infoLink name="Charge!" id="8731-7c8e-6ff5-cea9" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="7"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plasma Lance" hidden="false" id="ec70-c26a-e6db-a477" collective="true">
+      <infoLinks>
+        <infoLink name="Plasma Lance" id="e387-148f-a42c-d8a4" hidden="false" type="profile" targetId="1227-ed1b-0e76-00df"/>
+        <infoLink name="Charge!" id="e4d3-0ed9-ed15-9a3e" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
+        <infoLink name="Slag" id="0110-db3d-7791-d34d" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="15"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1815,7 +1851,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 1, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2207,6 +2243,26 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="CKF Lance" typeId="Weapon" typeName="Weapon" hidden="false" id="431c-a016-cf0b-6b55">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plasma Lance" typeId="Weapon" typeName="Weapon" hidden="false" id="1227-ed1b-0e76-00df">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!, Slag</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Emitter, Plasma</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -3922,6 +3978,160 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <entryLink import="true" name="Intel Gathering" hidden="false" id="baea-adc7-feb6-b3af" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
           </entryLinks>
         </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Treadbike Ulans" hidden="false" id="4c03-5835-534e-1ca2">
+          <profiles>
+            <profile name="Treadbike Ulans" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0ce9-67eb-79c6-b81b">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Ulan Wachtmeister, 2-4x Ulans</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Mechanized, Cavalry, Battlesuit, Tracked</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Eisenfaust" id="b4bb-5373-88c2-640d" hidden="false">
+              <description>When this Unit performs a Free Charge! Attack, if it is more than 10&quot; away from its position at the start of the Round apply a Concussion token to the Target of that Attack.</description>
+            </rule>
+          </rules>
+          <entryLinks>
+            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="4d0e-c834-e02e-567d" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Cavalry Actions" id="4db9-b67b-b5bb-21a9" hidden="false" type="profile" targetId="95c6-33a2-c463-50c9"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Squad Members" id="6539-2b3e-2562-309c" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Ulan Wachtmeister" hidden="false" id="8c15-e312-751c-c5d7" sortIndex="1">
+                  <profiles>
+                    <profile name="Ulan Wachtmeister" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="214b-62c0-cde3-00a7">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                      </characteristics>
+                      <comment>Small, Fast</comment>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="43"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="32a6-1d37-84d2-8019" type="selectionEntry" targetId="dd2b-ca3f-0686-6fb4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca50-715d-b09b-5f50-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca50-715d-b09b-5f50-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="CKF Saber" hidden="false" id="4abb-0280-d019-3fd4" type="selectionEntry" targetId="116c-4e0a-aadc-0b83">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4d1-c948-996f-2505-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4d1-c948-996f-2505-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Lance Options" id="7d70-63f5-e5e3-485d" hidden="false" defaultSelectionEntryId="8efd-c3f8-a790-9db0">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="21b8-3933-3e0b-0d08-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21b8-3933-3e0b-0d08-max" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="CKF Lance" hidden="false" id="8efd-c3f8-a790-9db0" type="selectionEntry" targetId="799b-56cb-59d4-8050">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="652d-4a0b-6c62-baf7" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plasma Lance" hidden="false" id="3f23-d8e3-e232-b6d2" type="selectionEntry" targetId="ec70-c26a-e6db-a477">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bead-57cc-ef50-5198" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f673-d94c-d506-556f-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f673-d94c-d506-556f-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="model" import="true" name="Ulan" hidden="false" id="4d7c-0c25-7008-82f1" sortIndex="2">
+                  <profiles>
+                    <profile name="Ulan" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e494-7280-a272-c1b0">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                      </characteristics>
+                      <comment>Small, Fast</comment>
+                      <alias>Ulans</alias>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="43"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="f8ad-714b-4e6c-97d3" type="selectionEntry" targetId="dd2b-ca3f-0686-6fb4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f311-3677-77d4-f737-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f311-3677-77d4-f737-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="CKF Saber" hidden="false" id="a14f-6d16-af98-752a" type="selectionEntry" targetId="116c-4e0a-aadc-0b83">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c6d-e4ce-1334-4d8f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c6d-e4ce-1334-4d8f-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Lance Options" id="6db8-fe68-41a3-e431" hidden="false" defaultSelectionEntryId="bd9b-5baa-fb97-d3d5">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a51-8ab6-8211-c036-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a51-8ab6-8211-c036-max" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="CKF Lance" hidden="false" id="bd9b-5baa-fb97-d3d5" type="selectionEntry" targetId="799b-56cb-59d4-8050">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3be-6685-6482-93ea" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plasma Lance" hidden="false" id="5e22-d935-b128-4a9c" type="selectionEntry" targetId="ec70-c26a-e6db-a477">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0a6-6b43-b3c9-d344" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="ab1e-2d27-0f5b-6459" includeChildSelections="false"/>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0b79-ce3e-7e8a-b549" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="99cc-7a70-ecb0-4317" includeChildSelections="false"/>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="c1d5-a3c2-06ba-2ceb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="10"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Artillery" id="d57a-591d-2d83-86ea" hidden="false">
@@ -4547,6 +4757,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <entryLink import="true" name="Knecht Zweihander" hidden="false" id="3f8e-6b3a-7de7-3a67" type="selectionEntry" targetId="3fc8-84ad-d8b6-e09d">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41db-5f0f-a2db-f8da" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="997b-5d92-1546-9504" type="selectionEntry" targetId="f68c-2258-e3ec-0109">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f74-3192-10f1-b362" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -6597,6 +6812,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c500-5d1a-16aa-0b96" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
+                        <entryLink import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="cd4c-87ad-1b48-5bf8" type="selectionEntry" targetId="f68c-2258-e3ec-0109">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b093-4ef4-262e-936b" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -6704,6 +6924,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <entryLink import="true" name="35M GMG Auto Grenade Launcher" hidden="false" id="0603-1f8d-599c-00b3" collective="false" targetId="56a0-dceb-5d9a-637d" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fba6-620c-a660-16b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Epak. 29 Light Energy Gun" hidden="false" id="7b27-5a4b-4eca-a4fb" type="selectionEntry" targetId="f68c-2258-e3ec-0109">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="870f-ed0e-91a1-c40f" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
@@ -7188,7 +7413,7 @@ Each Ordeal can only be accomplished once per game.</description>
             <rule name="Bohemian Plate" id="a2fe-e2b7-382d-628a" hidden="false">
               <description>Troop Units in your army get Bulwark 1 if they are in at least two levels of cover.</description>
             </rule>
-            <rule name="Zámek" id="6a6b-1375-7134-6518" hidden="false">
+            <rule name="Hrad Doctrine" id="6a6b-1375-7134-6518" hidden="false">
               <description>When a ranged attack is declared against a friendly Troop unit benefiting from cover, you may spend 1 Supply point to increase its cover level by one.</description>
             </rule>
           </rules>

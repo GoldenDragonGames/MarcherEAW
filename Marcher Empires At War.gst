@@ -891,7 +891,7 @@
             </categoryLink>
             <categoryLink name="SPC Pacification" hidden="false" id="f2fe-7f1c-fecf-0807" targetId="a56a-77ef-ff07-8a8f">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ece-7ecc-9347-8c0f"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7ece-7ecc-9347-8c0f"/>
               </constraints>
             </categoryLink>
             <categoryLink name="AUX Pacification" hidden="false" id="7b6b-e486-bc6f-f0df" targetId="1ce8-430c-2a91-31fb">
