@@ -86,6 +86,7 @@
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="7dfe-46ea-293f-6101" primary="false" name="Troop"/>
         <categoryLink targetId="0210-dcc7-546b-3981" id="4e72-b10e-9f14-c06f" primary="false" name="Crewed Weapon"/>
         <categoryLink targetId="b3c6-65b4-b49c-a828" id="8803-b0ef-b131-bd86" primary="false" name="AUX Starborne"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="38d3-a97e-1384-9d3a" primary="false" name="AUX Artillery"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
@@ -98,6 +99,11 @@
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="34ba-1720-6fa5-fe76" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="c4bb-1be5-77af-c57d" name="Rear-Echelon Infantry Squad" hidden="false" collective="false" import="true" targetId="40e2-65e6-aec2-88da" type="selectionEntry">
@@ -107,11 +113,17 @@
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="cf87-e22d-a9f6-76b4" primary="false" name="Troop"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="836b-cb78-50e1-97dd" primary="false" name="USA"/>
         <categoryLink targetId="fea7-21e6-bb88-f8ed" id="a685-9658-de23-dadd" primary="false" name="Engineer"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="6cc1-e630-dbbc-15ec" primary="false" name="AUX Artillery"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -257,6 +269,11 @@
         <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="dc85-2f8f-8f0d-4b19" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4523,7 +4540,7 @@
             <profile name="M30 Jackrabbit Light Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a265-e0ca-64d1-2665">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M30 Jackrabbit Light Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Armor, (AUX) Mechanized, (AUX) Recon, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
               </characteristics>
@@ -7208,7 +7225,7 @@
             <profile name="Rear-Echelon Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2d41-911f-16c1-1fe9">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1 Rear-Echelon Staff Sergeant &amp; 9 Rear-Echelon Riflemen</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, Troop, Engineer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Engineer</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
               </characteristics>
@@ -8270,7 +8287,7 @@
             <profile name="G.I. Heavy Weapon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fa0f-b3fd-22fe-cf3c">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x G.I. Heavy Weapon Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, (AUX) Starborne, Troop, Crewed Weapon</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Support, (AUX) Infantry, (AUX) Artillery, (AUX) Starborne, Troop, Crewed Weapon</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
               </characteristics>

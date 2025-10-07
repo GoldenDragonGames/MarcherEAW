@@ -603,7 +603,7 @@
             <profile name="Automaton Infantry Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a3fd-55ff-d437-7391">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Tommybots Section Leader, 7-9x Tommybots, 0-2x Tommybot Gunners</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, (CORE) Pacification, (AUX) Mechanized, Troop, Automaton</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, (CORE) Pacification, (AUX) Mechanized, (AUX) Artillery, (AUX) Support, Troop, Automaton</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
               </characteristics>
@@ -2584,7 +2584,7 @@
             <profile name="Automaton Heavy Machine Gun Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a41c-fef0-dcd7-b72f">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Automaton Machine Gun Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, (AUX) Pacification, (AUX) Infantry, Troop, Crewed Weapon, Automaton</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, (AUX) Pacification, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon, Automaton</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
               </characteristics>
@@ -5851,6 +5851,9 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="e64d-d223-e4a2-9752" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="239b-db47-17c9-4f36" id="0386-3c08-d4f2-586a" primary="false" name="Automaton"/>
         <categoryLink targetId="a9bf-60cd-c79d-de30" id="de5c-1d7c-bfe6-cb28" primary="false" name="CORE Pacification"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="dcce-1113-8fe5-aedc" primary="false" name="AUX Artillery"/>
+        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="8949-0c3e-0e22-caad" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="48f5-3131-be0b-5951" id="3ec9-d789-baad-12c3" primary="false" name="AUX Support"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
@@ -5861,6 +5864,16 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <modifier type="set-primary" value="a9bf-60cd-c79d-de30" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="d6f3-788c-2c4c-503b" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="48f5-3131-be0b-5951" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5940,6 +5953,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="b100-ce4e-c964-af8d" id="3ec0-dece-4a93-adff" primary="false" name="BRE"/>
         <categoryLink targetId="0210-dcc7-546b-3981" id="3497-4fd3-e06d-3170" primary="false" name="Crewed Weapon"/>
         <categoryLink targetId="1ce8-430c-2a91-31fb" id="23be-226a-7aa7-4155" primary="false" name="AUX Pacification"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="a34e-feeb-d7b6-9955" primary="false" name="AUX Artillery"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
@@ -5950,6 +5964,11 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <modifier type="set-primary" value="1ce8-430c-2a91-31fb" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="d6f3-788c-2c4c-503b" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>

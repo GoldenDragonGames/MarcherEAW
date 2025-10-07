@@ -1895,11 +1895,17 @@
         <categoryLink name="EOJ" hidden="false" id="d62e-69ef-89d4-cc6d" targetId="f273-43c7-03e5-764e" primary="false"/>
         <categoryLink name="Troop" hidden="false" id="cd19-a54f-56ad-0053" targetId="6dc4-41a4-7144-d10c" primary="false"/>
         <categoryLink targetId="0210-dcc7-546b-3981" id="0992-a19b-23ba-2008" primary="false" name="Crewed Weapon"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="0bae-29ad-94bd-cfe5" primary="false" name="AUX Artillery"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4830,7 +4836,7 @@
             <profile name="Hōshu Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bc24-59b8-5545-0129">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Hōshu Heavy Weapon Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJM, (CORE) Support, (AUX) Infantry, Troop, Crewed Weapon</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJM, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
               </characteristics>

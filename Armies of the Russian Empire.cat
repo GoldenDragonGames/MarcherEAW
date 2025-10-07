@@ -1426,6 +1426,7 @@
         <categoryLink targetId="51a0-4deb-b01b-931e" id="68bd-4431-3669-f7f0" primary="false" name="RUS"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="64cc-2002-9c41-c71a" primary="false" name="Troop"/>
         <categoryLink targetId="c87d-0c37-d91f-b4cd" id="6cdb-4697-8cc1-c034" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="c223-28ec-44d5-1203" primary="false" name="AUX Artillery"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
@@ -1436,6 +1437,11 @@
         <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2249,6 +2255,11 @@
         <modifier type="set-primary" value="a74d-0d07-e5d9-0032" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3816,7 +3827,7 @@ This Unit may not take Upgrades.</description>
             <profile name="Guards Rifles Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d6bc-50bd-2a5e-0265">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Yefreitor, 3-19x Ryadovoy, &amp; 0-6x Ryadovoy Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, (AUX) Artillery, Troop</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10-20</characteristic>
               </characteristics>
@@ -5882,7 +5893,7 @@ This Unit may not take Upgrades.</description>
             <profile name="Guards Heavy Weapon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8b72-24e3-179e-9f68">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Guards Heavy Weapon Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, Troop, Crewed Weapon</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
               </characteristics>

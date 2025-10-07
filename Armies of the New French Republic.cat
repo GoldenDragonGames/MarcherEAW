@@ -302,11 +302,17 @@
         <categoryLink targetId="de0d-e12c-a964-4e46" id="243a-6bbb-1e05-f287" primary="false" name="Vehicle"/>
         <categoryLink targetId="2018-9722-0c01-f30e" id="9b33-55c6-46da-5e2d" primary="false" name="NFR"/>
         <categoryLink targetId="c87d-0c37-d91f-b4cd" id="5a25-e55b-87ed-dc32" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="dc85-2f8f-8f0d-4b19" id="58de-37ad-1d73-0b84" primary="false" name="AUX Recon"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="dc85-2f8f-8f0d-4b19" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2178,7 +2184,7 @@
             <profile name="R35 Marat Light Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f3e7-af0e-2ce9-f2f8">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x R35 Marat Light Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, (AUX) Mechanized, (AUX) Recon, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
               </characteristics>
