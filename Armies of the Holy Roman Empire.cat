@@ -406,6 +406,11 @@
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="94df-db09-3266-46a5" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Knecht Battlesuit Commander" hidden="true" id="6670-7e8c-f845-b5ec" type="selectionEntry" targetId="73b3-51f6-6076-2dcd">
@@ -850,6 +855,21 @@
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="cfdd-25e6-1814-82c3" primary="true" name="Command"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="6d5d-5ba6-9776-4cfe" primary="false" name="HRE"/>
       </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="39M Brudermann Gun Tractor" hidden="true" id="716a-011c-cfa2-e21e" type="selectionEntry" targetId="ea21-f5f8-bd1a-7096">
+      <categoryLinks>
+        <categoryLink targetId="d4be-5aad-8560-5720" id="9d67-2e9d-3e08-2646" primary="true" name="Transport"/>
+        <categoryLink targetId="7616-a9f8-6205-af0e" id="c07a-8d8c-8c4a-d17e" primary="false" name="Tracked"/>
+        <categoryLink targetId="de0d-e12c-a964-4e46" id="d5ed-2e7c-86e6-bbae" primary="false" name="Vehicle"/>
+        <categoryLink targetId="496e-47e7-7a85-4016" id="951c-a4c9-4ae7-01be" primary="false" name="HRE"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="c2bc-81f4-b62b-dc46" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
@@ -1313,7 +1333,7 @@
         <infoLink name="Adjustable Sights" id="3495-6732-8e82-edaa" hidden="false" type="rule" targetId="4565-e3f5-c290-9d99"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="4"/>
+        <cost name="Munitions" typeId="Points" value="5"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1328,7 +1348,7 @@
         <infoLink name="Headshot" id="f80e-1a79-d9ae-74e9" hidden="false" type="rule" targetId="9d6c-a49e-e767-123d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="23"/>
+        <cost name="Munitions" typeId="Points" value="28"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1816,7 +1836,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">30&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Kinetic</characteristic>
       </characteristics>
@@ -2016,7 +2036,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">60&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Adjustable Sights, Critical Shot, Sniper, Headshot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Sniper Rifle, Kinetic</characteristic>
       </characteristics>
@@ -4043,7 +4063,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Ulan Wachtmeister" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="214b-62c0-cde3-00a7">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
@@ -4112,7 +4132,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Ulan" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e494-7280-a272-c1b0">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
@@ -4186,7 +4206,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
+            <cost name="Munitions" typeId="Points" value="30"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4389,9 +4409,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <entryLinks>
-                <entryLink import="true" name="Schürzen" hidden="false" id="d4b3-b481-87df-bd8d" type="selectionEntry" targetId="8578-045a-cf73-5c17"/>
-              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -6089,6 +6106,66 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
+        <selectionEntry type="unit" import="true" name="39M Brudermann Gun Tractor" hidden="false" id="ea21-f5f8-bd1a-7096" collective="false">
+          <profiles>
+            <profile name="39M Brudermann Gun Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a3f4-fa27-bfcd-88f0">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 39M Brudermann Gun Tractor</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Vehicle Actions" id="5969-efc7-9b4e-48b1" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f3e9-1ce5-924c-d49b" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Hitch" hidden="false" id="ade7-96f2-138c-0f24" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
+            <entryLink import="true" name="Gun Tractor" hidden="false" id="25e1-c591-5f38-8ff9" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
+            <entryLink import="true" name="Rapid Deployment" hidden="false" id="fc4d-7eb1-3ca5-5ba4" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="39M Brudermann Gun Tractor" hidden="false" id="ade9-26ad-4292-1513">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd66-99cc-45a4-692b" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c0e-bc8f-a050-6c0f" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="39M Brudermann Gun Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ebf6-0d1e-3aa1-832a">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                  </characteristics>
+                  <comment>Medium, Fast</comment>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="31"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cargo" hidden="false" id="aaee-2637-ced2-f7cb">
+              <entryLinks>
+                <entryLink import="true" name="Logistics" hidden="false" id="47ef-8c67-b5d1-b293" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
+                <entryLink import="true" name="Supply Gathering" hidden="false" id="5267-d836-0e8c-c78a" type="selectionEntry" targetId="d5d8-7605-d440-d507"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72a0-b250-562b-2aa0" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Heroes" id="d345-1c2b-5ca2-250e" hidden="false">
@@ -7559,19 +7636,27 @@ Each Ordeal can only be accomplished once per game.</description>
         <selectionEntry type="upgrade" import="true" name="Die Paladin-Peers Karls des Großen (München)" hidden="false" id="5671-105b-245b-37f3">
           <rules>
             <rule name="Blue Bloods" id="104b-b0c2-5a5b-9299" hidden="false">
-              <description>Non-Battlesuit Units in this Army may not be issued Orders.
-
-
-At the Start of the Action phase, Battlesuit Units in your army that have the Ordered Condition may take a free Movement Action.</description>
+              <description>Non-Battlesuit Units in this Army may not be issued Orders
+.
+At the Start of the Action phase, non-Cavalry Battlesuit Units in your army that have an Order Token may take a free Dash Action.</description>
             </rule>
             <rule name="Ritterlichkeit" id="04aa-61e7-262f-be21" hidden="false">
               <description>When Chaim Drescher or a Knecht Battlesuit Unit performs an Attack Action, if the Model with the highest current Hitpoints in the targeted Unit exceeds the highest current Hitpoints of the Models in the Attacking Unit, that Unit may reroll all instances of 1s and 2s.
 
 
-Chaim Drescher and Knecht Battlesuit Units in this army have the following Special Rule:</description>
+Chaim Drescher and Knecht Battlesuit Units in this army have the following Special Rule: Knightly Challenge</description>
             </rule>
             <rule name="Knightly Challenge" id="96b5-3504-cb03-287a" hidden="false">
-              <description>When this Unit activates, it may select an enemy Unit within Line of Sight and issue a Challenge. Until this Unit is destroyed or next activates, this Unit and the targeted Unit suffer a -2 to Hit penalty unless they make Attack Actions against one another. Challenged Units cannot spend or share Aim Tokens for any reason other than to improve their Attacks against the Challenger.</description>
+              <description>Knightly Challenge: When this Unit activates, it may select an Enemy Unit to Challenge. It may only select Units that fulfill the following conditions:
+* Within range of a weapon equipped to this Unit, or within 18” of this Unit.
+* Eligible for a Ranged Attack.
+* Not already Challenged by another Unit.
+
+
+Until this Unit is destroyed or next activates, this Unit and the Challenged Unit are considered to have two levels of Obscured when they are Attacked by Units other than each other. 
+
+
+This Unit may reroll 1s and 2s for Armor Penetration Checks against the Challenged Unit.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -7588,23 +7673,23 @@ Chaim Drescher and Knecht Battlesuit Units in this army have the following Speci
         <selectionEntry type="upgrade" import="true" name="1st Royal Teuton Division (Konigsberg)" hidden="false" id="0495-ce03-d9cb-7377">
           <rules>
             <rule name="Auditors of Death" id="8af6-88e9-9972-a949" hidden="false">
-              <description>Engineer Units in your Army may use a Standard Action to Tick the Dial In Counter of a Field Gun Unit within 8’’ of them down by one. 
+              <description>Engineer Units in your Army may use a Standard Action to Tick the Dial In Counter of a Siege Unit within 8’’ of them down by one. 
 
 
-Units with the Field Gun Sub-Type receive an Aim token if they are within 8&apos;&apos; of a Command Unit or Engineer at the start of their activation.</description>
+Units with the Siege Sub-Type receive an Aim token if they are within 8&apos;&apos; of a Command Unit or Engineer at the start of their activation.</description>
             </rule>
             <rule name="Haubitzen!" id="bdef-8b02-3332-0ca6" hidden="false">
               <description>Command Units in your army gain the Adjust Coordinates action as a Standard Action. 
 
 
-When an enemy Unit ends a Movement Action within range of one of your Blast Tokens you may Tick a Dial In Counter down by one on one of your Field Gun Units.</description>
+When an enemy Unit ends a Movement Action within range of one of your Blast Tokens you may Tick a Dial In Counter down by one on one of your Siege Units.</description>
             </rule>
           </rules>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="2nd Alpini Division &quot;Tridentina&quot;(Tyrol)" hidden="false" id="cf78-587a-5870-e103">
           <rules>
             <rule name="Mountain Infantry" id="a8bc-367a-9c71-5686" hidden="false">
-              <description>roops Units in this Army ignore Rough Terrain.
+              <description>Troops Units in this Army ignore Rough Terrain.
 
 
 Royal Honvéd Units in this Army gain the “Tow” Keyword. 

@@ -55,6 +55,12 @@
         <characteristicType name="Dimensions" id="0e74-2a74-ad59-2775"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Special Requisition" id="60a8-a233-a953-97f1" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Cost" id="fdc2-ccd7-0950-5670"/>
+        <characteristicType name="Effects" id="8280-2b12-dd95-5313"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="7950-f6f1-38c2-f2dd" name="CORE Armor" hidden="false"/>
@@ -143,6 +149,7 @@
     <categoryEntry name="CORE Starborne" id="4c05-06c2-f6ab-92b1" hidden="false"/>
     <categoryEntry name="Starborne Platoon Configuration" id="0b49-4c06-5cea-c6a0" hidden="false"/>
     <categoryEntry name="USA" id="4455-94a1-ea5e-b9ec" hidden="false"/>
+    <categoryEntry name="Battery" id="eb80-161e-f2a5-8496" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Company" id="01ba-2120-7904-bce7" hidden="false" childForcesLabel="Platoons">
@@ -421,6 +428,16 @@
                   <conditions>
                     <condition type="greaterThan" value="0" field="selections" scope="force" childId="6f95-29a9-8d9a-a5fb" shared="true"/>
                   </conditions>
+                </modifier>
+                <modifier type="set" value="1" field="d249-a21e-6882-50c4">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="eb80-161e-f2a5-8496" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="632e-f737-c507-cb4f">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="eb80-161e-f2a5-8496" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
                 </modifier>
               </modifiers>
             </categoryLink>
@@ -795,6 +812,18 @@
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4f28-f1a3-12bb-a1b" includeChildSelections="false"/>
                 <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8af2-3def-99a8-0424" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="4f28-f1a3-12bb-a1b">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="eb80-161e-f2a5-8496" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="8af2-3def-99a8-0424">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="eb80-161e-f2a5-8496" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </categoryLink>
             <categoryLink name="AUX Support" hidden="false" id="a0ef-3c31-3647-9092" targetId="48f5-3131-be0b-5951" primary="false">
               <constraints>
@@ -1415,6 +1444,11 @@
         <categoryLink id="8b3d-2e4a-b1c5-ee77" name="Armor Platoon Configuration" hidden="false" targetId="8d88-522f-d086-d712" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Special Requisition Reference" hidden="false" id="520f-0c6b-d403-49b9" type="selectionEntry" targetId="0085-fb8b-223e-246b">
+      <categoryLinks>
+        <categoryLink targetId="8d88-522f-d086-d712" id="496b-3461-6007-2ae1" primary="true" name="Armor Platoon Configuration"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="86bb-e1be-717a-6587" name="Armor Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
@@ -1425,7 +1459,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7d9-c855-71a4-7e84-max" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="8ebf-05e8-fca1-8b94" name="On the Way!" hidden="false" targetId="0d92-4ab7-f17c-0286" type="rule"/>
+            <infoLink id="8ebf-05e8-fca1-8b94" name="Hatches Down" hidden="false" targetId="0d92-4ab7-f17c-0286" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -1565,7 +1599,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63c5-f3c7-f476-27a8-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink id="a473-6239-97b3-f76c" name="Rapid Reconnaissance" hidden="false" targetId="3414-34d7-5dfe-51c3" type="rule"/>
+            <infoLink id="a473-6239-97b3-f76c" name="Eyes Ahead" hidden="false" targetId="3414-34d7-5dfe-51c3" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -1773,6 +1807,92 @@ Area, Light Terrain*, Rough 
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da4f-dab7-67ac-150d-max"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Special Requisition Reference" hidden="false" id="0085-fb8b-223e-246b">
+      <infoGroups>
+        <infoGroup name="Special Requisitions" id="91f0-9b8a-9056-e727" hidden="false">
+          <profiles>
+            <profile name="Assess" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="beb8-5797-bb69-9343">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">1 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">When you normally would select a Unit to activate or deploy, you may skip your Activation/Deployment, and pass to the opponent.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Deployed in Advance" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="2d0a-26b0-8ef6-f9ff">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">Variable</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">During the first Set Up Phase, before any Units have been placed onto the battlefield; you may choose a Fortification from the Fortifications table and spend Supply Points equal to its standard costs +1 S.P. to place it anywhere on the battlefield more than 8” of the opponents deployment zone. This Special Requisition may be used any number of times.
+
+
+You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in addition to the Unit’s standard cost instead. These fortifications cannot overlap models or other terrain.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Reinforcement" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="af69-8514-c9f1-d766">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">4 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">During the Set Up Phase; choose a Troop Unit from your army that has been destroyed, redeploy them at half strength* within your Deployment Zone and more than 8” away from any enemy Unit. 
+
+
+*Half the models rounded up, no Attaches return with this Unit, but any equipment or weapons that this Unit started with will.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Re-Deploy" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="ee44-f8da-346c-6fec">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">2 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">At the end of the first Set Up Phase; choose one of your Units. Remove it from the battlefield and Deploy it again anywhere within your Deployment Zone.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Long-Range Artillery Bombardment" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="03cc-ea94-b004-30b3">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">4 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">During the Command Phase; Place one Blast 3 token anywhere on the Battlefield. After all other Units have Activated from your Army, the next time you would be eligible to activate a Unit you may select this token to make an attack using the weapon profile of the “Long-Range Artillery Profile”.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Air Strike" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="f496-68f9-ed43-6d30">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">4 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Whenever a Unit in your Army activates, you may have that Unit call in an airstrike as a difficult action. To do so, place three Blast 2 tokens anywhere on the Battlefield within Line Of Sight of that Unit, in a straight line, and each Token must be wholly within 5” of another blast token. Immediately perform attacks within range of those tokens with the “Air-Strike Profile*.”</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Hold the Line" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="6b6e-e000-fd98-bfba">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">2 Supply</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">When a Unit you control is selected as the Target of a Standard Melee Attack Action; before any Models are removed as a result of this attack they may participate in the Counter Strike Melee Attack. They are then removed as normal.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Well Informed" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="2ef6-9ac6-3e3c-33b2">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">1 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Reroll any one dice roll you make. It cannot be a dice that has already been re-rolled.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Well Stocked" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="db8c-b260-3f15-abb3">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">1 Supply</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Add +1 to any one dice roll you make. It cannot be a die that has already been increased by this ability.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Reallocation" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="beea-b3b0-7bd9-65d6">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">2 Supply or 2 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Spend 2 Supply or 2 Intel: Gain 1 Supply or Intel.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="By the Skin of your Teeth" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="e8a4-7a54-93f9-c7e7">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">1 Intel</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Select a Unit that has already activated and/or performed a reaction this round. This Unit may take a reaction as normal. A Unit that performs a reaction this way skips its activation in the next battle round.
+
+
+*This Unit is still considered towards your total activations left on the battlefield when determining priority.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b2c-00a9-f90f-6cea" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="56bd-18e3-04a1-3227" name="Steel Fortress" hidden="false">
@@ -1801,7 +1921,7 @@ Area, Light Terrain*, Rough 
       <description>All Troop Units in the selected Platoon increase their Armor Value by 2 if they are within 6” of a Vehicle Unit.</description>
     </rule>
     <rule id="9e55-f586-450d-8424" name="Rapid Fortification" hidden="false">
-      <description>When a Unit in the platoon builds a fortification that costs 1SP, you may build an additional 1SP fortification touching it for no additional Supply Cost. </description>
+      <description>When a Unit in the platoon builds a fortification that costs 1SP, you may build an additional 1SP fortification touching it for no additional Supply Cost.</description>
     </rule>
     <rule id="e24c-5c98-fc23-a3eb" name="Tank Hunters" hidden="false">
       <description>Whenever a Unit in this Platoon makes an attack against a Unit with the Vehicle Keyword, they may reroll any failed Armor checks once.</description>
@@ -1810,7 +1930,7 @@ Area, Light Terrain*, Rough 
       <description>This Model must be attached to a non-Command Unit that it shares a CORE Keyword with in this Platoon before the Game starts. After this Model is attached it must be designated as the Leader of the combined Unit. A Unit may not have more than one additional Model attached to it in this way.</description>
     </rule>
     <rule name="Phosphorous Shells" id="b64b-4ada-29c0-088b" hidden="false">
-      <description>After resolving any Attack Action with an Ordnance X weapon made by a Unit in this Platoon, replace the Blast Token with a Smoke Token. </description>
+      <description>After resolving any Attack Action with an Ordnance X weapon made by a Unit in this Platoon, replace the Blast Token with a Smoke Token.</description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
       <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit.</description>
@@ -1858,7 +1978,7 @@ Area, Light Terrain*, Rough 
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Move, Steady, Disengage</characteristic>
-        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Adjust Coordinates</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Adjust Coordinates, Detach</characteristic>
       </characteristics>
     </profile>
     <profile id="335b-34df-c974-9c3b" name="Engineer Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
@@ -1874,7 +1994,7 @@ Area, Light Terrain*, Rough 
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Overwatch</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Move, Steady, Disengage</characteristic>
-        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Detach</characteristic>
       </characteristics>
     </profile>
     <profile name="Command Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="237b-8d1e-014e-539d">
@@ -1986,6 +2106,16 @@ Area, Light Terrain*, Rough 
 
 Area, Heavy Terrain, Rough</characteristic>
         <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">5” x 3” x 2”</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Long-Range Artillery" typeId="Weapon" typeName="Weapon" hidden="false" id="018f-bc83-97b6-b713">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">-</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">8</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3, Bombard 3</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

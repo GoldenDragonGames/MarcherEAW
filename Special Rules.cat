@@ -26,7 +26,7 @@
       <description>Attacks made against this Unit lower their Damage profile by X to a minimum of 1.</description>
     </rule>
     <rule name="Burrowing" id="7566-ca13-0639-188c" hidden="false">
-      <description>Instead of deploying this Unit at the start of the game, you may declare that this model is in En Route. During any Setup Phase after the first Round, you may deploy this Unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
+      <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, you may deploy this Unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
     </rule>
     <rule name="Catastrophic Detonation" id="1e80-eb25-7926-0850" hidden="false">
       <description>When this Unit is destroyed, roll a D10, on a roll of 6+, perform an Attack Action (Profile:H5, AP5, D5) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
@@ -229,6 +229,19 @@ are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Battlefield Scanners" id="55ab-d297-8493-eecc" hidden="false">
       <description>When making an Attack Action this Unit ignores one level of Obscured.</description>
+    </rule>
+    <rule name="Gun Tractor" id="3420-b82e-13ac-47b2" hidden="false">
+      <description>When a Unit this being Towed by this Unit takes the Detach Action, that Unit may make a Free Dash Action.</description>
+    </rule>
+    <rule name="Amphibious" id="2dc5-c4d9-8aed-acf3" hidden="false">
+      <description>This Unit ignores the penalty for Water and Depths Terrain Features. </description>
+    </rule>
+    <rule name="Amphibious Assault" id="ad32-2660-48d5-ff7b" hidden="false">
+      <description>This Unit may be Deployed outside of your Deployment Zone on any Water Feature larger than it as long as it is more than 8” away from the Enemy Deployment Zone or any Enemy Unit.
+</description>
+    </rule>
+    <rule name="Submersible" id="7ae0-7f6c-c4aa-0009" hidden="false">
+      <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, you may deploy this Unit on any Water Feature or Depths Water Feature that is larger than it. If it is Deployed on a Depths Water Feature, it may be within 8&quot; of Enemy Units, otherwise, it must be deployed at least 8&quot; away from all Enemy Units.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -1283,6 +1296,42 @@ are in your army only one counter is ticked down at a time.</description>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="541b-4b9e-be07-b50e-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="541b-4b9e-be07-b50e-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Gun Tractor" hidden="false" id="8a8f-481f-009a-471c">
+      <infoLinks>
+        <infoLink name="Gun Tractor" id="b4dd-a3dc-6bcf-75e7" hidden="false" type="rule" targetId="3420-b82e-13ac-47b2"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f19-2afc-0f1d-5a40-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f19-2afc-0f1d-5a40-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Submersible" hidden="false" id="4393-7847-e162-0daf">
+      <infoLinks>
+        <infoLink name="Submersible" id="bf47-bae9-a336-ce79" hidden="false" type="rule" targetId="7ae0-7f6c-c4aa-0009"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da98-1aef-2503-f146-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da98-1aef-2503-f146-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Amphibious" hidden="false" id="5184-5ebc-7fff-d910">
+      <infoLinks>
+        <infoLink name="Amphibious" id="5248-1b47-4e31-e673" hidden="false" type="rule" targetId="2dc5-c4d9-8aed-acf3"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="498a-b983-9c5f-929a-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="498a-b983-9c5f-929a-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Amphibious Assault" hidden="false" id="01e7-a8e0-6ee0-d381">
+      <infoLinks>
+        <infoLink name="Amphibious Assault" id="3b51-22ea-9a9d-431d" hidden="false" type="rule" targetId="ad32-2660-48d5-ff7b"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a945-0024-51e8-a99b-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a945-0024-51e8-a99b-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
   </sharedSelectionEntries>

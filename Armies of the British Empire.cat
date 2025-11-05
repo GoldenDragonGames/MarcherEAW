@@ -2317,7 +2317,7 @@
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Squad Members" id="5f47-4adc-10d8-bbe8" hidden="false">
+            <selectionEntryGroup name="Section Members" id="5f47-4adc-10d8-bbe8" hidden="false">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="&quot;Little John&quot; Armoured Support Automaton" hidden="false" id="fe87-26f1-cd56-5ce1" sortIndex="2">
                   <profiles>
@@ -2881,7 +2881,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Squad Members" id="d997-0f03-aed1-b79a" hidden="false">
+            <selectionEntryGroup name="Section Members" id="d997-0f03-aed1-b79a" hidden="false">
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="GREMLIN Autonomous Sabotage Unit" hidden="false" id="d859-5633-df94-fce5">
                   <profiles>
@@ -3743,7 +3743,7 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Group" id="8735-4ff4-327e-93d8" hidden="false">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier" hidden="false" id="8708-e19e-541d-6010">
+                <selectionEntry type="model" import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier" hidden="false" id="8708-e19e-541d-6010">
                   <profiles>
                     <profile name="Mk. XI &quot;Kay&quot; Universal Carrier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f655-33f5-9098-9ab8">
                       <characteristics>
@@ -3993,6 +3993,111 @@
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64fc-e841-ff2e-e6ca-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64fc-e841-ff2e-e6ca-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor" hidden="false" id="2516-f214-2bc2-62e4">
+          <entryLinks>
+            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7ffb-8482-6522-8f8a" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Hitch" hidden="false" id="1eec-8759-5bed-4c1b" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
+            <entryLink import="true" name="Gun Tractor" hidden="false" id="af16-5a87-8146-143b" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
+            <entryLink import="true" name="Rapid Deployment" hidden="false" id="e2d1-1dc4-277d-1ac7" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
+          </entryLinks>
+          <profiles>
+            <profile name="Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c876-909a-0252-94df">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor" hidden="false" id="3940-9ba0-7317-7180">
+              <profiles>
+                <profile name="Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f2d8-594d-654c-c140">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                  </characteristics>
+                  <comment>Medium, Fast</comment>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon Options" id="ec80-a981-7f7b-72a7" hidden="false" defaultSelectionEntryId="7c72-5ad4-4325-c5fc">
+                  <entryLinks>
+                    <entryLink import="true" name="Bren LMG" hidden="false" id="9d7b-696f-a8ee-75de" type="selectionEntry" targetId="9138-1b74-f2f0-8736">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e60-60c5-57f7-dc9a" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Boys AT Rifle" hidden="false" id="0660-997e-1ece-4a3b" type="selectionEntry" targetId="7ca7-f823-b0ef-2183">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6b3-1bff-1911-c26d" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c0a9-dc63-ec1e-13eb" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e99-2855-a7a4-2dd8" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Post Mount" hidden="false" id="966b-d714-fa28-6e0d" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6044-2e23-7b98-14e8" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="83c4-2bff-c0af-ea4f" hidden="false" defaultSelectionEntryId="523c-561d-ea96-361e">
+                      <entryLinks>
+                        <entryLink import="true" name="Vickers HMG" hidden="false" id="7587-de62-81d8-486f" type="selectionEntry" targetId="79d1-dcd1-e90d-0dea">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a97-b56b-5d7f-3295" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Bren LMG" hidden="false" id="523c-561d-ea96-361e" type="selectionEntry" targetId="9138-1b74-f2f0-8736">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb83-d74f-2b82-0c20" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b228-8ea2-408b-77c8" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d2d-a5b5-372f-b7dc" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="39"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4403-5ebf-6012-9829" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bac3-0697-eae4-59f0" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cargo" hidden="false" id="3365-c15b-31ff-7719">
+              <entryLinks>
+                <entryLink import="true" name="Logistics" hidden="false" id="2a03-c263-d0df-681d" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
+                <entryLink import="true" name="Supply Gathering" hidden="false" id="f274-e0e4-a063-ceba" type="selectionEntry" targetId="d5d8-7605-d440-d507"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72ea-67fe-df31-b678" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -6463,6 +6568,21 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="de0d-e12c-a964-4e46" id="8155-53cd-8272-560d" primary="false" name="Vehicle"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor" hidden="false" id="0878-7784-405b-d643" type="selectionEntry" targetId="2516-f214-2bc2-62e4">
+      <categoryLinks>
+        <categoryLink targetId="d4be-5aad-8560-5720" id="f50e-a8b5-a7fa-dda0" primary="true" name="Transport"/>
+        <categoryLink targetId="7616-a9f8-6205-af0e" id="9a96-a884-2d4b-5bb5" primary="false" name="Tracked"/>
+        <categoryLink targetId="de0d-e12c-a964-4e46" id="6ec7-9353-7957-a04c" primary="false" name="Vehicle"/>
+        <categoryLink targetId="b100-ce4e-c964-af8d" id="4e22-ace5-4187-aa31" primary="false" name="BRE"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="c2bc-81f4-b62b-dc46" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedProfiles>
     <profile name="STEN Mk. II SMG" typeId="Weapon" typeName="Weapon" hidden="false" id="97c7-8f4b-15a6-b4e2">
@@ -7841,15 +7961,13 @@ Attacks made against friendly Units in your Army count as having one level of Ob
   </sharedRules>
   <rules>
     <rule name="G.R.A.I.L" id="7f42-fdfd-986e-fb59" hidden="true">
-      <description>During the first Command Phase, roll 5 dice, and then set them aside in a pool. These are your G.R.A.I.L dice.
+      <description>uring the first Command Phase, roll 5 dice, and then set them aside in a pool. Reroll any duplicates until all 5 are unique. These are your G.R.A.I.L dice.
 
 
 At any point during the game after you have rolled dice, a G.R.A.I.L die may be used to replace the result of one roll. (This is considered to be an unmodified roll.)
 
 
 You may not spend more than one G.R.A.I.L dice per roll or check. 
-
-
 
 
 You may not have more than 5 G.R.A.I.L dice at a time. If you would gain more than 5, replace one of the dice in your existing pool.

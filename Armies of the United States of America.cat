@@ -249,13 +249,20 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="0a09-fb97-d3af-91d8" name="M62 Burro Artillery Tractor" hidden="false" collective="false" import="true" targetId="9fe5-6f3e-c7f7-7cb2" type="selectionEntry">
+    <entryLink id="0a09-fb97-d3af-91d8" name="M62 Burro Artillery Tractor" hidden="true" collective="false" import="true" targetId="9fe5-6f3e-c7f7-7cb2" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="8679-d614-ae03-de2c" id="0827-e00d-733f-ffa0" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="d4d0-7c98-29e8-c0d2" primary="false" name="Tracked"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="3cb1-8135-1e2e-fb2b" primary="false" name="Vehicle"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="b790-90df-7552-a14c" primary="false" name="USA"/>
+        <categoryLink targetId="d4be-5aad-8560-5720" id="0451-d326-2678-c55c" primary="true" name="Transport"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="c2bc-81f4-b62b-dc46" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="5e12-4024-9907-333e" name="M30A3 Jackrabbit Light Tank" hidden="false" collective="false" import="true" targetId="67e3-d637-4136-e6de" type="selectionEntry">
       <categoryLinks>
@@ -541,6 +548,16 @@
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="34ba-1720-6fa5-fe76" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="7da2-822e-291f-eccc" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink import="true" name="C-47 Albatross Gunship" hidden="false" id="48e8-1459-75a7-4d74" type="selectionEntry" targetId="8667-f23a-81b9-fa69">
@@ -556,6 +573,16 @@
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="34ba-1720-6fa5-fe76" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="7da2-822e-291f-eccc" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -5424,129 +5451,6 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0840-a7cb-2ec1-b19e" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="M62 Burro Artillery Tractor" hidden="false" id="9fe5-6f3e-c7f7-7cb2" collective="false">
-          <profiles>
-            <profile name="M62 Burro Artillery Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8761-6747-1d25-4417">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M62 Burro Artillery Tractor</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Artillery, Vehicle, Tracked</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Vehicle Actions" id="dc04-ad33-b19a-7e91" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
-            <infoLink name="Cook Off" id="dcb0-5a9b-40fb-b6bb" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
-          </infoLinks>
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="M62 Burro Artillery Tractor" hidden="false" id="63f8-05cb-c17d-6fb7">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Crew Weapon" hidden="false" id="978c-1dbb-4902-82a9" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef91-8cb1-8997-9382" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d7e4-9215-8197-bfc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="f393-5172-da74-834d" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3bd7-5e58-2da3-14a1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b1b-26de-b344-83c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="0"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Pulpit Mount" hidden="false" id="73d3-ec1d-a296-c6e9">
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Options" id="3d23-8ba1-62eb-c7fe" hidden="false" defaultSelectionEntryId="ef21-5b9c-d793-1be0">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="cc89-43ad-67e2-bef1">
-                          <selectionEntryGroups>
-                            <selectionEntryGroup name="Weapon Option" id="bacd-02fa-a23e-7b5a" hidden="false" collective="false" import="true" defaultSelectionEntryId="19c0-8e5d-6a0b-6398">
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac55-3712-f02a-3d9e-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac55-3712-f02a-3d9e-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                              </constraints>
-                              <entryLinks>
-                                <entryLink import="true" name="M1931 Energy Machine Gun" hidden="false" id="19c0-8e5d-6a0b-6398" collective="false" targetId="a1be-a916-a94b-f4e5" type="selectionEntry">
-                                  <constraints>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5cd-9ab5-e105-12bd" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                                <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="f1fa-b0b8-7d42-b678" collective="false" targetId="59ef-e9be-bbab-1232" type="selectionEntry">
-                                  <constraints>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a898-ab90-2b6a-8de7" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntryGroup>
-                          </selectionEntryGroups>
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12cd-bd24-8e07-5c13" includeChildSelections="false"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink name="Pintle Mount" id="5fae-b4a8-25d5-dea6" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                          </infoLinks>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf17-7e00-71ed-c4f1-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf17-7e00-71ed-c4f1-max" includeChildSelections="false"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Satellite Uplink" hidden="false" id="a0c6-88ce-cdc4-7386" type="selectionEntry" targetId="ef21-5b9c-d793-1be0"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc77-f9e7-8d5f-9393-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc77-f9e7-8d5f-9393-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3076-5176-6211-194c-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3076-5176-6211-194c-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="M62 Burro Artillery Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d28c-abd0-f5d4-fe70">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="Munitions" typeId="Points" value="60"/>
-                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
-          </costs>
-          <rules>
-            <rule name="Fire Base Command" id="721b-5d27-2bd4-f752" hidden="false">
-              <description>This Unit ignores the requirements for Line of Sight and Range when performing the &quot;Adjust Coordinates&quot; action. This Unit may only move up to four Blast tokens when performing the “Adjust Coordinates” action.</description>
-            </rule>
-          </rules>
-          <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="baaa-11a6-6207-ed17" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Hitch" hidden="false" id="6e86-5ef1-5a4c-6469" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
-            <entryLink import="true" name="Forward Observer" hidden="false" id="90a0-c84e-9e15-0c8e" type="selectionEntry" targetId="f81a-d50a-6191-87ad"/>
-          </entryLinks>
-        </selectionEntry>
         <selectionEntry type="unit" import="true" name="M120 Quad Cannon" hidden="false" id="25e3-2077-7e04-5aae" collective="false">
           <profiles>
             <profile name="M120 Quad Cannon Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c7d4-0bc2-9a13-6de3">
@@ -7383,9 +7287,9 @@
             <entryLink import="true" name="Gun Shield" hidden="false" id="6ca2-f9cd-ac4a-8f60" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="unit" import="true" name="M133 Towed Anti-Tank Gun Carriage" hidden="false" id="e82a-f70c-a619-02ee">
+            <selectionEntry type="model" import="true" name="M133 Towed Anti-Tank Gun Carriage" hidden="false" id="e82a-f70c-a619-02ee">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Cannon Mount" hidden="false" id="ecb3-6611-2587-44d3">
+                <selectionEntry type="upgrade" import="true" name="Cannon Mount" hidden="false" id="ecb3-6611-2587-44d3" collective="true">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="b4d4-3336-808e-835d" hidden="false" collective="false" import="true" defaultSelectionEntryId="8bdd-d4e6-345c-799a">
                       <constraints>
@@ -7394,7 +7298,7 @@
                       </constraints>
                       <entryLinks>
                         <entryLink import="true" name="76mm High-Velocity Cannon" hidden="false" id="8bdd-d4e6-345c-799a" collective="false" targetId="c43f-fe61-341a-5fc7" type="selectionEntry"/>
-                        <entryLink import="true" name="M45 Energy AT-Cannon" hidden="false" id="30e7-4a27-8f09-2207" collective="false" targetId="73d2-f535-0613-fe24" type="selectionEntry"/>
+                        <entryLink import="true" name="M45 Energy AT-Cannon" hidden="false" id="30e7-4a27-8f09-2207" collective="true" targetId="73d2-f535-0613-fe24" type="selectionEntry"/>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -8447,7 +8351,7 @@
             <entryLink import="true" name="Transport 1" hidden="false" id="f295-d8d2-1abf-fb53" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="M50A1 Palomino Halftrack" hidden="false" id="7022-3bab-1cf6-d96f">
+            <selectionEntry type="model" import="true" name="M50A1 Palomino Halftrack" hidden="false" id="7022-3bab-1cf6-d96f">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Gun Mount" hidden="false" id="af6b-9e31-90a8-2459">
                   <selectionEntryGroups>
@@ -8808,6 +8712,132 @@
             <entryLink import="true" name="Not My Job" hidden="false" id="82cc-68f7-78bf-7fc4" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
             <entryLink import="true" name="Bailout" hidden="false" id="29de-9e3d-ce28-8827" type="selectionEntry" targetId="2cd2-087b-e9a1-6072"/>
             <entryLink import="true" name="Aerial Deployment" hidden="false" id="9ca2-0da2-9477-3d70" type="selectionEntry" targetId="4a83-5712-b9b5-9366"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="M62 Burro Gun Tractor" hidden="false" id="9fe5-6f3e-c7f7-7cb2" collective="false">
+          <profiles>
+            <profile name="M62 Burro Gun Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8761-6747-1d25-4417">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x M62 Burro Gun Tractor</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Vehicle Actions" id="dc04-ad33-b19a-7e91" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
+            <infoLink name="Cook Off" id="dcb0-5a9b-40fb-b6bb" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="M62 Burro Gun Tractor" hidden="false" id="63f8-05cb-c17d-6fb7">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Crew Weapon" hidden="false" id="978c-1dbb-4902-82a9" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef91-8cb1-8997-9382" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d7e4-9215-8197-bfc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="M1X1 Energy Carbine" hidden="false" id="f393-5172-da74-834d" collective="false" targetId="063d-f3d3-4147-868a" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3bd7-5e58-2da3-14a1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b1b-26de-b344-83c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="0"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Pulpit Mount" hidden="false" id="73d3-ec1d-a296-c6e9">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Options" id="3d23-8ba1-62eb-c7fe" hidden="false" defaultSelectionEntryId="ef21-5b9c-d793-1be0">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="cc89-43ad-67e2-bef1">
+                          <selectionEntryGroups>
+                            <selectionEntryGroup name="Weapon Option" id="bacd-02fa-a23e-7b5a" hidden="false" collective="false" import="true" defaultSelectionEntryId="19c0-8e5d-6a0b-6398">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac55-3712-f02a-3d9e-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac55-3712-f02a-3d9e-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                              </constraints>
+                              <entryLinks>
+                                <entryLink import="true" name="M1931 Energy Machine Gun" hidden="false" id="19c0-8e5d-6a0b-6398" collective="false" targetId="a1be-a916-a94b-f4e5" type="selectionEntry">
+                                  <constraints>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5cd-9ab5-e105-12bd" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                                <entryLink import="true" name="M2 Heavy Machine Gun" hidden="false" id="f1fa-b0b8-7d42-b678" collective="false" targetId="59ef-e9be-bbab-1232" type="selectionEntry">
+                                  <constraints>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a898-ab90-2b6a-8de7" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntryGroup>
+                          </selectionEntryGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12cd-bd24-8e07-5c13" includeChildSelections="false"/>
+                          </constraints>
+                          <infoLinks>
+                            <infoLink name="Pintle Mount" id="5fae-b4a8-25d5-dea6" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf17-7e00-71ed-c4f1-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf17-7e00-71ed-c4f1-max" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Satellite Uplink" hidden="false" id="a0c6-88ce-cdc4-7386" type="selectionEntry" targetId="ef21-5b9c-d793-1be0"/>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc77-f9e7-8d5f-9393-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc77-f9e7-8d5f-9393-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3076-5176-6211-194c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3076-5176-6211-194c-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="M62 Burro Gun Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d28c-abd0-f5d4-fe70">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
+                  </characteristics>
+                  <comment>Medium, Fast</comment>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="70"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <rules>
+            <rule name="Fire Base Command" id="721b-5d27-2bd4-f752" hidden="false">
+              <description>This Unit ignores the requirements for Line of Sight and Range when performing the &quot;Adjust Coordinates&quot; action. This Unit may only move up to four Blast tokens when performing the “Adjust Coordinates” action.</description>
+            </rule>
+          </rules>
+          <entryLinks>
+            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="baaa-11a6-6207-ed17" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Hitch" hidden="false" id="6e86-5ef1-5a4c-6469" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
+            <entryLink import="true" name="Forward Observer" hidden="false" id="90a0-c84e-9e15-0c8e" type="selectionEntry" targetId="f81a-d50a-6191-87ad"/>
+            <entryLink import="true" name="Gun Tractor" hidden="false" id="42a4-6e13-2ad1-692c" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
+            <entryLink import="true" name="Rapid Deployment" hidden="false" id="b2d9-4960-812b-cb22" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -9598,6 +9628,8 @@
             <entryLink import="true" name="Hitch" hidden="false" id="470e-e4c6-4db3-fd35" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Low Profile" hidden="false" id="e610-fe41-5d5d-98e2" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
             <entryLink import="true" name="Forward Observer" hidden="false" id="d7e2-eb66-389c-dbb3" type="selectionEntry" targetId="f81a-d50a-6191-87ad"/>
+            <entryLink import="true" name="Gun Tractor" hidden="false" id="e756-a810-c91c-9773" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
+            <entryLink import="true" name="Rapid Deployment" hidden="false" id="4555-ac75-268d-da93" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Combat Engineer Officer" hidden="false" id="1479-daaf-bd1a-467c" collective="false">
@@ -10414,6 +10446,8 @@
             <entryLink import="true" name="Transport 3" hidden="false" id="e02c-0e4d-ebde-589f" type="selectionEntry" targetId="c21a-a23a-7d6d-f1c9"/>
             <entryLink import="true" name="Bailout (Safe)" hidden="false" id="0557-eddc-5b15-867c" type="selectionEntry" targetId="e9de-35c8-4bd3-82e6"/>
             <entryLink import="true" name="Open Topped 3" hidden="false" id="a114-1504-cac3-8b47" type="selectionEntry" targetId="e18d-5058-92c9-3c50"/>
+            <entryLink import="true" name="Amphibious" hidden="false" id="cf42-491c-85a2-63e2" type="selectionEntry" targetId="5184-5ebc-7fff-d910"/>
+            <entryLink import="true" name="Amphibious Assault" hidden="false" id="628f-db1f-c06e-a60b" type="selectionEntry" targetId="01e7-a8e0-6ee0-d381"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="M39 Buffalo Landing Vehicle" hidden="false" id="b273-dbf9-868a-123a">
@@ -11590,7 +11624,7 @@ If you select a unit that already has Aerial Deployment, that Unit may be select
         <selectionEntry type="upgrade" import="true" name="US Marines 7th Regiment “Magnificent Seventh”" hidden="false" id="93d3-06cb-f994-f20e">
           <rules>
             <rule name="Snake Eaters" id="80e1-8fef-6b92-3916" hidden="false">
-              <description>Troops Units in this Army are not affected by Rough Terrain or by Water Terrain Features.
+              <description>Troops Units in this Army are not affected by Rough Terrain and are considered to have the Amphibious Special Rule.
 
 
 Troops Units in this Army gain 1 A.P. to their Attacks for each Level of Cover that applies to the Target.</description>
