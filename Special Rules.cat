@@ -17,7 +17,7 @@
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 3 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
     </rule>
     <rule name="Battlefield Preparation" id="df67-26f7-b945-7b74" hidden="false">
-      <description>At the beginning of the first Action Phase, this Unit may immediately take the Build or Destroy Action once.</description>
+      <description>At the beginning of the first Action Phase, this Unit may immediately take a free Build or Destroy Action.</description>
     </rule>
     <rule name="Big Game Hunter" id="7061-202c-dbbf-9c6e" hidden="false">
       <description>When making an Attack with this Unit against Enemy Units with the Vehicle Keyword, you may reroll failed Hits.</description>
@@ -79,9 +79,6 @@
     <rule name="Flexible Hero" id="efe9-c813-2eee-25dc" hidden="false">
       <description>This Unit may attach to a Unit in this Platoon as though it has the Designated Leader Special Rule, or be taken as a separate Unit.</description>
     </rule>
-    <rule name="Flying" id="0c92-2b75-4b21-de63" hidden="false">
-      <description>This Unit ignores all terrain. This Unit may not receive the benefit of Cover. This Unit may move through other Units. This Unit may not be engaged by other Units unless they also have the Flying keyword. Weapons with less than 12&quot; of Range cannot target this unit for an attack. All ranged attacks that target this Unit receive -1 to hit.</description>
-    </rule>
     <rule name="Forward Observer" id="06cc-f6e7-91a7-93c8" hidden="false">
       <description>This Unit gains &quot;Adjust Coordinates&quot; as a Standard Action. When it uses this Action it may select any Blast tokens within Line of Sight and 18&quot; of itself. Any Aim tokens this Unit has may be used by Friendly Siege Units.</description>
     </rule>
@@ -130,9 +127,6 @@
     <rule name="Mounted Attache" id="0172-64b2-5794-a915" hidden="false">
       <description>This Selection does not have a Model, it must Mount a Vehicle or Carriage Unit within its Platoon.</description>
     </rule>
-    <rule name="Not My Job" id="73e7-2d87-d2c8-d55d" hidden="false">
-      <description>This Unit may not take the Capture Action. This Unit may not have Attaches attached to it.</description>
-    </rule>
     <rule name="Officer X" id="6de5-545b-2ac4-744e" hidden="false">
       <description>This Unit may issue X Order(s) to Units within their Platoon or with the same CORE type that it is within 8&quot; of. When it issues an Order to a Unit, that Unit gains an Order Token. Units may not have more than one Order Token.
 
@@ -146,7 +140,7 @@ Order Token: This Unit gains one Action. This Token is removed when this Unit en
       <description>Units inside this Transport may be activated as normal and may take Ranged Attack Actions while Embarked. They may be selected as the Target of Ranged Attacks. Units inside this Transport receive X levels of Cover.</description>
     </rule>
     <rule name="Patch-Up" id="296f-6c65-a341-cfab" hidden="false">
-      <description>This Unit may perform the Patch Up Action as a Standard Action or as a Difficult Action. It may not do both in one Activation. As a Standard Action, select a friendly Non-Automaton Troop Unit within 3&quot; (including this unit). That Unit either restores all HP lost by one of its Models or revives a destroyed Model, returning it to the Unit with full HP. As a Difficult Action, you may restore HP to one Model and return one Model, or return two Models.</description>
+      <description>This Unit may perform the Patch Up Action as a Standard Action or as a Difficult Action. It may not do both in one Activation. As a Standard Action, select a friendly Non-Automaton Troop Unit within 3&quot; (including this unit). That Unit either restores all HP lost by one of its Models or revives a destroyed Model, returning it to the Unit with full HP. As a Difficult Action, you may restore HP to one Model and return one Model, or return two Models. You may not return Attache or Automaton models with this Rule.</description>
     </rule>
     <rule name="Personal Shield Generator" id="e8c1-89c2-d8a1-75c2" hidden="false">
       <description>Once per Round, as a Reaction, you may Activate this Unit&apos;s Shield Generator. If you do, gain the following effects:
@@ -218,14 +212,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Officer is considered to have all CORE types. If this Officer attaches to a Unit, it gains the CORE type of the Unit it attached to and loses all others.</description>
     </rule>
     <rule name="Dial In X" id="ff6d-dccf-e9fa-094b" hidden="false">
-      <description>This Unit begins the game with a Dial In Counter set to X. When this Counter reaches 0, this Unit loses Cumbersome. Each time a Unit activates, select one Unit with Dial In in your army, tick down one Counter. If a Unit performs 3 or more Actions or uses a Difficult Action, tick this Counter down an additional time. 
+      <description>This Unit begins each Round with a Dial In Counter set to X. When this Counter reaches 0, this Unit loses Cumbersome. Each time a Unit activates, select one Unit with Dial In in your army, tick down one Counter. If a Unit performs 3 or more Actions or uses a Difficult Action, tick this Counter down an additional time. 
 
 
 *This effect is not cumulative, regardless of how many Units with Dial In
 are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Jump-Packs" id="fd2f-2557-0580-c397" hidden="false">
-      <description>Once per Activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword. It may choose to remove this Keyword at any point. This Unit&apos;s Evasion Score is increased by 2.</description>
+      <description>This Unit&apos;s Evasion Score is increased by 2. Once per Activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword. It may choose to remove this Keyword at any point during its Activation. If this Unit engages a Unit without the Flying Keyword, it loses the Flying Keyword.</description>
     </rule>
     <rule name="Battlefield Scanners" id="55ab-d297-8493-eecc" hidden="false">
       <description>When making an Attack Action this Unit ignores one level of Obscured.</description>
@@ -247,6 +241,9 @@ are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Bailout (Aerial)" id="dfa3-76f0-a139-f719" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, if those Units do not have the Flying Keyword or the Jump Packs Special Rule, they are Destroyed. If they do, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+    </rule>
+    <rule name="Sealed" id="429e-1178-6b2a-e940" hidden="false">
+      <description>Attacks with the Gas! Special Rule may not target this Unit.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -721,21 +718,6 @@ are in your army only one counter is ticked down at a time.</description>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Not My Job" hidden="false" id="8a0d-4c81-fae8-ea39">
-      <infoLinks>
-        <infoLink name="Not My Job" id="Not My Job" hidden="false" type="rule" targetId="73e7-2d87-d2c8-d55d"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="-15"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Officer 3" hidden="false" id="a898-5898-e382-9e23">
       <infoLinks>
         <infoLink name="Officer X" id="2360-f0d4-5ea3-ef98" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
@@ -776,7 +758,7 @@ are in your army only one counter is ticked down at a time.</description>
         <infoLink name="Open Topped X" id="Open Topped " hidden="false" type="rule" targetId="7608-aac0-48a4-2e10">
           <modifiers>
             <modifier type="replace" value="1" field="name" arg="X"/>
-            <modifier type="replace" value="3" field="description" arg="X"/>
+            <modifier type="replace" value="1" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1250,7 +1232,7 @@ are in your army only one counter is ticked down at a time.</description>
         <infoLink name="Open Topped X" id="fd88-1521-004e-3d85" hidden="false" type="rule" targetId="7608-aac0-48a4-2e10">
           <modifiers>
             <modifier type="replace" value="2" field="name" arg="X"/>
-            <modifier type="replace" value="3" field="description" arg="X"/>
+            <modifier type="replace" value="2" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1355,6 +1337,15 @@ are in your army only one counter is ticked down at a time.</description>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5ab-a277-28c8-3d42-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5ab-a277-28c8-3d42-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sealed" hidden="false" id="e0c5-8061-435d-80b1">
+      <infoLinks>
+        <infoLink name="Sealed" id="82da-5b81-056a-a0a0" hidden="false" type="rule" targetId="429e-1178-6b2a-e940"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6d0-850a-4b86-d773-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6d0-850a-4b86-d773-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
   </sharedSelectionEntries>

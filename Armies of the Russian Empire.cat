@@ -876,6 +876,18 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="1.8tsk Beam Caster" hidden="false" id="c32d-482d-3fc5-7403">
+      <infoLinks>
+        <infoLink name="Ablation Beam" id="bc93-39f3-4c00-7972" hidden="false" type="rule" targetId="a397-8716-ab3d-2773"/>
+        <infoLink name="1.8tsk Beam Caster" id="d098-b9c8-a4c7-079e" hidden="false" type="profile" targetId="4710-8ce7-7ea9-0d47"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="20"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="2.5cm Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="c7dc-5d08-9dc2-07bc">
@@ -1418,6 +1430,16 @@
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
       </characteristics>
     </profile>
+    <profile name="1.8tsk Beam Caster" typeId="Weapon" typeName="Weapon" hidden="false" id="4710-8ce7-7ea9-0d47">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ablation Beam</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Beam</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <entryLinks>
     <entryLink import="true" name="Guards Rifles Squad" hidden="false" id="ff45-0e43-0638-fd49" type="selectionEntry" targetId="b18e-b628-8989-5914">
@@ -1674,7 +1696,6 @@
     <entryLink import="true" name="Snowbringer Starets Sleigh" hidden="true" id="bfc0-87a4-9c5b-9b15" type="selectionEntry" targetId="ba46-99fa-4562-f72a">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="a059-33d9-373f-7073" primary="true" name="Command"/>
-        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="0177-ccbd-78f4-c81a" primary="false" name="Hero"/>
         <categoryLink targetId="71cc-1c64-2438-4030" id="67f9-db99-bd59-afab" primary="false" name="Cavalry"/>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="ce4e-808d-5fd2-fdd6" primary="false" name="RUS"/>
         <categoryLink targetId="6cee-690d-b6de-aa15" id="e361-ffe1-84d1-a7aa" primary="false" name="Attache"/>
@@ -1851,7 +1872,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="BTR- 39 Armored Recovery Vehicle" hidden="false" id="f99e-f9c3-8412-0161" type="selectionEntry" targetId="03dd-ca8b-8772-6d60">
+    <entryLink import="true" name="BREM-39 Armored Recovery Vehicle" hidden="false" id="f99e-f9c3-8412-0161" type="selectionEntry" targetId="03dd-ca8b-8772-6d60">
       <categoryLinks>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="d738-0c74-967e-7ed8" primary="true" name="CORE Mechanized"/>
         <categoryLink targetId="8136-fed2-db8d-c7a0" id="c7b7-61fd-11fb-2a15" primary="false" name="AUX Armor"/>
@@ -2058,47 +2079,6 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Tank Ace" hidden="false" id="3097-daa3-13e7-292b" type="selectionEntry" targetId="2f94-28e1-bf3c-92e8">
-      <categoryLinks>
-        <categoryLink name="Attache" hidden="false" id="4c85-c2ad-f8c2-3ed5" targetId="6cee-690d-b6de-aa15" primary="false"/>
-        <categoryLink name="SPC Armor" hidden="false" id="979f-1398-8c4d-cf13" targetId="c650-aa93-b1ce-0970" primary="true"/>
-        <categoryLink name="SPC Support" hidden="false" id="6866-2bd5-670c-7483" targetId="869c-51f1-d04f-a8ce" primary="false"/>
-        <categoryLink targetId="51a0-4deb-b01b-931e" id="6aed-5f66-e44c-f0aa" primary="false" name="RUS"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Mechanic Element" hidden="false" id="c7b9-d017-7cce-6cf6" type="selectionEntry" targetId="794d-433e-dbfe-1854">
-      <categoryLinks>
-        <categoryLink name="SPC Armor" hidden="false" id="d890-08a3-c37b-3029" targetId="c650-aa93-b1ce-0970" primary="true"/>
-        <categoryLink name="SPC Mechanized" hidden="false" id="51a6-7802-3a52-6a89" targetId="cf6f-f672-129a-1bfb" primary="false"/>
-        <categoryLink name="SPC Recon" hidden="false" id="3f37-456a-2022-5dd3" targetId="893b-458b-4e03-6e5e" primary="false"/>
-        <categoryLink name="Attache" hidden="false" id="f1d2-807a-3f38-36c4" targetId="6cee-690d-b6de-aa15" primary="false"/>
-        <categoryLink targetId="51a0-4deb-b01b-931e" id="7b5a-00d2-ef00-050f" primary="false" name="RUS"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set-primary" value="893b-458b-4e03-6e5e" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
     <entryLink import="true" name="Flagbearer with the Tsar&apos;s Standard" hidden="false" id="050e-e981-061c-87f2" type="selectionEntry" targetId="ea9b-94d0-0e93-add3">
       <categoryLinks>
         <categoryLink targetId="6cee-690d-b6de-aa15" id="22a8-1c20-6d27-2536" primary="false" name="Attache"/>
@@ -2126,21 +2106,6 @@
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Rangefinder Element" hidden="false" id="0645-3e62-1a58-89db" type="selectionEntry" targetId="fb7e-eccf-7d87-bf33">
-      <categoryLinks>
-        <categoryLink name="SPC Artillery" hidden="false" id="b51c-1d53-1343-bf17" targetId="adc7-9c83-fa3a-e7da" primary="true"/>
-        <categoryLink name="SPC Support" hidden="false" id="d279-2c94-d48b-9bcf" targetId="869c-51f1-d04f-a8ce" primary="false"/>
-        <categoryLink name="Attache" hidden="false" id="391a-80e8-b415-0008" targetId="6cee-690d-b6de-aa15" primary="false"/>
-        <categoryLink targetId="51a0-4deb-b01b-931e" id="5f77-1881-fc47-dea6" primary="false" name="RUS"/>
-      </categoryLinks>
-      <modifiers>
         <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
@@ -2348,6 +2313,43 @@
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="c2bc-81f4-b62b-dc46" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="T-30 &quot;St. Dmitry&quot; Assault Support Tank" hidden="false" id="6d26-3489-f7ec-df26" type="selectionEntry" targetId="3653-a9c5-a0dc-c4b7">
+      <categoryLinks>
+        <categoryLink name="RUS" hidden="false" id="b9d8-82f5-1694-b449" targetId="51a0-4deb-b01b-931e" primary="false"/>
+        <categoryLink name="Vehicle" hidden="false" id="f32a-117f-742e-17a2" targetId="de0d-e12c-a964-4e46" primary="false"/>
+        <categoryLink name="Tracked" hidden="false" id="c3b8-0dd1-0889-8de0" targetId="7616-a9f8-6205-af0e" primary="false"/>
+        <categoryLink targetId="8679-d614-ae03-de2c" id="280d-00cc-a13c-09b1" primary="true" name="CORE Artillery"/>
+        <categoryLink targetId="8136-fed2-db8d-c7a0" id="5b20-064a-a858-cbd3" primary="false" name="AUX Armor"/>
+        <categoryLink targetId="6458-4093-473e-e12f" id="3309-3458-aef0-713a" primary="false" name="Siege"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Guards Heavy Weapon Element" hidden="false" id="eba8-cd07-d7f1-273b" type="selectionEntry" targetId="2e08-766d-2f05-70a7">
+      <categoryLinks>
+        <categoryLink name="Attache" hidden="false" id="a24b-98ce-ac15-eb67" targetId="6cee-690d-b6de-aa15" primary="false"/>
+        <categoryLink name="SPC Infantry" hidden="false" id="6dc7-ecc1-e505-1840" targetId="eae9-4e17-22cb-4491" primary="true"/>
+        <categoryLink name="SPC Support" hidden="false" id="5b8a-1074-9cfb-358c" targetId="869c-51f1-d04f-a8ce" primary="false"/>
+        <categoryLink name="SPC Mechanized" hidden="false" id="3d43-f855-8f2c-1a2f" targetId="cf6f-f672-129a-1bfb" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2563,11 +2565,6 @@ This Unit may not take Upgrades.</description>
                         <entryLink import="true" name="Gsh. 40 Rotary Cannon" hidden="false" id="cfdc-11ab-a828-7d2d" type="selectionEntry" targetId="fa52-4313-f873-db32">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1161-f4e3-70dd-7a2f" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="15.2cm Howitzer" hidden="false" id="e4e0-fee1-76d3-829c" type="selectionEntry" targetId="b233-d26f-53de-0310">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fae-2cac-d152-d23e" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                         <entryLink import="true" name="9cm High-Velocity Cannon" hidden="false" id="8c0c-89eb-76ef-7add" type="selectionEntry" targetId="f1ae-d121-e429-5ce6">
@@ -3173,7 +3170,7 @@ This Unit may not take Upgrades.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Carriage Actions" id="b0f9-266d-c5e0-9161" hidden="false" type="profile" targetId="1761-68e7-b0e6-e086"/>
+            <infoLink name="Siege Carriage Actions" id="b0f9-266d-c5e0-9161" hidden="false" type="profile" targetId="8aaf-072f-5000-d2b9"/>
             <infoLink name="Pack Gun" id="c868-b31a-274e-e7de" hidden="false" type="rule" targetId="9fea-0d08-bc4c-84f5"/>
             <infoLink name="Dial In X" id="8744-ad79-cf00-42c2" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
               <modifiers>
@@ -3200,6 +3197,165 @@ This Unit may not take Upgrades.</description>
               </modifiers>
             </infoLink>
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="T-30 &quot;St. Dmitry&quot; Assault Support Tank" hidden="false" id="3653-a9c5-a0dc-c4b7" collective="false">
+          <profiles>
+            <profile name="T-30 &quot;St. Dmitry&quot; Assault Support Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dcc8-60e3-79df-81ee">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x T-30 &quot;St. Dmitry&quot; Assault Support Tank</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Siege Vehicle Actions" id="6105-1ce2-06d9-ea51" hidden="false" targetId="ad55-69e8-9339-6df7" type="profile"/>
+            <infoLink name="Cook Off" id="db5a-3a63-325b-5684" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
+            <infoLink name="Cumbersome" id="a6c6-b7e0-ecdb-e6ac" hidden="false" type="rule" targetId="a105-2c5d-bb1d-e679"/>
+            <infoLink name="Dial In X" id="59ea-d662-8955-8f4c" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+              <modifiers>
+                <modifier type="replace" value="6" field="name" arg="X"/>
+                <modifier type="replace" value="6" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="T-30 &quot;St. Dmitry&quot; Assault Support Tank" hidden="false" id="3c30-9e38-4d5a-6a44">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bow Turret" hidden="false" id="35a6-30dc-88bb-5e2a">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="3fa9-9255-e07a-fba2" hidden="false" collective="false" import="true" defaultSelectionEntryId="19f4-57ac-d741-d916">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b42b-1fe8-6696-6abc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb94-791e-0273-7c1b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="20-K Light Energy Cannon" hidden="false" id="b780-bfee-6193-c0a9" collective="false" targetId="c94d-1347-eb89-9a19" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5330-8467-7c8d-284f" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Maxim Machine Gun" hidden="false" id="570e-efdf-9023-8db5" collective="false" targetId="b042-b961-5bc4-53d3" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8837-e1cf-1fb0-467c" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="AG-2 Automatic Grenade Launcher" hidden="false" id="9569-7a97-a06d-cba0" collective="false" targetId="af14-f001-771c-d366" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc52-5014-e0ab-c1e7" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="KS-28 Medium Flamethrower" hidden="false" id="7f8f-ee96-4ea0-5fe7" collective="false" targetId="d22d-0948-85dc-c3f7" type="selectionEntry">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a6d-da95-abdd-b4ed" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b13-7db1-5cfe-d82c" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb2e-c294-8c48-19fa" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Turret" hidden="false" id="a4f1-7653-b752-dfc5">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Main Cannon" id="9288-12b0-c768-271d" hidden="false" collective="false" import="true" defaultSelectionEntryId="8823-c896-a18e-bb32">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f80-5f62-8dfe-7aec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f14-7ef7-d56a-ccc3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="15.2cm Howitzer" hidden="false" id="010f-8853-5cfb-22c0" type="selectionEntry" targetId="b233-d26f-53de-0310">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eeb3-df4b-d10c-188b" includeChildSelections="false"/>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1cf1-17ea-88fb-4196" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Rear Turret Mount" hidden="false" id="544b-ddfa-bb79-b16f" collective="false">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ecdd-a900-369d-ea34" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ecfc-7f69-85c3-40cb" includeChildSelections="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="0"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                      </costs>
+                      <entryLinks>
+                        <entryLink import="true" name="DP-28 Light Machine Gun" hidden="false" id="36e3-cfc4-ee27-89df" type="selectionEntry" targetId="0c5b-ce5c-b57f-78d4">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc40-2538-31b7-52d1" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a91-8759-f20d-6cef" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <infoLinks>
+                        <infoLink name="Rear Turret Mount" id="daa9-8d4e-e416-1c23" hidden="false" type="rule" targetId="aba1-049d-c59a-7c9e"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Coaxial Mount" hidden="false" id="c212-2f52-1d03-1777">
+                      <entryLinks>
+                        <entryLink import="true" name="DP-28 Light Machine Gun" hidden="false" id="db92-a233-d53a-daf2" type="selectionEntry" targetId="0c5b-ce5c-b57f-78d4">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a49-01db-f45d-d456" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1876-38ca-91a5-e2ca" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f38-88c0-6996-7fbb" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a99e-d657-51ce-255b" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Coaxial Mount" id="9c66-96c1-9632-9345" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="317b-ff91-cd04-15eb" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="09eb-2160-a257-c6da" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Pintle Mount" hidden="false" id="3a7d-3c2f-683f-9237" type="selectionEntry" targetId="3a03-4678-5dfa-9ed2"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <profiles>
+                <profile name="T-30 &quot;St. Dmitry&quot; Assault Support Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6034-b05c-d8e6-e365">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">15</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6458-a4a1-1d2d-abc3" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6605-b08a-ac51-1931" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="137"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="762d-b1bd-d943-6403" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3290,6 +3446,13 @@ This Unit may not take Upgrades.</description>
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mounted Officer" hidden="true" id="079e-275a-b13b-fbe0">
           <infoLinks>
@@ -3308,6 +3471,13 @@ This Unit may not take Upgrades.</description>
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Mounted in a Vehicle or Carriage Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Snowbringer Starets Sleigh" hidden="false" id="ba46-99fa-4562-f72a">
           <profiles>
@@ -3457,6 +3627,13 @@ This Unit may not take Upgrades.</description>
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="94c7-5fdf-b16b-20e2" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Assault Engineer-Sapper Officer" hidden="true" id="ec9d-a2c2-8070-c527" collective="false">
           <profiles>
@@ -3553,6 +3730,13 @@ This Unit may not take Upgrades.</description>
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Cossack Hetman" hidden="true" id="c3ed-9d4b-d0fd-9d5f" collective="false">
           <profiles>
@@ -3633,6 +3817,13 @@ This Unit may not take Upgrades.</description>
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Streltsy Sotnik" hidden="false" id="d64f-bb9d-977e-1e7a">
           <entryLinks>
@@ -3737,6 +3928,13 @@ This Unit may not take Upgrades.</description>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="BA-36 Armored Command Car" hidden="false" id="0ea0-df92-fd1a-52d6">
           <entryLinks>
@@ -4578,7 +4776,7 @@ This Unit may not take Upgrades.</description>
             <cost name="Munitions" typeId="Points" value="10"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <profiles>
             <profile name="Oprichniki Manhunters" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ac08-4e19-fac8-1a88">
@@ -5315,7 +5513,7 @@ This Unit may not take Upgrades.</description>
               <description>If this Unit has not taken the Move Action this Activation, they may reroll failed Hits.</description>
             </rule>
             <rule name="Technik Arms" id="a987-c29b-18a1-0deb" hidden="false">
-              <description>This Unit may reroll failed Armor Checks made during Melee Attacks. If it does, gain a Suppression Token.</description>
+              <description>This Unit may reroll failed Armor Checks made during Melee Attacks. If it does, gain a Concussion Token.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -5674,44 +5872,6 @@ This Unit may not take Upgrades.</description>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Hull Gun" hidden="false" id="fcf8-0ce7-b554-f40a">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="96ee-47e4-83fa-1246" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abe1-fa6c-7906-69a7" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Options" id="e4e7-78c1-403a-890a" hidden="false" defaultSelectionEntryId="8378-4e87-9c1d-61bf">
-                      <entryLinks>
-                        <entryLink import="true" name="20-K Light Energy Cannon" hidden="false" id="964f-9ca2-d993-ffee" type="selectionEntry" targetId="c94d-1347-eb89-9a19">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d76a-0664-9747-1ac9" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="Maxim Machine Gun" hidden="false" id="8378-4e87-9c1d-61bf" type="selectionEntry" targetId="b042-b961-5bc4-53d3">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0398-5de7-efbd-a5db" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="KS-28 Medium Flamethrower" hidden="false" id="83f1-e302-3ee2-7fcc" type="selectionEntry" targetId="d22d-0948-85dc-c3f7">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ec2-be6a-379d-0918" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="AG-2 Automatic Grenade Launcher" hidden="false" id="11a0-b568-cabe-23d4" type="selectionEntry" targetId="af14-f001-771c-d366">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="04ad-9dff-d02e-84f3" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a248-914c-fe9b-5230" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="93da-d50d-81f5-40a5" includeChildSelections="false"/>
-                      </constraints>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                </selectionEntry>
-              </selectionEntries>
               <entryLinks>
                 <entryLink import="true" name="KS-7 Heavy Flamethrower" hidden="false" id="be6b-79f5-c148-d693" type="selectionEntry" targetId="02f7-b6b6-2c83-2ca0">
                   <constraints>
@@ -5871,6 +6031,11 @@ This Unit may not take Upgrades.</description>
                     <entryLink import="true" name="AG-2 Automatic Grenade Launcher" hidden="false" id="d019-9bf2-cb7d-22da" type="selectionEntry" targetId="af14-f001-771c-d366">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c125-304f-3179-e848" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="1.8tsk Beam Caster" hidden="false" id="e598-4f4d-888d-16de" type="selectionEntry" targetId="c32d-482d-3fc5-7403">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbba-1f45-179b-851d" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -6455,6 +6620,23 @@ This Unit may not take Upgrades.</description>
                         <infoLink name="Coaxial Mount" id="499a-731c-d775-4510" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
                       </infoLinks>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Rear Turret Mount" hidden="false" id="a045-b08d-f4dc-e695">
+                      <entryLinks>
+                        <entryLink import="true" name="DP-28 Light Machine Gun" hidden="false" id="b3a2-f874-d6b4-5638" type="selectionEntry" targetId="0c5b-ce5c-b57f-78d4">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e03-6df3-1165-a40b" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a15-7bca-4cd7-97f9" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2776-8b49-d7fc-059b" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67e1-c55b-db9b-43be" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Coaxial Mount" id="8329-b4cc-c792-a2ff" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
+                      </infoLinks>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
               </selectionEntries>
@@ -6486,16 +6668,16 @@ This Unit may not take Upgrades.</description>
             <entryLink import="true" name="Transport 2" hidden="false" id="774a-e92e-9561-6e04" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="BTR- 39 Armored Recovery Vehicle" hidden="false" id="03dd-ca8b-8772-6d60">
+        <selectionEntry type="unit" import="true" name="BREM-39 Armored Recovery Vehicle" hidden="false" id="03dd-ca8b-8772-6d60">
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <profiles>
-            <profile name="BTR- 39 Armored Recovery Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="45dc-be86-f92a-d53a">
+            <profile name="BREM-39 Armored Recovery Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="45dc-be86-f92a-d53a">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BTR- 39 Armored Recovery Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BREM-39 Armored Recovery Vehicle</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, Transport, Vehicle, Tracked</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
@@ -6503,13 +6685,13 @@ This Unit may not take Upgrades.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Troop Actions" id="6359-55b3-01df-d445" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="Engineer Vehicle Actions" id="6359-55b3-01df-d445" hidden="false" type="profile" targetId="ba32-3e2e-765c-654b"/>
             <infoLink name="Prototype" id="1dae-2516-d6b2-6977" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="BTR- 39 Armored Recovery Vehicle" hidden="false" id="bace-53fa-c1ae-3d0e">
+            <selectionEntry type="model" import="true" name="BREM-39 Armored Recovery Vehicle" hidden="false" id="bace-53fa-c1ae-3d0e">
               <profiles>
-                <profile name="BTR- 39 Armored Recovery Vehicle" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1c74-7eeb-9afe-f720">
+                <profile name="BREM-39 Armored Recovery Vehicle" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1c74-7eeb-9afe-f720">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
@@ -7808,14 +7990,25 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
     </selectionEntryGroup>
     <selectionEntryGroup name="Army Specializations" id="470c-9b95-d455-c173" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="2nd Guard Corps 43rd Division (Regency)" hidden="false" id="02a1-f184-a1c6-e862">
+        <selectionEntry type="upgrade" import="true" name="2nd Guard Corps 43rd Division (Regency)" hidden="false" id="02a1-f184-a1c6-e862" sortIndex="1">
           <rules>
             <rule name="Deep Battle" id="bd78-5fe5-3166-eaf9" hidden="false">
-              <description>Troop Units and those with the RUS Keyword may embark in Non-Transport Vehicle Units with the Tracked keyword as if they have “Transport 1”. Treat this Transport as if it had the “Open Top 1” keyword. If the Vehicle the Units are embarked on is destroyed, use the “Dangerous Bailout” rule to see which Embarked Units survive.</description>
+              <description>Troop Units with the RUS Keyword may embark in Non-Transport Vehicle Units with the Tracked keyword as if they have “Transport 1&quot; and &quot;Open Topped 1&quot;. If a Vehicle with Units Embarked in this way is destroyed, use the “Dangerous Bailout” rule to see which Embarked Models survive.</description>
+            </rule>
+            <rule name="Belaya Gvardiya" id="0882-8a95-69d3-2493" hidden="false">
+              <description>Vehicles with Troop Units embarked within them may take the Capture Action as a Free Action.</description>
             </rule>
           </rules>
+          <profiles>
+            <profile name="Forwards for Mother Russia!" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="2f3b-2682-2c11-3836">
+              <characteristics>
+                <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">2 SP</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Anytime a Friendly Vehicle with a Troop Unit Embarked within it completes its activation; you may select the Troop Unit within it to immediately activate.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="3rd Caucasus Cossack Division (Mikhailovich)" hidden="false" id="95a0-858f-8ee0-973b">
+        <selectionEntry type="upgrade" import="true" name="3rd Caucasus Cossack Division (Mikhailovich)" hidden="false" id="95a0-858f-8ee0-973b" sortIndex="3">
           <rules>
             <rule name="Zaporozhian Cossacks" id="1c2a-8e8a-1467-cb17" hidden="false">
               <description>CORE Recon Units in your army get +1 to hit for each time they have moved this round. 
@@ -7830,8 +8023,15 @@ Cossack Units in your army reroll failed Armor Penetration Checks</description>
 CORE Recon Units with the Vehicle keyword gain an aim token whenever they end a movement within 6” of a Cossack Unit.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="add" value="This Specialization requires at least one Recon Platoons" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="forces" scope="roster" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Alaskan Defense Corps 17th Division " hidden="false" id="289f-7e3d-d55d-8fdd">
+        <selectionEntry type="upgrade" import="true" name="Alaskan Defense Corps 17th Division " hidden="false" id="289f-7e3d-d55d-8fdd" sortIndex="2">
           <rules>
             <rule name="Scorched Earth" id="d124-c694-5d7a-b42f" hidden="false">
               <description>At the beginning of each Command Phase, starting on round 2, you may spend a Victory Point for one of the following effects (these remain in effect for the rest of the game). Each effect can only be gained once per game. At the end of the game, in the event of a tie, you win. 
@@ -7850,7 +8050,7 @@ One additional order for all of your Command Units.</description>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="194th Siberian Rifle Division (Novaya Zemlya)" hidden="false" id="d8a4-2c4f-d3d4-9db4">
+        <selectionEntry type="upgrade" import="true" name="194th Siberian Rifle Division (Novaya Zemlya)" hidden="false" id="d8a4-2c4f-d3d4-9db4" sortIndex="4">
           <rules>
             <rule name="Marena’s Kiss" id="5451-6766-1124-6df1" hidden="false">
               <description>The Category of the Blizzard from the General Winter National Ideal may be increased any number of times each round.</description>
@@ -7860,7 +8060,7 @@ One additional order for all of your Command Units.</description>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bogatyr Security Group (Ohkotsk Techno-Union)" hidden="false" id="2980-c3cf-0984-b120">
+        <selectionEntry type="upgrade" import="true" name="Bogatyr Security Group (Ohkotsk Techno-Union)" hidden="false" id="2980-c3cf-0984-b120" sortIndex="5">
           <rules>
             <rule name="Knives in the Dark" id="113f-7c22-007c-3db7" hidden="false">
               <description>Corporate Officers and Mercenary Units in your army gain Intel Gathering. Additionally, you may spend Intel points instead of Supply points for the purposes of the Mercenary Units Private Military Contractors Ability.</description>
@@ -7870,7 +8070,7 @@ One additional order for all of your Command Units.</description>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="12th Ural Motor-Rifle Division (Nastyeviks)" hidden="false" id="2ffa-b444-eb67-3c9e">
+        <selectionEntry type="upgrade" import="true" name="12th Ural Motor-Rifle Division (Nastyeviks)" hidden="false" id="2ffa-b444-eb67-3c9e" sortIndex="6">
           <rules>
             <rule name="Warriors of St. Mikhail" id="527c-1206-0d7a-6218" hidden="false">
               <description>At the beginning of each Round, for each Objective Marker that you control, choose one of the following bonuses, it is applied until the end of the round:
@@ -7894,8 +8094,29 @@ St. Barbara: When a Unit makes Attack Actions at half-range, it gains the Close 
 St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an enemy Unit rather than away from it.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="add" value="This Specialization requires at least two Pravoslavny
+Kapellans, two Snowbringer Starets Sleighs, or one of each." field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="bd39-4ffb-780b-8748" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="0041-e696-3d23-be25" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="bd39-4ffb-780b-8748" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="0041-e696-3d23-be25" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="1st Kheshig Mounted Guard Division (New Khanate)" hidden="false" id="1b2e-9043-fac2-d6bc">
+        <selectionEntry type="upgrade" import="true" name="1st Kheshig Mounted Guard Division (New Khanate)" hidden="false" id="1b2e-9043-fac2-d6bc" sortIndex="7">
           <rules>
             <rule name="Parthian Shot" id="9b47-c17b-e2a3-7197" hidden="false">
               <description>Units in this army may make a Free Ranged Attack Action after performing a Disengagement Action.</description>
@@ -7904,6 +8125,25 @@ St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an ene
               <description>For every 5 models that are Engaged with the same enemy Unit, all Melee weapon profiles increase their AP by 1, to a maximum of 3.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="add" value="This Specialization requires at least two Cossack Cavalry units. Field
+Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="f2bc-a75e-56aa-bfb9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="atLeast" value="1" scope="6ea8-04f4-b21b-7fcf" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c3ed-9d4b-d0fd-9d5f" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -7965,72 +8205,6 @@ St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an ene
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="3c30-1390-c136-2742" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tank Ace" hidden="false" id="2f94-28e1-bf3c-92e8">
-          <profiles>
-            <profile name="Tank Ace" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="840f-4bb7-4cb1-a7c4">
-              <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Armor, (SPC) Support, Attache (Vehicle)</characteristic>
-                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
-                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Tank Ace" id="28e6-c9e3-446e-9711" hidden="false">
-              <description>Once per Game, when this Unit destroys a CORE Armor Unit, gain a Victory Point. You may not take more than one Tank Ace in your Army.</description>
-            </rule>
-          </rules>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac7f-bb87-e90e-f02c" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="25"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mechanic Element" hidden="false" id="794d-433e-dbfe-1854">
-          <profiles>
-            <profile name="Mechanic Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="3895-9cda-90c5-625c">
-              <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Armor, (SPC) Mechanized, (SPC) Recon, Attache (Vehicle)</characteristic>
-                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
-                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Mechanics" id="651b-c923-46df-01ac" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Mechanic" hidden="false" id="5885-1b45-603d-6b03">
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="25"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <rules>
-                    <rule name="Onboard Mechanic" id="c2d2-90a5-d0f8-f05d" hidden="false">
-                      <description>As a Free Action, this Unit may Repair. If it does, recover 3 HP.</description>
-                    </rule>
-                  </rules>
-                  <constraints>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="5aa1-0d05-01bc-1077" includeChildSelections="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7fc8-4fd6-6ebb-858b" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f3e7-e5c5-33a7-84e5" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f11f-5204-35ca-189a" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="cf4e-b25c-8642-481e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Flagbearer with the Tsar&apos;s Standard" hidden="false" id="ea9b-94d0-0e93-add3">
           <entryLinks>
@@ -8324,47 +8498,6 @@ St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an ene
             <entryLink import="true" name="Specialist Command" hidden="false" id="8dfe-91ce-c967-7984" type="selectionEntry" targetId="e517-0471-12d3-3343"/>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Rangefinder Element" hidden="false" id="fb7e-eccf-7d87-bf33">
-          <profiles>
-            <profile name="Rangefinder Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="e02d-5bd0-24a3-8e05">
-              <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (SPC) Artillery, (SPC) Support, Attache (Carriage)</characteristic>
-                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
-                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Elements" id="35da-4015-6b6c-ac41" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Rangefinder" hidden="false" id="ac72-6907-14b1-f1df">
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="25"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <rules>
-                    <rule name="Rangefinder" id="cd69-3560-2756-8e6e" hidden="false">
-                      <description>When this Unit spends Aim Tokens while Drifting Blast Tokens, for each Token spent, the result may be altered by 2 instead of 1.</description>
-                    </rule>
-                  </rules>
-                  <constraints>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="6a0f-044d-6b5f-c8ad" includeChildSelections="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c3c9-8997-a5ac-0af9" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e91a-b4a3-3c53-7157" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f6bf-034f-84c6-a754" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="572c-493e-57b4-1a2c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Corporate Mercenary Officers" hidden="false" id="e180-b5a4-ee62-a2fa" collective="false">
           <profiles>
             <profile name="Corporate Mercenary Officers" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="0121-d63a-98b3-60f2">
@@ -8462,6 +8595,99 @@ St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an ene
           <entryLinks>
             <entryLink import="true" name="Specialist Command" hidden="false" id="6112-2acb-193b-0ee6" type="selectionEntry" targetId="e517-0471-12d3-3343"/>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Guards Heavy Weapon Element" hidden="false" id="2e08-766d-2f05-70a7">
+          <profiles>
+            <profile name="Guards Heavy Weapon Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="4f0f-252e-fc90-16a4">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Infantry, (SPC) Support, (SPC) Mechanized, Attache (Troop)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">50mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Distributed Elements" hidden="false" id="0e61-fe87-609b-f913" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
+          </entryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c9db-9233-1c2f-30b5" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="6fae-ca80-db19-295b" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Guards Heavy Weapon Team" hidden="false" id="3dac-642f-bbdb-5a87">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49cf-b9eb-741b-6fcf" includeChildSelections="false"/>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f638-9d94-eca1-e209" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Guards Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b10e-40b8-69de-7e62">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="9ea0-ce50-7376-029b" hidden="false" defaultSelectionEntryId="c9c7-35fe-d8c8-8305">
+                      <entryLinks>
+                        <entryLink import="true" name="Maxim Machine Gun" hidden="false" id="bcb2-b1a9-a7d7-d06d" type="selectionEntry" targetId="b042-b961-5bc4-53d3">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8528-64a4-f858-9ea3" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="DShK-38 Heavy Machine Gun" hidden="false" id="850c-45eb-00c1-790f" type="selectionEntry" targetId="d5d9-e0d7-15f4-0114">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="384e-f914-891e-cc88" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="AG-2 Automatic Grenade Launcher" hidden="false" id="4991-319c-bdbf-20b0" type="selectionEntry" targetId="af14-f001-771c-d366">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60ed-5bea-b018-19be" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="1.8tsk Beam Caster" hidden="false" id="99d1-bbeb-df62-6019" type="selectionEntry" targetId="c32d-482d-3fc5-7403">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d14-4fec-bdc3-f17b" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a9b-fc0d-0a13-5db9" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0b8-8297-513f-80a2" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="13"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Mosin-Nagant Energy Rifle" hidden="false" id="f9a9-77ab-7d12-4aa8" type="selectionEntry" targetId="f33d-e677-8e5d-e67d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f5b-c8d4-e47f-be57" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="45cb-ad34-7593-27ed" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b9cf-c182-d84f-7f29" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="697f-adf4-ea76-0d24" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

@@ -7,7 +7,7 @@
     <costType name="Activations" id="a4ae-e848-77a7-6d45" defaultCostLimit="20"/>
   </costTypes>
   <profileTypes>
-    <profileType id="Weapon" name="Weapon">
+    <profileType id="Weapon" name="Weapon" kind="weapon">
       <characteristicTypes>
         <characteristicType id="23fd-52ca-c658-ab9b" name="Range"/>
         <characteristicType id="60de-dad6-12a2-68b4" name="Hits"/>
@@ -17,7 +17,7 @@
         <characteristicType id="bd5a-5880-4285-ad9f" name="Keywords"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="0322-11e4-8667-bbe3" name="Unit Composition">
+    <profileType id="0322-11e4-8667-bbe3" name="Unit Composition" kind="rule">
       <characteristicTypes>
         <characteristicType id="1f57-7b47-fc27-63ac" name="Composition"/>
         <characteristicType id="8b2b-8745-edb5-df14" name="Keywords"/>
@@ -25,7 +25,7 @@
         <characteristicType name="Models in Unit" id="79fc-3188-cd1e-2b49"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="d3fb-06f3-cc24-ab32" name="Model">
+    <profileType id="d3fb-06f3-cc24-ab32" name="Model" kind="model">
       <characteristicTypes>
         <characteristicType id="3e68-f430-0d7c-5747" name="Movement"/>
         <characteristicType id="c7f9-7a63-2269-6a82" name="Evasion Score"/>
@@ -33,7 +33,7 @@
         <characteristicType id="190f-e5ac-64bb-efa8" name="Hit Points"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="5a0c-9677-ca87-9509" name="Action List">
+    <profileType id="5a0c-9677-ca87-9509" name="Action List" kind="rule">
       <characteristicTypes>
         <characteristicType id="71f8-64d2-a32a-0757" name="Standard Actions"/>
         <characteristicType id="6cfc-1528-37ea-2ff9" name="Reactions"/>
@@ -41,21 +41,21 @@
         <characteristicType id="4c52-f227-0038-1b73" name="Free Actions"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Attache Composition" id="312c-13ed-50aa-27a6" hidden="false">
+    <profileType name="Attache Composition" id="312c-13ed-50aa-27a6" hidden="false" kind="rule">
       <characteristicTypes>
         <characteristicType name="Keywords" id="d6ab-192f-515b-f06b"/>
         <characteristicType name="Base Size" id="7451-1f52-67d5-01a8"/>
         <characteristicType name="Maximum Number in Platoon" id="d3f4-a3f4-2fe1-5fee"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Fortification" id="1269-adf9-ff97-be76" hidden="false">
+    <profileType name="Fortification" id="1269-adf9-ff97-be76" hidden="false" kind="rule">
       <characteristicTypes>
         <characteristicType name="Supply Cost" id="56dd-c8a0-4289-fb06"/>
         <characteristicType name="Effect" id="6ebb-50ef-b07e-23ab"/>
         <characteristicType name="Dimensions" id="0e74-2a74-ad59-2775"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Special Requisition" id="60a8-a233-a953-97f1" hidden="false">
+    <profileType name="Special Requisition" id="60a8-a233-a953-97f1" hidden="false" kind="rule">
       <characteristicTypes>
         <characteristicType name="Cost" id="fdc2-ccd7-0950-5670"/>
         <characteristicType name="Effects" id="8280-2b12-dd95-5313"/>
@@ -96,13 +96,66 @@
     <categoryEntry name="CORE Recon" id="54db-5889-a382-77cb" hidden="false"/>
     <categoryEntry name="CORE Mechanized" id="7ce6-55a5-44aa-7258" hidden="false"/>
     <categoryEntry name="AUX Support" id="48f5-3131-be0b-5951" hidden="false"/>
-    <categoryEntry name="Automaton" id="239b-db47-17c9-4f36" hidden="false"/>
-    <categoryEntry name="Battlesuit" id="4ec9-47a4-5562-ea3b" hidden="false"/>
+    <categoryEntry name="Automaton" id="239b-db47-17c9-4f36" hidden="false">
+      <constraints>
+        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b28c-b14a-816a-3272" includeChildSelections="true" includeChildForces="true" message="50th (Northumbrian) Automated Infantry Division: This Specialization requires one Autonomous Unit for each Non-Autonomous Unit in your {scope}"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b28c-b14a-816a-3272"/>
+            <modifier type="increment" value="1" field="b28c-b14a-816a-3272">
+              <repeats>
+                <repeat value="2" repeats="1" field="selections" scope="roster" childId="unit" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </categoryEntry>
+    <categoryEntry name="Battlesuit" id="4ec9-47a4-5562-ea3b" hidden="false">
+      <constraints>
+        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b56d-2fc5-826a-f459" includeChildSelections="true" includeChildForces="true" message="Die Paladin-Peers Karls des Großen (München): This Specialization requires one Battlesuit Unit for each Non-Battlesuit Unit in your {scope}"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b56d-2fc5-826a-f459"/>
+            <modifier type="increment" value="1" field="b56d-2fc5-826a-f459">
+              <repeats>
+                <repeat value="2" repeats="1" field="selections" scope="roster" childId="unit" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7fd7-04c2-77b8-c8b1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </categoryEntry>
     <categoryEntry name="Carriage" id="c2bc-81f4-b62b-dc46" hidden="false"/>
     <categoryEntry name="Cavalry" id="71cc-1c64-2438-4030" hidden="false"/>
-    <categoryEntry name="Flying" id="b250-bcf3-850c-e556" hidden="false"/>
+    <categoryEntry name="Flying" id="b250-bcf3-850c-e556" hidden="false">
+      <rules>
+        <rule name="Flying" id="5b0e-908d-82a1-7b7f" hidden="false">
+          <description>- This Unit may not receive the benefit of Cover.
+- When taking a Movement Action this Unit ignores all Terrain Features and other Units. It may not end its movement on top of Terrain features.
+- This Unit may not engage or be engaged by other Units unless they also have the Flying keyword. 
+- All attacks made targeting Units with this Keyword are measured to the base of the Model and subtracted by 12” 
+- This Unit is always considered to be Obscured.
+- Line of Sight can be drawn through these Units to other Units as if not present on the Battlefield. 
+- When determining LOS, this model is considered to be 12&quot; tall&quot; to the flying subtype
+- This unit benefits from the Vertical terrain rule giving +1 to hit for the purposes of ranged attacks</description>
+        </rule>
+      </rules>
+    </categoryEntry>
     <categoryEntry name="Superheavy" id="6f95-29a9-8d9a-a5fb" hidden="false"/>
-    <categoryEntry name="Tracked" id="7616-a9f8-6205-af0e" hidden="false"/>
+    <categoryEntry name="Tracked" id="7616-a9f8-6205-af0e" hidden="false">
+      <description>Rules for tracked</description>
+    </categoryEntry>
     <categoryEntry name="Troop" id="6dc4-41a4-7144-d10c" hidden="false"/>
     <categoryEntry name="Vehicle" id="de0d-e12c-a964-4e46" hidden="false"/>
     <categoryEntry name="Engineer" id="fea7-21e6-bb88-f8ed" hidden="false"/>
@@ -150,6 +203,9 @@
     <categoryEntry name="Starborne Platoon Configuration" id="0b49-4c06-5cea-c6a0" hidden="false"/>
     <categoryEntry name="USA" id="4455-94a1-ea5e-b9ec" hidden="false"/>
     <categoryEntry name="Battery" id="eb80-161e-f2a5-8496" hidden="false"/>
+    <categoryEntry name="Field Commander" id="6ea8-04f4-b21b-7fcf" hidden="false"/>
+    <categoryEntry name="Die Paladin-Peers Karls des Großen (München)" id="7fd7-04c2-77b8-c8b1" hidden="true"/>
+    <categoryEntry name="50th (Northumbrian) Automated Infantry Division" id="af8a-1a21-3380-77c4" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Company" id="01ba-2120-7904-bce7" hidden="false" childForcesLabel="Platoons">
@@ -211,6 +267,7 @@
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -323,6 +380,27 @@
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7139-b185-c779-7e9d" includeChildSelections="false"/>
               </constraints>
+            </categoryLink>
+            <categoryLink name="Transport" hidden="true" id="6cf6-8cb2-c24d-a356" targetId="d4be-5aad-8560-5720">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="71d6-ba89-a2a7-1672" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="71d6-ba89-a2a7-1672">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </categoryLink>
           </categoryLinks>
           <costs>
@@ -446,21 +524,23 @@
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0295-94da-a785-2e47" includeChildSelections="false"/>
               </constraints>
             </categoryLink>
-            <categoryLink name="Transport" hidden="true" id="e711-0b0e-bca3-d7f2" targetId="d4be-5aad-8560-5720">
+            <categoryLink name="Transport" hidden="true" id="4d88-dc6c-0685-fc2c" targetId="d4be-5aad-8560-5720">
               <constraints>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="793c-42e1-8084-a3b9" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="acab-c95b-97ab-597e" includeChildSelections="false"/>
               </constraints>
               <modifiers>
-                <modifier type="increment" value="1" field="793c-42e1-8084-a3b9">
+                <modifier type="increment" value="1" field="acab-c95b-97ab-597e">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="set" value="false" field="hidden">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -712,6 +792,7 @@
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -830,21 +911,23 @@
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9f03-7e78-6e9c-727a" includeChildSelections="false"/>
               </constraints>
             </categoryLink>
-            <categoryLink name="Transport" hidden="true" id="5da9-f146-dfea-78b7" targetId="d4be-5aad-8560-5720">
+            <categoryLink name="Transport" hidden="true" id="0162-4fd9-f59d-7da2" targetId="d4be-5aad-8560-5720">
               <constraints>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="6065-b29f-f473-d9d1" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="0d5f-2e37-1004-c3e5" includeChildSelections="false"/>
               </constraints>
               <modifiers>
-                <modifier type="increment" value="1" field="6065-b29f-f473-d9d1">
+                <modifier type="increment" value="1" field="0d5f-2e37-1004-c3e5">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="set" value="false" field="hidden">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -1305,21 +1388,23 @@
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5e73-14a5-0588-688e" includeChildSelections="false"/>
               </constraints>
             </categoryLink>
-            <categoryLink name="Transport" hidden="true" id="1465-3432-296a-09b5" targetId="d4be-5aad-8560-5720">
+            <categoryLink name="Transport" hidden="true" id="49f9-8675-03e6-4af1" targetId="d4be-5aad-8560-5720">
               <constraints>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="c24b-29fa-eb68-fe43" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="4961-46c6-0ada-317c" includeChildSelections="false"/>
               </constraints>
               <modifiers>
-                <modifier type="increment" value="1" field="c24b-29fa-eb68-fe43">
+                <modifier type="increment" value="1" field="4961-46c6-0ada-317c">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="set" value="false" field="hidden">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -1448,6 +1533,59 @@
       <categoryLinks>
         <categoryLink targetId="8d88-522f-d086-d712" id="496b-3461-6007-2ae1" primary="true" name="Armor Platoon Configuration"/>
       </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tank Ace" hidden="false" id="2577-b5e3-3d3e-5694" type="selectionEntry" targetId="354d-3410-a359-a68c">
+      <categoryLinks>
+        <categoryLink name="Attache" hidden="false" id="93ef-afce-584b-2625" targetId="6cee-690d-b6de-aa15" primary="false"/>
+        <categoryLink name="SPC Armor" hidden="false" id="4439-64e5-0515-8080" targetId="c650-aa93-b1ce-0970" primary="true"/>
+        <categoryLink name="SPC Support" hidden="false" id="0ec8-378f-75e7-37c4" targetId="869c-51f1-d04f-a8ce" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Mechanic Element" hidden="false" id="0615-f791-23f4-4c39" type="selectionEntry" targetId="c83f-dbb2-06ab-6120">
+      <categoryLinks>
+        <categoryLink name="SPC Armor" hidden="false" id="7924-5d65-22e2-59cd" targetId="c650-aa93-b1ce-0970" primary="true"/>
+        <categoryLink name="SPC Mechanized" hidden="false" id="9999-a3c8-cc67-3e37" targetId="cf6f-f672-129a-1bfb" primary="false"/>
+        <categoryLink name="SPC Recon" hidden="false" id="6f14-56f8-418d-e35f" targetId="893b-458b-4e03-6e5e" primary="false"/>
+        <categoryLink name="Attache" hidden="false" id="6fd2-e5b9-7596-7ee8" targetId="6cee-690d-b6de-aa15" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="893b-458b-4e03-6e5e" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Rangefinder Element" hidden="false" id="7c28-5142-2256-2021" type="selectionEntry" targetId="4bb0-8db4-26d4-91e1">
+      <categoryLinks>
+        <categoryLink name="SPC Artillery" hidden="false" id="1ec2-027b-e28a-7b86" targetId="adc7-9c83-fa3a-e7da" primary="true"/>
+        <categoryLink name="SPC Support" hidden="false" id="40a6-23af-28a2-97d5" targetId="869c-51f1-d04f-a8ce" primary="false"/>
+        <categoryLink name="Attache" hidden="false" id="56eb-1f1b-a06f-6029" targetId="6cee-690d-b6de-aa15" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
@@ -1947,6 +2085,21 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
     <rule name="Rear Turret Mount" id="aba1-049d-c59a-7c9e" hidden="false">
       <description>Weapons Equipped in a Rear Turret Mount may select targets for Attacks independently of other Weapons.</description>
     </rule>
+    <rule name="Tracked" id="cbf4-6809-bd49-d38c" hidden="false">
+      <description>- Moves taken by Tracked Units may pass over Light or Medium Terrain, but those pieces of terrain are removed from the battlefield when this is done if the unit fully passed over it (either the entire piece of terrain was covered by the vehicle or the entire vehicle passed over the terrain). 
+- When deploying a Unit with this Keyword, you may remove Light or Medium terrain that would overlap the footprint of this model.
+- Tracked Units ignore Rough Terrain when taking Movement Actions.</description>
+    </rule>
+    <rule name="Flying" id="0c92-2b75-4b21-de63" hidden="false">
+      <description>- This Unit may not receive the benefit of Cover.
+- When taking a Movement Action this Unit ignores all Terrain Features and other Units. It may not end its movement on top of Terrain features.
+- This Unit may not engage or be engaged by other Units unless they also have the Flying keyword. 
+- All attacks made targeting Units with this Keyword are measured to the base of the Model and subtracted by 12” 
+- This Unit is always considered to be Obscured.
+- Line of Sight can be drawn through these Units to other Units as if not present on the Battlefield. 
+- When determining LOS, this model is considered to be 12&quot; tall.
+- This unit benefits from the Vertical terrain rule giving +1 to hit for the purposes of ranged attacks.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="0936-84e8-76d0-501a" name="Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
@@ -2120,4 +2273,474 @@ Area, Heavy Terrain, Rough</characteristic>
     </profile>
   </sharedProfiles>
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Specialists" id="2dfd-485a-88be-916d" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mechanic Element" hidden="false" id="c83f-dbb2-06ab-6120">
+          <profiles>
+            <profile name="Mechanic Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="01b3-0dc2-cfc4-1698">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">FAC, (SPC) Armor, (SPC) Mechanized, (SPC) Recon, (SPC) Support, Attache (Vehicle)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="replace" value="USA" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="HRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="NFR" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="RUS" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="BRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="EOJ" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Mechanics" id="587f-b6e4-8e85-5526" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Mechanic" hidden="false" id="0400-848a-01aa-ae0c">
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="25"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <rules>
+                    <rule name="Onboard Mechanic" id="65d3-9dcb-74e3-457e" hidden="false">
+                      <description>As a Free Action, this Unit may Repair. If it does, recover 3 HP.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f371-f39d-5cf9-f461" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6c1-f0b1-642a-031e" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f62c-cdaf-56d3-2015" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e12-97b6-0c1c-e005" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3249-642b-3c64-2cf8" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rangefinder Element" hidden="false" id="4bb0-8db4-26d4-91e1">
+          <profiles>
+            <profile name="Rangefinder Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c218-dabf-80d8-73f0">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">FAC, (SPC) Artillery, (SPC) Support, Attache (Carriage)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="replace" value="USA" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="HRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="NFR" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="RUS" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="BRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="EOJ" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="637b-1f2f-5104-d259" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Rangefinder" hidden="false" id="402e-119e-beff-d225">
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="25"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <rules>
+                    <rule name="Rangefinder" id="c6e8-f68d-8135-f2d9" hidden="false">
+                      <description>When this Unit spends Aim Tokens while Drifting Blast Tokens, for each Token spent, the result may be altered by 2 instead of 1.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="4e31-4781-20bb-8160" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="caca-42aa-9bcf-87f0" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="70bf-e577-9157-e09e" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d04e-6fb2-6245-e7c3" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="bccd-2cdd-3206-2f19" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Tank Ace" hidden="false" id="354d-3410-a359-a68c">
+          <profiles>
+            <profile name="Tank Ace" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="4efe-0ac7-5926-cf20">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">FAC, (SPC) Armor, (SPC) Support, Attache (Vehicle)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="replace" value="USA" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="HRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="NFR" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="RUS" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="BRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="EOJ" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Lone Element" id="78f7-bc4a-a5a8-fef9" hidden="false">
+              <description>Other Attaches may not be attached to the same Unit as this one.</description>
+            </rule>
+            <rule name="Tank Ace" id="00c3-a4d9-a885-0d0d" hidden="false">
+              <description>You may only have one of this Element in your Army. This Unit must be be mounted in a Veteran Vehicle Unit.</description>
+            </rule>
+          </rules>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ff22-2d03-f7e2-4a91" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="25"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Tank Ace Skills" id="0c06-2cb2-de07-546f" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Fighting Skills" id="84f3-0c64-9be4-1687" hidden="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08a7-5c1b-a1df-f799" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Trained Eye" hidden="false" id="1362-7757-082b-b7db" sortIndex="1">
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="10"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <rules>
+                        <rule name="Trained Eye" id="0fcb-1a86-aeb7-5b1d" hidden="false">
+                          <description>Once per Round, this Unit may take a Free Aim Action.</description>
+                        </rule>
+                      </rules>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Quickdraw" hidden="false" id="7bde-01c2-36a8-ce2d" sortIndex="3">
+                      <rules>
+                        <rule name="Quickdraw" id="2790-6657-cd18-7af7" hidden="false">
+                          <description>Once per round, when this Unit is targeted by an Attack Action from a Vehicle Unit, before resolving that Attack, this Unit may immediately make an Attack Action with a single Weapon Profile against the Unit that has targeted it.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="30"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="On My Mark" hidden="false" id="0e27-db09-aec3-c305" sortIndex="2">
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="20"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <rules>
+                        <rule name="On My Mark" id="19c3-a244-e7e9-44b0" hidden="false">
+                          <description>When this Unit performs an Attack Action, you may choose a Coaxial, Pintle, or Sponson mounted Weapon to not Attack with. If you do, select a friendly non-Cumbersome Vehicle that has not been activated within 6&quot; this one. It may immediately perform a Free Attack Action with one Weapon Profile against the same target.</description>
+                        </rule>
+                      </rules>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Mobility Skills" id="8e67-f31d-de95-94da" hidden="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fb3-22c4-4235-6c1a" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Reflexive Driving" hidden="false" id="d279-4048-d1c3-a481" sortIndex="2">
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="20"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <rules>
+                        <rule name="Reflexive Driving" id="57cb-d99e-4a12-bba0" hidden="false">
+                          <description>Once per Round, as a Free Reaction, this Unit may make a Free Dash Action. If this Reaction makes the Unit ineligible as a target for the attacking Unit, then the Unit that is shooting may reselect targets of any weapon that was attacking the unit that fell back.</description>
+                        </rule>
+                      </rules>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Fine Control" hidden="false" id="1d62-8883-affa-d2b1" sortIndex="1">
+                      <rules>
+                        <rule name="Fine Control" id="1a9c-8640-e531-c2c8" hidden="false">
+                          <description>Whenever this Unit takes an Action, it may choose to Pivot this Model or a Turret on this Model up to 45 degrees.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="10"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Rolling Fire" hidden="false" id="b4a6-b6cf-ab52-b694" sortIndex="3">
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="30"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <rules>
+                        <rule name="Rolling Fire" id="d5c4-d0bd-08a8-ab64" hidden="false">
+                          <description>This Unit may interrupt any Movement Actions it takes at any point with other Actions, and complete the Movement after resolving them.</description>
+                        </rule>
+                      </rules>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Utility Skills" id="0d8b-1ace-e31a-3738" hidden="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0261-5270-a4fb-bde3" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Wingmen" hidden="false" id="bdd2-9980-1dbc-8645" sortIndex="1">
+                      <rules>
+                        <rule name="Wingmen" id="66dc-f679-5adb-8b9c" hidden="false">
+                          <description>Once per round, when this Unit is selected as the target of an Attack, you may choose for a friendly Unit within 6&quot; of it to gain two Concussion Tokens, if you do, this Unit may perform a Free Reaction.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="10"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Firefighting" hidden="false" id="98c2-75c3-4aa9-c480" sortIndex="2">
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="20"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <rules>
+                        <rule name="Firefighting" id="d907-f20e-c331-15c1" hidden="false">
+                          <description>Once Per Round, this Unit may choose to shed any Tokens applied to it.</description>
+                        </rule>
+                      </rules>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Lay of the Land" hidden="false" id="662f-491c-01a2-ac50" sortIndex="3">
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="30"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <rules>
+                        <rule name="Lay of the Land" id="68cc-d140-2853-4877" hidden="false">
+                          <description>During the Command Phase, you may choose for this Unit to take a Free Overwatch Action.</description>
+                        </rule>
+                      </rules>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="f16f-eaed-ab9a-5b24" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d920-c886-5f94-794d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="add" value="This Element must be Mounted in a Veteran Vehicle Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="2c6d-f1f1-2806-f533" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Designations" id="0701-9ba9-2fc4-9d73" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Ace Vehicle" hidden="false" id="2c6d-f1f1-2806-f533">
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="c9b5-7ece-2bd5-d17f" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="c9b5-7ece-2bd5-d17f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="354d-3410-a359-a68c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="prepend" value="Ace" field="name" scope="parent"/>
+            <modifier type="add" value="This Vehicle must be Veteran to have an Ace mounted in it." field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="b068-de68-7a68-a938" shared="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="parent" childId="2c6d-f1f1-2806-f533" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="This Vehicle may not have any other Attaches attached to it" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="parent" childId="2c6d-f1f1-2806-f533" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="parent" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Designate Command Unit" hidden="true" id="4f50-ceb9-f07a-86c0">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="988f-c00e-3f08-ca51" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3810-2361-0d9c-33e1" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="8a0d-4c81-fae8-ea39" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="prepend" value="Command" field="name" scope="parent"/>
+          </modifiers>
+          <rules>
+            <rule name="Attached Commander" id="0fed-696b-7352-68a8" hidden="false">
+              <description>This Unit must have a Command Attache attached to it. If this Unit has the Troop or Cavalry keyword and does not have the Crewed Weapon or Battlesuit Keyword, its minimum Model Count may be reduced by 1.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="b068-de68-7a68-a938">
+          <rules>
+            <rule name="Veteran" id="b6c8-f73c-5ade-f649" hidden="false">
+              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order. This Unit only loses one Action per two Suppression or Concussion Tokens. If this Unit is a Vehicle or a Carriage, it ignores the Difficult to Use Special Rule.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="25"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="daaa-b1b9-7d9e-b2a6" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="add" value="7cbc-7bcb-5750-df1d" field="category"/>
+            <modifier type="prepend" value="Veteran" field="name" scope="parent"/>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Not My Job" hidden="false" id="8a0d-4c81-fae8-ea39">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d552-0fe1-d1e4-7197" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a45-c1ef-a4bd-9aec" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="-15"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <rules>
+            <rule name="Not My Job" id="73e7-2d87-d2c8-d55d" hidden="false">
+              <description>This Unit may not take the Capture Action. This Unit may not have Attaches attached to it.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </gameSystem>

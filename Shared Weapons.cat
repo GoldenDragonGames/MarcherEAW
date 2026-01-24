@@ -42,7 +42,7 @@
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Ablation Beam" id="a397-8716-ab3d-2773" hidden="false">
-      <description>For each successful Hit Check made by this Weapon, score an additional Hit and increase this Weapon&apos;s AP Profile by 1 for the rest of this Attack.</description>
+      <description>When performing an Attack with Weapons with this Special Rule, each instance of a Weapon forms a separate Attack pool. For each successful Hit Check made by this Weapon, score an additional Hit and increase this Weapon&apos;s AP Profile by 1 for the rest of this Attack.</description>
     </rule>
     <rule name="Ammo X" id="2056-c454-be5c-ea02" hidden="false">
       <description>This weapon starts with X Ammo. This weapon may only be selected for the Attack Action if it has at least 1 Ammo remaining. After the attack Action is complete, reduce its Ammo by 1.</description>
@@ -80,9 +80,9 @@ Concussion Token: When this Unit Activates, remove all Concussion Tokens applied
       <description>In Melee, this Weapon may be selected to Attack with in addition to another Weapon.</description>
     </rule>
     <rule name="Flames" id="7235-63bc-0668-6ac4" hidden="false">
-      <description>When making an Attack with this weapon, all Hits succeed automatically, then apply a Burning Token. You may not apply more than One Burning Token per Weapon Profile per Attack Action. When a Model carrying a Weapon with this Special Rule is Destroyed, apply a Burning Token to the Unit it was a part of, and any Units within 3&quot;.
+      <description>When making an Attack with this weapon, all Hits succeed automatically, then apply a Burning Token. When a Model carrying a Weapon with this Special Rule is Destroyed, apply a Burning Token to the Unit it was a part of, and any Units within 3&quot;.
 
-Burning Token: When this Unit Activates, this Token makes a X/0/1 Attack against it, where X is the amount of HP the Unit has left. If more than half of these Hits fail to deal Damage, this Token is removed.</description>
+Burning Token: A Unit may only have one Burning Token. When this Unit Activates, this Token makes a X/0/1 Attack against it, where X is the amount of HP the Unit has left. If more than half of these Hits fail to deal Damage, this Token is removed.</description>
     </rule>
     <rule name="Gas Projector" id="2196-346b-deab-9dce" hidden="false">
       <description>When making an attack with this weapon, place a Gas Token within range, it automatically attacks all units within 3&quot; with the Poison Gas Profile.</description>
@@ -156,6 +156,9 @@ Under Fire: Units with this Token may not take the Move Action. (They may still 
     </rule>
     <rule name="Blast Token" id="5d4a-ecea-623a-a136" hidden="false">
       <description>When Resolving an Attack with this Token, you must Attack each Unit within X&quot; of this Token. (X specified by the Ordnance Special Rule) If this Token Drifts, you may spend Aim Tokens to raise or lower the number rolled for the Drift direction or for the Drift distance by 1 for each Aim token. Remove the Token after resolving the Attack.</description>
+    </rule>
+    <rule name="Burning Token" id="44ae-d6b8-8f9b-46c4" hidden="false">
+      <description>A Unit may only have one Burning Token. When this Unit Activates, this Token makes a X/0/1 Attack against it, where X is the amount of HP the Unit has left. If more than half of these Hits fail to deal Damage, this Token is removed.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
