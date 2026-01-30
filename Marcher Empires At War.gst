@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.2" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.3" revision="2" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -139,18 +139,9 @@
     <categoryEntry name="Carriage" id="c2bc-81f4-b62b-dc46" hidden="false"/>
     <categoryEntry name="Cavalry" id="71cc-1c64-2438-4030" hidden="false"/>
     <categoryEntry name="Flying" id="b250-bcf3-850c-e556" hidden="false">
-      <rules>
-        <rule name="Flying" id="5b0e-908d-82a1-7b7f" hidden="false">
-          <description>- This Unit may not receive the benefit of Cover.
-- When taking a Movement Action this Unit ignores all Terrain Features and other Units. It may not end its movement on top of Terrain features.
-- This Unit may not engage or be engaged by other Units unless they also have the Flying keyword. 
-- All attacks made targeting Units with this Keyword are measured to the base of the Model and subtracted by 12” 
-- This Unit is always considered to be Obscured.
-- Line of Sight can be drawn through these Units to other Units as if not present on the Battlefield. 
-- When determining LOS, this model is considered to be 12&quot; tall&quot; to the flying subtype
-- This unit benefits from the Vertical terrain rule giving +1 to hit for the purposes of ranged attacks</description>
-        </rule>
-      </rules>
+      <infoLinks>
+        <infoLink name="Flying" id="c540-675c-b167-508d" hidden="false" type="rule" targetId="0c92-2b75-4b21-de63"/>
+      </infoLinks>
     </categoryEntry>
     <categoryEntry name="Superheavy" id="6f95-29a9-8d9a-a5fb" hidden="false"/>
     <categoryEntry name="Tracked" id="7616-a9f8-6205-af0e" hidden="false">
@@ -1839,7 +1830,7 @@ Linear, Heavy Terrain</characteristic>
                 <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Deploy three of these per Build Action within 1” of each other. Troops that touch this Fortification must immediately end their Movement Action.
 
 
-Linear Light Terrain, Obscuring, Rough,</characteristic>
+Linear, Light Terrain, Obscuring, Rough,</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">3” x 1” x 1”</characteristic>
               </characteristics>
             </profile>
@@ -1862,7 +1853,7 @@ Linear , Medium Terrain, Rough</characteristic>
 This Fortification can be removed by the Units with the Tracked Keyword or Crushing Footfalls Special Rule.
 
 
-Area Heavy Terrain, Rough</characteristic>
+Area, Heavy Terrain, Rough</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">5” x 3” x 2”</characteristic>
               </characteristics>
             </profile>
@@ -1887,6 +1878,123 @@ Area, Light Terrain*, Rough 
 *Units do not gain cover for being within this specific terrain feature</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">3” x 8”, Flat.</characteristic>
               </characteristics>
+            </profile>
+            <profile name="Supply Depot Tent (USA)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="b4e1-5e93-5f9a-a15c">
+              <characteristics>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">3</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">At the start of each Command Phase gain a Supply Point. Friendly Fortifications within 12&quot; gain the Supply Line keyword.</characteristic>
+                <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">2.5” x 2.5” x 2”</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="Secret Tunnel (NFR)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="2fac-3ad1-caee-bd63">
+              <characteristics>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">To deploy: Place a Taupe token (denoted by a 40 mm base size) within 1” of the
+constructing Unit. Then place a second Taupe token anywhere within the
+constructing Units movement range. Troop Units within 3” may interact with
+either marker.
+
+
+Troop Units in your army within 3” of a Taupe token may use one of their actions
+to travel through the Taupe on their turn. To travel through a Taupe, remove a
+Troop Unit within range of a Taupe token and set them up within 3” of the
+opposite Taupe token. The Unit that constructed the Taupe may travel through it
+on the turn it was constructed without using an Action. Troop Units may not
+travel through the Taupe twice in the same turn.</characteristic>
+                <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">40mm Circular</characteristic>
+              </characteristics>
+              <alias>Taupe</alias>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="Novaya Zemlya Cloud Engine (RUS)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="de89-f2db-5d59-41a4">
+              <characteristics>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">3</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Units within 10&quot; of this model are subject to the effects of one additional category level of the Blizzard.
+
+
+Once per Round, a Friendly Unit within 3&quot; of this one may choose to Activate the Cloud Engine, if it does, immediately perform a free Freeze Action.
+
+Units do not gain the benefit of Cover for touching this Fortification.
+
+Linear, Medium Terrain, Rough</characteristic>
+                <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">5&quot; x 4&quot; x 3&quot;</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="Ori-Tate (EOJ)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="9c44-288c-161e-5ad8">
+              <characteristics>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">1</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Units touching this Terrain feature gain the benefits of Light Cover. In addition,
+when a Unit touching this Terrain feature takes a Movement Action they may move the
+Ori-Tate with them. To do this, after a Troop Unit touching this Terrain feature
+takes a Movement Action, remove the Ori-Tate from the battlefield, then redeploy it
+within 1” of the unit.
+
+Linear, Light Terrain</characteristic>
+                <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">5&quot; x 1&quot; x 1&quot;</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="Schanze (HRE)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="94f7-3e00-ceaa-52f6">
+              <characteristics>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Carriage Units touching this Terrain Feature may receive the Benefits of Cover as
+if they were Troops Units.
+
+Linear, Medium Terrain, Rough</characteristic>
+                <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">5&quot; x 3&quot; x 2&quot;</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="G.R.A.I.L Relay (BRE)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="05d1-a43a-77c9-aaac">
+              <characteristics>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">While on the board, the roll to gain new G.R.A.I.L dice is reduced by 1.
+
+
+Units do not gain the benefit of Cover for touching this Fortification.
+
+Area, Medium Terrain, Rough</characteristic>
+                <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">3&quot; x 3&quot; x 3&quot;</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
         </infoGroup>
@@ -2094,11 +2202,12 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
       <description>- This Unit may not receive the benefit of Cover.
 - When taking a Movement Action this Unit ignores all Terrain Features and other Units. It may not end its movement on top of Terrain features.
 - This Unit may not engage or be engaged by other Units unless they also have the Flying keyword. 
-- All attacks made targeting Units with this Keyword are measured to the base of the Model and subtracted by 12” 
+- When determining Range for Attacks against this Unit, Range is measured to the base of this Model, and then subtracted by 12&quot;.
 - This Unit is always considered to be Obscured.
 - Line of Sight can be drawn through these Units to other Units as if not present on the Battlefield. 
 - When determining LOS, this model is considered to be 12&quot; tall.
-- This unit benefits from the Vertical terrain rule giving +1 to hit for the purposes of ranged attacks.</description>
+- This Unit benefits from the Multi-Level Terrain rule giving +1 to hit for the purposes of ranged attacks.
+- Units Embarked within this Unit are considered to have the Flying Keyword.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2272,7 +2381,7 @@ Area, Heavy Terrain, Rough</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
-  <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
+  <readme>Check out our stuff through http://linktr.ee/goldendragongames</readme>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Specialists" id="2dfd-485a-88be-916d" hidden="false">
       <selectionEntries>

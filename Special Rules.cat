@@ -35,7 +35,7 @@
       <description>Weapons equipped in Coaxial Mounts may be selected to fire alongside a Difficult to Use Weapon, so long as they select the same target.</description>
     </rule>
     <rule name="Command Car" id="b3a8-6d2c-8217-042c" hidden="false">
-      <description>This Unit issues Orders at 12&quot; instead of 8&quot;. When this Unit issues an Order, choose an unordered Unit within 8&quot; of that one, that Unit also gains an Order Token.</description>
+      <description>This Unit issues Orders at 12&quot; instead of 8&quot;. When this Unit issues an Order, choose a Unit within 8&quot; of that one, that Unit also gains an Order Token.</description>
     </rule>
     <rule name="Command Squad" id="5ffd-5449-427f-b767" hidden="false">
       <description>This Model may only Attach to the Units with the Names and Keywords listed.</description>
@@ -137,7 +137,7 @@ Order Token: This Unit gains one Action. This Token is removed when this Unit en
       <description>This Unit has a base of three Actions.</description>
     </rule>
     <rule name="Open Topped X" id="7608-aac0-48a4-2e10" hidden="false">
-      <description>Units inside this Transport may be activated as normal and may take Ranged Attack Actions while Embarked. They may be selected as the Target of Ranged Attacks. Units inside this Transport receive X levels of Cover.</description>
+      <description>Units embarked within this Transport may take Actions other than Reactions, Build and Capture without disembarking. They may be selected as the Target of Ranged Attacks. Units embarked within this Transport receive X levels of Cover. When making Attacks against Units embarked within this Transport, Line-Of-Sight is drawn to this Model.</description>
     </rule>
     <rule name="Patch-Up" id="296f-6c65-a341-cfab" hidden="false">
       <description>This Unit may perform the Patch Up Action as a Standard Action or as a Difficult Action. It may not do both in one Activation. As a Standard Action, select a friendly Non-Automaton Troop Unit within 3&quot; (including this unit). That Unit either restores all HP lost by one of its Models or revives a destroyed Model, returning it to the Unit with full HP. As a Difficult Action, you may restore HP to one Model and return one Model, or return two Models. You may not return Attache or Automaton models with this Rule.</description>
@@ -244,6 +244,9 @@ are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Sealed" id="429e-1178-6b2a-e940" hidden="false">
       <description>Attacks with the Gas! Special Rule may not target this Unit.</description>
+    </rule>
+    <rule name="Flak Shells" id="62d1-9898-61a2-0033" hidden="false">
+      <description>This Unit&apos;s Autocannon and Machine Gun Weapons ignore the effects of the Flying Keyword when making Ranged Attacks.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -1347,6 +1350,21 @@ are in your army only one counter is ticked down at a time.</description>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6d0-850a-4b86-d773-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6d0-850a-4b86-d773-max" includeChildSelections="false"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flak Shells" hidden="false" id="c0bd-425f-8737-21bc">
+      <infoLinks>
+        <infoLink name="Flak Shells" id="cc32-45b2-ee61-3dc9" hidden="false" type="rule" targetId="62d1-9898-61a2-0033"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="606c-64a9-6624-1221-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="606c-64a9-6624-1221-max" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
