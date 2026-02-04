@@ -95,7 +95,7 @@
       <description>This Unit may not take the Attack Action. This Unit may not Move into Engagement with another Unit.</description>
     </rule>
     <rule name="Hitch" id="fcb1-fb43-02f5-c52a" hidden="false">
-      <description>This Unit has access to the Free action “Tow”. A Towable Unit may be deployed along with this Unit already being Towed.</description>
+      <description>This Unit has access to the Free action “Tow”. A Towable Unit may be deployed along with this Unit already being Towed. If this Unit has more than one Model, it may Tow that many Carriage Models, even if they are in a Battery.</description>
     </rule>
     <rule name="Hunter" id="84cf-7abc-e526-e12f" hidden="false">
       <description>When this Unit destroys the Leader Model of an Enemy Command Unit, gain 1 Intel point.</description>
@@ -205,21 +205,17 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     <rule name="Transport X" id="1fce-f78c-f02d-eeae" hidden="false">
       <description>You may Embark X Troops Units in this Transport.</description>
     </rule>
-    <rule name="Unmanageable" id="7a26-c952-fe2c-529f" hidden="false">
-      <description>No other Units or Commanders may be attached to this one.</description>
+    <rule name="Singular" id="7a26-c952-fe2c-529f" hidden="false">
+      <description>This Unit may not have Attaches.</description>
     </rule>
     <rule name="(CORE) Flex" id="18aa-27f1-0ef7-3fa1" hidden="false">
       <description>This Officer is considered to have all CORE types. If this Officer attaches to a Unit, it gains the CORE type of the Unit it attached to and loses all others.</description>
     </rule>
     <rule name="Dial In X" id="ff6d-dccf-e9fa-094b" hidden="false">
-      <description>This Unit begins each Round with a Dial In Counter set to X. When this Counter reaches 0, this Unit loses Cumbersome. Each time a Unit activates, select one Unit with Dial In in your army, tick down one Counter. If a Unit performs 3 or more Actions or uses a Difficult Action, tick this Counter down an additional time. 
-
-
-*This effect is not cumulative, regardless of how many Units with Dial In
-are in your army only one counter is ticked down at a time.</description>
+      <description>During the Command Phase, set the Dial In Counter to 0.  Each time a Unit activates, tick the Counter up by one. If a Unit performs 3 or more Actions or uses a Difficult Action, tick the Counter up an additional time. Until the Counter reaches X, this Unit has the Cumbersome Special Rule.</description>
     </rule>
     <rule name="Jump-Packs" id="fd2f-2557-0580-c397" hidden="false">
-      <description>This Unit&apos;s Evasion Score is increased by 2. Once per Activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword. It may choose to remove this Keyword at any point during its Activation. If this Unit engages a Unit without the Flying Keyword, it loses the Flying Keyword.</description>
+      <description>This Unit&apos;s Evasion Score is increased by 2. Once per Activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword. At any point during this Unit’s Activation or any of its subsequent Activations it may choose to remove this keyword. This Unit must remove the Flying keyword should it wish to enter Engagement with a Unit without the Flying Keyword.</description>
     </rule>
     <rule name="Battlefield Scanners" id="55ab-d297-8493-eecc" hidden="false">
       <description>When making an Attack Action this Unit ignores one level of Obscured.</description>
@@ -247,6 +243,12 @@ are in your army only one counter is ticked down at a time.</description>
     </rule>
     <rule name="Flak Shells" id="62d1-9898-61a2-0033" hidden="false">
       <description>This Unit&apos;s Autocannon and Machine Gun Weapons ignore the effects of the Flying Keyword when making Ranged Attacks.</description>
+    </rule>
+    <rule name="Setting Up!" id="7278-007d-f597-4cb3" hidden="false">
+      <description>This Unit may not be selected to Activate until another Friendly Unit has Activated. If the previous Unit selected to Activate in this Army had this Rule, this Unit may not be selected to Activate. This Rule may be ignored If all remaining Friendly Units have this Special Rule or the Cumbersome Special Rule.</description>
+    </rule>
+    <rule name="Dispersed Transport" id="a52e-192e-3784-7fe0" hidden="false">
+      <description>If a Model in this Unit is destroyed but the Unit itself was not, this Unit loses the Transport Keyword and all Units Embarked in this Transport must Bailout. No more than half of the Embarked Unit may be Destroyed via Bailout.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -1002,7 +1004,7 @@ are in your army only one counter is ticked down at a time.</description>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Unmanageable" hidden="false" id="5550-a658-0f07-f03f">
+    <selectionEntry type="upgrade" import="true" name="Singular" hidden="false" id="5550-a658-0f07-f03f">
       <infoLinks>
         <infoLink name="Unmanageable" id="Unmanageable" hidden="false" type="rule" targetId="7a26-c952-fe2c-529f"/>
       </infoLinks>
@@ -1026,14 +1028,15 @@ are in your army only one counter is ticked down at a time.</description>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In" hidden="false" id="69bb-53ff-a987-5a16">
+    <selectionEntry type="upgrade" import="true" name="Dial In 4" hidden="false" id="69bb-53ff-a987-5a16">
       <infoLinks>
-        <infoLink name="Dial In X" id="Dial In" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b"/>
+        <infoLink name="Dial In X" id="Dial In" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="4" field="name" arg="X"/>
+            <modifier type="replace" value="4" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Transport 3" hidden="false" id="c21a-a23a-7d6d-f1c9">
       <infoLinks>
@@ -1365,6 +1368,80 @@ are in your army only one counter is ticked down at a time.</description>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Setting Up!" hidden="false" id="56bf-4407-084a-e7ab">
+      <infoLinks>
+        <infoLink name="Setting Up!" id="0675-18b2-c84e-f322" hidden="false" type="rule" targetId="7278-007d-f597-4cb3"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c459-3ce9-e6a6-b19d-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c459-3ce9-e6a6-b19d-max" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="-5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dispersed Transport" hidden="false" id="9563-cf38-fd09-8533">
+      <infoLinks>
+        <infoLink name="Dispersed Transport" id="958b-dc3a-12e7-707f" hidden="false" type="rule" targetId="a52e-192e-3784-7fe0"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d206-6cc7-7a3a-a601-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d206-6cc7-7a3a-a601-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 8" hidden="false" id="dbe4-b002-79a9-5cf9">
+      <infoLinks>
+        <infoLink name="Dial In X" id="c8a4-8687-cb61-67cb" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="8" field="name" arg="X"/>
+            <modifier type="replace" value="8" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 12" hidden="false" id="9a0d-2598-17f5-b309">
+      <infoLinks>
+        <infoLink name="Dial In X" id="9ea0-8e5f-9f8a-1b96" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="12" field="name" arg="X"/>
+            <modifier type="replace" value="12" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 10" hidden="false" id="b5de-401d-ebc8-6737">
+      <infoLinks>
+        <infoLink name="Dial In X" id="f737-2904-1f91-0619" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="10" field="name" arg="X"/>
+            <modifier type="replace" value="10" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 6" hidden="false" id="f65e-0bb8-88ef-d0ca">
+      <infoLinks>
+        <infoLink name="Dial In X" id="6ceb-1734-c97b-ab48" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="6" field="name" arg="X"/>
+            <modifier type="replace" value="6" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 14" hidden="false" id="33e7-53a4-76be-084b">
+      <infoLinks>
+        <infoLink name="Dial In X" id="c8d1-b681-4373-685c" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="14" field="name" arg="X"/>
+            <modifier type="replace" value="14" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.3" revision="2" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.4" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -98,21 +98,33 @@
     <categoryEntry name="AUX Support" id="48f5-3131-be0b-5951" hidden="false"/>
     <categoryEntry name="Automaton" id="239b-db47-17c9-4f36" hidden="false">
       <constraints>
-        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b28c-b14a-816a-3272" includeChildSelections="true" includeChildForces="true" message="50th (Northumbrian) Automated Infantry Division: This Specialization requires one Autonomous Unit for each Non-Autonomous Unit in your {scope}"/>
+        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b28c-b14a-816a-3272" includeChildSelections="true" includeChildForces="true" message="50th (Northumbrian) Automated Infantry Division: This Specialization requires one Autonomous Unit for each Non-Autonomous Non-Transport Unit in your {scope}"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="0" field="b28c-b14a-816a-3272"/>
             <modifier type="increment" value="1" field="b28c-b14a-816a-3272">
               <repeats>
                 <repeat value="2" repeats="1" field="selections" scope="roster" childId="unit" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
               </repeats>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="b28c-b14a-816a-3272">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="b28c-b14a-816a-3272">
+              <repeats>
+                <repeat value="2" repeats="1" field="selections" scope="roster" childId="d4be-5aad-8560-5720" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+              </repeats>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
         </modifierGroup>
       </modifierGroups>
     </categoryEntry>
@@ -123,16 +135,20 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="0" field="b56d-2fc5-826a-f459"/>
+            <modifier type="set" value="0" field="b56d-2fc5-826a-f459">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7fd7-04c2-77b8-c8b1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
             <modifier type="increment" value="1" field="b56d-2fc5-826a-f459">
               <repeats>
                 <repeat value="2" repeats="1" field="selections" scope="roster" childId="unit" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
               </repeats>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7fd7-04c2-77b8-c8b1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7fd7-04c2-77b8-c8b1" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
         </modifierGroup>
       </modifierGroups>
     </categoryEntry>
@@ -197,6 +213,10 @@
     <categoryEntry name="Field Commander" id="6ea8-04f4-b21b-7fcf" hidden="false"/>
     <categoryEntry name="Die Paladin-Peers Karls des Großen (München)" id="7fd7-04c2-77b8-c8b1" hidden="true"/>
     <categoryEntry name="50th (Northumbrian) Automated Infantry Division" id="af8a-1a21-3380-77c4" hidden="true"/>
+    <categoryEntry name="Light" id="7584-5824-f5d2-050a" hidden="true"/>
+    <categoryEntry name="Medium" id="f94f-807f-eca3-d850" hidden="true"/>
+    <categoryEntry name="Heavy" id="bfe4-e968-133b-c62c" hidden="true"/>
+    <categoryEntry name="Command Unit" id="31ae-ff65-b3d1-e277" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Company" id="01ba-2120-7904-bce7" hidden="false" childForcesLabel="Platoons">
@@ -1620,7 +1640,7 @@
     </selectionEntry>
     <selectionEntry id="1238-8c88-8030-8d02" name="Infantry Platoon Abilities" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntries>
-        <selectionEntry id="e355-1035-2a08-355e" name="Coordinated Attack" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e355-1035-2a08-355e" name="Backbone of the Army" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce4e-1057-cbb-d75f-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce4e-1057-cbb-d75f-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -2084,7 +2104,7 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
             <profile name="Re-Deploy" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="ee44-f8da-346c-6fec">
               <characteristics>
                 <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">2 Intel</characteristic>
-                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">At the end of the first Set Up Phase; choose one of your Units. Remove it from the battlefield and Deploy it again anywhere within your Deployment Zone.</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">At the end of the first Set Up Phase; choose a non-superheavy Unit from your Army. Remove it from the battlefield and Deploy it again anywhere within your Deployment Zone.</characteristic>
               </characteristics>
             </profile>
             <profile name="Long-Range Artillery Bombardment" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="03cc-ea94-b004-30b3">
@@ -2148,13 +2168,13 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
       <description>All Units in the selected Platoon can perform the Button Up Reaction as a Free Action.</description>
     </rule>
     <rule id="3897-33c2-b987-e81d" name="Coordinated Attack" hidden="false">
-      <description>When you activate the selected Platoon’s Command Unit, you may also activate any other Units within 8” of it that also belong to this Platoon.</description>
+      <description>At the beginning of the Action Phase you may choose to give every (CORE) Infantry Unit in this Platoon one of the following Actions as a Standard Action: Supply Gathering, Intel Gathering, Build, Sentry, Steady.</description>
     </rule>
     <rule id="c461-b91e-f6c6-5dd8" name="Flanking Maneuver" hidden="false">
       <description>Each time an Enemy Unit is attacked by a Unit in this Platoon, reduce its max Cover level by 1 for the Round.</description>
     </rule>
     <rule id="9f61-2072-566a-5d02" name="Rounds on Target" hidden="false">
-      <description>Anytime you reduce a Dial In counter, move a Blast Token 1”</description>
+      <description>Anytime you reduce the Dial In counter, move three Blast Tokens 1”</description>
     </rule>
     <rule id="3414-34d7-5dfe-51c3" name="Eyes Ahead" hidden="false">
       <description>Units in this Platoon can, as a Free Action, Spot an enemy Unit in their Line of Sight. Until the end of the Round, any unit not from this Platoon may re-roll hit rolls of 1 when making Attacks against a Spotted Unit.</description>
@@ -2199,15 +2219,16 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
 - Tracked Units ignore Rough Terrain when taking Movement Actions.</description>
     </rule>
     <rule name="Flying" id="0c92-2b75-4b21-de63" hidden="false">
-      <description>- This Unit may not receive the benefit of Cover.
-- When taking a Movement Action this Unit ignores all Terrain Features and other Units. It may not end its movement on top of Terrain features.
-- This Unit may not engage or be engaged by other Units unless they also have the Flying keyword. 
-- When determining Range for Attacks against this Unit, Range is measured to the base of this Model, and then subtracted by 12&quot;.
-- This Unit is always considered to be Obscured.
+      <description>- This Unit may not receive any benefits from Terrain Features.
+- When performing a Movement Action this Unit ignores all Terrain Features and other Units. 
+- Unless this Unit has the Troops Keyword, it may not end its movement with its base on top of Terrain features.
+- This Unit may not Engage or be Engaged by other Units unless they also have the Flying keyword. 
+- When determining LOS to or from this Unit, this Unit is considered to be 12&quot; tall. 
+- All Attacks targeting or from this Unit, are measured using its base.
 - Line of Sight can be drawn through these Units to other Units as if not present on the Battlefield. 
-- When determining LOS, this model is considered to be 12&quot; tall.
 - This Unit benefits from the Multi-Level Terrain rule giving +1 to hit for the purposes of ranged attacks.
-- Units Embarked within this Unit are considered to have the Flying Keyword.</description>
+- Units Embarked within this Unit are considered to have the Flying Keyword.
+- This Unit may not be targeted by Attacks with the Flames, Gas, or Indirect Fire Special Rules.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2439,7 +2460,7 @@ Area, Heavy Terrain, Rough</characteristic>
                   </costs>
                   <rules>
                     <rule name="Onboard Mechanic" id="65d3-9dcb-74e3-457e" hidden="false">
-                      <description>As a Free Action, this Unit may Repair. If it does, recover 3 HP.</description>
+                      <description>This Unit has one additional Upgrade Slot. As a Free Action, this Unit may Repair. If it does, recover 3 HP.</description>
                     </rule>
                   </rules>
                   <constraints>
@@ -2776,8 +2797,15 @@ Area, Heavy Terrain, Rough</characteristic>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="greaterThan" value="0" field="selections" scope="parent" childId="2c6d-f1f1-2806-f533" shared="true" includeChildSelections="true"/>
-                    <condition type="greaterThan" value="0" field="selections" scope="parent" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="de04-b576-5388-e592" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -2795,6 +2823,7 @@ Area, Heavy Terrain, Rough</characteristic>
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="force" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
                     <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="70eb-c264-a9cb-1bfe" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="31ae-ff65-b3d1-e277" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2815,7 +2844,7 @@ Area, Heavy Terrain, Rough</characteristic>
         <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="b068-de68-7a68-a938">
           <rules>
             <rule name="Veteran" id="b6c8-f73c-5ade-f649" hidden="false">
-              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order. This Unit only loses one Action per two Suppression or Concussion Tokens. If this Unit is a Vehicle or a Carriage, it ignores the Difficult to Use Special Rule.</description>
+              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order.</description>
             </rule>
           </rules>
           <costs>
@@ -2848,6 +2877,37 @@ Area, Heavy Terrain, Rough</characteristic>
               <description>This Unit may not take the Capture Action. This Unit may not have Attaches attached to it.</description>
             </rule>
           </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mounted Mechanic" hidden="false" id="de04-b576-5388-e592">
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="5fa4-83e4-604b-4e05" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5fa4-83e4-604b-4e05">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="0400-848a-01aa-ae0c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Battle Hardened" hidden="false" id="72a2-3ebd-6239-c7df">
+          <rules>
+            <rule name="Battle Hardened" id="bc6d-0d48-0ca7-b525" hidden="false">
+              <description>This Unit only loses one Action per two Suppression or Concussion Tokens. If this Unit is a Vehicle or a Carriage, it ignores the Difficult to Use Special Rule.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="15"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="c1f9-13b0-ca38-415b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Hardened" field="name" scope="parent"/>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

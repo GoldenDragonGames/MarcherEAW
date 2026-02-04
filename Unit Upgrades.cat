@@ -1,26 +1,368 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="true" id="d60b-3dc1-aadc-8f9c" name="Unit Upgrades" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Carriage Upgrades" id="d2d4-2fae-45fa-6796" hidden="false">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Radio" hidden="false" id="0b9b-dacd-99a9-dc42">
+    <selectionEntryGroup name="Upgrades" id="f9bd-97ad-a621-5069" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Vehicle Upgrades" id="d75c-a162-bc8f-60f9" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Radio" hidden="false" id="a930-c1d6-5218-81ec">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60f0-144f-2678-1805" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Radio" id="6747-2057-3681-5623" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+              </infoLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Stowage" hidden="false" id="e029-f88a-885d-af7c">
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0876-fa85-bb0b-2f32" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Smoke Launchers" hidden="false" id="8617-347f-f1b5-c98c" type="selectionEntry" targetId="cdfc-fb66-7530-44d8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d15-d9b3-51da-8537" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Camouflage Netting" hidden="false" id="ab0c-1b07-42dd-dd9d" type="selectionEntry" targetId="0ae0-c2a3-03d0-5d2a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9524-f8b6-978b-0d86" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Fuel Drums" hidden="false" id="6fea-7eca-7dc7-49b1" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
+            <entryLink import="true" name="Designate Command Unit" hidden="false" id="b380-448e-91f6-5339" type="selectionEntry" targetId="4f50-ceb9-f07a-86c0"/>
+            <entryLink import="true" name="Professional NCO" hidden="false" id="30e7-ee3b-5b7b-17c1" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Maskirovka" hidden="false" id="9db7-e369-6134-9b87" type="selectionEntry" targetId="2001-c86c-a324-eb18">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Snow Chains" hidden="false" id="7105-aaf0-3164-e8eb" type="selectionEntry" targetId="0b82-fe2e-417f-0d5b">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Bolt-On Shield Generator" hidden="false" id="1c3a-72f0-768f-f61d" type="selectionEntry" targetId="cb6e-2d1c-2913-345b">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Overtuned" hidden="false" id="c1a2-db2b-c210-fdaf" type="selectionEntry" targetId="2065-730f-51ef-3021">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Zimmerit" hidden="false" id="de23-9102-6428-51c5" type="selectionEntry" targetId="7a52-982a-1b4e-deaf">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e65a-478c-3b95-a64b" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Sashimono" hidden="false" id="d713-ce0b-ffd2-6dd1" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Boiling Vessel" hidden="false" id="9628-e631-bfc8-5d07" type="selectionEntry" targetId="8ebe-8660-f3e0-e9bd">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Lightning Rod" hidden="false" id="1633-8d6d-ae53-1a83" type="selectionEntry" targetId="823f-cff0-6ffa-5d0c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Up-Armored" hidden="false" id="95d6-4552-ac62-73bb" type="selectionEntry" targetId="5e78-6c92-e6bf-bf7d"/>
+          </entryLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="908c-993a-4137-cbd8" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="3319-05f6-1f1b-f430"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Radio" id="9a2d-5a89-fb7d-9ac9" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
-          </infoLinks>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hot Cup of Coffee" hidden="false" id="c9ee-f6a4-4c1b-418b">
-          <rules>
-            <rule name="Hot Cup of Coffee" id="9d85-af77-0e95-ea34" hidden="false">
-              <description>This brew is steaming and your list looks neat and tidy.</description>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="de0d-e12c-a964-4e46" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="1" field="3319-05f6-1f1b-f430">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="bfe4-e968-133b-c62c" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="3319-05f6-1f1b-f430">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="f94f-807f-eca3-d850" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="3" field="3319-05f6-1f1b-f430">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="7584-5824-f5d2-050a" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="3319-05f6-1f1b-f430">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="a513-69b8-a6aa-6797" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Troops Upgrades" id="c42e-5415-a1c5-e2d8" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Radio Pack" hidden="false" id="42ab-cb82-c83d-d2e4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6537-beac-b145-86ec" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Radio" id="13c5-940b-9389-f2c8" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+                <infoLink name="Radio Pack" id="2a69-a20c-660c-500b" hidden="false" type="rule" targetId="9e5e-ab69-3f3f-545f"/>
+                <infoLink name="Forward Observer" id="2c87-64a0-18b1-6bb0" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
+              </infoLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Full Rucksacks" hidden="false" id="718f-b704-0f41-5e48">
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b5b-cde0-b36c-0f22" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Professional NCO" hidden="false" id="dc75-16bf-2544-e26c" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Technik Augmentation" hidden="false" id="31fc-4a43-2acc-2f02" type="selectionEntry" targetId="e280-8366-5a79-fa4f">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Pervitin" hidden="false" id="4ff2-f654-2bab-e702" type="selectionEntry" targetId="f451-0409-7336-476c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Pocket Manifesto" hidden="false" id="2773-4883-9cab-3f30" type="selectionEntry" targetId="46fd-c4d3-83b6-4137">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Sashimono" hidden="false" id="b812-4491-6982-7205" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Senninbari" hidden="false" id="032e-505e-5f18-d0b1" type="selectionEntry" targetId="93a9-1025-0d91-9941">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Combat Stimulants" hidden="false" id="c656-1ff7-6c46-8020" type="selectionEntry" targetId="2224-d1b8-6afd-f09c"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="6dc4-41a4-7144-d10c" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="1" field="e924-2661-e526-f174">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="bfe4-e968-133b-c62c" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="e924-2661-e526-f174">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="f94f-807f-eca3-d850" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="3" field="e924-2661-e526-f174">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="7584-5824-f5d2-050a" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="e924-2661-e526-f174"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Designations" id="19de-4537-8fed-5c59" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Designate Command Unit" hidden="false" id="4ce5-261f-b158-a429" type="selectionEntry" targetId="4f50-ceb9-f07a-86c0"/>
+            <entryLink import="true" name="Veteran" hidden="false" id="4c03-8695-48b6-ab33" type="selectionEntry" targetId="b068-de68-7a68-a938"/>
+            <entryLink import="true" name="Ace Vehicle" hidden="false" id="2019-9d0f-1059-439f" type="selectionEntry" targetId="2c6d-f1f1-2806-f533">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="de0d-e12c-a964-4e46" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Convert to Battery" hidden="true" id="575d-8707-5a11-8207" type="selectionEntry" targetId="b34c-a1ac-ba88-6465">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="forces" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="forces" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="unit" childId="c2bc-81f4-b62b-dc46" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Mounted Mechanic" hidden="false" id="a513-69b8-a6aa-6797" type="selectionEntry" targetId="de04-b576-5388-e592">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14f7-7564-a001-2eaf" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="de0d-e12c-a964-4e46" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Battle Hardened" hidden="false" id="02b4-d2f5-2bf5-d014" type="selectionEntry" targetId="72a2-3ebd-6239-c7df"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Cosmetics" id="82ae-cf23-7294-4153" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hot Cup of Coffee" hidden="false" id="c9ee-f6a4-4c1b-418b">
+              <rules>
+                <rule name="Hot Cup of Coffee" id="9d85-af77-0e95-ea34" hidden="false">
+                  <description>This brew is steaming and your list looks neat and tidy.</description>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="Hot Cup of Tea" field="name">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="1"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="749d-15eb-1bd9-deab" includeChildSelections="false"/>
+              </constraints>
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
@@ -32,165 +374,288 @@
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="1"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="749d-15eb-1bd9-deab" includeChildSelections="false"/>
-          </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="c2bc-81f4-b62b-dc46" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fresh Wool Socks" hidden="false" id="9f80-6b28-06f9-a20a">
+              <rules>
+                <rule name="Fresh Wool Socks" id="6823-e999-b097-91b7" hidden="false">
+                  <description>Your troops are nice and cozy and your list looks neat and tidy.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="1"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d514-51b5-f213-0b68" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="6dc4-41a4-7144-d10c" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fresh Paint Job" hidden="false" id="b267-74fb-a3e8-93a2">
+              <rules>
+                <rule name="Fresh Paint Job" id="5878-219b-323c-6733" hidden="false">
+                  <description>The paint on this vehicle is well applied and your list looks neat and tidy.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="1"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5265-f3b7-2f15-9d74" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="de0d-e12c-a964-4e46" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Polished Spurs" hidden="false" id="3d72-9380-b9df-ff8d">
+              <rules>
+                <rule name="Polished Spurs" id="9ee3-0244-445d-2577" hidden="false">
+                  <description>Your spurs shine brightly and your list looks neat and tidy.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="1"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1f8-5098-5e12-f502" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="71cc-1c64-2438-4030" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Cavalry Upgrades" id="09bd-0e27-0bcc-e66a" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Fuel Drums" hidden="false" id="144f-69cd-a545-2ec6" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
+            <entryLink import="true" name="Professional NCO" hidden="false" id="3cfb-809f-466a-207a" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Pervitin" hidden="false" id="c023-cc97-d9bb-ed9f" type="selectionEntry" targetId="f451-0409-7336-476c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Technik Augmentation" hidden="false" id="e91d-ff61-9ca3-e520" type="selectionEntry" targetId="e280-8366-5a79-fa4f">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Pocket Manifesto" hidden="false" id="094f-d31b-464b-a2e9" type="selectionEntry" targetId="46fd-c4d3-83b6-4137">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Sashimono" hidden="false" id="6a92-817a-9734-69c9" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Senninbari" hidden="false" id="ebc7-bc99-f527-384d" type="selectionEntry" targetId="93a9-1025-0d91-9941">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Combat Stimulants" hidden="false" id="d12a-72bf-f812-ed62" type="selectionEntry" targetId="2224-d1b8-6afd-f09c"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Radio Pack" hidden="false" id="bcda-d2d7-cc05-272c">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6387-a9a6-9e36-f256" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Radio" id="e03c-26b3-3a2b-87be" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+                <infoLink name="Radio Pack" id="a041-f5f7-5cf3-53f6" hidden="false" type="rule" targetId="9e5e-ab69-3f3f-545f"/>
+                <infoLink name="Forward Observer" id="abc2-8b22-8961-a993" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
+              </infoLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Well-Stocked Saddlebags" hidden="false" id="f159-cbc7-5737-2c7b">
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1251-c36d-52f6-da10" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="71cc-1c64-2438-4030" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="set" value="Hot Cup of Tea" field="name">
+                <modifier type="set" value="1" field="08c6-5602-d74d-fd3c">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="bfe4-e968-133b-c62c" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="08c6-5602-d74d-fd3c">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="f94f-807f-eca3-d850" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="3" field="08c6-5602-d74d-fd3c">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="7584-5824-f5d2-050a" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Veteran" hidden="false" id="fe9e-d33d-c242-46e7" type="selectionEntry" targetId="b068-de68-7a68-a938"/>
-        <entryLink import="true" name="Designate Command Unit" hidden="false" id="b78b-f949-789e-5f66" type="selectionEntry" targetId="4f50-ceb9-f07a-86c0"/>
-        <entryLink import="true" name="Professional NCO" hidden="false" id="22b5-1690-b630-c987" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Camouflage Netting" hidden="false" id="bf8d-910a-25d9-2993" type="selectionEntry" targetId="0ae0-c2a3-03d0-5d2a">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0391-b7c0-e018-4e53" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="08c6-5602-d74d-fd3c"/>
           </constraints>
-        </entryLink>
-        <entryLink import="true" name="Extra Crewman" hidden="false" id="f59a-615b-8674-f366" type="selectionEntry" targetId="9307-7a04-9c63-5341">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76da-d3a5-9f3b-acce" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Emplaced Gun" hidden="false" id="5cc8-632c-6c69-f000" type="selectionEntry" targetId="6300-3b6e-778a-86ce"/>
-        <entryLink import="true" name="Convert to Battery" hidden="true" id="575d-8707-5a11-8207" type="selectionEntry" targetId="b34c-a1ac-ba88-6465">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Carriage Upgrades" id="d2d4-2fae-45fa-6796" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Radio" hidden="false" id="0b9b-dacd-99a9-dc42">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="908c-993a-4137-cbd8" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Radio" id="9a2d-5a89-fb7d-9ac9" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+              </infoLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ammo Crates" hidden="false" id="6fb2-c539-1aa0-4cfa">
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="1"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a566-4b13-77fd-e356" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Professional NCO" hidden="false" id="22b5-1690-b630-c987" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="forces" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="forces" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Cavalry Upgrades" id="09bd-0e27-0bcc-e66a" hidden="false">
-      <entryLinks>
-        <entryLink import="true" name="Fuel Drums" hidden="false" id="144f-69cd-a545-2ec6" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
-        <entryLink import="true" name="Veteran" hidden="false" id="9296-ef8f-4a87-f8ec" type="selectionEntry" targetId="b068-de68-7a68-a938"/>
-        <entryLink import="true" name="Designate Command Unit" hidden="false" id="6784-1d92-6bf9-4026" type="selectionEntry" targetId="4f50-ceb9-f07a-86c0"/>
-        <entryLink import="true" name="Professional NCO" hidden="false" id="3cfb-809f-466a-207a" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Pervitin" hidden="false" id="c023-cc97-d9bb-ed9f" type="selectionEntry" targetId="f451-0409-7336-476c">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Technik Augmentation" hidden="false" id="e91d-ff61-9ca3-e520" type="selectionEntry" targetId="e280-8366-5a79-fa4f">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Pocket Manifesto" hidden="false" id="094f-d31b-464b-a2e9" type="selectionEntry" targetId="46fd-c4d3-83b6-4137">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Sashimono" hidden="false" id="6a92-817a-9734-69c9" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Senninbari" hidden="false" id="ebc7-bc99-f527-384d" type="selectionEntry" targetId="93a9-1025-0d91-9941">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Radio Pack" hidden="false" id="bcda-d2d7-cc05-272c">
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Camouflage Netting" hidden="false" id="bf8d-910a-25d9-2993" type="selectionEntry" targetId="0ae0-c2a3-03d0-5d2a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0391-b7c0-e018-4e53" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Extra Crewman" hidden="false" id="f59a-615b-8674-f366" type="selectionEntry" targetId="9307-7a04-9c63-5341">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76da-d3a5-9f3b-acce" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Emplaced Gun" hidden="false" id="5cc8-632c-6c69-f000" type="selectionEntry" targetId="6300-3b6e-778a-86ce"/>
+          </entryLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6387-a9a6-9e36-f256" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="a13e-b2d4-9444-ec0d"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Radio" id="e03c-26b3-3a2b-87be" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
-            <infoLink name="Radio Pack" id="a041-f5f7-5cf3-53f6" hidden="false" type="rule" targetId="9e5e-ab69-3f3f-545f"/>
-            <infoLink name="Forward Observer" id="abc2-8b22-8961-a993" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
-          </infoLinks>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Well-Stocked Saddlebags" hidden="false" id="3d72-9380-b9df-ff8d">
-          <rules>
-            <rule name="Well-Stocked Saddlebags" id="9ee3-0244-445d-2577" hidden="false">
-              <description>These saddlebags are stocked with some nice treats and your list looks neat and tidy.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="1"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1f8-5098-5e12-f502" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Grenades" id="eea8-69d6-1142-ff1c" hidden="false" defaultSelectionEntryId="none">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="c2bc-81f4-b62b-dc46" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="1" field="a13e-b2d4-9444-ec0d">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="bfe4-e968-133b-c62c" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="a13e-b2d4-9444-ec0d">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="f94f-807f-eca3-d850" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="3" field="a13e-b2d4-9444-ec0d">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="7584-5824-f5d2-050a" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Grenades" id="eea8-69d6-1142-ff1c" hidden="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d0a-a68b-985b-10e4" includeChildSelections="false"/>
           </constraints>
@@ -268,327 +733,20 @@
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="6dc4-41a4-7144-d10c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="71cc-1c64-2438-4030" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Troops Upgrades" id="c42e-5415-a1c5-e2d8" hidden="false">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Radio Pack" hidden="false" id="42ab-cb82-c83d-d2e4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6537-beac-b145-86ec" includeChildSelections="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Radio" id="13c5-940b-9389-f2c8" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
-            <infoLink name="Radio Pack" id="2a69-a20c-660c-500b" hidden="false" type="rule" targetId="9e5e-ab69-3f3f-545f"/>
-            <infoLink name="Forward Observer" id="2c87-64a0-18b1-6bb0" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
-          </infoLinks>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fresh Wool Socks" hidden="false" id="9f80-6b28-06f9-a20a">
-          <rules>
-            <rule name="Fresh Wool Socks" id="6823-e999-b097-91b7" hidden="false">
-              <description>Your troops are nice and cozy and your list looks neat and tidy.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="1"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d514-51b5-f213-0b68" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Grenades" id="2d2a-fa81-14c0-bb10" hidden="false" defaultSelectionEntryId="none">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f270-b7a0-8c20-a834" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Anti-Tank Grenade" hidden="false" id="c5e2-308f-ac34-5d94" type="selectionEntry" targetId="df31-4b9c-2573-ce31">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94e5-121d-6fcb-5b73" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="649a-add5-d1d6-d3ef" type="selectionEntry" targetId="47ca-8cd6-8c1a-8b67">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6554-67e8-bbd6-81e7" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Feu de Lis" hidden="false" id="2dc4-dcbe-4a75-6e37" type="selectionEntry" targetId="abe7-e36e-04a4-2300">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55d6-7858-98b2-e1bb" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Poison Gas Grenade" hidden="false" id="c02c-5f62-313c-3dc7" type="selectionEntry" targetId="9c1d-4baf-c3a9-0583">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lewes Bomb" hidden="false" id="dd99-791b-408b-ac34" type="selectionEntry" targetId="8562-0c68-8fd5-1e47">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Panzerfaust" hidden="false" id="8d00-fd2f-b9c1-e5f9">
-              <entryLinks>
-                <entryLink import="true" name="Panzerfaust" hidden="false" id="7f05-0fcd-f38f-a599" type="selectionEntry" targetId="73bb-0e52-5af2-462c"/>
-              </entryLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="RPG-3" hidden="false" id="6312-ba24-34b1-1b68">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink import="true" name="RPG-3" hidden="false" id="3d4c-6055-4ce1-d657" type="selectionEntry" targetId="3689-bd98-b082-788a">
-                  <constraints>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="aabb-3e03-8649-6e49" includeChildSelections="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae19-4e5e-a2c5-bbed" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="false" id="9f12-5901-9fd0-edd7">
-              <entryLinks>
-                <entryLink import="true" name="Satchel Charge" hidden="false" id="fd3b-2fb0-007f-d52c" type="selectionEntry" targetId="c9b6-4225-5278-d6b4"/>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Smoke Grenade" hidden="false" id="e670-4f66-f9c7-e9ae">
-              <entryLinks>
-                <entryLink import="true" name="Smoke Grenade" hidden="false" id="d977-fefb-8805-634e" type="selectionEntry" targetId="ef44-d791-e3da-0a08"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Veteran" hidden="false" id="4c03-8695-48b6-ab33" type="selectionEntry" targetId="b068-de68-7a68-a938"/>
-        <entryLink import="true" name="Designate Command Unit" hidden="false" id="4ce5-261f-b158-a429" type="selectionEntry" targetId="4f50-ceb9-f07a-86c0"/>
-        <entryLink import="true" name="Professional NCO" hidden="false" id="dc75-16bf-2544-e26c" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Technik Augmentation" hidden="false" id="31fc-4a43-2acc-2f02" type="selectionEntry" targetId="e280-8366-5a79-fa4f">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Pervitin" hidden="false" id="4ff2-f654-2bab-e702" type="selectionEntry" targetId="f451-0409-7336-476c">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Pocket Manifesto" hidden="false" id="2773-4883-9cab-3f30" type="selectionEntry" targetId="46fd-c4d3-83b6-4137">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Sashimono" hidden="false" id="b812-4491-6982-7205" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Senninbari" hidden="false" id="032e-505e-5f18-d0b1" type="selectionEntry" targetId="93a9-1025-0d91-9941">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Vehicle Upgrades" id="d75c-a162-bc8f-60f9" hidden="false">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Radio" hidden="false" id="a930-c1d6-5218-81ec">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60f0-144f-2678-1805" includeChildSelections="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Radio" id="6747-2057-3681-5623" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
-          </infoLinks>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fresh Paint Job" hidden="false" id="b267-74fb-a3e8-93a2">
-          <rules>
-            <rule name="Fresh Paint Job" id="5878-219b-323c-6733" hidden="false">
-              <description>The paint on this vehicle is well applied and your list looks neat and tidy.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Munitions" typeId="Points" value="1"/>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5265-f3b7-2f15-9d74" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="8617-347f-f1b5-c98c" type="selectionEntry" targetId="cdfc-fb66-7530-44d8">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d15-d9b3-51da-8537" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Camouflage Netting" hidden="false" id="ab0c-1b07-42dd-dd9d" type="selectionEntry" targetId="0ae0-c2a3-03d0-5d2a">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9524-f8b6-978b-0d86" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Fuel Drums" hidden="false" id="6fea-7eca-7dc7-49b1" type="selectionEntry" targetId="721a-6dbd-31f6-b2b9"/>
-        <entryLink import="true" name="Veteran" hidden="false" id="7dbe-5e87-8976-05cc" type="selectionEntry" targetId="b068-de68-7a68-a938"/>
-        <entryLink import="true" name="Designate Command Unit" hidden="false" id="b380-448e-91f6-5339" type="selectionEntry" targetId="4f50-ceb9-f07a-86c0"/>
-        <entryLink import="true" name="Professional NCO" hidden="false" id="30e7-ee3b-5b7b-17c1" type="selectionEntry" targetId="fc34-7ab9-21b6-2838">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Maskirovka" hidden="false" id="9db7-e369-6134-9b87" type="selectionEntry" targetId="2001-c86c-a324-eb18">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Snow Chains" hidden="false" id="7105-aaf0-3164-e8eb" type="selectionEntry" targetId="0b82-fe2e-417f-0d5b">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Bolt-On Shield Generator" hidden="false" id="1c3a-72f0-768f-f61d" type="selectionEntry" targetId="cb6e-2d1c-2913-345b">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Overtuned" hidden="false" id="c1a2-db2b-c210-fdaf" type="selectionEntry" targetId="2065-730f-51ef-3021">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Zimmerit" hidden="false" id="de23-9102-6428-51c5" type="selectionEntry" targetId="7a52-982a-1b4e-deaf">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e65a-478c-3b95-a64b" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Sashimono" hidden="false" id="d713-ce0b-ffd2-6dd1" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Boiling Vessel" hidden="false" id="9628-e631-bfc8-5d07" type="selectionEntry" targetId="8ebe-8660-f3e0-e9bd">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lightning Rod" hidden="false" id="1633-8d6d-ae53-1a83" type="selectionEntry" targetId="823f-cff0-6ffa-5d0c">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Up-Armored" hidden="false" id="95d6-4552-ac62-73bb" type="selectionEntry" targetId="5e78-6c92-e6bf-bf7d"/>
-        <entryLink import="true" name="Ace Vehicle" hidden="false" id="2019-9d0f-1059-439f" type="selectionEntry" targetId="2c6d-f1f1-2806-f533"/>
-      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
@@ -668,7 +826,7 @@
       </constraints>
       <rules>
         <rule name="Battery" id="d599-7833-60ad-52a3" hidden="false">
-          <description>This Unit may take up to 3 Models. This Unit may not be Towed. This Unit counts for 2 CORE Slots in this Platoon.</description>
+          <description>This Unit may take up to 3 Models. This Unit may not be Towed by Units with fewer Models than it has. This Unit counts for 2 CORE Slots in this Platoon.</description>
         </rule>
       </rules>
       <modifiers>
@@ -835,14 +993,14 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Pervitin" hidden="false" id="f451-0409-7336-476c">
       <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Munitions" typeId="Points" value="10"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <rules>
         <rule name="Pervitin" id="3d99-3505-46b5-52ef" hidden="false">
-          <description>Once per Game, remove all Suppression Tokens from this Unit.</description>
+          <description>Once per Game, remove any Tokens of your choice from this Unit.</description>
         </rule>
       </rules>
       <constraints>
@@ -1225,6 +1383,22 @@
         <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba" affects="self.entries.profiles.Model" scope="unit"/>
         <modifier type="decrement" value="2" field="3e68-f430-0d7c-5747" affects="self.entries.profiles.Model" scope="unit"/>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combat Stimulants" hidden="false" id="2224-d1b8-6afd-f09c">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <rules>
+        <rule name="Combat Stimulants" id="9bc4-df69-58e6-b72f" hidden="false">
+          <description>Once per Game, remove all Suppression Tokens from this Unit.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="153d-ccd1-e425-f849" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>

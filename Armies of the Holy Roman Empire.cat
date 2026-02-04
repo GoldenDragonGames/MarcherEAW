@@ -452,7 +452,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Pinzgauer Utility Truck" hidden="false" id="c4ec-fcb9-5f86-4c39" type="selectionEntry" targetId="ed6d-c907-b932-1d25">
+    <entryLink import="true" name="Pinzgauer Utility Truck Group" hidden="false" id="c4ec-fcb9-5f86-4c39" type="selectionEntry" targetId="ed6d-c907-b932-1d25">
       <categoryLinks>
         <categoryLink targetId="d4be-5aad-8560-5720" id="b2d2-6706-b5ac-f437" primary="true" name="Transport"/>
         <categoryLink targetId="de0d-e12c-a964-4e46" id="c66e-b784-0420-270d" primary="false" name="Vehicle"/>
@@ -917,9 +917,9 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="2"/>
         <cost name="Munitions" typeId="Points" value="0"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="2cm Autocannon" hidden="false" id="c7ef-dc76-d58d-4167" collective="true">
@@ -1222,12 +1222,13 @@
     <selectionEntry type="upgrade" import="true" name="Knecht Hellebarde" hidden="false" id="37d5-5d34-dfe6-51eb">
       <infoLinks>
         <infoLink name="Knecht Hellebarde" id="9cdd-c420-4919-f86f" hidden="false" type="profile" targetId="a2d7-e8cb-69d9-62e"/>
+        <infoLink name="Devastating Reach X" id="5d87-7a15-e761-4e6f" hidden="false" type="rule" targetId="3f77-55e6-4481-2bde">
+          <modifiers>
+            <modifier type="replace" value="4" field="name" arg="X"/>
+            <modifier type="replace" value="4" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
-      <rules>
-        <rule name="Devastating Reach" id="3f77-55e6-4481-2bde" hidden="false">
-          <description>This melee weapon may make attacks at 6&quot;.</description>
-        </rule>
-      </rules>
       <costs>
         <cost name="Munitions" typeId="Points" value="32"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -2139,7 +2140,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Devastating Reach, Dual Wield</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Devastating Reach 4</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2565,13 +2566,17 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="1cd3-2e77-6bdc-8437" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="1cd3-2e77-6bdc-8437" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="fe35-ece5-da3b-9d39" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <rules>
             <rule name="Directed Shields" id="e38f-ecde-4496-9277" hidden="false">
               <description>If this Unit Activates its Shield Generator against an Attack against its Frontal Armor Profile, it gains Bulwark 4 until the attack is resolved.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="a7e9-12fc-0f48-1d5d" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="38M Franz Joseph Battle Tank" hidden="false" id="4f49-202f-fad5-9d40" collective="false">
           <profiles>
@@ -2822,8 +2827,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7e6b-98e1-3929-0ba6" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="7e6b-98e1-3929-0ba6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="1c40-895e-8a34-ffc8" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="43M Árpád Tank Hunter" hidden="false" id="30f4-334f-3fa6-795c" collective="false">
           <profiles>
@@ -2846,7 +2854,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="0acf-504a-6eaf-9f9a" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0acf-504a-6eaf-9f9a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Big Game Hunter" hidden="false" id="16be-4dc5-22e2-1fae" type="selectionEntry" targetId="4f71-b8b7-07c0-7d5e"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="16aa-9fa5-2ccf-ab76" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Tank Destroyer" hidden="false" id="66b3-404f-8536-0cad" type="selectionEntry" targetId="true"/>
@@ -2923,6 +2931,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="2bca-00f4-6aca-4b3e" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2996,7 +3007,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="7"/>
+                    <cost name="Munitions" typeId="Points" value="5"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3032,7 +3043,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="7"/>
+                    <cost name="Munitions" typeId="Points" value="5"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3056,7 +3067,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="39c4-b902-ce03-9e53" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="39c4-b902-ce03-9e53" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3065,9 +3076,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </costs>
           <rules>
             <rule name="Mozgósítási Menetrend" id="aa86-e984-34d7-f568" hidden="false">
-              <description>When you use the Reinforcement Special Requisition targeting this Unit, it is deployed at full strength.</description>
+              <description>At the end of this Unit’s Activation, if it is not already in contact with a Terrain Feature, it may choose to make a Free Dash Action towards the nearest Terrain Feature. If they end this Action in contact with a Terrain Feature, they gain a level of Cover.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="14e0-67ba-e687-2331" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Landwehr Squad" hidden="false" id="a7a0-9f96-37f9-f36e" collective="false">
           <profiles>
@@ -3287,7 +3301,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="c0e6-acb1-fcbc-09ee" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="c0e6-acb1-fcbc-09ee" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -3300,6 +3314,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <description>This Unit may activate its Shield Generator an additional time each Round.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="e7c6-1b94-53a3-45a5" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3558,7 +3575,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="90ad-0f00-0f57-ba67" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="90ad-0f00-0f57-ba67" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Jump Packs" hidden="false" id="5ad5-8057-b837-1a92" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
           </entryLinks>
           <costs>
@@ -3571,6 +3588,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <description>If this Unit is Flying, Embarked in a Flying Transport, or at least 3&quot; above a Unit they Target for a Ranged Attack, their weapons gain the Close In Special Rule.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="a11d-e1e6-dd1e-f86a" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Zeppelinjäger Scharfschütze Team" hidden="false" id="8977-05aa-cd6e-8a24" collective="false">
           <profiles>
@@ -3727,12 +3747,15 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="e36e-6273-813a-8086" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="e36e-6273-813a-8086" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Jump Packs" hidden="false" id="bce3-d1e1-1f44-83df" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="caa2-3579-c3de-08ff" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Hunter" hidden="false" id="0ad8-ba6f-8c09-4bdf" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="4401-9da6-43da-5981" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="4486-8c30-2487-eabf" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Scharfschütze Team" hidden="false" id="4db9-3228-1699-ef8f" collective="false">
           <profiles>
@@ -3884,11 +3907,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="be13-e721-6471-716f" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="be13-e721-6471-716f" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="7b25-272c-0f43-85e1" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Hunter" hidden="false" id="0379-0f3b-8c08-45fb" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="39f7-bec2-49a5-55b8" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="9bdd-134f-8418-ddfb" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="22M Radetzky Armored Car" hidden="false" id="96de-d712-d047-637e" collective="false">
           <profiles>
@@ -3986,10 +4012,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="5296-4fab-9f16-d568" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="5296-4fab-9f16-d568" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="9f60-3803-8539-2ff2" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Intel Gathering" hidden="false" id="baea-adc7-feb6-b3af" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="65c3-9e58-f254-75bb" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Treadbike Ulan Lance" hidden="false" id="4c03-5835-534e-1ca2">
           <profiles>
@@ -4008,7 +4037,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="4d0e-c834-e02e-567d" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="4d0e-c834-e02e-567d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Cavalry Actions" id="4db9-b67b-b5bb-21a9" hidden="false" type="profile" targetId="95c6-33a2-c463-50c9"/>
@@ -4168,6 +4197,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="1fb6-4359-214c-e65a" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4186,12 +4218,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </profiles>
           <infoLinks>
             <infoLink name="Crewed Weapon Siege Troop Actions" id="6b00-02fb-f729-faba" hidden="false" targetId="a630-8180-c3b3-9f81" type="profile"/>
-            <infoLink name="Dial In X" id="c44d-a93a-0184-79f0" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="4" field="name" arg="X"/>
-                <modifier type="replace" value="4" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="5768-3a67-f64f-7ab1" hidden="false" collective="false" import="true">
@@ -4252,8 +4278,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="bb5a-b405-62c7-29f2" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="b1d4-d168-d7f7-3388" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="ff28-265d-85cc-7efd" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="23d1-7d3e-4b36-2636" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="43M Árpád Support Gun" hidden="false" id="e5d1-8887-1013-3f91" collective="false">
           <profiles>
@@ -4269,12 +4299,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="f211-525d-f96f-3cc2" hidden="false" targetId="ad55-69e8-9339-6df7" type="profile"/>
             <infoLink name="Cook Off" id="f2cf-38cb-1e46-6cca" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
-            <infoLink name="Dial In X" id="dfc9-efbb-cf5b-bc4b" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="8" field="name" arg="X"/>
-                <modifier type="replace" value="8" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -4282,8 +4306,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="621a-fd95-58b4-77c6" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="b628-ea6e-7833-c75e" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="621a-fd95-58b4-77c6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="e177-f111-447c-a8f0" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af07-17a9-ab02-b87a-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af07-17a9-ab02-b87a-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="43M Árpád Support Gun" hidden="false" id="a205-479e-4cc9-c569">
@@ -4351,6 +4380,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="a68d-7526-8915-7034" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="28M Wallenstein Armored Halftrack Höllenwerfer Carrier" hidden="false" id="a4a2-2bd5-1df2-8687" collective="false">
           <profiles>
@@ -4365,12 +4397,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </profiles>
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="edc9-4e9e-1a64-56d0" hidden="false" targetId="ad55-69e8-9339-6df7" type="profile"/>
-            <infoLink name="Dial In X" id="76ea-d872-1220-5c96" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="12" field="name" arg="X"/>
-                <modifier type="replace" value="12" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -4378,8 +4404,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="5564-b549-d592-10fe" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="86e6-70cb-d4f2-b12d" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="5564-b549-d592-10fe" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="1fc0-392c-c9ba-12cc" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="671a-b919-7c0f-e4f3-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="671a-b919-7c0f-e4f3-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="unit" import="true" name="28M Wallenstein Armored Halftrack Höllenwerfer Carrier" hidden="false" id="a7cb-e3ad-bda5-e234">
@@ -4422,6 +4453,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="a35d-6e2f-4252-6470" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="21cm Morser" hidden="false" id="2b90-28f4-5032-a79e" collective="false">
           <profiles>
@@ -4436,12 +4470,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </profiles>
           <infoLinks>
             <infoLink name="Siege Carriage Actions" id="6513-e0c5-32c5-e0cf" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
-            <infoLink name="Dial In X" id="4671-908b-42af-da42" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="12" field="name" arg="X"/>
-                <modifier type="replace" value="12" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -4450,9 +4478,54 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="a301-787e-d5ac-28a1" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="b48a-19e4-b352-fa6e" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="a301-787e-d5ac-28a1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="a34d-d0f6-af38-1f31" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="ca4e-3166-f955-c9a1" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <modifiers>
+                <modifier type="decrement" value="1" field="5d87-c3ba-7b0b-b4e5-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="5d87-c3ba-7b0b-b4e5-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d87-c3ba-7b0b-b4e5-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d87-c3ba-7b0b-b4e5-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Dial In 8" hidden="true" id="3043-e9f6-17fa-5524" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f168-b009-c418-8704-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f168-b009-c418-8704-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f168-b009-c418-8704-min" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f168-b009-c418-8704-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -4507,6 +4580,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="5f1a-40eb-1fd3-73b6" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="27M Höllenwerfer" hidden="false" id="29d3-9b34-9029-9322" collective="false">
           <profiles>
@@ -4521,12 +4597,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </profiles>
           <infoLinks>
             <infoLink name="Siege Carriage Actions" id="3273-c8fa-967a-e28d" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
-            <infoLink name="Dial In X" id="9715-f87c-7aab-4205" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="12" field="name" arg="X"/>
-                <modifier type="replace" value="12" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -4535,8 +4605,53 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="b88e-4571-24a4-f1d1" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="b79a-b380-3471-f24f" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="b88e-4571-24a4-f1d1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="22fa-08d8-11fe-0988" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
+              <modifiers>
+                <modifier type="decrement" value="1" field="d905-df07-644e-e157-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="d905-df07-644e-e157-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d905-df07-644e-e157-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d905-df07-644e-e157-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="true" id="4cde-600d-4836-ed08" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f4b5-612c-2d29-2d59-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f4b5-612c-2d29-2d59-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f4b5-612c-2d29-2d59-min" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f4b5-612c-2d29-2d59-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -4597,6 +4712,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="9bde-b9b4-1dde-62b6" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="38M Franz Joseph Support Tank" hidden="false" id="3ff8-cf6e-bd35-e806" collective="false">
           <profiles>
@@ -4612,13 +4730,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="d1ae-2990-c6f2-9df7" hidden="false" targetId="ad55-69e8-9339-6df7" type="profile"/>
             <infoLink name="Cook Off" id="97d1-28ad-1c71-6a3d" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
-            <infoLink name="Cumbersome" id="dfa5-00cb-2979-f78b" hidden="false" type="rule" targetId="a105-2c5d-bb1d-e679"/>
-            <infoLink name="Dial In X" id="3824-bb31-54bd-ed0c" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="6" field="name" arg="X"/>
-                <modifier type="replace" value="6" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="38M Franz Joseph Support Tank" hidden="false" id="cbb3-9e89-4497-588c">
@@ -4749,8 +4860,17 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="dd25-1805-58ff-940b" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="dd25-1805-58ff-940b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="7b33-72fd-8d07-f01a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b938-8175-8d02-b501-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b938-8175-8d02-b501-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="2e33-db20-82ab-3362" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5084,12 +5204,16 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="e1de-739d-9809-f910" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="e1de-739d-9809-f910" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="0f58-99b9-5c55-38e9" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="09c4-0894-6524-e535" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Command Car" hidden="false" id="8a67-c493-8398-2c77" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
             <entryLink import="true" name="Low Profile" hidden="false" id="6733-144d-f20b-9b65" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="31ae-ff65-b3d1-e277" id="deae-229d-0185-3fa8" primary="false" name="Command Unit"/>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="530d-9cc6-4cbc-84f4" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Pinzgauer Staff Car" hidden="false" id="19a-a31b-29e3-1f0b" collective="false">
           <profiles>
@@ -5111,7 +5235,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="499a-4000-934b-28a2" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="499a-4000-934b-28a2" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="7190-f0c0-6c80-330b" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="10de-5d46-5d1c-7d8e" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="9c9d-5302-f526-7dce" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -5142,6 +5266,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="31ae-ff65-b3d1-e277" id="7e79-66a4-16bd-fc4d" primary="false" name="Command Unit"/>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="0b6a-9744-b1fc-2f38" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Sturmpioneer Officer" hidden="false" id="b6e5-f77f-a7fb-bb7f" collective="false">
           <profiles>
@@ -5479,6 +5607,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </rules>
           <categoryLinks>
             <categoryLink name="AUX Support" hidden="false" id="87bc-a689-bd05-b1a5" targetId="48f5-3131-be0b-5951" primary="true"/>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="dcad-4e21-4ed5-3514" primary="false" name="Light"/>
           </categoryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Towable Shield Generator" hidden="false" id="c98f-c804-d027-0fad">
@@ -5643,7 +5772,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="c9b6-832e-fb22-096a" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="c9b6-832e-fb22-096a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Battlefield Preparation" hidden="false" id="62b0-45e4-b4ca-e97b" type="selectionEntry" targetId="e29a-356e-d59f-6017"/>
             <entryLink import="true" name="Logistics" hidden="false" id="e306-17f1-7779-bc05" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="ae99-fd36-ba5e-e542" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -5655,6 +5784,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="54eb-ac2b-e17c-18cc" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Landwehr Heavy Weapon Squad" hidden="false" id="450f-e138-2c3d-b1f9" collective="false">
           <profiles>
@@ -5758,8 +5890,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="914a-922b-84e1-022e" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="914a-922b-84e1-022e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="486b-133a-ecc6-b8fb" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="3733-e519-7f8b-e97a" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="18M Towed Gun" hidden="false" id="c82b-b723-248d-80d4" collective="false">
           <profiles>
@@ -5781,7 +5917,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="4c70-2c02-24b1-865a" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="4c70-2c02-24b1-865a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="c32d-fc8d-7f72-797f" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
           </entryLinks>
           <modifiers>
@@ -5862,6 +5998,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="ba11-8551-d786-db6d" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6028,7 +6167,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="0b58-f677-b73d-459b" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0b58-f677-b73d-459b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Aerial Deployment" hidden="false" id="a82e-30f7-2b04-ba5e" type="selectionEntry" targetId="4a83-5712-b9b5-9366"/>
             <entryLink import="true" name="Bailout (Aerial)" hidden="false" id="611a-b852-464d-0359" type="selectionEntry" targetId="5c1e-3431-d20e-c18a"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="69d4-b97a-24b0-95a1" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
@@ -6040,8 +6179,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <description>When this Unit activates its Shield Generator, it may reduce incoming weapons AP by an additional 2 once without spending an Action. It may do this even if it has already Activated.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="7113-b48c-e7d2-60f5" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Pinzgauer Utility Truck" hidden="false" id="ed6d-c907-b932-1d25" collective="false">
+        <selectionEntry type="unit" import="true" name="Pinzgauer Utility Truck Group" hidden="false" id="ed6d-c907-b932-1d25" collective="false">
           <profiles>
             <profile name="Pinzgauer Utility Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c5bf-6196-5759-3d8c">
               <characteristics>
@@ -6061,11 +6203,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="2627-6056-42ce-a31c" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="2627-6056-42ce-a31c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout (Dangerous)" hidden="false" id="2478-6fab-027d-39ee" type="selectionEntry" targetId="5a82-466c-c50e-1653"/>
             <entryLink import="true" name="Hitch" hidden="false" id="5f37-9b37-7bd9-f01f" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="6e7c-6be4-fc02-d565" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
             <entryLink import="true" name="Transport 1" hidden="false" id="3f25-dccf-4d2d-49bc" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
+            <entryLink import="true" name="Open Topped 1" hidden="false" id="dee5-ddd3-42ea-1e2b" type="selectionEntry" targetId="e13c-3734-a7a3-be4a"/>
+            <entryLink import="true" name="Dispersed Transport" hidden="false" id="67c2-d560-4e4a-7e78" type="selectionEntry" targetId="9563-cf38-fd09-8533"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Pinzgauer Utility Truck" hidden="false" id="a22d-ea3d-0305-a394">
@@ -6086,11 +6230,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f06-f80c-631b-8afe-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f06-f80c-631b-8afe-max" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8f06-f80c-631b-8afe-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8f06-f80c-631b-8afe-max" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="c6f3-1260-db91-f68f" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="28M Wallenstein Armored Halftrack" hidden="false" id="45bb-9f62-bc39-2e51" collective="false">
           <profiles>
@@ -6135,7 +6282,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="5493-80dc-eaf5-6a13" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="5493-80dc-eaf5-6a13" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Transport 1" hidden="false" id="46de-ae4e-9970-d607" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
             <entryLink import="true" name="Bailout" hidden="false" id="e7df-f7a8-26b9-4c47" type="selectionEntry" targetId="2cd2-087b-e9a1-6072"/>
             <entryLink import="true" name="Hitch" hidden="false" id="1189-00f7-7dc2-7003" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
@@ -6181,6 +6328,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="9fd2-bddc-121b-690f" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="20M Supply Truck" hidden="false" id="d807-88e6-8ddb-912b" collective="false">
           <profiles>
@@ -6202,7 +6352,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="9554-520e-84ec-7b19" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="9554-520e-84ec-7b19" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout (Dangerous)" hidden="false" id="c815-f139-e5af-4831" type="selectionEntry" targetId="5a82-466c-c50e-1653"/>
             <entryLink import="true" name="Hitch" hidden="false" id="aa12-b7b8-9a03-73c7" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="7cfa-0aeb-a13a-f774" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
@@ -6257,6 +6407,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="497c-7c69-39b9-35d8" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="39M Brudermann Gun Tractor" hidden="false" id="ea21-f5f8-bd1a-7096" collective="false">
           <profiles>
@@ -6278,7 +6431,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f3e9-1ce5-924c-d49b" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="f3e9-1ce5-924c-d49b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="ade7-96f2-138c-0f24" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Gun Tractor" hidden="false" id="25e1-c591-5f38-8ff9" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="fc4d-7eb1-3ca5-5ba4" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -6317,6 +6470,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="1786-fe89-0089-4e20" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6436,8 +6592,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <rules>
-            <rule name="Grandmaster of the Maccabeans" id="f978-16c1-131-267d" hidden="false">
-              <description>As a Standard Action, Chaim Drescher: The Maccabean Knight, may make a Melee Attack as a Free Action against all Enemy units within 6&quot;.</description>
+            <rule name="Tournament Champion" id="f978-16c1-131-267d" hidden="false">
+              <description>As a Difficult Action Chaim Drescher: The Maccabean Knight may Declare a Melee. If he does, he may make a Melee Attack as a Free Action against all Enemy Units within Engagement Range.</description>
             </rule>
             <rule name="Command Squad " id="ae16-9699-847e-f2fb" hidden="false">
               <description>This unit may only attach to the designated units.</description>
@@ -6445,8 +6601,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <modifier type="append" value="Knecht Battlesuit Squad" field="name"/>
               </modifiers>
             </rule>
-            <rule name="Knight Commander" id="8960-48f9-9dcd-99f9" hidden="false">
-              <description>In the Command Phase, Chaim Drescher: The Maccabean Knight, issues an Order to every Unit of Panzergrenadiers and Knecht Battlesuits in this Platoon. If Chaim Drescher: The Maccabean Knight is your Field Commander, Order all Panzergrenadiers and Knecht Battlesuits in your Army. These Orders are issued regardless of range.</description>
+            <rule name="Grandmaster of the Maccabeans" id="8960-48f9-9dcd-99f9" hidden="false">
+              <description>In the Command Phase, Chaim Drescher: The Maccabean Knight, may issue an Order to every friendly Battlesuit Unit within 8&quot; and Line of Sight. If Chaim Drescher: The Maccabean Knight is your Field Commander, he may instead issue an Order to every friendly Battlesuit Unit within Line of Sight.</description>
             </rule>
           </rules>
           <constraints>
@@ -6778,14 +6934,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </costs>
           <rules>
             <rule name="Der Stolz des Himmels!" id="2342-02e0-27e2-f057" hidden="false">
-              <description>You may use the Well Informed Special Requisition any number of times per Round, so long as the the additional uses apply to Friendly Units within 12&quot; of this one.</description>
+              <description>You may use the Well Informed Special Requisition any number of times per Round, so long as the the additional uses apply to other Friendly Units within 12&quot; of this one.</description>
             </rule>
             <rule name="High-Powered Shield Generator" id="f726-0287-b9b2-1dce" hidden="false">
               <description>When this Unit activates its Shield Generator, it may reduce incoming weapons AP by an additional 2 once without spending an Action. It may do this even if it has already Activated.</description>
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="6ff7-cbef-dca6-6268" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="6ff7-cbef-dca6-6268" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Cumbersome" hidden="false" id="3200-ebdf-cb58-ad60" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
             <entryLink import="true" name="Intelligence" hidden="false" id="6a73-0509-d66d-feda" type="selectionEntry" targetId="65f3-25c2-05a8-cf41"/>
             <entryLink import="true" name="Crash Landing" hidden="false" id="05d8-e16f-fbb9-6f31" type="selectionEntry" targetId="b970-d336-823b-3ce3"/>
@@ -6924,7 +7080,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="615b-ddff-c414-48b1" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="615b-ddff-c414-48b1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="b35a-4a5f-1f5e-15d4" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
           </entryLinks>
           <selectionEntries>
@@ -6952,6 +7108,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="3751-f09c-2039-d9c8" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Panzergrenadier Squad" hidden="false" id="45f2-6f9d-f25c-ac62" collective="false">
           <profiles>
@@ -7089,13 +7248,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e110-bc76-eaee-027d-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
+                    <entryLink import="true" name="Bergmann Pistol M1938" hidden="false" id="8422-1905-2c0d-47cd" type="selectionEntry" targetId="e85b-5482-785f-59fb">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a05-898f-e2cc-84a6" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="07e2-982c-701b-0c79" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="a45a-70fc-a975-4d0b" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="a45a-70fc-a975-4d0b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="25"/>
@@ -7111,6 +7276,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <description>When other Troop Units within 8&quot; of this Unit activate their Shield Generator, they may reduce the AP profile of incoming Weapon Profiles by 1 to a minimum of 0.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="57eb-afcf-5ce9-4345" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Knecht Battlesuit Squad" hidden="false" id="72da-15ed-1a55-d98a" collective="false">
           <profiles>
@@ -7254,7 +7422,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   </costs>
                   <rules>
                     <rule name="Pike Breaker" id="18b8-abcf-bfde-a6ad" hidden="false">
-                      <description>As a Difficult Action, this Unit may choose to Rush. If it does, choose an Enemy Unit and roll 1D10, it may move that many inches along with its Movement Score towards that Unit. If this Unit enters Engagement with that Unit in this way, consider its Melee Weapons to have the Charge! Special Rule.</description>
+                      <description>As a Difficult Action, this Unit may choose to Rush. If it does, choose an Enemy Unit and roll 1D10, it may move that many inches towards that Unit. If this Unit enters Engagement with that Unit in this way, consider its Melee Weapons to have the Charge! Special Rule.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -7363,7 +7531,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="78f8-3e16-a64a-77e5" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="78f8-3e16-a64a-77e5" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bulwark 1" hidden="false" id="5053-870c-e2af-5d67" type="selectionEntry" targetId="b9b0-158c-a4b1-de50"/>
           </entryLinks>
           <rules>
@@ -7371,6 +7539,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <description>As a Standard Action, this Unit may choose to Inspire. If it does, give a Suppression token to every Enemy Troop Unit within 8&quot; of this Unit. For every Token given in this way, you may remove a Suppression token from a Friendly Unit within 8&quot; of this Unit.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="8072-79a7-61eb-512a" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="32M Hunyadi Armored Personnel Carrier" hidden="false" id="5030-3495-b40b-fc19" collective="false">
           <profiles>
@@ -7392,7 +7563,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="9819-28bc-59c1-f9ae" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9">
+            <entryLink import="true" name="Upgrades" hidden="false" id="9819-28bc-59c1-f9ae" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
               <entryLinks>
                 <entryLink import="true" name="Zimmerit" hidden="false" id="9fa6-6daf-5791-598f" type="selectionEntry" targetId="7a52-982a-1b4e-deaf">
                   <constraints>
@@ -7546,6 +7717,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="ffcf-12cf-2b7a-a9f4" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="32M Bergepanzer Armored Recovery Vehicle" hidden="false" id="1fd4-4713-6515-4349" collective="false">
           <profiles>
@@ -7568,7 +7742,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f527-9329-32dd-0725" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9">
+            <entryLink import="true" name="Upgrades" hidden="false" id="f527-9329-32dd-0725" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
               <entryLinks>
                 <entryLink import="true" name="Zimmerit" hidden="false" id="fc40-379b-6c89-6a72" type="selectionEntry" targetId="7a52-982a-1b4e-deaf">
                   <constraints>
@@ -7651,6 +7825,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="2236-ac83-ddde-d5b0" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="28M Wallenstein Armored Halftrack Gun Carrier" hidden="false" id="7571-1648-52e0-4709" collective="false">
           <profiles>
@@ -7672,7 +7849,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="de85-fdd9-a089-ebf4" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="de85-fdd9-a089-ebf4" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="4c9e-08a0-f9bf-21d3" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
           </entryLinks>
           <selectionEntries>
@@ -7732,6 +7909,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="4a08-17cd-df77-54cd" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -7848,7 +8028,7 @@ This Unit may reroll 1s and 2s for Armor Penetration Checks against the Challeng
         <selectionEntry type="upgrade" import="true" name="1st Royal Teuton Division (Konigsberg)" hidden="false" id="0495-ce03-d9cb-7377">
           <rules>
             <rule name="Auditors of Death" id="8af6-88e9-9972-a949" hidden="false">
-              <description>Engineer Units in your Army may use a Standard Action to Tick the Dial In Counter of a Siege Unit within 8’’ of them down by one. 
+              <description>Engineer Units in your Army may use a Standard Action to Tick the Dial In Counter up by 1.
 
 
 Units with the Siege Sub-Type receive an Aim token if they are within 8&apos;&apos; of a Command Unit or Engineer at the start of their activation.</description>

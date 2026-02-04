@@ -455,9 +455,10 @@
       <infoLinks>
         <infoLink name="Plasma Cutter Claw" id="8ea3-46a6-5740-1a46" hidden="false" type="profile" targetId="2986-35a7-37de-23ef"/>
         <infoLink name="Slag" id="05b5-937a-aa1d-f180" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
+        <infoLink name="Charge!" id="bf8c-a425-67ce-3cab" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="31"/>
+        <cost name="Munitions" typeId="Points" value="36"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1299,7 +1300,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag, Charge!</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -2705,8 +2706,11 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="c9ea-3715-2321-577a" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="c9ea-3715-2321-577a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="5586-fce6-a7e9-ad5c" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 90 O-Ni Heavy Tank" hidden="false" id="6ba6-22ae-2c07-1df">
           <costs>
@@ -2929,8 +2933,12 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7688-0ad8-bbdd-bdc7" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="7688-0ad8-bbdd-bdc7" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="7e19-fe1e-8c9b-027b" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="563f-8e29-0860-9123" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 89 Ke-Ni Gas Dispersion Vehicle" hidden="false" id="cc23-c797-f85e-f92f">
           <costs>
@@ -2953,7 +2961,7 @@
             <infoLink name="Rupture" id="c647-e2ba-c78e-7ad4" hidden="false" type="rule" targetId="a49f-3cb5-cb1f-7b2f"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f261-7236-bff0-9b03" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="f261-7236-bff0-9b03" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Sealed" hidden="false" id="9384-04f5-0cf9-b574" type="selectionEntry" targetId="e0c5-8061-435d-80b1"/>
           </entryLinks>
           <selectionEntries>
@@ -3003,6 +3011,9 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="6c18-9b1f-3f64-d0ec" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJN Type 100 ShinHōtō Heike Self Propelled Gun" hidden="false" id="1309-39e7-78ed-f94e">
           <costs>
@@ -3085,10 +3096,14 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="20a6-27ed-c152-516e" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="20a6-27ed-c152-516e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Tank Destroyer" hidden="false" id="909c-5d75-5ba2-0c25" type="selectionEntry" targetId="true"/>
             <entryLink import="true" name="Amphibious" hidden="false" id="0af3-2f6b-a188-038f" type="selectionEntry" targetId="5184-5ebc-7fff-d910"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="43e1-64e1-7f49-8448" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="52f0-818b-f94b-860f" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3107,12 +3122,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Crewed Weapon Siege Troop Actions" id="5d17-38eb-803f-78aa" hidden="false" targetId="a630-8180-c3b3-9f81" type="profile"/>
-            <infoLink name="Dial In X" id="770d-5299-c087-acea" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="4" field="name" arg="X"/>
-                <modifier type="replace" value="4" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Section Members" id="ce84-d9ff-f239-f371" hidden="false" collective="false" import="true">
@@ -3167,15 +3176,18 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="212a-1470-e51a-6fa0" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
+            <entryLink import="true" name="Upgrades" hidden="false" id="212a-1470-e51a-6fa0" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
               <entryLinks>
                 <entryLink import="true" name="Sashimono" hidden="false" id="a53f-1918-a32d-63e9" type="selectionEntry" targetId="9d7b-d6d5-a3b2-53de"/>
                 <entryLink import="true" name="Poison Gas Grenade" hidden="false" id="4c1e-48f7-27e3-e18c" type="selectionEntry" targetId="9c1d-4baf-c3a9-0583"/>
                 <entryLink import="true" name="Senninbari" hidden="false" id="efcd-e6ee-c401-921d" type="selectionEntry" targetId="93a9-1025-0d91-9941"/>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="9b92-3435-64cb-9c17" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="417f-95ce-f62b-1e97" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="a4b2-176b-95be-c6d4" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 91 Howitzer Carrier" hidden="false" id="5e93-d3f2-117d-58cd" collective="false">
           <profiles>
@@ -3190,12 +3202,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="d6bf-4896-ec1c-6677" hidden="false" type="profile" targetId="ad55-69e8-9339-6df7"/>
-            <infoLink name="Dial In X" id="e82c-384f-17cd-ea7f" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="6" field="name" arg="X"/>
-                <modifier type="replace" value="6" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3203,8 +3209,13 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="9d3b-1afd-5110-3679" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="dc61-df10-9bfc-c14f" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="9d3b-1afd-5110-3679" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="9949-0511-de84-da7d" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c42b-a9fa-3c6c-6c3e-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c42b-a9fa-3c6c-6c3e-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="IJA Type 91 Howitzer Carrier" hidden="false" id="8f57-898a-f767-07e9">
@@ -3263,6 +3274,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="1a44-270b-dccc-8c2f" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Light Towed Howitzer" hidden="false" id="0023-cfb8-6abc-d485" collective="false">
           <profiles>
@@ -3277,30 +3291,6 @@
           </profiles>
           <infoLinks>
             <infoLink name="Siege Carriage Actions" id="25a9-a532-4a6e-91c2" hidden="false" targetId="8aaf-072f-5000-d2b9" type="profile"/>
-            <infoLink name="Dial In X" id="5b47-3e84-3c6b-0b19" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="9" field="name" arg="X">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="6" field="name" arg="X">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="9" field="description" arg="X">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="6" field="description" arg="X">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3354,9 +3344,54 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="d26c-4e2b-4f18-8abd" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="392d-28c8-59ca-c16b" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="d26c-4e2b-4f18-8abd" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="397c-1f1c-85b0-a953" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="2555-eb65-e1d9-292c" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
+              <modifiers>
+                <modifier type="decrement" value="1" field="aaae-3ef8-98ed-5fbc-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="aaae-3ef8-98ed-5fbc-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aaae-3ef8-98ed-5fbc-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aaae-3ef8-98ed-5fbc-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="true" id="320e-1f50-674c-1dc1" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="cc10-9824-3d21-88be-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="cc10-9824-3d21-88be-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cc10-9824-3d21-88be-min" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="cc10-9824-3d21-88be-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -3365,6 +3400,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="5822-d1e6-70af-3370" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 89 Ho-He Motorized Howitzer" hidden="false" id="4a44-ecf5-20e4-cf65">
           <costs>
@@ -3386,16 +3424,15 @@
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="18d2-8895-efa5-be71" hidden="false" type="profile" targetId="ad55-69e8-9339-6df7"/>
             <infoLink name="Cook Off" id="c846-737d-184a-ed0c" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
-            <infoLink name="Dial In X" id="79d2-2ea2-9442-8fa1" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="6" field="name" arg="X"/>
-                <modifier type="replace" value="6" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="0e5c-a5d2-a6f2-a72e" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="7bca-6848-3ae5-f65a" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0e5c-a5d2-a6f2-a72e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="89bb-d826-71cb-e0d2" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58c6-1678-2ae9-c0ef-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58c6-1678-2ae9-c0ef-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="IJA Type 89 Ho-He Motorized Howitzer" hidden="false" id="424c-280b-bd8a-340d">
@@ -3432,6 +3469,9 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="7cb6-2c11-2051-0d7e" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 87 Ho-Wo-Kai Motorized Howitzer" hidden="false" id="65a2-c503-9ccd-9324">
           <costs>
@@ -3452,13 +3492,6 @@
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="291c-efee-5f14-0394" hidden="false" type="profile" targetId="ad55-69e8-9339-6df7"/>
             <infoLink name="Cook Off" id="beed-6db5-da59-ddaf" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
-            <infoLink name="Cumbersome" id="d0ef-ab69-4378-e48a" hidden="false" type="rule" targetId="a105-2c5d-bb1d-e679"/>
-            <infoLink name="Dial In X" id="a928-bab5-9ba7-dc71" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="6" field="name" arg="X"/>
-                <modifier type="replace" value="6" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="IJM Type 87 Ho-Wo-Kai Motorized Howitzer" hidden="false" id="509e-ebce-848c-072b">
@@ -3585,8 +3618,17 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="46ae-2f41-3be6-969b" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="46ae-2f41-3be6-969b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="dad6-7879-bb77-2a90" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89fa-6401-f0db-6362-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89fa-6401-f0db-6362-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="9614-4750-4495-0dd5" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3747,7 +3789,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7a47-2944-953e-f898" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="7a47-2944-953e-f898" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="0184-5820-ae05-c831" type="selectionEntryGroup" targetId="6b0a-1371-5928-3820"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="68fa-1422-b064-76f0" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="c4d0-09e3-6cf5-3cf7" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -3802,6 +3844,10 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="31ae-ff65-b3d1-e277" id="1708-3608-704a-9fc6" primary="false" name="Command Unit"/>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="4c46-2f35-9fac-b7c2" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="IJM Shugo-Yoroi Warsuit Commander" hidden="false" id="ffb8-1c2d-2796-d72a">
           <entryLinks>
@@ -4148,13 +4194,16 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="0554-ad1d-ffa6-a6cf" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0554-ad1d-ffa6-a6cf" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="7a23-c220-63fa-f09a" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Amphibious" hidden="false" id="9614-9838-ef1c-279d" type="selectionEntry" targetId="5184-5ebc-7fff-d910"/>
             <entryLink import="true" name="Submersible" hidden="false" id="e089-2460-4092-11af" type="selectionEntry" targetId="4393-7847-e162-0daf"/>
             <entryLink import="true" name="Amphibious Assault" hidden="false" id="8b6b-781f-1444-b8f0" type="selectionEntry" targetId="01e7-a8e0-6ee0-d381"/>
             <entryLink import="true" name="Sealed" hidden="false" id="90f4-298a-cb79-8baf" type="selectionEntry" targetId="e0c5-8061-435d-80b1"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="a38f-3cb9-7e42-cf57" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 89 Ke-Ni Armored Vehicle Section" hidden="false" id="7eef-e1cf-207a-f501">
           <costs>
@@ -4176,7 +4225,7 @@
             <infoLink name="Scout Vehicle Actions" id="1171-f3ff-35e1-a949" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="e42f-6f54-4880-fac6" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="e42f-6f54-4880-fac6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Intel Gathering" hidden="false" id="903d-7dc4-9781-33b7" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
           </entryLinks>
           <selectionEntries>
@@ -4276,6 +4325,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="7ed6-740e-9975-59f6" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Yonki Scout Car Recon Section" hidden="false" id="e09d-a277-29cd-5242" collective="false">
           <profiles>
@@ -4347,9 +4399,12 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7809-939f-fdd4-752d" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="7809-939f-fdd4-752d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Intel Gathering" hidden="false" id="04fa-f52a-282e-466e" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="e504-ddc6-a299-4f1c" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Teishin Jumptrooper  Section" hidden="false" id="5fa5-57c6-2429-f81a">
           <infoLinks>
@@ -4575,9 +4630,12 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="2aa3-5fe8-7a3a-e8a4" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="2aa3-5fe8-7a3a-e8a4" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Jump Packs" hidden="false" id="57b1-d643-853e-f5ea" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="2f36-2ddc-7de4-ea2b" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 1 Tekkiba Walker Team" hidden="false" id="a2d6-d304-0924-1d85">
           <profiles>
@@ -4745,14 +4803,17 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="e0c5-7b3b-d6ac-e650" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="e0c5-7b3b-d6ac-e650" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="5001-2470-69e1-66ac" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Light on their Feet" hidden="false" id="7332-2e1a-6f58-77f1" type="selectionEntry" targetId="30ee-72db-2e7c-ce0a"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="be3a-5d9d-dcd5-b789" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 1 Tekkiba Walker Sniper" hidden="false" id="47d6-360b-b5d9-f6a0">
           <entryLinks>
-            <entryLink import="true" name="Cavalry Upgrades" hidden="false" id="3112-ebca-27fc-ec84" type="selectionEntryGroup" targetId="09bd-0e27-0bcc-e66a"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="3112-ebca-27fc-ec84" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="afba-794d-4bbb-98aa" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Hunter" hidden="false" id="2068-a9c6-5aec-5f84" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
             <entryLink import="true" name="Light on their Feet" hidden="false" id="a546-f773-dbb3-152c" type="selectionEntry" targetId="30ee-72db-2e7c-ce0a"/>
@@ -4810,6 +4871,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="4572-6d80-2d20-9059" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4945,7 +5009,7 @@
                   <modifiers>
                     <modifier type="decrement" value="1" field="8059-c961-12dd-6609-min">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="self" childId="4f50-ceb9-f07a-86c0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="unit" childId="4f50-ceb9-f07a-86c0" shared="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -4989,7 +5053,7 @@
               <modifiers>
                 <modifier type="decrement" value="1" field="9821-b8cd-4ebd-c6a5">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="4f50-ceb9-f07a-86c0" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="4f50-ceb9-f07a-86c0" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -5002,7 +5066,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="2633-9fbb-8347-7753" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="2633-9fbb-8347-7753" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Battlefield Preparation" hidden="false" id="7874-f67e-cca7-0765" type="selectionEntry" targetId="e29a-356e-d59f-6017"/>
             <entryLink import="true" name="Logistics" hidden="false" id="660e-5f79-a15a-40c2" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="702f-a3bd-dda0-221c" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -5014,6 +5078,9 @@
               <description>This Unit may take the Build Action as a Reaction.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="e52d-2549-afbd-1c97" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Hōshu Heavy Weapon Section" hidden="false" id="1d2c-bb00-d450-38f4" collective="false">
           <profiles>
@@ -5098,8 +5165,13 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="49a3-0ca6-559b-719c" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="49a3-0ca6-559b-719c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="4a77-c16a-cc6b-e796" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="cf93-c3e9-d37c-e6d1" primary="false" name="Light"/>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="f4fa-ead6-9cf2-6e1a" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Light Towed Gun" hidden="false" id="bfe8-39fb-787f-88a2" collective="false">
           <profiles>
@@ -5187,7 +5259,7 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="91fd-4e6e-4760-d263" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="91fd-4e6e-4760-d263" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="d180-8c59-1f8d-6f0c" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
             <entryLink import="true" name="Flak Shells" hidden="false" id="7de0-8e7f-5bab-7bde" type="selectionEntry" targetId="c0bd-425f-8737-21bc"/>
           </entryLinks>
@@ -5198,6 +5270,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="8282-0d51-e415-07d1" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="IJN Type 100 ShinHōtō Naval Gun" hidden="false" id="0bcb-72b2-302f-6247">
           <infoLinks>
@@ -5260,15 +5335,18 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="7ee8-a983-3e90-20b8" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="7ee8-a983-3e90-20b8" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="c32f-4266-4db3-64dc" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
             <entryLink import="true" name="Heavy Carriage" hidden="false" id="545c-364d-f1bd-5f34" type="selectionEntry" targetId="976a-6907-bd89-6823"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="61f5-2e22-3856-492b" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="6969-5864-3dc9-af9d" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Sōkō Sagyō Ki Engineering Vehicle" hidden="false" id="5fab-daf2-2eb4-4e96">
           <infoLinks>
             <infoLink name="Prototype" id="6edd-56fb-f5ef-18b8" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
-            <infoLink name="Catastrophic Detonation" id="8686-3482-b9a3-acc8" hidden="false" type="rule" targetId="1e80-eb25-7926-0850"/>
             <infoLink name="Engineer Vehicle Actions" id="7077-9f71-db70-f04c" hidden="false" type="profile" targetId="ba32-3e2e-765c-654b"/>
           </infoLinks>
           <profiles>
@@ -5409,9 +5487,13 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="bfe6-2e50-f178-8dd8" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="bfe6-2e50-f178-8dd8" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Fortification Reference" hidden="false" id="18e7-8030-6ea8-8946" type="selectionEntry" targetId="0aea-85e9-a44d-1c1f"/>
+            <entryLink import="true" name="Catastrophic Detonation" hidden="false" id="e144-c2f3-1454-dbe1" type="selectionEntry" targetId="6361-ef6f-71fb-f939"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="cc93-1220-0cb7-f1a8" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Combat Engineer Section" hidden="false" id="01a1-4e64-8672-2260">
           <infoLinks>
@@ -5439,7 +5521,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="878b-0cf7-e6c1-ce32" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="878b-0cf7-e6c1-ce32" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="dfa7-6d06-6e76-0dde" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
             <entryLink import="true" name="Battlefield Preparation" hidden="false" id="c3a9-1d5d-9926-0a68" type="selectionEntry" targetId="e29a-356e-d59f-6017"/>
             <entryLink import="true" name="Logistics" hidden="false" id="5631-64f7-a3ed-8bde" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
@@ -5602,6 +5684,9 @@
               </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="a7a6-f69c-02b2-a2dd" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5627,7 +5712,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="549a-24d9-d131-bcb6" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="549a-24d9-d131-bcb6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout" hidden="false" id="7e60-5a13-48aa-f3a6" type="selectionEntry" targetId="2cd2-087b-e9a1-6072"/>
             <entryLink import="true" name="Hitch" hidden="false" id="0cdd-36f2-9a86-71df" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Supply Gathering" hidden="false" id="e1d5-e5f3-8e94-e2b4" type="selectionEntry" targetId="d5d8-7605-d440-d507"/>
@@ -5691,6 +5776,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="b7dd-9db3-4ad9-6b52" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 89 Ke-Ni Armored Gun Tractor" hidden="false" id="7ca5-73c2-ee9c-66d6">
           <costs>
@@ -5712,7 +5800,7 @@
             <infoLink name="Vehicle Actions" id="b4df-9900-f2c2-6036" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="8731-35d1-e7b3-8c9a" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="8731-35d1-e7b3-8c9a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="4c3f-5780-4cde-d73d" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Gun Tractor" hidden="false" id="c92a-bef7-9e62-3828" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="07a5-3856-db8d-3368" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -5767,6 +5855,9 @@
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="b4b3-f349-dc5d-812c" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Type 91 Gun Tractor" hidden="false" id="0bc3-3a4a-fe4e-7b0d" collective="false">
           <profiles>
@@ -5788,7 +5879,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="53c4-c6e5-3233-f235" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="53c4-c6e5-3233-f235" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Tractor" hidden="false" id="f09f-aa05-7f6a-b457" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="205b-11a2-29ca-f247" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
           </entryLinks>
@@ -5869,6 +5960,9 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="fe22-069a-0840-6830" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6383,9 +6477,10 @@
           </rules>
           <categoryLinks>
             <categoryLink name="CORE Infantry" hidden="false" id="dcf0-c035-3b48-711a" targetId="26a5-76cb-5d13-b4a7" primary="true"/>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="cffc-97d4-f983-7e1c" primary="false" name="Light"/>
           </categoryLinks>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="fc48-4a4a-e814-ce52" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="fc48-4a4a-e814-ce52" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Amphibious" hidden="false" id="af14-0a33-7e6f-e8b6" type="selectionEntry" targetId="5184-5ebc-7fff-d910"/>
             <entryLink import="true" name="Sealed" hidden="false" id="3f42-938a-8f94-1f38" type="selectionEntry" targetId="e0c5-8061-435d-80b1"/>
           </entryLinks>
@@ -6647,8 +6742,11 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="6d02-8329-121f-a29e" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="6d02-8329-121f-a29e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="a027-c236-6da3-1ae7" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6682,7 +6780,7 @@
             <selectionEntry type="upgrade" import="true" name="Meisou Ite" hidden="false" id="7499-f09b-d29d-623a">
               <rules>
                 <rule name="Meisou Ite" id="04a5-80ca-761a-9f4b" hidden="false">
-                  <description>Units ordered by this Commander may take the Steady Action as a Standard Action rather than a Difficult Action until the end of the turn.</description>
+                  <description>Each time a Unit ordered by this Commander fails a Reflex Check, that Unit gains an Aim Token.</description>
                 </rule>
               </rules>
               <costs>
@@ -6832,11 +6930,14 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="2f24-3ec4-a60a-dcc5" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="2f24-3ec4-a60a-dcc5" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Lookout" hidden="false" id="5ec8-eb67-2477-31de" type="selectionEntry" targetId="ae79-249f-aed4-eeea"/>
             <entryLink import="true" name="Amphibious" hidden="false" id="1678-b9d1-e763-02e0" type="selectionEntry" targetId="5184-5ebc-7fff-d910"/>
             <entryLink import="true" name="Flak Shells" hidden="false" id="293d-bdce-b890-e0c3" type="selectionEntry" targetId="c0bd-425f-8737-21bc"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="33d5-5096-c206-77f5" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJN Type 4 Ka-Tsu-Kai Amphibious Landing Vehicle" hidden="false" id="3626-cc6f-fe92-8aab" collective="false">
           <profiles>
@@ -6858,7 +6959,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="a317-513f-714f-51b3" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="a317-513f-714f-51b3" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Open Topped 3" hidden="false" id="dc54-8e0e-ec46-6d9a" type="selectionEntry" targetId="e18d-5058-92c9-3c50"/>
             <entryLink import="true" name="Bailout (Safe)" hidden="false" id="5433-eb63-7128-4812" type="selectionEntry" targetId="e9de-35c8-4bd3-82e6"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="6c12-e731-2b18-887f" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
@@ -6939,6 +7040,9 @@
               <description>Units that disembark from this Unit may be setup within 6&quot; of this Unit instead of 3&quot;</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="2851-9b92-ec1d-6f89" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Shugo-Yoroi Warsuit Section" hidden="false" id="4500-cd99-2800-d2e5" collective="false">
           <profiles>
@@ -7113,13 +7217,17 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="c2ca-93c2-3974-77ad" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="c2ca-93c2-3974-77ad" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Bulwark 1" hidden="false" id="f6e3-e489-a6ed-2ea4" type="selectionEntry" targetId="b9b0-158c-a4b1-de50"/>
           </entryLinks>
           <rules>
             <rule name="Dohyō-iri" id="7d70-a2e5-21de-9a02" hidden="false">
               <description>While this Unit is within 3&quot; of an Objective and either performs or is the target of a Melee Attack Action, it may choose to Wrestle. If it does, after the entire attack is resolved, each player much roll a D10, and then add the number of HP of their Unit that participated in the attack to the result. The Unit whose total result is lowest is moved 3&quot; straight away from the Objective.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="c2d8-3255-6414-3cc2" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Type 94 Self-Propelled AA Platform" hidden="false" id="f779-6e1d-8ac0-49a0" collective="false">
           <profiles>
@@ -7141,7 +7249,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="90fd-9bb0-a44b-f4be" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="90fd-9bb0-a44b-f4be" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Lookout" hidden="false" id="152e-e7ba-cd6b-a5a2" type="selectionEntry" targetId="ae79-249f-aed4-eeea"/>
             <entryLink import="true" name="Flak Shells" hidden="false" id="cc49-f0fd-09d2-8a81" type="selectionEntry" targetId="c0bd-425f-8737-21bc"/>
           </entryLinks>
@@ -7217,6 +7325,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="5dcd-672c-1239-d127" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJM Imperial Retainer Section" hidden="false" id="ca41-e100-bd7a-cdd0">
           <rules>
@@ -7423,7 +7534,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="42df-d6dc-e7da-8681" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="42df-d6dc-e7da-8681" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bulwark 1" hidden="false" id="2188-789e-0fcb-4d2c" type="selectionEntry" targetId="b9b0-158c-a4b1-de50"/>
           </entryLinks>
           <costs>
@@ -7432,6 +7543,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="9202-8532-6c0c-6173" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Daiyoroi Heavy Warsuit Team" hidden="false" id="1d32-f1d1-5f36-5ded">
           <rules>
@@ -7566,8 +7680,11 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="01fa-72e4-44c1-dc51" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="01fa-72e4-44c1-dc51" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="534e-95c6-a505-9eaf" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJA Gokiri Daiyoroi Superheavy Warsuit" hidden="false" id="7718-4a77-ef2e-02e7">
           <rules>
@@ -7744,7 +7861,7 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="1f3d-2173-176b-0215" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="1f3d-2173-176b-0215" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Crushing Footfalls" hidden="false" id="a61f-ead0-aa0c-e9ae" type="selectionEntry" targetId="e06d-d3a7-530e-7174"/>
           </entryLinks>
         </selectionEntry>
@@ -7768,7 +7885,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="0ec7-9829-067e-d166" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0ec7-9829-067e-d166" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Tank Destroyer" hidden="false" id="2d09-af4a-bdf5-37a3" type="selectionEntry" targetId="true"/>
           </entryLinks>
           <selectionEntries>
@@ -7865,6 +7982,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="5b8e-fcd1-4613-822b" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -7925,7 +8045,7 @@ All Non-Troop Units gain the “Logistics” keyword.</description>
         <selectionEntry type="upgrade" import="true" name="IJN Rikusentai 3rd Division “Kure-Sanban”" hidden="false" id="0115-478c-0f6d-7c50" sortIndex="4">
           <rules>
             <rule name="Ambush Fighters" id="4258-8de2-01b6-6335" hidden="false">
-              <description>When a Troops Unit or Walker Unit in this Army ends a Move or Dash Action within 3” of a Table Edge, they may be removed from Play and placed En Route. In the Setup Phase of a Subsequent Round, Units placed En Route in this fashion may be deployed within 3” of any Table Edge, 8” away from any Enemy Units.</description>
+              <description>When a Troops Unit or Walker Unit in this Army ends a Move or Dash Action within 3” of a Table Edge, you may spend an Intel Point, if you do, they may be removed from Play and placed En Route. In the Setup Phase of any Subsequent Round, Units placed En Route in this fashion may be deployed within 3” of any Table Edge, 8” away from any Enemy Units.</description>
             </rule>
             <rule name="Each Blade of Grass" id="ef29-79e1-2509-6adc" hidden="false">
               <description>Units in this Army may ignore one piece of Obscuring Terrain when making Ranged Attack Actions.
@@ -8335,6 +8455,7 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="430b-19df-b24c-3ee0" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
+                    <entryLink import="true" name="Bulwark 1" hidden="false" id="a5f9-d1b0-fe96-e7a6" type="selectionEntry" targetId="b9b0-158c-a4b1-de50"/>
                   </entryLinks>
                 </selectionEntry>
               </selectionEntries>

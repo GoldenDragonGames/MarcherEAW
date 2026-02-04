@@ -175,6 +175,18 @@
         <selectionEntry type="model" import="true" name="Royal Engineer Officer" hidden="false" id="242b-4fa8-441e-48b0">
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="434e-2871-cd79-03c3" type="selectionEntryGroup" targetId="99bd-8cad-4c1e-679e"/>
+            <entryLink import="true" name="Mallet" hidden="false" id="896f-1d3c-7a1f-b6f1" type="selectionEntry" targetId="4945-2651-7b7d-eaaf">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6538-a5a4-e906-420e" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ded7-9daf-af9e-48b4" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Webley Revolver" hidden="false" id="4042-3ba5-5367-8232" type="selectionEntry" targetId="a8e9-9eda-d35d-6216">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="65c0-0cdc-27e6-1350" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a5e-6b53-a2d1-c325" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <profiles>
             <profile name="Royal Engineer Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d01e-a00f-8523-15f5">
@@ -215,18 +227,40 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon Options" id="4f6e-f8ef-611e-06e9" hidden="false" defaultSelectionEntryId="cd8d-5072-b89d-cb41">
+              <entryLinks>
+                <entryLink import="true" name="Lanchester SMG" hidden="false" id="763f-648e-1ed7-e1e2" type="selectionEntry" targetId="9328-8cd2-fca3-641c">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7fc7-1bf3-6102-1bdb" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Sterling ESMG" hidden="false" id="a916-97b5-8888-ea35" type="selectionEntry" targetId="4a3a-ab9f-fb72-8af2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6704-513e-f6fb-937b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9519-e3ea-21d3-cd85" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4d0-b34d-600c-abf9" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Command Car" hidden="false" id="f2c0-6432-6cca-d3b1">
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="78a3-ea72-c656-2126" type="selectionEntryGroup" targetId="99bd-8cad-4c1e-679e"/>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="29d3-adb9-f6c6-7144" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="29d3-adb9-f6c6-7144" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="56e9-d365-650f-8b47" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="b6e3-8d47-1c0d-70de" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Command Car" hidden="false" id="3f17-3989-91ff-9765" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
             <entryLink import="true" name="Low Profile" hidden="false" id="01af-18fc-745b-c252" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
+            <entryLink import="true" name="Embarkable" hidden="false" id="f0d0-e318-23ab-80b0" type="selectionEntry" targetId="8325-9b73-9773-1dda"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Command Scout Vehicle Actions" id="988b-eb57-4631-e722" hidden="false" type="profile" targetId="48fa-5429-0e47-55af"/>
+            <infoLink name="Orbital Drop Vehicle" id="65c5-d792-f86b-000d" hidden="false" type="rule" targetId="87cb-9806-204d-cf21"/>
           </infoLinks>
           <profiles>
             <profile name="Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Command Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c3b7-6b5b-4ee3-20ea">
@@ -305,6 +339,11 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="7111-ed2b-b216-0be7" primary="false" name="Medium"/>
+            <categoryLink targetId="31ae-ff65-b3d1-e277" id="98cd-6d99-49a3-a104" primary="false" name="Command Unit"/>
+            <categoryLink targetId="14e2-5d10-257c-7ecb" id="b186-6852-932b-e38e" primary="false" name="Embarkable"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Grenadiers Guard Officer" hidden="false" id="a98d-36ab-dc2e-68df">
           <entryLinks>
@@ -420,7 +459,7 @@
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Bedford QLR Command Truck" hidden="false" id="4f73-dc3d-d95e-9193">
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="37b0-f6a9-82ed-783d" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="37b0-f6a9-82ed-783d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="774a-d919-ee8f-1bfd" type="selectionEntryGroup" targetId="99bd-8cad-4c1e-679e"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="ea6b-5e8c-30a9-e885" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="d8fe-5fa6-7ffc-317b" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -475,6 +514,10 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="31ae-ff65-b3d1-e277" id="bda3-fde1-fb59-2a10" primary="false" name="Command Unit"/>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="6a9b-acb1-fac8-4c05" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -667,7 +710,7 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="49c4-7fce-453f-13ea" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="49c4-7fce-453f-13ea" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Automaton Upgrades" hidden="false" id="53c3-cbee-4910-16d3" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
           </entryLinks>
           <costs>
@@ -691,6 +734,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="ea35-af4d-a512-48b7" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Colonial Rifle Section" hidden="false" id="92e9-bd70-810b-e25a">
           <rules>
@@ -846,7 +892,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="6ff5-db80-c324-1d8c" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="6ff5-db80-c324-1d8c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <profiles>
             <profile name="Colonial Rifle Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c429-794c-a170-fa98">
@@ -867,6 +913,9 @@
           <infoLinks>
             <infoLink name="Troop Actions" id="ecdd-6cc9-28d8-7497" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
           </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="60b4-1ba0-8ae8-9768" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Grenadiers Guard Section" hidden="false" id="8260-80aa-8f89-ff48">
           <selectionEntryGroups>
@@ -1093,7 +1142,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="d8b9-06e0-c57c-63cb" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="d8b9-06e0-c57c-63cb" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <profiles>
             <profile name="Grenadiers Guard Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1b42-d680-908b-c5e4">
@@ -1119,6 +1168,9 @@
           <infoLinks>
             <infoLink name="Troop Actions" id="cc9a-90ad-bac4-5983" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
           </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="c177-190f-db26-9305" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -1141,7 +1193,7 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="e8ed-2304-3dbb-0375" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="e8ed-2304-3dbb-0375" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Mk. IV &apos;&apos;Percival&apos;&apos; Cruiser Tank" hidden="false" id="4f43-1bb7-c8d9-da58">
@@ -1330,6 +1382,9 @@
               <description>You may discard a G.R.A.I.L die of 5 or lower, if you do, this Unit may perform a Free Capture Action.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="df3f-eec7-ac53-0a8d" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. I &quot;Galahad&quot; Main Battle Tank" hidden="false" id="003b-f786-dc82-821a">
           <infoLinks>
@@ -1347,7 +1402,7 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="656d-6036-c53e-7c64" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="656d-6036-c53e-7c64" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Mk. I &quot;Galahad&quot; Main Battle Tank" hidden="false" id="2ed4-1c90-baec-cba5">
@@ -1457,6 +1512,9 @@
               <description>When spending G.R.A.I.L dice on actions this Unit performs, you may treat the results as if they are one point higher or lower.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="037f-0d25-40ff-7758" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. VII &apos;&apos;Gawain&apos;&apos; Infantry Tank" hidden="false" id="6125-f338-2b93-9226">
           <infoLinks>
@@ -1475,7 +1533,7 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="e77f-f92f-a63a-4acc" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="e77f-f92f-a63a-4acc" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -1687,6 +1745,9 @@
               <description>Once per Round, you may choose for a Ranged Attack targeting a Friendly Unit within 6&quot; of this Unit to target this Unit instead.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="8c4c-6e25-f4e7-e3d6" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. X &quot;Arthur&quot; Super Heavy Assault Tank" hidden="false" id="dd56-48b1-ccb7-298d">
           <infoLinks>
@@ -1705,7 +1766,7 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="33c8-3dcf-b009-5a77" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="33c8-3dcf-b009-5a77" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Cumbersome" hidden="false" id="4a30-32d6-c50a-9a6e" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
           </entryLinks>
           <costs>
@@ -1913,11 +1974,11 @@
           </costs>
           <infoLinks>
             <infoLink name="Vehicle Actions" id="3141-44f7-e6f3-daf5" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
-            <infoLink name="Catastrophic Detonation" id="f9f9-d849-208c-8c98" hidden="false" type="rule" targetId="1e80-eb25-7926-0850"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="6c53-9f33-e42e-3135" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="6c53-9f33-e42e-3135" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="a994-e345-6103-d831" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
+            <entryLink import="true" name="Catastrophic Detonation" hidden="false" id="5f9f-7d8f-f062-debf" type="selectionEntry" targetId="6361-ef6f-71fb-f939"/>
           </entryLinks>
           <profiles>
             <profile name="Mk. XI &quot;Draig&quot; Universal Carrier Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8a3e-5ccf-81f4-2658">
@@ -1969,6 +2030,9 @@
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="750b-b6c6-cc5e-0439" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="SAS Orbital Dragoon Section" hidden="false" id="964c-ac3f-4809-a123">
           <selectionEntryGroups>
@@ -2128,7 +2192,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="24d5-90e4-8b81-c15a" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="24d5-90e4-8b81-c15a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Troop Actions" id="9a9d-7416-8db4-0ce2" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
@@ -2154,13 +2218,16 @@
               <description>When this Unit disembarks from a Transport, it may immediately perform a Free Move Action. If it ends this move within 3&quot; of an Objective, it may Capture that Objective, regardless of it is contested or not.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="60a0-ab4c-d2bc-74b2" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. I &quot;Palamedes&quot; Wheeled APC" hidden="false" id="021d-6375-82fa-a88d">
           <infoLinks>
             <infoLink name="Vehicle Actions" id="c936-6a69-b546-2e67" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f2ed-a99c-84fb-4fe6" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="f2ed-a99c-84fb-4fe6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="60e3-4449-f346-b365" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Hitch" hidden="false" id="5619-23d5-99c8-7394" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Bailout (Safe)" hidden="false" id="b06d-e65e-810b-4ace" type="selectionEntry" targetId="e9de-35c8-4bd3-82e6"/>
@@ -2240,6 +2307,9 @@
               </selectionEntries>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="8040-7afa-3d3a-9b3e" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. V &apos;&apos;Gareth&apos;&apos; Drop Tank" hidden="false" id="9cd2-4d7e-b58d-77fa">
           <infoLinks>
@@ -2247,7 +2317,7 @@
             <infoLink name="Orbital Drop Vehicle" id="f5f5-e165-bb85-eb97" hidden="false" type="rule" targetId="87cb-9806-204d-cf21"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="ba3c-1847-853b-891c" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="ba3c-1847-853b-891c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Embarkable" hidden="false" id="5d62-66b9-c058-1f31" type="selectionEntry" targetId="8325-9b73-9773-1dda"/>
           </entryLinks>
           <profiles>
@@ -2337,6 +2407,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="dcdb-84c9-6de1-fd85" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="&quot;Little John&quot; Automaton Armoured Support Section" hidden="false" id="6039-1c0c-e69d-d0e9">
           <infoLinks>
@@ -2379,11 +2452,6 @@
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
-                  <rules>
-                    <rule name="To the Ramparts" id="86b4-9859-28e5-f8d9" hidden="false">
-                      <description>This Unit may gain the benefit of Cover. If this Unit has not moved more than 3&quot; this turn, it gains a Level of Cover until the next time it moves.</description>
-                    </rule>
-                  </rules>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="7d33-4bb6-00e9-0e4e" hidden="false" defaultSelectionEntryId="7028-1eff-7386-ec1e">
                       <entryLinks>
@@ -2487,8 +2555,16 @@
           </selectionEntryGroups>
           <entryLinks>
             <entryLink import="true" name="Automaton Upgrades" hidden="false" id="6df1-76db-7008-9b36" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="5c42-2acb-fbc0-dbf7" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="5c42-2acb-fbc0-dbf7" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="be00-94f4-00ce-dd28" primary="false" name="Heavy"/>
+          </categoryLinks>
+          <rules>
+            <rule name="To the Ramparts" id="e900-b6c1-55c3-9d11" hidden="false">
+              <description>This Unit may gain the benefit of Cover. If this Unit has not moved more than 3&quot; this turn, it gains a Level of Cover until the next time it moves.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2500,9 +2576,10 @@
             <infoLink name="Cook Off" id="bceb-e3e7-0858-85b7" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="c44c-317c-e415-41b9" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="c44c-317c-e415-41b9" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Big Game Hunter" hidden="false" id="3c09-42c6-de43-4a8d" type="selectionEntry" targetId="4f71-b8b7-07c0-7d5e"/>
             <entryLink import="true" name="Tank Destroyer" hidden="false" id="5239-56bd-3e7f-3139" type="selectionEntry" targetId="true"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="95a2-ab90-82a6-6721" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <profiles>
             <profile name="Mk. IV &quot;Bors&quot; Heavy Tank Destroyer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="498b-59c2-dcae-665f">
@@ -2560,6 +2637,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="db4f-5644-6890-ff92" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Automaton Heavy Weapon Section" hidden="false" id="b133-398a-1712-f888">
           <selectionEntryGroups>
@@ -2612,12 +2692,13 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="e4a8-a735-4e4c-c95a" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
+            <entryLink import="true" name="Upgrades" hidden="false" id="e4a8-a735-4e4c-c95a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
               <entryLinks>
                 <entryLink import="true" name="Hardened Electronics" hidden="false" id="3b62-6d9d-dd91-113e" type="selectionEntry" targetId="8bb1-1e78-84bf-59a7"/>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Automaton Upgrades" hidden="false" id="9ec3-1382-ae1e-60b5" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="604b-9dd5-78ef-fb19" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Crewed Weapon Troop Actions" id="a12a-d07d-a3ab-1f40" hidden="false" type="profile" targetId="7959-03e6-fdc4-3adf"/>
@@ -2647,6 +2728,9 @@
 * This Unit may not gain extra actions from Orders.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="b90e-b806-b530-3f37" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Royal Engineers Section" hidden="false" id="de85-76d7-fe4a-1b32">
           <selectionEntryGroups>
@@ -2855,7 +2939,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="e0cf-87b4-8f5c-da76" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8">
+            <entryLink import="true" name="Upgrades" hidden="false" id="e0cf-87b4-8f5c-da76" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
               <entryLinks>
                 <entryLink import="true" name="Lewes Bomb" hidden="false" id="80ad-2d8e-ee43-24fe" type="selectionEntry" targetId="8562-0c68-8fd5-1e47"/>
               </entryLinks>
@@ -2889,84 +2973,9 @@
               <description>As a Standard Action, this Unit may Repair an Automaton Unit within 3&quot; of itself. If it does, roll a D10, restore that much HP to the Unit. This may be used to return Destroyed Models to the battlefield, only if it is their maximum HP or higher.</description>
             </rule>
           </rules>
-        </selectionEntry>
-        <selectionEntry type="unit" import="true" name="GREMLIN Autonomous Sabotage Unit" hidden="false" id="2790-8f27-e3a0-b452">
-          <rules>
-            <rule name="Stow Away" id="03fa-bf0f-1669-d2e5" hidden="false">
-              <description>As an Free Action, if this Unit within Engagement Range of an Enemy Vehicle Model, it may choose to Embark in that Vehicle as if it were a Transport with the Dangerous Bailout Special Rule. The Vehicle that this Unit is Embarked within may choose to target it for Melee Attacks.</description>
-            </rule>
-            <rule name="Sew Havoc" id="e41b-1a78-08fb-544a" hidden="false">
-              <description>While this Unit is within an Enemy Vehicle, when that Vehicle is selected to Activate roll a D10, one of the listed effects occurs.
-* 1-2: No effect.
-* 3-4: The Vehicle cannot perform the Move or Dash action this Activation.
-* 5-6: Select a Weapon Equipped by this Vehicle, it cannot be used this Activation.
-* 7-8: The Vehicle gains a Concussed Token.
-* 9-10: Select a Weapon Equipped by this Vehicle, Perform an Attack action against the Vehicle using that Weapon&apos;s Profile.</description>
-            </rule>
-          </rules>
-          <profiles>
-            <profile name="GREMLIN" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0419-e38e-cb38-6373">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x GREMLIN Autonomous Sabotage Unit</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (AUX) Support, (AUX) Pacification, Troop, Automaton</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Troop Actions" id="f34e-89b7-f378-9f8d" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
-          </infoLinks>
-          <costs>
-            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
-          </costs>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Section Members" id="d997-0f03-aed1-b79a" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="model" import="true" name="GREMLIN Autonomous Sabotage Unit" hidden="false" id="d859-5633-df94-fce5">
-                  <profiles>
-                    <profile name="GREMLIN" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="000f-7440-00fd-782c">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Cutting Torch" hidden="false" id="c712-5619-f7a4-6b2d" type="selectionEntry" targetId="3e91-689c-275d-14f2">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9077-5574-d361-d90d-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9077-5574-d361-d90d-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="36"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="80a0-116e-7335-664b" includeChildSelections="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3852-8579-97dd-f46d" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7287-bff2-3c9a-3e6e" includeChildSelections="false"/>
-                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="4901-8241-5dde-cfc3" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Low Profile" hidden="false" id="529d-e099-a2d1-b7e6" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
-            <entryLink import="true" name="Not My Job" hidden="false" id="403f-7d85-b55a-f228" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
-            <entryLink import="true" name="Unmanageable" hidden="false" id="8550-9abe-2283-427a" type="selectionEntry" targetId="5550-a658-0f07-f03f"/>
-          </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="09e2-a522-eb16-b8b5" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk.II &quot;Vortigern&quot; Area Control Tripod" hidden="false" id="e639-fa06-db54-974d">
           <profiles>
@@ -3160,7 +3169,8 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="f209-1621-5e8b-ed93" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="f209-1621-5e8b-ed93" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Singular" hidden="false" id="cf23-3a14-7095-785e" type="selectionEntry" targetId="5550-a658-0f07-f03f"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -3194,7 +3204,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="8ee1-22b4-55b0-0b5c" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="8ee1-22b4-55b0-0b5c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Automaton Upgrades" hidden="false" id="d12e-33c7-2915-c3c2" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="d8e7-f977-fbe9-7ebc" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
           </entryLinks>
@@ -3262,6 +3272,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="1fd8-a667-2d3d-c240" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="No. 6 Medium Support Gun" hidden="false" id="6956-f550-eea6-b4e4">
           <infoLinks>
@@ -3284,7 +3297,7 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="14cf-7b16-6ca9-405f" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="14cf-7b16-6ca9-405f" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Automaton Upgrades" hidden="false" id="74c8-5631-a113-38c0" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="c100-5358-c757-b700" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
           </entryLinks>
@@ -3352,6 +3365,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="454a-90f3-6249-3d13" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. VII &apos;&apos;Green Knight&quot; AVRE" hidden="false" id="e6fa-4f5b-3d6b-b334">
           <infoLinks>
@@ -3370,7 +3386,7 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="9ff3-7a23-17b6-d091" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="9ff3-7a23-17b6-d091" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3475,6 +3491,9 @@
               </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="bfe4-e968-133b-c62c" id="982e-0979-793a-64ea" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3483,30 +3502,6 @@
         <selectionEntry type="unit" import="true" name="25 Pdr. Field Artillery" hidden="false" id="9794-ce40-0a7b-d23b">
           <infoLinks>
             <infoLink name="Siege Carriage Actions" id="eddf-0fb2-fe9b-276d" hidden="false" type="profile" targetId="8aaf-072f-5000-d2b9"/>
-            <infoLink name="Dial In X" id="c727-f0bd-cfb5-3000" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="12" field="name" arg="X">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="8" field="name" arg="X">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="12" field="description" arg="X">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="8" field="description" arg="X">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="25 Pdr. Field Artillery Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bded-eb11-8c98-3df1">
@@ -3571,9 +3566,54 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="0bb9-9ac7-efbc-4723" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="2e12-aa93-9299-1c79" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0bb9-9ac7-efbc-4723" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="a4a5-bd75-7a0d-a95a" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="eb83-23ac-bf9f-825d" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <modifiers>
+                <modifier type="decrement" value="1" field="32e1-6bba-2d8c-0f67-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="32e1-6bba-2d8c-0f67-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32e1-6bba-2d8c-0f67-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32e1-6bba-2d8c-0f67-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Dial In 8" hidden="true" id="6b69-a03c-12f9-0bac" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f3cb-2bbc-785c-08ad-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f3cb-2bbc-785c-08ad-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f3cb-2bbc-785c-08ad-min" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f3cb-2bbc-785c-08ad-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -3582,34 +3622,13 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="518b-1fbd-a301-63d7" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Land Mattress" hidden="false" id="8f90-0fa2-a61e-d2d9">
           <infoLinks>
             <infoLink name="Siege Carriage Actions" id="a814-53f7-1332-f95d" hidden="false" type="profile" targetId="8aaf-072f-5000-d2b9"/>
-            <infoLink name="Dial In X" id="c032-b29e-4fd4-377d" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="12" field="name" arg="X">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="8" field="name" arg="X">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="12" field="description" arg="X">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="replace" value="8" field="description" arg="X">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="self" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Land Mattress Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5b8a-f12e-387d-e5fd">
@@ -3674,8 +3693,53 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Carriage Upgrades" hidden="false" id="3dc5-83cb-dd56-baea" type="selectionEntryGroup" targetId="d2d4-2fae-45fa-6796"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="2fc2-7619-8ee3-ac9a" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="3dc5-83cb-dd56-baea" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="5c41-67d1-c4cd-5e7c" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <modifiers>
+                <modifier type="decrement" value="1" field="0700-6677-f923-f705-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="0700-6677-f923-f705-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0700-6677-f923-f705-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0700-6677-f923-f705-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Dial In 8" hidden="true" id="3293-79e8-516f-bfe9" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f02a-7711-0c1f-a1f6-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="f02a-7711-0c1f-a1f6-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f02a-7711-0c1f-a1f6-min" includeChildSelections="false"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f02a-7711-0c1f-a1f6-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -3684,6 +3748,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="3d4c-4b7d-7bb2-7e90" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Automaton Mortar Section" hidden="false" id="c8c1-7d5b-a256-41df">
           <selectionEntryGroups>
@@ -3728,19 +3795,13 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="1f52-41c5-820e-8bc9" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="1f52-41c5-820e-8bc9" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Automaton Upgrades" hidden="false" id="30b3-068f-a44d-3151" type="selectionEntryGroup" targetId="f82e-a04f-2c6c-b71c"/>
-            <entryLink import="true" name="Cumbersome" hidden="false" id="2b38-849f-47e6-92ef" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="8757-db58-387f-1171" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Crewed Weapon Siege Troop Actions" id="d08e-1899-d850-714f" hidden="false" type="profile" targetId="a630-8180-c3b3-9f81"/>
             <infoLink name="Autonomous Artillery" id="41ee-d40c-7e25-0867" hidden="false" type="rule" targetId="b50f-0633-7635-7e05"/>
-            <infoLink name="Dial In X" id="25b7-0140-5600-83d5" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="4" field="name" arg="X"/>
-                <modifier type="replace" value="4" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Automaton Mortar Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9d74-dc31-3565-3037">
@@ -3758,18 +3819,15 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="7dad-bbbf-bf88-96c9" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. IV &apos;&apos;St. Derfel&apos;&apos; Gun Carrier" hidden="false" id="3e44-eb6c-bb30-d744">
           <infoLinks>
             <infoLink name="Autonomous Loader" id="bf8c-73d6-50ab-b331" hidden="false" type="rule" targetId="8b0b-7f2e-cc32-90e6"/>
             <infoLink name="Siege Vehicle Actions" id="f400-b487-9031-619c" hidden="false" type="profile" targetId="ad55-69e8-9339-6df7"/>
             <infoLink name="Cumbersome" id="85a6-d469-8a05-ff35" hidden="false" type="rule" targetId="a105-2c5d-bb1d-e679"/>
-            <infoLink name="Dial In X" id="5719-811b-c1d4-edff" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-              <modifiers>
-                <modifier type="replace" value="6" field="name" arg="X"/>
-                <modifier type="replace" value="6" field="description" arg="X"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Mk. IV &apos;&apos;St. Derfel&apos;&apos; Gun Carrier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9f20-a40e-cab7-03d6">
@@ -3782,7 +3840,13 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="0cfb-638c-0bdc-e9d9" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="0cfb-638c-0bdc-e9d9" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="ab7a-abf2-a998-acf4" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99d3-927f-fb72-b2d5-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99d3-927f-fb72-b2d5-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Mk. IV &apos;&apos;St. Derfel&apos;&apos; Gun Carrier" hidden="false" id="0a5e-b896-4393-ad67">
@@ -3869,6 +3933,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="adbd-b0f4-771a-99a4" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3876,16 +3943,12 @@
       <selectionEntries>
         <selectionEntry type="unit" import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier Group" hidden="false" id="b94d-3879-fffd-a080">
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="fcfb-2aa6-c8a0-e7f4" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="fcfb-2aa6-c8a0-e7f4" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout" hidden="false" id="d33b-c6f3-d744-8629" type="selectionEntry" targetId="2cd2-087b-e9a1-6072"/>
             <entryLink import="true" name="Transport 1" hidden="false" id="69bb-27c4-6246-7569" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
             <entryLink import="true" name="Open Topped 2" hidden="false" id="5c5e-b583-e9f0-a709" type="selectionEntry" targetId="632b-f2b5-80c9-02b4"/>
+            <entryLink import="true" name="Dispersed Transport" hidden="false" id="ca85-326f-0d23-7d8d" type="selectionEntry" targetId="9563-cf38-fd09-8533"/>
           </entryLinks>
-          <rules>
-            <rule name="Dispersed Transport" id="a52e-192e-3784-7fe0" hidden="false">
-              <description>If a Model in this Unit is destroyed but the Unit itself was not, this Unit loses the Transport Keyword and all Units Embarked in this Transport must Bailout. No more than half of the Embarked Unit may be Destroyed via Bailout.</description>
-            </rule>
-          </rules>
           <selectionEntryGroups>
             <selectionEntryGroup name="Group" id="8735-4ff4-327e-93d8" hidden="false">
               <selectionEntries>
@@ -3987,6 +4050,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="1cda-e67e-52c2-afa8" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. VII &quot;Merlin&quot; Orbital Insertion Capsule" hidden="false" id="08dd-61a4-aa0e-0e85">
           <rules>
@@ -4073,7 +4139,7 @@
             <infoLink name="Vehicle Actions" id="fc05-5eb8-9b49-c5a1" hidden="false" targetId="ed5a-9492-6407-a9f1" type="profile"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="bdc1-481a-c32d-514a" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="bdc1-481a-c32d-514a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout (Dangerous)" hidden="false" id="2a70-74b6-cc34-7990" type="selectionEntry" targetId="5a82-466c-c50e-1653"/>
             <entryLink import="true" name="Hitch" hidden="false" id="2c97-1288-beb4-67e6" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="41c6-2978-3978-0b23" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
@@ -4142,10 +4208,13 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="20a5-10c8-3724-8efc" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. XI &quot;Kay&quot; Universal Carrier Gun Tractor" hidden="false" id="2516-f214-2bc2-62e4">
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="7ffb-8482-6522-8f8a" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="7ffb-8482-6522-8f8a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="1eec-8759-5bed-4c1b" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Gun Tractor" hidden="false" id="af16-5a87-8146-143b" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="e2d1-1dc4-277d-1ac7" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -4247,6 +4316,9 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="9b83-a0f2-3ae4-99c9" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4765,10 +4837,13 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="20f6-9608-26e1-eb9c" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="20f6-9608-26e1-eb9c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Jump Packs" hidden="false" id="c604-e426-4122-14a8" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
             <entryLink import="true" name="Behind Enemy Lines" hidden="false" id="3247-ca85-5b3a-24a6" type="selectionEntry" targetId="82f9-9d09-e158-b88b"/>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="ece1-d530-0579-09b3" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod" hidden="false" id="cdf6-d1dd-3a96-ef43">
           <infoLinks>
@@ -4779,8 +4854,9 @@
             <infoLink name="Radial Weaponry" id="1cbe-f7b6-492a-f11a" hidden="false" type="rule" targetId="0f85-3bd7-821f-4d64"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="58d3-713a-76c9-99a7" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="58d3-713a-76c9-99a7" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Embarkable" hidden="false" id="92a2-cc20-4e9a-f8d9" type="selectionEntry" targetId="8325-9b73-9773-1dda"/>
+            <entryLink import="true" name="Singular" hidden="false" id="6158-c04e-cba1-b455" type="selectionEntry" targetId="5550-a658-0f07-f03f"/>
           </entryLinks>
           <profiles>
             <profile name="Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="589a-1b35-9a54-f362">
@@ -4806,28 +4882,40 @@
             <selectionEntry type="model" import="true" name="Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod" hidden="false" id="e1ba-5607-3fd8-adf5">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Bottom Turret" hidden="false" id="57c1-a0e8-5e2a-8e23">
-                  <entryLinks>
-                    <entryLink import="true" name="Vickers HMG" hidden="false" id="e464-d73c-5b91-bef5" type="selectionEntry" targetId="79d1-dcd1-e90d-0dea">
-                      <constraints>
-                        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="dd53-3710-db1b-7d43-min" includeChildSelections="false"/>
-                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dd53-3710-db1b-7d43-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f0d-18cc-d840-32bb-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f0d-18cc-d840-32bb-max" includeChildSelections="false"/>
                   </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Options" id="b401-2a25-8b16-377b" hidden="false">
+                      <entryLinks>
+                        <entryLink import="true" name="Vickers HMG" hidden="false" id="e464-d73c-5b91-bef5" type="selectionEntry" targetId="79d1-dcd1-e90d-0dea">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd53-3710-db1b-7d43-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Besa Machine Gun" hidden="false" id="23a8-70bc-8292-29db" type="selectionEntry" targetId="6f0f-8692-26c4-0a66">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fcaf-3378-1e46-27e0" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a34-a25f-2772-3bb4-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a34-a25f-2772-3bb4-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Heavy Weapon Ring" hidden="false" id="045b-376b-9ec4-858d" collective="false">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="2b33-0f8b-e3d9-c3e3" hidden="false" defaultSelectionEntryId="0cc6-1836-1edf-df0b">
                       <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Triple Heat Cannons" hidden="false" id="9a82-60d9-4c57-f8e7">
+                        <selectionEntry type="upgrade" import="true" name="Heat Cannons" hidden="false" id="9a82-60d9-4c57-f8e7">
                           <entryLinks>
                             <entryLink import="true" name="No. 9 Light Heat Cannon" hidden="false" id="8029-74c9-597a-4e76" type="selectionEntry" targetId="712a-78db-f4ca-d2fa">
                               <constraints>
-                                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f784-b1d5-0cf2-07a1" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f784-b1d5-0cf2-07a1" includeChildSelections="false"/>
                                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1897-4ab5-6885-2d9d" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
@@ -4836,11 +4924,11 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0c3-3cec-aa2b-cc02" includeChildSelections="false"/>
                           </constraints>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Triple 2-Pounder Cannons" hidden="false" id="0cc6-1836-1edf-df0b">
+                        <selectionEntry type="upgrade" import="true" name="2-Pounder Cannons" hidden="false" id="0cc6-1836-1edf-df0b">
                           <entryLinks>
                             <entryLink import="true" name="QF 2-Pounder Cannon" hidden="false" id="4c07-4003-a809-2cd1" type="selectionEntry" targetId="a032-28b9-782f-09fd">
                               <constraints>
-                                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="0de9-999d-a7e6-8fea" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0de9-999d-a7e6-8fea" includeChildSelections="false"/>
                                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="9704-9788-3f78-99c9" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
@@ -4884,13 +4972,16 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="dd0a-89ef-c7a9-1ac3" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="SAS Long-Range Patrol Trucks" hidden="false" id="9f3b-2aa1-5b1b-261c">
           <infoLinks>
             <infoLink name="Scout Vehicle Actions" id="a1ee-9d10-7a32-6db7" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="50b1-2881-3b26-8297" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="50b1-2881-3b26-8297" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Behind Enemy Lines" hidden="false" id="4509-ef53-4257-56f2" type="selectionEntry" targetId="82f9-9d09-e158-b88b"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="5886-80f7-6a1d-cdd7" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Intel Gathering" hidden="false" id="074f-ace3-6cba-1ac9" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
@@ -4987,16 +5078,21 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="c17f-d1c4-5f53-41d2" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Car" hidden="false" id="2691-ce51-4cd1-1461">
           <infoLinks>
             <infoLink name="Scout Vehicle Actions" id="3c11-d94f-5890-e761" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
+            <infoLink name="Orbital Drop Vehicle" id="1556-0c05-ccdb-8381" hidden="false" type="rule" targetId="87cb-9806-204d-cf21"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="49a8-8b64-ef94-490f" type="selectionEntryGroup" targetId="d75c-a162-bc8f-60f9"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="49a8-8b64-ef94-490f" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Intelligence" hidden="false" id="b1cf-9040-460e-8b62" type="selectionEntry" targetId="65f3-25c2-05a8-cf41"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="fe78-c9dc-3cc0-0b3e" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Intel Gathering" hidden="false" id="4a1f-ab2e-f206-a022" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
+            <entryLink import="true" name="Embarkable" hidden="false" id="08b5-2631-2edc-17fa" type="selectionEntry" targetId="8325-9b73-9773-1dda"/>
           </entryLinks>
           <profiles>
             <profile name="Mk. II &apos;&apos;Bedivere&apos;&apos; Armored Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="de67-e022-c947-2f57">
@@ -5076,6 +5172,10 @@
               <description>When this Unit activates, you may spend a point of Intel to gain a G.R.A.I.L die.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="edac-6530-6b49-4c35" primary="false" name="Medium"/>
+            <categoryLink targetId="14e2-5d10-257c-7ecb" id="4871-5064-bb46-5ab6" primary="false" name="Embarkable"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="SAS Commando Sniper Team" hidden="false" id="577c-f173-ad10-921c">
           <selectionEntryGroups>
@@ -5175,12 +5275,13 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Troops Upgrades" hidden="false" id="760e-3254-807d-a266" type="selectionEntryGroup" targetId="c42e-5415-a1c5-e2d8"/>
+            <entryLink import="true" name="Upgrades" hidden="false" id="760e-3254-807d-a266" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hunter" hidden="false" id="2ed2-7046-f271-b923" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="b85f-5157-6b5b-8c7c" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="bed4-452d-a50c-a525" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
             <entryLink import="true" name="Low Profile" hidden="false" id="9c1f-251b-450c-174d" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
             <entryLink import="true" name="Behind Enemy Lines" hidden="false" id="4ebb-9d7f-845b-ed37" type="selectionEntry" targetId="82f9-9d09-e158-b88b"/>
+            <entryLink import="true" name="Jump Packs" hidden="false" id="21b5-5aa4-55e1-886e" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
           </entryLinks>
           <profiles>
             <profile name="SAS Commando Sniper Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="842a-59a3-6ba6-ae6b">
@@ -5200,6 +5301,9 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="b43e-a17f-3285-e685" primary="false" name="Light"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5627,7 +5731,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <profiles>
             <profile name="&quot;Little John&quot; Automaton Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c414-ca2f-4cd2-4890">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Pacification, Attache, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Pacification, Attache (Troop), Battlesuit</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -5938,6 +6042,84 @@ Attacks made against friendly Units in your Army count as having one level of Ob
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="GREMLIN Autonomous Sabotage Element" hidden="false" id="2790-8f27-e3a0-b452">
+          <profiles>
+            <profile name="GREMLIN" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="0419-e38e-cb38-6373">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Pacification, Attache (Troop)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Troop Actions" id="f34e-89b7-f378-9f8d" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+          </infoLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Section Members" id="d997-0f03-aed1-b79a" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="GREMLIN Autonomous Sabotage Unit" hidden="false" id="d859-5633-df94-fce5">
+                  <profiles>
+                    <profile name="GREMLIN" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="000f-7440-00fd-782c">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">9</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <entryLinks>
+                    <entryLink import="true" name="Cutting Torch" hidden="false" id="c712-5619-f7a4-6b2d" type="selectionEntry" targetId="3e91-689c-275d-14f2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9077-5574-d361-d90d-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9077-5574-d361-d90d-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="36"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="80a0-116e-7335-664b" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3852-8579-97dd-f46d" includeChildSelections="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Unleashed" id="0a7f-dddb-bb55-9af8" hidden="false">
+                      <description>When a Unit that this Model is Attached to Activates, it may, as a Free Action, Unleash this Model. If it does, this Model becomes a separate Unit. The new Unit inherits no effects or tokens. The new Unit Activates immediately following the current Unit, before passing to your Opponent. When this happens, it behaves as if it has the Action List associated with its Basic Type, but cannot be Ordered or take the Capture Action.</description>
+                    </rule>
+                    <rule name="Sew Havoc" id="e41b-1a78-08fb-544a" hidden="false">
+                      <description>While this Unit is within an Enemy Vehicle, when that Vehicle is selected to Activate roll a D10, one of the listed effects occurs.
+* 1-2: No effect.
+* 3-4: The Vehicle cannot perform the Move or Dash action this Activation.
+* 5-6: Select a Weapon Equipped by this Vehicle, it cannot be used this Activation.
+* 7-8: The Vehicle gains a Concussed Token.
+* 9-10: Select a Weapon Equipped by this Vehicle, Perform an Attack action against the Vehicle using that Weapon&apos;s Profile.</description>
+                    </rule>
+                    <rule name="Stow Away" id="03fa-bf0f-1669-d2e5" hidden="false">
+                      <description>If this Unit has been Unleashed, as an Free Action, if this Unit within Engagement Range of an Enemy Vehicle Model, it may choose to Embark in that Vehicle as if it were a Transport with the Dangerous Bailout Special Rule. The Vehicle that this Unit is Embarked within may choose to target it for Melee Attacks.</description>
+                    </rule>
+                  </rules>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7287-bff2-3c9a-3e6e" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="4901-8241-5dde-cfc3" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <categoryLinks>
+            <categoryLink name="Light" hidden="false" id="a99b-5ed3-932f-8d9a" targetId="7584-5824-f5d2-050a" primary="false"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6264,18 +6446,30 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="GREMLIN Autonomous Sabotage Unit" hidden="false" id="4d61-4890-dff1-bfb4" type="selectionEntry" targetId="2790-8f27-e3a0-b452">
+    <entryLink import="true" name="GREMLIN Autonomous Sabotage Element" hidden="false" id="4d61-4890-dff1-bfb4" type="selectionEntry" targetId="2790-8f27-e3a0-b452">
       <categoryLinks>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="1ac2-8ced-fc2d-8e6d" primary="false" name="Troop"/>
         <categoryLink targetId="239b-db47-17c9-4f36" id="fc9c-467b-a310-7db4" primary="false" name="Automaton"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="b874-9575-7043-ccf5" primary="false" name="BRE"/>
-        <categoryLink targetId="48f5-3131-be0b-5951" id="8202-fb2d-ddec-445b" primary="true" name="AUX Support"/>
-        <categoryLink targetId="1ce8-430c-2a91-31fb" id="22b6-4728-a6ff-5d2b" primary="false" name="AUX Pacification"/>
+        <categoryLink targetId="a56a-77ef-ff07-8a8f" id="200b-0f5c-6fb5-3cbf" primary="false" name="SPC Pacification"/>
+        <categoryLink targetId="eae9-4e17-22cb-4491" id="e829-f46a-f6aa-8cd8" primary="true" name="SPC Infantry"/>
+        <categoryLink targetId="cf6f-f672-129a-1bfb" id="0381-7064-ac14-95cc" primary="false" name="SPC Mechanized"/>
+        <categoryLink targetId="869c-51f1-d04f-a8ce" id="a929-a9f2-ae66-b470" primary="false" name="SPC Support"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="1ce8-430c-2a91-31fb" field="category">
+        <modifier type="set-primary" value="a56a-77ef-ff07-8a8f" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="d6f3-788c-2c4c-503b" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6368,6 +6562,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="7da2-822e-291f-eccc" id="e748-9039-e4f1-4906" primary="false" name="Walker"/>
         <categoryLink targetId="54db-5889-a382-77cb" id="319c-e834-621c-5164" primary="true" name="CORE Recon"/>
         <categoryLink targetId="14e2-5d10-257c-7ecb" id="e6ee-b296-d247-5a25" primary="false" name="Embarkable"/>
+        <categoryLink targetId="239b-db47-17c9-4f36" id="6684-1b95-e903-7b92" primary="false" name="Automaton"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a9bf-60cd-c79d-de30" field="category">
@@ -6434,6 +6629,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="7da2-822e-291f-eccc" id="00a2-0a6d-f15c-22a6" primary="false" name="Walker"/>
         <categoryLink targetId="b100-ce4e-c964-af8d" id="3b59-52c6-0162-b9a7" primary="false" name="BRE"/>
         <categoryLink targetId="a9bf-60cd-c79d-de30" id="8fe2-708e-801d-43c4" primary="false" name="CORE Pacification"/>
+        <categoryLink targetId="239b-db47-17c9-4f36" id="b692-1607-8230-f235" primary="false" name="Automaton"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a9bf-60cd-c79d-de30" field="category">
@@ -8082,7 +8278,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
       <description>This Unit may only be Embarked in a Mk. VII &quot;Merlin&quot; Orbital Insertion Capsule. This Unit may not be destroyed when Bailing Out of a Transport, instead, roll a D10, this Unit loses that many HP.</description>
     </rule>
     <rule name="Target Painting" id="3847-0d44-1c44-21fe" hidden="false">
-      <description>As a Standard Action, this Unit may designate an Enemy Unit. Until the end of this Round, Automaton Units may select that designated Unit as the target of an Attack. If they do so, they may reroll 1s and 2s to Hit.</description>
+      <description>As a Standard Action, this Unit may designate an Enemy Unit within LOS. Until the end of this Round, Automaton Units may select that designated Unit as the target of an Attack. If they do so, they may reroll 1s and 2s to Hit.</description>
     </rule>
     <rule name="Hardened Electronics" id="5b69-aeed-5236-c84d" hidden="false">
       <description>When this Unit is Attacked by a Weapon with the Arc-Lightning Special Rule, reduce that Weapon&apos;s Damage profile to 1 until the Attack against this Unit is Resolved.</description>
@@ -8113,7 +8309,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
       <description>During the first Command Phase, roll 5 dice, and then set them aside in a pool. Reroll any duplicates until all 5 are unique. These are your G.R.A.I.L dice.
 
 
-At any point during the game after you have rolled dice, a G.R.A.I.L die may be used to replace the result of one roll. (This is considered to be an unmodified roll.)
+At any point during the game before you have rolled dice, a G.R.A.I.L die may be used to replace the result of one roll. (This is considered to be an unmodified roll.)
 
 
 You may not spend more than one G.R.A.I.L dice per roll or check. 
@@ -8173,7 +8369,7 @@ Whenever you spend an Intel Point, you may roll a 7+ check to gain a G.R.A.I.L d
 10: Allied Player Chooses Direction</description>
         </rule>
         <rule name="Orbital Reconnaissance and Artillery System (ORBS)" id="6861-bb7c-e9a0-3206" hidden="false">
-          <description>Once per Round, you may place an Ordnance 8 blast token anywhere on the battlefield. At the end of the Action Phase, you must make an Attack with the following Weapon Profile against all targets within Range.</description>
+          <description>During the Command Phase, you may place one Ordnance 8 blast token anywhere on the battlefield. At the end of the Action Phase, you must make an Attack with the following Weapon Profile against all targets within Range.</description>
         </rule>
       </rules>
     </infoGroup>
