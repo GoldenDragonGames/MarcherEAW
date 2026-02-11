@@ -140,6 +140,7 @@
       <infoLinks>
         <infoLink name="Maxim Machine Gun" id="d9b8-c3a4-b132-f453" hidden="false" type="profile" targetId="5267-692f-454e-1de4"/>
         <infoLink name="Suppressive" id="c77c-f0ca-ee40-5541" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
+        <infoLink name="Sustained Fire" id="1f08-f1fa-1432-13da" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="19"/>
@@ -409,6 +410,7 @@
       <infoLinks>
         <infoLink name="DShK-38 Heavy Machine Gun" id="5e17-da44-adfd-6192" hidden="false" type="profile" targetId="726c-ff3a-51e2-8e45"/>
         <infoLink name="Suppressive" id="0c29-9623-238e-fe94" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
+        <infoLink name="Sustained Fire" id="f70d-be4e-6c6a-7ea2" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -482,7 +484,7 @@
         <infoLink name="Difficult to Use" id="a7b6-6eb5-2a2a-c0ad" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="66"/>
+        <cost name="Munitions" typeId="Points" value="58"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -496,6 +498,8 @@
             <modifier type="append" value="6" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Difficult to Use" id="5043-bfe0-a4d2-98a4" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
+        <infoLink name="Fixed Elevation" id="3edd-d93b-770c-0815" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="112"/>
@@ -956,7 +960,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Machine Gun, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1166,7 +1170,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Machine Gun, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1183,9 +1187,9 @@
     <profile name="14.2cm High-Velocity Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="2878-6f88-a1e6-55d6">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">10</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10+2</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">13</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3D10</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
@@ -1196,7 +1200,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3D5+1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 6</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 6, Difficult to Use, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2022,37 +2026,37 @@
         <categoryLink targetId="51a0-4deb-b01b-931e" id="098c-25ab-e423-e0a8" primary="false" name="RUS"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="194th Siberian Rifle Division (Novaya Zemlya)" hidden="false" id="cf57-1309-a536-bff6" type="selectionEntry" targetId="d8a4-2c4f-d3d4-9db4">
+    <entryLink import="true" name="194th Siberian Rifle Division (Novaya Zemlya)" hidden="false" id="cf57-1309-a536-bff6" type="selectionEntry" targetId="d8a4-2c4f-d3d4-9db4" sortIndex="4">
       <categoryLinks>
         <categoryLink targetId="b200-6914-09f3-4db0" id="865f-7a88-468a-011b" primary="true" name="Army Specialization"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="3rd Caucasus Cossack Division (Mikhailovich)" hidden="false" id="213c-0901-527e-a929" type="selectionEntry" targetId="95a0-858f-8ee0-973b">
+    <entryLink import="true" name="3rd Caucasus Cossack Division (Mikhailovich)" hidden="false" id="213c-0901-527e-a929" type="selectionEntry" targetId="95a0-858f-8ee0-973b" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="c439-f22b-a197-73aa" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Alaskan Defense Corps 17th Division " hidden="false" id="705e-aeab-19f2-a1ed" type="selectionEntry" targetId="289f-7e3d-d55d-8fdd">
+    <entryLink import="true" name="Alaskan Defense Corps 17th Division " hidden="false" id="705e-aeab-19f2-a1ed" type="selectionEntry" targetId="289f-7e3d-d55d-8fdd" sortIndex="2">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="bb73-96a0-940e-ddf8" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="12th Ural Motor-Rifle Division (Nastyeviks)" hidden="false" id="0ea6-d2d2-9922-7282" type="selectionEntry" targetId="2ffa-b444-eb67-3c9e">
+    <entryLink import="true" name="12th Ural Motor-Rifle Division (Nastyeviks)" hidden="false" id="0ea6-d2d2-9922-7282" type="selectionEntry" targetId="2ffa-b444-eb67-3c9e" sortIndex="6">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="4651-6dbf-27d6-90fe" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="1st Kheshig Mounted Guard Division (New Khanate)" hidden="false" id="5c09-48b8-c239-c24f" type="selectionEntry" targetId="1b2e-9043-fac2-d6bc">
+    <entryLink import="true" name="1st Kheshig Mounted Guard Division (New Khanate)" hidden="false" id="5c09-48b8-c239-c24f" type="selectionEntry" targetId="1b2e-9043-fac2-d6bc" sortIndex="7">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="c222-be7d-a5cd-00ef" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="2nd Guard Corps 43rd Division (Regency)" hidden="false" id="9661-2a51-5179-f690" type="selectionEntry" targetId="02a1-f184-a1c6-e862">
+    <entryLink import="true" name="2nd Guard Corps 43rd Division (Regency)" hidden="false" id="9661-2a51-5179-f690" type="selectionEntry" targetId="02a1-f184-a1c6-e862" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="7f13-e0bd-46d0-be3d" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Bogatyr Security Group (Ohkotsk Techno-Union)" hidden="false" id="73e3-d36b-1968-6199" type="selectionEntry" targetId="2980-c3cf-0984-b120">
+    <entryLink import="true" name="Bogatyr Security Group (Ohkotsk Techno-Union)" hidden="false" id="73e3-d36b-1968-6199" type="selectionEntry" targetId="2980-c3cf-0984-b120" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="ead8-5062-dd42-23cf" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
@@ -2233,11 +2237,13 @@
     <entryLink import="true" name="ZiY-3 Divisional Gun" hidden="false" id="8ae1-fcc5-06a0-55e8" type="selectionEntry" targetId="bcf5-4278-ecb9-e6b8">
       <categoryLinks>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="5baf-65af-28c4-e479" primary="true" name="CORE Support"/>
+        <categoryLink targetId="c2bc-81f4-b62b-dc46" id="bcac-1e61-42cf-a664" primary="false" name="Carriage"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="M-27 Regimental Gun" hidden="false" id="90fa-6b28-1a7e-f395" type="selectionEntry" targetId="ef7e-5304-069a-cc43">
       <categoryLinks>
         <categoryLink targetId="8679-d614-ae03-de2c" id="01e0-15a0-10e3-d3dd" primary="true" name="CORE Artillery"/>
+        <categoryLink targetId="c2bc-81f4-b62b-dc46" id="f441-f792-b182-915e" primary="false" name="Carriage"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Armored Train Carriage" hidden="false" id="ef06-ff7e-476e-3af9" type="selectionEntry" targetId="ec3a-7d0a-7954-33db">
@@ -2631,7 +2637,7 @@ This Unit may not take Upgrades.</description>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">15</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">17</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2640,7 +2646,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3415-9ef9-dcf5-6c8c-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="137"/>
+                <cost name="Munitions" typeId="Points" value="155"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2846,7 +2852,7 @@ This Unit may not take Upgrades.</description>
           </infoLinks>
           <rules>
             <rule name="Heavy Casting" id="038e-2093-1bbb-62ed" hidden="false">
-              <description>Attacks made against this Unit by Weapons with 6AP or lower reduce their Damage profile by 2, to a minimum of 1.</description>
+              <description>Attacks made against this Unit by Weapons with 8AP or lower reduce their Damage profile by 2, to a minimum of 1.</description>
             </rule>
           </rules>
           <costs>
@@ -2865,12 +2871,7 @@ This Unit may not take Upgrades.</description>
         <selectionEntry type="unit" import="true" name="AT-28 &quot;Katyusha&quot;" hidden="false" id="fffe-d5ca-1920-602d">
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="3ca7-a9fe-7008-4cba" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 8" hidden="false" id="d4ed-1399-38e4-4260" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1371-e954-295d-5769-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1371-e954-295d-5769-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 8" hidden="false" id="d4ed-1399-38e4-4260" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -2930,52 +2931,7 @@ This Unit may not take Upgrades.</description>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="911f-b7c9-d26c-18f2" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="536c-298d-2df8-42ef" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
-            <entryLink import="true" name="Dial In 12" hidden="false" id="2aab-d86e-bd02-0608" type="selectionEntry" targetId="9a0d-2598-17f5-b309">
-              <modifiers>
-                <modifier type="decrement" value="1" field="50dc-2011-ddca-ce68-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" value="1" field="50dc-2011-ddca-ce68-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="50dc-2011-ddca-ce68-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50dc-2011-ddca-ce68-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Dial In 14" hidden="true" id="c213-8817-6b7b-b561" type="selectionEntry" targetId="33e7-53a4-76be-084b">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="5d3c-1990-10b5-1d90-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="5d3c-1990-10b5-1d90-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5d3c-1990-10b5-1d90-min" includeChildSelections="false"/>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="5d3c-1990-10b5-1d90-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 12" hidden="false" id="2aab-d86e-bd02-0608" type="selectionEntry" targetId="9a0d-2598-17f5-b309"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3187,52 +3143,7 @@ This Unit may not take Upgrades.</description>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="0a31-86fd-3162-0879" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="7f39-b76c-5b49-d4d8" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
-            <entryLink import="true" name="Dial In 4" hidden="false" id="a4b2-0db1-5de6-98ec" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
-              <modifiers>
-                <modifier type="decrement" value="1" field="85bc-a71e-d4a6-66ed-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" value="1" field="85bc-a71e-d4a6-66ed-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="85bc-a71e-d4a6-66ed-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85bc-a71e-d4a6-66ed-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Dial In 6" hidden="true" id="1dbe-411f-b232-83cd" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="7ff2-14df-2f94-8b7d-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="7ff2-14df-2f94-8b7d-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7ff2-14df-2f94-8b7d-min" includeChildSelections="false"/>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7ff2-14df-2f94-8b7d-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 4/6" hidden="false" id="c9aa-f459-ea01-570f" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <profiles>
             <profile name="M-27 Regimental Gun Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fa1a-e3d3-cf92-0430">
@@ -3403,12 +3314,7 @@ This Unit may not take Upgrades.</description>
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="762d-b1bd-d943-6403" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="697d-32f9-2251-843a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7c48-6768-fb2c-635c-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c48-6768-fb2c-635c-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="697d-32f9-2251-843a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="ab8f-e237-19c3-e6a3" primary="false" name="Medium"/>
@@ -4366,7 +4272,7 @@ This Unit may not take Upgrades.</description>
             <categoryLink targetId="7584-5824-f5d2-050a" id="f129-ac0f-9764-1fba" primary="false" name="Light"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Guards Grenadiers Squad" hidden="false" id="d444-2ca9-0241-647d">
+        <selectionEntry type="unit" import="true" name="Guards Grenadiers Squad" hidden="false" id="d444-2ca9-0241-647d">
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="c287-a749-2ced-daef" hidden="false" defaultSelectionEntryId="55c7-59ce-0444-9173">
               <selectionEntries>
@@ -4886,7 +4792,7 @@ This Unit may not take Upgrades.</description>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="BS-44 &quot;Tachanka&quot; Armored Walker" hidden="false" id="6b14-4cb2-3641-e0a3">
               <costs>
-                <cost name="Munitions" typeId="Points" value="136"/>
+                <cost name="Munitions" typeId="Points" value="167"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5035,7 +4941,7 @@ This Unit may not take Upgrades.</description>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">13</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">15</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5055,6 +4961,9 @@ This Unit may not take Upgrades.</description>
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink targetId="f94f-807f-eca3-d850" id="67ee-1b03-477c-9cb4" primary="false" name="Medium"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="BA-36 Armored Scout Car" hidden="false" id="6979-d55d-d736-ec64">
           <entryLinks>
@@ -5284,7 +5193,7 @@ This Unit may not take Upgrades.</description>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5293,7 +5202,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a319-8cdb-56b4-b0a4-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="42"/>
+                <cost name="Munitions" typeId="Points" value="70"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -8169,13 +8078,13 @@ CORE Recon Units with the Vehicle keyword gain an aim token whenever they end a 
               <description>At the beginning of each Command Phase, starting on round 2, you may spend a Victory Point for one of the following effects (these remain in effect for the rest of the game). Each effect can only be gained once per game. At the end of the game, in the event of a tie, you win. 
 
 
-+1 to the Armor characteristic for all Vehicle Units in your army.
+* +1 to the Armor characteristic for all Vehicle Units in your army.
 
 
-+1 to the Evasion characteristic for all Troop Units in your army.
+* +1 to the Evasion characteristic for all Troop Units in your army.
 
 
-One additional order for all of your Command Units.</description>
+* One additional order for all of your Command Units.</description>
             </rule>
             <rule name="Stretched Thin" id="4341-0f9a-0be9-d637" hidden="false">
               <description>If at the end of any Round your army has 0 Supply or Intel Points, gain one of either of your choice at the beginning of the next Setup Phase.</description>
@@ -8188,7 +8097,7 @@ One additional order for all of your Command Units.</description>
               <description>The Category of the Blizzard from the General Winter National Ideal may be increased any number of times each round.</description>
             </rule>
             <rule name="More Power!" id="26fb-2230-dc70-dd1d" hidden="false">
-              <description>When a unit in this army performs the Freeze action, before any dice are rolled, it may sacrifice up to 3 of its own HP, adding a +1 bonus to the Freeze roll for each point of HP that was sacrificed. A unit may not sacrifice all of its remaining HP in this fashion, as it still needs to be alive to perform the action.</description>
+              <description>When a unit in this army performs the Freeze action, before any dice are rolled, it may sacrifice up to 4 of its own HP, adding a +1 bonus to the Freeze roll for every 2 points of HP that was sacrificed. A unit may not sacrifice all of its remaining HP in this fashion, as it still needs to be alive to perform the action.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -8207,23 +8116,22 @@ One additional order for all of your Command Units.</description>
             <rule name="Warriors of St. Mikhail" id="527c-1206-0d7a-6218" hidden="false">
               <description>At the beginning of each Round, for each Objective Marker that you control, choose one of the following bonuses, it is applied until the end of the round:
 
-
-Re-roll Hit Rolls of 1
-Re-roll Armor Penetration Rolls of 1
-Increase Movement by 2”
-Bulwark 1 on Troops Units
-Ignore Rough Terrain</description>
+* Re-roll Hit Rolls of 1
+* Re-roll Armor Penetration Rolls of 1
+* Increase Movement by 2”
+* Bulwark 1 on Troops Units
+* Ignore Rough Terrain</description>
             </rule>
             <rule name="In the Metropolitan’s Service" id="ff96-e380-5f10-6e47" hidden="false">
               <description>For each Pravoslavny Kapellan Section or Snowbringer Starets Sleigh, select one model in that unit to be an Icon Bearer, granting them one of the Icons listed below. At the beginning of each Round, select one Icon Bearer that is on the battlefield and has not been selected in a previous Round, conferring their bonus to your army. Each Icon may only be taken once, regardless of how many units in your army are eligible to be Icon Bearers.
 
 
-St. Mikhail: Attacks made against a Unit by Weapons with 6AP or lower reduce their Damage profile by 2, to a minimum of 1.
-St. Dmitriy: For every two Levels of Blizzard a Unit is in, increase its Evasion by 1
-St. Olga: Attacks made by a Unit against Units in Cover reroll 1s and 2s for Armor Checks.
-St. Georg: When a Unit performs an Attack Action against a Unit with more than 13 HP or Armor, you may reroll all instances of 1s and 2s.
-St. Barbara: When a Unit makes Attack Actions at half-range, it gains the Close In special rule.
-St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an enemy Unit rather than away from it.</description>
+* St. Mikhail: Attacks made against a Unit by Weapons with 6AP or lower reduce their Damage profile by 2, to a minimum of 1.
+* St. Dmitriy: For every two Levels of Blizzard a Unit is in, increase its Evasion by 1
+* St. Olga: Attacks made by a Unit against Units in Cover reroll 1s and 2s for Armor Checks.
+* St. Georg: When a Unit performs an Attack Action against a Unit with more than 13 HP or Armor, you may reroll all instances of 1s and 2s.
+* St. Barbara: When a Unit makes Attack Actions at half-range, it gains the Close In special rule.
+* St. Ilya: When a Unit performs the Fallback Reaction, it may move towards an enemy Unit rather than away from it.</description>
             </rule>
           </rules>
           <modifiers>
@@ -8505,6 +8413,14 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Shared Qualities X" id="80ec-51cb-b521-abd3" hidden="false" type="rule" targetId="7ea1-cd1c-ca34-9368">
+                      <modifiers>
+                        <modifier type="replace" value="Battlesuit" field="name" arg="X"/>
+                        <modifier type="replace" value="Battlesuit" field="description" arg="X"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -8537,7 +8453,7 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
           </profiles>
           <rules>
             <rule name="Last Communion" id="630d-97a4-0c16-dbc5" hidden="false">
-              <description>Once per activation, when a Model in this Unit is destroyed, remove one Suppression Token from this Unit.</description>
+              <description>Once per Round, when a Model in this Unit is destroyed, remove one Suppression Token from this Unit.</description>
             </rule>
           </rules>
           <selectionEntryGroups>
@@ -8634,7 +8550,7 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
           <profiles>
             <profile name="Corporate Mercenary Officers" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="0121-d63a-98b3-60f2">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (SPC) Infantry, Attache (Troop)</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (SPC) Infantry, Attache (Troop), Attache (Battlesuit)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>

@@ -521,7 +521,15 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Heroes" id="4591-79f4-3979-85ff" hidden="false"/>
+    <selectionEntryGroup name="Heroes" id="4591-79f4-3979-85ff" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="General Bernard Montgomery" hidden="false" id="517b-1aa7-61d2-13b2"/>
+        <selectionEntry type="upgrade" import="true" name="Mad Jack Churchill" hidden="false" id="b68d-54ac-3580-83d7"/>
+        <selectionEntry type="upgrade" import="true" name="Lord Gordon Flashmond" hidden="false" id="5815-1262-7ff6-9283"/>
+        <selectionEntry type="upgrade" import="true" name="Major Paddy Mayne" hidden="false" id="0c12-0478-7d82-72cb"/>
+        <selectionEntry type="upgrade" import="true" name="Agent Mordred" hidden="false" id="c5d3-90ab-d4f6-c6b4"/>
+      </selectionEntries>
+    </selectionEntryGroup>
     <selectionEntryGroup name="Infantry" id="2423-86a6-d39e-93c2" hidden="false">
       <selectionEntries>
         <selectionEntry type="unit" import="true" name="Automaton Infantry Section" hidden="false" id="eb39-a010-bb2c-79e7">
@@ -722,18 +730,6 @@
           <infoLinks>
             <infoLink name="Troop Actions" id="c00e-5faf-0644-bb4d" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
           </infoLinks>
-          <modifiers>
-            <modifier type="prepend" value="Veteran" field="name">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="b068-de68-7a68-a938" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </modifier>
-            <modifier type="prepend" value="Command" field="name">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="ea35-af4d-a512-48b7" primary="false" name="Medium"/>
           </categoryLinks>
@@ -1534,6 +1530,7 @@
           </profiles>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="e77f-f92f-a63a-4acc" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="6d98-ef4f-60fd-457d" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -2414,6 +2411,7 @@
         <selectionEntry type="unit" import="true" name="&quot;Little John&quot; Automaton Armoured Support Section" hidden="false" id="6039-1c0c-e69d-d0e9">
           <infoLinks>
             <infoLink name="Troop Actions" id="ea85-8210-f7fe-7e5d" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="To the Ramparts" id="6dfc-497c-ab63-b0fd" hidden="false" type="rule" targetId="1d92-2826-a5c3-ef5d"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -2560,11 +2558,6 @@
           <categoryLinks>
             <categoryLink targetId="bfe4-e968-133b-c62c" id="be00-94f4-00ce-dd28" primary="false" name="Heavy"/>
           </categoryLinks>
-          <rules>
-            <rule name="To the Ramparts" id="e900-b6c1-55c3-9d11" hidden="false">
-              <description>This Unit may gain the benefit of Cover. If this Unit has not moved more than 3&quot; this turn, it gains a Level of Cover until the next time it moves.</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2982,7 +2975,7 @@
             <profile name="Mk.II &quot;Vortigern&quot; Area Control Tripod" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2d12-aad3-b8c7-6aac">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Mk.II &quot;Vortigern&quot; Area Control Tripod</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, (CORE) Pacification, Automaton, Vehicle, Walker</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Support, (CORE) Pacification, Superheavy, Automaton, Vehicle, Walker</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
               </characteristics>
@@ -3003,6 +2996,17 @@
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4014-98a9-cd05-0243-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4014-98a9-cd05-0243-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Defense Light" hidden="false" id="053f-3b2f-c9c7-7c6e">
+                  <rules>
+                    <rule name="Defense Light" id="8b60-ce3c-a3a5-74d4" hidden="false">
+                      <description>Once per round, when this Unit is targeted by an Attack, you may choose to Activate its Defense Light. If you do, that Attack gains Inaccurate, and may not be modified in any way.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf76-c2c8-0907-947b-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf76-c2c8-0907-947b-max" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
               </selectionEntries>
@@ -3131,7 +3135,7 @@
               <profiles>
                 <profile name="Mk.II &quot;Vortigern&quot; Area Control Tripod" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ef24-6743-2ea6-678f">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">20</characteristic>
@@ -3153,7 +3157,7 @@
             <selectionEntry type="upgrade" import="true" name="G.R.A.I.L Uplink" hidden="false" id="9d10-b3aa-faa2-4441">
               <rules>
                 <rule name="G.R.A.I.L Uplink" id="77bc-f43f-f49e-bf0e" hidden="false">
-                  <description>When G.R.A.I.L Dice are spent within 12&quot; of this Unit, roll a 6+ check, on a success, gain a G.R.A.I.L die.</description>
+                  <description>All Units within 12&quot; of this Unit are within the G.R.A.I.L Network.</description>
                 </rule>
               </rules>
               <constraints>
@@ -3387,6 +3391,7 @@
           </profiles>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="9ff3-7a23-17b6-d091" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Setting Up!" hidden="false" id="b644-8d58-a9da-ff91" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3568,52 +3573,7 @@
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="0bb9-9ac7-efbc-4723" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="a4a5-bd75-7a0d-a95a" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="eb83-23ac-bf9f-825d" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <modifiers>
-                <modifier type="decrement" value="1" field="32e1-6bba-2d8c-0f67-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" value="1" field="32e1-6bba-2d8c-0f67-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32e1-6bba-2d8c-0f67-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32e1-6bba-2d8c-0f67-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Dial In 8" hidden="true" id="6b69-a03c-12f9-0bac" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="f3cb-2bbc-785c-08ad-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="f3cb-2bbc-785c-08ad-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f3cb-2bbc-785c-08ad-min" includeChildSelections="false"/>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f3cb-2bbc-785c-08ad-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="eb83-23ac-bf9f-825d" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -3694,52 +3654,7 @@
           </selectionEntries>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="3dc5-83cb-dd56-baea" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="5c41-67d1-c4cd-5e7c" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <modifiers>
-                <modifier type="decrement" value="1" field="0700-6677-f923-f705-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" value="1" field="0700-6677-f923-f705-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0700-6677-f923-f705-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0700-6677-f923-f705-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Dial In 8" hidden="true" id="3293-79e8-516f-bfe9" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="f02a-7711-0c1f-a1f6-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="f02a-7711-0c1f-a1f6-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f02a-7711-0c1f-a1f6-min" includeChildSelections="false"/>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f02a-7711-0c1f-a1f6-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="5c41-67d1-c4cd-5e7c" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -3841,12 +3756,7 @@
           </profiles>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="0cfb-638c-0bdc-e9d9" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="ab7a-abf2-a998-acf4" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99d3-927f-fb72-b2d5-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99d3-927f-fb72-b2d5-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="ab7a-abf2-a998-acf4" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Mk. IV &apos;&apos;St. Derfel&apos;&apos; Gun Carrier" hidden="false" id="0a5e-b896-4393-ad67">
@@ -4357,7 +4267,7 @@
             <selectionEntry type="upgrade" import="true" name="Order of the Thistle" hidden="false" id="a3c6-6202-6485-5127">
               <rules>
                 <rule name="Order of the Thistle" id="95ae-2d02-f0c1-85fd" hidden="false">
-                  <description>During the Command Phase, you may spend a point of Intel, if you do, all Units in this Commander&apos;s Platoon and their weapons gain Warding.</description>
+                  <description>During the Command Phase, you may spend a point of Intel, if you do, all Units in this Commander&apos;s Platoon and their melee weapons gain Warding.</description>
                 </rule>
               </rules>
               <costs>
@@ -4873,11 +4783,6 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
-          <rules>
-            <rule name="G.R.A.I.L Node" id="42c5-2ac0-c607-eb96" hidden="false">
-              <description>When G.R.A.I.L Dice are spent within 6&quot; of this Unit, roll a 6+ check, on a success, gain a G.R.A.I.L die. If this Unit is within 12&quot; of a Mk.II &quot;Vortigern&quot; Area Control Tripod, increase the range of this ability to 12&quot;.</description>
-            </rule>
-          </rules>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod" hidden="false" id="e1ba-5607-3fd8-adf5">
               <selectionEntries>
@@ -4966,6 +4871,23 @@
               </constraints>
               <costs>
                 <cost name="Munitions" typeId="Points" value="84"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="G.R.A.I.L Node" hidden="false" id="178f-0260-44d8-ea9e">
+              <rules>
+                <rule name="G.R.A.I.L Node" id="42c5-2ac0-c607-eb96" hidden="false">
+                  <description>All Units within 6&quot; of this Unit are within the G.R.A.I.L Network. If this Unit is within 12&quot; of a Mk.II &quot;Vortigern&quot; Area Control Tripod, all Units within 12&quot; of this Unit are within the G.R.A.I.L Network.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e637-9d24-a6eb-b18d-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e637-9d24-a6eb-b18d-max" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="15"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5321,11 +5243,17 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="50th (Northumbrian) Automated Infantry Division" hidden="false" id="be1a-7a79-438f-0e5d" sortIndex="1">
           <rules>
-            <rule name="Men of Iron" id="ec7e-8ceb-4ff6-79d4" hidden="false">
-              <description>Automaton Units in your army count as having 2x their remaining health for the purposes of holding objectives. 
+            <rule name="Networked Oppression" id="ec7e-8ceb-4ff6-79d4" hidden="false">
+              <description>Autonomous Units within the G.R.A.I.L Network gain the following benefits depending on the number of  G.R.A.I.L dice within your pool:
 
+* 2+: This Unit counts as having double its HP for the purpose of Objective control.
 
-Automaton units in your army may ignore one additional debuff when they activate if they are accompanied by a Technical Corporal.</description>
+* 3+: As a Free Action, you may Discard a GRAIL Die, if you do this Unit may ignore two of the restrictions from its Autonomous Programming Special Rule.
+
+* 4+: This Unit Gains Intel Gathering as a Standard Action.
+
+* 5+: As a Free Action, you may Discard a GRAIL Die, if you do, this Unit gains an Order Token, and ignores the related restriction from its Autonomous Programming Special Rule.
+</description>
             </rule>
             <rule name="Kill and Calibrate" id="c5ee-e41a-b71e-6e9e" hidden="false">
               <description>When an Automaton unit in your army destroys an enemy unit as part of an Attack Action you gain a G.R.A.I.L. Dice.</description>
@@ -5337,6 +5265,13 @@ Automaton units in your army may ignore one additional debuff when they activate
           <categoryLinks>
             <categoryLink targetId="af8a-1a21-3380-77c4" id="75ec-ed28-8dbd-ebd7" primary="true" name="50th (Northumbrian) Automated Infantry Division"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="add" value="This Specialization requires at least three Automaton Units " field="error">
+              <conditions>
+                <condition type="lessThan" value="3" field="selections" scope="roster" childId="239b-db47-17c9-4f36" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="1st Special Aether Service Division" hidden="false" id="3a12-6e5a-ad5e-a02b" sortIndex="2">
           <rules>
@@ -5352,60 +5287,53 @@ When you spend Intel Points, roll a d10. On a 7+ gain an Intel Point</descriptio
           </rules>
           <modifiers>
             <modifier type="add" value="This Specialization requires at least two SAS Units (Commandos, Orbital Dragoons, or Long
-Range Patrol Trucks) and two Mk. VII &quot;Merlin&quot; Orbital Insertion Capsule" field="error">
+Range Patrol Trucks)" field="error">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="e085-7ee3-3788-187a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
-                      <conditions>
-                        <condition type="lessThan" value="2" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="lessThan" value="2" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="lessThan" value="2" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="lessThan" value="2" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
                       <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="996d-33ea-b1d5-0712" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce9c-aeea-7870-7fcb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4a5-6308-95db-b7ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="848b-0546-8851-d6b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
@@ -5546,7 +5474,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <profiles>
             <profile name="Medic Group" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="1d6f-df52-da49-4fe1">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache, Troop</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache (Troop)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -5653,7 +5581,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <profiles>
             <profile name="Heavy Weapon Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="5e54-38a4-72fb-babf">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Infantry, (SPC) Support, (SPC) Mechanized, (SPC) Pacification, Attache (Troop)</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">(SPC) Infantry, (SPC) Support, (SPC) Mechanized, (SPC) Pacification, Attache (Troop), Attache (Automaton)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">50mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -5689,7 +5617,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
             </profile>
             <profile name="Flagbearer with Union Jack" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="8964-d5ac-3a59-626e">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, Attache</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, Attache (Troop)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
@@ -5731,7 +5659,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <profiles>
             <profile name="&quot;Little John&quot; Automaton Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c414-ca2f-4cd2-4890">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Pacification, Attache (Troop), Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Pacification, Attache (Troop), Attache (Automaton)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -5757,11 +5685,6 @@ Attacks made against friendly Units in your Army count as having one level of Ob
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
-                  <rules>
-                    <rule name="To the Ramparts" id="a66f-ed3e-b40c-b779" hidden="false">
-                      <description>This Unit may gain the benefit of Cover. If this Unit has not moved more than 3&quot; this turn, it gains a Level of Cover until the next time it moves.</description>
-                    </rule>
-                  </rules>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="8db2-4bda-0ec1-8f9c" hidden="false" defaultSelectionEntryId="470b-a17a-d90d-7aa7">
                       <entryLinks>
@@ -5799,6 +5722,15 @@ Attacks made against friendly Units in your Army count as having one level of Ob
                       </constraints>
                     </entryLink>
                   </entryLinks>
+                  <infoLinks>
+                    <infoLink name="To the Ramparts" id="20ea-7a76-5aee-c801" hidden="false" type="rule" targetId="1d92-2826-a5c3-ef5d"/>
+                    <infoLink name="Shared Qualities X" id="3eef-ea7a-a49c-60c1" hidden="false" type="rule" targetId="7ea1-cd1c-ca34-9368">
+                      <modifiers>
+                        <modifier type="replace" value="Battlesuit" field="name" arg="X"/>
+                        <modifier type="replace" value="Battlesuit" field="description" arg="X"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -5885,7 +5817,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
             <profile name="Technical Corporal" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="6b67-bdf2-0174-7049">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-4x Technical Corporals</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Artillery, Attache (Troop), Attache (Carriage)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Artillery, Attache (Automaton), Attache (Troop), Attache (Carriage), Attache (Crewed Weapon)</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-4</characteristic>
               </characteristics>
@@ -5894,74 +5826,6 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="e29f-7f12-6922-1536" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Royal Engineer Technician Element" hidden="false" id="8055-9395-f5b3-ccf6">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="76ab-6b2a-9f35-7e19" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Royal Engineer Technician Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="9ef4-1912-84c4-a5aa">
-              <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, Attache, Troop</characteristic>
-                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
-                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Elements" id="eba4-29ac-e1b9-188f" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="model" import="true" name="Royal Engineer Technician" hidden="false" id="b36f-490e-49d7-f86d">
-                  <entryLinks>
-                    <entryLink import="true" name="Cutting Torch" hidden="false" id="8c8b-2c1a-94eb-ebfc" type="selectionEntry" targetId="3e91-689c-275d-14f2">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b779-301f-ebd5-eda9" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3413-f831-7e53-5a8c" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Webley Revolver" hidden="false" id="e359-84e6-23b3-5e15" type="selectionEntry" targetId="a8e9-9eda-d35d-6216">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e85a-41ad-9e1d-70f9" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b927-59e3-edef-5b20" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <profiles>
-                    <profile name="Engineer Technician" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="403d-eabb-4918-fd29">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="20"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="fbb3-ae6d-6774-2243" includeChildSelections="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="398b-795a-a934-b2a5" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="aa7a-86e2-0baf-989f" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a2d9-1302-7bee-d815" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <rules>
-            <rule name="Automaton Technician" id="e18f-e9ae-4ae9-9edf" hidden="false">
-              <description>As a Standard Action, this Unit may Repair a Nearby Automaton Unit. If it does, roll a D10, restore that much HP to the Unit. This may be used to return Destroyed Models to the battlefield only if it is their maximum HP or higher.</description>
-            </rule>
-          </rules>
-          <entryLinks>
-            <entryLink import="true" name="Distributed Elements" hidden="false" id="eb09-aa30-1165-e024" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
-          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mk. X &quot;Catigern&quot; Infantry Coordination Tripod Element" hidden="false" id="b05b-2fec-a325-3ce5">
           <profiles>
@@ -6019,7 +5883,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
                     <selectionEntry type="upgrade" import="true" name="G.R.A.I.L Reciever" hidden="false" id="ebe3-ddbf-04b6-2088">
                       <rules>
                         <rule name="G.R.A.I.L Reciever" id="2434-636f-f642-9cdf" hidden="false">
-                          <description>When you use a G.R.A.I.L die on this Unit, roll a 6+ check, on a success, gain a G.R.A.I.L die. If this Unit is within range of a Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod this rule applies to all Units within 6&quot;.</description>
+                          <description>This Unit is within the G.R.A.I.L Network. If this Unit is within 12&quot; of a Mk. III &apos;&apos;Vortimer&apos;&apos; Reconnaissance Tripod, all Units within 6&quot; of this Unit are within the G.R.A.I.L Network.</description>
                         </rule>
                       </rules>
                       <constraints>
@@ -6095,7 +5959,13 @@ Attacks made against friendly Units in your Army count as having one level of Ob
                   </constraints>
                   <rules>
                     <rule name="Unleashed" id="0a7f-dddb-bb55-9af8" hidden="false">
-                      <description>When a Unit that this Model is Attached to Activates, it may, as a Free Action, Unleash this Model. If it does, this Model becomes a separate Unit. The new Unit inherits no effects or tokens. The new Unit Activates immediately following the current Unit, before passing to your Opponent. When this happens, it behaves as if it has the Action List associated with its Basic Type, but cannot be Ordered or take the Capture Action.</description>
+                      <description>When a Unit that this Model is Attached to Activates, it may, as a Free Action, Unleash this Model. If this Model is the only remaining Model in this Unit, it is automatically Unleashed.
+
+
+When this Model is Unleashed, the following effects happen:
+* this Model becomes a separate Unit and is set up within 1&quot; of the current Unit&apos;s Leader Model. The new Unit inherits no effects or tokens. 
+* The new Unit Activates immediately following the current Unit, before passing to your Opponent. When this happens, it behaves as if it has the Action List associated with its Basic Type, but cannot be Ordered or take the Capture Action.
+</description>
                     </rule>
                     <rule name="Sew Havoc" id="e41b-1a78-08fb-544a" hidden="false">
                       <description>While this Unit is within an Enemy Vehicle, when that Vehicle is selected to Activate roll a D10, one of the listed effects occurs.
@@ -6107,6 +5977,9 @@ Attacks made against friendly Units in your Army count as having one level of Ob
                     </rule>
                     <rule name="Stow Away" id="03fa-bf0f-1669-d2e5" hidden="false">
                       <description>If this Unit has been Unleashed, as an Free Action, if this Unit within Engagement Range of an Enemy Vehicle Model, it may choose to Embark in that Vehicle as if it were a Transport with the Dangerous Bailout Special Rule. The Vehicle that this Unit is Embarked within may choose to target it for Melee Attacks.</description>
+                    </rule>
+                    <rule name="Independent Attache" id="00bc-e7e5-2999-53f5" hidden="false">
+                      <description>This Model may not be selected as the defending Model if this Unit is targeted by an Attack.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -6120,6 +5993,144 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           <categoryLinks>
             <categoryLink name="Light" hidden="false" id="a99b-5ed3-932f-8d9a" targetId="7584-5824-f5d2-050a" primary="false"/>
           </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Royal Engineer Technician Element" hidden="false" id="6aca-3d05-cda8-a152">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d1ea-1acd-50c0-4ca7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Royal Engineer Technician Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="4458-1a68-e95c-96b0">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">BRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, Attache (Troop), Attache (Automaton)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="edb9-76a4-0e9a-83fb" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Royal Engineer Technician" hidden="false" id="bcfe-e49f-18cb-e0b0">
+                  <entryLinks>
+                    <entryLink import="true" name="Cutting Torch" hidden="false" id="e7ff-6b9d-bcf4-c949" type="selectionEntry" targetId="3e91-689c-275d-14f2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="22dc-eccb-1070-d20d" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f461-324e-1c0e-b9ea" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Webley Revolver" hidden="false" id="8b03-3487-d9b6-2936" type="selectionEntry" targetId="a8e9-9eda-d35d-6216">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11cf-cdc4-a9f7-e83f" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e2d-2cbf-0081-f686" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <profiles>
+                    <profile name="Engineer Technician" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3757-8365-8b64-05de">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="20"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="2869-0a1b-224f-f95d" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c016-5fe2-3c37-da61" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0c7e-b21e-51f5-303e" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a2e7-42d5-3e07-762f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Automaton Technician" id="79a1-f195-5c2d-25db" hidden="false">
+              <description>As a Standard Action, this Unit may Repair a Nearby Automaton Unit. If it does, roll a D10, restore that much HP to the Unit. This may be used to return Destroyed Models to the battlefield only if it is their maximum HP or higher.</description>
+            </rule>
+          </rules>
+          <entryLinks>
+            <entryLink import="true" name="Distributed Elements" hidden="false" id="393d-541c-e4b6-4202" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Drill Instructor" hidden="false" id="289d-1bd0-3a1b-9138">
+          <profiles>
+            <profile name="Drill Instructor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d6fb-c793-9a38-5159">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-4x Drill Instructors</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (SPC) Infantry, Attache (Troop)</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Distributed Elements" hidden="false" id="38d4-fa6b-982d-b808" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="880a-750a-72ef-3a1f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="935f-fdc4-3082-b48e" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Drill Instructor" hidden="false" id="298c-30cf-5d92-1c36">
+                  <entryLinks>
+                    <entryLink import="true" name="Webley Revolver" hidden="false" id="9124-05be-6f71-24b9" type="selectionEntry" targetId="a8e9-9eda-d35d-6216">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d3d-ec96-c819-f098" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f31-e577-e60e-2091" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <profiles>
+                    <profile name="Drill Instructor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="645d-9d85-1c06-0e1d">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                      </characteristics>
+                      <comment>Small, Normal</comment>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56a0-11be-b5fe-fc01" includeChildSelections="false"/>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="afa1-1030-6c0f-856b" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="13"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <rules>
+                    <rule name="Trained Drills" id="1777-b678-ca9c-8e24" hidden="false">
+                      <description>When this Unit Activates, select one of the following rules, this Unit gains that rule until the end of its Activation.
+
+* First Rank, Fire!: After resolving a Ranged Attack Action with this Unit, select one Unit that was the target of its attacks and roll 3 D10s, for each roll of 7+, apply a Suppression Token to that Unit.
+
+* Tough As Old Boots: This Unit has Bulwark 1.
+
+* Keep &apos;Em Guessing: This Unit may perform a Free Dash Action after performing a Ranged Attack Action.</description>
+                    </rule>
+                  </rules>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c3f7-5c33-e168-d6b3" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="15b8-2d13-de29-7b1c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6630,6 +6641,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="b100-ce4e-c964-af8d" id="3b59-52c6-0162-b9a7" primary="false" name="BRE"/>
         <categoryLink targetId="a9bf-60cd-c79d-de30" id="8fe2-708e-801d-43c4" primary="false" name="CORE Pacification"/>
         <categoryLink targetId="239b-db47-17c9-4f36" id="b692-1607-8230-f235" primary="false" name="Automaton"/>
+        <categoryLink targetId="6f95-29a9-8d9a-a5fb" id="b4f2-cd9f-5813-15fb" primary="false" name="Superheavy"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="a9bf-60cd-c79d-de30" field="category">
@@ -6712,37 +6724,37 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <categoryLink targetId="0210-dcc7-546b-3981" id="2055-af77-622b-3a98" primary="false" name="Crewed Weapon"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="50th (Northumbrian) Automated Infantry Division" hidden="false" id="5b42-1b41-bee4-d27f" type="selectionEntry" targetId="be1a-7a79-438f-0e5d">
+    <entryLink import="true" name="50th (Northumbrian) Automated Infantry Division" hidden="false" id="5b42-1b41-bee4-d27f" type="selectionEntry" targetId="be1a-7a79-438f-0e5d" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="75ad-9039-45be-64c3" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="1st Special Aether Service Division" hidden="false" id="8c36-0c19-60bb-fd3d" type="selectionEntry" targetId="3a12-6e5a-ad5e-a02b">
+    <entryLink import="true" name="1st Special Aether Service Division" hidden="false" id="8c36-0c19-60bb-fd3d" type="selectionEntry" targetId="3a12-6e5a-ad5e-a02b" sortIndex="2">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="ca1f-a109-6241-a6c2" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="95th Light Infantry Division “Green Jackets”" hidden="false" id="e2c3-d5c7-e9e5-6709" type="selectionEntry" targetId="166c-48a2-d190-9b42">
+    <entryLink import="true" name="95th Light Infantry Division “Green Jackets”" hidden="false" id="e2c3-d5c7-e9e5-6709" type="selectionEntry" targetId="166c-48a2-d190-9b42" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="caf3-6307-c4a8-a88c" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="9th Highland Infantry Division, Royal Scots Greys" hidden="false" id="8f00-1df9-db3a-4b85" type="selectionEntry" targetId="f729-ac16-517e-076a">
+    <entryLink import="true" name="9th Highland Infantry Division, Royal Scots Greys" hidden="false" id="8f00-1df9-db3a-4b85" type="selectionEntry" targetId="f729-ac16-517e-076a" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="3b26-ab06-3170-9c71" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Guards Armoured Division" hidden="false" id="7491-cfed-2f19-25bb" type="selectionEntry" targetId="e553-841c-fa12-6409">
+    <entryLink import="true" name="Guards Armoured Division" hidden="false" id="7491-cfed-2f19-25bb" type="selectionEntry" targetId="e553-841c-fa12-6409" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="85f6-df03-5d86-e975" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="1st Royal Marines Division" hidden="false" id="a41d-dba9-d59e-c0e9" type="selectionEntry" targetId="d392-d11f-8db6-3c87">
+    <entryLink import="true" name="1st Royal Marines Division" hidden="false" id="a41d-dba9-d59e-c0e9" type="selectionEntry" targetId="d392-d11f-8db6-3c87" sortIndex="6">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="ba6f-db8f-fdd7-5dfa" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Prince of Wales’ Own Artillery Royal Welch Fusiliers" hidden="false" id="7003-dfe2-f750-1f1a" type="selectionEntry" targetId="5fc5-76c3-13ff-08b4">
+    <entryLink import="true" name="Prince of Wales’ Own Artillery Royal Welch Fusiliers" hidden="false" id="7003-dfe2-f750-1f1a" type="selectionEntry" targetId="5fc5-76c3-13ff-08b4" sortIndex="7">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="c09d-52c3-afaf-e61d" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
@@ -6928,6 +6940,31 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Royal Engineer Technician Element" hidden="false" id="3a12-6c2b-c005-3420" type="selectionEntry" targetId="6aca-3d05-cda8-a152">
+      <categoryLinks>
+        <categoryLink targetId="eae9-4e17-22cb-4491" id="82d2-4429-4705-72c3" primary="true" name="SPC Infantry"/>
+        <categoryLink targetId="cf6f-f672-129a-1bfb" id="a15f-428d-b821-d613" primary="false" name="SPC Mechanized"/>
+        <categoryLink targetId="869c-51f1-d04f-a8ce" id="182b-e069-6c2f-fa4f" primary="false" name="SPC Support"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Drill Instructor" hidden="false" id="b493-56c0-7757-533e" type="selectionEntry" targetId="289d-1bd0-3a1b-9138">
+      <categoryLinks>
+        <categoryLink targetId="eae9-4e17-22cb-4491" id="ac2a-e78d-4012-a0dc" primary="true" name="SPC Infantry"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="23ca-25ea-a377-d548" primary="false" name="Attache"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedProfiles>
     <profile name="STEN Mk. II SMG" typeId="Weapon" typeName="Weapon" hidden="false" id="97c7-8f4b-15a6-b4e2">
@@ -7046,7 +7083,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Machine Gun, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -7115,7 +7152,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+8</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D5+2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
@@ -7155,7 +7192,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">14</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10+4</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+5</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
@@ -7336,7 +7373,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2D5+3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Difficult to Use, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -7445,7 +7482,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">14</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3D10+4</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10+5</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
@@ -7466,7 +7503,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Bombard 3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Bombard 3, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Bomb, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -7622,6 +7659,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
       <infoLinks>
         <infoLink name="Vickers HMG" id="94e2-0136-6fad-6d69" hidden="false" type="profile" targetId="2f44-4393-e9ba-d044"/>
         <infoLink name="Suppressive" id="56c6-4b6f-a060-3dcd" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
+        <infoLink name="Sustained Fire" id="2b19-63fe-487a-c8ec" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="19"/>
@@ -7691,7 +7729,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <infoLink name="Difficult to Use" id="3dfa-9afb-4091-9de6" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="77"/>
+        <cost name="Munitions" typeId="Points" value="65"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7763,7 +7801,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <infoLink name="Difficult to Use" id="5852-af88-1bbd-dc00" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="99"/>
+        <cost name="Munitions" typeId="Points" value="85"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -8060,6 +8098,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
           </modifiers>
         </infoLink>
         <infoLink name="Difficult to Use" id="1d0b-f28f-893b-1085" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
+        <infoLink name="Fixed Elevation" id="bc2b-d5de-4d16-a32b" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="73"/>
@@ -8207,7 +8246,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         <infoLink name="Difficult to Use" id="8cc9-f7a7-0e5f-8ec0" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="196"/>
+        <cost name="Munitions" typeId="Points" value="115"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -8263,7 +8302,7 @@ Attacks made against friendly Units in your Army count as having one level of Ob
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="43"/>
+        <cost name="Munitions" typeId="Points" value="40"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -8283,12 +8322,12 @@ Attacks made against friendly Units in your Army count as having one level of Ob
     <rule name="Hardened Electronics" id="5b69-aeed-5236-c84d" hidden="false">
       <description>When this Unit is Attacked by a Weapon with the Arc-Lightning Special Rule, reduce that Weapon&apos;s Damage profile to 1 until the Attack against this Unit is Resolved.</description>
     </rule>
-    <rule name="Autonomous Anti-Tank Gun" id="6ada-912d-2faa-97b8" hidden="false">
+    <rule name="Autonomous Programming: (Carriage)" id="6ada-912d-2faa-97b8" hidden="false">
       <description>* When this Unit takes the Attack Action it must Attack the Enemy Unit with the highest base Armor profile that it can see.
 * This Unit may not take the Aim Action or spend Aim tokens.
 * This Unit may not gain extra actions from Orders.</description>
     </rule>
-    <rule name="Autonomous Artillery" id="b50f-0633-7635-7e05" hidden="false">
+    <rule name="Autonomous Programming: (Siege)" id="b50f-0633-7635-7e05" hidden="false">
       <description>* This Unit must place Blast Tokens within 6&quot; of an Objective.
 * This Unit may not take the Adjust Coordinates Action as a Free Action.
 * This Unit may not take the Aim Action or spend Aim tokens.
@@ -8302,6 +8341,19 @@ Attacks made against friendly Units in your Army count as having one level of Ob
     </rule>
     <rule name="Radial Armor" id="86dd-9760-cb5e-1b10" hidden="false">
       <description>This Unit&apos;s Armor does not have Side or Rear facing.</description>
+    </rule>
+    <rule name="G.R.A.I.L Network" id="8644-e20b-6b3c-3515" hidden="false">
+      <description>When a G.R.A.I.L die is spent on a Unit within the G.R.A.I.L Network, you may roll an un-modifiable 6+ check, on a success, you gain a G.R.A.I.L die.</description>
+    </rule>
+    <rule name="To the Ramparts" id="1d92-2826-a5c3-ef5d" hidden="false">
+      <description>This Unit may gain the benefit of Cover. If this Unit has not moved more than 3&quot; this turn, it gains a Level of Cover until the next time it moves.</description>
+    </rule>
+    <rule name="Autonomous Programming (Troop)" id="345a-8bf0-0603-a636" hidden="false">
+      <description>* If this Unit takes the Move Action, it must move towards either the nearest Enemy Unit or the nearest Objective that is not under your control. 
+* When this Unit takes the Attack Action it must Attack the nearest Enemy Unit. 
+* This Unit may not take the Aim Action or spend Aim tokens.
+* This Unit may not receive the benefit of Cover.
+* This Unit may not gain extra actions from Orders.</description>
     </rule>
   </sharedRules>
   <rules>

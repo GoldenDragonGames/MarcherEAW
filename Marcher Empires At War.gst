@@ -96,62 +96,8 @@
     <categoryEntry name="CORE Recon" id="54db-5889-a382-77cb" hidden="false"/>
     <categoryEntry name="CORE Mechanized" id="7ce6-55a5-44aa-7258" hidden="false"/>
     <categoryEntry name="AUX Support" id="48f5-3131-be0b-5951" hidden="false"/>
-    <categoryEntry name="Automaton" id="239b-db47-17c9-4f36" hidden="false">
-      <constraints>
-        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b28c-b14a-816a-3272" includeChildSelections="true" includeChildForces="true" message="50th (Northumbrian) Automated Infantry Division: This Specialization requires one Autonomous Unit for each Non-Autonomous Non-Transport Unit in your {scope}"/>
-      </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="increment" value="1" field="b28c-b14a-816a-3272">
-              <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="roster" childId="unit" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
-              </repeats>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="b28c-b14a-816a-3272">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="decrement" value="1" field="b28c-b14a-816a-3272">
-              <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="roster" childId="d4be-5aad-8560-5720" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
-              </repeats>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af8a-1a21-3380-77c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-    </categoryEntry>
-    <categoryEntry name="Battlesuit" id="4ec9-47a4-5562-ea3b" hidden="false">
-      <constraints>
-        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b56d-2fc5-826a-f459" includeChildSelections="true" includeChildForces="true" message="Die Paladin-Peers Karls des Großen (München): This Specialization requires one Battlesuit Unit for each Non-Battlesuit Unit in your {scope}"/>
-      </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="b56d-2fc5-826a-f459">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7fd7-04c2-77b8-c8b1" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="b56d-2fc5-826a-f459">
-              <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="roster" childId="unit" shared="true" roundUp="true" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
-              </repeats>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7fd7-04c2-77b8-c8b1" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-    </categoryEntry>
+    <categoryEntry name="Automaton" id="239b-db47-17c9-4f36" hidden="false"/>
+    <categoryEntry name="Battlesuit" id="4ec9-47a4-5562-ea3b" hidden="false"/>
     <categoryEntry name="Carriage" id="c2bc-81f4-b62b-dc46" hidden="false"/>
     <categoryEntry name="Cavalry" id="71cc-1c64-2438-4030" hidden="false"/>
     <categoryEntry name="Flying" id="b250-bcf3-850c-e556" hidden="false">
@@ -217,6 +163,7 @@
     <categoryEntry name="Medium" id="f94f-807f-eca3-d850" hidden="true"/>
     <categoryEntry name="Heavy" id="bfe4-e968-133b-c62c" hidden="true"/>
     <categoryEntry name="Command Unit" id="31ae-ff65-b3d1-e277" hidden="true"/>
+    <categoryEntry name="Configuration" id="aae3-bfd0-8130-e87e" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Company" id="01ba-2120-7904-bce7" hidden="false" childForcesLabel="Platoons">
@@ -224,6 +171,7 @@
         <forceEntry name="Infantry Platoon" id="2250-4111-e2c2-bb10" hidden="true">
           <categoryLinks>
             <categoryLink name="Infantry Platoon Configuration" hidden="false" id="e852-1fd2-77ea-6fc3" targetId="85c7-9688-a121-1bdc" primary="false"/>
+            <categoryLink name="Configuration" hidden="false" id="3837-3620-5edb-e9ee" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="e4c1-dc1e-d31f-7065" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="71be-21e1-b51a-cdcc" includeChildSelections="true"/>
@@ -345,7 +293,7 @@
         </forceEntry>
         <forceEntry name="Armor Platoon" id="fae0-4a12-4ae4-5f9b" hidden="true">
           <categoryLinks>
-            <categoryLink name="Armor Platoon Configuration" hidden="false" id="4d46-8d92-2967-4294" targetId="8d88-522f-d086-d712" primary="false"/>
+            <categoryLink name="Configuration" hidden="false" id="c6d8-cd72-2d55-f4f3" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="125f-6646-3405-160a" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beab-a037-c98d-f6d4" includeChildSelections="false"/>
@@ -478,7 +426,7 @@
         </forceEntry>
         <forceEntry name="Artillery Platoon" id="d61b-5a5c-9008-3c0b" hidden="true">
           <categoryLinks>
-            <categoryLink name="Artillery Platoon Configuration" hidden="false" id="f772-61f7-8c62-52b6" targetId="a448-7c15-64c5-b50f" primary="false"/>
+            <categoryLink name="Configuration" hidden="false" id="1b7d-e51d-6238-3aea" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="88e8-dd88-670f-ca67" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="1a5e-3a41-33ef-0b84" includeChildSelections="true"/>
@@ -618,7 +566,7 @@
         </forceEntry>
         <forceEntry name="Mechanized Platoon" id="29bb-b3e2-3fbb-9ad5" hidden="true">
           <categoryLinks>
-            <categoryLink name="Mechanized Platoon Configuration" hidden="false" id="b044-04a1-2e36-d6f3" targetId="e281-74c9-b00c-1884" primary="false"/>
+            <categoryLink name="Configuration" hidden="false" id="9843-11fb-3136-9f1b" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="4924-42e4-59c7-a760" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="7650-e1e6-938e-7490" includeChildSelections="true"/>
@@ -741,7 +689,7 @@
         </forceEntry>
         <forceEntry name="Recon Platoon" id="df9c-5241-555f-2018" hidden="true">
           <categoryLinks>
-            <categoryLink name="Recon Platoon Configuration" hidden="false" id="67e4-f520-433b-c784" targetId="baba-9300-79c2-8556" primary="false"/>
+            <categoryLink name="Configuration" hidden="false" id="cd02-1128-7545-b733" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="85ce-3a90-edf6-5152" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4889-5867-3a08-7e9f" includeChildSelections="true"/>
@@ -797,6 +745,7 @@
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="c2bc-81f4-b62b-dc46" shared="true" roundUp="false"/>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true" roundUp="false"/>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="14e2-5d10-257c-7ecb" shared="true" roundUp="false" includeChildSelections="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="set" value="false" field="hidden">
@@ -870,7 +819,7 @@
         </forceEntry>
         <forceEntry name="Support Platoon" id="c571-bda4-1e0f-ed1f" hidden="true">
           <categoryLinks>
-            <categoryLink name="Support Platoon Configuration" hidden="false" id="4f7e-1819-2fb1-7f22" targetId="3cff-c57c-6289-d24c" primary="false"/>
+            <categoryLink name="Configuration" hidden="false" id="7b34-05fb-c098-3132" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="fcfb-2bd5-36b0-c375" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e399-8a37-db84-87a3" includeChildSelections="true"/>
@@ -1005,7 +954,7 @@
         </forceEntry>
         <forceEntry name="Automated Pacification Task Force" id="d6f3-788c-2c4c-503b" hidden="false">
           <categoryLinks>
-            <categoryLink name="Pacification Task Force Configuration" hidden="false" id="86af-77be-b20f-d5ee" targetId="7596-4716-5606-8a68"/>
+            <categoryLink name="Configuration" hidden="false" id="f18d-0d15-1e4c-3b95" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="CORE Pacification" hidden="false" id="3a0c-64f0-cd4d-e6fd" targetId="a9bf-60cd-c79d-de30">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="2182-f27c-83b0-ca61"/>
@@ -1065,7 +1014,7 @@
         </forceEntry>
         <forceEntry name="Urinke Imperial Command Detachment" id="b546-2955-e4ad-2f31" hidden="false">
           <categoryLinks>
-            <categoryLink name="Urinke Detachment Configuration" hidden="false" id="2dad-2adb-e964-cfa1" targetId="1c45-7994-0d13-1fdd"/>
+            <categoryLink name="Configuration" hidden="false" id="c0d0-430a-9947-5964" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="3b00-4084-4032-9acc" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e557-d702-7a20-f0ad" includeChildSelections="true"/>
@@ -1117,12 +1066,7 @@
         </forceEntry>
         <forceEntry name="Zeppelin Task Force" id="94df-db09-3266-46a5" hidden="false">
           <categoryLinks>
-            <categoryLink name="Zeppelin Configuration" hidden="false" id="2f19-5c59-42df-d336" targetId="fb3d-fd4e-cbbf-62d7" primary="false">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cacb-dfe6-6484-b4ef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63fc-7113-979d-2c8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-            </categoryLink>
+            <categoryLink name="Configuration" hidden="false" id="7122-a840-09d2-7c43" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="f002-cc6b-e643-2364" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="fafe-dd68-46b2-f21b" includeChildSelections="true"/>
@@ -1172,7 +1116,7 @@
         </forceEntry>
         <forceEntry name="Partisan Cell" id="32f9-f13e-ea22-42ec" hidden="false">
           <categoryLinks>
-            <categoryLink name="Partisan Cell Configuration" hidden="false" id="b945-3ff7-5bd7-c270" targetId="8720-8576-acb1-c08e"/>
+            <categoryLink name="Configuration" hidden="false" id="0b80-1968-806e-d5e2" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="8d9b-9c2f-3f13-d3f8" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="26a6-8d37-62c2-77e6" includeChildSelections="true"/>
@@ -1224,11 +1168,7 @@
         </forceEntry>
         <forceEntry name="Armored Train Detachment" id="cd9f-9d4b-8425-d8ca" hidden="false">
           <categoryLinks>
-            <categoryLink name="Rail Configuration" hidden="false" id="5c67-eb2a-3796-decb" targetId="42f4-579a-a43d-b8cc">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a7f-c9e3-dc43-98a5"/>
-              </constraints>
-            </categoryLink>
+            <categoryLink name="Configuration" hidden="false" id="bb3c-03a4-8182-45d5" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="6534-ad9c-72d9-f391" targetId="70eb-c264-a9cb-1bfe"/>
             <categoryLink name="CORE Rail" hidden="false" id="0530-f1e2-7339-3262" targetId="368f-586d-f503-841e">
               <constraints>
@@ -1263,7 +1203,7 @@
         </forceEntry>
         <forceEntry name="Starborne Air Support Platoon" id="34ba-1720-6fa5-fe76" hidden="false">
           <categoryLinks>
-            <categoryLink name="Starborne Platoon Configuration" hidden="false" id="e3a6-4112-32e9-fcfd" targetId="0b49-4c06-5cea-c6a0"/>
+            <categoryLink name="Configuration" hidden="false" id="97be-7f01-ea90-00d2" targetId="aae3-bfd0-8130-e87e"/>
             <categoryLink name="Command" hidden="false" id="935f-90ea-16b7-42d4" targetId="70eb-c264-a9cb-1bfe">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5afc-7f0e-1325-4fe6" includeChildSelections="true"/>
@@ -1486,63 +1426,105 @@
     </forceEntry>
   </forceEntries>
   <entryLinks>
-    <entryLink id="a6a1-638e-1183-e886" name="Infantry Platoon Abilities" hidden="false" collective="false" import="true" targetId="1238-8c88-8030-8d02" type="selectionEntry" defaultAmount="1">
+    <entryLink id="a6a1-638e-1183-e886" name="Infantry Platoon Abilities" hidden="true" collective="false" import="true" targetId="1238-8c88-8030-8d02" type="selectionEntry" defaultAmount="1">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="16a8-cc17-4865-35-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16a8-cc17-4865-35-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="1e55-d646-8958-934c" name="Infantry Platoon Configuration" hidden="false" targetId="85c7-9688-a121-1bdc" primary="true"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="0073-759b-6d40-a5bf" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink id="1e34-f7f1-7553-27dc" name="Recon Platoon Abilities" hidden="false" collective="false" import="true" targetId="c1ca-082a-de8f-6bb5" type="selectionEntry">
+    <entryLink id="1e34-f7f1-7553-27dc" name="Recon Platoon Abilities" hidden="true" collective="false" import="true" targetId="c1ca-082a-de8f-6bb5" type="selectionEntry">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="832b-52f9-af4d-dd90-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="832b-52f9-af4d-dd90-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="e6ab-8806-f190-82bd" name="Recon Platoon Configuration" hidden="false" targetId="baba-9300-79c2-8556" primary="true"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="a0bc-9c4c-9f63-b47e" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="baba-9300-79c2-8556" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink id="b174-5552-9be1-190a" name="Mechanized Platoon Abilities" hidden="false" collective="false" import="true" targetId="f751-4a6b-6442-3376" type="selectionEntry">
+    <entryLink id="b174-5552-9be1-190a" name="Mechanized Platoon Abilities" hidden="true" collective="false" import="true" targetId="f751-4a6b-6442-3376" type="selectionEntry">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4589-b4cf-dc71-1e5f-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4589-b4cf-dc71-1e5f-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="e058-84d7-b9db-8d25" name="Mechanized Platoon Configuration" hidden="false" targetId="e281-74c9-b00c-1884" primary="true"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="6100-5a74-2ab5-0584" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink id="8a37-ddd8-12ee-54ef" name="Artillery Platoon Abilities" hidden="false" collective="false" import="true" targetId="6d9a-4874-8e9b-1268" type="selectionEntry">
+    <entryLink id="8a37-ddd8-12ee-54ef" name="Artillery Platoon Abilities" hidden="true" collective="false" import="true" targetId="6d9a-4874-8e9b-1268" type="selectionEntry">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb63-a804-b949-6421-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb63-a804-b949-6421-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="0f1a-c80c-e47b-6f52" name="Artillery Platoon Configuration" hidden="false" targetId="a448-7c15-64c5-b50f" primary="true"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="b6db-71ba-a1be-e82c" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink id="f12c-1614-fdfd-99ca" name="Support Platoon Abilities" hidden="false" collective="false" import="true" targetId="3181-08f3-ad0b-84db" type="selectionEntry">
+    <entryLink id="f12c-1614-fdfd-99ca" name="Support Platoon Abilities" hidden="true" collective="false" import="true" targetId="3181-08f3-ad0b-84db" type="selectionEntry">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ec7-c227-2b1a-9187-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ec7-c227-2b1a-9187-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="bf11-6ece-5429-df3a" name="Support Platoon Configuration" hidden="false" targetId="3cff-c57c-6289-d24c" primary="true"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="eb28-cb51-0989-b949" primary="false" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink id="6476-1d95-0634-0e28" name="Armor Platoon Abilities" hidden="false" collective="false" import="true" targetId="86bb-e1be-717a-6587" type="selectionEntry">
+    <entryLink id="6476-1d95-0634-0e28" name="Armor Platoon Abilities" hidden="true" collective="false" import="true" targetId="86bb-e1be-717a-6587" type="selectionEntry">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9f4-c0e0-f72a-a732-min" type="min"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9f4-c0e0-f72a-a732-max" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="8b3d-2e4a-b1c5-ee77" name="Armor Platoon Configuration" hidden="false" targetId="8d88-522f-d086-d712" primary="true"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="e983-c64c-e0ad-0608" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Special Requisition Reference" hidden="false" id="520f-0c6b-d403-49b9" type="selectionEntry" targetId="0085-fb8b-223e-246b">
       <categoryLinks>
-        <categoryLink targetId="8d88-522f-d086-d712" id="496b-3461-6007-2ae1" primary="true" name="Armor Platoon Configuration"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="791c-e763-f8a2-e517" primary="true" name="Configuration"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Tank Ace" hidden="false" id="2577-b5e3-3d3e-5694" type="selectionEntry" targetId="354d-3410-a359-a68c">
@@ -1594,6 +1576,36 @@
         <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Radio Operator Element" hidden="false" id="bb1d-48d4-84a8-4006" type="selectionEntry" targetId="f0e5-9034-3e69-68c4">
+      <categoryLinks>
+        <categoryLink name="SPC Armor" hidden="false" id="b131-57af-360e-4a35" targetId="c650-aa93-b1ce-0970" primary="true"/>
+        <categoryLink name="SPC Mechanized" hidden="false" id="d9e7-9d68-78a2-8254" targetId="cf6f-f672-129a-1bfb" primary="false"/>
+        <categoryLink name="SPC Recon" hidden="false" id="ca8d-e626-6a7c-a452" targetId="893b-458b-4e03-6e5e" primary="false"/>
+        <categoryLink name="Attache" hidden="false" id="fdef-9910-2330-86e3" targetId="6cee-690d-b6de-aa15" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="893b-458b-4e03-6e5e" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="adc7-9c83-fa3a-e7da" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1999,7 +2011,7 @@ Linear, Medium Terrain, Rough</characteristic>
             </profile>
             <profile name="G.R.A.I.L Relay (BRE)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="05d1-a43a-77c9-aaac">
               <characteristics>
-                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">3</characteristic>
                 <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">While on the board, the roll to gain new G.R.A.I.L dice is reduced by 1.
 
 
@@ -2229,6 +2241,18 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
 - This Unit benefits from the Multi-Level Terrain rule giving +1 to hit for the purposes of ranged attacks.
 - Units Embarked within this Unit are considered to have the Flying Keyword.
 - This Unit may not be targeted by Attacks with the Flames, Gas, or Indirect Fire Special Rules.</description>
+    </rule>
+    <rule name="Radio" id="97d3-d9ed-af71-d4d6" hidden="false">
+      <description>This Unit, and all Units within 6&quot; of this Unit, are within the Radio Network.</description>
+    </rule>
+    <rule name="Forward Observer" id="75bb-9390-ced5-4e8e" hidden="false">
+      <description>This Unit gains &quot;Adjust Coordinates&quot; as a Standard Action. When it uses this Action it may select any Blast tokens within Line of Sight and 18&quot; of itself. Any Aim tokens this Unit has may be spent by Friendly Siege Units within 12&quot; of itself.</description>
+    </rule>
+    <rule name="Radio Network" id="e66d-a852-920c-d985" hidden="false">
+      <description>Units within the Radio Network benefit from the following rules:
+* They may receive Order Tokens from Command Units within the Radio Network, regardless of Range. 
+* Units with the Forward Observer Special Rule may share Aim tokens with any Siege Units within the Radio Network, regardless of Range.
+* Any any point during their Activation, they may choose to transfer one of their Order Tokens to another Unit within the Radio Network.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2767,6 +2791,78 @@ Area, Heavy Terrain, Rough</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Radio Operator Element" hidden="false" id="f0e5-9034-3e69-68c4">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="d34e-6617-ee3d-58f5" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Radio Operator" hidden="false" id="f9d2-b450-bf3a-f05e">
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="15"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9912-b661-046b-7f93" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ad4-eac7-99a0-7411" includeChildSelections="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Radio" id="1434-7c39-c4f2-b3fd" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
+                    <infoLink name="Forward Observer" id="bbc1-9e0a-e65b-d939" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="754b-0fc8-2f44-65bc" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc77-e78e-8262-a21e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fc40-9bf0-9b5d-1168" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Radio Operator Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="dc93-7f5b-7f2e-5b7d">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">FAC, (SPC) Armor, (SPC) Mechanized, (SPC) Recon, (SPC) Support, (SPC) Artillery, Attache (Vehicle), Attache (Carriage)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="replace" value="USA" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d372-9028-aa84-9c11" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="HRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="83f3-eeee-b9fd-f78b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="NFR" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="RUS" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="dd1d-4e84-685a-d547" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="BRE" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="EOJ" field="d6ab-192f-515b-f06b" arg="FAC">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5850-c931-4187-f520" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Designations" id="0701-9ba9-2fc4-9d73" hidden="false">
@@ -2844,7 +2940,7 @@ Area, Heavy Terrain, Rough</characteristic>
         <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="b068-de68-7a68-a938">
           <rules>
             <rule name="Veteran" id="b6c8-f73c-5ade-f649" hidden="false">
-              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order.</description>
+              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order. If this Unit is a Vehicle or a Carriage, it ignores the Difficult to Use Special Rule.</description>
             </rule>
           </rules>
           <costs>
@@ -2880,10 +2976,16 @@ Area, Heavy Terrain, Rough</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mounted Mechanic" hidden="false" id="de04-b576-5388-e592">
           <constraints>
-            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="5fa4-83e4-604b-4e05" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="force" shared="true" id="5fa4-83e4-604b-4e05-min" includeChildSelections="true"/>
+            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="5fa4-83e4-604b-4e05-max" includeChildSelections="true"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="1" field="5fa4-83e4-604b-4e05">
+            <modifier type="increment" value="1" field="5fa4-83e4-604b-4e05-min">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="0400-848a-01aa-ae0c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="5fa4-83e4-604b-4e05-max">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="force" childId="0400-848a-01aa-ae0c" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
@@ -2893,7 +2995,7 @@ Area, Heavy Terrain, Rough</characteristic>
         <selectionEntry type="upgrade" import="true" name="Battle Hardened" hidden="false" id="72a2-3ebd-6239-c7df">
           <rules>
             <rule name="Battle Hardened" id="bc6d-0d48-0ca7-b525" hidden="false">
-              <description>This Unit only loses one Action per two Suppression or Concussion Tokens. If this Unit is a Vehicle or a Carriage, it ignores the Difficult to Use Special Rule.</description>
+              <description>This Unit only loses one Action per two Suppression or Concussion Tokens. </description>
             </rule>
           </rules>
           <costs>
@@ -2907,6 +3009,24 @@ Area, Heavy Terrain, Rough</characteristic>
           </constraints>
           <modifiers>
             <modifier type="prepend" value="Hardened" field="name" scope="parent"/>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Attached Radio Operator" hidden="false" id="e2f4-188d-70ee-7a7d">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="force" shared="true" id="9fc2-35e8-d844-54aa-min" includeChildSelections="true"/>
+            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9fc2-35e8-d844-54aa-max" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="9fc2-35e8-d844-54aa-min">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="f9d2-b450-bf3a-f05e" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="9fc2-35e8-d844-54aa-max">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="f9d2-b450-bf3a-f05e" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </selectionEntry>
       </selectionEntries>

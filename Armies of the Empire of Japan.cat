@@ -175,6 +175,7 @@
       <infoLinks>
         <infoLink name="Type 95 “Tetsumure” Heavy Machine Gun" id="1156-9aca-3e06-662b" hidden="false" type="profile" targetId="aede-4765-5cc1-fdb2"/>
         <infoLink name="Suppressive" id="cd54-4e9a-d05a-6549" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
+        <infoLink name="Sustained Fire" id="8759-99d7-4856-e298" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -220,7 +221,7 @@
         <infoLink name="Difficult to Use" id="5774-6e6c-257b-3576" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="39"/>
+        <cost name="Munitions" typeId="Points" value="36"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -283,7 +284,7 @@
         <infoLink name="Difficult to Use" id="6b32-6237-a8df-43df" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="109"/>
+        <cost name="Munitions" typeId="Points" value="94"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1080,7 +1081,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Machine Gun, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1129,7 +1130,7 @@
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+8</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3D5+2</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
@@ -1169,7 +1170,7 @@
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">40&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">13</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10+6</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+8</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
@@ -2183,37 +2184,37 @@
         <categoryLink targetId="d34f-eedb-f296-27aa" id="a7e9-09ac-d88b-7aeb" primary="false" name="IJA"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="IJA 11th Army “Ro-gun” 3rd Division" hidden="false" id="8069-5e1a-5bf4-3855" type="selectionEntry" targetId="7284-b2af-8bcd-1900">
+    <entryLink import="true" name="IJA 11th Army “Ro-gun” 3rd Division" hidden="false" id="8069-5e1a-5bf4-3855" type="selectionEntry" targetId="7284-b2af-8bcd-1900" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="6e1f-dda7-5485-db6b" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="IJN Special Naval Landing Force “Jōriku Sentai Dai-Ichiban”" hidden="false" id="4672-81af-aaba-bb1f" type="selectionEntry" targetId="df55-35b0-0c3d-b7f6">
+    <entryLink import="true" name="IJN Special Naval Landing Force “Jōriku Sentai Dai-Ichiban”" hidden="false" id="4672-81af-aaba-bb1f" type="selectionEntry" targetId="df55-35b0-0c3d-b7f6" sortIndex="2">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="7c96-469c-b6c1-a1ce" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="IJM Joint Indochina Task Force “Indoshina Gōdō Guntai”" hidden="false" id="ab93-28d5-94c4-993d" type="selectionEntry" targetId="ced5-80f6-f1f8-dd60">
+    <entryLink import="true" name="IJM Joint Indochina Task Force “Indoshina Gōdō Guntai”" hidden="false" id="ab93-28d5-94c4-993d" type="selectionEntry" targetId="ced5-80f6-f1f8-dd60" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="5921-56bf-66bd-d4fa" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="IJN Rikusentai 3rd Division “Kure-Sanban”" hidden="false" id="db3c-b3fd-6cfa-8b65" type="selectionEntry" targetId="0115-478c-0f6d-7c50">
+    <entryLink import="true" name="IJN Rikusentai 3rd Division “Kure-Sanban”" hidden="false" id="db3c-b3fd-6cfa-8b65" type="selectionEntry" targetId="0115-478c-0f6d-7c50" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="de24-1c3d-73ef-f21b" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="IJA 1st Tank Division “Taku”" hidden="false" id="ba66-bb10-6e82-8aba" type="selectionEntry" targetId="5906-bda1-3922-141e">
+    <entryLink import="true" name="IJA 1st Tank Division “Taku”" hidden="false" id="ba66-bb10-6e82-8aba" type="selectionEntry" targetId="5906-bda1-3922-141e" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="59e3-23e0-761b-94e9" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Imperial Guard 5th Division “Konoe Shidan”" hidden="false" id="32ef-e290-b0be-ab0c" type="selectionEntry" targetId="af48-8935-19ff-49ba">
+    <entryLink import="true" name="Imperial Guard 5th Division “Konoe Shidan”" hidden="false" id="32ef-e290-b0be-ab0c" type="selectionEntry" targetId="af48-8935-19ff-49ba" sortIndex="6">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="4788-1a1c-a0fc-3048" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Ebisu Special Boarding Unit “Tokkeitai”" hidden="false" id="6b38-fa39-80c1-61ba" type="selectionEntry" targetId="daf1-2c6e-69f5-1302">
+    <entryLink import="true" name="Ebisu Special Boarding Unit “Tokkeitai”" hidden="false" id="6b38-fa39-80c1-61ba" type="selectionEntry" targetId="daf1-2c6e-69f5-1302" sortIndex="7">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="5b90-aec8-0b6a-a821" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
@@ -2652,29 +2653,20 @@
                       </modifiers>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="219e-a520-71be-124e">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="440d-f50f-3b36-5779" collective="true">
-                          <infoLinks>
-                            <infoLink name="Suppressive" id="9971-b18b-a022-2453" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
-                            <infoLink name="Type 92 “Hyōshigi” Machine Gun" id="e048-e3fe-d03d-fda7" hidden="false" type="profile" targetId="1997-f52e-f334-5046"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="Munitions" typeId="Points" value="6"/>
-                            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                          </costs>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9669-5322-962d-1f62-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9669-5322-962d-1f62-max" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2419-48d6-dd94-82c8" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
                         <infoLink name="Pintle Mount" id="f97b-7692-2eb1-7d5c" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
                       </infoLinks>
+                      <entryLinks>
+                        <entryLink import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="c920-c16a-abae-48a9" type="selectionEntry" targetId="8914-6078-e164-3a2c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fa0-a4f6-c7b2-5d28-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fa0-a4f6-c7b2-5d28-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
@@ -2685,7 +2677,7 @@
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">14</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">16</characteristic>
                   </characteristics>
                   <comment>Large, Normal, +1</comment>
                 </profile>
@@ -2695,7 +2687,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4570-b4b4-ed3b-a1eb-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="132"/>
+                <cost name="Munitions" typeId="Points" value="151"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2776,29 +2768,20 @@
                       </constraints>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="94f6-2998-858d-4093">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="824d-8a51-261d-c110" collective="true">
-                          <infoLinks>
-                            <infoLink name="Suppressive" id="8e81-013d-ff5b-7e02" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
-                            <infoLink name="Type 92 “Hyōshigi” Machine Gun" id="7537-0022-f335-85cb" hidden="false" type="profile" targetId="1997-f52e-f334-5046"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="Munitions" typeId="Points" value="6"/>
-                            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                          </costs>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d04e-2467-9208-718e" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b77-4963-1a77-f8bd" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed57-d7b2-f52a-bab1" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
                         <infoLink name="Pintle Mount" id="3777-f617-66a0-2842" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
                       </infoLinks>
+                      <entryLinks>
+                        <entryLink import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="2f22-4acf-867d-1f70" type="selectionEntry" targetId="8914-6078-e164-3a2c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="adf7-94af-a724-434a-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adf7-94af-a724-434a-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups>
@@ -3210,12 +3193,7 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="9d3b-1afd-5110-3679" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 4" hidden="false" id="9949-0511-de84-da7d" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c42b-a9fa-3c6c-6c3e-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c42b-a9fa-3c6c-6c3e-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="9949-0511-de84-da7d" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="IJA Type 91 Howitzer Carrier" hidden="false" id="8f57-898a-f767-07e9">
@@ -3346,52 +3324,7 @@
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="d26c-4e2b-4f18-8abd" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="397c-1f1c-85b0-a953" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
-            <entryLink import="true" name="Dial In 4" hidden="false" id="2555-eb65-e1d9-292c" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
-              <modifiers>
-                <modifier type="decrement" value="1" field="aaae-3ef8-98ed-5fbc-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" value="1" field="aaae-3ef8-98ed-5fbc-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aaae-3ef8-98ed-5fbc-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aaae-3ef8-98ed-5fbc-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Dial In 6" hidden="true" id="320e-1f50-674c-1dc1" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="cc10-9824-3d21-88be-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="cc10-9824-3d21-88be-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="b34c-a1ac-ba88-6465" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cc10-9824-3d21-88be-min" includeChildSelections="false"/>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="cc10-9824-3d21-88be-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="2555-eb65-e1d9-292c" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -3427,12 +3360,7 @@
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="0e5c-a5d2-a6f2-a72e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 4" hidden="false" id="89bb-d826-71cb-e0d2" type="selectionEntry" targetId="69bb-53ff-a987-5a16">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58c6-1678-2ae9-c0ef-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58c6-1678-2ae9-c0ef-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 4" hidden="false" id="89bb-d826-71cb-e0d2" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="IJA Type 89 Ho-He Motorized Howitzer" hidden="false" id="424c-280b-bd8a-340d">
@@ -3564,29 +3492,15 @@
                       </constraints>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="edbb-1ada-dc6a-b157">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="efa1-b0d3-682d-0476" collective="true">
-                          <infoLinks>
-                            <infoLink name="Suppressive" id="5ca2-9a6a-b1e2-6ef8" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
-                            <infoLink name="Type 92 “Hyōshigi” Machine Gun" id="c41e-2c12-523e-2707" hidden="false" type="profile" targetId="1997-f52e-f334-5046"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="Munitions" typeId="Points" value="6"/>
-                            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                          </costs>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1829-8364-dd94-1fde" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0a2-4159-38d8-85b3" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="42b6-74f8-ab40-a971" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
                         <infoLink name="Pintle Mount" id="0cce-cc4e-853d-e3dc" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
                       </infoLinks>
+                      <entryLinks>
+                        <entryLink import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="00c3-59be-8831-baf1" type="selectionEntry" targetId="8914-6078-e164-3a2c"/>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
@@ -3597,7 +3511,7 @@
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">14</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">16</characteristic>
                   </characteristics>
                   <comment>Large, Normal, +1</comment>
                 </profile>
@@ -3607,7 +3521,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b470-6b3c-face-d4f9" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="132"/>
+                <cost name="Munitions" typeId="Points" value="151"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3619,12 +3533,7 @@
           </selectionEntries>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="46ae-2f41-3be6-969b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="dad6-7879-bb77-2a90" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89fa-6401-f0db-6362-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89fa-6401-f0db-6362-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Dial In 6" hidden="false" id="dad6-7879-bb77-2a90" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="9614-4750-4495-0dd5" primary="false" name="Medium"/>
@@ -4114,29 +4023,20 @@
                   </constraints>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Pintle Mounted Machine Gun" hidden="false" id="b7dc-7f21-85d8-51af">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="e6a9-f05a-d268-5172" collective="true">
-                          <infoLinks>
-                            <infoLink name="Suppressive" id="8778-61ed-916e-27e4" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
-                            <infoLink name="Type 92 “Hyōshigi” Machine Gun" id="ee81-367c-6ec3-95ba" hidden="false" type="profile" targetId="1997-f52e-f334-5046"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="Munitions" typeId="Points" value="6"/>
-                            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                          </costs>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a12-f26c-b668-834c" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f4c-6066-e1f1-a16e" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e452-3338-3a26-ff79" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
                         <infoLink name="Pintle Mount" id="29cd-f0d8-c246-37c7" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
                       </infoLinks>
+                      <entryLinks>
+                        <entryLink import="true" name="Type 92 “Hyōshigi” Machine Gun" hidden="false" id="25a0-26c8-13f0-35b0" type="selectionEntry" targetId="8914-6078-e164-3a2c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="14c3-089f-d9fa-9bd3-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14c3-089f-d9fa-9bd3-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Coaxial Machine Gun" hidden="false" id="0e4f-69bf-2d81-1678">
                       <entryLinks>
@@ -8158,7 +8058,7 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
           <profiles>
             <profile name="Medic Group" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="dca1-a6b4-34a9-dc27">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">USA, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache, Troop</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">USA, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache (Troop)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -8335,7 +8235,7 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
             </profile>
             <profile name="Flagbearer with Imperial Standard" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c3df-c456-67e5-4c39">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">EOJ, (SPC) Infantry, (SPC) Mechanized, Attache</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">EOJ, (SPC) Infantry, (SPC) Mechanized, Attache (Troop)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
@@ -8377,7 +8277,7 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
           <profiles>
             <profile name="Shugo-Yoroi Warsuit Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="ae5e-9f97-72b7-85ae">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">EOJ, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, Attache, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">EOJ, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, Attache (Battlesuit)</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
@@ -8457,6 +8357,14 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
                     </entryLink>
                     <entryLink import="true" name="Bulwark 1" hidden="false" id="a5f9-d1b0-fe96-e7a6" type="selectionEntry" targetId="b9b0-158c-a4b1-de50"/>
                   </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Shared Qualities X" id="5742-3a64-151d-4d87" hidden="false" type="rule" targetId="7ea1-cd1c-ca34-9368">
+                      <modifiers>
+                        <modifier type="replace" value="Battlesuit" field="name" arg="X"/>
+                        <modifier type="replace" value="Battlesuit" field="description" arg="X"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>

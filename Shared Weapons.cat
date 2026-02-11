@@ -48,7 +48,7 @@
       <description>This weapon starts with X Ammo. This weapon may only be selected for the Attack Action if it has at least 1 Ammo remaining. After the attack Action is complete, reduce its Ammo by 1.</description>
     </rule>
     <rule name="Arc-Lightning" id="38d0-e689-0a64-8c94" hidden="false">
-      <description>After resolving an Attack with this Weapon, you may roll a X+ check to see if the lightning jumps. On a success, select the nearest non-Flying Unit that is no more than 8&quot; away from any Model in the previously Attacked Unit and that has not been targeted by this Weapon this Activation. Roll an Attack with this Weapon against that Unit as well. This may be done multiple times. Each time the lightning jumps, increase the Check requirement by +1.</description>
+      <description>After resolving an Attack with this Weapon, you may roll a X+ check to see if the lightning jumps. On a success, select the nearest non-Flying Unit that is no more than 1D5&quot;+2 away from any Model in the previously Attacked Unit and that has not been targeted by this Weapon this Activation. Roll an Attack with this Weapon against that Unit as well. This may be done multiple times. Each time the lightning jumps, increase the Check requirement by +1.</description>
     </rule>
     <rule name="Bombard" id="0091-17ea-a67a-1ae9" hidden="false">
       <description>Whenever a Unit makes an Attack with this Weapon, after the Attack has been resolved, you may apply a Bombard Token to all Terrain Features within the zone of this Weapon&apos;s Blast Token. Tokens may only be applied to Terrain Features with a Cover Score of X or less. For each Bombard Token a Terrain Feature has, its Cover Score is reduced by one. If a Terrain Feature&apos;s Cover Score is lowered to 0, it is removed from the Battlefield.</description>
@@ -94,7 +94,7 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
       <description>Attacks with this Weapon automatically pass all Armor Penetration Checks.</description>
     </rule>
     <rule name="Grenade" id="e228-c7d5-d55a-053a" hidden="false">
-      <description>This Unit may only Attack with one instance of this Weapon per Activation regardless of the number of Models in the Unit. This Weapon may be selected to Attack with in addition to another Weapon.</description>
+      <description>This Weapon is not Equipped to a single Model, but instead to the entire Unit. When This Unit performs an Attack Action, it may select one instance of this Weapon in addition to all of its other weapons.</description>
     </rule>
     <rule name="Headshot" id="9d6c-a49e-e767-123d" hidden="false">
       <description>When resolving an Attack with this Weapon against a Unit with the Troops Keywords, for each Hit which is an unmodified 10, automatically pass the following Armor Check.</description>
@@ -112,7 +112,7 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
       <description>During the Command Phase, place a Blast Token for each instance of this Weapon within Range and no less than 12&quot; from this Unit. When making an Attack with this Weapon, it does not need Line of Sight to select a Blast Token. When a Blast Token is selected, it Drifts. You may spend Aim Tokens to raise or lower the number rolled for the Drift direction or for the Drift distance by 1 for each Aim token. Remove the Token after resolving the Attack.</description>
     </rule>
     <rule name="Ordnance" id="11d9-c53a-4538-6b97" hidden="false">
-      <description>During the Command Phase, decide if this Weapon is using Direct Fire or Indirect Fire. When making an Attack with this Weapon, each instance of it must select an eligible Blast Token, then resolve an Attack against every Unit within X&quot; of that Blast Token. When all eligible Attacks have been resolved, remove the Blast Token. This Weapon is considered to have the High Explosive and Suppressive Special Rules.</description>
+      <description>During the Command Phase, decide if this Weapon is using Direct Fire or Indirect Fire. When making an Attack with this Weapon, each instance of it must select an eligible Blast Token, then resolve an Attack against every Unit within X&quot; of that Blast Token. When all eligible Attacks have been resolved, remove the Blast Token. This Weapon is considered to have the High Explosive, Precise, and Suppressive Special Rules.</description>
     </rule>
     <rule name="Point Blank" id="1e7a-7634-bb2b-1ff9" hidden="false">
       <description>This weapon may be selected to fire even if this unit is Engaged.</description>
@@ -138,7 +138,7 @@ Slag Token: This Unit&apos;s Armor Value is reduced by 1. Shed this Token on thi
       <description>After Attacking a Unit with this Weapon Profile, apply a Suppression Token. You may not apply more than One Suppression Token per Weapon Profile per Attack Action. 
 
 
-Suppression Token: When this Unit Activates, remove all Suppression Tokens applied to it. For each Token removed, it loses one Action.</description>
+* Suppression Token: When this Unit Activates, remove all Suppression Tokens applied to it. For each Token removed, it loses one Action.</description>
     </rule>
     <rule name="Warding" id="f86d-acd5-05b1-927c" hidden="false">
       <description>When an Enemy Unit enters engagement range with a Unit equipped with this Weapon, immediately perform a Free Attack Action with this weapon against that Unit. This Attack occurs before all others are resolved.</description>
@@ -162,6 +162,30 @@ Under Fire: Units with this Token may not take the Move Action. (They may still 
     </rule>
     <rule name="Devastating Reach X" id="3f77-55e6-4481-2bde" hidden="false">
       <description>This Weapon&apos;s Engagement Range is X&quot;</description>
+    </rule>
+    <rule name="Precise" id="05ca-6100-212a-a9ca" hidden="false">
+      <description>When making an Attack with this Weapon, Units targeted by this Attack do not receive the benefit of being Obscured.</description>
+    </rule>
+    <rule name="Suppression Token" id="9efa-0473-ec44-0cd5" hidden="true">
+      <description>When this Unit Activates, for each Token applied to it, the following effects are applied until the end of its Activation.
+
+
+1: This Unit may not perform Difficult Actions.
+
+
+2: Free Actions this Unit takes must be performed as Standard Actions.
+
+
+3: All Attacks this Unit makes are Obscured.
+
+
+4: For each additional token past the 3rd, roll a D10, on an 8+, one model in this Unit is removed from the battlefield.
+
+
+Once all effects are resolved, remove all tokens from this Unit.</description>
+    </rule>
+    <rule name="Sustained Fire" id="ced7-eb92-01df-0845" hidden="false">
+      <description>When performing an Attack Action, this Weapon may choose to gain the Inaccurate Special Rule. If it does, this Weapon applies an Additional Suppression Token.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

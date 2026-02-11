@@ -54,6 +54,7 @@
     </rule>
     <rule name="Bailout (Dangerous)" id="6100-8e4c-f566-2b4a" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <alias>Dangerous Bailout</alias>
     </rule>
     <rule name="Designated Leader" id="1f95-fa4a-51e0-80f8" hidden="false">
       <description>This Model must be attached to a non-Command Unit that it shares a CORE Keyword with in this Platoon before the Game starts. After this Model is attached it must be designated as the Leader of the combined Unit. A Unit may not have more than one additional Model attached to it in this way.</description>
@@ -183,6 +184,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </rule>
     <rule name="Bailout (Safe)" id="8e16-6a0a-60b0-dedb" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 1 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <alias>Safe Bailout</alias>
     </rule>
     <rule name="Slippery" id="e1f9-41ef-ff64-d030" hidden="false">
       <description>If a Vehicle Mounted by this Unit is destroyed, place this Unit&apos;s Infantry Model in base-to-base contact with it at the end of the current activation. While not attached to another Unit, this Unit activates independently and gains the “Troop” Keyword.</description>
@@ -212,7 +214,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Officer is considered to have all CORE types. If this Officer attaches to a Unit, it gains the CORE type of the Unit it attached to and loses all others.</description>
     </rule>
     <rule name="Dial In X" id="ff6d-dccf-e9fa-094b" hidden="false">
-      <description>During the Command Phase, set the Dial In Counter to 0.  Each time a Unit activates, tick the Counter up by one. If a Unit performs 3 or more Actions or uses a Difficult Action, tick the Counter up an additional time. Until the Counter reaches X, this Unit has the Cumbersome Special Rule.</description>
+      <description>During the Command Phase, set the Dial In Counter to 0.  Each time a Unit activates, tick the Counter up by one. If a Unit performs 3 or more Actions or uses a Difficult Action, tick the Counter up an additional time. Until the Counter reaches X, this Unit has the Cumbersome Special Rule. If this Unit is a Battery, its score to reach is increased to X instead.</description>
+      <alias>Dial In</alias>
     </rule>
     <rule name="Jump-Packs" id="fd2f-2557-0580-c397" hidden="false">
       <description>This Unit&apos;s Evasion Score is increased by 2. Once per Activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword. At any point during this Unit’s Activation or any of its subsequent Activations it may choose to remove this keyword. This Unit must remove the Flying keyword should it wish to enter Engagement with a Unit without the Flying Keyword.</description>
@@ -237,18 +240,22 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </rule>
     <rule name="Bailout (Aerial)" id="dfa3-76f0-a139-f719" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, if those Units do not have the Flying Keyword or the Jump Packs Special Rule, they are Destroyed. If they do, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <alias>Aerial Bailout</alias>
     </rule>
     <rule name="Sealed" id="429e-1178-6b2a-e940" hidden="false">
       <description>Attacks with the Gas! Special Rule may not target this Unit.</description>
     </rule>
     <rule name="Flak Shells" id="62d1-9898-61a2-0033" hidden="false">
-      <description>This Unit&apos;s Autocannon and Machine Gun Weapons ignore the effects of the Flying Keyword when making Ranged Attacks.</description>
+      <description>This Unit&apos;s Autocannon and Machine Gun Weapons may reroll failed Hits against Units with the Flying Keyword.</description>
     </rule>
     <rule name="Setting Up!" id="7278-007d-f597-4cb3" hidden="false">
       <description>This Unit may not be selected to Activate until another Friendly Unit has Activated. If the previous Unit selected to Activate in this Army had this Rule, this Unit may not be selected to Activate. This Rule may be ignored If all remaining Friendly Units have this Special Rule or the Cumbersome Special Rule.</description>
     </rule>
     <rule name="Dispersed Transport" id="a52e-192e-3784-7fe0" hidden="false">
       <description>If a Model in this Unit is destroyed but the Unit itself was not, this Unit loses the Transport Keyword and all Units Embarked in this Transport must Bailout. No more than half of the Embarked Unit may be Destroyed via Bailout.</description>
+    </rule>
+    <rule name="Shared Qualities X" id="7ea1-cd1c-ca34-9368" hidden="false">
+      <description>The Unit this Attache is Attached to gains the X subtype(s)</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -345,7 +352,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
       </constraints>
       <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Munitions" typeId="Points" value="10"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1006,7 +1013,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Singular" hidden="false" id="5550-a658-0f07-f03f">
       <infoLinks>
-        <infoLink name="Unmanageable" id="Unmanageable" hidden="false" type="rule" targetId="7a26-c952-fe2c-529f"/>
+        <infoLink name="Singular" id="Unmanageable" hidden="false" type="rule" targetId="7a26-c952-fe2c-529f"/>
       </infoLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
@@ -1028,15 +1035,20 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 4" hidden="false" id="69bb-53ff-a987-5a16">
+    <selectionEntry type="upgrade" import="true" name="Dial In 4/6" hidden="false" id="69bb-53ff-a987-5a16">
       <infoLinks>
         <infoLink name="Dial In X" id="Dial In" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
           <modifiers>
-            <modifier type="replace" value="4" field="name" arg="X"/>
-            <modifier type="replace" value="4" field="description" arg="X"/>
+            <modifier type="replace" value="4/6" field="name" arg="X"/>
+            <modifier type="replace" value="4" field="description" arg="X" position="1"/>
+            <modifier type="replace" value="6" field="description" arg="X" position=""/>
           </modifiers>
         </infoLink>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5908-a12f-a022-3124-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5908-a12f-a022-3124-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Transport 3" hidden="false" id="c21a-a23a-7d6d-f1c9">
       <infoLinks>
@@ -1393,55 +1405,80 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d206-6cc7-7a3a-a601-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 8" hidden="false" id="dbe4-b002-79a9-5cf9">
+    <selectionEntry type="upgrade" import="true" name="Dial In 8/10" hidden="false" id="dbe4-b002-79a9-5cf9">
       <infoLinks>
         <infoLink name="Dial In X" id="c8a4-8687-cb61-67cb" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
           <modifiers>
-            <modifier type="replace" value="8" field="name" arg="X"/>
-            <modifier type="replace" value="8" field="description" arg="X"/>
+            <modifier type="replace" value="8/10" field="name" arg="X"/>
+            <modifier type="replace" value="8" field="description" arg="X" position="1"/>
+            <modifier type="replace" value="10" field="description" arg="X" position=""/>
           </modifiers>
         </infoLink>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f422-a03c-a9ad-aaef-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f422-a03c-a9ad-aaef-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 12" hidden="false" id="9a0d-2598-17f5-b309">
+    <selectionEntry type="upgrade" import="true" name="Dial In 12/14" hidden="false" id="9a0d-2598-17f5-b309">
       <infoLinks>
         <infoLink name="Dial In X" id="9ea0-8e5f-9f8a-1b96" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
           <modifiers>
-            <modifier type="replace" value="12" field="name" arg="X"/>
-            <modifier type="replace" value="12" field="description" arg="X"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 10" hidden="false" id="b5de-401d-ebc8-6737">
-      <infoLinks>
-        <infoLink name="Dial In X" id="f737-2904-1f91-0619" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-          <modifiers>
-            <modifier type="replace" value="10" field="name" arg="X"/>
-            <modifier type="replace" value="10" field="description" arg="X"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 6" hidden="false" id="f65e-0bb8-88ef-d0ca">
-      <infoLinks>
-        <infoLink name="Dial In X" id="6ceb-1734-c97b-ab48" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-          <modifiers>
-            <modifier type="replace" value="6" field="name" arg="X"/>
-            <modifier type="replace" value="6" field="description" arg="X"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 14" hidden="false" id="33e7-53a4-76be-084b">
-      <infoLinks>
-        <infoLink name="Dial In X" id="c8d1-b681-4373-685c" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-          <modifiers>
-            <modifier type="replace" value="14" field="name" arg="X"/>
+            <modifier type="replace" value="12/14" field="name" arg="X"/>
+            <modifier type="replace" value="12" field="description" arg="X" position="1"/>
             <modifier type="replace" value="14" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="435a-bed7-91c9-3b3d-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="435a-bed7-91c9-3b3d-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 10/12" hidden="false" id="b5de-401d-ebc8-6737">
+      <infoLinks>
+        <infoLink name="Dial In X" id="f737-2904-1f91-0619" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="10/12" field="name" arg="X"/>
+            <modifier type="replace" value="10" field="description" arg="X" position="1"/>
+            <modifier type="replace" value="12" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b1a7-6a8a-0c76-7253-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1a7-6a8a-0c76-7253-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 6/8" hidden="false" id="f65e-0bb8-88ef-d0ca">
+      <infoLinks>
+        <infoLink name="Dial In X" id="6ceb-1734-c97b-ab48" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="6/8" field="name" arg="X"/>
+            <modifier type="replace" value="6" field="description" arg="X" position="1"/>
+            <modifier type="replace" value="8" field="description" arg="X" position=""/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fbf-cc11-3cbf-8e33-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fbf-cc11-3cbf-8e33-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dial In 14/16" hidden="false" id="33e7-53a4-76be-084b">
+      <infoLinks>
+        <infoLink name="Dial In X" id="c8d1-b681-4373-685c" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+          <modifiers>
+            <modifier type="replace" value="14/16" field="name" arg="X"/>
+            <modifier type="replace" value="14" field="description" arg="X" position="1"/>
+            <modifier type="replace" value="16" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bca3-04ed-f11d-9933-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bca3-04ed-f11d-9933-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
