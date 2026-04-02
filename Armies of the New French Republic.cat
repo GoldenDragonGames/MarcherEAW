@@ -533,7 +533,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Égalité Mobile Power Suit Team" hidden="false" id="39c4-ae9b-633a-c4a4" type="selectionEntry" targetId="c6c1-71b0-266a-ac52">
+    <entryLink import="true" name="Égalité Mobile Power Suit Teams" hidden="false" id="39c4-ae9b-633a-c4a4" type="selectionEntry" targetId="c6c1-71b0-266a-ac52">
       <categoryLinks>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="0862-932b-ffbf-476f" primary="true" name="CORE Mechanized"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="b15e-1320-b44b-bf98" primary="false" name="AUX Infantry"/>
@@ -601,10 +601,17 @@
         <categoryLink name="Army Specialization" hidden="false" id="bf0a-4a45-1964-da4f" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Partisan Cell Abilities" hidden="false" id="220c-a1cf-d70e-d803" type="selectionEntry" targetId="8697-1990-f4f8-1809">
+    <entryLink import="true" name="Partisan Cell Abilities" hidden="true" id="220c-a1cf-d70e-d803" type="selectionEntry" targetId="8697-1990-f4f8-1809">
       <categoryLinks>
-        <categoryLink targetId="8720-8576-acb1-c08e" id="b0b0-b0cb-c883-a71b" primary="true" name="Partisan Cell Configuration"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="235b-22cc-c024-e72f" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="32f9-f13e-ea22-42ec" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Medic Element" hidden="false" id="613c-4094-14de-9f11" type="selectionEntry" targetId="57aa-112e-176a-fbbe">
       <categoryLinks>
@@ -816,6 +823,9 @@
         </modifier>
         <modifier type="prepend" value="Lend-Lease" field="name"/>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Officer Upgrades" hidden="false" id="beb3-28f5-299a-8bd5" type="selectionEntryGroup" targetId="f47a-1969-42c7-e147"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="M62 Burro Gun Tractor" hidden="true" id="63d7-6001-c66e-c5cd" collective="false" targetId="9fe5-6f3e-c7f7-7cb2" type="selectionEntry">
       <categoryLinks>
@@ -957,7 +967,6 @@
       <infoLinks>
         <infoLink name="Canon de 75mm" id="bffb-d827-ea67-d57" hidden="false" type="profile" targetId="5c5d-fd80-7267-fdf3"/>
         <infoLink name="High Explosive" id="bb52-bdff-9a0-49a2" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Difficult to Use" id="0590-b4d4-3ca7-2ca4" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Canon à Energie" hidden="false" id="ce8e-4be6-e62e-1cbd" collective="true">
@@ -1013,7 +1022,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 4" hidden="false" id="5162-e057-b0a4-2eae" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
+                <entryLink import="true" name="Officer 5" hidden="false" id="5162-e057-b0a4-2eae" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="O3 - Commandant" hidden="false" id="b3fa-f934-2b2d-dd83">
@@ -1023,7 +1032,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 3" hidden="false" id="db14-a880-91a3-c0fd" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
+                <entryLink import="true" name="Officer 4" hidden="false" id="db14-a880-91a3-c0fd" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="O2 - Capitaine" hidden="false" id="2d21-fd28-9ba5-b8c5">
@@ -1033,7 +1042,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 2" hidden="false" id="f1f4-8c26-4771-397d" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
+                <entryLink import="true" name="Officer 3" hidden="false" id="f1f4-8c26-4771-397d" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="O1 - Lieutenant" hidden="false" id="cc39-62d1-7fd1-2ee6">
@@ -1043,7 +1052,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 1" hidden="false" id="7e83-d77e-901e-fadc" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
+                <entryLink import="true" name="Officer 2" hidden="false" id="7e83-d77e-901e-fadc" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -1080,7 +1089,6 @@
       </costs>
       <infoLinks>
         <infoLink name="Gros Canon à Energie" id="18c3-1a1b-93e6-3c4c" hidden="false" type="profile" targetId="ed99-c3cf-5fa8-5e96"/>
-        <infoLink name="Difficult to Use" id="98d4-7e6e-d913-41e2" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
         <infoLink name="Reliable" id="5697-cadf-cd2a-3efc" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
       </infoLinks>
     </selectionEntry>
@@ -1354,7 +1362,6 @@
       <infoLinks>
         <infoLink name="Slag" id="a393-4171-2e48-9a34" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
         <infoLink name="Destructeur à plasma" id="7642-3c5f-e092-e156" hidden="false" type="profile" targetId="ad30-32b8-2140-df08"/>
-        <infoLink name="Difficult to Use" id="c2e0-0a7f-342a-74a2" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="39"/>
@@ -1368,9 +1375,10 @@
         <infoLink name="Suppressive" id="82f6-1ce-176a-cf36" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
         <infoLink name="FEM &quot;La Faux&quot; Rotary Cannon" id="df46-bfb3-7f21-3b01" hidden="false" type="profile" targetId="78dc-4ff1-98f7-d5c0"/>
         <infoLink name="Sustained Fire" id="9284-77ea-153d-c485" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
+        <infoLink name="Spin Up" id="1a2a-4ac2-8ca7-5981" hidden="false" type="rule" targetId="57cc-2904-33dc-1450"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="43"/>
+        <cost name="Munitions" typeId="Points" value="29"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1380,7 +1388,6 @@
       <infoLinks>
         <infoLink name="Critical Shot" id="c17d-19f1-324-1c66" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
         <infoLink name="Canon de 90mm SA" id="9e94-3530-7b9f-fafa" hidden="false" type="profile" targetId="f8b5-1d05-7670-76c9"/>
-        <infoLink name="Difficult to Use" id="eacc-12bc-5b41-d68d" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="43"/>
@@ -1673,8 +1680,26 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7894-141c-4275-6a5d" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Rally &apos;round the Flag" id="63e0-0770-4e25-13e5" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
+        <infoLink name="Raise the Banner" id="63e0-0770-4e25-13e5" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Double-Barrel Shotgun" hidden="false" id="79f5-2db7-d186-f6fa" collective="true">
+      <infoLinks>
+        <infoLink name="Double-Barrel Shotgun" id="fc25-7eee-14dc-d582" hidden="false" type="profile" targetId="65d2-15e1-a17b-5120"/>
+        <infoLink name="Scattershot" id="a13e-f193-ff0b-a296" hidden="false" type="rule" targetId="20e-bfac-4fc9-44b9"/>
+        <infoLink name="Ammo X" id="bd60-3e2e-6354-f3dc" hidden="false" type="rule" targetId="2056-c454-be5c-ea02">
+          <modifiers>
+            <modifier type="replace" value="2" field="name" arg="X"/>
+            <modifier type="replace" value="2" field="description" arg="X"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="3"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -1724,7 +1749,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, High Explosive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1774,7 +1799,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D5+8</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Reliable</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reliable</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Energy, Ranged</characteristic>
       </characteristics>
     </profile>
@@ -1984,7 +2009,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">13</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1994,7 +2019,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -2002,9 +2027,9 @@
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">15</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire, Spin Up</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Energy</characteristic>
       </characteristics>
     </profile>
@@ -2158,6 +2183,16 @@
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
+    <profile name="Double-Barrel Shotgun" typeId="Weapon" typeName="Weapon" hidden="false" id="65d2-15e1-a17b-5120">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">24&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Scattershot, Ammo 2</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Shotgun, Kinetic</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Flare" id="accc-1573-218-8a01" hidden="false">
@@ -2174,10 +2209,11 @@
           <profiles>
             <profile name="R35 Marat Light Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f3e7-af0e-2ce9-f2f8">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x R35 Marat Light Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, (AUX) Mechanized, (AUX) Recon, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount, 0-1x Pintle Mount)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, (AUX) Mechanized, (AUX) Recon, Vehicle, Tracked, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2226,9 +2262,6 @@
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b628-bc18-4c08-f70e" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Pintle Mount" id="66f8-0bab-4a02-b78c" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups>
@@ -2290,7 +2323,7 @@
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">13</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
                   </characteristics>
                   <comment>Medium, Fast</comment>
@@ -2328,10 +2361,11 @@
           <profiles>
             <profile name="R-1B Liberté Medium Battle Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dceb-db3a-9127-caea">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x R-1B Liberté Medium Battle Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount, 1x Turret (1x Mantlet, 1x Coaxial Mount, 0-1x Pintle Mount), 0-1x Sponsons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2515,9 +2549,6 @@
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3843-6eab-bfbc-8246" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Pintle Mount" id="8e5d-3ae5-fa38-0fd4" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups>
@@ -2590,7 +2621,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6bf9-942d-470d-a33e-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="188"/>
+                <cost name="Munitions" typeId="Points" value="169"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2667,9 +2698,6 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3628-dd3f-d385-48a6" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2304-8efc-688a-e618" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="7a09-2534-3a98-6eef" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Pintle mounted Machine Gun" hidden="false" id="982e-2203-4f9f-1c73">
                       <entryLinks>
@@ -2683,9 +2711,6 @@
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a16-dc5c-bae5-d38a" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Pintle Mount" id="26ea-40d0-fa7a-0ad7" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups>
@@ -2728,7 +2753,7 @@
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="316"/>
+                <cost name="Munitions" typeId="Points" value="290"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2746,10 +2771,11 @@
           <profiles>
             <profile name="ARL-40 Robespierre Heavy Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bcbe-3866-5a6a-cd00">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x ARL-40 Robespierre Heavy Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, Tracked, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount, 1x Turret (1x Mantlet, 1x Coaxial Mount, 0-1x Pintle Mount), 1x Sponsons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, Tracked, Vehicle, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2774,10 +2800,11 @@
           <profiles>
             <profile name="Carnot Mobile Anti-Aethership Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f985-c8e9-31b3-3f1a">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Carnot Mobile Anti-Aethership Battery</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (3x Weapon Mount, 2x Pintle Mounts), 1x Sponsons</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Artillery, Vehicle, Walker, Siege, Superheavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">160mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2794,8 +2821,7 @@
               <description>Supply and Intel points may not be used to modify or re-roll enemy dice within 36&quot; of this unit.</description>
             </rule>
             <rule name="Triple Battery" id="b6ca-a2fd-7c8c-4b46" hidden="false">
-              <description>This Unit is considered to have three Dial In Values: 8,12, and 16. When this Unit performs an Attack Action, you may only select one of this Unit&apos;s Canon à Orbite Basse weapons at a time. When you resolve an Attack Action with one of these Weapons, this Unit regains Cumbersome.
-</description>
+              <description>This Unit is considered to have three Dial In Values: 8,12, and 16. When this Unit performs an Attack Action, you may only select one of this Unit&apos;s Canon à Orbite Basse weapons at a time. When you resolve an Attack Action with one of these Weapons, this Unit regains Cumbersome.</description>
             </rule>
             <rule name="Flexible Fire" id="cc06-680d-f398-5dd2" hidden="false">
               <description>When making an Attack Action with the Carnot Mobile Anti-Aethership Battery, instead of using Indirect Fire or Direct Fire for the Canon à Orbite Basse, you may choose to fire with its AP Shells. If you do, resolve the Attack with the Canon à Orbite Basse (AP) statline</description>
@@ -2805,7 +2831,7 @@
             <entryLink import="true" name="Upgrades" hidden="false" id="6445-f01c-9ad9-f434" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Crushing Footfalls" hidden="false" id="25eb-972b-e1ad-7d94" type="selectionEntry" targetId="e06d-d3a7-530e-7174"/>
             <entryLink import="true" name="Catastrophic Detonation" hidden="false" id="be39-825c-43da-39b2" type="selectionEntry" targetId="6361-ef6f-71fb-f939"/>
-            <entryLink import="true" name="Dial In 8" hidden="false" id="f1c9-9a93-1de2-823e" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
+            <entryLink import="true" name="Dial In 8/10" hidden="false" id="f1c9-9a93-1de2-823e" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Carnot Mobile Anti-Aethership Battery" hidden="false" id="9255-097a-2f31-b40f">
@@ -2902,7 +2928,7 @@
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="7d72-855f-5676-21b9" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 8" hidden="false" id="f17b-478c-e706-df83" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
+            <entryLink import="true" name="Dial In 8/10" hidden="false" id="f17b-478c-e706-df83" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
           </entryLinks>
           <profiles>
             <profile name="Canon de 194 Fraternité" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fff3-8b1d-4abf-3d00">
@@ -2911,6 +2937,7 @@
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, CORE Artillery, Vehicle, Tracked, Siege</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2945,7 +2972,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31ff-7ccc-5d20-3332-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="69"/>
+                <cost name="Munitions" typeId="Points" value="62"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3015,6 +3042,7 @@
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Artillery, (AUX) Infantry, Troop, Crewed Weapon, Siege</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3048,7 +3076,7 @@
           <infoLinks>
             <infoLink name="Designated Leader" id="fe9a-eb58-b6c6-f842" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
             <infoLink name="Command Actions" id="6d8b-ed14-cf86-c99d" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-            <infoLink name="Command Squad" id="2fc5-a993-8dce-2cad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="2fc5-a993-8dce-2cad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
                 <modifier type="append" value="Zouave Squad" field="name"/>
               </modifiers>
@@ -3069,12 +3097,11 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
             </profile>
-            <profile name="Zouave Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="20dc-a59d-77bc-d468">
+            <profile name="Zouave Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="20dc-a59d-77bc-d468">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Zouave Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Attache (Troop), Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Recon, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3137,12 +3164,11 @@
             <infoLink name="Command Actions" id="baf1-aad1-955c-c91e" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
           </infoLinks>
           <profiles>
-            <profile name="Mounted Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7235-6897-2532-6a52">
+            <profile name="Mounted Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="7235-6897-2532-6a52">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Mounted Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Flex, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">0</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Flex, Attache (Vehicle, Carriage), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3167,9 +3193,9 @@
           <infoLinks>
             <infoLink name="Designated Leader" id="4e63-2ba-9017-6972" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="3ce2-be64-f0c6-2ba0" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-            <infoLink name="Command Squad" id="9125-e111-5c62-a6f7" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="9125-e111-5c62-a6f7" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
-                <modifier type="append" value="(Monowheel Chasseurs)" field="name"/>
+                <modifier type="append" value="Monowheel Chasseurs" field="name"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -3188,12 +3214,11 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monowheel Chasseurs" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7996-26fe-7bd7-9a65">
+            <profile name="Monowheel Chasseurs" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="7996-26fe-7bd7-9a65">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Monowheel Chasseur Chief Scout</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Recon, Attache (Cavalry), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">60x35mm Oval</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3316,12 +3341,11 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
-            <profile name="Republican Guard Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5654-84a9-65b2-d482">
+            <profile name="Republican Guard Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="5654-84a9-65b2-d482">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Republican Guard Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Attache (Troops), Attache (Crewed Weapon), Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3359,6 +3383,11 @@
           <infoLinks>
             <infoLink name="Designated Leader" id="7d99-eea0-2b83-f982" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="5862-111a-fcb3-23e4" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="933c-55bf-610f-0e37" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Sapeur Squad" field="name" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="12"/>
@@ -3375,23 +3404,14 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
             </profile>
-            <profile name="Sapeur Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2fc5-393a-10a5-0cae">
+            <profile name="Sapeur Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="2fc5-393a-10a5-0cae">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Sapeur Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Recon, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule name="Command Squad " id="9c2e-e0b8-0aea-c032" hidden="false">
-              <description>This unit may only attach to X units.</description>
-              <modifiers>
-                <modifier type="append" value="(Sapeur Squad)" field="name" join=":"/>
-              </modifiers>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -3404,6 +3424,11 @@
           <infoLinks>
             <infoLink name="Command Actions" id="c5d5-74d1-9e9c-bdba" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
             <infoLink name="Designated Leader" id="a170-e836-62a1-a08b" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
+            <infoLink name="Formation (Specified)" id="c8e2-e825-ba59-1955" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="CORE Partisan" field="name" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Modele 1921 Energy Pistol" hidden="false" id="5d47-99a9-ca73-e01e" type="selectionEntry" targetId="da28-df59-a553-5d18">
@@ -3430,12 +3455,11 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
               </characteristics>
             </profile>
-            <profile name="Partisan Cell Leader" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7173-691d-b7e0-ceaf">
+            <profile name="Partisan Cell Leader" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="7173-691d-b7e0-ceaf">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Partisan Cell Leader</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) FLEX, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) FLEX, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3460,6 +3484,11 @@
           <infoLinks>
             <infoLink name="Designated Leader" id="e2a3-c46c-3d89-b1c0" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="ae09-206b-c7d7-fad8" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="70c0-fb97-0b50-06e0" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Dragoons Vanguard Squad" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3475,12 +3504,11 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
             </profile>
-            <profile name="Dragoons Vanguard Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2079-f1b5-add9-27d6">
+            <profile name="Dragoons Vanguard Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="2079-f1b5-add9-27d6">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Dragoons Vanguard Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Mechanized, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3509,14 +3537,6 @@
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="a9ee-6377-e605-6325" hidden="false">
-              <description>This unit may only attach to X units.</description>
-              <modifiers>
-                <modifier type="append" value="Dragoons Vanguard Squad" field="name"/>
-              </modifiers>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -3532,9 +3552,9 @@
           <infoLinks>
             <infoLink name="Designated Leader" id="6d8c-a972-3c52-e2a5" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
             <infoLink name="Command Actions" id="d3bb-f987-5e1c-47b7" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-            <infoLink name="Command Squad" id="4dc4-5f14-8cdf-3161" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="4dc4-5f14-8cdf-3161" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
-                <modifier type="append" value="Égalité Mobile Power Suit Team" field="name"/>
+                <modifier type="append" value="Égalité Mobile Power Suit Teams" field="name"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -3545,12 +3565,11 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Égalité Power Suit Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="651c-6d01-30dc-c9a2">
+            <profile name="Égalité Power Suit Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="651c-6d01-30dc-c9a2">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Égalité Power Suit Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Attache (Troop), Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Mechanized, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
             <profile name="Égalité Power Suit Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c3ba-e8f9-79cd-ac6e">
@@ -3595,9 +3614,10 @@
             <profile name="Republican Guard Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1c36-436a-1333-26cc">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Republican Guard Sergent, 9-14x Republican Guard Fantassin, 0-2x Republican Guard Fantassin Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (AUX) Mechanized, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10-15</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3852,9 +3872,10 @@
             <profile name="Partisan Syndicate" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a561-42e8-52a4-fefa">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Partisan Ring Leader, 1x Partisan Gunner, &amp; 14-19x Partisans</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">15-20</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4029,6 +4050,7 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="e11a-e25a-9c66-957d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Untrained" hidden="false" id="42b3-74ba-4ddf-b444" type="selectionEntry" targetId="bf3c-7d43-835f-bf5a"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="d917-7419-7629-28e8" primary="false" name="Light"/>
@@ -4043,9 +4065,10 @@
             <profile name="Zouave Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8b80-dbd7-4692-4f6f">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Zouave Sergent, 5-9x Zouaves, 0-4x Zouave Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, (AUX) Infantry, (AUX) Mechanized, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, (AUX) Infantry, (AUX) Mechanized, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4260,9 +4283,10 @@
             <profile name="Monowheel Chasseurs" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="34ad-9621-b1a5-810">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Monowheel Sergent &amp; 2-4x Monowheel Chasseurs</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Cavalry</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Cavalry, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4506,10 +4530,11 @@
           <profiles>
             <profile name="CAIM 38 &quot;Danton&quot; Battle Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3c7b-59e0-90db-af74">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x CAIM 38 &quot;Danton&quot; Battle Walker</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, (AUX) Infantry, Vehicle, Walker, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, (AUX) Infantry, Vehicle, Walker, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">80mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4569,8 +4594,8 @@
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
                   </characteristics>
                   <comment>Medium, Fast</comment>
                 </profile>
@@ -4580,7 +4605,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cddb-7fa6-1a71-9713-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="64"/>
+                <cost name="Munitions" typeId="Points" value="95"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4620,20 +4645,32 @@
                       <comment>Small, Normal</comment>
                     </profile>
                   </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Civilian Hunting Rifle" hidden="false" id="b78a-34e5-5dc2-4447" type="selectionEntry" targetId="542b-e5a9-b056-7103">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04ca-766f-71a5-d49d-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="04ca-766f-71a5-d49d-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <costs>
                     <cost name="Munitions" typeId="Points" value="6"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Option" id="314e-f3ef-3353-2a55" hidden="false">
+                      <entryLinks>
+                        <entryLink import="true" name="Civilian Hunting Rifle" hidden="false" id="313b-6274-2ec2-ca60" type="selectionEntry" targetId="542b-e5a9-b056-7103">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d74-c0b6-c888-688f" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Double-Barrel Shotgun" hidden="false" id="bb5d-045d-0457-7097" type="selectionEntry" targetId="79f5-2db7-d186-f6fa">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b940-2571-ec1e-b87c" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="caaa-580c-04c7-f964-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="caaa-580c-04c7-f964-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Partisan Tireur" hidden="false" id="5563-3336-6490-f87d" collective="true" sortIndex="2">
                   <constraints>
@@ -4650,20 +4687,32 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <entryLinks>
-                    <entryLink import="true" name="Civilian Hunting Rifle" hidden="false" id="4e3f-5b9f-23ad-d60e" type="selectionEntry" targetId="542b-e5a9-b056-7103">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d267-1794-b5f7-b087-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d267-1794-b5f7-b087-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <costs>
                     <cost name="Munitions" typeId="Points" value="6"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Weapon Option" id="951b-3456-b454-0fc8" hidden="false">
+                      <entryLinks>
+                        <entryLink import="true" name="Civilian Hunting Rifle" hidden="false" id="4e3f-5b9f-23ad-d60e" type="selectionEntry" targetId="542b-e5a9-b056-7103">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d267-1794-b5f7-b087-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Double-Barrel Shotgun" hidden="false" id="9761-675e-c61b-6dbf" type="selectionEntry" targetId="79f5-2db7-d186-f6fa">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29c7-8833-97ed-c629" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de8a-6aac-57b6-0a43-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de8a-6aac-57b6-0a43-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -4672,9 +4721,10 @@
             <profile name="Partisan Tireurs" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="52c6-b737-fd75-1ee1">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Tireur Ring Leader, 4x Partisan Tireurs</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisan, (CORE) Recon, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisan, (CORE) Recon, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4686,7 +4736,7 @@
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="713b-296e-25c1-9242" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="11d4-cd1b-a362-6c0a" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
-            <entryLink import="true" name="Not My Job" hidden="false" id="356b-e8e2-3085-034e" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
+            <entryLink import="true" name="Untrained" hidden="false" id="5a4c-e2b5-91d8-322f" type="selectionEntry" targetId="bf3c-7d43-835f-bf5a"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="ca29-ceda-7ebb-5427" primary="false" name="Light"/>
@@ -4794,9 +4844,10 @@
             <profile name="Zouave Sniper Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="14be-3495-87d8-6b20">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Zouave Sniper, 1x Zouave Spotter</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4808,10 +4859,11 @@
           <profiles>
             <profile name="AM40 Lafayette Armored Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="883b-f10f-d8d2-4b47">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x AM40 Lafayette Armored Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, (AUX) Mechanized, Vehicle, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount), 1x Hull Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, (AUX) Mechanized, Vehicle, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4865,14 +4917,28 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Hull Mount" hidden="false" id="77a0-1572-3f65-8b4a">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db43-7ae2-2b6d-7ffe-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db43-7ae2-2b6d-7ffe-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Reibel Heavy Machine Gun" hidden="false" id="557f-04ce-68df-a79c" type="selectionEntry" targetId="6255-e891-a7d0-cb6e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a299-d9f6-6bac-a24d-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a299-d9f6-6bac-a24d-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
               </selectionEntries>
               <profiles>
                 <profile name="AM40 Lafayette Armored Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9505-8a63-598a-c8f1">
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">11</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
                   </characteristics>
                   <comment>Medium, Very Fast</comment>
                 </profile>
@@ -4882,7 +4948,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9386-4a4f-6447-c969-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="99"/>
+                <cost name="Munitions" typeId="Points" value="116"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4920,9 +4986,10 @@
             <profile name="Sapeur Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7773-ab0e-19d3-5b95">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Sergent, 7-9x Sapeurs, &amp; 0-2x Sapeur Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisans, (CORE) Support, (AUX) Infantry, Troop, Engineer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisans, (CORE) Support, (AUX) Infantry, Troop, Engineer, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5079,6 +5146,7 @@
             <entryLink import="true" name="Burrowing" hidden="false" id="65f1-d71f-f6c6-e410" type="selectionEntry" targetId="fa56-afdd-817a-77fe"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="f11b-de4d-4786-4284" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
             <entryLink import="true" name="Fortification Reference" hidden="false" id="b6e3-b081-9e41-5e48" type="selectionEntry" targetId="0aea-85e9-a44d-1c1f"/>
+            <entryLink import="true" name="Logistics" hidden="false" id="fc15-ad94-6060-b47a" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="7b05-7e8b-cfc9-47a6" primary="false" name="Medium"/>
@@ -5091,10 +5159,11 @@
           <profiles>
             <profile name="CAIM 38 &quot;Danton&quot; Chasseur de Char Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4ea5-7126-5cdf-7de5">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x CAIM 38 &quot;Danton&quot; Chasseur de Char Walker</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Recon, Vehicle, Walker</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Gun Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Recon, Vehicle, Walker, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">80mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5161,14 +5230,14 @@
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
                   </characteristics>
                   <comment>Medium, Normal</comment>
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="43"/>
+                <cost name="Munitions" typeId="Points" value="79"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5191,6 +5260,7 @@
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Infantry, Carriage, Crewed Weapon</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5228,7 +5298,7 @@
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="12"/>
+                <cost name="Munitions" typeId="Points" value="11"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5293,9 +5363,10 @@
             <profile name="Partisan Saboteurs" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a983-22f2-af00-83e2">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Saboteur Ringleader, 4x Partisan Saboteurs</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisan, (CORE) Support, Troop, Engineer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisan, (CORE) Support, Troop, Engineer, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5409,6 +5480,7 @@
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="b5e3-4741-c898-8afa" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="83d4-a294-c53c-5610" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
+            <entryLink import="true" name="Untrained" hidden="false" id="a887-0170-d24a-6b08" type="selectionEntry" targetId="bf3c-7d43-835f-bf5a"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="81db-8276-7177-04eb" primary="false" name="Light"/>
@@ -5424,22 +5496,32 @@
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ba72-9f52-9d60-623b-max" includeChildSelections="false"/>
                   </constraints>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Options" id="4805-5467-cc7b-6275" hidden="false" defaultSelectionEntryId="9045-5e87-e06e-48f2">
+                    <selectionEntryGroup name="Weapon Option" id="fcda-fd1d-258a-d0cb" hidden="false" collective="false">
                       <entryLinks>
-                        <entryLink import="true" name="Mitrailleuse à énergie" hidden="false" id="9045-5e87-e06e-48f2" type="selectionEntry" targetId="4109-b725-7852-c94" collective="true">
+                        <entryLink import="true" name="Reibel Heavy Machine Gun" hidden="false" id="ea8c-6137-a1d1-1f8f" collective="false" targetId="6255-e891-a7d0-cb6e" type="selectionEntry">
                           <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="905a-c46c-0750-69be" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25ba-9a40-e641-0a6f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="Reibel Heavy Machine Gun" hidden="false" id="74b4-c596-0ff7-90f1" type="selectionEntry" targetId="6255-e891-a7d0-cb6e" collective="true">
+                        <entryLink import="true" name="Mitrailleuse à énergie" hidden="false" id="6b08-6581-14d4-071f" type="selectionEntry" targetId="4109-b725-7852-c94">
                           <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8e0-2172-5a41-61fc"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a10-574a-5522-c1bf" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Canon à Energie" hidden="false" id="d668-2437-2d11-e648" type="selectionEntry" targetId="ce8e-4be6-e62e-1cbd">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="928f-5cb7-5bf6-8fbf" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="MAS 38 &quot;Claqueur&quot; Automatic Grenade Launcher" hidden="false" id="2b9d-03e5-e53e-f99a" type="selectionEntry" targetId="77db-73a-f45e-b17d">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1362-6e0c-f8cb-e37e" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="724a-2899-14fe-a193-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="724a-2899-14fe-a193-max" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2824-3779-6cd4-d569" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffa2-2cdb-6cd9-539a" includeChildSelections="false"/>
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -5483,9 +5565,10 @@
             <profile name="Heavy Weapon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0190-0457-a8d1-55a3">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Republican Guard Heavy Weapons Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Infantry, Troop, Crewed Weapon</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Infantry, Troop, Crewed Weapon, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5511,10 +5594,11 @@
           <profiles>
             <profile name="AMR 36 Coccinelle Tankettes" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b043-900b-12ff-494b">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x AMR 36 Coccinelle Tankettes</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Support, (AUX) Armor, (AUX) Infantry, Tracked, Vehicle</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5575,7 +5659,7 @@
                     </selectionEntry>
                   </selectionEntries>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="56"/>
+                    <cost name="Munitions" typeId="Points" value="51"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5654,18 +5738,17 @@
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
-            <profile name="Major Marie Courtemanche" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4844-b96d-960d-9eec">
+            <profile name="Major Marie Courtemanche" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="4844-b96d-960d-9eec">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Major Marie Courtemanche</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (AUX) Support, Attache, Hero, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Infantry, (AUX) Support, Attache (Troop), Hero, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <rules>
             <rule name="S&apos;engager Pour Servir" id="5e45-a1b0-79b8-e081" hidden="false">
-              <description>Whenever a Unit within 12&quot; of Major Marie Courtemanche loses a Model, it may shed a Suppression Token. Each Unit may only shed One Suppression Token in this way per Round. If Major Marie Courtemanche is your Field Commander, this applies to all Units in your Army.</description>
+              <description>Whenever a Unit within 12&quot; of Major Marie Courtemanche loses a Model, it may shed a Suppression Token. If Major Marie Courtemanche is your Field Commander, this applies to all Units in your Army.</description>
             </rule>
           </rules>
           <constraints>
@@ -5678,8 +5761,15 @@
             <entryLink import="true" name="Low Profile" hidden="false" id="3464-f659-dd38-3928" type="selectionEntry" targetId="6f3e-8837-6518-e31e"/>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Independent Hero" id="e307-06ca-97c5-dd4f" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
+            <infoLink name="Flexible Hero" id="e307-06ca-97c5-dd4f" hidden="false" type="rule" targetId="efe9-c813-2eee-25dc"/>
             <infoLink name="Troop Actions" id="d953-1b86-dc21-bfce" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="Formation (Specified)" id="1e77-1f4d-660f-d464" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="CORE Partisan" field="name"/>
+                <modifier type="append" value="CORE Partisan" field="description"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Designated Leader" id="97ae-d06c-dbd5-3006" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="49"/>
@@ -5691,15 +5781,16 @@
             <profile name="Agent Fabien" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b201-521a-0e79-ea88">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Agent Fabien</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (AUX) Recon, Troop, Hero, Command</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisan, (CORE) Infantry, (AUX) Recon, Troop, Hero, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
           </profiles>
           <rules>
             <rule name="Partisan Activity" id="74a7-bee1-1202-18a5" hidden="false">
-              <description>At the start of the game, Agent Fabien must be deployed Undercover (in reserves). At the end of pregame Deployment, place one of each of the Red Menace Tokens Face down and more than 8&quot; from Enemy Units. When an Enemy moves within 3&quot; of a token, or as an Activation, you may reveal a Token.
+              <description>At the start of the game, Agent Fabien and any Unit he is Attached to must be deployed Undercover (in reserves). At the end of pregame Deployment, place one of each of the Red Menace Tokens Face down and more than 8&quot; from Enemy Units. When an Enemy moves within 3&quot; of a token, or as an Activation, you may reveal a Token.
 
 Red Menace Tokens:
 Improvised Bomb- Make an attack treating the token as a blast template with the following template. S4 AP4 D4, Blast 3, High Explosive, Close In.
@@ -5711,10 +5802,7 @@ Red Scare- All enemy units within 3&quot; gain a suppression token.
 In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all Attached Models in cohesion. This Unit may activate immediately, interrupting your opponent&apos;s turn. Once this activation is finished, your opponent may finish their activation as normal.</description>
             </rule>
             <rule name="Ringleader" id="5f01-56d9-4975-25a8" hidden="false">
-              <description>If Agent Fabien is your Field Commander, every time a Partisan Unit in your Army selects an Enemy Unit as the target of an Attack, it gains an Aim token. You may spend an Aim Token to improve one of their Weapon Profiles by one until the Attack is resolved.</description>
-            </rule>
-            <rule name="Fabien Column" id="880a-f805-c209-49ad" hidden="false">
-              <description>A (CORE) Partisan Troop Unit may Attach to this Unit as if it had the Attache Keyword.</description>
+              <description>If Agent Fabien is your Field Commander, every time a CORE Partisan Unit in your Army selects an Enemy Unit as the target of an Attack, it gains an Aim token. You may spend an Aim Token to improve one of their Weapon Profiles by one until the Attack is resolved.</description>
             </rule>
           </rules>
           <constraints>
@@ -5771,12 +5859,11 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             </rule>
           </rules>
           <profiles>
-            <profile name="Colonel Charles De Gaulle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2c14-d3a1-3fb1-38d4">
+            <profile name="Colonel Charles De Gaulle" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="2c14-d3a1-3fb1-38d4">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Colonel Charles De Gaulle</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Armor, Troop/Attache, Hero, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Armor, Attache (Vehicle), Hero, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
             <profile name="Colonel Charles De Gaulle" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="71e2-73be-4e8c-56bc">
@@ -5806,6 +5893,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <infoLink name="Hero Actions" id="6e18-2802-edf1-2781" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Egalite hero" hidden="false" id="f1bd-2e14-6a88-fd8c"/>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Transports" id="154c-76a7-9c90-880b" hidden="false">
@@ -5817,10 +5905,11 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           <profiles>
             <profile name="P28 Armored Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b5e5-bf0f-c0ac-c35e">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x P28 Armored Truck</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, Vehicle, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0-1x Turret (1x Mantlet, 1x Coaxial Mount) or 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, Vehicle, Transport, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5857,9 +5946,6 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                       </conditions>
                     </modifier>
                   </modifiers>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="4176-ae11-33b3-c03c" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Turret" hidden="false" id="bfc8-235-916d-5957">
                   <selectionEntryGroups>
@@ -5936,7 +6022,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b166-1676-87c7-790d-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="64"/>
+                <cost name="Munitions" typeId="Points" value="58"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5944,7 +6030,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             </selectionEntry>
           </selectionEntries>
           <categoryLinks>
-            <categoryLink targetId="f94f-807f-eca3-d850" id="6cd0-0109-87fb-3193" primary="false" name="Medium"/>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="f376-5525-379a-bfec" primary="false" name="Light"/>
           </categoryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="AMR 36 Coccinelle Gun Tractor" hidden="false" id="a68e-d542-4438-6f02">
@@ -5955,10 +6041,11 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           <profiles>
             <profile name="AMR 36 Coccinelle Gun Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bfa5-890d-eeaa-7fd1">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x AMR 36 Coccinelle Gun Tractor</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, Transport, Tracked, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, Transport, Tracked, Vehicle, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5977,7 +6064,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           <selectionEntries>
             <selectionEntry type="model" import="true" name="AMR 36 Coccinelle Gun Tractor" hidden="false" id="18a6-8ae4-1337-5630">
               <costs>
-                <cost name="Munitions" typeId="Points" value="56"/>
+                <cost name="Munitions" typeId="Points" value="51"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5995,7 +6082,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
               </profiles>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e9a-f518-c5ab-4710" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95a9-1da2-ca8a-b331" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="95a9-1da2-ca8a-b331" includeChildSelections="false"/>
               </constraints>
               <entryLinks>
                 <entryLink import="true" name="Reibel Heavy Machine Gun" hidden="false" id="51e5-1fc4-f934-0abf" type="selectionEntry" targetId="6255-e891-a7d0-cb6e">
@@ -6019,6 +6106,13 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="ad4d-449a-b973-281b" primary="false" name="Light"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="append" value="Group" field="name">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="self" childId="model" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6137,10 +6231,11 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           <profiles>
             <profile name="CSM 38A Breaching Drill" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="11a9-f8bd-60ba-f6a">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x CSM 38A Breaching Drill</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Vehicle, Tracked, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Drill, 1x Sponsons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Vehicle, Tracked, Transport, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6269,7 +6364,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="235"/>
+                <cost name="Munitions" typeId="Points" value="212"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6284,10 +6379,11 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
           <profiles>
             <profile name="P28 Armored Half-Track" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ccb3-62a7-2491-4ac9">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x P28 Armored Half-Track</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Vehicle, Tracked, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, Vehicle, Tracked, Transport, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6383,7 +6479,7 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="471f-a70c-b2d6-2536-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="77"/>
+                <cost name="Munitions" typeId="Points" value="70"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6395,10 +6491,16 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <entryLink import="true" name="Transport 1" hidden="false" id="6e80-c418-5d0f-f96d" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
             <entryLink import="true" name="Bailout" hidden="false" id="55cc-69b2-973c-a447" type="selectionEntry" targetId="2cd2-087b-e9a1-6072"/>
             <entryLink import="true" name="Hitch" hidden="false" id="fa18-6124-4de0-414c" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
+            <entryLink import="true" name="Armored Personnel Carrier" hidden="false" id="b094-8372-4940-bb36" type="selectionEntry" targetId="21d6-a843-1ec9-e0a0"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="7dbf-a869-5250-6a30" primary="false" name="Medium"/>
           </categoryLinks>
+          <rules>
+            <rule name="Vigil et Audax" id="2125-fe23-7476-650d" hidden="false">
+              <description>Each time a Friendly Unit within 6&quot; of this one spends an Aim Token, roll a D10, on a 7+, that token is not discarded.</description>
+            </rule>
+          </rules>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Dragoons Vanguard Squad" hidden="false" id="e4c3-053d-4c2b-c4f6" sortIndex="1">
           <infoLinks>
@@ -6589,9 +6691,10 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <profile name="Dragoon Vanguard Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7e54-26d9-6d5e-ee0b">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Dragoon Sergent, 5-9x Dragoons, 0-4x Dragoon Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, (AUX) Infantry, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, (AUX) Infantry, Troop, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6608,112 +6711,122 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <categoryLink targetId="bfe4-e968-133b-c62c" id="aa59-4e66-c686-5957" primary="false" name="Heavy"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Égalité Mobile Power Suit Team" hidden="false" id="c6c1-71b0-266a-ac52" sortIndex="2">
+        <selectionEntry type="unit" import="true" name="Égalité Mobile Power Suit Teams" hidden="false" id="c6c1-71b0-266a-ac52" sortIndex="2">
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="8999-5987-1d23-0e4e" hidden="false">
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Égalité Power Suit Protector" hidden="false" id="f54c-7999-caf6-4e5e" defaultAmount="1">
-                  <profiles>
-                    <profile name="Égalité Power Suit Protector" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a26-5b39-a897-f812">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <rules>
-                    <rule name="Protector" id="9e48-9111-7ec1-9b16" hidden="false">
-                      <description>When this Unit is selected as the target of an Attack by a Unit within this Model&apos;s front 90 degrees, increase this Model&apos;s Armor value by 3, that Unit&apos;s Attack may not apply Suppression Tokens.</description>
-                    </rule>
-                  </rules>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Options" id="29af-c37d-a831-0999" hidden="false" defaultSelectionEntryId="486d-2035-9836-2012">
-                      <entryLinks>
-                        <entryLink import="true" name="Power Suit Pickaxe" hidden="false" id="ff97-50ee-5e8f-9ccc" type="selectionEntry" targetId="cb93-3868-c86c-2434">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61ef-402c-a0d6-7c66" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="Power Suit Sledgehammer" hidden="false" id="714e-3f25-7442-4a98" type="selectionEntry" targetId="6608-a019-2f0c-92cc">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="796e-2d0a-cda7-3dac" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99bc-04d5-15f8-37d4-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99bc-04d5-15f8-37d4-max" includeChildSelections="false"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Twin SMGs" hidden="false" id="444d-db05-15eb-2e54" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Égalité Mobile Power Suit Team" hidden="false" id="7dee-8185-de6a-c39f" collective="true">
+                  <selectionEntries>
+                    <selectionEntry type="model" import="true" name="Égalité Power Suit Gunner" hidden="false" id="b691-8134-a447-afa4" defaultAmount="1" collective="true">
+                      <profiles>
+                        <profile name="Égalité Power Suit Gunner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9d59-02da-2d4d-5ae7">
+                          <characteristics>
+                            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                            <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                            <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Weapon Options" id="99c1-41c5-d361-a987" hidden="false" defaultSelectionEntryId="847a-1edc-3a62-33ec">
                           <entryLinks>
-                            <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="083e-deb0-48a0-ea7f" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
+                            <entryLink import="true" name="M35A Recoilless Rifle" hidden="false" id="2091-689d-9f19-c260" type="selectionEntry" targetId="5456-b788-b016-d54e">
                               <constraints>
-                                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4c55-185c-019d-4f03" includeChildSelections="false"/>
-                                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="440e-59db-17ea-2b07" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66f7-cc86-b7c5-0b5f" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="20mm Autocanon" hidden="false" id="847a-1edc-3a62-33ec" type="selectionEntry" targetId="8fc6-964b-9e3b-7fe6"/>
+                            <entryLink import="true" name="Canon à Plasma" hidden="false" id="4560-44b0-1dc8-1f8f" type="selectionEntry" targetId="b21d-42f7-9ce-6014"/>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d79-10a5-a3ea-8b2c-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d79-10a5-a3ea-8b2c-max" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="29"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d3d-b185-3a0f-0ff2-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d3d-b185-3a0f-0ff2-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="model" import="true" name="Égalité Power Suit Protector" hidden="false" id="f54c-7999-caf6-4e5e" defaultAmount="1" collective="true">
+                      <profiles>
+                        <profile name="Égalité Power Suit Protector" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a26-5b39-a897-f812">
+                          <characteristics>
+                            <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                            <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                            <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                            <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules>
+                        <rule name="Protector" id="9e48-9111-7ec1-9b16" hidden="false">
+                          <description>When this Unit is selected as the target of an Attack by a Unit within this Model&apos;s front 90 degrees, increase this Model&apos;s Armor value by 3, that Unit&apos;s Attack may not apply Suppression Tokens.</description>
+                        </rule>
+                      </rules>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Weapon Options" id="29af-c37d-a831-0999" hidden="false" defaultSelectionEntryId="486d-2035-9836-2012">
+                          <entryLinks>
+                            <entryLink import="true" name="Power Suit Pickaxe" hidden="false" id="ff97-50ee-5e8f-9ccc" type="selectionEntry" targetId="cb93-3868-c86c-2434">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61ef-402c-a0d6-7c66" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Power Suit Sledgehammer" hidden="false" id="714e-3f25-7442-4a98" type="selectionEntry" targetId="6608-a019-2f0c-92cc">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="796e-2d0a-cda7-3dac" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
                           </entryLinks>
                           <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e84c-b96e-83e8-629e" includeChildSelections="false"/>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99bc-04d5-15f8-37d4-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99bc-04d5-15f8-37d4-max" includeChildSelections="false"/>
                           </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="35"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5875-fd9e-1931-015a" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Égalité Power Suit Gunner" hidden="false" id="b691-8134-a447-afa4" defaultAmount="1">
-                  <profiles>
-                    <profile name="Égalité Power Suit Gunner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9d59-02da-2d4d-5ae7">
-                      <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Options" id="99c1-41c5-d361-a987" hidden="false" defaultSelectionEntryId="847a-1edc-3a62-33ec">
-                      <entryLinks>
-                        <entryLink import="true" name="M35A Recoilless Rifle" hidden="false" id="2091-689d-9f19-c260" type="selectionEntry" targetId="5456-b788-b016-d54e">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66f7-cc86-b7c5-0b5f" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="20mm Autocanon" hidden="false" id="847a-1edc-3a62-33ec" type="selectionEntry" targetId="8fc6-964b-9e3b-7fe6"/>
-                        <entryLink import="true" name="Canon à Plasma" hidden="false" id="4560-44b0-1dc8-1f8f" type="selectionEntry" targetId="b21d-42f7-9ce-6014"/>
-                      </entryLinks>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Twin SMGs" hidden="false" id="444d-db05-15eb-2e54" collective="true">
+                              <entryLinks>
+                                <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="083e-deb0-48a0-ea7f" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
+                                  <constraints>
+                                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4c55-185c-019d-4f03" includeChildSelections="false"/>
+                                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="440e-59db-17ea-2b07" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e84c-b96e-83e8-629e" includeChildSelections="false"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="Munitions" typeId="Points" value="35"/>
+                        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                      </costs>
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d79-10a5-a3ea-8b2c-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d79-10a5-a3ea-8b2c-max" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5875-fd9e-1931-015a-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5875-fd9e-1931-015a-max" includeChildSelections="false"/>
                       </constraints>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="Munitions" typeId="Points" value="29"/>
-                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-                  </costs>
+                    </selectionEntry>
+                  </selectionEntries>
                   <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7d3d-b185-3a0f-0ff2" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="731a-053e-7da6-e088" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d15b-fef7-1a38-259e" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="bfcf-edd5-65b3-f683" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="bfcf-edd5-65b3-f683" includeChildSelections="false"/>
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -6721,9 +6834,10 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <profile name="Égalité Mobile Power Suit Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c46d-ebe1-8b00-5b37">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-2x Égalité Power Suit Gunner, 1-2x Égalité Power Suit Protectors</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6859,7 +6973,7 @@ Tracked Vehicles are treated as having the Charge! Special Rule and always Attac
 Units in this army with the Tracked keyword may pass through terrain and choose not to remove it.</description>
             </rule>
             <rule name="Ambush" id="bd86-3079-d6a1-be58" hidden="false">
-              <description>Up to 2 Troops Units in this army may be placed in Ambush. Units in Ambush are not placed on the table, but are counted as activations on the battlefield. During your turn, you may choose to Activate a Unit in Ambush. If you do, deploy that Unit onto the battlefield within or touching a piece of Medium or Heavy Terrain. That Unit may take all actions as normal. You may deploy a Unit in this way in engagement with an Enemy Unit.</description>
+              <description>Up to 2 Troops Units in this army may be placed in Ambush. Units in Ambush are not placed on the table, but are counted as Activations on the Battlefield. During your turn, you may choose to Activate a Unit in Ambush. If you do, deploy that Unit onto the Battlefield within or touching a piece of Medium or Heavy Terrain. That Unit may take all actions as normal. You may deploy a Unit in this way in Engagement with an Enemy Unit.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -6889,7 +7003,7 @@ Units gain an Aim Token after performing the Overwatch Action</description>
         <selectionEntry type="upgrade" import="true" name="5e Régiment de Tirailleurs Tonkinois" hidden="false" id="efe9-81c5-2847-d55c" sortIndex="7">
           <rules>
             <rule name="Bane of the Bonapartist" id="5ee5-9722-b436-950e" hidden="false">
-              <description>If an Enemy Unit were to gain a Suppression token, they gain a Concussive token instead.</description>
+              <description>Enemy Units must reroll successful Suppression and Morale Checks.</description>
             </rule>
             <rule name="Guerilla Warfare" id="757c-8f45-014c-2c74" hidden="false">
               <description>Troop Units in your army gain +1 to the AP on their weapons when targeting a Unit with the Vehicle Keyword. 
@@ -6969,6 +7083,14 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="8b60-6b83-889e-0d66" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="af58-96a8-4c92-2d25" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Heavy Weapon Element" hidden="false" id="500b-3e34-6353-36f6">
           <selectionEntryGroups>
@@ -7056,6 +7178,14 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="6f9a-5b33-00ec-2f6a" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="8d0a-462a-82e7-037d" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Flagbearer with Tricolor" hidden="false" id="24f0-51c2-e234-dda7">
           <entryLinks>
@@ -7093,6 +7223,14 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="d4e1-d148-68c7-003f" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Égalité Gunner Element" hidden="false" id="a579-7384-a80d-28ea">
           <constraints>
@@ -7219,7 +7357,7 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                       </entryLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4469-b3a6-1d50-4089" includeChildSelections="false"/>
-                        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0385-362d-e156-9709" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0385-362d-e156-9709" includeChildSelections="false"/>
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -7312,7 +7450,7 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                   </selectionEntryGroups>
                   <rules>
                     <rule name="Inspire Élan" id="89f5-0a26-b905-702a" hidden="false">
-                      <description>This Unit cannot gain more than one Suppression Token in a round.</description>
+                      <description>This Unit rolls Suppression Checks individually. For each failed Suppression Check, +1 to all Suppression Checks until the end of this Unit&apos;s Activation.</description>
                     </rule>
                   </rules>
                   <infoLinks>
@@ -7332,6 +7470,14 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
             <entryLink import="true" name="Specialist Command" hidden="false" id="0a48-024b-b7ad-2a0a" type="selectionEntry" targetId="e517-0471-12d3-3343"/>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="0db0-ab1f-0373-fab3" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="1125-fbea-a61b-db54" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -7339,7 +7485,7 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
   <readme>Check out our stuff through http://linktr.ee/goldendragongames!</readme>
   <rules>
     <rule name="Levée En Masse" id="da6c-ffc6-6ce0-9ee7" hidden="true">
-      <description>When an NFR Unit performs an Attack Action they may spend Aim Tokens from friendly units within 6“ in addition to their own tokens.
+      <description>Units with the NFR keyword may transfer Aim tokens to or from friendly Units within 6” of themselves during their Activation.
 
 
 When a Unit with the NFR Keyword performs an Attack Action, they may spend Aim tokens to increase the A.P. of one of their weapon profiles by one up to two times.</description>

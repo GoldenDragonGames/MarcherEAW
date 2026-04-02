@@ -17,13 +17,13 @@
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 3 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
     </rule>
     <rule name="Battlefield Preparation" id="df67-26f7-b945-7b74" hidden="false">
-      <description>At the beginning of the first Action Phase, this Unit may immediately take a free Build or Destroy Action.</description>
+      <description>At the beginning of the first Action Phase, this Unit may immediately take a free Build or Demolish Action.</description>
     </rule>
     <rule name="Big Game Hunter" id="7061-202c-dbbf-9c6e" hidden="false">
-      <description>When making an Attack with this Unit against Enemy Units with the Vehicle Keyword, you may reroll failed Hits.</description>
+      <description>When making an Attack with this Unit against a non-Light Vehicle Unit, you may reroll failed Hits.</description>
     </rule>
     <rule name="Bulwark X" id="aec5-cc4d-2950-d314" hidden="false">
-      <description>Attacks made against this Unit lower their Damage profile by X to a minimum of 1.</description>
+      <description>Attacks made against this Unit lower their Damage profile by X to a minimum of 1. Instances of this rule do not stack.</description>
     </rule>
     <rule name="Burrowing" id="7566-ca13-0639-188c" hidden="false">
       <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, you may deploy this Unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
@@ -35,10 +35,10 @@
       <description>Weapons equipped in Coaxial Mounts may be selected to fire alongside a Difficult to Use Weapon, so long as they select the same target.</description>
     </rule>
     <rule name="Command Car" id="b3a8-6d2c-8217-042c" hidden="false">
-      <description>This Unit issues Orders at 12&quot; instead of 8&quot;. When this Unit issues an Order, choose a Unit within 8&quot; of that one, that Unit also gains an Order Token.</description>
+      <description>This Unit, and all Units within 12&quot; of this Unit, are within the Radio Network. Once per activation, when this Unit issues an Order, choose a different Unit within the Radio Network, that Unit also gains an Order Token.</description>
     </rule>
-    <rule name="Command Squad" id="5ffd-5449-427f-b767" hidden="false">
-      <description>This Model may only Attach to the Units with the Names and Keywords listed.</description>
+    <rule name="Formation (Specified)" id="5ffd-5449-427f-b767" hidden="false">
+      <description>This Model may only be Attached to Units with Name or Keyword(s) listed:</description>
     </rule>
     <rule name="Cook Off" id="6b8c-f368-911d-de1c" hidden="false">
       <description>When this Unit is destroyed, roll a D10, on a roll of 8+, perform an Attack Action (Profile:H4, AP4, D4) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
@@ -102,7 +102,7 @@
       <description>When this Unit destroys the Leader Model of an Enemy Command Unit, gain 1 Intel point.</description>
     </rule>
     <rule name="Independent Hero" id="f6c8-1880-1355-e3a2" hidden="false">
-      <description>This Hero may not attach to other Units.</description>
+      <description>This Hero is a Unit, and may not attach to other Units. This Unit may not take Upgrades.</description>
     </rule>
     <rule name="Intel Gathering" id="05b0-6a7a-880f-304c" hidden="false">
       <description>As a Standard Action, gain an Intel Point (IP)</description>
@@ -161,11 +161,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     <rule name="Prototype" id="4612-4b7b-8ffe-ed3c" hidden="false">
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
     </rule>
-    <rule name="Radio" id="f6bc-4bf8-86ab-f6d3" hidden="false">
-      <description>This Unit may send or receive orders to or from any other units with the Radio Special Rule regardless of Range.</description>
-    </rule>
-    <rule name="Rally &apos;round the Flag" id="8126-75b0-4721-8842" hidden="false">
-      <description>This Unit may take the &quot;Rally&quot; Action as a standard Action.</description>
+    <rule name="Raise the Banner" id="8126-75b0-4721-8842" hidden="false">
+      <description>All Units without 12&quot; of this Flag may reroll 1s and 2s for Suppression Checks.</description>
     </rule>
     <rule name="Rapid Deployment" id="bed7-c4f3-15ed-2888" hidden="false">
       <description>At the start of the first Action Phase, this Unit may immediately take a Free Move action. They may not end this movement within Engagement Range of an Enemy Unit.</description>
@@ -176,11 +173,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     <rule name="Rapid Reconnaissance" id="8a4a-3ae1-c2de-6436" hidden="false">
       <description>All Units in the selected Platoon can take the Move Action more than once an activation, as a Standard Action.</description>
     </rule>
-    <rule name="Rare Materiel" id="e1ea-7376-65cf-20b1" hidden="false">
-      <description>You may not take more than one copy of this Unit in your Army.</description>
+    <rule name="Rare Materiel X" id="e1ea-7376-65cf-20b1" hidden="false">
+      <description>You may not take more than X selections of this Unit in your Army per 2000 Munitions, or half that many at lower Munition levels.</description>
     </rule>
     <rule name="Rupture" id="a49f-3cb5-cb1f-7b2f" hidden="false">
-      <description>When this Unit is destroyed, place a Gas Token on top of it. This token remains for the rest of the game.</description>
+      <description>When this Unit is destroyed, place a Gas Token on top of it. This token does not drift and remains for the rest of the game.</description>
     </rule>
     <rule name="Bailout (Safe)" id="8e16-6a0a-60b0-dedb" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 1 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
@@ -256,6 +253,21 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </rule>
     <rule name="Shared Qualities X" id="7ea1-cd1c-ca34-9368" hidden="false">
       <description>The Unit this Attache is Attached to gains the X subtype(s)</description>
+    </rule>
+    <rule name="Fire on My Command" id="7893-6f05-38fa-3023" hidden="false">
+      <description>During the Command Phase, in place of issuing one Order, this Unit may designate an Enemy Unit within Line of Sight as a Primary Target. Until the end of the Round, Units in this Platoon consider all of their weapons to be Main Guns when the Primary Target is the target of their Attack.</description>
+    </rule>
+    <rule name="Fixed Loadout" id="ef41-70ca-bb42-13b3" hidden="false">
+      <description>This Unit may not take Upgrades.</description>
+    </rule>
+    <rule name="Formation (Restricted)" id="13fd-2906-0702-b7c8" hidden="false">
+      <description>This Model may not be Attached to Units with Name or Keyword(s) listed:</description>
+    </rule>
+    <rule name="Untrained" id="64d9-bdf9-0795-bbe2" hidden="false">
+      <description>Each time a Suppression Token is applied to this Unit, apply an additional Suppression Token.</description>
+    </rule>
+    <rule name="Armored Personnel Carrier" id="9da2-bcd3-ff52-8355" hidden="false">
+      <description>Units that began their Activation within this Unit may take a Free Dash Action to Disembark.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -434,7 +446,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
       </constraints>
       <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Munitions" typeId="Points" value="20"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -442,7 +454,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Command Squad" hidden="false" id="a200-b89a-7c03-48eb">
       <infoLinks>
-        <infoLink name="Command Squad" id="Command Squad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767"/>
+        <infoLink name="Formation (Specified)" id="Command Squad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767"/>
       </infoLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
@@ -730,12 +742,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 3" hidden="false" id="a898-5898-e382-9e23">
+    <selectionEntry type="upgrade" import="true" name="Officer 4" hidden="false" id="a898-5898-e382-9e23">
       <infoLinks>
         <infoLink name="Officer X" id="2360-f0d4-5ea3-ef98" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
           <modifiers>
-            <modifier type="replace" value="3" field="name" arg="X"/>
-            <modifier type="replace" value="3" field="description" arg="X"/>
+            <modifier type="replace" value="4" field="name" arg="X"/>
+            <modifier type="replace" value="4" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -827,15 +839,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Radio" hidden="false" id="ed57-8fdc-cb6c-d2b5">
-      <infoLinks>
-        <infoLink name="Radio" id="Radio" hidden="false" type="rule" targetId="f6bc-4bf8-86ab-f6d3"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Rapid Deployment" hidden="false" id="fc04-d423-d161-6603">
       <infoLinks>
         <infoLink name="Rapid Deployment" id="Rapid Deployment" hidden="false" type="rule" targetId="bed7-c4f3-15ed-2888"/>
@@ -875,9 +878,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rare Materiel" hidden="false" id="74d0-0f15-1f3b-2484">
+    <selectionEntry type="upgrade" import="true" name="Rare Materiel X" hidden="false" id="74d0-0f15-1f3b-2484">
       <infoLinks>
-        <infoLink name="Rare Materiel" id="Rare Materiel" hidden="false" type="rule" targetId="e1ea-7376-65cf-20b1"/>
+        <infoLink name="Rare Materiel X" id="Rare Materiel" hidden="false" type="rule" targetId="e1ea-7376-65cf-20b1"/>
       </infoLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
@@ -1041,7 +1044,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <modifiers>
             <modifier type="replace" value="4/6" field="name" arg="X"/>
             <modifier type="replace" value="4" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="6" field="description" arg="X" position=""/>
+            <modifier type="replace" value="6" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1088,12 +1091,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 2" hidden="false" id="73c6-712f-a0d6-6ebf">
+    <selectionEntry type="upgrade" import="true" name="Officer 3" hidden="false" id="73c6-712f-a0d6-6ebf">
       <infoLinks>
         <infoLink name="Officer X" id="7094-2326-9dda-6262" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
           <modifiers>
-            <modifier type="replace" value="2" field="name" arg="X"/>
-            <modifier type="replace" value="2" field="description" arg="X"/>
+            <modifier type="replace" value="3" field="name" arg="X"/>
+            <modifier type="replace" value="3" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1108,12 +1111,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 4" hidden="false" id="060e-3ae9-cd61-3cb3">
+    <selectionEntry type="upgrade" import="true" name="Officer 5" hidden="false" id="060e-3ae9-cd61-3cb3">
       <infoLinks>
         <infoLink name="Officer X" id="daff-ee2e-1de4-e7e3" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
           <modifiers>
-            <modifier type="replace" value="4" field="name" arg="X"/>
-            <modifier type="replace" value="4" field="description" arg="X"/>
+            <modifier type="replace" value="5" field="name" arg="X"/>
+            <modifier type="replace" value="5" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1128,12 +1131,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 5" hidden="false" id="59ee-415f-f275-219b">
+    <selectionEntry type="upgrade" import="true" name="Officer 6" hidden="false" id="59ee-415f-f275-219b">
       <infoLinks>
         <infoLink name="Officer X" id="5c1b-61ef-3f1c-b669" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
           <modifiers>
-            <modifier type="replace" value="5" field="name" arg="X"/>
-            <modifier type="replace" value="5" field="description" arg="X"/>
+            <modifier type="replace" value="6" field="name" arg="X"/>
+            <modifier type="replace" value="6" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1148,12 +1151,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 6" hidden="false" id="4af0-1a59-8ab9-eb2d">
+    <selectionEntry type="upgrade" import="true" name="Officer 7" hidden="false" id="4af0-1a59-8ab9-eb2d">
       <infoLinks>
         <infoLink name="Officer X" id="ff9e-3493-439d-8af9" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
           <modifiers>
-            <modifier type="replace" value="6" field="name" arg="X"/>
-            <modifier type="replace" value="6" field="description" arg="X"/>
+            <modifier type="replace" value="7" field="name" arg="X"/>
+            <modifier type="replace" value="7" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1168,12 +1171,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 1" hidden="false" id="3bf2-8b19-6749-94c7">
+    <selectionEntry type="upgrade" import="true" name="Officer 2" hidden="false" id="3bf2-8b19-6749-94c7">
       <infoLinks>
         <infoLink name="Officer X" id="3fec-3bac-99c2-e7a2" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
           <modifiers>
-            <modifier type="replace" value="1" field="name" arg="X"/>
-            <modifier type="replace" value="1" field="description" arg="X"/>
+            <modifier type="replace" value="2" field="name" arg="X"/>
+            <modifier type="replace" value="2" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1411,7 +1414,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <modifiers>
             <modifier type="replace" value="8/10" field="name" arg="X"/>
             <modifier type="replace" value="8" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="10" field="description" arg="X" position=""/>
+            <modifier type="replace" value="10" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1456,7 +1459,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <modifiers>
             <modifier type="replace" value="6/8" field="name" arg="X"/>
             <modifier type="replace" value="6" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="8" field="description" arg="X" position=""/>
+            <modifier type="replace" value="8" field="description" arg="X"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1478,6 +1481,29 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bca3-04ed-f11d-9933-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bca3-04ed-f11d-9933-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Fixed Loadout" hidden="false" id="3598-8a56-38dd-4abf">
+      <infoLinks>
+        <infoLink name="Fixed Loadout" id="8877-0bf2-b781-7f87" hidden="false" type="rule" targetId="ef41-70ca-bb42-13b3"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Untrained" hidden="false" id="bf3c-7d43-835f-bf5a">
+      <infoLinks>
+        <infoLink name="Untrained" id="5b51-44d7-853e-27ef" hidden="false" type="rule" targetId="64d9-bdf9-0795-bbe2"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc9a-9286-5580-f510-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc9a-9286-5580-f510-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Armored Personnel Carrier" hidden="false" id="21d6-a843-1ec9-e0a0">
+      <infoLinks>
+        <infoLink name="Armored Personnel Carrier" id="cbb5-8db9-fa27-e8c3" hidden="false" type="rule" targetId="9da2-bcd3-ff52-8355"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38c3-1388-5339-025a-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38c3-1388-5339-025a-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
   </sharedSelectionEntries>

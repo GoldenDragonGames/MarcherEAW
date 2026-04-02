@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.4" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.5" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -23,6 +23,7 @@
         <characteristicType id="8b2b-8745-edb5-df14" name="Keywords"/>
         <characteristicType id="d264-e5f6-d2b5-2624" name="Base Size"/>
         <characteristicType name="Models in Unit" id="79fc-3188-cd1e-2b49"/>
+        <characteristicType name="Upgrade Slots" id="a4fe-57aa-eb89-f8f4"/>
       </characteristicTypes>
     </profileType>
     <profileType id="d3fb-06f3-cc24-ab32" name="Model" kind="model">
@@ -36,9 +37,9 @@
     <profileType id="5a0c-9677-ca87-9509" name="Action List" kind="rule">
       <characteristicTypes>
         <characteristicType id="71f8-64d2-a32a-0757" name="Standard Actions"/>
-        <characteristicType id="6cfc-1528-37ea-2ff9" name="Reactions"/>
-        <characteristicType id="cf1b-a84e-f943-d503" name="Difficult Actions"/>
         <characteristicType id="4c52-f227-0038-1b73" name="Free Actions"/>
+        <characteristicType id="cf1b-a84e-f943-d503" name="Difficult Actions"/>
+        <characteristicType id="6cfc-1528-37ea-2ff9" name="Reactions"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Attache Composition" id="312c-13ed-50aa-27a6" hidden="false" kind="rule">
@@ -1453,7 +1454,7 @@
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="baba-9300-79c2-8556" shared="true" includeChildSelections="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1658,7 +1659,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce4e-1057-cbb-d75f-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink id="90a2-934a-3cdf-b72d" name="Coordinated Attack" hidden="false" targetId="3897-33c2-b987-e81d" type="rule"/>
+            <infoLink id="90a2-934a-3cdf-b72d" name="Backbone of the Army" hidden="false" targetId="3897-33c2-b987-e81d" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -1869,20 +1870,14 @@ Linear, Light Terrain, Obscuring, Rough,</characteristic>
             <profile name="Sandbag  Wall" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="41ef-14ed-ba50-cba0">
               <characteristics>
                 <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">1</characteristic>
-                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Units touching this Fortification can take a Reaction even if they have already Activated this Round. Next time that Unit Activates, it only loses one Action for doing so.
-
-
-Linear , Medium Terrain, Rough</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Linear , Medium Terrain, Rough</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">5” x 1” x 1”</characteristic>
               </characteristics>
             </profile>
             <profile name="Sandbag Bunker" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="6148-9b26-dc0a-1b51">
               <characteristics>
                 <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
-                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Units touching this Fortification can take a Reaction even if they have already Activated this Round. Next time that Unit Activates, it only loses one Action for doing so. 
-
-
-This Fortification can be removed by the Units with the Tracked Keyword or Crushing Footfalls Special Rule.
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">This Fortification can be removed by the Units with the Tracked Keyword or Crushing Footfalls Special Rule.
 
 
 Area, Heavy Terrain, Rough</characteristic>
@@ -1894,9 +1889,7 @@ Area, Heavy Terrain, Rough</characteristic>
                 <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
                 <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">When a Unit performs a Move Action, if at any point it touches this Fortification, perform an attack against it with the Anti-Personnel Mine Profile*. 
 
-
-Area, Light Terrain*, Rough
-*Units do not gain cover for being within this specific terrain feature</characteristic>
+Area, Light Terrain, Subterranean, Rough</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">3” x 8”, Flat.</characteristic>
               </characteristics>
             </profile>
@@ -1905,9 +1898,7 @@ Area, Light Terrain*, Rough
                 <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
                 <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">When a Unit performs a Move Action, if at any point it touches this Fortification, perform an attack against it with the Anti-Tank Mine Profile*. 
 
-
-Area, Light Terrain*, Rough 
-*Units do not gain cover for being within this specific terrain feature</characteristic>
+Area, Light Terrain, Subterranean, Rough</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">3” x 8”, Flat.</characteristic>
               </characteristics>
             </profile>
@@ -1939,7 +1930,9 @@ to travel through the Taupe on their turn. To travel through a Taupe, remove a
 Troop Unit within range of a Taupe token and set them up within 3” of the
 opposite Taupe token. The Unit that constructed the Taupe may travel through it
 on the turn it was constructed without using an Action. Troop Units may not
-travel through the Taupe twice in the same turn.</characteristic>
+travel through the Taupe twice in the same turn.
+
+Area, Light Terrain, Subterranean</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">40mm Circular</characteristic>
               </characteristics>
               <alias>Taupe</alias>
@@ -2179,7 +2172,7 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
     <rule id="0d92-4ab7-f17c-0286" name="Hatches Down" hidden="false">
       <description>All Units in the selected Platoon can perform the Button Up Reaction as a Free Action.</description>
     </rule>
-    <rule id="3897-33c2-b987-e81d" name="Coordinated Attack" hidden="false">
+    <rule id="3897-33c2-b987-e81d" name="Backbone of the Army" hidden="false">
       <description>At the beginning of the Action Phase you may choose to give every (CORE) Infantry Unit in this Platoon one of the following Actions as a Standard Action: Supply Gathering, Intel Gathering, Build, Sentry, Steady.</description>
     </rule>
     <rule id="c461-b91e-f6c6-5dd8" name="Flanking Maneuver" hidden="false">
@@ -2208,19 +2201,13 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
       <description>This Model must be attached to a non-Command Unit that it shares a CORE Keyword with in this Platoon before the Game starts. After this Model is attached it must be designated as the Leader of the combined Unit. A Unit may not have more than one additional Model attached to it in this way.</description>
     </rule>
     <rule name="Phosphorous Shells" id="b64b-4ada-29c0-088b" hidden="false">
-      <description>After resolving any Attack Action with an Ordnance X weapon made by a Unit in this Platoon, replace the Blast Token with a Smoke Token.</description>
+      <description>During the Command Phase, after Blast Tokens are placed, you may replace each of your Blast Tokens with a Smoke Token.</description>
     </rule>
     <rule name="Infantry Escort" id="59e4-5ed8-7949-245c" hidden="false">
       <description>All Vehicle Units in the selected Platoon increase their Evasion Value by 2 if they are within 6” of a Troop Unit.</description>
     </rule>
-    <rule name="Pintle Mount" id="afb9-85ce-6367-ce57" hidden="false">
-      <description>Weapons equipped in Pintle Mounts gain the Point Blank Special Rule. When these Weapons are Selected to Attack, they are considered to have a 360 degree Firing Arc.</description>
-    </rule>
     <rule name="Sponson Mount" id="4e9c-f896-e0f4-6729" hidden="false">
       <description>Weapons equipped in a Sponson Mount may select targets for their attacks independently of other weapons.</description>
-    </rule>
-    <rule name="Coaxial Mount" id="df90-d7be-6a7f-ad4e" hidden="false">
-      <description>Weapons equipped in Coaxial Mounts may be selected to fire alongside a Difficult to Use Weapon, so long as they select the same target.</description>
     </rule>
     <rule name="Rear Turret Mount" id="aba1-049d-c59a-7c9e" hidden="false">
       <description>Weapons Equipped in a Rear Turret Mount may select targets for Attacks independently of other Weapons.</description>
@@ -2236,7 +2223,7 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
 - Unless this Unit has the Troops Keyword, it may not end its movement with its base on top of Terrain features.
 - This Unit may not Engage or be Engaged by other Units unless they also have the Flying keyword. 
 - When determining LOS to or from this Unit, this Unit is considered to be 12&quot; tall. 
-- All Attacks targeting or from this Unit, are measured using its base.
+- All Attacks targeting to or from this Unit, are measured using its base.
 - Line of Sight can be drawn through these Units to other Units as if not present on the Battlefield. 
 - This Unit benefits from the Multi-Level Terrain rule giving +1 to hit for the purposes of ranged attacks.
 - Units Embarked within this Unit are considered to have the Flying Keyword.
@@ -2254,126 +2241,132 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
 * Units with the Forward Observer Special Rule may share Aim tokens with any Siege Units within the Radio Network, regardless of Range.
 * Any any point during their Activation, they may choose to transfer one of their Order Tokens to another Unit within the Radio Network.</description>
     </rule>
+    <rule name="Cavalry" id="5ae2-35e0-e677-e057" hidden="false">
+      <description>When a Cavalry Unit performs a Movement Action, they may temporarily interrupt their Movement with other Actions. After this interruption, they may continue to resolve their movement Action.</description>
+    </rule>
+    <rule name="Gunner! Target X!" id="c244-6d3c-9aad-4dc3" hidden="false">
+      <description>When this Unit performs an Attack, it may designate X additional Weapon(s) as Primary Weapons.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="0936-84e8-76d0-501a" name="Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile id="ed5a-9492-6407-a9f1" name="Vehicle Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage, Overwatch</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage, Overwatch</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile id="e02c-5a58-9b36-5c37" name="Scout Vehicle Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Capture, Dash, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Overwatch</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Overwatch</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile id="8aaf-072f-5000-d2b9" name="Siege Carriage Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Move, Steady, Disengage</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Adjust Coordinates, Detach</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Move, Steady, Disengage</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile id="335b-34df-c974-9c3b" name="Engineer Troop Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in, Move, Take Aim, Demolish</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Capture, Build</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile id="1761-68e7-b0e6-e086" name="Carriage Actions" hidden="false" typeId="5a0c-9677-ca87-9509" typeName="Action List">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Overwatch</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Move, Steady, Disengage</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Detach</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Move, Steady, Disengage</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Command Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="237b-8d1e-014e-539d">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757"/>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503"/>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9"/>
       </characteristics>
     </profile>
     <profile name="Siege Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="ad55-69e8-9339-6df7">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Dash</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Adjust Coordinates</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Cavalry Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="95c6-33a2-c463-50c9">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Capture, Dash, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Crewed Weapon Siege Troop Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="a630-8180-c3b3-9f81">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Move</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Adjust Coordinates, Take Aim, Capture</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Move</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Crewed Weapon Troop Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="7959-03e6-fdc4-3adf">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in, Overwatch</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Move</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Take Aim, Capture</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Move</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Engineer Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="ba32-3e2e-765c-654b">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Move, Attack, Take Aim, Dash, Demolish</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Capture, Disengage, Overwatch</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Build</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Capture, Disengage, Overwatch</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Hero Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="ca2a-7f10-72a9-2a56">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Dig in, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Dig In, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Command Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="8bc2-5843-ca96-b11b">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage, Overwatch</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Capture, Steady, Disengage, Overwatch</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Command Scout Vehicle Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="48fa-5429-0e47-55af">
       <characteristics>
         <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Capture, Dash, Move, Take Aim</characteristic>
-        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Overwatch</characteristic>
         <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Rally</characteristic>
+        <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Overwatch</characteristic>
+        <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-Personnel Mine" typeId="Weapon" typeName="Weapon" hidden="false" id="4079-55bc-dbaf-716a">
@@ -2484,7 +2477,7 @@ Area, Heavy Terrain, Rough</characteristic>
                   </costs>
                   <rules>
                     <rule name="Onboard Mechanic" id="65d3-9dcb-74e3-457e" hidden="false">
-                      <description>This Unit has one additional Upgrade Slot. As a Free Action, this Unit may Repair. If it does, recover 3 HP.</description>
+                      <description>This Unit has one additional Upgrade Slot. Once per Round, as a Free Action, this Unit may Repair. If it does, recover 3 HP.</description>
                     </rule>
                   </rules>
                   <constraints>
@@ -2630,7 +2623,7 @@ Area, Heavy Terrain, Rough</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ff22-2d03-f7e2-4a91" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <costs>
-            <cost name="Munitions" typeId="Points" value="25"/>
+            <cost name="Munitions" typeId="Points" value="15"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2790,6 +2783,14 @@ Area, Heavy Terrain, Rough</characteristic>
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Gunner! Target X!" id="522f-029a-8bca-ae43" hidden="false" type="rule" targetId="c244-6d3c-9aad-4dc3">
+              <modifiers>
+                <modifier type="replace" value="2" field="name" arg="X"/>
+                <modifier type="replace" value="2" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Radio Operator Element" hidden="false" id="f0e5-9034-3e69-68c4">
           <selectionEntryGroups>
@@ -2940,11 +2941,11 @@ Area, Heavy Terrain, Rough</characteristic>
         <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="b068-de68-7a68-a938">
           <rules>
             <rule name="Veteran" id="b6c8-f73c-5ade-f649" hidden="false">
-              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order. If this Unit is a Vehicle or a Carriage, it ignores the Difficult to Use Special Rule.</description>
+              <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order.</description>
             </rule>
           </rules>
           <costs>
-            <cost name="Munitions" typeId="Points" value="25"/>
+            <cost name="Munitions" typeId="Points" value="30"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2995,7 +2996,7 @@ Area, Heavy Terrain, Rough</characteristic>
         <selectionEntry type="upgrade" import="true" name="Battle Hardened" hidden="false" id="72a2-3ebd-6239-c7df">
           <rules>
             <rule name="Battle Hardened" id="bc6d-0d48-0ca7-b525" hidden="false">
-              <description>This Unit only loses one Action per two Suppression or Concussion Tokens. </description>
+              <description>This Unit&apos;s score for Suppression Checks is 6+. When this Unit activates, it may roll a D10 for each Concussion Token Applied to it. On an 8+, that Token is shed without applying its effects.</description>
             </rule>
           </rules>
           <costs>
@@ -3029,7 +3030,58 @@ Area, Heavy Terrain, Rough</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Drilled" hidden="false" id="2030-023e-3a1f-ae74">
+          <rules>
+            <rule name="Drilled" id="fb00-987f-2fcb-3678" hidden="false">
+              <description>This Unit may expend Actions to increase its Gunner! Target X! Special Rule. For each Action it expends it may improve the Special Rule by 2 until the end of this Activation.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="15"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="fb88-b688-c3fb-d11d" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Drilled" field="name" scope="parent"/>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Gunner! Target X!" id="8873-8c31-2ec9-a717" hidden="true" type="rule" targetId="c244-6d3c-9aad-4dc3">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="X"/>
+                <modifier type="replace" value="1" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <sharedInfoGroups>
+    <infoGroup name="Weapon Mounts" id="389e-d546-ccf5-64e2" hidden="false">
+      <rules>
+        <rule name="Coaxial" id="df90-d7be-6a7f-ad4e" hidden="false">
+          <description>This Weapon is mounted alongside another Weapon. If that Weapon is a Primary Weapon, and this Weapon selects the same Target as it, it may ignore the Inaccurate Special Rule.</description>
+        </rule>
+        <rule name="Linked" id="57e7-96d0-6806-d4d8" hidden="false">
+          <description>This Weapon is mounted alongside other identical Weapons, it must select the same Target as those Weapons. If one of these Weapons is a Primary Weapon, this one is considered to be one as well.</description>
+        </rule>
+        <rule name="Rear-Facing" id="7887-88c8-0f9b-ad00" hidden="false">
+          <description>This Weapon may not be selected as a Primary Weapon.</description>
+        </rule>
+        <rule name="Turret" id="88ba-77a2-4288-c6c0" hidden="false">
+          <description>When this Unit performs the Attack or Take Aim Action, this Weapon Mount may Pivot up to 45 Degrees.</description>
+        </rule>
+        <rule name="Pintle Mount" id="afb9-85ce-6367-ce57" hidden="false">
+          <description>Weapons equipped in Pintle Mounts gain the Point Blank Special Rule. When these Weapons are Selected to Attack, they are considered to have a 360 degree Firing Arc.</description>
+        </rule>
+        <rule name="Embarked Weapon" id="6016-4078-5d10-0461" hidden="false">
+          <description>If there are no Units Embarked within this Unit, Weapons equipped on this Mount may not be designated as Primary Weapons, and may not be selected to Attack. For each Unit Embarked in this Unit, you may select up to two Weapons in this type of Mount to be a Primary Weapon.</description>
+        </rule>
+      </rules>
+    </infoGroup>
+  </sharedInfoGroups>
 </gameSystem>

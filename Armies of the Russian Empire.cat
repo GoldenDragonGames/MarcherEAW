@@ -16,7 +16,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 4" hidden="false" id="bb9b-eeda-68ea-4ebf" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
+                <entryLink import="true" name="Officer 5" hidden="false" id="bb9b-eeda-68ea-4ebf" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="O3 - Podpolkovnik" hidden="false" id="67e5-58fe-8808-9e18">
@@ -26,7 +26,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 3" hidden="false" id="6143-70e1-1dc2-b077" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
+                <entryLink import="true" name="Officer 4" hidden="false" id="6143-70e1-1dc2-b077" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="O2 - Kapitan" hidden="false" id="d157-b97e-2581-cf2e">
@@ -36,7 +36,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 2" hidden="false" id="3b1d-8a20-7ed4-e8e1" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
+                <entryLink import="true" name="Officer 3" hidden="false" id="3b1d-8a20-7ed4-e8e1" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="O1 - Poruchik" hidden="false" id="6cfe-1698-6dea-74da">
@@ -46,7 +46,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 1" hidden="false" id="baa6-fe64-7d45-b231" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
+                <entryLink import="true" name="Officer 2" hidden="false" id="baa6-fe64-7d45-b231" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -305,7 +305,6 @@
       <infoLinks>
         <infoLink name="9cm High-Velocity Cannon" id="fc68-7379-dfa5-d812" hidden="false" targetId="8176-6158-2d65-0519" type="profile"/>
         <infoLink name="Critical Shot" id="929a-79c5-09d7-1277" hidden="false" targetId="a53f-6c4f-8514-7703" type="rule"/>
-        <infoLink name="Difficult to Use" id="d1fa-88f1-b1d7-bcdb" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="35"/>
@@ -318,7 +317,6 @@
       <infoLinks>
         <infoLink name="MPz-10 Plasma Cannon" id="c345-a8b6-8a7f-d95b" hidden="false" targetId="6e85-5755-0b50-9366" type="profile"/>
         <infoLink name="Slag" id="fd86-cead-d7dc-ffed" hidden="false" targetId="aaa4-8ad4-e93e-7ead" type="rule"/>
-        <infoLink name="Difficult to Use" id="72cb-915e-0474-a6d5" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="35"/>
@@ -331,9 +329,11 @@
       <infoLinks>
         <infoLink name="Gsh. 40 Rotary Cannon" id="b267-d536-ec6a-8c35" hidden="false" targetId="d8ee-90ad-6b38-5447" type="profile"/>
         <infoLink name="Suppressive" id="24d5-6a76-0ea9-925a" hidden="false" targetId="4911-2380-864d-8b44" type="rule"/>
+        <infoLink name="Spin Up" id="11ba-a76d-431f-70f9" hidden="false" type="rule" targetId="57cc-2904-33dc-1450"/>
+        <infoLink name="Sustained Fire" id="25cb-aaef-1969-83f9" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="25"/>
+        <cost name="Munitions" typeId="Points" value="40"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -448,9 +448,6 @@
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
       </costs>
-      <infoLinks>
-        <infoLink name="Pintle Mount" id="a6da-4e6d-955c-e919" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="2.5cm Autocannon" hidden="false" id="28a4-7b12-e3cf-4eb8" collective="true">
       <infoLinks>
@@ -467,7 +464,6 @@
     <selectionEntry type="upgrade" import="true" name="10cm Battle Cannon" hidden="false" id="79e0-66de-91a7-2818" collective="true">
       <infoLinks>
         <infoLink name="10cm Battle Cannon" id="7080-9217-eff0-8231" hidden="false" type="profile" targetId="31ab-ee7b-265c-450d"/>
-        <infoLink name="Difficult to Use" id="66e0-01ef-eb53-e60c" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
         <infoLink name="High Explosive" id="cb5c-be92-5580-a96f" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
       </infoLinks>
       <costs>
@@ -481,7 +477,6 @@
       <infoLinks>
         <infoLink name="14.2cm High-Velocity Cannon" id="f193-918f-ec91-0e57" hidden="false" type="profile" targetId="2878-6f88-a1e6-55d6"/>
         <infoLink name="Critical Shot" id="b851-4f5a-30e3-911e" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
-        <infoLink name="Difficult to Use" id="a7b6-6eb5-2a2a-c0ad" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="58"/>
@@ -498,7 +493,6 @@
             <modifier type="append" value="6" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Difficult to Use" id="5043-bfe0-a4d2-98a4" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
         <infoLink name="Fixed Elevation" id="3edd-d93b-770c-0815" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
       </infoLinks>
       <costs>
@@ -710,7 +704,6 @@
       <infoLinks>
         <infoLink name="6.7tsk Heavy Beam Cannon" id="a282-f78d-7998-ca14" hidden="false" type="profile" targetId="408d-8426-c252-a88a"/>
         <infoLink name="Ablation Beam" id="b0e8-4095-3439-e018" hidden="false" type="rule" targetId="a397-8716-ab3d-2773"/>
-        <infoLink name="Difficult to Use" id="4fb5-eab5-55c7-bcb8" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="99"/>
@@ -735,7 +728,6 @@
     <selectionEntry type="upgrade" import="true" name="BM-8 Multiple Rocket Launcher" hidden="false" id="63bc-5ecb-1474-1b4e" collective="true">
       <infoLinks>
         <infoLink name="BM-8 Multiple Rocket Launcher" id="64b5-d67c-6d96-f62c" hidden="false" type="profile" targetId="2b6d-d0a3-f500-de6c"/>
-        <infoLink name="Direct Fire" id="c05d-a6d5-77c1-0e1b" hidden="false" type="rule" targetId="371b-f82b-1fef-54a5"/>
         <infoLink name="Ordnance" id="6e35-545d-7774-acc1" hidden="false" type="rule" targetId="11d9-c53a-4538-6b97">
           <modifiers>
             <modifier type="append" value="3" field="name"/>
@@ -758,19 +750,6 @@
       <entryLinks>
         <entryLink import="true" name="Battlefield Scanners" hidden="false" id="b875-1cfd-562a-3f66" type="selectionEntry" targetId="0fd9-0c79-4cce-8907"/>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Epak. 34 Energy Cannon" hidden="false" id="957d-33bb-4d7a-6418" collective="true">
-      <infoLinks>
-        <infoLink name="Epak. 34 Energy Cannon" id="fb5c-83d5-aa28-89ee" hidden="false" targetId="a92f-4fee-1192-1f72" type="profile"/>
-        <infoLink name="Reliable" id="d1f7-2675-9b8c-ef75" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
-        <infoLink name="Difficult to Use" id="5c7b-e49d-3b94-efa6" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
-      </infoLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="29"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Druzhina Bardiche" hidden="false" id="375d-7de7-b0ac-aa14">
       <infoLinks>
@@ -1070,7 +1049,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -1080,7 +1059,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, High Explosive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1090,7 +1069,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Critical Shot</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1126,11 +1105,11 @@
     </profile>
     <profile name="Gsh. 40 Rotary Cannon" typeId="Weapon" typeName="Weapon" hidden="false" id="d8ee-90ad-6b38-5447">
       <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">22&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">15</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire, Spin Up</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1180,7 +1159,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, High Explosive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1190,7 +1169,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">13</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1200,7 +1179,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3D5+1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 6, Difficult to Use, Fixed Elevation</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 6, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1350,7 +1329,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">8</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Ablation Beam</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ablation Beam</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Beam</characteristic>
       </characteristics>
     </profile>
@@ -1370,7 +1349,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Direct Fire, Ordnance 3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1672,9 +1651,9 @@
       <categoryLinks>
         <categoryLink targetId="8679-d614-ae03-de2c" id="c2a9-58fb-f2e0-3deb" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="1c43-89db-e132-0202" primary="false" name="RUS"/>
-        <categoryLink targetId="de0d-e12c-a964-4e46" id="03f7-9146-fcbb-f480" primary="false" name="Vehicle"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="8874-6d59-8344-f782" primary="false" name="Tracked"/>
         <categoryLink targetId="6458-4093-473e-e12f" id="0ff6-5f74-bdb9-4b0c" primary="false" name="Siege"/>
+        <categoryLink targetId="c2bc-81f4-b62b-dc46" id="cf3c-75d9-bd41-aea8" primary="false" name="Carriage"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Guards Grenadiers Squad" hidden="false" id="1fdb-0fb8-9f1c-2037" type="selectionEntry" targetId="d444-2ca9-0241-647d">
@@ -2303,10 +2282,17 @@
         <categoryLink name="Vehicle" hidden="false" id="8e8e-099a-9657-88dd" targetId="de0d-e12c-a964-4e46" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Armored Train Detachment Abilities" hidden="false" id="e3ef-3186-ead0-0571" type="selectionEntry" targetId="e64d-2383-e16f-1dff">
+    <entryLink import="true" name="Armored Train Detachment Abilities" hidden="true" id="e3ef-3186-ead0-0571" type="selectionEntry" targetId="e64d-2383-e16f-1dff">
       <categoryLinks>
-        <categoryLink targetId="42f4-579a-a43d-b8cc" id="fd42-6212-f698-7708" primary="true" name="Rail Configuration"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="f8d6-edbd-3545-be21" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="cd9f-9d4b-8425-d8ca" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="T-20 Light Gun Tractor" hidden="true" id="36a5-b779-ce04-003f" type="selectionEntry" targetId="4f7f-122f-e70f-df51">
       <categoryLinks>
@@ -2360,6 +2346,40 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="T-20 Light Gun Tractor Transport Group" hidden="false" id="e968-cc82-c028-9d14" type="selectionEntry" targetId="ed21-96a0-7a8f-7bf7">
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="3169-52e6-a9ce-e535" targetId="de0d-e12c-a964-4e46" primary="false"/>
+        <categoryLink name="Tracked" hidden="false" id="14c9-e449-b955-0f51" targetId="7616-a9f8-6205-af0e" primary="false"/>
+        <categoryLink name="Transport" hidden="false" id="3a07-1cd5-3d4d-f318" targetId="d4be-5aad-8560-5720" primary="true"/>
+        <categoryLink name="RUS" hidden="false" id="ae8f-a336-5692-f828" targetId="51a0-4deb-b01b-931e" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="AT-28 Heavy Tractor Troop Carrier" hidden="false" id="df82-4f96-8d33-94b5" type="selectionEntry" targetId="4e4a-ea24-4cad-da09">
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="a7e7-46a8-fc02-8d5b" targetId="de0d-e12c-a964-4e46" primary="false"/>
+        <categoryLink name="Tracked" hidden="false" id="e1f0-9f9d-1600-53b0" targetId="7616-a9f8-6205-af0e" primary="false"/>
+        <categoryLink name="Transport" hidden="false" id="3c88-91a6-c38e-9404" targetId="d4be-5aad-8560-5720" primary="true"/>
+        <categoryLink name="RUS" hidden="false" id="1ab9-2372-ddfa-5c9c" targetId="51a0-4deb-b01b-931e" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Druzhina Battlesuit Commander" hidden="true" id="98a8-897d-5af8-135c" type="selectionEntry" targetId="1710-60e8-1858-5b5e">
+      <categoryLinks>
+        <categoryLink name="Command" hidden="false" id="2266-d9a6-0567-99ff" targetId="70eb-c264-a9cb-1bfe" primary="true"/>
+        <categoryLink name="RUS" hidden="false" id="e7f9-ce56-40be-278b" targetId="51a0-4deb-b01b-931e" primary="false"/>
+        <categoryLink name="Attache" hidden="false" id="c190-0df6-7757-79c0" targetId="6cee-690d-b6de-aa15" primary="false"/>
+      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="8607-eaba-7efc-e4ff" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
   </entryLinks>
   <sharedRules>
     <rule name="Corporate Sear" id="9c29-d160-9e29-625e" hidden="false">
@@ -2372,13 +2392,13 @@
       <description>This Unit may take the Freeze Action as a Standard Action. Units within X inches of this model are subject to the effects of one additional category level of the Blizzard.</description>
     </rule>
     <rule name="Blessed Relic" id="6ba4-7959-19ce-304b" hidden="false">
-      <description>Whenever this Unit would receive a Suppression Token, roll a D10, on a roll of 7+, that token is not applied.</description>
+      <description>This Unit gets +1 to its Suppression Checks.</description>
     </rule>
     <rule name="Adjustable Sights" id="58d3-a00a-c0c4-e7d9" hidden="false">
       <description>When making an attack action with this weapon at less than half of its maximum range, this unit gains an Aim Token.</description>
     </rule>
     <rule name="Freeze" id="f31c-1dc3-9251-1d62" hidden="false">
-      <description>This unit may attempt to intensify the Blizzard to the next Category. If it does, roll a D10, then consult the Blizzard Chart. You may reroll failed rolls once for every Freeze Action that has been taken this round. To take this action, for every Category Level of the Blizzard, this Unit must be 6&quot; away from all other units that may take this action. The Blizzard may not gain more than one Category Level per round.</description>
+      <description>This Unit may attempt to intensify the Blizzard to the next Category or Maintain the Blizzard’s current Category. If it does, roll a D10, then consult the Blizzard Chart. You may reroll failed rolls once for every Freeze Action that has been taken this round. To take this Action, for every Category Level of the Blizzard, this Unit must be 6&quot; away from all other Units that may take this Action. The Blizzard may not gain more than one Category Level per round.</description>
     </rule>
     <rule name="Pack Gun" id="9fea-0d08-bc4c-84f5" hidden="false">
       <description>Units with the Troop Keyword may Tow this Unit as a Standard Action. This Unit may not be Towed if it is a Battery.</description>
@@ -2402,10 +2422,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="T-30 &quot;St. Dmitry&quot; Battle Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e7b6-5956-fe1b-dbdf">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x T-30 &quot;St. Dmitry&quot; Battle Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial, 1x Rear Mount, 0-1x Pintle Mount), 1x Turret (1x Mantlet), 0-1x Sponsons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2617,9 +2638,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f498-e9ef-0b80-c494-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f498-e9ef-0b80-c494-max" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="8988-1b5b-e439-5ed0" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -2646,7 +2664,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3415-9ef9-dcf5-6c8c-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="155"/>
+                <cost name="Munitions" typeId="Points" value="139"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2786,9 +2804,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="17a5-0d30-dc20-2b3a-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="17a5-0d30-dc20-2b3a-max" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="1c07-2b34-41e4-6e9c" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Rear Turret Mount" hidden="false" id="566d-1845-03c0-cf9e" collective="false">
                       <constraints>
@@ -2826,7 +2841,7 @@ This Unit may not take Upgrades.</description>
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="357"/>
+                <cost name="Munitions" typeId="Points" value="341"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2840,10 +2855,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="T-40 &quot;St. Mikhail&quot; Heavy Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0019-79c5-702a-24c4">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x T-40 &quot;St. Mikhail&quot; Heavy Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Linked Mantlet, 1x Coaxial Mount, 2x Rear Mount, 0-1x Pintle Mount), 4x Turret (1x Linked Mantlet)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Armor, (AUX) Mechanized, Tracked, Vehicle, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2871,7 +2887,7 @@ This Unit may not take Upgrades.</description>
         <selectionEntry type="unit" import="true" name="AT-28 &quot;Katyusha&quot;" hidden="false" id="fffe-d5ca-1920-602d">
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="3ca7-a9fe-7008-4cba" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 8" hidden="false" id="d4ed-1399-38e4-4260" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
+            <entryLink import="true" name="Dial In 8/10" hidden="false" id="d4ed-1399-38e4-4260" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -2881,10 +2897,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="AT-28 &quot;Katyusha&quot;" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e12d-16dd-6594-d744">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x AT-28 &quot;Katyusha&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, Vehicle, Tracked, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Rack Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, Vehicle, Tracked, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2912,7 +2929,7 @@ This Unit may not take Upgrades.</description>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="52"/>
+                <cost name="Munitions" typeId="Points" value="47"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2931,7 +2948,7 @@ This Unit may not take Upgrades.</description>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="911f-b7c9-d26c-18f2" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="536c-298d-2df8-42ef" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
-            <entryLink import="true" name="Dial In 12" hidden="false" id="2aab-d86e-bd02-0608" type="selectionEntry" targetId="9a0d-2598-17f5-b309"/>
+            <entryLink import="true" name="Dial In 12/14" hidden="false" id="2aab-d86e-bd02-0608" type="selectionEntry" targetId="9a0d-2598-17f5-b309"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -2941,7 +2958,7 @@ This Unit may not take Upgrades.</description>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="U-19 &quot;St. Barbara&quot; Tracked Howitzer" hidden="false" id="71e8-2195-032d-d74f">
               <costs>
-                <cost name="Munitions" typeId="Points" value="51"/>
+                <cost name="Munitions" typeId="Points" value="42"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2998,9 +3015,10 @@ This Unit may not take Upgrades.</description>
             <profile name="U-19 &quot;St. Barbara&quot; Tracked Howitzer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="76e0-3b25-b79e-22b4">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x U-19 &quot;St. Barbara&quot; Tracked Howitzer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, Carriage, Tracked, Siege</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, Carriage, Tracked, Siege, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3058,9 +3076,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Guards Mortar Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9b71-b4b9-8eb0-b690">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Mortar Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Infantry, Troop, Crewed Weapon, Siege</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Infantry, Troop, Crewed Weapon, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3104,7 +3123,7 @@ This Unit may not take Upgrades.</description>
               <profiles>
                 <profile name="M-27 Regimental Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3c98-b19b-8599-a5c8">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
@@ -3149,9 +3168,10 @@ This Unit may not take Upgrades.</description>
             <profile name="M-27 Regimental Gun Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fa1a-e3d3-cf92-0430">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x M-27 Regimental Gun Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Infantry, Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Infantry, Carriage, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3167,10 +3187,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="T-30 &quot;St. Dmitry&quot; Assault Support Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dcc8-60e3-79df-81ee">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x T-30 &quot;St. Dmitry&quot; Assault Support Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial, 1x Rear Mount, 0-1x Pintle Mount) 1x Turret (1x Mantlet)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3271,9 +3292,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f38-88c0-6996-7fbb" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a99e-d657-51ce-255b" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="9c66-96c1-9632-9345" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -3291,7 +3309,7 @@ This Unit may not take Upgrades.</description>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">15</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">17</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3300,7 +3318,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6605-b08a-ac51-1931" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="137"/>
+                <cost name="Munitions" typeId="Points" value="139"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3314,7 +3332,7 @@ This Unit may not take Upgrades.</description>
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="762d-b1bd-d943-6403" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="697d-32f9-2251-843a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
+            <entryLink import="true" name="Dial In 6/8" hidden="false" id="697d-32f9-2251-843a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="ab8f-e237-19c3-e6a3" primary="false" name="Medium"/>
@@ -3328,7 +3346,7 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="Guards Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c36d-80ed-6f39-018a">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Attache (Troop), Attache (Crewed Weapon), Command</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Attache (Troop), Command</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
@@ -3428,7 +3446,7 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="Mounted Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="3f40-f8b4-7998-1f45">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Flex, Attache (Vehicle), Attache (Carriage), Command</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Flex, Attache (Vehicle, Carriage), Command</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
@@ -3447,9 +3465,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Snowbringer Starets" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bf5a-a5e7-129f-dce6">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Snowbringer Starets Sleigh</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Cavalry, Command</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Cavalry, Command, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">120x92mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3522,32 +3541,25 @@ This Unit may not take Upgrades.</description>
             <categoryLink targetId="f94f-807f-eca3-d850" id="3278-a92a-373c-ac2c" primary="false" name="Medium"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Oprichnik Huntsmaster" hidden="false" id="db73-6127-c6e0-6f0b">
+        <selectionEntry type="unit" import="true" name="Oprichnik Huntsmaster" hidden="false" id="db73-6127-c6e0-6f0b">
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Command Squad" id="4104-87b3-7b2d-f419" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="4104-87b3-7b2d-f419" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
-                <modifier type="set" value="Oprichniki Manhunters" field="name"/>
+                <modifier type="append" value="Oprichniki Manhunters" field="name"/>
+                <modifier type="append" value="Oprichniki Manhunters" field="description"/>
               </modifiers>
             </infoLink>
             <infoLink name="Designated Leader" id="241b-7dd6-2b51-4d9a" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
           </infoLinks>
           <profiles>
-            <profile name="Oprichnik Huntsmaster" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="69ec-bfa9-f292-286a">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Oprichnik Huntsmaster</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
-              </characteristics>
-            </profile>
             <profile name="Oprichnik Huntsmaster" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="577d-587f-2272-cad5">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Recon, Attache (Battlesuit), Command</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Recon, Attache (Troop), Command</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
@@ -3615,9 +3627,10 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Command Actions" id="b70e-a60f-4da1-be30" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
             <infoLink name="Designated Leader" id="4d1f-0198-9a30-8772" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
-            <infoLink name="Command Squad" id="a714-3f78-932c-344f" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="a714-3f78-932c-344f" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
                 <modifier type="append" value="(Assault Engineer-Sapper Squad)" field="name"/>
+                <modifier type="append" value="(Assault Engineer-Sapper Squad)" field="description"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -3713,6 +3726,7 @@ This Unit may not take Upgrades.</description>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Attache, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
             <profile name="Cossack Hetman" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="6648-3da4-0c3d-afd1">
@@ -3726,9 +3740,10 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Command Actions" id="c356-47c7-0a7d-13a2" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
             <infoLink name="Designated Leader" id="06cc-0444-fac4-9549" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
-            <infoLink name="Command Squad" id="a37c-39e6-eeb5-d60c" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="a37c-39e6-eeb5-d60c" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
                 <modifier type="append" value="(Cossack Cavalry Squad)" field="name"/>
+                <modifier type="append" value="(Cossack Cavalry Squad)" field="description"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -3792,95 +3807,21 @@ This Unit may not take Upgrades.</description>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Streltsy Sotnik" hidden="false" id="d64f-bb9d-977e-1e7a">
+        <selectionEntry type="unit" import="true" name="Streltsy Sotnik" hidden="false" id="d64f-bb9d-977e-1e7a">
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="7af6-08bc-93f7-b107" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
-            <entryLink import="true" name="CKF Bardiche" hidden="false" id="1e9a-d9ee-dd29-8e55" type="selectionEntry" targetId="f355-47da-f4ee-5052">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c8f2-247c-287d-18f7" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4330-e755-4713-29e1" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
           </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sidearm" id="8b9b-d69f-c00a-837d" hidden="false" defaultSelectionEntryId="efd6-ca86-f2ae-f7fd">
-              <entryLinks>
-                <entryLink import="true" name="FT-33 Plasma Pistol" hidden="false" id="bea1-4e57-45e2-2dd4" type="selectionEntry" targetId="0a66-62b1-69b2-b273">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="705f-1771-376c-34ed" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Nagant M1895 Revolver" hidden="false" id="56cd-8eab-4796-b444" type="selectionEntry" targetId="d779-79c6-140c-22bd">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41ac-8c4f-89f1-b468" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="MT-38 Shotgun Revolver" hidden="false" id="23cb-0fa6-619b-ea8b" type="selectionEntry" targetId="0a03-0c2e-123d-7fc6">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3c3-c463-5bd3-61e8" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="6d2e-39ae-6532-d849" type="selectionEntry" targetId="0522-b673-582a-ca69">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a8c-750f-01d1-ddba" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9cd-d981-fb93-8491" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a9f-36e9-8268-1bba" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Weapon Options" id="f465-3115-163c-fb40" hidden="false" defaultSelectionEntryId="19f6-751c-9d5a-53a4">
-              <entryLinks>
-                <entryLink import="true" name="PTRS-37 Anti-tank Rifle" hidden="false" id="a67a-a6a4-15ac-e309" type="selectionEntry" targetId="8356-26cc-634f-dbfd">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad80-8bc7-11bc-7b73" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="1.3tsk Beam Rifle" hidden="false" id="dc62-7991-dae2-d7b7" type="selectionEntry" targetId="db2c-195d-c7cb-2dc8">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d7a-7293-5af6-38a7" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Chernayazvezda TPV-X Heavy Plasma Rifle" hidden="false" id="10c4-bc04-6e56-cbca" type="selectionEntry" targetId="bae6-c43b-b200-ac83">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f97-5b2a-7498-84c8" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8ed-8661-34b5-6cff" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e49-bcf7-ba99-aa22" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <infoLinks>
             <infoLink name="Command Actions" id="895b-7388-b705-5a38" hidden="false" targetId="237b-8d1e-014e-539d" type="profile"/>
             <infoLink name="Designated Leader" id="854e-6a44-3d98-2f46" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
-            <infoLink name="Command Squad" id="4592-6bc7-8da5-beb8" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="4592-6bc7-8da5-beb8" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
-                <modifier type="append" value="(Streltsy Tank Hunter Squad)" field="name"/>
+                <modifier type="append" value="Streltsy Tank Hunter Squad" field="name"/>
+                <modifier type="append" value="Streltsy Tank Hunter Squad" field="description"/>
               </modifiers>
             </infoLink>
           </infoLinks>
           <profiles>
-            <profile name="Streltsy Sotnik" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a5f-026c-2679-d16b">
-              <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Streltsy Sotnik" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7bbe-593b-d057-bec1">
-              <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Streltsy Sotnik</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">35x60mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
-              </characteristics>
-            </profile>
             <profile name="Streltsy Sotnik" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="60f9-8712-4f79-9874">
               <characteristics>
                 <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Support, Attache (Troop), Command</characteristic>
@@ -3890,7 +3831,6 @@ This Unit may not take Upgrades.</description>
             </profile>
           </profiles>
           <costs>
-            <cost name="Munitions" typeId="Points" value="19"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3902,6 +3842,87 @@ This Unit may not take Upgrades.</description>
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Streltsy Sotnik" hidden="false" id="19b0-2c1b-3a2a-de0d">
+              <entryLinks>
+                <entryLink import="true" name="CKF Bardiche" hidden="false" id="1e9a-d9ee-dd29-8e55" type="selectionEntry" targetId="f355-47da-f4ee-5052">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c8f2-247c-287d-18f7" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4330-e755-4713-29e1" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Sidearm" id="8b9b-d69f-c00a-837d" hidden="false" defaultSelectionEntryId="efd6-ca86-f2ae-f7fd">
+                  <entryLinks>
+                    <entryLink import="true" name="FT-33 Plasma Pistol" hidden="false" id="bea1-4e57-45e2-2dd4" type="selectionEntry" targetId="0a66-62b1-69b2-b273">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="705f-1771-376c-34ed" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Nagant M1895 Revolver" hidden="false" id="56cd-8eab-4796-b444" type="selectionEntry" targetId="d779-79c6-140c-22bd">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41ac-8c4f-89f1-b468" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="MT-38 Shotgun Revolver" hidden="false" id="23cb-0fa6-619b-ea8b" type="selectionEntry" targetId="0a03-0c2e-123d-7fc6">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3c3-c463-5bd3-61e8" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="6d2e-39ae-6532-d849" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a8c-750f-01d1-ddba" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9cd-d981-fb93-8491" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a9f-36e9-8268-1bba" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Weapon Options" id="f465-3115-163c-fb40" hidden="false" defaultSelectionEntryId="19f6-751c-9d5a-53a4">
+                  <entryLinks>
+                    <entryLink import="true" name="PTRS-37 Anti-tank Rifle" hidden="false" id="a67a-a6a4-15ac-e309" type="selectionEntry" targetId="8356-26cc-634f-dbfd">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad80-8bc7-11bc-7b73" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="1.3tsk Beam Rifle" hidden="false" id="dc62-7991-dae2-d7b7" type="selectionEntry" targetId="db2c-195d-c7cb-2dc8">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d7a-7293-5af6-38a7" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Chernayazvezda TPV-X Heavy Plasma Rifle" hidden="false" id="10c4-bc04-6e56-cbca" type="selectionEntry" targetId="bae6-c43b-b200-ac83">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f97-5b2a-7498-84c8" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8ed-8661-34b5-6cff" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e49-bcf7-ba99-aa22" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <profiles>
+                <profile name="Streltsy Sotnik" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a5f-026c-2679-d16b">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="19"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="BA-36 Armored Command Car" hidden="false" id="0ea0-df92-fd1a-52d6">
           <entryLinks>
@@ -3972,7 +3993,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fd6-259a-7829-3bc7-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="84"/>
+                <cost name="Munitions" typeId="Points" value="76"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -3982,10 +4003,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="BA-36 Armored Scout Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1a49-8e1c-bbaa-5869">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BA-36 Armored Command Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (AUX) Mechanized, (AUX) Infantry, Vehicle, Command, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (AUX) Mechanized, (AUX) Infantry, Vehicle, Command, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3993,6 +4015,145 @@ This Unit may not take Upgrades.</description>
             <categoryLink targetId="f94f-807f-eca3-d850" id="bf65-253f-f2ee-c2eb" primary="false" name="Medium"/>
             <categoryLink targetId="31ae-ff65-b3d1-e277" id="b867-eaab-a940-9e2a" primary="false" name="Command Unit"/>
           </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Druzhina Battlesuit Commander" hidden="false" id="1710-60e8-1858-5b5e">
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Formation (Specified)" id="d61d-ce16-c8f6-4262" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="SB-24 &quot;Druzhina&quot; Battlesuit Squad" field="name"/>
+                <modifier type="append" value="SB-24 &quot;Druzhina&quot; Battlesuit Squad" field="description"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Designated Leader" id="ac72-8f10-4b2b-617a" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Druzhina Battlesuit Commander" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="bbbe-da99-9b56-9b32">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Mechanized, Attache (Battlesuit), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Druzhina Battlesuit Commander" hidden="false" id="026f-8339-e8a4-6ce8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="77a6-8687-0a9d-0c92" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="df56-8c16-d8bc-0c8d" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="0d5b-aaa0-8467-b968" hidden="false" defaultSelectionEntryId="82ad-068b-2be1-64b3">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Twin Maxim Machine Guns" hidden="false" id="c3d0-79a1-a222-84fd">
+                      <entryLinks>
+                        <entryLink import="true" name="Maxim Machine Gun" hidden="false" id="220f-a33e-de1c-6863" type="selectionEntry" targetId="b042-b961-5bc4-53d3">
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="418e-721b-2ab9-24f6" includeChildSelections="false"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="be75-1dc1-1ba3-d243" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc65-7d07-641b-b987" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Twin Plasma Rifles" hidden="false" id="89b2-d9aa-a35b-b470">
+                      <entryLinks>
+                        <entryLink import="true" name="TPV-35 Plasma Rifle" hidden="false" id="0279-44b8-57ec-64d3" type="selectionEntry" targetId="f71e-e22d-7128-b7f5">
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="59eb-635c-1b13-5e5b" includeChildSelections="false"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4c65-5b9b-67fa-02eb" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d955-2cab-921a-2ffc" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Twin Flamethrowers and Pernach" hidden="false" id="3913-31ba-4b91-e4b8">
+                      <entryLinks>
+                        <entryLink import="true" name="RO-2 Infantry Flamethrower" hidden="false" id="f7e2-df1b-191e-34a6" type="selectionEntry" targetId="ce08-38ff-080f-9e97">
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3717-b022-179b-92da" includeChildSelections="false"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d89b-1d20-69ff-2456" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Druzhina Pernach" hidden="false" id="a4b4-fe31-b79b-409f" type="selectionEntry" targetId="0038-d614-cc2d-eb94">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="135c-e640-21f4-f3ef" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3ed-1173-12d5-13a6" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c32-365c-c968-4229" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="977c-882e-8609-9472" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5933-f049-fa54-53f4" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="PTRS-37 Anti-tank Rifle" hidden="false" id="ff1d-1fcc-dd41-62ea" type="selectionEntry" targetId="8356-26cc-634f-dbfd">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4bfe-299c-f085-ce60" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="DShK-38 Heavy Machine Gun" hidden="false" id="ffc6-3d97-f524-46ab" type="selectionEntry" targetId="d5d9-e0d7-15f4-0114">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0521-0fe4-5e7e-c207" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Druzhina Bardiche" hidden="false" id="8c8f-1fe7-24d0-95d8" type="selectionEntry" targetId="375d-7de7-b0ac-aa14">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eca0-209f-d348-57b2" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <profiles>
+                <profile name="Druzhina Battlesuit Commander" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6e53-b6e3-732f-9303">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="42"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Shared Qualities X" id="6216-cff1-d57b-37e6" hidden="false" type="rule" targetId="7ea1-cd1c-ca34-9368">
+                  <modifiers>
+                    <modifier type="replace" value="Battlesuit" field="name" arg="X"/>
+                    <modifier type="replace" value="Battlesuit" field="description" arg="X"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Officer Upgrades" hidden="false" id="18d7-6c12-f1a7-0c1a" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4003,9 +4164,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Guards Rifles Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d6bc-50bd-2a5e-0265">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Yefreitor, 3-19x Ryadovoy, &amp; 0-6x Ryadovoy Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, (AUX) Artillery, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, (AUX) Artillery, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10-20</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4495,10 +4657,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="Guards Grenadiers Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8478-524e-993f-196c">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Grenader Yefreitor, 5-9 Grenader, &amp; 0-4 Grenader Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, Troop</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Grenader Yefreitor, 5-9x Grenader, &amp; 0-4x Grenader Specialists</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4520,9 +4683,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Cossack Cavalry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="6b19-4196-42ad-dc59">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Cossak Starshina, 2-4x Cossack Vsadniki</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Cavalry</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Cavalry, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4659,6 +4823,12 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Troop Actions" id="cef3-548f-f946-fb17" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
             <infoLink name="Prototype" id="f9b3-a840-16a1-5d91" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
+            <infoLink name="Rare Materiel X" id="fa1f-b723-011b-80a1" hidden="false" type="rule" targetId="e1ea-7376-65cf-20b1">
+              <modifiers>
+                <modifier type="replace" value="2" field="name" arg="X"/>
+                <modifier type="replace" value="2" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="246e-f914-caca-0c96" hidden="false">
@@ -4747,11 +4917,11 @@ This Unit may not take Upgrades.</description>
               <description>Each time this Unit Destroys a Troop Unit, it may immediately perform a Free Dash Action.</description>
             </rule>
             <rule name="In the Name of the Tsar" id="3e35-e9e5-ab09-595c" hidden="false">
-              <description>As an Action, after Destroying an Enemy Troop Unit, this Unit may Extract Intel. If it does, gain 2 Intel Points.</description>
+              <description>As an Action, after Destroying an Enemy Troop Unit, this Unit may Make an Example. If it does, choose two Enemy Troop Units within 20&quot; and LOS, they must immediately roll 1D5 Morale Checks.</description>
             </rule>
           </rules>
           <costs>
-            <cost name="Munitions" typeId="Points" value="10"/>
+            <cost name="Munitions" typeId="Points" value="20"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
@@ -4760,24 +4930,30 @@ This Unit may not take Upgrades.</description>
             <profile name="Oprichniki Manhunters" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ac08-4e19-fac8-1a88">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Oprichnik Hunt Leader &amp; 2x Oprichniki Huntsmen</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (AUX) Infantry, (AUX) Mechanized, Troop, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (AUX) Infantry, (AUX) Mechanized, Troop, Battlesuit, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="bbf1-7670-0929-d891" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="On Assignment" hidden="false" id="2914-4cbb-7b7e-bd40" type="selectionEntry" targetId="1028-1780-6646-aacf"/>
+            <entryLink import="true" name="Rare Materiel X" hidden="false" id="a279-fd7b-f069-ce2b" type="selectionEntry" targetId="74d0-0f15-1f3b-2484"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="7a3e-4a72-fce7-9cf6" primary="false" name="Medium"/>
           </categoryLinks>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7480-16f5-35d5-2707" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="BS-44 &quot;Tachanka&quot; Armored Walker" hidden="false" id="1eb7-e9b5-b50a-1027">
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="56d9-e5de-b9df-f308" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bulwark 2" hidden="false" id="ee2c-0fb1-57c7-ba9f" type="selectionEntry" targetId="864a-d7b1-6988-7b9b"/>
+            <entryLink import="true" name="Limited Elevation" hidden="false" id="89ba-ac6a-2c71-9f4b" type="selectionEntry" targetId="34a5-b1e6-efa8-bbfb"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -4787,12 +4963,11 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Scout Vehicle Actions" id="c6f4-493c-38dc-df72" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
             <infoLink name="Cook Off" id="05e9-7373-789e-472e" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
-            <infoLink name="Prototype" id="1eba-db59-52de-a6a8" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="BS-44 &quot;Tachanka&quot; Armored Walker" hidden="false" id="6b14-4cb2-3641-e0a3">
               <costs>
-                <cost name="Munitions" typeId="Points" value="167"/>
+                <cost name="Munitions" typeId="Points" value="141"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4853,9 +5028,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebd8-ad61-d832-fe82" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f47b-93dc-b29a-b886" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="6c10-460e-474e-eaca" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -4904,9 +5076,6 @@ This Unit may not take Upgrades.</description>
                       </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="9a46-442f-68d8-0344" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Side Mount" hidden="false" id="2c2b-dea7-90ed-81fa">
                   <constraints>
@@ -4954,10 +5123,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="BS-44 &quot;Tachanka&quot; Armored Walker" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5250-3afd-394e-f0a2">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BS-44 &quot;Tachanka&quot; Armored Walker</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Vehicle, Walker, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate, 1x Side Mount, 1x Linked Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Vehicle, Walker, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">130mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5060,9 +5230,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66c6-fec9-c2ec-148d" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bd9-13ac-af20-2b70" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="4e7d-08ea-10d4-c183" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
@@ -5082,7 +5249,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a8fa-45a8-0143-e53d-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="84"/>
+                <cost name="Munitions" typeId="Points" value="76"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5092,10 +5259,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="BA-36 Armored Scout Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0755-10e1-e904-f724">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BA-36 Armored Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (AUX) Mechanized, (AUX) Infantry, Vehicle, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial), 1x Hull Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (AUX) Mechanized, (AUX) Infantry, Vehicle, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5202,7 +5370,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a319-8cdb-56b4-b0a4-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="70"/>
+                <cost name="Munitions" typeId="Points" value="63"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5212,10 +5380,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="BS-41 &quot;St. Ilya&quot; Light Armored Walker Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f60d-d5c0-a7b1-00af">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2-4x BS-41 &quot;St. Ilya&quot; Light Armored Walkers</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Vehicle, Walker, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet), 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Vehicle, Walker, Scout, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">80mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2-4</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5231,9 +5400,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Corporate Assassin Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dd5f-480b-70a5-af6c">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Contractor Sniper, 1x Contractor Observer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, Troop, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5415,6 +5585,13 @@ This Unit may not take Upgrades.</description>
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="513c-e278-8898-8dd9">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="4f50-ceb9-f07a-86c0" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Streltsy Tank Hunter Desyatnik" hidden="false" id="03c9-1f01-20c0-3bd0" sortIndex="1">
                   <constraints>
@@ -5476,15 +5653,23 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="ffea-d93b-62a1-f36d" includeChildSelections="false"/>
                 <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="daa8-eff8-fb75-3c72" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="decrement" value="1" field="daa8-eff8-fb75-3c72">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4f50-ceb9-f07a-86c0" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <profiles>
             <profile name="Streltsy Tank Hunter Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c975-98ca-b052-4c85">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Desyatnik, 2x Stelets</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Mechanized, Troop, Battlesuit</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Desyatnik, 2-4x Strelets</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Mechanized, Troop, Battlesuit, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">35x60mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5576,9 +5761,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="568b-cfef-cd5d-2725" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0a2-781b-da42-0b4c" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="5987-0987-ac9e-5536" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
@@ -5601,7 +5783,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6189-d42f-8228-99ad-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="105"/>
+                <cost name="Munitions" typeId="Points" value="95"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5611,10 +5793,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="SU-38 &quot;St. Georg&quot; Tank Destroyer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="906d-7004-6255-6e74">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x SU-38 &quot;St. Georg&quot; Tank Destroyer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate, 1x Coaxial Mount, 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Armor, (AUX) Mechanized, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5835,6 +6018,7 @@ This Unit may not take Upgrades.</description>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Mechanized, (AUX) Rail, Troop, Engineer</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5846,10 +6030,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="OT-39 &quot;St. Olga&quot; Engineering Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f204-e554-da15-ac8f">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x OT-39 &quot;St. Olga&quot; Engineering Vehicle</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Armor, (AUX) Mechanized, Engineer, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate, 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Armor, (AUX) Mechanized, Engineer, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5869,7 +6054,7 @@ This Unit may not take Upgrades.</description>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="OT-39 &quot;St. Olga&quot; Engineering Vehicle" hidden="false" id="6bbc-d7ed-898b-35a4">
               <costs>
-                <cost name="Munitions" typeId="Points" value="84"/>
+                <cost name="Munitions" typeId="Points" value="75"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5912,10 +6097,11 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="AT-28 Cloud Engine" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="430d-e2b7-871c-9455">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x AT-28 Cloud Engine</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Armor, (AUX) Artillery, (AUX) Infantry, (AUX) Recon, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Armor, (AUX) Artillery, (AUX) Infantry, (AUX) Recon, (AUX) Mechanized, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5950,7 +6136,7 @@ This Unit may not take Upgrades.</description>
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="52"/>
+                <cost name="Munitions" typeId="Points" value="47"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5970,9 +6156,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Towed Cloud Engine" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="63b0-3196-5ed0-4e25">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Towed Cloud Engine</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (AUX) Infantry, (AUX) Armor, (AUX) Recon, (AUX) Mechanized, (AUX) Support, (AUX) Artillery, Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (AUX) Infantry, (AUX) Armor, (AUX) Recon, (AUX) Mechanized, (AUX) Support, (AUX) Artillery, Carriage, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
               </characteristics>
             </profile>
             <profile name="Towed Cloud Engine" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b204-e5a9-a978-2027">
@@ -6076,9 +6263,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Guards Heavy Weapon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8b72-24e3-179e-9f68">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Guards Heavy Weapon Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6143,7 +6331,7 @@ This Unit may not take Upgrades.</description>
               <profiles>
                 <profile name="M-39 Light Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bfd8-1236-4d12-530f">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
@@ -6151,7 +6339,7 @@ This Unit may not take Upgrades.</description>
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="15"/>
+                <cost name="Munitions" typeId="Points" value="16"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6182,9 +6370,10 @@ This Unit may not take Upgrades.</description>
             <profile name="M-39 Light Gun Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dadf-d9d8-7daa-d3db">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x M39 Light Gun Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, Carriage, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6259,7 +6448,7 @@ This Unit may not take Upgrades.</description>
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="17"/>
+                <cost name="Munitions" typeId="Points" value="15"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6281,9 +6470,10 @@ This Unit may not take Upgrades.</description>
             <profile name="ZiY-3 Divisional Gun Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f0ac-2dff-105c-545e">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x ZiY-3 Divisional Gun Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, Carriage, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6319,7 +6509,6 @@ This Unit may not take Upgrades.</description>
           </costs>
           <infoLinks>
             <infoLink name="Troop Actions" id="26a2-8ddc-4f75-f9ad" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
-            <infoLink name="Prototype" id="2035-f7ce-b8bd-e439" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="d4f9-1f19-530a-7210" hidden="false">
@@ -6523,9 +6712,10 @@ This Unit may not take Upgrades.</description>
             <profile name="SB-24 &quot;Druzhina&quot; Battlesuit Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9765-08bf-4613-5db6">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Druzhina Yefreitor &amp; 1-3x Druzhina</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, (AUX) Infantry, Battlesuit, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, (AUX) Infantry, Battlesuit, Troop, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2-4</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6542,16 +6732,16 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="BTR- 39 &quot;St. Evgeniy&quot; Armored Personnel Carrier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8445-f394-1575-27d9">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BTR- 39 &quot;St. Evgeniy&quot; Armored Personnel Carrier</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount, 0-1x Turret (1x Mantlet, 1x Coaxial Mount, 1x Rear Mount), 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, Transport, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Troop Actions" id="0eb0-f5f2-31b1-8519" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
-            <infoLink name="Prototype" id="e05b-d636-cfcd-2a00" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="BTR- 39 &quot;St. Evgeniy&quot; Armored Personnel Carrier" hidden="false" id="f2b8-39b5-c5d9-4341">
@@ -6640,9 +6830,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8445-806b-2b15-78d4" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c6ad-e3c2-6e11-93f1" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="499a-731c-d775-4510" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Rear Turret Mount" hidden="false" id="a045-b08d-f4dc-e695">
                       <entryLinks>
@@ -6657,9 +6844,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2776-8b49-d7fc-059b" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67e1-c55b-db9b-43be" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="8329-b4cc-c792-a2ff" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
@@ -6679,7 +6863,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5be8-57f5-4c96-b345-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="84"/>
+                <cost name="Munitions" typeId="Points" value="75"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6693,10 +6877,16 @@ This Unit may not take Upgrades.</description>
             <entryLink import="true" name="Upgrades" hidden="false" id="1a68-d555-0b0b-443c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout (Safe)" hidden="false" id="afbc-f1bf-9655-542d" type="selectionEntry" targetId="e9de-35c8-4bd3-82e6"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="774a-e92e-9561-6e04" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
+            <entryLink import="true" name="Armored Personnel Carrier" hidden="false" id="144a-f738-0235-327e" type="selectionEntry" targetId="21d6-a843-1ec9-e0a0"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="7a87-8947-d7bd-92ce" primary="false" name="Medium"/>
           </categoryLinks>
+          <rules>
+            <rule name="Stubborn Advance" id="ffa4-4c7f-3715-6cb2" hidden="false">
+              <description>Troop Units that begin Movement Actions within 6&quot; of this Unit may ignore Difficult Terrain until that Action is resolved.</description>
+            </rule>
+          </rules>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="BREM-39 Armored Recovery Vehicle" hidden="false" id="03dd-ca8b-8772-6d60">
           <costs>
@@ -6707,16 +6897,16 @@ This Unit may not take Upgrades.</description>
           <profiles>
             <profile name="BREM-39 Armored Recovery Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="45dc-be86-f92a-d53a">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BREM-39 Armored Recovery Vehicle</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, Transport, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Engineer Vehicle Actions" id="6359-55b3-01df-d445" hidden="false" type="profile" targetId="ba32-3e2e-765c-654b"/>
-            <infoLink name="Prototype" id="1dae-2516-d6b2-6977" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="BREM-39 Armored Recovery Vehicle" hidden="false" id="bace-53fa-c1ae-3d0e">
@@ -6773,7 +6963,7 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d1a-3493-913d-2c53-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="84"/>
+                <cost name="Munitions" typeId="Points" value="75"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7043,9 +7233,10 @@ This Unit may not take Upgrades.</description>
             <profile name="Corporate Mercenary Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="96ca-1fc3-f52b-f9d6">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Contractor Squad Leader, 1-9x Contractor Rifleman, 0-1x Contractor Medic, 0-4x Contractor Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, (CORE) Infantry, (CORE) Recon, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Mechanized, (CORE) Infantry, (CORE) Recon, Troop, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5-10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7069,6 +7260,7 @@ This Unit may not take Upgrades.</description>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (CORE) Recon, Troop, Hero</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7122,6 +7314,9 @@ This Unit may not take Upgrades.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Countess Aleksandra Razumovsky" hidden="false" id="7e1b-4d2f-83a4-0739"/>
+        <selectionEntry type="upgrade" import="true" name="Sergeltiin Khan" hidden="false" id="629a-7880-a147-13d3"/>
+        <selectionEntry type="upgrade" import="true" name="Hieromonk Zhenya Morozov" hidden="false" id="cac5-f2e4-4669-a0b5"/>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Transports" id="ab82-a2fb-6461-f8a5" hidden="false">
@@ -7142,9 +7337,10 @@ This Unit may not take Upgrades.</description>
             <profile name="T-20 Light Gun Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="cba9-5ada-668f-64e4">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x T-20 Light Gun Tractor</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, Transport, Vehicle, Tracked, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7154,7 +7350,7 @@ This Unit may not take Upgrades.</description>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="T-20 Light Gun Tractor" hidden="false" id="f389-16d2-4799-a3bb">
               <costs>
-                <cost name="Munitions" typeId="Points" value="31"/>
+                <cost name="Munitions" typeId="Points" value="28"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7171,7 +7367,7 @@ This Unit may not take Upgrades.</description>
               </profiles>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b135-9c43-b39d-6218-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b135-9c43-b39d-6218-max" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b135-9c43-b39d-6218-max" includeChildSelections="false"/>
               </constraints>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapon Mount" id="b4ca-e888-f0e7-9c7b" hidden="false" defaultSelectionEntryId="9fc9-8f02-6b66-8bd4">
@@ -7212,6 +7408,13 @@ This Unit may not take Upgrades.</description>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="8406-e6a8-0b75-febf" primary="false" name="Light"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="append" value="Group" field="name">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="self" childId="model" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="AT-28 Heavy Tractor Troop Carrier" hidden="false" id="4e4a-ea24-4cad-da09">
           <entryLinks>
@@ -7230,9 +7433,10 @@ This Unit may not take Upgrades.</description>
             <profile name="AT-28 Heavy Tractor Troop Carrier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9ad9-d05b-3402-5876">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x AT-28 Heavy Tractor Troop Carrier</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, Transport, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7265,7 +7469,7 @@ This Unit may not take Upgrades.</description>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="AT-28 Heavy Tractor Troop Carrier" hidden="false" id="bbef-cd31-209c-cae0">
               <costs>
-                <cost name="Munitions" typeId="Points" value="52"/>
+                <cost name="Munitions" typeId="Points" value="47"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7288,6 +7492,89 @@ This Unit may not take Upgrades.</description>
           </selectionEntries>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="8004-d668-bead-5cec" primary="false" name="Medium"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="T-20 Light Gun Tractor Transport Group" hidden="false" id="ed21-96a0-7a8f-7bf7">
+          <entryLinks>
+            <entryLink import="true" name="Upgrades" hidden="false" id="22b4-4744-9538-8ba5" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Hitch" hidden="false" id="009e-a8dc-51b5-ee36" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
+            <entryLink import="true" name="Gun Tractor" hidden="false" id="663a-9288-dd75-9984" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
+            <entryLink import="true" name="Rapid Deployment" hidden="false" id="7678-71b9-39d5-b5a1" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
+            <entryLink import="true" name="Dispersed Transport" hidden="false" id="17bd-6c37-0037-b4ee" type="selectionEntry" targetId="9563-cf38-fd09-8533"/>
+            <entryLink import="true" name="Transport 1" hidden="false" id="96e4-8bc9-4f16-4685" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
+            <entryLink import="true" name="Bailout (Dangerous)" hidden="false" id="5d91-9bde-542f-0797" type="selectionEntry" targetId="5a82-466c-c50e-1653"/>
+            <entryLink import="true" name="Open Topped 1" hidden="false" id="be62-2402-714c-27ef" type="selectionEntry" targetId="e13c-3734-a7a3-be4a"/>
+          </entryLinks>
+          <costs>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <profiles>
+            <profile name="T-20 Light Gun Tractor Transport Group" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b5f1-0477-8daf-a875">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x T-20 Light Gun Tractor</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, Transport, Vehicle, Tracked, Light</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Vehicle Actions" id="3931-db1f-6354-2208" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="T-20 Light Gun Tractor" hidden="false" id="4f49-aa7f-c155-28b5">
+              <costs>
+                <cost name="Munitions" typeId="Points" value="28"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="T-20 Light Gun Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="13cb-e363-803d-63c3">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a4c6-9c77-a540-baca" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2168-9b50-902f-8394" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon Mount" id="8714-7b7a-67ce-e949" hidden="false" defaultSelectionEntryId="9fc9-8f02-6b66-8bd4">
+                  <entryLinks>
+                    <entryLink import="true" name="Maxim Machine Gun" hidden="false" id="1e6d-a420-d72f-7c7b" type="selectionEntry" targetId="b042-b961-5bc4-53d3">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ae2-965b-58f3-5940" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="DP-28 Light Machine Gun" hidden="false" id="8fc1-57ff-a8bd-b79d" type="selectionEntry" targetId="0c5b-ce5c-b57f-78d4">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a33c-95b0-30ad-82c4" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="AG-2 Automatic Grenade Launcher" hidden="false" id="aac4-543e-5eb1-73f0" type="selectionEntry" targetId="af14-f001-771c-d366">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c46e-d7b2-adab-e47d" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d93-4bf0-6a8c-e375" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f1e-d63d-d176-cbb6" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <categoryLinks>
+            <categoryLink targetId="7584-5824-f5d2-050a" id="9597-6af0-7c2e-ddb2" primary="false" name="Light"/>
           </categoryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -7350,7 +7637,7 @@ This Unit may not take Upgrades.</description>
             <selectionEntry type="upgrade" import="true" name="Unwavering Faith" hidden="false" id="9a38-1f40-cca6-6403">
               <rules>
                 <rule name="Unwavering Faith" id="783a-82e2-717b-9088" hidden="false">
-                  <description>Units within 6” of this Unit are immune to the suppressed condition.</description>
+                  <description>Units within 6” of this Unit may reroll failed Suppression Checks</description>
                 </rule>
               </rules>
               <costs>
@@ -7509,9 +7796,6 @@ This Unit may not take Upgrades.</description>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4ce-39a3-6c43-80f2" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8163-f11b-8d39-5380" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="5bfd-362a-9452-438c" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -7532,7 +7816,7 @@ This Unit may not take Upgrades.</description>
                 <entryLink import="true" name="Upgrades" hidden="false" id="2c5a-98ae-af62-5d55" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
               </entryLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="292"/>
+                <cost name="Munitions" typeId="Points" value="278"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7567,22 +7851,16 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             </rule>
           </rules>
           <profiles>
-            <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4601-82fe-1d3f-65a7">
+            <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train Engine" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="4601-82fe-1d3f-65a7">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Engine &amp; 2-4x Cars</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial, 1x Rear Mount, 0-1x Pintle Mount), 2x Turret (Mantlet)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Vehicle, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <modifiers>
-            <modifier type="prepend" value="Veteran" field="name">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="b068-de68-7a68-a938" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <infoLinks>
             <infoLink name="Prototype" id="3914-5b8c-dc5d-a1ba" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
             <infoLink name="Train Tracks" id="1a01-b3bb-b603-cd2a" hidden="false" type="rule" targetId="6086-8cc5-1110-441f"/>
@@ -7688,9 +7966,6 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad5e-5b12-8fab-e786" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abde-f3ba-db4e-f133" includeChildSelections="false"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink name="Coaxial Mount" id="d21d-5c42-069b-cc2b" hidden="false" type="rule" targetId="df90-d7be-6a7f-ad4e"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -7707,7 +7982,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a7a-494e-68ec-c252-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="133"/>
+                <cost name="Munitions" typeId="Points" value="128"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7720,6 +7995,20 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             <infoLink name="Train Carriage" id="4680-e34d-0fc2-6633" hidden="false" type="rule" targetId="c662-e154-fc43-0ced"/>
             <infoLink name="Train Tracks" id="8116-0fa6-8c08-60e4" hidden="false" type="rule" targetId="6086-8cc5-1110-441f"/>
           </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="47f4-9f84-a93d-f90a" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
+          </entryLinks>
+          <profiles>
+            <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1bf5-5791-797b-5c66">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Turret (1x Mantlet, 1x Coaxial, 1x Rear Mount, 0-1x Pintle Mount)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Medium</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Armored Train Artillery Carriage" hidden="false" id="ffc1-f3be-f269-04ff">
           <costs>
@@ -7730,10 +8019,11 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
           <profiles>
             <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train Artillery Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3745-4563-a1ea-c13f">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x BP-21 &quot;Gulyay-Gorod&quot; Armored Train Artillery Carriage</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Turret (1x Mantlet)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7760,7 +8050,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f5e-91f1-3bdf-2a6b-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="133"/>
+                <cost name="Munitions" typeId="Points" value="128"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7784,12 +8074,13 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             <infoLink name="Rolling Might" id="6ec6-df71-2213-56dd" hidden="false" type="rule" targetId="302b-8478-e4f8-f998"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Dial In 8" hidden="false" id="d623-feba-1139-d29f" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
+            <entryLink import="true" name="Dial In 8/10" hidden="false" id="d623-feba-1139-d29f" type="selectionEntry" targetId="dbe4-b002-79a9-5cf9">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2d4-5ee8-1b62-907c-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2d4-5ee8-1b62-907c-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="06b9-c73a-417f-3656" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Armored Train Cloud Engine Carriage" hidden="false" id="8dde-59e1-b227-cbb5">
@@ -7822,7 +8113,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="133"/>
+                <cost name="Munitions" typeId="Points" value="128"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7847,8 +8138,22 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             <infoLink name="Rolling Might" id="4bc5-9810-62c5-7a9d" hidden="false" type="rule" targetId="302b-8478-e4f8-f998"/>
             <infoLink name="Train Carriage" id="c769-6330-320d-0556" hidden="false" type="rule" targetId="c662-e154-fc43-0ced"/>
             <infoLink name="Train Tracks" id="e26d-9ab7-da1a-fd9f" hidden="false" type="rule" targetId="6086-8cc5-1110-441f"/>
-            <infoLink name="Rare Materiel" id="c0a2-4809-0a1d-c921" hidden="false" type="rule" targetId="e1ea-7376-65cf-20b1"/>
+            <infoLink name="Rare Materiel X" id="c0a2-4809-0a1d-c921" hidden="false" type="rule" targetId="e1ea-7376-65cf-20b1"/>
           </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="af53-99d8-7672-4a22" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
+          </entryLinks>
+          <profiles>
+            <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train Cloud Engine Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dd47-7e86-963d-a6c9">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Medium</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Armored Train Command Carriage" hidden="false" id="e973-e89d-6022-7f82">
           <selectionEntries>
@@ -7880,7 +8185,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="133"/>
+                <cost name="Munitions" typeId="Points" value="128"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7895,6 +8200,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             <entryLink import="true" name="Officer Seniority" hidden="false" id="963b-aaa6-dbcb-f21e" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="9f17-3b9c-ad21-7493" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
             <entryLink import="true" name="Command Car" hidden="false" id="45dd-69d8-3c10-719e" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="2061-3cf7-1434-d571" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Rolling Might" id="12f8-03f2-867c-99f6" hidden="false" type="rule" targetId="302b-8478-e4f8-f998"/>
@@ -7906,6 +8212,17 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
+          <profiles>
+            <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train Command Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0ea1-6790-375c-a524">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Turret (1x Mantlet)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Command, Medium</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Armored Train Firing Carriage" hidden="false" id="d908-4498-5b60-8f49">
           <costs>
@@ -7931,7 +8248,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="133"/>
+                <cost name="Munitions" typeId="Points" value="128"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7945,7 +8262,19 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
           <entryLinks>
             <entryLink import="true" name="Open Topped 3" hidden="false" id="7003-0610-6e75-e688" type="selectionEntry" targetId="e18d-5058-92c9-3c50"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="7c0b-5c5c-a38e-eeef" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="5fb2-a52e-b3da-17c1" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
           </entryLinks>
+          <profiles>
+            <profile name="BP-21 &quot;Gulyay-Gorod&quot; Armored Train Firing Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="cf5f-b1f7-dac7-2ecf">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Command, Medium</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Train Troop Carriage" hidden="false" id="d41d-944c-c130-de84">
           <costs>
@@ -7986,6 +8315,20 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="ddb6-683f-0c82-680a" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
+          </entryLinks>
+          <profiles>
+            <profile name="Train Troop Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="08f6-2230-2631-0c7f">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Medium</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Train Flatbed Carriage" hidden="false" id="6a57-ab2c-e25c-1c63">
           <costs>
@@ -8026,6 +8369,20 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Fixed Loadout" hidden="false" id="0a45-de1c-f082-a205" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
+          </entryLinks>
+          <profiles>
+            <profile name="Train Flatbed Carriage" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8e24-83bb-ea4a-be83">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Rail, Carriage, Medium</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -8245,6 +8602,14 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="3c30-1390-c136-2742" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="5b40-fe09-1df2-c7a6" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Flagbearer with the Tsar&apos;s Standard" hidden="false" id="ea9b-94d0-0e93-add3">
           <entryLinks>
@@ -8299,10 +8664,18 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a12-e6d9-4186-f4cf" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Rally &apos;round the Flag" id="64ac-9513-a103-ef99" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
+                <infoLink name="Raise the Banner" id="64ac-9513-a103-ef99" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="22c4-8b66-d7e7-d23d" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="&quot;Druzhina&quot; Battlesuit Element" hidden="false" id="2de5-74e3-651f-6ddb">
           <constraints>
@@ -8441,6 +8814,7 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Recon, Attache, Command</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-4</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
               </characteristics>
             </profile>
             <profile name="Pravoslavny Kapellan Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c0e9-f9c8-6ac9-f66a">
@@ -8453,7 +8827,7 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
           </profiles>
           <rules>
             <rule name="Last Communion" id="630d-97a4-0c16-dbc5" hidden="false">
-              <description>Once per Round, when a Model in this Unit is destroyed, remove one Suppression Token from this Unit.</description>
+              <description>When a Model in this Unit is destroyed, remove one Suppression Token from this Unit.</description>
             </rule>
           </rules>
           <selectionEntryGroups>
@@ -8702,7 +9076,7 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60ed-5bea-b018-19be" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="1.8tsk Beam Caster" hidden="false" id="99d1-bbeb-df62-6019" type="selectionEntry" targetId="c32d-482d-3fc5-7403">
+                        <entryLink import="true" name="1.8tsk Beam Caster" hidden="false" id="99d1-bbeb-df62-6019" type="selectionEntry" targetId="c32d-482d-3fc5-7403" collective="true">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d14-4fec-bdc3-f17b" includeChildSelections="false"/>
                           </constraints>
@@ -8736,6 +9110,14 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="60fd-6f24-529d-4aef" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

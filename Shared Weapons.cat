@@ -70,9 +70,6 @@ Concussion Token: When this Unit Activates, remove all Concussion Tokens applied
     <rule name="Critical Shot" id="a53f-6c4f-8514-7703" hidden="false">
       <description>For each unmodified 10 you roll when Attacking with this Weapon, score an additional Hit.</description>
     </rule>
-    <rule name="Difficult to Use" id="22ca-4520-b3df-c16d" hidden="false">
-      <description>If this Model selects this weapon to attack with. It may not attack with any other differently named weapons this activation.</description>
-    </rule>
     <rule name="Direct Fire" id="371b-f82b-1fef-54a5" hidden="false">
       <description>When this Weapon is selected to make an Attack, place a Blast Token for each instance of this Weapon within Range and Line of Sight. You must select these Tokens to resolve Attacks with. This Weapon is considered to have the Inaccurate Special Rule.</description>
     </rule>
@@ -109,7 +106,7 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
       <description>When making an Attack with this Weapon, -1 to Hit. Aim Tokens spent do not modify Hit Checks made by this Weapon.</description>
     </rule>
     <rule name="Indirect Fire" id="0648-3007-c58c-c884" hidden="false">
-      <description>During the Command Phase, place a Blast Token for each instance of this Weapon within Range and no less than 12&quot; from this Unit. When making an Attack with this Weapon, it does not need Line of Sight to select a Blast Token. When a Blast Token is selected, it Drifts. You may spend Aim Tokens to raise or lower the number rolled for the Drift direction or for the Drift distance by 1 for each Aim token. Remove the Token after resolving the Attack.</description>
+      <description>During the Command Phase, place a Blast Token for each instance of this Weapon within Range and no less than 12&quot; from this Unit. When making an Attack with this Weapon, it does not need Line of Sight to select a Blast Token. When a Blast Token is selected, it Drifts up to X&quot;, where X is this Weapon&apos;s Ordnance value. You may spend Aim Tokens to raise or lower the number rolled for the Drift direction or for the Drift distance by 1 for each Aim token. Remove the Token after resolving the Attack.</description>
     </rule>
     <rule name="Ordnance" id="11d9-c53a-4538-6b97" hidden="false">
       <description>During the Command Phase, decide if this Weapon is using Direct Fire or Indirect Fire. When making an Attack with this Weapon, each instance of it must select an eligible Blast Token, then resolve an Attack against every Unit within X&quot; of that Blast Token. When all eligible Attacks have been resolved, remove the Blast Token. This Weapon is considered to have the High Explosive, Precise, and Suppressive Special Rules.</description>
@@ -124,9 +121,9 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
       <description>While making an attack using a weapon with this special rule, if within half range of the target, double your Hits and AP Profile.</description>
     </rule>
     <rule name="Shield Bash" id="7325-1a3f-26e7-5f1e" hidden="false">
-      <description>When an attack is made with this weapon, you may, instead of dealing damage, choose to move one enemy unit that this unit is engaged with 2&quot; in a direction of your choice.</description>
+      <description>When an Attack is made with this Weapon, you may, instead of dealing damage, choose to move one enemy Troop Unit that this Unit is Engaged with 2&quot; in a direction of your choice. This movement is resolved after this Attack has been resolved.</description>
     </rule>
-    <rule name="Silenced" id="7bc9-bfc2-1e2e-ca13" hidden="false">
+    <rule name="Silent" id="7bc9-bfc2-1e2e-ca13" hidden="false">
       <description>Reactions cannot be taken in response to Attacks from this Weapon.</description>
     </rule>
     <rule name="Slag" id="aaa4-8ad4-e93e-7ead" hidden="false">
@@ -135,10 +132,7 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
 Slag Token: This Unit&apos;s Armor Value is reduced by 1. Shed this Token on this Unit&apos;s Activation.</description>
     </rule>
     <rule name="Suppressive" id="4911-2380-864d-8b44" hidden="false">
-      <description>After Attacking a Unit with this Weapon Profile, apply a Suppression Token. You may not apply more than One Suppression Token per Weapon Profile per Attack Action. 
-
-
-* Suppression Token: When this Unit Activates, remove all Suppression Tokens applied to it. For each Token removed, it loses one Action.</description>
+      <description>After Attacking a Unit with this Weapon, apply a Suppression Token. You may not apply more than Four Suppression Tokens per Attack Action.</description>
     </rule>
     <rule name="Warding" id="f86d-acd5-05b1-927c" hidden="false">
       <description>When an Enemy Unit enters engagement range with a Unit equipped with this Weapon, immediately perform a Free Attack Action with this weapon against that Unit. This Attack occurs before all others are resolved.</description>
@@ -166,26 +160,35 @@ Under Fire: Units with this Token may not take the Move Action. (They may still 
     <rule name="Precise" id="05ca-6100-212a-a9ca" hidden="false">
       <description>When making an Attack with this Weapon, Units targeted by this Attack do not receive the benefit of being Obscured.</description>
     </rule>
-    <rule name="Suppression Token" id="9efa-0473-ec44-0cd5" hidden="true">
-      <description>When this Unit Activates, for each Token applied to it, the following effects are applied until the end of its Activation.
+    <rule name="Suppression Token" id="9efa-0473-ec44-0cd5" hidden="false">
+      <description>When this Unit Activates, roll a Suppression Check. Afterwards, for each Token applied to it, the following effects are applied until the end of its Activation.
 
 
-1: This Unit may not perform Difficult Actions.
+1: Suppressed: This Unit may not perform Difficult Actions.
 
 
-2: Free Actions this Unit takes must be performed as Standard Actions.
+2: Pinned Down: Free Actions this Unit takes must be performed as Standard Actions.
 
 
-3: All Attacks this Unit makes are Obscured.
+3:Trapped: All Attacks this Unit makes are Obscured.
 
 
-4: For each additional token past the 3rd, roll a D10, on an 8+, one model in this Unit is removed from the battlefield.
+4: Broken: For each additional token past the 3rd, roll a Morale Check.
 
 
 Once all effects are resolved, remove all tokens from this Unit.</description>
     </rule>
     <rule name="Sustained Fire" id="ced7-eb92-01df-0845" hidden="false">
       <description>When performing an Attack Action, this Weapon may choose to gain the Inaccurate Special Rule. If it does, this Weapon applies an Additional Suppression Token.</description>
+    </rule>
+    <rule name="Morale Check" id="929b-91fe-5a4d-d0e2" hidden="false">
+      <description>Roll a 4+ Check on a D10, on a failure, one Model in this Unit flees and is removed from the Battlefield.</description>
+    </rule>
+    <rule name="Suppression Check" id="3427-2463-7d70-6479" hidden="false">
+      <description>Roll a D10, on an 7+, shed this Token.</description>
+    </rule>
+    <rule name="Spin Up" id="57cc-2904-33dc-1450" hidden="false">
+      <description>When performing an Attack Action with this Weapon, you may expend any number of additional Actions. For each that you do, add another instance of this Weapon to the Attack pool.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

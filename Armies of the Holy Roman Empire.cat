@@ -309,15 +309,21 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="fad3-160c-622e-6547" name="Zeppelin Task Force Abilities" hidden="false" collective="false" import="true" targetId="684a-d6eb-8497-815b" type="selectionEntry">
+    <entryLink id="fad3-160c-622e-6547" name="Zeppelin Task Force Abilities" hidden="true" collective="false" import="true" targetId="684a-d6eb-8497-815b" type="selectionEntry">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="980f-7d4b-14c4-be9c" type="max"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2b5-29af-a4b1-6327" type="min"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="43bf-5b11-f130-aa41" name="Zeppelin Configuration" hidden="false" targetId="fb3d-fd4e-cbbf-62d7" primary="true"/>
-        <categoryLink targetId="496e-47e7-7a85-4016" id="bfab-a66d-29d3-3192" primary="false" name="HRE"/>
+        <categoryLink targetId="aae3-bfd0-8130-e87e" id="73b8-2e1e-2689-d6f0" primary="true" name="Configuration"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="94df-db09-3266-46a5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="9377-d93b-c74d-0eca" name="Franz Von Trotta" hidden="true" collective="false" import="true" targetId="d6bb-21c6-c241-bfe6" type="selectionEntry">
       <categoryLinks>
@@ -393,7 +399,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Ritter Class Sturmzeppelin" hidden="false" id="93eb-ef61-d810-203d" collective="false" targetId="68a5-d0c4-b069-0a80" type="selectionEntry">
+    <entryLink import="true" name="Ritter Class Sturmzeppelin" hidden="true" id="93eb-ef61-d810-203d" collective="false" targetId="68a5-d0c4-b069-0a80" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Zeppelin" hidden="false" id="deff-dda9-a91e-b872" targetId="d3e6-9cfb-4ddb-2020" primary="false"/>
         <categoryLink targetId="d4be-5aad-8560-5720" id="5ef7-b309-4aa7-5595" primary="true" name="Transport"/>
@@ -407,10 +413,15 @@
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="94df-db09-3266-46a5" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true"/>
-          </conditions>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="6dc4-41a4-7144-d10c" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="94df-db09-3266-46a5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -692,7 +703,7 @@
         <categoryLink name="Army Specialization" hidden="false" id="19c4-49d1-dcb7-abec" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="2nd Alpini Division &quot;Tridentina&quot;(Tyrol)" hidden="false" id="2f2f-054b-d504-ef79" type="selectionEntry" targetId="cf78-587a-5870-e103" sortIndex="7">
+    <entryLink import="true" name="2nd Alpini Division &quot;Tridentina&quot; (Tyrol)" hidden="false" id="2f2f-054b-d504-ef79" type="selectionEntry" targetId="cf78-587a-5870-e103" sortIndex="7">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="9d39-251f-ee76-63b8" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
@@ -833,6 +844,70 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Geheimdienst Agent" hidden="false" id="69d7-abec-7a55-ec84" type="selectionEntry" targetId="2214-d3cc-73e2-1c03">
+      <categoryLinks>
+        <categoryLink targetId="eae9-4e17-22cb-4491" id="4909-c416-3bbb-f735" primary="true" name="SPC Infantry"/>
+        <categoryLink targetId="cf6f-f672-129a-1bfb" id="982b-7978-bca7-1136" primary="false" name="SPC Mechanized"/>
+        <categoryLink targetId="869c-51f1-d04f-a8ce" id="21da-f810-3aa4-55c3" primary="false" name="SPC Support"/>
+        <categoryLink targetId="893b-458b-4e03-6e5e" id="c971-aa79-b5a2-c29c" primary="false" name="SPC Recon"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="62db-3256-985d-0a0c" primary="false" name="Attache"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="893b-458b-4e03-6e5e" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="869c-51f1-d04f-a8ce" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Hospitaller Element" hidden="false" id="f0e7-d578-952b-1361" type="selectionEntry" targetId="dbcc-58b5-9a47-94ad">
+      <categoryLinks>
+        <categoryLink name="SPC Infantry" hidden="false" id="9751-d6fb-5fc6-fc64" targetId="eae9-4e17-22cb-4491" primary="true"/>
+        <categoryLink name="SPC Mechanized" hidden="false" id="f95d-9935-28d9-2671" targetId="cf6f-f672-129a-1bfb" primary="false"/>
+        <categoryLink name="SPC Support" hidden="false" id="461f-ceb5-d190-78d3" targetId="869c-51f1-d04f-a8ce" primary="false"/>
+        <categoryLink name="SPC Recon" hidden="false" id="43f1-0e8c-4c74-a171" targetId="893b-458b-4e03-6e5e" primary="false"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="121a-cab1-53db-2532" primary="false" name="Attache"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Military Chaplain Element" hidden="false" id="4b6b-163b-02af-9ed6" type="selectionEntry" targetId="743c-c91b-44bd-3230">
+      <categoryLinks>
+        <categoryLink name="SPC Infantry" hidden="false" id="bf6a-be2d-8b3a-f731" targetId="eae9-4e17-22cb-4491" primary="true"/>
+        <categoryLink name="SPC Mechanized" hidden="false" id="5c51-d376-a859-bbb4" targetId="cf6f-f672-129a-1bfb" primary="false"/>
+        <categoryLink name="SPC Support" hidden="false" id="1b25-ea3b-f713-e2ff" targetId="869c-51f1-d04f-a8ce" primary="false"/>
+        <categoryLink name="SPC Recon" hidden="false" id="34a2-b59f-8156-0ca6" targetId="893b-458b-4e03-6e5e" primary="false"/>
+        <categoryLink name="Attache" hidden="false" id="e544-4afe-4559-02f3" targetId="6cee-690d-b6de-aa15" primary="false"/>
+        <categoryLink name="HRE" hidden="false" id="778a-3504-aed6-a1d9" targetId="496e-47e7-7a85-4016" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="cf6f-f672-129a-1bfb" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="893b-458b-4e03-6e5e" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c7-8ea6-b7ab-64be" name="Officer Seniority" hidden="false" collective="false" import="true" type="upgrade">
@@ -850,7 +925,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 1" hidden="false" id="10e3-56d6-1fdc-6521" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
+                <entryLink import="true" name="Officer 2" hidden="false" id="10e3-56d6-1fdc-6521" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="fa5d-53f8-cc75-e9ca" name="O2 - Hauptmann" hidden="false" collective="false" import="true" type="upgrade">
@@ -860,7 +935,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 2" hidden="false" id="430a-b2ba-5153-6b53" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
+                <entryLink import="true" name="Officer 3" hidden="false" id="430a-b2ba-5153-6b53" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="57fd-e9a3-494a-ffd0" name="O3 - Major" hidden="false" collective="false" import="true" type="upgrade">
@@ -870,7 +945,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 3" hidden="false" id="3345-8b77-db9f-7d0d" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
+                <entryLink import="true" name="Officer 4" hidden="false" id="3345-8b77-db9f-7d0d" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="4e97-8d46-a09e-d1db" name="O4 - Oberst" hidden="false" collective="false" import="true" type="upgrade">
@@ -880,7 +955,7 @@
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Officer 4" hidden="false" id="8b93-ac56-9a2a-f6a9" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
+                <entryLink import="true" name="Officer 5" hidden="false" id="8b93-ac56-9a2a-f6a9" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -950,7 +1025,6 @@
       <infoLinks>
         <infoLink name="7.5cm Battle Cannon" id="edbc-41ed-c8f7-5235" hidden="false" targetId="ebb0-01d8-8d0d-181f" type="profile"/>
         <infoLink name="High Explosive" id="e2f-2060-c31b-9552" hidden="false" type="rule" targetId="9375-d461-c135-9e66"/>
-        <infoLink name="Difficult to Use" id="74fb-7d77-e9ff-ca9d" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="45"/>
@@ -963,7 +1037,6 @@
       <infoLinks>
         <infoLink name="7.5cm High-Velocity Cannon" id="e10e-32f6-b6ed-d61d" hidden="false" targetId="ee94-869c-f20c-f273" type="profile"/>
         <infoLink name="Critical Shot" id="8497-8c74-1835-a97a" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
-        <infoLink name="Difficult to Use" id="1173-f853-8f5e-dfed" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="28"/>
@@ -976,7 +1049,6 @@
       <infoLinks>
         <infoLink name="8.8cm High-Velocity Cannon" id="e3f0-186d-1379-74f6" hidden="false" targetId="61b7-8951-6900-85ae" type="profile"/>
         <infoLink name="Critical Shot" id="e64f-f8e6-2b99-b46c" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
-        <infoLink name="Difficult to Use" id="7af9-181d-4012-547f" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="40"/>
@@ -989,7 +1061,6 @@
       <infoLinks>
         <infoLink name="12cm High Velocity Cannon" id="2a15-4529-9cb4-b541" hidden="false" targetId="a1ed-00f9-94fc-fc87" type="profile"/>
         <infoLink name="Critical Shot" id="8aa5-4c6-4767-7859" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
-        <infoLink name="Difficult to Use" id="6dc7-4f42-0fbc-21bb" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="79"/>
@@ -1049,7 +1120,6 @@
           </modifiers>
         </infoLink>
         <infoLink name="Fixed Elevation" id="71e5-ea1e-e901-4861" hidden="false" type="rule" targetId="c0d5-a3ac-e545-c37a"/>
-        <infoLink name="Difficult to Use" id="b6d6-3b6a-71cd-bf9a" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="52"/>
@@ -1172,7 +1242,6 @@
       <infoLinks>
         <infoLink name="Epak. 34 Energy Cannon" id="9389-ae77-717b-a28e" hidden="false" targetId="cb99-fecf-b46f-fabc" type="profile"/>
         <infoLink name="Reliable" id="74fb-49d9-8b87-85a8" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
-        <infoLink name="Difficult to Use" id="e6e1-d2a5-0b70-e68d" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="36"/>
@@ -1185,7 +1254,6 @@
       <infoLinks>
         <infoLink name="Epak. 38 High-Capacity Energy Cannon" id="9520-81ec-ea20-2ec7" hidden="false" targetId="7b8c-8a92-92bd-ea48" type="profile"/>
         <infoLink name="Reliable" id="36ab-c3ed-1af8-5a3f" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
-        <infoLink name="Difficult to Use" id="7552-886b-e83e-1184" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="81"/>
@@ -1386,11 +1454,13 @@
       <infoLinks>
         <infoLink name="Mek. 30 Rapid Fire Energy Cannon" id="6981-2637-b293-e313" hidden="false" targetId="988f-ff55-5fcc-8308" type="profile"/>
         <infoLink name="Suppressive" id="5352-326b-64fb-7311" hidden="false" targetId="4911-2380-864d-8b44" type="rule"/>
+        <infoLink name="Reliable" id="e379-bfdc-7c87-882c" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="17"/>
+        <cost name="Munitions" typeId="Points" value="24"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="MG09 Schwarzlose Heavy Machine Gun" hidden="false" id="9f30-5cda-4d37-7fae" collective="true">
@@ -1424,9 +1494,11 @@
       <infoLinks>
         <infoLink name="MK 213 Rotary Cannon" id="1b0c-69e8-ecdf-4600" hidden="false" targetId="1bd0-3cca-b8d9-9e53" type="profile"/>
         <infoLink name="Suppressive" id="34a6-2424-369e-a5e0" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
+        <infoLink name="Spin Up" id="d977-fa83-b943-4a16" hidden="false" type="rule" targetId="57cc-2904-33dc-1450"/>
+        <infoLink name="Sustained Fire" id="166a-c700-8a18-942a" hidden="false" type="rule" targetId="ced7-eb92-01df-0845"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="25"/>
+        <cost name="Munitions" typeId="Points" value="29"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1449,7 +1521,6 @@
       <infoLinks>
         <infoLink name="Papk. 34 Light Plasma Cannon" id="2a20-66a6-7cbc-0bf3" hidden="false" targetId="f508-4c7e-d326-bb16" type="profile"/>
         <infoLink name="Slag" id="e386-713e-2c02-4d98" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
-        <infoLink name="Difficult to Use" id="af15-7800-86d4-7290" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="23"/>
@@ -1593,7 +1664,6 @@
       <infoLinks>
         <infoLink name="Papk. 37 Medium Plasma Cannon" id="bbe5-ba31-d38a-fd1c" hidden="false" targetId="f0d8-64a0-7096-3631" type="profile"/>
         <infoLink name="Slag" id="f612-3637-b7a4-a6f5" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
-        <infoLink name="Difficult to Use" id="8720-2cf0-1b68-4030" hidden="false" type="rule" targetId="22ca-4520-b3df-c16d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="35"/>
@@ -1644,7 +1714,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e84-e222-39c9-9469" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Rally &apos;round the Flag" id="443d-c38d-2c7e-826a" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
+        <infoLink name="Raise the Banner" id="443d-c38d-2c7e-826a" hidden="false" type="rule" targetId="8126-75b0-4721-8842"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Jägersmesser" hidden="false" id="8e16-3b7d-42f6-4200" collective="true">
@@ -1696,10 +1766,25 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Last Rites" hidden="false" id="13f4-fdc5-d51b-bbf6">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="232c-b96f-cb9a-310e-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="232c-b96f-cb9a-310e-max" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Last Rites" id="cfc8-b8e6-7257-f36b" hidden="false" type="rule" targetId="df4a-8cf6-7abf-20d7"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="4565-e3f5-c290-9d99" name="Adjustable Sights" hidden="false">
-      <description>When making an Attack Action with this Weapon at less than half of its maximum range, this Unit gains an Aim Token.</description>
+      <description>When performing an Attack with this Weapon Profile, if the Targeted Unit is within half of this Weapon&apos;s Range Value, this Unit may perform a Free Aim Action.</description>
     </rule>
     <rule id="7498-ac28-f25d-82d8" name="Stahlschutz" hidden="false">
       <description>After activating this ability, all allied Troop Units that are within 20&quot; of this model may activate their shield one additional time this round.</description>
@@ -1724,6 +1809,9 @@ turn to reduce the A.P. by an additional 1 per action spent.
 
 Hits, Range, and A.P. may be decreased only to a minimum of 1.
 These rules do not apply to Weapons with the Flames or Gas Special Rules.</description>
+    </rule>
+    <rule name="Last Rites" id="df4a-8cf6-7abf-20d7" hidden="false">
+      <description>After this Unit has destroyed an Enemy Unit, it may, as a Standard Action, perform Last Rites for the fallen. For every two times Last Rites are performed, gain 1 VP.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1763,7 +1851,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+6</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, High Explosive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -1773,7 +1861,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">10</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1813,7 +1901,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -1823,7 +1911,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Reliable</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Energy</characteristic>
       </characteristics>
     </profile>
@@ -1833,7 +1921,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">9</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D5+8</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reliable, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reliable</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Energy</characteristic>
       </characteristics>
     </profile>
@@ -1893,7 +1981,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">10</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D5+8</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reliable, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reliable</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Energy</characteristic>
       </characteristics>
     </profile>
@@ -1903,7 +1991,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1D5+3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Difficult to Use, Fixed Elevation</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 4, Fixed Elevation</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Launcher, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1972,8 +2060,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">18&quot;</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">15</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Sustained Fire, Spin Up</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Autocannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1983,7 +2071,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1993,7 +2081,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">12</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Difficult to Use</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2193,7 +2281,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">8</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D5+1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">High Explosive</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Explosive</characteristic>
       </characteristics>
     </profile>
@@ -2223,7 +2311,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Difficult to Use, Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -2295,10 +2383,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="45M Barbarossa Assault Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="32aa-7659-8405-5139">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 45M Barbarossa Assault Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet &amp; 1x Coaxial Mount or 1x Linked Mantlet, 0-1x Pintle Mount), 1x Hull Mount, 1x Casemate, 0-1x Sponsons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2532,9 +2621,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Pintle Mount" id="4efb-510e-4bc9-3032" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntry>
@@ -2544,7 +2630,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8c8-ca86-4954-cffb-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="457"/>
+                <cost name="Munitions" typeId="Points" value="436"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2587,10 +2673,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="38M Franz Joseph Battle Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="3c78-b03c-3a8f-bb72">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 38M Franz Joseph Battle Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount, 0-1x Pintle Mount), 1x Hull Mount, 0-1x Sponsons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (AUX) Mechanized, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2737,9 +2824,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Pintle Mount" id="c8b5-6fa5-442f-74eb" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -2814,7 +2898,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="220"/>
+                <cost name="Munitions" typeId="Points" value="202"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2842,10 +2926,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="43M Árpád Tank Hunter" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f385-34a3-f3fd-9fd0">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 43M Árpád Tank Hunter</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (CORE) Support, (AUX) Mechanized, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate, 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (CORE) Support, (AUX) Mechanized, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2904,9 +2989,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                   </costs>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="ed2d-1305-9531-7b71" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -2925,7 +3007,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="146"/>
+                <cost name="Munitions" typeId="Points" value="131"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -2949,9 +3031,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Royal Honvéd Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="da54-49bd-a646-cf3d">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Tizedes, 9x Honvéd</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, (AUX) Artillery, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, (AUX) Artillery, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3093,9 +3176,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Landwehr Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="09c3-1ea2-655c-d0c6">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Unteroffizier, 7-9x Gefreiters, &amp; 0-2x Stabsgefreiters</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10 (9 with team)</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3332,9 +3416,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Zeppelinjäger Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8548-741d-a9ab-4f96">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Jäger Unteroffizier, 2-9x Jägers, 0-2x Specialists, 0-2x Scharfschütze</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Infantry, (AUX) Zeppelin, (AUX) Mechanized, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Infantry, (AUX) Zeppelin, (AUX) Mechanized, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5-10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3602,9 +3687,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Zeppelinjäger Scharfschütze Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="67ac-f9c5-a874-757b">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Jäger Scharfschützer &amp; 1x Jäger Scharfschütze Spotter</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Infantry, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Infantry, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">30mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3767,9 +3853,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Scharfschütze Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9d23-449b-18ad-c75c">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Scharfschützer &amp; 1x Scharfschütze Spotter</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Infantry, Troop</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Infantry, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3925,10 +4012,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="22M Radetzky Armored Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="6915-231b-fac1-7e0d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 22M Radetzky Armored Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Armor, Vehicle, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Armor, Vehicle, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4004,7 +4092,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebc7-38fb-f3e0-9e6f-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="81"/>
+                <cost name="Munitions" typeId="Points" value="73"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4030,9 +4118,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Treadbike Ulan Lance" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0ce9-67eb-79c6-b81b">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Ulan Wachtmeister, 2-4x Ulans</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Mechanized, Cavalry, Battlesuit, Tracked</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, (AUX) Mechanized, Cavalry, Battlesuit, Tracked, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4214,10 +4303,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Landwehr Mortar Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="262f-5ce3-9ae9-7538">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Landwehr Heavy Weapon Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Infantry, (AUX) Support, Troop, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Landwehr Mortar Teams</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Infantry, (AUX) Support, Troop, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4294,10 +4384,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="43M Árpád Support Gun" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c6f4-6503-ee8b-f932">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 43M Árpád Support Gun</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Casemate, 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4312,7 +4403,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="621a-fd95-58b4-77c6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="e177-f111-447c-a8f0" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
+            <entryLink import="true" name="Dial In 6/8" hidden="false" id="e177-f111-447c-a8f0" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="43M Árpád Support Gun" hidden="false" id="a205-479e-4cc9-c569">
@@ -4348,9 +4439,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                   </costs>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="9bd6-ecfd-f8f6-84d3" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -4369,7 +4457,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="146"/>
+                <cost name="Munitions" typeId="Points" value="131"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4388,10 +4476,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="28M Wallenstein Armored Halftrack Höllenwerfer Carrier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="6fa9-d2dc-215e-ae18">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 28M Wallenstein Armored Halftrack Höllenwerfer Carrier</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Support, Vehicle, Tracked, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Weapon Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Support, Vehicle, Tracked, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4405,7 +4494,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="5564-b549-d592-10fe" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 4" hidden="false" id="1fc0-392c-c9ba-12cc" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
+            <entryLink import="true" name="Dial In 4/6" hidden="false" id="1fc0-392c-c9ba-12cc" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="unit" import="true" name="28M Wallenstein Armored Halftrack Höllenwerfer Carrier" hidden="false" id="a7cb-e3ad-bda5-e234">
@@ -4441,7 +4530,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68d6-22c9-24b6-18e8-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="63"/>
+                <cost name="Munitions" typeId="Points" value="57"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4457,9 +4546,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="21cm Morser Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7552-5c72-21aa-97ea">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x 21cm Morser Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, Carriage, Siege</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, Carriage, Siege, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4475,7 +4565,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="a301-787e-d5ac-28a1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="a34d-d0f6-af38-1f31" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="ca4e-3166-f955-c9a1" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
+            <entryLink import="true" name="Dial In 6/8" hidden="false" id="ca4e-3166-f955-c9a1" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -4516,7 +4606,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="27"/>
+                <cost name="Munitions" typeId="Points" value="24"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4539,9 +4629,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="27M Höllenwerfer Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="98a3-0bbe-fc1a-0254">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x 27M Höllenwerfer Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, Carriage, Siege</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, Carriage, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4556,7 +4647,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="b88e-4571-24a4-f1d1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 4" hidden="false" id="22fa-08d8-11fe-0988" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
+            <entryLink import="true" name="Dial In 4/6" hidden="false" id="22fa-08d8-11fe-0988" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -4603,7 +4694,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="28"/>
+                <cost name="Munitions" typeId="Points" value="25"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4625,10 +4716,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="38M Franz Joseph Support Tank" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="21fd-21e0-9114-d4b4">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 38M Franz Joseph Support Tank</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet, 1x Coaxial Mount, 0-1x Pintle Mount), 1x Hull Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Artillery, (AUX) Armor, Vehicle, Tracked, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4705,9 +4797,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Pintle Mount" id="6d0f-b4a3-bd6c-1ad0" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -4752,7 +4841,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="220"/>
+                <cost name="Munitions" typeId="Points" value="202"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -4766,7 +4855,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </costs>
           <entryLinks>
             <entryLink import="true" name="Upgrades" hidden="false" id="dd25-1805-58ff-940b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Dial In 6" hidden="false" id="7b33-72fd-8d07-f01a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
+            <entryLink import="true" name="Dial In 6/8" hidden="false" id="7b33-72fd-8d07-f01a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="2e33-db20-82ab-3362" primary="false" name="Medium"/>
@@ -4786,18 +4875,23 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
             </profile>
-            <profile name="Zeppelinjägermeister" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9e67-d698-4a29-0202">
+            <profile name="Zeppelinjägermeister" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="9e67-d698-4a29-0202">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Zeppelinjägermeister</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Recon, Attache, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Designated Leader" id="8473-2b51-3ac1-f2a3" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="f50c-fed2-72c8-617e" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="c22e-5102-a48b-548f" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Zeppelinjäger Squad" field="name" join=":"/>
+                <modifier type="append" value="Zeppelinjäger Squad" field="description" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="e9d8-4ce3-00e1-0f38" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
@@ -4853,12 +4947,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <rule name="Edelweiss" id="524f-548a-2583-d9c5" hidden="false">
               <description>If this unit is either embarked in a Zeppelin, or on the upper story of a terrain feature, their ranged attacks ignore enemy cover.</description>
             </rule>
-            <rule name="Command Squad " id="54c8-26e8-2a74-8b3a" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="(Zeppelinjäger Squad)" field="name" join=":"/>
-              </modifiers>
-            </rule>
           </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
@@ -4877,12 +4965,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="8937-185d-742e-c001" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
           </entryLinks>
           <profiles>
-            <profile name="Mounted Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="df2c-61a8-4820-8b03">
+            <profile name="Mounted Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="df2c-61a8-4820-8b03">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">N/A</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Flex, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">0</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Flex, Attache (Vehicle, Carriage), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">N/A</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4896,12 +4983,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Knecht Battlesuit Commander" hidden="false" id="73b3-51f6-6076-2dcd" collective="false">
           <profiles>
-            <profile name="Knecht Battlesuit Commander" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8688-bc29-5c35-7d32">
+            <profile name="Knecht Battlesuit Commander" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="8688-bc29-5c35-7d32">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Knecht Battlesuit Commander</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Mechanized, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
             <profile name="Knecht Battlesuit Commander" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4739-a707-890d-106d">
@@ -4916,6 +5002,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <infoLinks>
             <infoLink name="Designated Leader" id="49bc-7d6-e23-8682" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="c790-b00c-6823-c68a" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="a623-dfea-6953-41b4" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="(Knecht Battlesuit Squad)" field="name" join=":"/>
+                <modifier type="append" value="(Knecht Battlesuit Squad)" field="description" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Mechanical Talons" hidden="false" id="6b01-a18-b4d4-fbe" collective="false" targetId="0bf1-016a-75f7-f53d" type="selectionEntry">
@@ -4972,14 +5064,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="7933-abda-967b-c57f" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="(Knecht Battlesuit Squad)" field="name" join=":"/>
-              </modifiers>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -4998,12 +5082,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
-            <profile name="Landwehr Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="d1b-e9b9-af96-b181">
+            <profile name="Landwehr Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="d1b-e9b9-af96-b181">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Landwehr Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Attache (Troops), Attache (Crewed Weapon), Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Infantry, (CORE) Support, (CORE) Artillery, Attache (Troops), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5050,10 +5133,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="22M Radetzky Command Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b6ed-8ecf-8757-ada0">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 22M Radetzky Armored Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, Vehicle, Command, Scout</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Recon, Vehicle, Command, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5064,9 +5148,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <selectionEntry type="model" import="true" name="22M Radetzky Armored Command Car" hidden="false" id="40d5-74c3-0eb1-9b66">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Communications Uplink" hidden="false" id="9550-626d-8e90-8fe3">
-                  <infoLinks>
-                    <infoLink name="Radio" id="5e3c-d543-595b-a870" hidden="false" type="rule" targetId="97d3-d9ed-af71-d4d6"/>
-                  </infoLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c5c-ada3-45a9-67e9-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c5c-ada3-45a9-67e9-max" includeChildSelections="false"/>
@@ -5087,7 +5168,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="81"/>
+                <cost name="Munitions" typeId="Points" value="73"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5119,10 +5200,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Pinzgauer Staff Car" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="5bee-fcb6-e604-9923">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Pinzgauer Staff Car</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Flex, Vehicle, Command</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Flex, Vehicle, Command, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5159,7 +5241,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="13ed-3d19-d280-f661-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="40"/>
+                <cost name="Munitions" typeId="Points" value="32"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5173,12 +5255,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Sturmpioneer Officer" hidden="false" id="b6e5-f77f-a7fb-bb7f" collective="false">
           <profiles>
-            <profile name="Sturmpioneer Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9386-da88-b11d-a81a">
+            <profile name="Sturmpioneer Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="9386-da88-b11d-a81a">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Sturmpioneer Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Infantry, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
             <profile name="Sturmpioneer Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9832-9f63-a939-3d60">
@@ -5193,6 +5274,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <infoLinks>
             <infoLink name="Designated Leader" id="6f60-52ff-7f4c-d26c" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="d024-52d9-8557-88ff" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="e523-642d-87bb-def6" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="(Pioneer Squad)" field="name" join=":"/>
+                <modifier type="append" value="(Pioneer Squad)" field="description" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="CKF Saber" hidden="false" id="0c1d-0e5f-7f44-8526" collective="false" targetId="116c-4e0a-aadc-0b83" type="selectionEntry">
@@ -5227,14 +5314,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="edf5-c794-7a7d-2f42" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="(Pioneer Squad)" field="name" join=":"/>
-              </modifiers>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -5245,12 +5324,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Panzergrenadier Officer" hidden="false" id="3038-234e-e995-734b" collective="false">
           <profiles>
-            <profile name="Panzergrenadier Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7d34-ab89-2ee1-953f">
+            <profile name="Panzergrenadier Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="7d34-ab89-2ee1-953f">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Panzergrenadier Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Mechanized, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
             <profile name="Panzergrenadier Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f068-6997-f14e-0fbc">
@@ -5265,6 +5343,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <infoLinks>
             <infoLink name="Designated Leader" id="7246-3b1d-2cbf-39e8" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="7772-c153-f4bc-e253" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="2fa5-961b-11f0-3952" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Panzergrenadier Squad" field="name" join=":"/>
+                <modifier type="append" value="Panzergrenadier Squad" field="description" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="be05-9d25-0047-f0d4" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
@@ -5312,14 +5396,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="c746-6b0b-181e-6ee8" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="(Panzergrenadier Squad)" field="name" join=":"/>
-              </modifiers>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -5338,21 +5414,21 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
               </characteristics>
             </profile>
-            <profile name="Honvéd Officer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="31ac-d8b4-99bb-849b">
+            <profile name="Honvéd Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="31ac-d8b4-99bb-849b">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Honvéd Officer</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Infantry, Attache (Troop), Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Designated Leader" id="1e77-7358-6545-4274" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
             <infoLink name="Command Actions" id="4288-6747-ed69-a13b" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
-            <infoLink name="Command Squad" id="8210-fb56-ac64-6883" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="8210-fb56-ac64-6883" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
-                <modifier type="append" value="(Royal Honvéd Squad)" field="name" join=":"/>
+                <modifier type="append" value="Royal Honvéd Squad" field="name" join=":"/>
+                <modifier type="append" value="Royal Honvéd Squad" field="description" join=":"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5406,6 +5482,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <infoLinks>
             <infoLink name="Designated Leader" id="d80c-db4a-c347-996e" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
             <infoLink name="Command Actions" id="a692-80bb-1469-15b2" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+            <infoLink name="Formation (Specified)" id="b499-aca8-96bb-f8a7" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="(Treadbike Ulan Lance)" field="name" join=":"/>
+                <modifier type="append" value="(Treadbike Ulan Lance)" field="description" join=":"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="f1c6-8afb-64be-f9fe" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
@@ -5460,14 +5542,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Command Squad " id="b8f8-ecc5-aa9f-4568" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="(Treadbike Ulan Lance)" field="name" join=":"/>
-              </modifiers>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -5488,9 +5562,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Towable Shield Generator" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9f01-5286-3620-b3d1">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Towable Shield Generator</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (AUX) Support, (AUX) Infantry, (AUX) Mechanized, Carriage</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (AUX) Support, (AUX) Infantry, (AUX) Mechanized, Carriage, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">N/A</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5542,9 +5617,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Sturmpioneer Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="635f-178f-a84a-bb98">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Pioneer Unteroffizier &amp; 4-9x Pioneers</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, CORE Support (AUX) Infantry, Troop, Engineer</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, CORE Support (AUX) Infantry, Troop, Engineer, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5-10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5693,9 +5769,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Landwehr Heavy Weapon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="551f-ae29-df4a-792d">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">2x Landwehr Heavy Weapon Teams</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Support, (AUX) Infantry, (AUX) Artillery, Troop, Crewed Weapon, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5802,9 +5879,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="18M Towed Gun Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="83a6-6b43-e410-a5dc">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x 18M Gun Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Support, Carriage, Crewed Weapons</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Support, Carriage, Crewed Weapons, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">100mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5884,7 +5962,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="28"/>
+                <cost name="Munitions" typeId="Points" value="25"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -5910,10 +5988,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Ritter Class Sturmzeppelin" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="0976-988a-f133-302c">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Ritter Class Sturmzeppelin</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Zeppelin, Vehicle, Flying, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Mantlet), 0-2x Door Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Zeppelin, Vehicle, Flying, Transport, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">300x200mm oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5925,8 +6004,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Ritter Class Sturmzeppelin" hidden="false" id="47f3-c951-718d-d60a">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0c9-a161-f23f-2d62-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0c9-a161-f23f-2d62-max" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bdad-035e-5f27-0482" includeChildSelections="false"/>
               </constraints>
               <profiles>
                 <profile name="Ritter Class Sturmzeppelin" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cb07-f9f8-6b7d-f47d">
@@ -5959,7 +6038,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Door Guns" hidden="false" id="0dc3-6f3f-8eae-f0d3">
+                <selectionEntry type="upgrade" import="true" name="Door Guns" hidden="false" id="0dc3-6f3f-8eae-f0d3" defaultAmount="1">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="32d9-c89e-d0d3-964e" hidden="false" collective="false" import="true" defaultSelectionEntryId="d1d7-698d-7437-be9a">
                       <constraints>
@@ -6025,13 +6104,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="672f-0491-91e1-d282-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="672f-0491-91e1-d282-max" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntry>
               </selectionEntries>
               <costs>
-                <cost name="Munitions" typeId="Points" value="246"/>
+                <cost name="Munitions" typeId="Points" value="221"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6087,10 +6165,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Pinzgauer Utility Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="c5bf-6196-5759-3d8c">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Pinzgauer Utility Truck</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Vehicle, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Vehicle, Transport, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6114,7 +6193,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Pinzgauer Utility Truck" hidden="false" id="a22d-ea3d-0305-a394">
               <costs>
-                <cost name="Munitions" typeId="Points" value="32"/>
+                <cost name="Munitions" typeId="Points" value="24"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6143,10 +6222,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="28M Wallenstein Armored Halftrack" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="bbc6-3161-ca48-4f10">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 28M Wallenstein Armored Halftrack</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Vehicle, Tracked, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Vehicle, Tracked, Transport, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6200,9 +6280,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     <entryLink import="true" name="MG36 Medium Machine Gun" hidden="false" id="5aaf-c82e-82e9-3d67" collective="false" targetId="71b3-782b-df7f-f847" type="selectionEntry"/>
                     <entryLink import="true" name="MG09 Schwarzlose Heavy Machine Gun" hidden="false" id="86fe-931f-5312-abba" collective="false" targetId="9f30-5cda-4d37-7fae" type="selectionEntry"/>
                   </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="da18-ebef-86f8-7669" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <profiles>
@@ -6221,7 +6298,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b74-3fb7-d53a-9dd8-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="64"/>
+                <cost name="Munitions" typeId="Points" value="53"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6236,10 +6313,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="20M Supply Truck" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8adb-679f-2104-afb4">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 20M Supply Truck</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Vehicle, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Vehicle, Transport, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6300,7 +6378,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="41"/>
+                <cost name="Munitions" typeId="Points" value="37"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6315,10 +6393,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="39M Brudermann Gun Tractor" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a3f4-fa27-bfcd-88f0">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 39M Brudermann Gun Tractor</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Transport, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, Transport, Vehicle, Tracked, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6340,7 +6419,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <selectionEntry type="model" import="true" name="39M Brudermann Gun Tractor" hidden="false" id="ade9-26ad-4292-1513">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd66-99cc-45a4-692b" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c0e-bc8f-a050-6c0f" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7c0e-bc8f-a050-6c0f" includeChildSelections="false"/>
               </constraints>
               <profiles>
                 <profile name="39M Brudermann Gun Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ebf6-0d1e-3aa1-832a">
@@ -6354,7 +6433,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="31"/>
+                <cost name="Munitions" typeId="Points" value="28"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6373,6 +6452,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="1786-fe89-0089-4e20" primary="false" name="Light"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="append" value="Group" field="name">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="self" childId="model" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6388,20 +6474,20 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
-            <profile name="Franz Von Trotta" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2709-2181-6c44-0759">
+            <profile name="Franz Von Trotta" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="2709-2181-6c44-0759">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Franz Von Trotta</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Recon, Attache, Hero, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Infantry, (AUX) Recon, Attache (Troop), Hero, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Hero Actions" id="c734-8cb4-3cd7-5b5e" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
-            <infoLink name="Command Squad" id="4a67-c8dc-bff5-7464" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+            <infoLink name="Formation (Specified)" id="4a67-c8dc-bff5-7464" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
               <modifiers>
-                <modifier type="append" value="(Zeppelinjäger Squad/Zeppelinjäger Scharfschütze Team)" field="name"/>
+                <modifier type="append" value="Zeppelinjäger Squad, Zeppelinjäger Scharfschütze Team" field="name"/>
+                <modifier type="append" value="Zeppelinjäger Squad, Zeppelinjäger Scharfschütze Team" field="description"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6443,12 +6529,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Chaim Drescher: The Maccabean Knight" hidden="false" id="65f3-ca93-8947-17fd" collective="false">
           <profiles>
-            <profile name="Chaim Drescher: The Maccabean Knight" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b90f-791b-54f9-6ff8">
+            <profile name="Chaim Drescher: The Maccabean Knight" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="b90f-791b-54f9-6ff8">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Chaim Drescher: The Maccabean Knight</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit, Hero</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Mechanized, (AUX) Infantry, Attache (Troop), Battlesuit, Hero, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
             <profile name="Chaim Drescher: The Maccabean Knight" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6534-1db1-aa22-7f36">
@@ -6462,6 +6547,12 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </profiles>
           <infoLinks>
             <infoLink name="Hero Actions" id="660d-9ad3-ccfa-77de" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+            <infoLink name="Formation (Specified)" id="2073-6494-1de2-c8b9" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name"/>
+                <modifier type="append" value="Battlesuit" field="description"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="131"/>
@@ -6495,12 +6586,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <rule name="Tournament Champion" id="f978-16c1-131-267d" hidden="false">
               <description>As a Difficult Action Chaim Drescher: The Maccabean Knight may Declare a Melee. If he does, he may make a Melee Attack as a Free Action against all Enemy Units within Engagement Range.</description>
             </rule>
-            <rule name="Command Squad " id="ae16-9699-847e-f2fb" hidden="false">
-              <description>This unit may only attach to the designated units.</description>
-              <modifiers>
-                <modifier type="append" value="Knecht Battlesuit Squad" field="name"/>
-              </modifiers>
-            </rule>
             <rule name="Grandmaster of the Maccabeans" id="8960-48f9-9dcd-99f9" hidden="false">
               <description>In the Command Phase, Chaim Drescher: The Maccabean Knight, may issue an Order to every friendly Battlesuit Unit within 8&quot; and Line of Sight. If Chaim Drescher: The Maccabean Knight is your Field Commander, he may instead issue an Order to every friendly Battlesuit Unit within Line of Sight.</description>
             </rule>
@@ -6523,18 +6608,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
             </profile>
-            <profile name="Baron Lajos Dolmán de Szolnok" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="9e96-f960-6919-17ba">
+            <profile name="Baron Lajos Dolmán de Szolnok" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="9e96-f960-6919-17ba">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Baron Lajos Dolmán de Szolnok</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Armor, (CORE) Mechanized, Troop/Attache, Hero, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (CORE) Armor, (CORE) Mechanized, Attache (Vehicle), Hero, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee"/>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Hero Actions" id="527c-4d75-fd4a-bb3b" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
             <infoLink name="Slippery" id="ca41-2495-f919-5cc9" hidden="false" type="rule" targetId="e1f9-41ef-ff64-d030"/>
+            <infoLink name="Designated Leader" id="50aa-cc41-71fb-6bd8" hidden="false" type="rule" targetId="8e52-a616-aab9-73b8"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="20"/>
@@ -6554,7 +6639,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9c7-772e-53fd-0054-max" includeChildSelections="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Officer 2" hidden="false" id="7922-e293-c143-bc57" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
+                <entryLink import="true" name="Officer 3" hidden="false" id="7922-e293-c143-bc57" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -6581,7 +6666,32 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <selectionEntry type="upgrade" import="true" name="Rudolf" hidden="false" id="5a43-0563-6009-00e4"/>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Gefreiter Josef Švejk" hidden="false" id="1192-1742-945b-450d"/>
+        <selectionEntry type="model" import="true" name="Gefreiter Josef Švejk" hidden="false" id="1192-1742-945b-450d">
+          <rules>
+            <rule name="The Good Soldier Svejk" id="bc7a-ac95-3fde-200c" hidden="false">
+              <description>Svejk is not deployed on the table as other Units are. Instead, after all Deployment has completed and before the first Round begins, select one Troops Unit in your opponent&apos;s army. Attach Svejk to this Unit - for all rules purposes such as Line of Sight, Cohesion, Damage Allocation, Movement, etc., Svejk is treated as a Token. Svejk can never be selected to take damage for any reason. If the Unit that Svejk is attached to has been destroyed, he is removed from play.
+
+
+When the Unit that Svejk is attached to is selected to activate, roll a die, and apply the result as follows;
+
+
+* 1-2 - The Unit activates as normal, though Svejk will complain about it.
+* 3-4 - The Unit gains one additional Suppression token, and must re-roll successful Suppression checks.
+* 5-6 - The Unit cannot perform any Actions other than Move, Disengage, Attack, or Dig In.
+* 7-8 - The Unit loses all Ordered status effects.
+* 9-10 - The Unit immediately completes its Activation and ends the Turn.
+
+
+In addition, if a Unit that Svejk is attached to attempts to perform a Reaction, roll a die. On an 8+, the Reaction automatically fails and the Unit&apos;s actions are consumed.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="80"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Zeppelin" id="d6dc-f224-683f-bd9f" hidden="false">
@@ -6590,18 +6700,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Graf Class Panzerzeppelin" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e392-e39b-ac3a-b39d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Graf Class Panzerzeppelin</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Zeppelin, Vehicle, Flying</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Turret (1x Linked Mantlet, 1x Turret (1x Mantlet)), 1x Sponsons, 2x Pintle Mounts, 1x Turret (1x Linked Mantlet)</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Zeppelin, Vehicle, Flying, Superheavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">300x200mm oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
               </characteristics>
             </profile>
             <profile name="Graf Class Panzerzeppelin Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="1199-0e87-6022-9426">
               <characteristics>
                 <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Dash, Move, Take Aim</characteristic>
-                <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
-                <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady</characteristic>
                 <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
+                <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady</characteristic>
+                <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Button Up, Fallback</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6738,7 +6849,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="765"/>
+                <cost name="Munitions" typeId="Points" value="736"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -6767,7 +6878,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                       </costs>
                       <entryLinks>
-                        <entryLink import="true" name="Officer 1" hidden="false" id="0d7a-6d95-bc1c-0465" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
+                        <entryLink import="true" name="Officer 2" hidden="false" id="0d7a-6d95-bc1c-0465" type="selectionEntry" targetId="3bf2-8b19-6749-94c7"/>
                       </entryLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="O2 - Hauptmann" hidden="false" id="915a-a57f-6bf2-7de8" collective="false" sortIndex="2">
@@ -6777,7 +6888,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                       </costs>
                       <entryLinks>
-                        <entryLink import="true" name="Officer 2" hidden="false" id="96f2-97d3-62aa-a01e" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
+                        <entryLink import="true" name="Officer 3" hidden="false" id="96f2-97d3-62aa-a01e" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
                       </entryLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="O3 - Major" hidden="false" id="0132-a695-3184-2bfb" collective="false" sortIndex="3">
@@ -6787,7 +6898,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                       </costs>
                       <entryLinks>
-                        <entryLink import="true" name="Officer 3" hidden="false" id="eb69-4c38-aeae-f38b" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
+                        <entryLink import="true" name="Officer 4" hidden="false" id="eb69-4c38-aeae-f38b" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
                       </entryLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="O4 - Oberst" hidden="false" id="392c-c1f1-19d6-c89d" collective="false" sortIndex="4">
@@ -6797,7 +6908,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                       </costs>
                       <entryLinks>
-                        <entryLink import="true" name="Officer 4" hidden="false" id="bfa6-f6b3-82c3-6077" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
+                        <entryLink import="true" name="Officer 5" hidden="false" id="bfa6-f6b3-82c3-6077" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
                       </entryLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="O5 - Feldmarschall-Leutnant" hidden="false" id="48d2-a246-ab47-4a60" collective="false" sortIndex="5">
@@ -6807,7 +6918,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                       </costs>
                       <entryLinks>
-                        <entryLink import="true" name="Officer 5" hidden="false" id="d7cc-cd06-6400-c8e7" type="selectionEntry" targetId="59ee-415f-f275-219b"/>
+                        <entryLink import="true" name="Officer 6" hidden="false" id="d7cc-cd06-6400-c8e7" type="selectionEntry" targetId="59ee-415f-f275-219b"/>
                       </entryLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="O6 - Feldmarschall" hidden="false" id="299d-6d5e-85df-7a20" collective="false" sortIndex="6">
@@ -6817,7 +6928,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                       </costs>
                       <entryLinks>
-                        <entryLink import="true" name="Officer 6" hidden="false" id="170f-e2f5-7be6-b374" type="selectionEntry" targetId="4af0-1a59-8ab9-eb2d"/>
+                        <entryLink import="true" name="Officer 7" hidden="false" id="170f-e2f5-7be6-b374" type="selectionEntry" targetId="4af0-1a59-8ab9-eb2d"/>
                       </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -6962,10 +7073,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="20M Ambulance" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="48a3-74d4-9603-ca3d">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 20M Ambulance</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, Vehicle</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">0x Weapon Mounts</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, Vehicle, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7007,7 +7119,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7ef-7e28-d2fa-e859-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="41"/>
+                <cost name="Munitions" typeId="Points" value="37"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7023,9 +7135,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Panzergrenadier Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2620-cf3f-cc5b-e315">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Panzergrenadier Unteroffizier. &amp; 4-9x Panzergrenadiers</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5-10</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7191,9 +7304,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Knecht Battlesuit Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b953-2552-4e76-4ed2">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Knecht Feldweibel, 0-3x Knecht Doppelsöldner, 0-3x Knecht Schützer, 0-1x Knecht Cornet</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Infantry, Troop, Battlesuit, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2-4</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7453,10 +7567,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="32M Hunyadi Armored Personnel Carrier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="aff1-5145-b08a-e9e3">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 32M Hunyadi Armored Personnel Carrier</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, Vehicle, Tracked, Transport</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount, 1x Turret( 1x Mantlet, 1x Coaxial Mount) or 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, Vehicle, Tracked, Transport, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7481,6 +7596,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <entryLink import="true" name="Hitch" hidden="false" id="d184-348b-0ff2-9cf6" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Bailout (Safe)" hidden="false" id="8013-ca7f-c7bc-d17a" type="selectionEntry" targetId="e9de-35c8-4bd3-82e6"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="6fcd-0c6d-277d-c935" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
+            <entryLink import="true" name="Armored Personnel Carrier" hidden="false" id="28e3-d47c-1fb9-0893" type="selectionEntry" targetId="21d6-a843-1ec9-e0a0"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="32M Hunyadi Armored Personnel Carrier" hidden="false" id="d8f9-0bc2-509f-2151">
@@ -7595,9 +7711,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                       </conditions>
                     </modifier>
                   </modifiers>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="0337-66f4-cc26-2b10" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <constraints>
@@ -7616,7 +7729,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="146"/>
+                <cost name="Munitions" typeId="Points" value="132"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7626,15 +7739,21 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="ffcf-12cf-2b7a-a9f4" primary="false" name="Medium"/>
           </categoryLinks>
+          <rules>
+            <rule name="Endure the Fury" id="ce9b-076c-c9a6-4b89" hidden="false">
+              <description>When a Troop Unit within 6&quot; of this Unit is Attacked, until that Attack is resolved, improve that Unit&apos;s Bulwark by 1.</description>
+            </rule>
+          </rules>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="32M Bergepanzer Armored Recovery Vehicle" hidden="false" id="1fd4-4713-6515-4349" collective="false">
           <profiles>
             <profile name="32M Bergepanzer Armored Recovery Vehicle" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="dc91-bb42-b675-6a26">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 32M Bergepanzer Armored Recovery Vehicle</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Armor, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hull Mount, 0-1x Pintle Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Armor, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7703,9 +7822,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     </entryLink>
                     <entryLink import="true" name="MG09 Schwarzlose Heavy Machine Gun" hidden="false" id="42eb-b87b-2c26-74e1" collective="false" targetId="9f30-5cda-4d37-7fae" type="selectionEntry"/>
                   </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Pintle Mount" id="7431-3bd0-98f2-93fb" hidden="false" type="rule" targetId="afb9-85ce-6367-ce57"/>
-                  </infoLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <profiles>
@@ -7724,7 +7840,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c634-afb0-c690-84fe-max" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Munitions" typeId="Points" value="146"/>
+                <cost name="Munitions" typeId="Points" value="132"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7739,10 +7855,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="28M Wallenstein Armored Halftrack Gun Carrier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a70e-c7a3-8588-9031">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x 28M Wallenstein Armored Halftrack Gun Carrier</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Armor, Vehicle, Tracked</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Weapon Mount</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Mechanized, (AUX) Armor, Vehicle, Tracked, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7808,7 +7925,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 </profile>
               </profiles>
               <costs>
-                <cost name="Munitions" typeId="Points" value="83"/>
+                <cost name="Munitions" typeId="Points" value="68"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7958,7 +8075,7 @@ When an enemy Unit ends a Movement Action within range of one of your Blast Toke
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="2nd Alpini Division &quot;Tridentina&quot;(Tyrol)" hidden="false" id="cf78-587a-5870-e103">
+        <selectionEntry type="upgrade" import="true" name="2nd Alpini Division &quot;Tridentina&quot; (Tyrol)" hidden="false" id="cf78-587a-5870-e103">
           <rules>
             <rule name="Mountain Infantry" id="a8bc-367a-9c71-5686" hidden="false">
               <description>Troop Units in this Army ignore Rough Terrain.
@@ -7967,14 +8084,14 @@ When an enemy Unit ends a Movement Action within range of one of your Blast Toke
 Non-Battlesuit Troop Units with at least 5 models may Tow one Carriage.
 
 
-When an Attack Action is taken against a Non-Battlesuit Unit in this army, if that Attack is Obscured, that Unit gains an additional level of Obscured.</description>
+When an Attack Action is taken against a Troop Unit in this army, if that Attack is Obscured, that Unit gains an additional level of Obscured.</description>
             </rule>
             <rule name="Di Qui Non Si Passa!" id="969c-c53c-104d-c94b" hidden="false">
               <description>Troop Units in this Army gain Warding on all Melee Weapons.
 
+Carriage Units in this Army may receive the benefit of Light cover as if they were Troops, but may not receive any additional levels of Cover.
 
-Carriage Units in this Army may receive the benefit of Light cover as if they were Troops, but may not receive any additional levels of Cover. 
-</description>
+Troop Units in this Army may shed one Suppression token when they activate their Shield Generator.</description>
             </rule>
           </rules>
           <modifiers>
@@ -8045,6 +8162,14 @@ Carriage Units in this Army may receive the benefit of Light cover as if they we
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="86d4-9d6a-89e0-35f1" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="6869-3b98-fd47-f2bc" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Heavy Weapon Element" hidden="false" id="33ea-bd73-406c-dd25">
           <selectionEntryGroups>
@@ -8142,6 +8267,14 @@ Carriage Units in this Army may receive the benefit of Light cover as if they we
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="c1a8-ea36-20cf-58e3" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="367b-c1f4-62ac-3af2" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Flagbearer with Habsburg Banner" hidden="false" id="0379-eb4e-3050-1234">
           <entryLinks>
@@ -8185,6 +8318,214 @@ Carriage Units in this Army may receive the benefit of Light cover as if they we
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="5ca5-322c-5246-d6f6" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Geheimdienst Agent" hidden="false" id="2214-d3cc-73e2-1c03">
+          <entryLinks>
+            <entryLink import="true" name="Bergmann Pistol M1938" hidden="false" id="d2ac-4079-cf2b-5f4f" type="selectionEntry" targetId="e85b-5482-785f-59fb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3169-8bf0-938f-c194-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3169-8bf0-938f-c194-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="CKF Saber" hidden="false" id="c5e6-9de0-0b00-2bfd" type="selectionEntry" targetId="116c-4e0a-aadc-0b83">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f91-b509-5d0b-a4a1-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f91-b509-5d0b-a4a1-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Geheimdienst Agent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d11e-bf22-b2a8-0dfa">
+              <characteristics>
+                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
+                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Geheimdienst Agent" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="6142-6c85-b4e2-8093">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache (Troop)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Requisitioned Guards" id="1b7f-a06e-67e4-56d8" hidden="false">
+              <description>When this Unit is selected as the target of an Attack with the Sniper Special Rule, each Player must roll a D10, if your roll is higher than your Opponent&apos;s, they may not Snipe.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="7"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1e2b-033e-a073-f47e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="The Kaiser&apos;s Hand" hidden="false" id="8651-1ca6-87a0-189a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f17d-f98f-5257-d4d1-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f17d-f98f-5257-d4d1-max" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="The Kaiser&apos;s Hand" id="75c0-019c-75a5-1887" hidden="false">
+                  <description>During the Command Phase, before Orders are Issued, you may spend 1 Intel, if you do, select a rule from the list below, this Unit gains that effect for the remainder of the Round.
+
+* Interception: Immediately select an Enemy Unit within 24&quot; and Line of Sight, remove all Order Tokens on that Unit, this Unit may gain one of them.
+
+* Jumbled Static: Whenever an Enemy Unit within the Radio Network is issued an Order, roll 1d10, on a 7+, that Order is not issued.
+
+* De Jure Territory: As an Action, select an unclaimed Objective Marker within 24&quot; and Line of Sight, this Unit immediately Captures that Objective.
+
+* Singled Out: Immediately select an Enemy Unit within LoS and 16&quot;, it can no longer benefit from Rules and Abilities originating from other Units.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="50"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Military Chaplain Element" hidden="false" id="743c-c91b-44bd-3230">
+          <profiles>
+            <profile name="Military Chaplain Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="e8ef-b0f6-8b46-e383">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (SPC) Infantry, (SPC) Mechanized, (SPC) Support, (SPC) Recon, Attache (Troop)</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Distributed Elements" hidden="false" id="17b8-eb3e-62aa-7f89" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="91a2-9b3f-55a3-8458" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Military Chaplain" hidden="false" id="3085-69e3-dd79-514d">
+                  <entryLinks>
+                    <entryLink import="true" name="Last Rites" hidden="false" id="5f06-d644-8160-076e" type="selectionEntry" targetId="13f4-fdc5-d51b-bbf6"/>
+                  </entryLinks>
+                  <profiles>
+                    <profile name="Military Chaplain" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fdbe-de5f-8a3e-ef4e">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="10"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="b35e-bdf2-a8a4-338c" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b52-3828-d14c-3cac" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8ea1-634d-21ce-0a15" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="98e2-8857-150a-0971" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5f5a-0e67-ea2c-3f16" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="51e2-65a8-5b54-8ee4" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hospitaller Element" hidden="false" id="dbcc-58b5-9a47-94ad">
+          <profiles>
+            <profile name="Hospitaller Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="87a9-00bc-8391-edf3">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">HRE, (SPC) Infantry, (SPC) Mechanized, Attache (Troop), Battlesuit</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Distributed Elements" hidden="false" id="4adb-10ce-110a-bda2" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Elements" id="03b3-1eb0-4285-3e6a" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Hospitaller" hidden="false" id="a2cd-8969-584f-0694">
+                  <entryLinks>
+                    <entryLink import="true" name="Medical Bag" hidden="false" id="c235-4aeb-b676-cc37" collective="false" targetId="d619-a81c-0ed7-a998" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ca6-6186-f1a0-a95a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90b5-b389-a7f6-e3fa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Last Rites" hidden="false" id="341d-8c76-5e85-5bab" type="selectionEntry" targetId="13f4-fdc5-d51b-bbf6"/>
+                  </entryLinks>
+                  <profiles>
+                    <profile name="Hospitaller" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="052f-cf62-355d-aff3">
+                      <characteristics>
+                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="36"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="1568-8158-a5c2-613f" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd3c-dc4d-b11e-4f61" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7e59-3608-b998-c054" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a99-324a-11ad-66c7" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c3d7-a6cb-d04a-1b2b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Formation (Specified)" id="c77e-e092-1b3b-a089" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

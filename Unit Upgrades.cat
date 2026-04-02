@@ -341,6 +341,15 @@
                 </modifier>
               </modifiers>
             </entryLink>
+            <entryLink import="true" name="Drilled" hidden="true" id="88f6-ddd1-f3ba-e3ac" type="selectionEntry" targetId="2030-023e-3a1f-ae74">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de0d-e12c-a964-4e46" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -350,7 +359,7 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Cosmetics" id="82ae-cf23-7294-4153" hidden="false" sortIndex="7">
+        <selectionEntryGroup name="Cosmetics" id="82ae-cf23-7294-4153" hidden="false" sortIndex="8">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Hot Cup of Coffee" hidden="false" id="c9ee-f6a4-4c1b-418b">
               <rules>
@@ -697,6 +706,15 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="42bf-7cd8-a114-fbaf" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Lewes Bomb" hidden="false" id="80ad-2d8e-ee43-24fe" type="selectionEntry" targetId="8562-0c68-8fd5-1e47">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="381c-41bb-e273-4cf0" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Panzerfaust" hidden="false" id="972c-9669-2948-59c9">
@@ -751,6 +769,57 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Rounds" id="88d5-4c2a-94b4-fab6" hidden="true" sortIndex="7">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba53-280d-0177-220b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="unit" childId="6458-4093-473e-e12f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Smoke Rounds" hidden="false" id="7e7d-778d-9f13-3bc6" type="selectionEntry" targetId="9849-be05-c218-855d"/>
+            <entryLink import="true" name="Beehive Rounds" hidden="false" id="75ea-83ba-2309-51ae" type="selectionEntry" targetId="f088-9f61-67d3-7008">
+              <modifiers>
+                <modifier type="increment" value="30" field="Points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Incendiary Rounds" hidden="false" id="6ed3-3b67-9dda-7119" type="selectionEntry" targetId="27be-07c8-8d7c-0114">
+              <modifiers>
+                <modifier type="increment" value="15" field="Points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="APHE Rounds" hidden="false" id="6d3d-051f-a9cf-b85d" type="selectionEntry" targetId="f810-3335-5399-30a1">
+              <modifiers>
+                <modifier type="increment" value="20" field="Points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Gas Rounds" hidden="false" id="a624-a188-7a17-bf60" type="selectionEntry" targetId="7180-32a6-d39f-24f5">
+              <modifiers>
+                <modifier type="increment" value="30" field="Points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -1290,12 +1359,19 @@
         <infoLink name="Flexible Hero" id="86ca-45a3-4d3b-4b71" hidden="false" type="rule" targetId="ba04-cce8-3db9-31d4"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Options" id="0d3a-bb88-f390-449e" hidden="false" defaultSelectionEntryId="174f-e958-5411-0477">
+        <selectionEntryGroup name="Flexible Hero" id="0d3a-bb88-f390-449e" hidden="false" defaultSelectionEntryId="174f-e958-5411-0477">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Attached" hidden="false" id="174f-e958-5411-0477">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23ca-b0b8-0ee8-b150" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4f50-ceb9-f07a-86c0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Independent" hidden="false" id="1633-6860-58d3-737a">
               <constraints>
@@ -1327,15 +1403,12 @@
       <infoLinks>
         <infoLink name="Reinforced" id="fe8c-4c8e-b291-e5ef" hidden="false" type="rule" targetId="8980-2d6d-00bc-ee76"/>
       </infoLinks>
-      <modifiers>
-        <modifier type="increment" value="1" field="af2e-1c49-9a61-0dba" affects="self.entries.profiles.Model" scope="model"/>
-      </modifiers>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-max" includeChildSelections="false"/>
       </constraints>
       <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Munitions" typeId="Points" value="10"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1352,6 +1425,11 @@
       </infoLinks>
       <modifiers>
         <modifier type="add" value="6ea8-04f4-b21b-7fcf" field="category" scope="parent"/>
+        <modifier type="set" value="25" field="Points">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="unit" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Dozer Blade" hidden="false" id="919a-9ba1-f9df-bc7b">
@@ -1403,7 +1481,7 @@
       </costs>
       <rules>
         <rule name="Combat Stimulants" id="9bc4-df69-58e6-b72f" hidden="false">
-          <description>Once per Game, remove all Suppression Tokens from this Unit.</description>
+          <description>Once per Game, this Unit may reroll all failed Suppression Checks.</description>
         </rule>
       </rules>
       <constraints>
@@ -1422,6 +1500,102 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Smoke Rounds" hidden="false" id="9849-be05-c218-855d">
+      <rules>
+        <rule name="Smoke Rounds" id="109d-331a-dc5c-f936" hidden="false">
+          <description>Once per Game, when making a Indirect Attack with this Unit, you may Expend this Round. If you do, instead of resolving the Attack, for each Blast Token you would select, replace that Token with a Smoke Token.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3d5-12d3-8d4f-dee9" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Beehive Rounds" hidden="false" id="f088-9f61-67d3-7008">
+      <rules>
+        <rule name="Beehive Rounds" id="9557-df2c-b98b-a2a9" hidden="false">
+          <description>Once per Game, when making a Direct Fire Attack with this Unit, you may Expend this Round. If you do, until that Attack is Resolved, double that Weapon Profile&apos;s Hits value, set its AP to 2, and lower its Damage by half, that Weapon gains Scattershot.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="662d-d247-72f0-2c1c" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="APHE Rounds" hidden="false" id="f810-3335-5399-30a1">
+      <rules>
+        <rule name="APHE Rounds" id="140d-bf76-205b-39aa" hidden="false">
+          <description>Once per Game, when making a Direct Fire Attack with this Unit, you may Expend this Round. If you do, that Weapon gains the Critical Shot Special Rule, and may reroll 1s for Armor Checks.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9cde-d693-f6cf-364b" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Incendiary Rounds" hidden="false" id="27be-07c8-8d7c-0114">
+      <rules>
+        <rule name="Incendiary Rounds" id="9804-b713-4607-1219" hidden="false">
+          <description>Once per Game, when making a Direct Fire or Indirect Fire Attack with this Unit, you may Expend this Round. If you do, apply a Flames Token to all Units Targeted by this Attack.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7c7-8494-2db5-ee1b" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Gas Rounds" hidden="false" id="7180-32a6-d39f-24f5">
+      <rules>
+        <rule name="Gas Rounds" id="5c01-4773-afc4-a292" hidden="false">
+          <description>Once per Game, when making a Indirect Attack with this Unit, you may Expend this Round. If you do, instead of resolving the Attack, for each Blast Token you would select, replace that Token with a Gas! Token.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94d5-59a0-9da7-e434" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Officer Type" hidden="false" id="bb82-39b2-4692-0d58">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Officer Type" id="bbb1-3baa-0229-457c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Armor Officer" hidden="false" id="2d14-3b1a-cb5b-e5a0">
+              <rules>
+                <rule name="Armor Officer" id="f70f-7326-1907-dcd2" hidden="false">
+                  <description>During the Command Phase, this Unit may spend an Order Token, if it does, you may Mark a Target. To Mark a Target, select an Enemy Unit within LoS, until the end of this Round, all Attacks performed by Units in this Platoon against that Unit consider their Weapons to be Primary Weapons.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Infantry Officer" hidden="false" id="02d0-161c-3655-c7d5"/>
+            <selectionEntry type="upgrade" import="true" name="Recon Officer" hidden="false" id="8d2c-6601-a577-0ccb"/>
+            <selectionEntry type="upgrade" import="true" name="Artillery Officer" hidden="false" id="da91-7075-aedb-9fc5">
+              <rules>
+                <rule name="Artillery Officer" id="27d6-1c05-8a41-f8f3" hidden="false">
+                  <description>During the Command Phase, this Unit may spend an Order Token, if it does, you may advance the.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mechanized Officer" hidden="false" id="5a77-f527-7e58-5281"/>
+            <selectionEntry type="upgrade" import="true" name="Support Officer" hidden="false" id="572d-a36d-69a9-2f22"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
@@ -1469,7 +1643,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>25mm base; Units within 6” of this Token gain a level of Obscured. Attacks passing through this 6” radius are considered to be taken through Obscuring terrain. At the beginning of the Command Phase, this Token Drifts, if you roll a 1 to Drift this Token is removed. If this Token has Drifted before, instead, remove this Token.</description>
     </rule>
     <rule name="Reinforced" id="8980-2d6d-00bc-ee76" hidden="false">
-      <description>This Model&apos;s Armor Value is increased by 1.</description>
+      <description>This Unit&apos;s Cover Level is improved by 1.</description>
     </rule>
     <rule name="Nominate Field Commander" id="653b-4795-0602-9a08" hidden="false">
       <description>This Unit is your Field Commander. (This Unit must have the highest Officer rank in your Army or be a Hero).</description>
