@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5850-c931-4187-f520" name="Armies of the Empire of Japan" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="goldendragontabletopgames@gmail.com" authorName="Golden Dragon Games Team" authorUrl="goldendragongames.net">
+<catalogue library="false" id="5850-c931-4187-f520" name="Forces of the Empire of Japan" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="goldendragontabletopgames@gmail.com" authorName="Golden Dragon Games Team" authorUrl="goldendragongames.net">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Officer Seniority" hidden="false" id="cadb-378d-321-459d" collective="false">
       <selectionEntryGroups>
@@ -1584,10 +1584,10 @@
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="7e5f-3e9c-2170-3372" primary="false" name="Troop"/>
         <categoryLink targetId="f273-43c7-03e5-764e" id="c1f6-74bd-0b08-2e46" primary="false" name="EOJ"/>
         <categoryLink targetId="d34f-eedb-f296-27aa" id="917c-6085-3267-93ae" primary="false" name="IJA"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="8870-2bc2-87b0-fe71" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="1c26-76a9-a90d-0439" primary="false" name="CORE Mechanized"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
@@ -1673,10 +1673,10 @@
         <categoryLink targetId="f273-43c7-03e5-764e" id="7c15-95f3-ebf6-3eba" primary="false" name="EOJ"/>
         <categoryLink targetId="7b62-662e-b4a3-f92f" id="f9a6-7340-d1c6-b8c5" primary="false" name="IJN"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="0877-646c-fe5e-efd8" primary="false" name="Troop"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="6bd5-000e-b1a2-efec" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="195c-d9bd-7d8e-8471" primary="false" name="CORE Mechanized"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
@@ -5173,6 +5173,11 @@
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="a0f2-3f24-d07c-0ecb">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapon Options" id="3c35-86b5-c160-84ea" hidden="false" defaultSelectionEntryId="a030-d0ee-ca6b-2aaf">
@@ -5262,6 +5267,11 @@
               </costs>
               <modifiers>
                 <modifier type="set" value="3" field="2cfb-c86a-003d-e0e8-max">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="2cfb-c86a-003d-e0e8-min">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -6251,7 +6261,7 @@
             <profile name="IJN Rikusentai Infantry Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="ce49-d471-c9d4-7f74">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Gunsō, 7-9x Naval Infantrymen, 0-2x Naval Hōshu</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJN, (CORE) Infantry, (AUX) Mechanized, (CORE) Retainer, Troop, Light</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJN, (CORE) Infantry, (CORE) Mechanized, (CORE) Retainer, Troop, Light</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
@@ -6479,7 +6489,7 @@
             <profile name="Heishi Infantry Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b5e7-492c-1155-d300">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Gunsō, 7-9x Hohei, &amp; 0-2x Hōshu</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJA, (CORE) Infantry, (AUX) Mechanized, (CORE) Retainer, Troop, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJA, (CORE) Infantry, (CORE) Mechanized, (CORE) Retainer, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -8368,7 +8378,7 @@ Attacks made by Plasma Weapons +1 to the Hits Profile</description>
             <selectionEntry type="upgrade" import="true" name="Imperial Standard" hidden="false" id="f7a7-7947-5591-bfdb">
               <rules>
                 <rule name="Imperial Standard" id="cb7a-e85f-47bd-57d3" hidden="false">
-                  <description>Friendly Units within 12&quot; of this one may re-roll Rolls made to recover Reactions as a part of its Trained Reflexes National Idea.</description>
+                  <description>Friendly Units within 12&quot; of an Imperial Standard may re-roll Rolls made to recover Reactions as a part of its Trained Reflexes National Idea.</description>
                 </rule>
               </rules>
               <infoLinks>

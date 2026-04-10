@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.5" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.5.1" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -290,6 +290,16 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="1" field="284c-5503-e866-a2e0">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="26a5-76cb-5d13-b4a7" shared="true" childName="CORE Infantry" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="26a5-76cb-5d13-b4a7" shared="true" childName="CORE Infantry" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </forceEntry>
         <forceEntry name="Armor Platoon" id="fae0-4a12-4ae4-5f9b" hidden="true">
@@ -422,6 +432,16 @@
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="284c-5503-e866-a2e0">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" childName="CORE Armor" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" childName="CORE Armor" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </forceEntry>
@@ -563,6 +583,42 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="1" field="284c-5503-e866-a2e0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="4" field="selections" scope="force" childId="8679-d614-ae03-de2c" shared="true" childName="CORE Artillery" includeChildSelections="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="eb80-161e-f2a5-8496" shared="true" childName="Battery" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="eb80-161e-f2a5-8496" shared="true" childName="Battery" includeChildSelections="true"/>
+                        <condition type="atLeast" value="3" field="selections" scope="force" childId="8679-d614-ae03-de2c" shared="true" childName="CORE Artillery" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="2f82-38f2-c47a-db0a">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="4" field="selections" scope="force" childId="8679-d614-ae03-de2c" shared="true" childName="CORE Artillery" includeChildSelections="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="eb80-161e-f2a5-8496" shared="true" childName="Battery" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="eb80-161e-f2a5-8496" shared="true" childName="Battery" includeChildSelections="true"/>
+                        <condition type="atLeast" value="3" field="selections" scope="force" childId="8679-d614-ae03-de2c" shared="true" childName="CORE Artillery" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </forceEntry>
         <forceEntry name="Mechanized Platoon" id="29bb-b3e2-3fbb-9ad5" hidden="true">
@@ -604,7 +660,7 @@
             </categoryLink>
             <categoryLink name="AUX Mechanized" hidden="false" id="931f-b95a-7068-3aa4" targetId="c87d-0c37-d91f-b4cd" primary="false">
               <constraints>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="679a-2d-6b10-7e7b" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="679a-2d-6b10-7e7b" includeChildSelections="false"/>
               </constraints>
             </categoryLink>
             <categoryLink name="Transport" hidden="true" id="c544-9294-5dcb-25c9" targetId="d4be-5aad-8560-5720">
@@ -685,6 +741,16 @@
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="284c-5503-e866-a2e0">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7ce6-55a5-44aa-7258" shared="true" childName="CORE Mechanized" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7ce6-55a5-44aa-7258" shared="true" childName="CORE Mechanized" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </forceEntry>
@@ -815,6 +881,11 @@
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="2" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="54db-5889-a382-77cb" shared="true" childName="CORE Recon" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </forceEntry>
@@ -951,6 +1022,11 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="2" field="284c-5503-e866-a2e0">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" childName="CORE Armor" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </forceEntry>
         <forceEntry name="Automated Pacification Task Force" id="d6f3-788c-2c4c-503b" hidden="false">
@@ -1011,6 +1087,16 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="1" field="284c-5503-e866-a2e0">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="a9bf-60cd-c79d-de30" shared="true" childName="CORE Pacification" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7ce6-55a5-44aa-7258" shared="true" childName="CORE Mechanized" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </forceEntry>
         <forceEntry name="Urinke Imperial Command Detachment" id="b546-2955-e4ad-2f31" hidden="false">
@@ -1063,6 +1149,11 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="2" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="5300-59e6-6db3-c957" shared="true" childName="CORE Retainer" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </forceEntry>
         <forceEntry name="Zeppelin Task Force" id="94df-db09-3266-46a5" hidden="false">
@@ -1088,6 +1179,7 @@
             <categoryLink name="CORE Zeppelin" hidden="false" id="96fb-d65a-9c59-07ec" targetId="d3e6-9cfb-4ddb-2020" primary="false">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7d2-7502-bcb4-ff8a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b1a1-b835-8acc-c8b5"/>
               </constraints>
             </categoryLink>
             <categoryLink name="AUX Zeppelin" hidden="false" id="6567-7bc1-c163-b973" targetId="f250-22aa-20d6-46a7" primary="false">
@@ -1106,6 +1198,11 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="2" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="d3e6-9cfb-4ddb-2020" shared="true" childName="CORE Zeppelin" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <costs>
@@ -1165,6 +1262,11 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="2" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="ab0f-f79b-bc5d-a312" shared="true" childName="CORE Partisan" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </forceEntry>
         <forceEntry name="Armored Train Detachment" id="cd9f-9d4b-8425-d8ca" hidden="false">
@@ -1199,6 +1301,11 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="2" field="284c-5503-e866-a2e0">
+              <conditions>
+                <condition type="atLeast" value="5" field="selections" scope="force" childId="368f-586d-f503-841e" shared="true" childName="CORE Rail" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </forceEntry>
@@ -1256,6 +1363,11 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="2" field="2f82-38f2-c47a-db0a">
+              <conditions>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="4c05-06c2-f6ab-92b1" shared="true" childName="CORE Starborne" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </forceEntry>
@@ -1853,14 +1965,14 @@
 Units do not gain the benefit of Cover for touching this Fortification.
 
 
-Linear, Heavy Terrain</characteristic>
+Linear, Obscuring, Heavy Terrain</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">1.5&quot; x 1.5&quot; x 1.5&quot;</characteristic>
               </characteristics>
             </profile>
             <profile name="Barbed Wire " typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="5a68-bd29-2957-0e88">
               <characteristics>
                 <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">1</characteristic>
-                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Deploy three of these per Build Action within 1” of each other. Troops that touch this Fortification must immediately end their Movement Action.
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Deploy three of these per Build Action within 1” of each other. Troops and Cavalry Units that touch this Fortification must immediately end their Movement Action.
 
 
 Linear, Light Terrain, Obscuring, Rough,</characteristic>
@@ -1904,8 +2016,11 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
             </profile>
             <profile name="Supply Depot Tent (USA)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="b4e1-5e93-5f9a-a15c">
               <characteristics>
-                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">3</characteristic>
-                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">At the start of each Command Phase gain a Supply Point. Friendly Fortifications within 12&quot; gain the Supply Line keyword.</characteristic>
+                <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">At the start of each Command Phase gain a Supply Point. Friendly Units within 3&quot; of this Fortification may perform the Supply Gathering Action as a Standard Action. Friendly Fortifications within 12&quot; gain the Supply Line keyword.
+
+
+Area, Light Terrain, Impassable</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">2.5” x 2.5” x 2”</characteristic>
               </characteristics>
               <modifiers>

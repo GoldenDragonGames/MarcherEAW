@@ -354,7 +354,7 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="8a0d-4c81-fae8-ea39" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="unit" childId="3598-8a56-38dd-4abf" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -902,7 +902,7 @@
       </constraints>
       <rules>
         <rule name="Battery" id="d599-7833-60ad-52a3" hidden="false">
-          <description>This Unit may take up to 3 Models. This Unit may not be Towed by Units with fewer Models than it has. This Unit counts for 2 CORE Slots in this Platoon.</description>
+          <description>This Unit may take 2 or 3 Models. This Unit may not be Towed by Units with fewer Models than it has. This Unit counts for 2 CORE Slots in this Platoon.</description>
         </rule>
       </rules>
       <modifiers>
@@ -1348,10 +1348,15 @@
       <modifiers>
         <modifier type="increment" value="15" field="Points">
           <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false"/>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
           </repeats>
         </modifier>
-        <modifier type="increment" value="2" field="c7f9-7a63-2269-6a82" affects="self.entries.profiles.Model" scope="unit"/>
+        <modifier type="increment" value="2" field="c7f9-7a63-2269-6a82" affects="self.entries.profiles.Model" scope="parent"/>
+        <modifier type="increment" value="5" field="Points">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true" childName="Hero"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flexible Hero" hidden="false" id="6b7f-275e-7716-94b3">
@@ -1427,7 +1432,7 @@
         <modifier type="add" value="6ea8-04f4-b21b-7fcf" field="category" scope="parent"/>
         <modifier type="set" value="25" field="Points">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="unit" childId="33a5-8b7e-49bb-c30d" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="33a5-8b7e-49bb-c30d" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1544,7 +1549,7 @@
     <selectionEntry type="upgrade" import="true" name="Incendiary Rounds" hidden="false" id="27be-07c8-8d7c-0114">
       <rules>
         <rule name="Incendiary Rounds" id="9804-b713-4607-1219" hidden="false">
-          <description>Once per Game, when making a Direct Fire or Indirect Fire Attack with this Unit, you may Expend this Round. If you do, apply a Flames Token to all Units Targeted by this Attack.</description>
+          <description>Once per Game, when making a Direct Fire or Indirect Fire Attack with this Unit, you may Expend this Round. If you do, apply a Burning Token to all Units Targeted by this Attack.</description>
         </rule>
       </rules>
       <constraints>
@@ -1643,7 +1648,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>25mm base; Units within 6” of this Token gain a level of Obscured. Attacks passing through this 6” radius are considered to be taken through Obscuring terrain. At the beginning of the Command Phase, this Token Drifts, if you roll a 1 to Drift this Token is removed. If this Token has Drifted before, instead, remove this Token.</description>
     </rule>
     <rule name="Reinforced" id="8980-2d6d-00bc-ee76" hidden="false">
-      <description>This Unit&apos;s Cover Level is improved by 1.</description>
+      <description>This Unit&apos;s Cover Level is improved by 1. This Cover applies in Melee. This Rule does not stack.</description>
     </rule>
     <rule name="Nominate Field Commander" id="653b-4795-0602-9a08" hidden="false">
       <description>This Unit is your Field Commander. (This Unit must have the highest Officer rank in your Army or be a Hero).</description>
@@ -1729,7 +1734,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     <profile name="Stun Grenade" typeId="Weapon" typeName="Weapon" hidden="false" id="9603-6682-754d-f07b">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">8&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1D5</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">0</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Stun Grenade, Close In</characteristic>

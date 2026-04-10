@@ -51,13 +51,13 @@
       <description>After resolving an Attack with this Weapon, you may roll a X+ check to see if the lightning jumps. On a success, select the nearest non-Flying Unit that is no more than 1D5&quot;+2 away from any Model in the previously Attacked Unit and that has not been targeted by this Weapon this Activation. Roll an Attack with this Weapon against that Unit as well. This may be done multiple times. Each time the lightning jumps, increase the Check requirement by +1.</description>
     </rule>
     <rule name="Bombard" id="0091-17ea-a67a-1ae9" hidden="false">
-      <description>Whenever a Unit makes an Attack with this Weapon, after the Attack has been resolved, you may apply a Bombard Token to all Terrain Features within the zone of this Weapon&apos;s Blast Token. Tokens may only be applied to Terrain Features with a Cover Score of X or less. For each Bombard Token a Terrain Feature has, its Cover Score is reduced by one. If a Terrain Feature&apos;s Cover Score is lowered to 0, it is removed from the Battlefield.</description>
+      <description>After resolving an Attack with this Weapon, make a Bombard Check for each Terrain Feature that was within the Radius of that Attack&apos;s Blast Token. When rolling Bombard Checks for this Weapon, +X to the check.</description>
     </rule>
     <rule name="Charge!" id="6a90-de57-2154-3db3" hidden="false">
       <description>When a Unit equipped with this Weapon enters Engagement Range of an Enemy Unit, it may Immediately perform a Free Melee Attack Action with this Weapon against that Unit.</description>
     </rule>
     <rule name="Cleave" id="039c-7032-df73-62bf" hidden="false">
-      <description>Damage from this Weapon may spill over to one additional Model.</description>
+      <description>Excess damage from this Weapon may spill over to one additional Model.</description>
     </rule>
     <rule name="Close In" id="6f53-dabe-1243-14cf" hidden="false">
       <description>When making an Attack with this Weapon, Units targeted by this Attack do not receive the benefit of Cover.</description>
@@ -185,10 +185,16 @@ Once all effects are resolved, remove all tokens from this Unit.</description>
       <description>Roll a 4+ Check on a D10, on a failure, one Model in this Unit flees and is removed from the Battlefield.</description>
     </rule>
     <rule name="Suppression Check" id="3427-2463-7d70-6479" hidden="false">
-      <description>Roll a D10, on an 7+, shed this Token.</description>
+      <description>Roll a D10, on an 8+, shed this Token.</description>
     </rule>
     <rule name="Spin Up" id="57cc-2904-33dc-1450" hidden="false">
       <description>When performing an Attack Action with this Weapon, you may expend any number of additional Actions. For each that you do, add another instance of this Weapon to the Attack pool.</description>
+    </rule>
+    <rule name="Bombard Check" id="bd31-32b8-cc8b-a1ce" hidden="false">
+      <description>For each level of Cover this Terrain Feature has, roll a 7+ check. If all Checks are successful, apply a Bombard Token to this Terrain Feature.</description>
+    </rule>
+    <rule name="Bombard Token" id="239d-adc3-4bac-1f1b" hidden="false">
+      <description>For each Bombard Token a Terrain Feature has, its Cover Level is reduced by one. If a Terrain Feature&apos;s Cover Level is lowered to 0, it is destroyed and removed from the Battlefield.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

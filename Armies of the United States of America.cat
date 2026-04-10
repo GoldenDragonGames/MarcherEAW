@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d372-9028-aa84-9c11" name="Armies of the United States of America" revision="3" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d372-9028-aa84-9c11" name="Forces of the United States of America" revision="3" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="063e-8d8c-0eee-7d05" name="G.I. Infantry Squad" hidden="false" collective="false" import="true" targetId="550f-1a9e-b56d-c261" type="selectionEntry">
       <categoryLinks>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="a083-146b-9fce-0bb8" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="1864-43d7-3155-114a" primary="false" name="Troop"/>
         <categoryLink targetId="4455-94a1-ea5e-b9ec" id="4527-24d8-ef31-920b" primary="false" name="USA"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="cfde-bf1e-6cb2-276b" primary="false" name="AUX Mechanized"/>
         <categoryLink targetId="b3c6-65b4-b49c-a828" id="9247-eb21-a319-89ee" primary="false" name="AUX Starborne"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="339e-2155-a1f5-343f" primary="false" name="CORE Mechanized"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
@@ -898,7 +898,7 @@
         <categoryLink targetId="b200-6914-09f3-4db0" id="fecd-9c55-fa08-3f39" primary="true" name="Army Specialization"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="AEF Cavalry 9th Concordian Regiment “Yellowjackets”" hidden="false" id="d989-6b35-886a-a5f7" type="selectionEntry" targetId="7b56-cd3e-ba27-84a9" sortIndex="7">
+    <entryLink import="true" name="AEF Cavalry 29th Concordian Regiment “Yellowjackets”" hidden="false" id="d989-6b35-886a-a5f7" type="selectionEntry" targetId="7b56-cd3e-ba27-84a9" sortIndex="7">
       <categoryLinks>
         <categoryLink targetId="b200-6914-09f3-4db0" id="87fd-d83e-f6f8-c58b" primary="true" name="Army Specialization"/>
       </categoryLinks>
@@ -1087,9 +1087,14 @@
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="34ba-1720-6fa5-fe76" shared="true" includeChildSelections="true" childName="Starborne Air Support Platoon"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -3082,7 +3087,7 @@
             <profile name="Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7027-d11c-027a-d22f">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x G.I. Staff Sergeant, 7-9x G.I. Riflemen, 0-2x G.I. Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (AUX) Starborne, (AUX) Mechanized, Troop, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">USA, (CORE) Infantry, (CORE) Mechanized, (AUX) Starborne, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10-12</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -4817,6 +4822,11 @@
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="cb67-d552-68c3-f97a">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <profiles>
                 <profile name="M150 Heavy Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d9f3-32b8-b786-239d">
@@ -4870,7 +4880,7 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="432f-f2c9-9d68-5673" hidden="false" collective="false" import="true" defaultSelectionEntryId="8992-4f27-423d-0644">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Mortar Team" hidden="false" id="8992-4f27-423d-0644" collective="false" defaultAmount="2">
+                <selectionEntry type="model" import="true" name="Mortar Team" hidden="false" id="8992-4f27-423d-0644" collective="false" defaultAmount="2">
                   <constraints>
                     <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3a21-5bd2-9143-9622-min" includeChildSelections="false"/>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3a21-5bd2-9143-9622-max" includeChildSelections="false"/>
@@ -5240,6 +5250,11 @@
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="f463-9c3f-c71d-197f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -5343,6 +5358,11 @@
               </costs>
               <modifiers>
                 <modifier type="set" value="3" field="a8a5-5883-4e72-01b3">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="f4b3-e431-1c9e-0686">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -5544,6 +5564,11 @@
               </costs>
               <modifiers>
                 <modifier type="set" value="3" field="97d4-f443-df4b-d44a">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="69c4-84d2-fd0c-8a8a">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -7616,6 +7641,11 @@
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="ab98-9aba-46d6-3878">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -7995,7 +8025,7 @@
                   <characteristics>
                     <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
                     <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">16</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">25</characteristic>
                   </characteristics>
                 </profile>
@@ -8097,6 +8127,11 @@
               </constraints>
               <modifiers>
                 <modifier type="set" value="3" field="d869-16ee-b669-3ec7">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="e8e4-3893-06c6-e68a">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -9437,6 +9472,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="448b-5924-0c1d-b5bd-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Jump Packs" hidden="false" id="c7a7-9eed-2756-e9ab" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Formation (Specified)" id="127c-6e7c-59d5-8298" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
@@ -9459,7 +9495,7 @@
             </profile>
             <profile name="First Sergeant Jake McNiece" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="29fa-f579-5fdf-029d">
               <characteristics>
-                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">USA, (CORE) Mechanized, Attache (Troop), Hero, Command</characteristic>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">USA, (CORE) Mechanized, (CORE) Starborne, Attache (Troop), Hero, Command</characteristic>
                 <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
@@ -12259,7 +12295,7 @@ When a Troops Unit disembarks (except as a result of a Bailout), that unit is tr
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="AEF Cavalry 9th Concordian Regiment “Yellowjackets”" hidden="false" id="7b56-cd3e-ba27-84a9" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="AEF Cavalry 29th Concordian Regiment “Yellowjackets”" hidden="false" id="7b56-cd3e-ba27-84a9" sortIndex="7">
           <rules>
             <rule name="Hold Out For The Cavalry" id="b78c-31c5-06bb-3e76" hidden="false">
               <description>Before deployment, select 1 platoon in your army. That platoon is the only one that will be deployed during the first setup phase. No units in this platoon may be placed En Route for any reason. All other units in your army are En Route, using the Sound The Bugles rule for deployment in place of any other rule they may have for En Route deployment.</description>

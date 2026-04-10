@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="dd1d-4e84-685a-d547" name="Armies of the Russian Empire" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" revision="1" authorName="Golden Dragon Games Team" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net">
+<catalogue library="false" id="dd1d-4e84-685a-d547" name="Forces of the Russian Empire" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" revision="1" authorName="Golden Dragon Games Team" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Officer Seniority" hidden="false" id="c0d1-f953-7689-79e6" collective="true">
       <selectionEntryGroups>
@@ -1661,10 +1661,10 @@
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="7a85-858b-2243-042d" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="cbbe-d091-0285-a390" primary="false" name="RUS"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="e1af-57b9-2fe5-dc0b" primary="false" name="Troop"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="afc4-1049-ca2b-739d" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="aad3-16dd-f228-03ad" primary="false" name="CORE Mechanized"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
@@ -2223,6 +2223,7 @@
       <categoryLinks>
         <categoryLink targetId="8679-d614-ae03-de2c" id="01e0-15a0-10e3-d3dd" primary="true" name="CORE Artillery"/>
         <categoryLink targetId="c2bc-81f4-b62b-dc46" id="f441-f792-b182-915e" primary="false" name="Carriage"/>
+        <categoryLink targetId="6458-4093-473e-e12f" id="eb9a-3cc4-e313-a29c" primary="false" name="Siege"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Armored Train Carriage" hidden="false" id="ef06-ff7e-476e-3af9" type="selectionEntry" targetId="ec3a-7d0a-7954-33db">
@@ -2993,6 +2994,11 @@ This Unit may not take Upgrades.</description>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="8ee3-4ff5-2399-a336">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <profiles>
                 <profile name="U-19 &quot;St. Barbara&quot; Tracked Howitzer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="74df-9d5f-5f11-cd5b">
@@ -3119,6 +3125,11 @@ This Unit may not take Upgrades.</description>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="138a-a637-bf40-62e1">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <profiles>
                 <profile name="M-27 Regimental Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3c98-b19b-8599-a5c8">
@@ -3168,7 +3179,7 @@ This Unit may not take Upgrades.</description>
             <profile name="M-27 Regimental Gun Carriage/Battery" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="fa1a-e3d3-cf92-0430">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x M-27 Regimental Gun Carriages</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Infantry, Carriage, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, (AUX) Infantry, Carriage, Siege, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -3921,6 +3932,10 @@ This Unit may not take Upgrades.</description>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf1a-c60a-ad33-0146-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf1a-c60a-ad33-0146-max" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -4658,7 +4673,7 @@ This Unit may not take Upgrades.</description>
             <profile name="Guards Grenadiers Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="8478-524e-993f-196c">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Grenader Yefreitor, 5-9x Grenader, &amp; 0-4x Grenader Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Mechanized, (AUX) Armor, Troop, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (CORE) Mechanized, (AUX) Armor, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -6327,6 +6342,11 @@ This Unit may not take Upgrades.</description>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="3eab-0a6f-e90d-2539">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <profiles>
                 <profile name="M-39 Light Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bfd8-1236-4d12-530f">
@@ -6432,6 +6452,11 @@ This Unit may not take Upgrades.</description>
               </entryLinks>
               <modifiers>
                 <modifier type="set" value="3" field="5013-1b95-598c-ceec">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="9f13-9707-732e-e1de">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -8197,7 +8222,6 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Officer Seniority" hidden="false" id="963b-aaa6-dbcb-f21e" type="selectionEntry" targetId="c0d1-f953-7689-79e6"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="9f17-3b9c-ad21-7493" type="selectionEntryGroup" targetId="76a7-ae12-5d20-f79a"/>
             <entryLink import="true" name="Command Car" hidden="false" id="45dd-69d8-3c10-719e" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
             <entryLink import="true" name="Fixed Loadout" hidden="false" id="2061-3cf7-1434-d571" type="selectionEntry" targetId="3598-8a56-38dd-4abf"/>
@@ -8650,7 +8674,7 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
             <selectionEntry type="upgrade" import="true" name="Tsar&apos;s Standard" hidden="false" id="0af7-b756-bcb4-0cbd">
               <rules>
                 <rule name="Tsar&apos;s Standard" id="41b2-f1bd-2faa-654d" hidden="false">
-                  <description>Friendly Units within 12&quot; of this one are affected by one fewer Category Level of the Blizzard.</description>
+                  <description>Friendly Units within 12&quot; of the Tsar&apos;s Standard are affected by one fewer Category Level of the Blizzard.</description>
                 </rule>
               </rules>
               <costs>

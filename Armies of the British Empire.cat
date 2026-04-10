@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="381c-41bb-e273-4cf0" name="Armies of the British Empire" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="381c-41bb-e273-4cf0" name="Forces of the British Empire" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Command" id="b51d-826a-88b7-3743" hidden="false">
       <selectionEntries>
@@ -50,7 +50,7 @@
             <profile name="SAS Commando Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7e0a-69b7-c0a0-df11">
               <characteristics>
                 <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
@@ -697,7 +697,7 @@
             <profile name="Automaton Infantry Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a3fd-55ff-d437-7391">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Tommybots Section Leader, 7-9x Tommybots, 0-2x Tommybot Gunners</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, (CORE) Pacification, (AUX) Mechanized, (AUX) Artillery, (AUX) Support, Troop, Automaton, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">BRE, (CORE) Infantry, (CORE) Pacification, (CORE) Mechanized, (AUX) Artillery, (AUX) Support, Troop, Automaton, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -705,13 +705,6 @@
             </profile>
           </profiles>
           <rules>
-            <rule name="Autonomous Programming" id="9333-c4e7-dd09-c371" hidden="false">
-              <description>* If this Unit takes the Move Action, it must move towards either the nearest Enemy Unit or the nearest Objective that is not under your control. 
-* When this Unit takes the Attack Action it must Attack the nearest Enemy Unit. 
-* This Unit may not take the Aim Action or spend Aim tokens.
-* This Unit may not receive the benefit of Cover.
-* This Unit may not gain extra actions from Orders.</description>
-            </rule>
             <rule name="Steelhearts" id="51d9-26ed-0a89-2dc4" hidden="false">
               <description>This Unit may not be Suppressed or Concussed. This Unit treats all Transports as if they have the Safe Bailout Special Rule.</description>
             </rule>
@@ -731,6 +724,7 @@
           </costs>
           <infoLinks>
             <infoLink name="Troop Actions" id="c00e-5faf-0644-bb4d" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="Autonomous Programming (Troop)" id="b9e6-7f12-e072-0e9c" hidden="false" type="rule" targetId="345a-8bf0-0603-a636"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="ea35-af4d-a512-48b7" primary="false" name="Medium"/>
@@ -2692,6 +2686,7 @@
           </entryLinks>
           <infoLinks>
             <infoLink name="Crewed Weapon Troop Actions" id="a12a-d07d-a3ab-1f40" hidden="false" type="profile" targetId="7959-03e6-fdc4-3adf"/>
+            <infoLink name="Autonomous Programming (Troop)" id="acd5-0d21-74e3-8563" hidden="false" type="rule" targetId="345a-8bf0-0603-a636"/>
           </infoLinks>
           <profiles>
             <profile name="Automaton Heavy Machine Gun Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a41c-fef0-dcd7-b72f">
@@ -2710,15 +2705,6 @@
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
-          <rules>
-            <rule name="Autonomous Programming" id="b0de-3709-8762-5466" hidden="false">
-              <description>* If this Unit takes the Move Action, it must move towards either the nearest Enemy Unit or the nearest Objective that is not under your control. 
-* When this Unit takes the Attack Action it must Attack the nearest Enemy Unit. 
-* This Unit may not take the Aim Action or spend Aim tokens.
-* This Unit may not receive the benefit of Cover.
-* This Unit may not gain extra actions from Orders.</description>
-            </rule>
-          </rules>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="b90e-b806-b530-3f37" primary="false" name="Medium"/>
           </categoryLinks>
@@ -3234,6 +3220,11 @@
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="8dfc-8053-b2d5-4c0e">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapon Options" id="2c4e-6668-7e8e-c381" hidden="false" defaultSelectionEntryId="d53e-3695-6bfd-c491">
@@ -3349,6 +3340,11 @@
               </selectionEntryGroups>
               <modifiers>
                 <modifier type="set" value="3" field="af52-fc96-f314-2bdd">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="0f7e-2f7c-9594-3f3b">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -3563,6 +3559,11 @@
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="097f-4098-97d3-df52">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -3642,6 +3643,11 @@
               </entryLinks>
               <modifiers>
                 <modifier type="set" value="3" field="d502-4aae-3eda-5031">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="971e-0abf-8c7b-a454">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -5159,7 +5165,7 @@
                     <profile name="Commando Spotter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="daa1-4a58-6c48-0648">
                       <characteristics>
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -6389,11 +6395,11 @@ When this Model is Unleashed, the following effects happen:
         <categoryLink targetId="239b-db47-17c9-4f36" id="0386-3c08-d4f2-586a" primary="false" name="Automaton"/>
         <categoryLink targetId="a9bf-60cd-c79d-de30" id="de5c-1d7c-bfe6-cb28" primary="false" name="CORE Pacification"/>
         <categoryLink targetId="9565-ab3a-3c1b-b959" id="dcce-1113-8fe5-aedc" primary="false" name="AUX Artillery"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="8949-0c3e-0e22-caad" primary="false" name="AUX Mechanized"/>
         <categoryLink targetId="48f5-3131-be0b-5951" id="3ec9-d789-baad-12c3" primary="false" name="AUX Support"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="a6c4-14de-2a00-7e84" primary="false" name="CORE Mechanized"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
@@ -7155,7 +7161,7 @@ When this Model is Unleashed, the following effects happen:
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">9</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 7, Inaccurate</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 7, Close In, Inaccurate</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -7305,7 +7311,7 @@ When this Model is Unleashed, the following effects happen:
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">15</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 6, Inaccurate</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 6, Close In, Inaccurate</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -7315,7 +7321,7 @@ When this Model is Unleashed, the following effects happen:
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">12</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 6, Inaccurate</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 6, Close In, Inaccurate</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -7325,7 +7331,7 @@ When this Model is Unleashed, the following effects happen:
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1D5-1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 8, Inaccurate</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Arc Lightning 8, Close In, Inaccurate</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Emitter, Energy</characteristic>
       </characteristics>
     </profile>
@@ -7739,6 +7745,7 @@ When this Model is Unleashed, the following effects happen:
           </modifiers>
         </infoLink>
         <infoLink name="Inaccurate" id="c5b8-6802-d98a-7b98" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
+        <infoLink name="Close In" id="2771-3024-7cb2-1358" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="55"/>
@@ -7983,6 +7990,7 @@ When this Model is Unleashed, the following effects happen:
           </modifiers>
         </infoLink>
         <infoLink name="Inaccurate" id="c5bb-97f0-f42b-4781" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
+        <infoLink name="Close In" id="30d6-b909-331b-cb60" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="27"/>
@@ -8000,6 +8008,7 @@ When this Model is Unleashed, the following effects happen:
           </modifiers>
         </infoLink>
         <infoLink name="Inaccurate" id="a7f9-ebe3-bdd3-79b5" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
+        <infoLink name="Close In" id="d731-18ae-0aaa-5582" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="69"/>
@@ -8017,6 +8026,7 @@ When this Model is Unleashed, the following effects happen:
           </modifiers>
         </infoLink>
         <infoLink name="Inaccurate" id="c763-9e82-a4cf-3eb7" hidden="false" type="rule" targetId="3da9-a39d-1d0c-5ea1"/>
+        <infoLink name="Close In" id="f8a2-a5bd-7e2b-1fba" hidden="false" type="rule" targetId="6f53-dabe-1243-14cf"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="86"/>
@@ -8360,7 +8370,7 @@ When this Model is Unleashed, the following effects happen:
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Autonomous Loader" id="8b0b-7f2e-cc32-90e6" hidden="false">
-      <description>You may discard a G.R.A.I.L die of value 8 or higher, if you do, this Unit may ignore the Difficult to Use Special Rule for the remainder of its Activation.</description>
+      <description>You may discard a G.R.A.I.L die of value 8 or higher, if you do, this Unit may designate an additional Weapon as a Primary Weapon.</description>
     </rule>
     <rule name="Orbital Drop Vehicle" id="87cb-9806-204d-cf21" hidden="false">
       <description>This Unit may only be Embarked in a Mk. VII &quot;Merlin&quot; Orbital Insertion Capsule. This Unit may not be destroyed when Bailing Out of a Transport, instead, roll a D10, this Unit loses that many HP.</description>
@@ -8372,12 +8382,14 @@ When this Model is Unleashed, the following effects happen:
       <description>When this Unit is Attacked by a Weapon with the Arc-Lightning Special Rule, reduce that Weapon&apos;s Damage profile to 1 until the Attack against this Unit is Resolved.</description>
     </rule>
     <rule name="Autonomous Programming: (Carriage)" id="6ada-912d-2faa-97b8" hidden="false">
-      <description>* When this Unit takes the Attack Action it must Attack the Enemy Unit with the highest base Armor profile that it can see.
+      <description>Due to this Unit&apos;s nature as an Automaton, it is bound by the following Rules:
+* When this Unit takes the Attack Action it must Attack the Enemy Unit with the highest base Armor profile that it can see.
 * This Unit may not take the Aim Action or spend Aim tokens.
 * This Unit may not gain extra actions from Orders.</description>
     </rule>
     <rule name="Autonomous Programming: (Siege)" id="b50f-0633-7635-7e05" hidden="false">
-      <description>* This Unit must place Blast Tokens within 6&quot; of an Objective.
+      <description>Due to this Unit&apos;s nature as an Automaton, it is bound by the following Rules:
+* This Unit must place Blast Tokens within 6&quot; of an Objective.
 * This Unit may not take the Adjust Coordinates Action as a Free Action.
 * This Unit may not take the Aim Action or spend Aim tokens.
 * This Unit may not gain extra actions from Orders.</description>
@@ -8398,7 +8410,8 @@ When this Model is Unleashed, the following effects happen:
       <description>This Unit may gain the benefit of Cover. If this Unit has not moved more than 3&quot; this turn, it gains a Level of Cover until the next time it moves.</description>
     </rule>
     <rule name="Autonomous Programming (Troop)" id="345a-8bf0-0603-a636" hidden="false">
-      <description>* If this Unit takes the Move Action, it must move towards either the nearest Enemy Unit or the nearest Objective that is not under your control. 
+      <description>Due to this Unit&apos;s nature as an Automaton, it is bound by the following Rules:
+* If this Unit takes the Move Action, it must move towards either the nearest Enemy Unit or the nearest Objective that is not under your control. 
 * When this Unit takes the Attack Action it must Attack the nearest Enemy Unit. 
 * This Unit may not take the Aim Action or spend Aim tokens.
 * This Unit may not receive the benefit of Cover.
@@ -8413,7 +8426,7 @@ When this Model is Unleashed, the following effects happen:
       <description>During the first Command Phase, roll 5 dice, and then set them aside in a pool. Reroll any duplicates until all 5 are unique. These are your G.R.A.I.L dice.
 
 
-At any point during the game before you have rolled dice, a G.R.A.I.L die may be used to replace the result of one roll. (This is considered to be an unmodified roll.)
+At any point during the game before you are to roll dice, a G.R.A.I.L die may be used to replace the result of one die. (This is considered to be an unmodified roll.)
 
 
 You may not spend more than one G.R.A.I.L dice per roll or check. 

@@ -29,19 +29,19 @@
       <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, you may deploy this Unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
     </rule>
     <rule name="Catastrophic Detonation" id="1e80-eb25-7926-0850" hidden="false">
-      <description>When this Unit is destroyed, roll a D10, on a roll of 6+, perform an Attack Action (Profile:H5, AP5, D5) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
+      <description>When this Unit is destroyed, roll a D10, on a roll of 6+, perform an Attack Action (Profile:H:5, AP:5, D:5, High Explosive) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
     </rule>
     <rule name="Coaxial Mount" id="427c-1744-659c-f265" hidden="false">
       <description>Weapons equipped in Coaxial Mounts may be selected to fire alongside a Difficult to Use Weapon, so long as they select the same target.</description>
     </rule>
     <rule name="Command Car" id="b3a8-6d2c-8217-042c" hidden="false">
-      <description>This Unit, and all Units within 12&quot; of this Unit, are within the Radio Network. Once per activation, when this Unit issues an Order, choose a different Unit within the Radio Network, that Unit also gains an Order Token.</description>
+      <description>This Unit, and all Units within 12&quot; of this Unit, are within the Radio Network. Once per Round, when this Unit issues an Order, choose a different Unit within the Radio Network, that Unit also gains an Order Token.</description>
     </rule>
     <rule name="Formation (Specified)" id="5ffd-5449-427f-b767" hidden="false">
       <description>This Model may only be Attached to Units with Name or Keyword(s) listed:</description>
     </rule>
     <rule name="Cook Off" id="6b8c-f368-911d-de1c" hidden="false">
-      <description>When this Unit is destroyed, roll a D10, on a roll of 8+, perform an Attack Action (Profile:H4, AP4, D4) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
+      <description>When this Unit is destroyed, roll a D10, on a roll of 8+, perform an Attack Action (Profile:H:4, AP:4, D:4, High Explosive) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
     </rule>
     <rule name="Critical Shot" id="03aa-1bbc-a35a-39d0" hidden="false">
       <description>For each unmodified 10 you roll when Attacking with this Weapon, score an additional Hit.</description>
@@ -162,7 +162,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
     </rule>
     <rule name="Raise the Banner" id="8126-75b0-4721-8842" hidden="false">
-      <description>All Units without 12&quot; of this Flag may reroll 1s and 2s for Suppression Checks.</description>
+      <description>All Units within 12&quot; of this Flag may reroll 1s and 2s for Suppression Checks.</description>
     </rule>
     <rule name="Rapid Deployment" id="bed7-c4f3-15ed-2888" hidden="false">
       <description>At the start of the first Action Phase, this Unit may immediately take a Free Move action. They may not end this movement within Engagement Range of an Enemy Unit.</description>
@@ -233,7 +233,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, you may deploy this Unit on any Water Feature or Depths Water Feature that is larger than it. If it is Deployed on a Depths Water Feature, it may be within 8&quot; of Enemy Units, otherwise, it must be deployed at least 8&quot; away from all Enemy Units.</description>
     </rule>
     <rule name="Crash Landing" id="3d65-30df-710f-6fff" hidden="false">
-      <description>When this Unit is destroyed, remove the Model from the battlefield and place a 25mm token in the center of where its base was. This token Drifts, but when determining the distance this token Drifts, add this Unit&apos;s Movement Value to the result. Perform an Attack Action (Profile:H5, AP5, D5) against all Units within 3&quot; of the Token along its entire path. This Model does not leave Wreckage on the Battlefield.</description>
+      <description>When this Unit is destroyed, remove the Model from the battlefield and place a 25mm token in the center of where its base was. This token Drifts, but when determining the distance this token Drifts, add this Unit&apos;s Movement Value to the result. Perform an Attack Action (Profile:H:5, AP:5, D:5, High Explosive) against all Units within 3&quot; of the Token along its entire path. This Model does not leave Wreckage on the Battlefield.</description>
     </rule>
     <rule name="Bailout (Aerial)" id="dfa3-76f0-a139-f719" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, if those Units do not have the Flying Keyword or the Jump Packs Special Rule, they are Destroyed. If they do, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
@@ -1487,6 +1487,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <infoLinks>
         <infoLink name="Fixed Loadout" id="8877-0bf2-b781-7f87" hidden="false" type="rule" targetId="ef41-70ca-bb42-13b3"/>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3572-89df-c7c7-ada5-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3572-89df-c7c7-ada5-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Untrained" hidden="false" id="bf3c-7d43-835f-bf5a">
       <infoLinks>

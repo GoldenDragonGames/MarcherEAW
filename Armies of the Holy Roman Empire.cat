@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="83f3-eeee-b9fd-f78b" name="Armies of the Holy Roman Empire" revision="3" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="83f3-eeee-b9fd-f78b" name="Forces of the Holy Roman Empire" revision="3" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="b007-dd96-94d4-4b3b" name="Landwehr Squad" hidden="false" collective="false" import="true" targetId="a7a0-9f96-37f9-f36e" type="selectionEntry">
       <categoryLinks>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="4639-1aea-188c-e7c7" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="a07d-e8c2-3463-46ea" primary="false" name="Troop"/>
         <categoryLink targetId="496e-47e7-7a85-4016" id="b35c-244f-c594-acbf" primary="false" name="HRE"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="c676-eb62-792d-9e97" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="c8e2-5283-dfb2-d55e" primary="false" name="CORE Mechanized"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
           </conditions>
@@ -1700,7 +1700,7 @@
     <selectionEntry type="upgrade" import="true" name="Habsburg Banner" hidden="false" id="c9e4-972d-26b8-f24b">
       <rules>
         <rule name="Gott erhalte Otto den Kaiser" id="5ea0-f2c9-53b5-72a4" hidden="false">
-          <description>When Friendly Units within 12&quot; of this one Activate their Shield Generators, improve their Bulwark by 1.</description>
+          <description>When Friendly Units within 12&quot; of a Habsburg Banner Activate their Shield Generators, improve their Bulwark by 1.</description>
         </rule>
       </rules>
       <costs>
@@ -3176,7 +3176,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <profile name="Landwehr Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="09c3-1ea2-655c-d0c6">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Unteroffizier, 7-9x Gefreiters, &amp; 0-2x Stabsgefreiters</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (AUX) Mechanized, Troop, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">HRE, (CORE) Infantry, (CORE) Mechanized, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -4617,6 +4617,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="7354-f871-c485-6569">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -4701,6 +4706,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
               <modifiers>
                 <modifier type="set" value="3" field="dd47-6a83-40a4-c9bd">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="9f61-5965-213e-32c4">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -5969,6 +5979,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </costs>
               <modifiers>
                 <modifier type="set" value="3" field="ea50-9eab-00fc-7e09">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="24fd-e48c-e313-c4fb">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -8062,16 +8077,16 @@ This Unit may reroll 1s and 2s for Armor Penetration Checks against the Challeng
         <selectionEntry type="upgrade" import="true" name="1st Royal Teuton Division (Konigsberg)" hidden="false" id="0495-ce03-d9cb-7377">
           <rules>
             <rule name="Auditors of Death" id="8af6-88e9-9972-a949" hidden="false">
-              <description>Engineer Units in your Army may use a Standard Action to Tick the Dial In Counter up by 1.
+              <description>During the Command Phase, place an additional blast token for each Engineer, Gun Tractor, or Command unit in your army. These must be split as evenly as possible between all Blast X types in your army.
 
 
-Units with the Siege Sub-Type receive an Aim token if they are within 8&apos;&apos; of a Command Unit or Engineer at the start of their activation.</description>
+Units with the Siege Sub-Type receive an Aim token for every Command or Engineer unit they are within 8&apos;&apos; of at the start of their activation.</description>
             </rule>
             <rule name="Haubitzen!" id="bdef-8b02-3332-0ca6" hidden="false">
-              <description>Command Units in your army gain the Adjust Coordinates action as a Standard Action. 
+              <description>Command Units in your army gain the Adjust Coordinates Action as a Standard Action.
 
 
-When an enemy Unit ends a Movement Action within range of one of your Blast Tokens you may Tick a Dial In Counter down by one on one of your Siege Units.</description>
+After a Siege Unit in your Army performs an Attack Action with an Ordnance Weapon, apply 1D5-2 Suppression Tokens to each Unit that was Attacked by that Weapon, to a minimum of 1.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -8381,9 +8396,9 @@ Troop Units in this Army may shed one Suppression token when they activate their
               </constraints>
               <rules>
                 <rule name="The Kaiser&apos;s Hand" id="75c0-019c-75a5-1887" hidden="false">
-                  <description>During the Command Phase, before Orders are Issued, you may spend 1 Intel, if you do, select a rule from the list below, this Unit gains that effect for the remainder of the Round.
+                  <description>During the Command Phase, before Orders are Issued, you may spend 1 Intel, if you do, select a rule from the list below, this Unit gains that effect for the remainder of the Round, or until this Model is destroyed.
 
-* Interception: Immediately select an Enemy Unit within 24&quot; and Line of Sight, remove all Order Tokens on that Unit, this Unit may gain one of them.
+* Interception: At the beginning of the Action Phase, select an Enemy Unit within 24&quot; and Line of Sight, remove all Order Tokens on that Unit, this Unit may gain one of them.
 
 * Jumbled Static: Whenever an Enemy Unit within the Radio Network is issued an Order, roll 1d10, on a 7+, that Order is not issued.
 

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4fc5-7684-3b46-838d" name="Armies of the New French Republic" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net">
+<catalogue id="4fc5-7684-3b46-838d" name="Forces of the New French Republic" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="goldendragongames.net">
   <entryLinks>
     <entryLink id="30e8-c7df-372d-51c0" name="Republican Guard Infantry Squad" hidden="false" collective="false" import="true" targetId="8f32-b768-8d36-dcf4" type="selectionEntry">
       <categoryLinks>
         <categoryLink targetId="26a5-76cb-5d13-b4a7" id="0bd8-5753-7de0-8e38" primary="true" name="CORE Infantry"/>
         <categoryLink targetId="6dc4-41a4-7144-d10c" id="fe92-eca9-02b3-ae19" primary="false" name="Troop"/>
         <categoryLink targetId="2018-9722-0c01-f30e" id="c503-0109-afde-2b36" primary="false" name="NFR"/>
-        <categoryLink targetId="c87d-0c37-d91f-b4cd" id="92b0-bd36-a957-bd6c" primary="false" name="AUX Mechanized"/>
+        <categoryLink targetId="7ce6-55a5-44aa-7258" id="4db1-9554-bdc7-5f68" primary="false" name="CORE Mechanized"/>
+        <categoryLink targetId="9565-ab3a-3c1b-b959" id="a113-7864-2517-2a75" primary="false" name="AUX Artillery"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set-primary" value="c87d-0c37-d91f-b4cd" field="category">
+        <modifier type="set-primary" value="7ce6-55a5-44aa-7258" field="category">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="9565-ab3a-3c1b-b959" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="d61b-5a5c-9008-3c0b" shared="true" childName="Artillery Platoon"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1666,7 +1672,7 @@
     <selectionEntry type="upgrade" import="true" name="Tricolor" hidden="false" id="5890-7094-0157-d442">
       <rules>
         <rule name="Tricolor" id="a4a7-57c8-b8a5-a5d7" hidden="false">
-          <description>When a Unit within 12&quot; of this Unit shares an Aim token, if it is the first time this Round, it gains an Aim token.</description>
+          <description>When a Unit within 12&quot; a Tricolor shares an Aim token, if it is the first time this Round, it gains an Aim token.</description>
         </rule>
       </rules>
       <costs>
@@ -3614,7 +3620,7 @@
             <profile name="Republican Guard Infantry Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1c36-436a-1333-26cc">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Republican Guard Sergent, 9-14x Republican Guard Fantassin, 0-2x Republican Guard Fantassin Specialists</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (AUX) Mechanized, Troop, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Infantry, (CORE) Mechanized, (AUX) Artillery, Troop, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10-15</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">2</characteristic>
@@ -4640,7 +4646,7 @@
                         <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
                         <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
                       <comment>Small, Normal</comment>
                     </profile>
@@ -5342,6 +5348,11 @@
               </constraints>
               <modifiers>
                 <modifier type="set" value="3" field="c47d-984f-506b-0a9f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="00c6-14da-75a5-d852">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b34c-a1ac-ba88-6465" shared="true"/>
                   </conditions>
@@ -6948,7 +6959,7 @@ Each time a friendly Vehicle Unit targets a Unit with an Attack Action, add a Hu
               <description>When a Tracked Vehicle Unit Activates, it may remove 1 Suppression Token from any Friendly Units within 8”.
 
 
-Tracked Vehicles are treated as having the Charge! Special Rule and always Attack first when they are Engaged with an Enemy Unit.</description>
+Tracked Vehicles, and all melee weapons they are equipped with, are treated as having the Charge! Special Rule and always Attack first when they are Engaged with an Enemy Unit.</description>
             </rule>
           </rules>
           <modifiers>
