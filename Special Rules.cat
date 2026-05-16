@@ -11,7 +11,7 @@
       <description>As an Action, this Unit may select a piece of Vehicle Wreckage Terrain that it is within 1&quot; of and remove that Model. If it does, gain 5 Supply Points.</description>
     </rule>
     <rule name="Automated Kill-Zone" id="7f86-a20d-20cf-f425" hidden="false">
-      <description>This Unit is always considered to be Overwatching. This Unit may make multiple Overwatch Attacks per round. This Unit may not make multiple Attacks per round against the same target.</description>
+      <description>This Unit is always considered to be Overwatching. This Unit may make two Overwatch Attacks per round. This Unit may receive Order Tokens, if it does, it may spend the Tokens to perform additional Overwatch Actions. This Unit may not make multiple Attacks per round against the same target.</description>
     </rule>
     <rule name="Bailout" id="e024-3b5a-3d53-c103" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 3 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
@@ -26,7 +26,7 @@
       <description>Attacks made against this Unit lower their Damage profile by X to a minimum of 1. Instances of this rule do not stack.</description>
     </rule>
     <rule name="Burrowing" id="7566-ca13-0639-188c" hidden="false">
-      <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, you may deploy this Unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
+      <description>Instead of deploying this Unit at the start of the game, you may declare that this Unit is in En Route. During any Setup Phase after the first Round, place one Taupe Token for Free anywhere on the Battlefield no closer than 8&quot; from an Enemy Unit. This Unit exits that Taupe Token, and must be set up within 3&quot; of it.</description>
     </rule>
     <rule name="Catastrophic Detonation" id="1e80-eb25-7926-0850" hidden="false">
       <description>When this Unit is destroyed, roll a D10, on a roll of 6+, perform an Attack Action (Profile:H:5, AP:5, D:5, High Explosive) against all Units within 3&quot;. If this Attack is performed, this Model does not leave Wreckage on the Battlefield.</description>
@@ -50,7 +50,7 @@
       <description>When this Model moves through Light or Medium terrain, remove it from the battlefield. When this model is set up onto the battlefield you may remove one piece of Light or Medium terrain that falls under its base’s footprint.</description>
     </rule>
     <rule name="Cumbersome" id="a105-2c5d-bb1d-e679" hidden="false">
-      <description>Units with this keyword can not activate until all other units in your army have activated this round.</description>
+      <description>Units with this Special Rule may not be selected to Activate until all other non-Cumbersome Units in your Army have Activated this Round.</description>
     </rule>
     <rule name="Bailout (Dangerous)" id="6100-8e4c-f566-2b4a" hidden="false">
       <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
@@ -108,7 +108,7 @@
       <description>As a Standard Action, gain an Intel Point (IP)</description>
     </rule>
     <rule name="Intelligence" id="814e-ef53-3526-90f8" hidden="false">
-      <description>At the beginning of each command phase gain an Intel point (IP).</description>
+      <description>At the beginning of each Command Phase gain an Intel point (IP).</description>
     </rule>
     <rule name="Light on their Feet" id="14e9-14bf-78dd-c693" hidden="false">
       <description>This Unit may take the Fallback Reaction while losing only a single Action during its following Activation.</description>
@@ -129,10 +129,7 @@
       <description>This Selection does not have a Model, it must Mount a Vehicle or Carriage Unit within its Platoon.</description>
     </rule>
     <rule name="Officer X" id="6de5-545b-2ac4-744e" hidden="false">
-      <description>This Unit may issue X Order(s) to Units within their Platoon or with the same CORE type that it is within 8&quot; of. When it issues an Order to a Unit, that Unit gains an Order Token. Units may not have more than one Order Token.
-
-
-Order Token: This Unit gains one Action. This Token is removed when this Unit ends its Activation.</description>
+      <description>This Unit may issue X Order(s) to Units within their Platoon or with the same CORE type that it is within 8&quot; of. When it issues an Order to a Unit, that Unit gains an Order Token. Units may not have more than one Order Token.</description>
     </rule>
     <rule name="On Assignment" id="0448-1717-5e42-e0e0" hidden="false">
       <description>This Unit has a base of three Actions.</description>
@@ -141,7 +138,7 @@ Order Token: This Unit gains one Action. This Token is removed when this Unit en
       <description>Units embarked within this Transport may take Actions other than Reactions, Build and Capture without disembarking. They may be selected as the Target of Ranged Attacks. Units embarked within this Transport receive X levels of Cover. When making Attacks against Units embarked within this Transport, Line-Of-Sight is drawn to this Model.</description>
     </rule>
     <rule name="Patch-Up" id="296f-6c65-a341-cfab" hidden="false">
-      <description>This Unit may perform the Patch Up Action as a Standard Action or as a Difficult Action. It may not do both in one Activation. As a Standard Action, select a friendly Non-Automaton Troop Unit within 3&quot; (including this unit). That Unit either restores all HP lost by one of its Models or revives a destroyed Model, returning it to the Unit with full HP. As a Difficult Action, you may restore HP to one Model and return one Model, or return two Models. You may not return Attache or Automaton models with this Rule.</description>
+      <description>This Unit may perform the Patch Up Action as a Standard Action or as a Difficult Action. It may not do both in one Activation. As a Standard Action, select a friendly Non-Automaton, Non-Battlesuit Troop Unit within 3&quot; (including this unit). Restore 1D5 worth of HP to that Unit. Destroyed Models may be returned in this way, but all Models in the Unit must be at their maximum HP before another Model may be returned. As a Difficult Action, you may instead return 1D5+3 HP. You may not return Attache or Automaton models with this Rule.</description>
     </rule>
     <rule name="Personal Shield Generator" id="e8c1-89c2-d8a1-75c2" hidden="false">
       <description>Once per Round, as a Reaction, you may Activate this Unit&apos;s Shield Generator. If you do, gain the following effects:
@@ -218,7 +215,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Unit&apos;s Evasion Score is increased by 2. Once per Activation, this Unit may Move as a Free Action, if it does, it may gain the Flying Keyword. At any point during this Unit’s Activation or any of its subsequent Activations it may choose to remove this keyword. This Unit must remove the Flying keyword should it wish to enter Engagement with a Unit without the Flying Keyword.</description>
     </rule>
     <rule name="Battlefield Scanners" id="55ab-d297-8493-eecc" hidden="false">
-      <description>When making an Attack Action this Unit ignores one level of Obscured.</description>
+      <description>When making an Attack Action this Unit ignores one level of Obscuration.</description>
     </rule>
     <rule name="Gun Tractor" id="3420-b82e-13ac-47b2" hidden="false">
       <description>When a Unit this being Towed by this Unit takes the Detach Action, that Unit may make a Free Dash Action.</description>
@@ -264,10 +261,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Model may not be Attached to Units with Name or Keyword(s) listed:</description>
     </rule>
     <rule name="Untrained" id="64d9-bdf9-0795-bbe2" hidden="false">
-      <description>Each time a Suppression Token is applied to this Unit, apply an additional Suppression Token.</description>
+      <description>Each time this Unit attempts to perform an Action, if has already performed two Actions this Round, roll a 6+ Check, on failure, that Action fails.</description>
     </rule>
     <rule name="Armored Personnel Carrier" id="9da2-bcd3-ff52-8355" hidden="false">
       <description>Units that began their Activation within this Unit may take a Free Dash Action to Disembark.</description>
+    </rule>
+    <rule name="Armored Guardian" id="97f8-e657-8b6a-e3cc" hidden="false">
+      <description>Attacks targeting this Model may not apply Suppression Tokens. This Model&apos;s Armor Value may exceed 10.</description>
+    </rule>
+    <rule name="Order Token" id="555b-e260-0d9a-3cef" hidden="false">
+      <description>This Unit gains one Action. This Token is removed when this Unit ends its Activation.</description>
+    </rule>
+    <rule name="Attached Heavy Weapon" id="c1ef-fd70-5e4d-a012" hidden="false">
+      <description>This Model may not be selected to Attack if this Unit has performed a Movement Action this Activation.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -452,7 +458,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Command Squad" hidden="false" id="a200-b89a-7c03-48eb">
+    <selectionEntry type="upgrade" import="true" name="Formation (Specified)" hidden="false" id="a200-b89a-7c03-48eb">
       <infoLinks>
         <infoLink name="Formation (Specified)" id="Command Squad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767"/>
       </infoLinks>
@@ -950,7 +956,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Tank Destroyer" hidden="false" id="true">
+    <selectionEntry type="upgrade" import="true" name="Tank Destroyer" hidden="false" id="a8ba-5c26-f8dd-99cf">
       <infoLinks>
         <infoLink name="Tank Destroyer" id="Tank Destroyer" hidden="false" type="rule" targetId="338c-b939-0d55-cde3"/>
       </infoLinks>

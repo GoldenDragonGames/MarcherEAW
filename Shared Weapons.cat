@@ -20,6 +20,7 @@
     <selectionEntry type="upgrade" import="true" name="Entrenching Tool" hidden="false" id="109e-cea5-0e25-727b" collective="true">
       <infoLinks>
         <infoLink name="Entrenching Tool" id="191c-8f4c-0552-4711" hidden="false" targetId="0b5d-250c-1a7d-1270" type="profile"/>
+        <infoLink name="One-Handed" id="b44d-2018-1a7f-b3bc" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="2"/>
@@ -34,6 +35,36 @@
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combat Shield" hidden="false" id="8766-febd-3b85-6fe9" collective="true">
+      <infoLinks>
+        <infoLink name="Combat Shield" id="71d9-a219-c2ae-95e8" hidden="false" type="profile" targetId="32f2-eb79-77ff-f463"/>
+        <infoLink name="One-Handed" id="b7d4-a351-5a1e-ede6" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="744f-f826-9cb9-d477" type="selectionEntry" targetId="01e5-5a61-0629-9f24"/>
+      </entryLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Reinforced" hidden="false" id="01e5-5a61-0629-9f24">
+      <infoLinks>
+        <infoLink name="Reinforced" id="fe8c-4c8e-b291-e5ef" hidden="false" type="rule" targetId="8980-2d6d-00bc-ee76"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-max" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="3"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -54,7 +85,7 @@
       <description>After resolving an Attack with this Weapon, make a Bombard Check for each Terrain Feature that was within the Radius of that Attack&apos;s Blast Token. When rolling Bombard Checks for this Weapon, +X to the check.</description>
     </rule>
     <rule name="Charge!" id="6a90-de57-2154-3db3" hidden="false">
-      <description>When a Unit equipped with this Weapon enters Engagement Range of an Enemy Unit, it may Immediately perform a Free Melee Attack Action with this Weapon against that Unit.</description>
+      <description>When a Unit equipped with a Weapon with this Special Rule ends a Movement Action within Engagement Range of an Enemy Unit, it may immediately perform a Free Melee Attack Action. If it does, it may only select Weapons with this Special Rule.</description>
     </rule>
     <rule name="Cleave" id="039c-7032-df73-62bf" hidden="false">
       <description>Excess damage from this Weapon may spill over to one additional Model.</description>
@@ -73,8 +104,9 @@ Concussion Token: When this Unit Activates, remove all Concussion Tokens applied
     <rule name="Direct Fire" id="371b-f82b-1fef-54a5" hidden="false">
       <description>When this Weapon is selected to make an Attack, place a Blast Token for each instance of this Weapon within Range and Line of Sight. You must select these Tokens to resolve Attacks with. This Weapon is considered to have the Inaccurate Special Rule.</description>
     </rule>
-    <rule name="Dual Wield" id="2082-d275-920b-519d" hidden="false">
-      <description>In Melee, this Weapon may be selected to Attack with in addition to another Weapon.</description>
+    <rule name="One-Handed" id="2082-d275-920b-519d" hidden="false">
+      <description>Troop Models may select two Weapons to Attack with if both of them have this Special Rule.
+</description>
     </rule>
     <rule name="Flames" id="7235-63bc-0668-6ac4" hidden="false">
       <description>When making an Attack with this weapon, all Hits succeed automatically, then apply a Burning Token. When a Model carrying a Weapon with this Special Rule is Destroyed, apply a Burning Token to the Unit it was a part of, and any Units within 3&quot;.
@@ -82,10 +114,15 @@ Concussion Token: When this Unit Activates, remove all Concussion Tokens applied
 Burning Token: A Unit may only have one Burning Token. When this Unit Activates, this Token makes a X/0/1 Attack against it, where X is the amount of HP the Unit has left. If more than half of these Hits fail to deal Damage, this Token is removed.</description>
     </rule>
     <rule name="Gas Projector" id="2196-346b-deab-9dce" hidden="false">
-      <description>When making an attack with this weapon, place a Gas Token within range, it automatically attacks all units within 3&quot; with the Poison Gas Profile.</description>
+      <description>When making an attack with this weapon, place a Gas Token within range.</description>
     </rule>
     <rule name="Gas Token" id="a88e-c569-29b0-f610" hidden="false">
-      <description>25mm base; Units within 3” of this token are considered to be in Obscuring terrain for the purposes of Attack actions taken by and against those units. Attacks passing through this 3” radius are considered to be taken through Obscuring terrain. Units that perform a move within 6” or finish a move within 3” of the token are attacked with the Poison Gas Profile. At the beginning of the Command Phase, this Token Drifts, if you roll a 1 to Drift this Token is removed. If this Token has Drifted before, instead, remove this Token.</description>
+      <description>When the following Conditions are met, Units within 3&quot; of this Token are attacked by the Poison Gas Profile. 
+◆ When the Unit begins its Activation.
+◆ When the Unit Moves through the Area.
+◆ When the Gas Token is placed.
+A Unit may not be Attacked by the Poison Gas Profile more than once per Round.
+Attacks that originate from within 3&quot; of this Token, or draw Line of Sight in such a way that the Attack passes through 3&quot; of this Token are subject to one additional level of Obscuration. At the beginning of the Command Phase, this Token Drifts, if you roll a 1 to Drift this Token is removed. If this Token has Drifted before, instead, remove this Token.</description>
     </rule>
     <rule name="Gas!" id="988c-e404-230a-1ee2" hidden="false">
       <description>Attacks with this Weapon automatically pass all Armor Penetration Checks.</description>
@@ -106,7 +143,7 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
       <description>When making an Attack with this Weapon, -1 to Hit. Aim Tokens spent do not modify Hit Checks made by this Weapon.</description>
     </rule>
     <rule name="Indirect Fire" id="0648-3007-c58c-c884" hidden="false">
-      <description>During the Command Phase, place a Blast Token for each instance of this Weapon within Range and no less than 12&quot; from this Unit. When making an Attack with this Weapon, it does not need Line of Sight to select a Blast Token. When a Blast Token is selected, it Drifts up to X&quot;, where X is this Weapon&apos;s Ordnance value. You may spend Aim Tokens to raise or lower the number rolled for the Drift direction or for the Drift distance by 1 for each Aim token. Remove the Token after resolving the Attack.</description>
+      <description>During the Command Phase, place a Blast Token for each instance of this Weapon within Range and no less than 12&quot; from this Unit. When making an Attack with this Weapon, it does not need Line of Sight to select a Blast Token. When a Blast Token is selected, it Drifts X&quot;, where X is this Weapon&apos;s Ordnance value. You may spend Aim Tokens to raise or lower the number rolled for the Drift direction or for the Drift distance by 1 for each Aim token. Remove the Token after resolving the Attack.</description>
     </rule>
     <rule name="Ordnance" id="11d9-c53a-4538-6b97" hidden="false">
       <description>During the Command Phase, decide if this Weapon is using Direct Fire or Indirect Fire. When making an Attack with this Weapon, each instance of it must select an eligible Blast Token, then resolve an Attack against every Unit within X&quot; of that Blast Token. When all eligible Attacks have been resolved, remove the Blast Token. This Weapon is considered to have the High Explosive, Precise, and Suppressive Special Rules.</description>
@@ -127,9 +164,7 @@ Burning Token: A Unit may only have one Burning Token. When this Unit Activates,
       <description>Reactions cannot be taken in response to Attacks from this Weapon.</description>
     </rule>
     <rule name="Slag" id="aaa4-8ad4-e93e-7ead" hidden="false">
-      <description>After succeeding a Hit check with this Weapon Profile, apply a Slag Token. You may not apply more than One Slag Token per Weapon Profile per Attack Action. 
-
-Slag Token: This Unit&apos;s Armor Value is reduced by 1. Shed this Token on this Unit&apos;s Activation.</description>
+      <description>After succeeding a Hit check with this Weapon Profile, apply a Slag Token. You may not apply more than One Slag Token per Weapon Profile per Attack Action.</description>
     </rule>
     <rule name="Suppressive" id="4911-2380-864d-8b44" hidden="false">
       <description>After Attacking a Unit with this Weapon, apply a Suppression Token. You may not apply more than Four Suppression Tokens per Attack Action.</description>
@@ -138,9 +173,7 @@ Slag Token: This Unit&apos;s Armor Value is reduced by 1. Shed this Token on thi
       <description>When an Enemy Unit enters engagement range with a Unit equipped with this Weapon, immediately perform a Free Attack Action with this weapon against that Unit. This Attack occurs before all others are resolved.</description>
     </rule>
     <rule name="Spray" id="b609-fbd4-d0a3-6927" hidden="false">
-      <description>After Attacking a Troop Unit with this Weapon Profile, apply an Under Fire Token. Units may not have more than one Under Fire Token.
-
-Under Fire: Units with this Token may not take the Move Action. (They may still take the Dash Action). This Token is removed at the end of this Unit&apos;s Activation</description>
+      <description>After Attacking a Troop Unit with this Weapon Profile, apply a Spray Token. Units may not have more than one Spray Token.</description>
     </rule>
     <rule name="Sniper" id="3a32-9522-280e-50ce" hidden="false">
       <description>When making an Attack with this Weapon, the targeted Unit does not Receive the benefit of Cover. You may spend an Aim token to Snipe, if you do, you may select a Model in the targeted Unit, your Opponent must use that Model&apos;s statistics for the Attack, and must assign Damage to it first.</description>
@@ -170,7 +203,7 @@ Under Fire: Units with this Token may not take the Move Action. (They may still 
 2: Pinned Down: Free Actions this Unit takes must be performed as Standard Actions.
 
 
-3:Trapped: All Attacks this Unit makes are Obscured.
+3:Trapped: This Unit may not perform the Move Action. (It may still perform the Dash Action)
 
 
 4: Broken: For each additional token past the 3rd, roll a Morale Check.
@@ -195,6 +228,21 @@ Once all effects are resolved, remove all tokens from this Unit.</description>
     </rule>
     <rule name="Bombard Token" id="239d-adc3-4bac-1f1b" hidden="false">
       <description>For each Bombard Token a Terrain Feature has, its Cover Level is reduced by one. If a Terrain Feature&apos;s Cover Level is lowered to 0, it is destroyed and removed from the Battlefield.</description>
+    </rule>
+    <rule name="Spray Token" id="f34c-af2a-18ad-414f" hidden="false">
+      <description>All Attacks this Unit performs are subject to one additional level of Obscuration.</description>
+    </rule>
+    <rule name="Charged Coils" id="9b0a-d697-e429-2a1b" hidden="false">
+      <description>Units Equipped with this Weapon gain Charge Coils as a Standard Action. To perform a Charge Coils Action, roll three 7+ Charge Checks; for each success, the next time an Attack Action is performed with this Weapon, apply an additional Slag Token.</description>
+    </rule>
+    <rule name="Slag Token" id="babf-a0e1-14f4-5e5f" hidden="false">
+      <description>This Unit&apos;s Armor Value is reduced by 1. Shed this Token on this Unit&apos;s Activation.</description>
+    </rule>
+    <rule name="Reinforced" id="8980-2d6d-00bc-ee76" hidden="false">
+      <description>This Unit&apos;s Cover Level is improved by 1. This Cover applies in Melee. This Rule does not stack.</description>
+    </rule>
+    <rule name="Innate Weapon" id="911e-9a8d-1992-85f5" hidden="false">
+      <description>This Weapon may always be selected to Attack with, regardless of other Weapon selections.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -224,7 +272,7 @@ Once all effects are resolved, remove all tokens from this Unit.</description>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -235,6 +283,16 @@ Once all effects are resolved, remove all tokens from this Unit.</description>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Combat Shield" typeId="Weapon" typeName="Weapon" hidden="false" id="32f2-eb79-77ff-f463">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reinforced, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
       </characteristics>
     </profile>

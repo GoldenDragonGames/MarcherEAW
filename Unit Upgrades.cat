@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="true" id="d60b-3dc1-aadc-8f9c" name="Unit Upgrades" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Upgrades" id="f9bd-97ad-a621-5069" hidden="false">
+    <selectionEntryGroup name="Equipment, Upgrades, and Designations" id="f9bd-97ad-a621-5069" hidden="false">
       <selectionEntryGroups>
         <selectionEntryGroup name="Vehicle Upgrades" id="d75c-a162-bc8f-60f9" hidden="false" sortIndex="5">
           <selectionEntries>
@@ -238,6 +238,15 @@
               </modifiers>
             </entryLink>
             <entryLink import="true" name="Combat Stimulants" hidden="false" id="c656-1ff7-6c46-8020" type="selectionEntry" targetId="2224-d1b8-6afd-f09c"/>
+            <entryLink import="true" name="Rifle Grenades" hidden="false" id="56a2-7822-b842-631f" type="selectionEntry" targetId="e8f1-21c6-884c-77b6">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -832,7 +841,7 @@
         <infoLink name="Grenade" id="d8d9-cb55-ad19-9d32" hidden="false" type="rule" targetId="e228-c7d5-d55a-053a"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="20"/>
+        <cost name="Munitions" typeId="Points" value="22"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -886,7 +895,7 @@
     <selectionEntry type="upgrade" import="true" name="Camouflage Netting" hidden="false" id="0ae0-c2a3-03d0-5d2a">
       <rules>
         <rule name="Camouflage Netting" id="6943-a5cf-afb0-c160" hidden="false">
-          <description>This Unit is Obscured if it has not taken a Movement Action this Round.</description>
+          <description>If this Unit has not taken a Movement Action this Round, Attacks targeting it are subject to one level of Obscuration.</description>
         </rule>
       </rules>
       <costs>
@@ -929,7 +938,7 @@
     <selectionEntry type="upgrade" import="true" name="Extra Crewman" hidden="false" id="9307-7a04-9c63-5341">
       <rules>
         <rule name="Extra Crewman" id="4298-a0c8-c624-d858" hidden="false">
-          <description>This Unit&apos;s Movement Profile is increased by 2&quot;.</description>
+          <description>This Unit&apos;s Movement Value Profile is increased by 2&quot;.</description>
         </rule>
       </rules>
       <costs>
@@ -972,7 +981,7 @@
         <infoLink name="Fuel Drums" id="ef8c-c689-cbd4-4db0" hidden="false" type="rule" targetId="e6e0-df35-6dc6-fb12"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Munitions" typeId="Points" value="5"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1016,7 +1025,7 @@
     <selectionEntry type="upgrade" import="true" name="Maskirovka" hidden="false" id="2001-c86c-a324-eb18">
       <rules>
         <rule name="Maskirovka" id="4f41-cb25-c17e-70fb" hidden="false">
-          <description>When making an Attack against this Unit, if the Attack is Obscured by a Smoke or Gas Token, this Unit gains another level of Obscured.</description>
+          <description>When making an Attack against this Unit, if the Attack is Obscured by a Smoke or Gas Token, this Unit gains another level of Obscuration.</description>
         </rule>
       </rules>
       <costs>
@@ -1032,7 +1041,7 @@
     <selectionEntry type="upgrade" import="true" name="Overtuned" hidden="false" id="2065-730f-51ef-3021">
       <rules>
         <rule name="Overtuned" id="e1f9-41e9-63a3-59c0" hidden="false">
-          <description>When this Unit performs the Dash Action, it gains +2” to that Move.</description>
+          <description>When this Unit performs the Dash Action, it gains +2” to that Movement.</description>
         </rule>
       </rules>
       <costs>
@@ -1057,7 +1066,7 @@
         <infoLink name="Grenade" id="ead3-4a86-a91a-1ffe" hidden="false" type="rule" targetId="e228-c7d5-d55a-053a"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="13"/>
+        <cost name="Munitions" typeId="Points" value="15"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1106,6 +1115,7 @@
         <infoLink name="Gas Token" id="3354-a742-68b0-45a0" hidden="false" type="rule" targetId="a88e-c569-29b0-f610"/>
         <infoLink name="Gas Projector" id="1cc9-b45c-c6c9-facc" hidden="false" type="rule" targetId="2196-346b-deab-9dce"/>
         <infoLink name="Grenade" id="b95a-0866-dcc0-7f68" hidden="false" type="rule" targetId="e228-c7d5-d55a-053a"/>
+        <infoLink name="Poison Gas" id="7580-2663-759f-5e9d" hidden="false" type="profile" targetId="016d-e75a-6168-c05e"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="30"/>
@@ -1133,7 +1143,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="RPG-3" hidden="false" id="3689-bd98-b082-788a">
       <costs>
-        <cost name="Munitions" typeId="Points" value="15"/>
+        <cost name="Munitions" typeId="Points" value="17"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1217,12 +1227,7 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Ammo X" id="2c1e-6e41-b397-2459" hidden="false" type="rule" targetId="2056-c454-be5c-ea02">
-          <modifiers>
-            <modifier type="append" value="2" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Pop Smoke" id="4eb1-1367-1e78-8c94" hidden="false" type="rule" targetId="2789-0a67-eb65-f149"/>
+        <infoLink name="Smoke Launcher" id="4eb1-1367-1e78-8c94" hidden="false" type="rule" targetId="2789-0a67-eb65-f149"/>
         <infoLink name="Smoke Token" id="a1d8-6978-c85f-d9f4" hidden="false" type="rule" targetId="3041-2233-c962-765d"/>
       </infoLinks>
     </selectionEntry>
@@ -1234,14 +1239,8 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Ammo X" id="5ca2-3acd-0c22-71da" hidden="false" type="rule" targetId="2056-c454-be5c-ea02">
-          <modifiers>
-            <modifier type="append" value="1" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Pop Smoke" id="7f0a-8778-e625-0ffb" hidden="false" type="rule" targetId="2789-0a67-eb65-f149"/>
+        <infoLink name="Smoke Launcher" id="7f0a-8778-e625-0ffb" hidden="false" type="rule" targetId="2789-0a67-eb65-f149"/>
         <infoLink name="Smoke Token" id="d7dc-e9d6-7a96-6fc6" hidden="false" type="rule" targetId="3041-2233-c962-765d"/>
-        <infoLink name="Grenade" id="47f2-2193-af46-19db" hidden="false" type="rule" targetId="e228-c7d5-d55a-053a"/>
       </infoLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3d2-9519-deb6-f18a" includeChildSelections="false"/>
@@ -1403,21 +1402,6 @@
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="02d3-7730-e55a-87ce-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02d3-7730-e55a-87ce-max" includeChildSelections="false"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Reinforced" hidden="false" id="01e5-5a61-0629-9f24">
-      <infoLinks>
-        <infoLink name="Reinforced" id="fe8c-4c8e-b291-e5ef" hidden="false" type="rule" targetId="8980-2d6d-00bc-ee76"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Nominate Field Commander" hidden="false" id="a8f2-8cd0-efc0-4a1b">
       <constraints>
@@ -1602,6 +1586,22 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rifle Grenades" hidden="false" id="e8f1-21c6-884c-77b6">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <rules>
+        <rule name="Rifle Grenades" id="648a-f402-854e-6513" hidden="false">
+          <description>Designate one non-Leader Model in this Unit as a Grenadier, so long as that Model has not been destroyed, Grenade Weapons used by this Unit have a Range of 12&quot;.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d92d-80b2-d9f7-551c" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Special Rules" id="695f-3fb8-6f98-b434" targetId="1270-948e-6bd6-7ecc"/>
@@ -1624,7 +1624,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>During Deployment, you may choose for this Unit to be an Emplacement. If you do, instead of placing it on the Battlefield, this Unit may only be Deployed as if it were a Fortification with Supply Cost 2 for Carriage, 4 for Battery. If it is, it may no longer take any Movement Actions, and is considered to be in Light Cover. If this Unit is Towed it loses this level of Cover and may take Movement Actions again. If this Unit has any Ordnance X weapons, the Blast Tokens for those must be placed during the Command Phase even if this Unit has not yet been Deployed.</description>
     </rule>
     <rule name="Fuel Drums" id="e6e0-df35-6dc6-fb12" hidden="false">
-      <description>Once per Game, when this Unit takes the Dash Action, it may do so with its full Movement Value.</description>
+      <description>Once per Game, when this Unit takes the Dash Action, 1D5 of Movement may be counted as having rolled a 5.</description>
     </rule>
     <rule name="Professional NCO" id="1bdc-4350-03ab-d4ea" hidden="false">
       <description>During the Command Phase, if this Unit&apos;s original Leader Model has not been destroyed, it issues this Unit an Order.</description>
@@ -1633,22 +1633,22 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>Designate one Model in this Unit as a Radioman, if that Model is destroyed, this Unit loses the Radio and Forward Observer Special Rules.</description>
     </rule>
     <rule name="Up-Armored" id="1f7c-515a-0ef2-8614" hidden="false">
-      <description>This Model&apos;s Armor Profile is increased by 1. This Model&apos;s Movement Profile is decreased by 2&quot;.</description>
+      <description>This Model&apos;s Armor Value Profile is increased by 1. This Model&apos;s Movement Value Profile is decreased by 2&quot;.</description>
     </rule>
     <rule name="Stable Firing Position" id="21b3-c7af-2fb8-5ab6" hidden="false">
       <description>If this Unit begins its activation in contact with terrain it gains an Aim Token.</description>
     </rule>
-    <rule name="Pop Smoke" id="2789-0a67-eb65-f149" hidden="false">
-      <description>As a Free Action or Free Reaction, you may expend one of this Weapon&apos;s Ammo, if you do, you may place a Smoke Token within 8” of this Unit.</description>
+    <rule name="Smoke Launcher" id="2789-0a67-eb65-f149" hidden="false">
+      <description>Twice per Game this Unit may perform the Pop Smoke Reaction as a Free Action or Free Reaction.</description>
     </rule>
     <rule name="Flexible Hero" id="ba04-cce8-3db9-31d4" hidden="false">
       <description>This Unit may attach to a Unit in this Platoon as though it has the Designated Leader Special Rule, or be taken as a separate Unit.</description>
     </rule>
     <rule name="Smoke Token" id="3041-2233-c962-765d" hidden="false">
-      <description>25mm base; Units within 6” of this Token gain a level of Obscured. Attacks passing through this 6” radius are considered to be taken through Obscuring terrain. At the beginning of the Command Phase, this Token Drifts, if you roll a 1 to Drift this Token is removed. If this Token has Drifted before, instead, remove this Token.</description>
-    </rule>
-    <rule name="Reinforced" id="8980-2d6d-00bc-ee76" hidden="false">
-      <description>This Unit&apos;s Cover Level is improved by 1. This Cover applies in Melee. This Rule does not stack.</description>
+      <description>Attacks that originate from within 6&quot; of this Token, or draw Line of Sight in such a way that the Attack passes through 6&quot; of this Token are subject to one additional level of Obscuration.
+
+
+At the beginning of the Command Phase, this Token Drifts, if you roll a 1 to Drift this Token is removed. If this Token has Drifted before, instead, remove this Token.</description>
     </rule>
     <rule name="Nominate Field Commander" id="653b-4795-0602-9a08" hidden="false">
       <description>This Unit is your Field Commander. (This Unit must have the highest Officer rank in your Army or be a Hero).</description>
@@ -1677,17 +1677,17 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, Ammo 1</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Grenade</characteristic>
       </characteristics>
     </profile>
     <profile name="Poison Gas Grenade" typeId="Weapon" typeName="Weapon" hidden="false" id="8cdf-66ef-59d7-b73e">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">8&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">N/A</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">N/A</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Gas!, Gas Projector</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">N/A</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Gas Projector</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Grenade, Gas</characteristic>
       </characteristics>
     </profile>

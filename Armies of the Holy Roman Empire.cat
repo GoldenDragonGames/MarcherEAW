@@ -982,7 +982,21 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a301-3ea8-14eb-3187" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="172d-33af-831c-7b10" name="Stahlschutz" hidden="false" targetId="7498-ac28-f25d-82d8" type="rule"/>
+            <infoLink id="f1b2-2740-e80e-8c0c" name="Stahlschutz" hidden="false" targetId="7498-ac28-f25d-82d8" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Munitions" typeId="Points" value="0"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Looming Behemoth" hidden="false" id="d259-9098-e018-482e" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f36e-8296-bbad-1322" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c31c-9783-a517-2b0a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Looming Behemoth" id="77af-6467-837e-ab48" hidden="false" targetId="b8d4-80df-e25c-9274" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -1171,7 +1185,7 @@
         <infoLink name="37M Buzogányvető Rocket Launcher" id="4377-784a-1b2e-677b" hidden="false" targetId="cc90-17d9-93dd-28fe" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="25"/>
+        <cost name="Munitions" typeId="Points" value="30"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1200,12 +1214,13 @@
       <infoLinks>
         <infoLink name="Bergmann Pistol M1938" id="7f58-7f98-9bf8-f2a1" hidden="false" type="profile" targetId="6696-58ef-7e56-daac"/>
         <infoLink name="Point Blank" id="57c0-5f41-fecc-f4ec" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
-        <infoLink name="Dual Wield" id="96cf-65db-e612-0d8a" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="One-Handed" id="96cf-65db-e612-0d8a" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="CKF Greatsword" hidden="false" id="0396-a57b-ee52-2c78">
       <infoLinks>
         <infoLink name="CKF Greatsword" id="600d-b0b4-8f3b-b129" hidden="false" type="profile" targetId="86f3-c506-8612-ef9c"/>
+        <infoLink name="Warding" id="f652-05c2-d6bc-40e0" hidden="false" type="rule" targetId="f86d-acd5-05b1-927c"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="8"/>
@@ -1218,6 +1233,7 @@
       <infoLinks>
         <infoLink name="CKF Saber" id="736f-63e0-a71b-9c84" hidden="false" targetId="ce1a-9c5f-9023-70b8" type="profile"/>
         <infoLink name="Warding" id="87f2-bf0f-22a1-75f0" hidden="false" type="rule" targetId="f86d-acd5-05b1-927c"/>
+        <infoLink name="One-Handed" id="1659-90d0-45a5-62fb" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="4"/>
@@ -1230,6 +1246,8 @@
       <infoLinks>
         <infoLink name="Dual Wrist-Mounted GPT-40" id="4bae-a290-7307-8f6f" hidden="false" type="profile" targetId="1ccc-8b8a-7a98-f125"/>
         <infoLink name="Suppressive" id="3696-d2bd-cb2e-49d0" hidden="false" type="rule" targetId="4911-2380-864d-8b44"/>
+        <infoLink name="Point Blank" id="4f80-0daf-f6d3-a014" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
+        <infoLink name="One-Handed" id="e445-f447-5875-aa50" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="19"/>
@@ -1262,19 +1280,18 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Flanged Mace and Shield" hidden="false" id="bccd-f35d-9db1-5ba2" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Flanged Mace" hidden="false" id="bccd-f35d-9db1-5ba2" collective="true">
       <infoLinks>
-        <infoLink name="Flanged Mace and Shield" id="ee49-5bff-00fb-d534" hidden="false" targetId="fefd-219b-b1fe-1f43" type="profile"/>
+        <infoLink name="Flanged Mace" id="ee49-5bff-00fb-d534" hidden="false" targetId="fefd-219b-b1fe-1f43" type="profile"/>
+        <infoLink name="One-Handed" id="fae4-ec8b-41be-b018" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="Critical Shot" id="bade-6c80-01e0-fe6b" hidden="false" type="rule" targetId="a53f-6c4f-8514-7703"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Munitions" typeId="Points" value="3"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="565a-554e-cf6c-a681" type="selectionEntry" targetId="01e5-5a61-0629-9f24"/>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="GKB38 Assault Rifle" hidden="false" id="a757-fa09-f338-77e1" collective="true">
       <infoLinks>
@@ -1306,10 +1323,11 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Knecht Mace and Shield" hidden="false" id="a336-f2d0-a145-aee2" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Knecht Mace" hidden="false" id="a336-f2d0-a145-aee2" collective="true">
       <infoLinks>
-        <infoLink name="Knecht Mace and Shield" id="35e1-2057-6ea9-b842" hidden="false" targetId="c0ee-8fea-c7af-a6eb" type="profile"/>
+        <infoLink name="Knecht Mace" id="35e1-2057-6ea9-b842" hidden="false" targetId="c0ee-8fea-c7af-a6eb" type="profile"/>
         <infoLink name="Concussive" id="7fe3-5719-f5bd-c5cb" hidden="false" type="rule" targetId="2535-84fb-dcc0-f3ac"/>
+        <infoLink name="One-Handed" id="2c7e-6d76-9544-5c93" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="12"/>
@@ -1317,9 +1335,6 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="bc09-717c-3b77-b1cd" type="selectionEntry" targetId="01e5-5a61-0629-9f24"/>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="M1920 WS Flammenwerfer" hidden="false" id="a566-91a1-5d24-abdc" collective="true">
       <infoLinks>
@@ -1338,7 +1353,7 @@
       <infoLinks>
         <infoLink name="M1922 Steyr-Roth" id="7e69-7e0d-dcbc-927e" hidden="false" targetId="2765-fa71-22a0-550f" type="profile"/>
         <infoLink name="Point Blank" id="8819-ffc1-325d-4a8a" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
-        <infoLink name="Dual Wield" id="def5-a121-744b-0c89" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="One-Handed" id="def5-a121-744b-0c89" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="1"/>
@@ -1416,7 +1431,7 @@
         <infoLink name="M1936 Plasma Pistol" id="d72a-c7d8-d8bb-7edc" hidden="false" type="profile" targetId="597-2600-fdca-9bb5"/>
         <infoLink name="Slag" id="d1e7-3bda-e0fb-78cf" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
         <infoLink name="Point Blank" id="717c-b0b2-49c8-a23" hidden="false" type="rule" targetId="1e7a-7634-bb2b-1ff9"/>
-        <infoLink name="Dual Wield" id="cd1d-c829-2efa-f777" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="One-Handed" id="cd1d-c829-2efa-f777" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -1428,7 +1443,7 @@
     <selectionEntry type="upgrade" import="true" name="Mechanical Talons" hidden="false" id="0bf1-016a-75f7-f53d" collective="true">
       <infoLinks>
         <infoLink name="Mechanical Talons" id="8488-2d8b-bf9c-0bc2" hidden="false" targetId="9b13-1085-838a-490b" type="profile"/>
-        <infoLink name="Dual Wield" id="068f-5026-179e-22dd" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="Innate Weapon" id="e43e-5899-ee48-be0b" hidden="false" type="rule" targetId="911e-9a8d-1992-85f5"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="3"/>
@@ -1521,6 +1536,7 @@
       <infoLinks>
         <infoLink name="Papk. 34 Light Plasma Cannon" id="2a20-66a6-7cbc-0bf3" hidden="false" targetId="f508-4c7e-d326-bb16" type="profile"/>
         <infoLink name="Slag" id="e386-713e-2c02-4d98" hidden="false" type="rule" targetId="aaa4-8ad4-e93e-7ead"/>
+        <infoLink name="Charged Coils" id="a10e-cebb-a592-78c6" hidden="false" type="rule" targetId="9b0a-d697-e429-2a1b"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="23"/>
@@ -1532,7 +1548,7 @@
     <selectionEntry type="upgrade" import="true" name="Pioneer Falchion" hidden="false" id="289d-3ed4-1afa-8dbb" collective="true">
       <infoLinks>
         <infoLink name="Pioneer Falchion" id="4e23-3f5a-5e30-46d1" hidden="false" targetId="b626-c3c8-b21a-3a86" type="profile"/>
-        <infoLink name="Dual Wield" id="ce87-edfc-8125-5d4e" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+        <infoLink name="One-Handed" id="ce87-edfc-8125-5d4e" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="2"/>
@@ -1722,6 +1738,7 @@
         <infoLink name="Jägersmesser" id="0bcc-bef3-5768-015d" hidden="false" targetId="c53a-b62c-9a62-2170" type="profile"/>
         <infoLink name="Warding" id="aeb8-b3f1-08cc-9503" hidden="false" type="rule" targetId="f86d-acd5-05b1-927c"/>
         <infoLink name="Cleave" id="9f9a-eb33-fd89-3702" hidden="false" type="rule" targetId="039c-7032-df73-62bf"/>
+        <infoLink name="One-Handed" id="ca41-74b1-89e7-18d9" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="4"/>
@@ -1733,6 +1750,7 @@
     <selectionEntry type="upgrade" import="true" name="CKF Dagger" hidden="false" id="371e-2729-f101-9fb9" collective="true">
       <infoLinks>
         <infoLink name="CKF Dagger" id="7a5a-741f-482f-3c1d" hidden="false" type="profile" targetId="9183-5e80-158c-7024"/>
+        <infoLink name="One-Handed" id="045c-6fa9-6f37-4871" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="2"/>
@@ -1781,13 +1799,29 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Knecht Shield" hidden="false" id="95f0-5fd0-015c-84de" collective="true">
+      <infoLinks>
+        <infoLink name="Knecht Shield" id="b562-98ef-7359-0469" hidden="false" type="profile" targetId="93b5-b5f1-c209-b8f4"/>
+        <infoLink name="Shield Bash" id="09d5-dfff-6699-d6a5" hidden="false" type="rule" targetId="7325-1a3f-26e7-5f1e"/>
+        <infoLink name="One-Handed" id="7af9-6e0b-6761-4874" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="bc09-717c-3b77-b1cd" type="selectionEntry" targetId="01e5-5a61-0629-9f24"/>
+      </entryLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="4565-e3f5-c290-9d99" name="Adjustable Sights" hidden="false">
-      <description>When performing an Attack with this Weapon Profile, if the Targeted Unit is within half of this Weapon&apos;s Range Value, this Unit may perform a Free Aim Action.</description>
+      <description>When performing an Attack with this Weapon Profile, if the Targeted Unit is within half of this Weapon&apos;s Range Value, this Unit get +1 to hit with this Weapon.</description>
     </rule>
     <rule id="7498-ac28-f25d-82d8" name="Stahlschutz" hidden="false">
-      <description>After activating this ability, all allied Troop Units that are within 20&quot; of this model may activate their shield one additional time this round.</description>
+      <description>After activating this ability, all allied Troop Units that are within 20&quot; of a (CORE) Zeppelin model may activate their Shield Generators one additional time this round.</description>
     </rule>
     <rule name="Shield Generator" id="344f-2329-dd70-0840" hidden="false">
       <description>Each Unit in this army may choose to Activate their Shield Generator once per Round when they are selected as the target of a Ranged Attack. When they do, they gain the following benefits until the Attack is resolved.
@@ -1813,6 +1847,9 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     <rule name="Last Rites" id="df4a-8cf6-7abf-20d7" hidden="false">
       <description>After this Unit has destroyed an Enemy Unit, it may, as a Standard Action, perform Last Rites for the fallen. For every two times Last Rites are performed, gain 1 VP.</description>
     </rule>
+    <rule name="Looming Behemoth" id="b8d4-80df-e25c-9274" hidden="false">
+      <description>Until the end of this round, any time an Enemy Unit attempts to capture an Objective with 20&quot; of a (CORE) Zeppelin model, they must roll a 6+ Check, on failure, the action fails.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="a377-d534-5c8c-a988" name="MP33 SMG" hidden="false" typeId="Weapon" typeName="Weapon">
@@ -1831,7 +1868,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Warding</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Warding, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -1841,7 +1878,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Dual Wield, Point Blank</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Point Blank, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Pistol, Energy</characteristic>
       </characteristics>
     </profile>
@@ -1901,7 +1938,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag, Charged Coils</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -2001,7 +2038,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Dual Wield</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2095,13 +2132,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Sniper Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
-    <profile id="fefd-219b-b1fe-1f43" name="Flanged Mace and Shield" hidden="false" typeId="Weapon" typeName="Weapon">
+    <profile id="fefd-219b-b1fe-1f43" name="Flanged Mace" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reinforced</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2145,13 +2182,13 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Kinetic</characteristic>
       </characteristics>
     </profile>
-    <profile id="c0ee-8fea-c7af-a6eb" name="Knecht Mace and Shield" hidden="false" typeId="Weapon" typeName="Weapon">
+    <profile id="c0ee-8fea-c7af-a6eb" name="Knecht Mace" hidden="false" typeId="Weapon" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive, Reinforced</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Concussive, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2171,7 +2208,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Dual Wield</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Innate Weapon</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Kinetic, Bladed</characteristic>
       </characteristics>
     </profile>
@@ -2211,7 +2248,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Point Blank, Dual Wield, Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Point Blank, Slag, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Pistol, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -2241,7 +2278,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Point Blank</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Suppressive, Point Blank, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, SMG, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2251,7 +2288,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">1</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Dual Wield, Point Blank</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Point Blank, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Pistol, Energy</characteristic>
       </characteristics>
     </profile>
@@ -2311,7 +2348,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">6</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Slag, Charged Coils</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Cannon, Plasma</characteristic>
       </characteristics>
     </profile>
@@ -2341,7 +2378,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Warding, Cleave</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Warding, Cleave, One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2351,7 +2388,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">One-Handed</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2373,6 +2410,16 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!, Slag</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Emitter, Plasma</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Knecht Shield" typeId="Weapon" typeName="Weapon" hidden="false" id="93b5-b5f1-c209-b8f4">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">0</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Shield Bash, Reinforced, One-Handed</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -2641,8 +2688,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="45M Barbarossa Assault Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="760b-4321-02f0-a1a4">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">3</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">18</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">32</characteristic>
                   </characteristics>
@@ -2657,7 +2704,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="1cd3-2e77-6bdc-8437" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="1cd3-2e77-6bdc-8437" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Setting Up!" hidden="false" id="fe35-ece5-da3b-9d39" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <rules>
@@ -2889,8 +2936,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="38M Franz Joseph Battle Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0bda-4759-1d8c-5b28">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">16</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">19</characteristic>
                   </characteristics>
@@ -2916,7 +2963,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="7e6b-98e1-3929-0ba6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="7e6b-98e1-3929-0ba6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="1c40-895e-8a34-ffc8" primary="false" name="Medium"/>
@@ -2944,10 +2991,10 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="0acf-504a-6eaf-9f9a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="0acf-504a-6eaf-9f9a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Big Game Hunter" hidden="false" id="16be-4dc5-22e2-1fae" type="selectionEntry" targetId="4f71-b8b7-07c0-7d5e"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="16aa-9fa5-2ccf-ab76" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
-            <entryLink import="true" name="Tank Destroyer" hidden="false" id="66b3-404f-8536-0cad" type="selectionEntry" targetId="true"/>
+            <entryLink import="true" name="Tank Destroyer" hidden="false" id="66b3-404f-8536-0cad" type="selectionEntry" targetId="a8ba-5c26-f8dd-99cf"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="43M Árpád Tank Hunter" hidden="false" id="b652-2c27-ee6d-22c1">
@@ -2998,8 +3045,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="43M Árpád Tank Hunter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5b1a-5c17-6d5f-6537">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">16</characteristic>
                   </characteristics>
@@ -3056,8 +3103,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Tizedes" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="26c7-d836-287c-9186">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3109,8 +3156,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Honvéd" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4b09-15a3-a6cd-6398">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3155,7 +3202,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="39c4-b902-ce03-9e53" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="39c4-b902-ce03-9e53" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -3201,8 +3248,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Landwehr Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="efcf-6142-280e-1dfe">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3261,8 +3308,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Landwehr Gefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="450a-3dff-04e1-cb99">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3322,8 +3369,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Landwehr Stabsgefreiter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1bc3-589b-83f1-c74f">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3390,7 +3437,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="c0e6-acb1-fcbc-09ee" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="c0e6-acb1-fcbc-09ee" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="0"/>
@@ -3441,8 +3488,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Jäger Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="405a-6340-b152-c45f">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3513,8 +3560,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Jäger" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="eac6-a678-0cb5-26af">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3591,8 +3638,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Jäger Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3c9c-e09c-13a8-12be">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3626,8 +3673,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Jäger Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0900-3481-e78d-d60d">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3665,7 +3712,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="90ad-0f00-0f57-ba67" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="90ad-0f00-0f57-ba67" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Jump Packs" hidden="false" id="5ad5-8057-b837-1a92" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
           </entryLinks>
           <costs>
@@ -3712,8 +3759,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Jäger Scharfschützer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="97dc-7b05-ae48-4213">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3789,8 +3836,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Jäger Scharfschützer Spotter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6f46-f2f3-9b21-b7d4">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -3838,7 +3885,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="e36e-6273-813a-8086" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="e36e-6273-813a-8086" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Jump Packs" hidden="false" id="bce3-d1e1-1f44-83df" type="selectionEntry" targetId="f632-e702-4d46-59da"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="caa2-3579-c3de-08ff" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Hunter" hidden="false" id="0ad8-ba6f-8c09-4bdf" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
@@ -3878,8 +3925,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Scharfschützer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d665-46fe-7dd4-794e">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3955,8 +4002,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Scharfschützer Spotter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3740-32d3-3777-80c4">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -3999,7 +4046,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="be13-e721-6471-716f" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="be13-e721-6471-716f" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Forward Positions" hidden="false" id="7b25-272c-0f43-85e1" type="selectionEntry" targetId="a3af-8a65-8d3d-8c7e"/>
             <entryLink import="true" name="Hunter" hidden="false" id="0379-0f3b-8c08-45fb" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="39f7-bec2-49a5-55b8" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
@@ -4079,8 +4126,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="22M Radetzky Armored Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9a64-0776-4f1d-3762">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">9</characteristic>
                   </characteristics>
@@ -4105,7 +4152,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="5296-4fab-9f16-d568" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="5296-4fab-9f16-d568" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="9f60-3803-8539-2ff2" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Intel Gathering" hidden="false" id="baea-adc7-feb6-b3af" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
           </entryLinks>
@@ -4127,11 +4174,11 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           </profiles>
           <rules>
             <rule name="Eisenfaust" id="b4bb-5373-88c2-640d" hidden="false">
-              <description>When this Unit performs a Free Charge! Attack, if it is more than 10&quot; away from its position at the start of the Round apply a Concussion token to the Target of that Attack.</description>
+              <description>When this Unit performs a Charge! Attack, if it is more than 10&quot; away from its position at the start of the Round apply a Concussion token to the Target of that Attack.</description>
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="4d0e-c834-e02e-567d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="4d0e-c834-e02e-567d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Cavalry Actions" id="4db9-b67b-b5bb-21a9" hidden="false" type="profile" targetId="95c6-33a2-c463-50c9"/>
@@ -4143,8 +4190,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Ulan Wachtmeister" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="214b-62c0-cde3-00a7">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
                       </characteristics>
@@ -4212,8 +4259,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Ulan" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e494-7280-a272-c1b0">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
                       </characteristics>
@@ -4329,8 +4376,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Landwehr Mortar Squad" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4778-7ac0-b7cd-6ce1">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -4373,7 +4420,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="b1d4-d168-d7f7-3388" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="b1d4-d168-d7f7-3388" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Setting Up!" hidden="false" id="ff28-265d-85cc-7efd" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <categoryLinks>
@@ -4402,7 +4449,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="621a-fd95-58b4-77c6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="621a-fd95-58b4-77c6" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Dial In 6/8" hidden="false" id="e177-f111-447c-a8f0" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <selectionEntries>
@@ -4448,8 +4495,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="43M Árpád Support Gun" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2784-e095-5a31-9fe0">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">16</characteristic>
                   </characteristics>
@@ -4493,7 +4540,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="5564-b549-d592-10fe" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="5564-b549-d592-10fe" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Dial In 4/6" hidden="false" id="1fc0-392c-c9ba-12cc" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <selectionEntries>
@@ -4517,8 +4564,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="28M Wallenstein Armored Halftrack Höllenwerfer Carrier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5dd2-6c4a-7da7-b19c">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">9</characteristic>
                   </characteristics>
@@ -4563,7 +4610,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="a301-787e-d5ac-28a1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="a301-787e-d5ac-28a1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="a34d-d0f6-af38-1f31" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
             <entryLink import="true" name="Dial In 6/8" hidden="false" id="ca4e-3166-f955-c9a1" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
@@ -4583,8 +4630,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="21cm Morser Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="18dd-6c74-c6b9-7c36">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">3</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">3</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
                   </characteristics>
@@ -4651,7 +4698,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="b88e-4571-24a4-f1d1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="b88e-4571-24a4-f1d1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Dial In 4/6" hidden="false" id="22fa-08d8-11fe-0988" type="selectionEntry" targetId="69bb-53ff-a987-5a16"/>
           </entryLinks>
           <modifiers>
@@ -4670,8 +4717,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="27m Höllenwerfer Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4d72-2967-5a77-0756">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
                   </characteristics>
@@ -4842,8 +4889,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="38M Franz Joseph Support Tank" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8102-0e51-c81a-c738">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">16</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">19</characteristic>
                   </characteristics>
@@ -4864,7 +4911,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="dd25-1805-58ff-940b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="dd25-1805-58ff-940b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Dial In 6/8" hidden="false" id="7b33-72fd-8d07-f01a" type="selectionEntry" targetId="f65e-0bb8-88ef-d0ca"/>
           </entryLinks>
           <categoryLinks>
@@ -4879,8 +4926,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Zeppelinjägermeister" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b4a3-13bd-7438-e418">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
@@ -4953,11 +5000,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Edelweiss" id="524f-548a-2583-d9c5" hidden="false">
-              <description>If this unit is either embarked in a Zeppelin, or on the upper story of a terrain feature, their ranged attacks ignore enemy cover.</description>
-            </rule>
-          </rules>
           <modifiers>
             <modifier type="add" value="This Officer must be Attached to a Unit" field="error">
               <conditions>
@@ -5002,8 +5044,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </profile>
             <profile name="Knecht Battlesuit Commander" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4739-a707-890d-106d">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
               </characteristics>
@@ -5041,11 +5083,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c49-f07-d57-82d4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Knecht Mace and Shield" hidden="false" id="a8f1-be00-c25b-1f5d" collective="false" targetId="a336-f2d0-a145-aee2" type="selectionEntry">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="457a-6bfb-2573-d805" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
                 <entryLink import="true" name="Solothurn M.220" hidden="false" id="cf70-9f14-ca6f-e4b0" collective="false" targetId="27af-1c0d-7310-e4cc" type="selectionEntry">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bbd-4314-6c2b-8a96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -5072,6 +5109,27 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Mace and Shield" hidden="false" id="0ad6-e90c-728a-3ce4" collective="true">
+                  <entryLinks>
+                    <entryLink import="true" name="Knecht Mace" hidden="false" id="13ab-1a9c-4c02-658b" type="selectionEntry" targetId="a336-f2d0-a145-aee2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b83a-e095-efd3-b6b7-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b83a-e095-efd3-b6b7-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Knecht Shield" hidden="false" id="4185-438b-1539-c2d8" type="selectionEntry" targetId="95f0-5fd0-015c-84de">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25fb-6e46-12f9-6d9c-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25fb-6e46-12f9-6d9c-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="034a-6cf5-a52e-2f37" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
@@ -5086,8 +5144,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Landwehr Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cfb0-95f2-ae72-ccce">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
@@ -5170,8 +5228,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="22M Radetzky Command Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b94e-469c-c708-fad3">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">9</characteristic>
                   </characteristics>
@@ -5195,7 +5253,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="e1de-739d-9809-f910" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="e1de-739d-9809-f910" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="0f58-99b9-5c55-38e9" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="All-Terrain-Vehicle" hidden="false" id="09c4-0894-6524-e535" type="selectionEntry" targetId="502b-c542-355b-8804"/>
             <entryLink import="true" name="Command Car" hidden="false" id="8a67-c493-8398-2c77" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -5227,7 +5285,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="499a-4000-934b-28a2" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="499a-4000-934b-28a2" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Officer Upgrades" hidden="false" id="7190-f0c0-6c80-330b" type="selectionEntryGroup" targetId="a1d5-cf70-3898-0ebb"/>
             <entryLink import="true" name="(CORE) Flex" hidden="false" id="10de-5d46-5d1c-7d8e" type="selectionEntry" targetId="1d43-75f9-c9b2-b3ba"/>
             <entryLink import="true" name="Command Car" hidden="false" id="9c9d-5302-f526-7dce" type="selectionEntry" targetId="2d90-b66d-145e-84f2"/>
@@ -5239,8 +5297,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="Pinzgauer Staff Car" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fba3-86ac-18dc-f5d5">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
                   </characteristics>
@@ -5274,8 +5332,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </profile>
             <profile name="Sturmpioneer Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9832-9f63-a939-3d60">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
               </characteristics>
@@ -5343,8 +5401,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </profile>
             <profile name="Panzergrenadier Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f068-6997-f14e-0fbc">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
               </characteristics>
@@ -5382,28 +5440,46 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="c38f-0d30-dd7f-6cbe" hidden="false" defaultSelectionEntryId="76ca-13ca-cd00-71ac">
+            <selectionEntryGroup name="Primary Weapon" id="ec69-fd6e-c4dd-e0e8" hidden="false" defaultSelectionEntryId="b79e-359e-1f9c-9b23">
               <entryLinks>
-                <entryLink import="true" name="CKF Greatsword" hidden="false" id="76ca-13ca-cd00-71ac" type="selectionEntry" targetId="0396-a57b-ee52-2c78">
+                <entryLink import="true" name="CKF Greatsword" hidden="false" id="fd05-bbb2-9bf8-7c8c" type="selectionEntry" targetId="0396-a57b-ee52-2c78">
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d17a-d68c-9fde-d3d4" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bdc6-e3fe-9c04-b6c8" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Flanged Mace and Shield" hidden="false" id="77e1-d046-8e58-0e53" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2">
+                <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="bef8-9dca-9c5a-d5e6" collective="false" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08f3-7307-7cf4-7bc7" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7fa-740d-0729-2f91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="85b8-d44c-a837-ea04" collective="false" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
+                <entryLink import="true" name="CKF Saber" hidden="false" id="478b-9cd8-1bc5-771a" type="selectionEntry" targetId="116c-4e0a-aadc-0b83">
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40c0-58ab-27bf-695e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77c1-68cb-32ea-e746" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5497-6e79-b8ee-bd5c" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9e2-fc31-64fb-179e" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b7a3-6e50-208c-2d06" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c203-071d-e193-4ae0" includeChildSelections="false"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Flanged Mace and Shield" hidden="false" id="c10e-bcd4-3fae-531e" collective="true">
+                  <entryLinks>
+                    <entryLink import="true" name="Flanged Mace" hidden="false" id="44af-f4fc-66fb-97c8" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1c4-c7c3-c61e-e76f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1c4-c7c3-c61e-e76f-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Combat Shield" hidden="false" id="b0c1-35b0-5632-0762" type="selectionEntry" targetId="8766-febd-3b85-6fe9">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97b6-74bc-90f5-103f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97b6-74bc-90f5-103f-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
@@ -5418,8 +5494,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Honvéd Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="eec8-348b-558b-b724">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
               </characteristics>
@@ -5481,8 +5557,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Ulan Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2386-bbbd-ad56-e3b2">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
               </characteristics>
@@ -5599,8 +5675,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="Towable Shield Generator" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b10b-bd46-e2cd-cdec">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">N/A</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">2</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">N/A</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">2</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">7</characteristic>
                   </characteristics>
@@ -5652,8 +5728,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Pioneer Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a571-5c0b-f0bb-bc31">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -5706,8 +5782,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Pioneer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a34e-654e-5e68-a512">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
                       </characteristics>
@@ -5758,7 +5834,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="c9b6-832e-fb22-096a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="c9b6-832e-fb22-096a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Battlefield Preparation" hidden="false" id="62b0-45e4-b4ca-e97b" type="selectionEntry" targetId="e29a-356e-d59f-6017"/>
             <entryLink import="true" name="Logistics" hidden="false" id="e306-17f1-7779-bc05" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="ae99-fd36-ba5e-e542" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -5804,8 +5880,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
                   <profiles>
                     <profile name="Landwehr Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5568-59b5-994a-92a7">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -5877,7 +5953,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="914a-922b-84e1-022e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="914a-922b-84e1-022e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Setting Up!" hidden="false" id="486b-133a-ecc6-b8fb" type="selectionEntry" targetId="56bf-4407-084a-e7ab"/>
           </entryLinks>
           <categoryLinks>
@@ -5905,7 +5981,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="4c70-2c02-24b1-865a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="4c70-2c02-24b1-865a" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Gun Shield" hidden="false" id="c32d-fc8d-7f72-797f" type="selectionEntry" targetId="6ed0-897e-1e51-686c"/>
           </entryLinks>
           <modifiers>
@@ -5924,8 +6000,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="18M Gun Carriage" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="18d2-b675-a7a7-e67e">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">4</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">4</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
                   </characteristics>
@@ -6025,8 +6101,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="Ritter Class Sturmzeppelin" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cb07-f9f8-6b7d-f47d">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">20</characteristic>
                   </characteristics>
@@ -6160,7 +6236,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="0b58-f677-b73d-459b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="0b58-f677-b73d-459b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Aerial Deployment" hidden="false" id="a82e-30f7-2b04-ba5e" type="selectionEntry" targetId="4a83-5712-b9b5-9366"/>
             <entryLink import="true" name="Bailout (Aerial)" hidden="false" id="611a-b852-464d-0359" type="selectionEntry" targetId="5c1e-3431-d20e-c18a"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="69d4-b97a-24b0-95a1" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
@@ -6197,7 +6273,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="2627-6056-42ce-a31c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="2627-6056-42ce-a31c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout (Dangerous)" hidden="false" id="2478-6fab-027d-39ee" type="selectionEntry" targetId="5a82-466c-c50e-1653"/>
             <entryLink import="true" name="Hitch" hidden="false" id="5f37-9b37-7bd9-f01f" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="6e7c-6be4-fc02-d565" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
@@ -6216,8 +6292,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="Pinzgauer Utility Truck" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2368-9a04-3e36-73a8">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
                   </characteristics>
@@ -6277,7 +6353,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="5493-80dc-eaf5-6a13" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="5493-80dc-eaf5-6a13" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Transport 1" hidden="false" id="46de-ae4e-9970-d607" type="selectionEntry" targetId="541e-312e-c51e-dfec"/>
             <entryLink import="true" name="Bailout" hidden="false" id="e7df-f7a8-26b9-4c47" type="selectionEntry" targetId="2cd2-087b-e9a1-6072"/>
             <entryLink import="true" name="Hitch" hidden="false" id="1189-00f7-7dc2-7003" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
@@ -6300,8 +6376,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="28M Wallenstein Armored Halftrack" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6064-64fb-577c-566f">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">9</characteristic>
                   </characteristics>
@@ -6345,7 +6421,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="9554-520e-84ec-7b19" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="9554-520e-84ec-7b19" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bailout (Dangerous)" hidden="false" id="c815-f139-e5af-4831" type="selectionEntry" targetId="5a82-466c-c50e-1653"/>
             <entryLink import="true" name="Hitch" hidden="false" id="aa12-b7b8-9a03-73c7" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="7cfa-0aeb-a13a-f774" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
@@ -6384,8 +6460,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="20M Supply Truck" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5c74-53ce-ebe5-4486">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">7</characteristic>
                   </characteristics>
@@ -6425,7 +6501,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="f3e9-1ce5-924c-d49b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="f3e9-1ce5-924c-d49b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="ade7-96f2-138c-0f24" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Gun Tractor" hidden="false" id="25e1-c591-5f38-8ff9" type="selectionEntry" targetId="8a8f-481f-009a-471c"/>
             <entryLink import="true" name="Rapid Deployment" hidden="false" id="fc4d-7eb1-3ca5-5ba4" type="selectionEntry" targetId="fc04-d423-d161-6603"/>
@@ -6439,8 +6515,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <profiles>
                 <profile name="39M Brudermann Gun Tractor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ebf6-0d1e-3aa1-832a">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                   </characteristics>
@@ -6483,8 +6559,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Franz Von Trotta" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8c76-5adf-5c6d-65a8">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
@@ -6553,8 +6629,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             </profile>
             <profile name="Chaim Drescher: The Maccabean Knight" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6534-1db1-aa22-7f36">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">7</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
               </characteristics>
@@ -6617,8 +6693,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
           <profiles>
             <profile name="Baron Lajos Dolmán de Szolnok" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7038-9b7c-0b46-025e">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
               </characteristics>
@@ -6687,14 +6763,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
               <description>Svejk is not deployed on the table as other Units are. Instead, after all Deployment has completed and before the first Round begins, select one Troops Unit in your opponent&apos;s army. Attach Svejk to this Unit - for all rules purposes such as Line of Sight, Cohesion, Damage Allocation, Movement, etc., Svejk is treated as a Token. Svejk can never be selected to take damage for any reason. If the Unit that Svejk is attached to has been destroyed, he is removed from play.
 
 
-When the Unit that Svejk is attached to is selected to activate, roll a die, and apply the result as follows;
+When the Unit that Svejk is attached to is selected to activate, its owner must roll a die, and apply the result as follows until its next Activation;
 
 
-* 1-2 - The Unit activates as normal, though Svejk will complain about it.
-* 3-4 - The Unit gains one additional Suppression token, and must re-roll successful Suppression checks.
-* 5-6 - The Unit cannot perform any Actions other than Move, Disengage, Attack, or Dig In.
-* 7-8 - The Unit loses all Ordered status effects.
-* 9-10 - The Unit immediately completes its Activation and ends the Turn.
+* 10-8 - The Unit activates as normal, though Svejk will complain about it.
+* 7-6 - The Unit gains one additional Suppression token, and must re-roll successful Suppression checks.
+* 5-4 - The Unit cannot perform any Actions other than Move, Disengage, Attack, or Dig In.
+* 3-2 - The Unit loses all Ordered status effects.
+* 1 - The Unit immediately completes its Activation and ends the Turn.
 
 
 In addition, if a Unit that Svejk is attached to attempts to perform a Reaction, roll a die. On an 8+, the Reaction automatically fails and the Unit&apos;s actions are consumed.</description>
@@ -6855,8 +6931,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
               <profiles>
                 <profile name="Graf Class Panzerzeppelin" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fc5d-ac90-9949-d482">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">19</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">40</characteristic>
                   </characteristics>
@@ -6973,7 +7049,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="6ff7-cbef-dca6-6268" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="6ff7-cbef-dca6-6268" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Cumbersome" hidden="false" id="3200-ebdf-cb58-ad60" type="selectionEntry" targetId="d9ac-f2e2-048b-ab48"/>
             <entryLink import="true" name="Intelligence" hidden="false" id="6a73-0509-d66d-feda" type="selectionEntry" targetId="65f3-25c2-05a8-cf41"/>
             <entryLink import="true" name="Crash Landing" hidden="false" id="05d8-e16f-fbb9-6f31" type="selectionEntry" targetId="b970-d336-823b-3ce3"/>
@@ -7009,10 +7085,10 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mobilization Cross" hidden="false" id="12c9-8b4f-fee3-560a">
+            <selectionEntry type="upgrade" import="true" name="Order of the Iron Crown" hidden="false" id="12c9-8b4f-fee3-560a">
               <rules>
-                <rule name="Mobilization Cross" id="fe70-8496-cc0c-293d" hidden="false">
-                  <description>When this Commander issues an Order, select a Unit within 8&quot; of the Ordered Unit, it also receives an Order. (This additional Order may be issued to Units that do not share a CORE Type or Platoon with this Commander)</description>
+                <rule name="Order of the Iron Crown" id="fe70-8496-cc0c-293d" hidden="false">
+                  <description>Units in this Commander&apos;s Platoon may choose to Activate their Shield Generators in reaction to Melee Attacks. If they do, they may not perform Warding or Counter Attacks this Round.</description>
                 </rule>
               </rules>
               <costs>
@@ -7113,7 +7189,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="615b-ddff-c414-48b1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="615b-ddff-c414-48b1" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Not My Job" hidden="false" id="b35a-4a5f-1f5e-15d4" type="selectionEntry" targetId="8a0d-4c81-fae8-ea39"/>
           </entryLinks>
           <selectionEntries>
@@ -7121,8 +7197,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
               <profiles>
                 <profile name="20M Ambulance" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="155b-0c0a-2781-aac1">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">8</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">7</characteristic>
                   </characteristics>
@@ -7175,8 +7251,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   <profiles>
                     <profile name="Panzergrenadier Unteroffizier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="78f2-188f-b688-2eb7">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -7211,11 +7287,6 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7ac-b818-7d70-deb0" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
-                        <entryLink import="true" name="Flanged Mace and Shield" hidden="false" id="b1c4-d262-6d3e-6716" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="097b-c840-b01b-50a2" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
                         <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="b79e-359e-1f9c-9b23" collective="false" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7e9-fe39-a887-2737" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7231,6 +7302,24 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b384-bfe8-5674-d0b2" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81b6-dabc-f7a8-2a66" includeChildSelections="false"/>
                       </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Flanged Mace and Shield" hidden="false" id="5aeb-15ab-9cbc-66d2" collective="true">
+                          <entryLinks>
+                            <entryLink import="true" name="Flanged Mace" hidden="false" id="b1c4-d262-6d3e-6716" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="097b-c840-b01b-50a2-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="097b-c840-b01b-50a2-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Combat Shield" hidden="false" id="63a0-ad20-920e-5e3f" type="selectionEntry" targetId="8766-febd-3b85-6fe9">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1139-4652-a3da-3c1f-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1139-4652-a3da-3c1f-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
@@ -7242,8 +7331,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   <profiles>
                     <profile name="Panzergrenadier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="24ec-20d0-95b9-404e">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -7256,23 +7345,36 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon Option" id="ac53-825a-9b89-a35e" hidden="false" defaultSelectionEntryId="9731-dd0b-ff0f-6587" collective="false">
+                    <selectionEntryGroup name="Primary Weapon" id="c785-6e1f-da7d-39b9" hidden="false" defaultSelectionEntryId="ba54-6d8b-d4e3-c140">
                       <entryLinks>
-                        <entryLink import="true" name="Flanged Mace and Shield" hidden="false" id="efb4-5926-da44-5f41" collective="false" targetId="bccd-f35d-9db1-5ba2" type="selectionEntry">
+                        <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="ba54-6d8b-d4e3-c140" collective="false" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
                           <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fcf0-495f-44de-11ed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="Meg. 40 Heavy Energy Rifle" hidden="false" id="9731-dd0b-ff0f-6587" collective="false" targetId="dd2b-ca3f-0686-6fb4" type="selectionEntry">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73b8-909f-6080-6781" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9c6-157e-28b9-514e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ca6-9c47-a1a8-4f6c" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4755-6a77-69dc-33d8" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36ff-8af5-d69f-dda1" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fdb-90de-522c-e6fb" includeChildSelections="false"/>
                       </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Flanged Mace and Shield" hidden="false" id="690c-f622-1dbc-fa74" collective="true">
+                          <entryLinks>
+                            <entryLink import="true" name="Flanged Mace" hidden="false" id="08bf-b1b9-2019-d474" type="selectionEntry" targetId="bccd-f35d-9db1-5ba2">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1721-14ce-5c95-5f41-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1721-14ce-5c95-5f41-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Combat Shield" hidden="false" id="2dee-c3aa-8275-3525" type="selectionEntry" targetId="8766-febd-3b85-6fe9">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4657-347c-8b62-effc-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4657-347c-8b62-effc-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
@@ -7294,7 +7396,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="a45a-70fc-a975-4d0b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="a45a-70fc-a975-4d0b" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="25"/>
@@ -7304,7 +7406,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
           </costs>
           <rules>
             <rule name="Europas Bollwerk!" id="5135-9c38-b5e5-fe5e" hidden="false">
-              <description>Attacks made against this Unit by Weapons with 3AP or lower reduce their Damage profile by 1, to a minimum of 1.</description>
+              <description>Attacks made against this Unit by Weapons with 4AP or lower reduce their Damage profile by 1, to a minimum of 1.</description>
             </rule>
             <rule name="Ministeriales" id="0852-6b00-b75a-be0f" hidden="false">
               <description>When other Troop Units within 8&quot; of this Unit activate their Shield Generator, they may reduce the AP profile of incoming Weapon Profiles by 1 to a minimum of 0.</description>
@@ -7344,8 +7446,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   <profiles>
                     <profile name="Knecht Feldweibel" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7f12-0645-8435-d37c">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
@@ -7358,11 +7460,6 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd14-8447-eb1b-180a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink import="true" name="Knecht Mace and Shield" hidden="false" id="d29a-140d-f57f-2669" collective="false" targetId="a336-f2d0-a145-aee2" type="selectionEntry">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b22e-a2b2-8578-cb02" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                          </constraints>
-                        </entryLink>
                         <entryLink import="true" name="Solothurn M.220" hidden="false" id="13b1-1f38-c26a-6fe7" collective="false" targetId="27af-1c0d-7310-e4cc" type="selectionEntry">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c64a-35b5-0ab7-bda5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7389,6 +7486,27 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                           </constraints>
                         </entryLink>
                       </entryLinks>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Mace and Shield" hidden="false" id="ab76-4c18-4df9-64fd" collective="true">
+                          <entryLinks>
+                            <entryLink import="true" name="Knecht Mace" hidden="false" id="e0e8-df3e-8a3e-3536" type="selectionEntry" targetId="a336-f2d0-a145-aee2">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b538-e1a7-f7cb-ff85-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b538-e1a7-f7cb-ff85-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Knecht Shield" hidden="false" id="b68f-a384-6b7b-1b5f" type="selectionEntry" targetId="95f0-5fd0-015c-84de">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8937-64c0-d81c-2e92-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8937-64c0-d81c-2e92-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9adc-1d2b-35a0-c043" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
@@ -7414,8 +7532,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   <profiles>
                     <profile name="Knecht Doppelsöldner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="64db-8e62-3318-e0ec">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
@@ -7428,17 +7546,33 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84d1-1e34-e0e0-b55f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink import="true" name="Knecht Mace and Shield" hidden="false" id="5434-2050-4ae9-cb1e" collective="false" targetId="a336-f2d0-a145-aee2" type="selectionEntry">
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d58-730f-9ba0-3ce1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                          </constraints>
-                        </entryLink>
                         <entryLink import="true" name="Knecht Zweihander" hidden="false" id="07e3-5187-c2d5-0256" type="selectionEntry" targetId="3fc8-84ad-d8b6-e09d">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a138-4e9c-a0b6-b41e" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Mace and Shield" hidden="false" id="5186-7a4a-bed2-0bae" collective="true">
+                          <entryLinks>
+                            <entryLink import="true" name="Knecht Mace" hidden="false" id="cda2-4474-f1f0-a0a2" type="selectionEntry" targetId="a336-f2d0-a145-aee2">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e431-560a-06b3-f20c-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e431-560a-06b3-f20c-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Knecht Shield" hidden="false" id="7bbc-160c-1781-54cd" type="selectionEntry" targetId="95f0-5fd0-015c-84de">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8096-3c86-2aa2-db74-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8096-3c86-2aa2-db74-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fd6-a1e5-662d-40fc" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
@@ -7457,7 +7591,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   </costs>
                   <rules>
                     <rule name="Pike Breaker" id="18b8-abcf-bfde-a6ad" hidden="false">
-                      <description>As a Difficult Action, this Unit may choose to Rush. If it does, choose an Enemy Unit and roll 1D10, it may move that many inches towards that Unit. If this Unit enters Engagement with that Unit in this way, consider its Melee Weapons to have the Charge! Special Rule.</description>
+                      <description>As a Difficult Action, this Unit may choose to Blitz. If it does, choose an Enemy Unit; it may move 1D5+6&quot; towards that Unit. If this Unit enters Engagement with that Unit in this way, consider its Melee Weapons to have the Charge! Special Rule.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -7468,8 +7602,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   <profiles>
                     <profile name="Knecht Schützer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7388-47c5-de4f-768a">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
@@ -7527,8 +7661,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
                   <profiles>
                     <profile name="Knecht Cornet" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4de2-10b6-6f7a-71f9">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
                       </characteristics>
@@ -7566,12 +7700,12 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="78f8-3e16-a64a-77e5" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="78f8-3e16-a64a-77e5" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Bulwark 1" hidden="false" id="5053-870c-e2af-5d67" type="selectionEntry" targetId="b9b0-158c-a4b1-de50"/>
           </entryLinks>
           <rules>
             <rule name="Edelfrei" id="0d39-7d56-a848-f963" hidden="false">
-              <description>As a Standard Action, this Unit may choose to Inspire. If it does, give a Suppression token to every Enemy Troop Unit within 8&quot; of this Unit. For every Token given in this way, you may remove a Suppression token from a Friendly Unit within 8&quot; of this Unit.</description>
+              <description>As a Standard Action, this Unit may choose to Inspire. If it does, apply a Suppression Token to every Enemy Troop Unit within 8&quot; of this Unit. For every Token given in this way, you may remove a Suppression token from a Friendly Unit within 8&quot; of this Unit.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -7599,15 +7733,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="9819-28bc-59c1-f9ae" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
-              <entryLinks>
-                <entryLink import="true" name="Zimmerit" hidden="false" id="9fa6-6daf-5791-598f" type="selectionEntry" targetId="7a52-982a-1b4e-deaf">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5727-3de1-c71f-2275" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="9819-28bc-59c1-f9ae" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="d184-348b-0ff2-9cf6" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
             <entryLink import="true" name="Bailout (Safe)" hidden="false" id="8013-ca7f-c7bc-d17a" type="selectionEntry" targetId="e9de-35c8-4bd3-82e6"/>
             <entryLink import="true" name="Transport 2" hidden="false" id="6fcd-0c6d-277d-c935" type="selectionEntry" targetId="0e7b-c3e3-d42c-d86f"/>
@@ -7735,8 +7861,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
               <profiles>
                 <profile name="32M Hunyadi Armored Personnel Carrier" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4401-a3fe-f7d7-4e08">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">14</characteristic>
                   </characteristics>
@@ -7782,7 +7908,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="f527-9329-32dd-0725" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="f527-9329-32dd-0725" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069">
               <entryLinks>
                 <entryLink import="true" name="Zimmerit" hidden="false" id="fc40-379b-6c89-6a72" type="selectionEntry" targetId="7a52-982a-1b4e-deaf">
                   <constraints>
@@ -7842,8 +7968,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
               <profiles>
                 <profile name="32M Bergepanzer Armored Recovery Vehicle" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="babf-9ded-6b97-9f06">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">14</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">14</characteristic>
                   </characteristics>
@@ -7887,7 +8013,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Upgrades" hidden="false" id="de85-fdd9-a089-ebf4" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="de85-fdd9-a089-ebf4" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hitch" hidden="false" id="4c9e-08a0-f9bf-21d3" type="selectionEntry" targetId="67a0-fa8f-0603-889e"/>
           </entryLinks>
           <selectionEntries>
@@ -7932,8 +8058,8 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
               <profiles>
                 <profile name="28M Wallenstein Armored Halftrack" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="39ed-8e79-6e87-260e">
                   <characteristics>
-                    <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                     <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">12</characteristic>
                     <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">9</characteristic>
                   </characteristics>
@@ -7955,7 +8081,7 @@ In addition, if a Unit that Svejk is attached to attempts to perform a Reaction,
     </selectionEntryGroup>
     <selectionEntryGroup name="Army Specializations" id="63e4-c84a-dbda-2337" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="13th KuK Landwehr Infantry Division (Wien)	" hidden="false" id="f340-7eb5-dc73-7f37">
+        <selectionEntry type="upgrade" import="true" name="13th KuK Landwehr Infantry Division (Wien)	" hidden="false" id="f340-7eb5-dc73-7f37" sortIndex="1">
           <rules>
             <rule name="Noble Authority" id="cf27-8419-6fdb-908e" hidden="false">
               <description>Command Units in your army are always considered Ordered.</description>
@@ -7984,7 +8110,7 @@ Each Ordeal can only be accomplished once per game.</description>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="4th Militärgrenze Division (Sarajevo)" hidden="false" id="27dd-b3ca-2d82-5ec1">
+        <selectionEntry type="upgrade" import="true" name="4th Militärgrenze Division (Sarajevo)" hidden="false" id="27dd-b3ca-2d82-5ec1" sortIndex="2">
           <rules>
             <rule name="Osigurana Pozicija" id="d05b-b59b-5956-2362" hidden="false">
               <description>During deployment, select two non-Transport Vehicle Units in your army without the Forward Positions Special Rule and give it to them. 
@@ -7997,7 +8123,7 @@ You may use the Deployed In Advance Special Requisition without spending extra S
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="21st Landwehr Infantry Division (Praha)" hidden="false" id="6830-37f6-dbe0-0c9e">
+        <selectionEntry type="upgrade" import="true" name="21st Landwehr Infantry Division (Praha)" hidden="false" id="6830-37f6-dbe0-0c9e" sortIndex="3">
           <rules>
             <rule name="Bohemian Plate" id="a2fe-e2b7-382d-628a" hidden="false">
               <description>* Troop Units in your army get Bulwark 1 if they are in at least two levels of Cover. 
@@ -8015,12 +8141,12 @@ You may use the Deployed In Advance Special Requisition without spending extra S
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Die Paladin-Peers Karls des Großen (München)" hidden="false" id="5671-105b-245b-37f3">
+        <selectionEntry type="upgrade" import="true" name="Die Paladin-Peers Karls des Großen (München)" hidden="false" id="5671-105b-245b-37f3" sortIndex="4">
           <rules>
             <rule name="Blue Bloods" id="104b-b0c2-5a5b-9299" hidden="false">
               <description>Non-Battlesuit Units in this Army may not be issued Orders
-.
-At the Start of the Action phase, non-Cavalry Battlesuit Units in your army that have an Order Token may take a free Dash Action.</description>
+
+At the Start of the Action phase, Non-cavalry Battlesuit Units in your army that have an Order Token may take a free Dash Action.</description>
             </rule>
             <rule name="Ritterlichkeit" id="04aa-61e7-262f-be21" hidden="false">
               <description>When Chaim Drescher or a Knecht Battlesuit Unit performs an Attack Action, if the Model with the highest current Hitpoints in the targeted Unit exceeds the highest current Hitpoints of the Models in the Attacking Unit, that Unit may reroll all instances of 1s and 2s.
@@ -8052,7 +8178,7 @@ This Unit may reroll 1s and 2s for Armor Penetration Checks against the Challeng
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Imperial 1st Hussar Division (Budapest)" hidden="false" id="0229-2bcf-f71e-1361">
+        <selectionEntry type="upgrade" import="true" name="Imperial 1st Hussar Division (Budapest)" hidden="false" id="0229-2bcf-f71e-1361" sortIndex="5">
           <rules>
             <rule name="The Butchers of Bastogne" id="6b58-d44f-5ad8-583a" hidden="false">
               <description>Before performing an Attack Action with a Tracked Vehicle, you may spend 1 Supply Point to fire Explosive Shells. If you do this, select one Weapon Profile on the Activated Vehicle. This Weapon gains High Explosive for its next Attack. If the weapon has Ordnance X, or already has High Explosive, it instead gains Close In.</description>
@@ -8074,13 +8200,13 @@ This Unit may reroll 1s and 2s for Armor Penetration Checks against the Challeng
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="1st Royal Teuton Division (Konigsberg)" hidden="false" id="0495-ce03-d9cb-7377">
+        <selectionEntry type="upgrade" import="true" name="1st Royal Teuton Division (Konigsberg)" hidden="false" id="0495-ce03-d9cb-7377" sortIndex="6">
           <rules>
             <rule name="Auditors of Death" id="8af6-88e9-9972-a949" hidden="false">
               <description>During the Command Phase, place an additional blast token for each Engineer, Gun Tractor, or Command unit in your army. These must be split as evenly as possible between all Blast X types in your army.
 
 
-Units with the Siege Sub-Type receive an Aim token for every Command or Engineer unit they are within 8&apos;&apos; of at the start of their activation.</description>
+Units with the Siege Subtype receive an Aim token for every Command or Engineer unit they are within 8&apos;&apos; of at the start of their activation.</description>
             </rule>
             <rule name="Haubitzen!" id="bdef-8b02-3332-0ca6" hidden="false">
               <description>Command Units in your army gain the Adjust Coordinates Action as a Standard Action.
@@ -8090,7 +8216,7 @@ After a Siege Unit in your Army performs an Attack Action with an Ordnance Weapo
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="2nd Alpini Division &quot;Tridentina&quot; (Tyrol)" hidden="false" id="cf78-587a-5870-e103">
+        <selectionEntry type="upgrade" import="true" name="2nd Alpini Division &quot;Tridentina&quot; (Tyrol)" hidden="false" id="cf78-587a-5870-e103" sortIndex="7">
           <rules>
             <rule name="Mountain Infantry" id="a8bc-367a-9c71-5686" hidden="false">
               <description>Troop Units in this Army ignore Rough Terrain.
@@ -8104,7 +8230,7 @@ When an Attack Action is taken against a Troop Unit in this army, if that Attack
             <rule name="Di Qui Non Si Passa!" id="969c-c53c-104d-c94b" hidden="false">
               <description>Troop Units in this Army gain Warding on all Melee Weapons.
 
-Carriage Units in this Army may receive the benefit of Light cover as if they were Troops, but may not receive any additional levels of Cover.
+Carriage Units in this Army may receive the benefit of Light cover as if they were Troops, but may not receive any additional levels of Cover in this way.
 
 Troop Units in this Army may shed one Suppression token when they activate their Shield Generator.</description>
             </rule>
@@ -8149,8 +8275,8 @@ Troop Units in this Army may shed one Suppression token when they activate their
                   <profiles>
                     <profile name="Sanitäter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="881c-0280-54f1-651b">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -8198,8 +8324,8 @@ Troop Units in this Army may shed one Suppression token when they activate their
                   <profiles>
                     <profile name="Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1d8e-d19b-d307-558c">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">5</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
                       </characteristics>
@@ -8259,6 +8385,9 @@ Troop Units in this Army may shed one Suppression token when they activate their
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <infoLinks>
+                    <infoLink name="Attached Heavy Weapon" id="3c72-b834-423f-f220" hidden="false" type="rule" targetId="c1ef-fd70-5e4d-a012"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -8313,8 +8442,8 @@ Troop Units in this Army may shed one Suppression token when they activate their
           <profiles>
             <profile name="Flagbearer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="55d2-1828-af44-737c">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
               </characteristics>
@@ -8360,8 +8489,8 @@ Troop Units in this Army may shed one Suppression token when they activate their
           <profiles>
             <profile name="Geheimdienst Agent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d11e-bf22-b2a8-0dfa">
               <characteristics>
-                <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                 <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
                 <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
               </characteristics>
@@ -8402,7 +8531,7 @@ Troop Units in this Army may shed one Suppression token when they activate their
 
 * Jumbled Static: Whenever an Enemy Unit within the Radio Network is issued an Order, roll 1d10, on a 7+, that Order is not issued.
 
-* De Jure Territory: As an Action, select an unclaimed Objective Marker within 24&quot; and Line of Sight, this Unit immediately Captures that Objective.
+* De Jure Territory: As an Action, select an uncontested Objective Marker within 24&quot; and Line of Sight, this Unit immediately Captures that Objective.
 
 * Singled Out: Immediately select an Enemy Unit within LoS and 16&quot;, it can no longer benefit from Rules and Abilities originating from other Units.</description>
                 </rule>
@@ -8439,8 +8568,8 @@ Troop Units in this Army may shed one Suppression token when they activate their
                   <profiles>
                     <profile name="Military Chaplain" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fdbe-de5f-8a3e-ef4e">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
                       </characteristics>
@@ -8505,15 +8634,15 @@ Troop Units in this Army may shed one Suppression token when they activate their
                   <profiles>
                     <profile name="Hospitaller" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="052f-cf62-355d-aff3">
                       <characteristics>
-                        <characteristic name="Movement" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Score" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
                         <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">9</characteristic>
                         <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="Munitions" typeId="Points" value="36"/>
+                    <cost name="Munitions" typeId="Points" value="56"/>
                     <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>

@@ -28,8 +28,8 @@
     </profileType>
     <profileType id="d3fb-06f3-cc24-ab32" name="Model" kind="model">
       <characteristicTypes>
-        <characteristicType id="3e68-f430-0d7c-5747" name="Movement"/>
-        <characteristicType id="c7f9-7a63-2269-6a82" name="Evasion Score"/>
+        <characteristicType id="3e68-f430-0d7c-5747" name="Movement Value"/>
+        <characteristicType id="c7f9-7a63-2269-6a82" name="Evasion Value"/>
         <characteristicType id="af2e-1c49-9a61-0dba" name="Armor Value"/>
         <characteristicType id="190f-e5ac-64bb-efa8" name="Hit Points"/>
       </characteristicTypes>
@@ -60,6 +60,13 @@
       <characteristicTypes>
         <characteristicType name="Cost" id="fdc2-ccd7-0950-5670"/>
         <characteristicType name="Effects" id="8280-2b12-dd95-5313"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="The Blizzard" id="c141-3197-a403-b085" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Score To Increase" id="fe39-6149-4e68-b51f"/>
+        <characteristicType name="Score To Maintain" id="c1f2-cd31-ea40-488c"/>
+        <characteristicType name="Effect" id="477a-4bf9-6e6e-9caf"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1024,7 +1031,7 @@
             </modifier>
             <modifier type="increment" value="2" field="284c-5503-e866-a2e0">
               <conditions>
-                <condition type="atLeast" value="4" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" childName="CORE Armor" includeChildSelections="true"/>
+                <condition type="atLeast" value="4" field="selections" scope="force" childId="7110-7fe8-80e2-5e81" shared="true" childName="CORE Support" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1281,7 +1288,7 @@
             </categoryLink>
             <categoryLink name="AUX Rail" hidden="false" id="7d41-c080-c6f2-9246" targetId="66f8-133e-bf09-29ff">
               <constraints>
-                <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="9505-30eb-0db1-6d84" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9505-30eb-0db1-6d84" includeChildSelections="false"/>
               </constraints>
             </categoryLink>
           </categoryLinks>
@@ -2034,18 +2041,7 @@ Area, Light Terrain, Impassable</characteristic>
             <profile name="Secret Tunnel (NFR)" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="2fac-3ad1-caee-bd63">
               <characteristics>
                 <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">2</characteristic>
-                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">To deploy: Place a Taupe token (denoted by a 40 mm base size) within 1” of the
-constructing Unit. Then place a second Taupe token anywhere within the
-constructing Units movement range. Troop Units within 3” may interact with
-either marker.
-
-
-Troop Units in your army within 3” of a Taupe token may use one of their actions
-to travel through the Taupe on their turn. To travel through a Taupe, remove a
-Troop Unit within range of a Taupe token and set them up within 3” of the
-opposite Taupe token. The Unit that constructed the Taupe may travel through it
-on the turn it was constructed without using an Action. Troop Units may not
-travel through the Taupe twice in the same turn.
+                <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Troop Units in your Army within 3&quot; of a Taupe Token may travel through the Secret Tunnel. If they do, select another Taupe Token within Range, and set the Unit up within 3&quot; of that Token. The Range of this ability is 15&quot; per Action spent to travel. A Unit may not travel in this way more than once per Round.
 
 Area, Light Terrain, Subterranean</characteristic>
                 <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">40mm Circular</characteristic>
@@ -2177,7 +2173,7 @@ Area, Medium Terrain, Rough</characteristic>
           </costs>
           <rules>
             <rule name="Protect and Preserve" id="2efa-1a5e-c846-2f30" hidden="false">
-              <description>Units in this Platoon can benefit from Cover, and increase their level of Cover by 1. Units that make Movement Actions in this Platoon may choose to move towards the nearest Cover, rather than the nearest Objective or enemy Unit.</description>
+              <description>Troop Units in this Platoon can benefit from Cover, and increase their level of Cover by 1. Units that make Movement Actions in this Platoon may choose to move towards the nearest Cover, rather than the nearest Objective or enemy Unit.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -2348,7 +2344,7 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
       <description>This Unit, and all Units within 6&quot; of this Unit, are within the Radio Network.</description>
     </rule>
     <rule name="Forward Observer" id="75bb-9390-ced5-4e8e" hidden="false">
-      <description>This Unit gains &quot;Adjust Coordinates&quot; as a Standard Action. When it uses this Action it may select any Blast tokens within Line of Sight and 18&quot; of itself. Any Aim tokens this Unit has may be spent by Friendly Siege Units within 12&quot; of itself.</description>
+      <description>This Unit gains &quot;Adjust Coordinates&quot; as a Standard Action. When it uses this Action it may select any Friendly Blast tokens within Line of Sight and 18&quot; of itself. Any Aim Tokens this Unit has may be spent by Friendly Siege Units within 12&quot; of itself.</description>
     </rule>
     <rule name="Radio Network" id="e66d-a852-920c-d985" hidden="false">
       <description>Units within the Radio Network benefit from the following rules:
@@ -2430,8 +2426,8 @@ You may instead do this at the end of the Set Up Phase, by spending +2 S.P. in a
     </profile>
     <profile name="Cavalry Actions" typeId="5a0c-9677-ca87-9509" typeName="Action List" hidden="false" id="95c6-33a2-c463-50c9">
       <characteristics>
-        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Capture, Dash, Move, Take Aim</characteristic>
-        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73"/>
+        <characteristic name="Standard Actions" typeId="71f8-64d2-a32a-0757">Attack, Capture, Move, Take Aim</characteristic>
+        <characteristic name="Free Actions" typeId="4c52-f227-0038-1b73">Dash</characteristic>
         <characteristic name="Difficult Actions" typeId="cf1b-a84e-f943-d503">Steady, Disengage, Sentry</characteristic>
         <characteristic name="Reactions" typeId="6cfc-1528-37ea-2ff9">Brace, Fallback</characteristic>
       </characteristics>
@@ -2531,6 +2527,16 @@ Area, Heavy Terrain, Rough</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">5</characteristic>
         <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Ordnance 3, Bombard 3</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Howitzer, Explosive</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Poison Gas" typeId="Weapon" typeName="Weapon" hidden="false" id="016d-e75a-6168-c05e">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">6</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">N/A</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Gas!</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Gas</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -3164,7 +3170,7 @@ Area, Heavy Terrain, Rough</characteristic>
             <modifier type="prepend" value="Drilled" field="name" scope="parent"/>
           </modifiers>
           <infoLinks>
-            <infoLink name="Gunner! Target X!" id="8873-8c31-2ec9-a717" hidden="true" type="rule" targetId="c244-6d3c-9aad-4dc3">
+            <infoLink name="Gunner! Target X!" id="8873-8c31-2ec9-a717" hidden="false" type="rule" targetId="c244-6d3c-9aad-4dc3">
               <modifiers>
                 <modifier type="replace" value="1" field="name" arg="X"/>
                 <modifier type="replace" value="1" field="description" arg="X"/>
