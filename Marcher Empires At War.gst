@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.6.1" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="969e-2588-ed56-37c3" name="Marcher: Empires At War v1.9.7" revision="1" battleScribeVersion="2.03" authorName="Golden Dragon Games Team" authorContact="goldendragontabletopgames@gmail.com" authorUrl="GoldenDragonGames.Net" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="Points" name="Munitions" defaultCostLimit="2000" hidden="false"/>
     <costType id="284c-5503-e866-a2e0" name="Supply" defaultCostLimit="-1" hidden="false"/>
@@ -3174,8 +3174,7 @@ You may not return Attache or Automaton models with this Action.</characteristic
         <selectionEntry type="upgrade" import="true" name="Battle Hardened" hidden="false" id="72a2-3ebd-6239-c7df">
           <rules>
             <rule name="Battle Hardened" id="bc6d-0d48-0ca7-b525" hidden="false">
-              <description>This Unit&apos;s Bravery Bonus is improved by 1. When this Unit activates, it may roll a D10 for each Concussion Token Applied to it. On an 8+, that Token is shed without applying its effects.
-</description>
+              <description>This Unit&apos;s Bravery Bonus is improved by 1. When this Unit activates, it may roll a D10 for each Concussion Token Applied to it. On an 8+, that Token is shed without applying its effects.</description>
             </rule>
           </rules>
           <costs>
