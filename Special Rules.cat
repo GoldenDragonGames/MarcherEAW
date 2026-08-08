@@ -14,7 +14,7 @@
       <description>This Unit is always considered to be Overwatching. This Unit may make two Overwatch Attacks per round. This Unit may receive Order Tokens, if it does, it may spend the Tokens to perform additional Overwatch Actions. This Unit may not make multiple Attacks per round against the same target.</description>
     </rule>
     <rule name="Bailout" id="e024-3b5a-3d53-c103" hidden="false">
-      <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 3 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <description>If this Model is destroyed while Units are Embarked within it, for each Unit, roll a 4+ Bailout Check for each Model Embarked. For each failure, a Model in that Unit is Destroyed. Then place the Unit within 3&quot; of the destroyed Transport.</description>
     </rule>
     <rule name="Battlefield Preparation" id="df67-26f7-b945-7b74" hidden="false">
       <description>At the beginning of the first Action Phase, this Unit may immediately take a free Build or Demolish Action.</description>
@@ -53,7 +53,7 @@
       <description>Units with this Special Rule may not be selected to Activate until all other non-Cumbersome Units in your Army have Activated this Round.</description>
     </rule>
     <rule name="Bailout (Dangerous)" id="6100-8e4c-f566-2b4a" hidden="false">
-      <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <description>If this Model is destroyed while Units are Embarked within it, for each Unit, roll a 6+ Bailout Check for each Model Embarked. For each failure, a Model in that Unit is Destroyed. Then place the Unit within 3&quot; of the destroyed Transport.</description>
       <alias>Dangerous Bailout</alias>
     </rule>
     <rule name="Designated Leader" id="1f95-fa4a-51e0-80f8" hidden="false">
@@ -159,7 +159,8 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
     </rule>
     <rule name="Raise the Banner" id="8126-75b0-4721-8842" hidden="false">
-      <description>All Units within 12&quot; of this Flag may reroll 1s and 2s for Suppression Checks.</description>
+      <description>All Units within 12&quot; of this Flag may use this Model&apos;s Bravery Bonus instead of their own.
+</description>
     </rule>
     <rule name="Rapid Deployment" id="bed7-c4f3-15ed-2888" hidden="false">
       <description>At the start of the first Action Phase, this Unit may immediately take a Free Move action. They may not end this movement within Engagement Range of an Enemy Unit.</description>
@@ -177,7 +178,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>When this Unit is destroyed, place a Gas Token on top of it. This token does not drift and remains for the rest of the game.</description>
     </rule>
     <rule name="Bailout (Safe)" id="8e16-6a0a-60b0-dedb" hidden="false">
-      <description>If this Model is destroyed while Units are Embarked within it, roll 1D10 for each Model Embarked. For each roll of 1 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <description>If this Model is destroyed while Units are Embarked within it, for each Unit, roll a 2+ Bailout Check for each Model Embarked. For each failure, a Model in that Unit is Destroyed. Then place the Unit within 3&quot; of the destroyed Transport.</description>
       <alias>Safe Bailout</alias>
     </rule>
     <rule name="Slippery" id="e1f9-41ef-ff64-d030" hidden="false">
@@ -233,7 +234,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>When this Unit is destroyed, remove the Model from the battlefield and place a 25mm token in the center of where its base was. This token Drifts, but when determining the distance this token Drifts, add this Unit&apos;s Movement Value to the result. Perform an Attack Action (Profile:H:5, AP:5, D:5, High Explosive) against all Units within 3&quot; of the Token along its entire path. This Model does not leave Wreckage on the Battlefield.</description>
     </rule>
     <rule name="Bailout (Aerial)" id="dfa3-76f0-a139-f719" hidden="false">
-      <description>If this Model is destroyed while Units are Embarked within it, if those Units do not have the Flying Keyword or the Jump Packs Special Rule, they are Destroyed. If they do, roll 1D10 for each Model Embarked. For each roll of 5 or less, destroy one Model before placing the Embarked Unit within 3” of the destroyed Transport.</description>
+      <description>If this Model is destroyed while Units are Embarked within it, if those Units do not have the Flying Keyword or the Jump Packs Special Rule, they are Destroyed. If they do, for each Unit, roll a 6+ Bailout Check for each Model Embarked. For each failure, a Model in that Unit is Destroyed. Then place the Unit within 3&quot; of the destroyed Transport.</description>
       <alias>Aerial Bailout</alias>
     </rule>
     <rule name="Sealed" id="429e-1178-6b2a-e940" hidden="false">
@@ -267,13 +268,22 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>Units that began their Activation within this Unit may take a Free Dash Action to Disembark.</description>
     </rule>
     <rule name="Armored Guardian" id="97f8-e657-8b6a-e3cc" hidden="false">
-      <description>Attacks targeting this Model may not apply Suppression Tokens. This Model&apos;s Armor Value may exceed 10.</description>
+      <description>Attacks targeting this Model must use its Bravery Bonus for Suppression Checks. This Model&apos;s Armor Value may exceed 10.</description>
     </rule>
     <rule name="Order Token" id="555b-e260-0d9a-3cef" hidden="false">
       <description>This Unit gains one Action. This Token is removed when this Unit ends its Activation.</description>
     </rule>
     <rule name="Attached Heavy Weapon" id="c1ef-fd70-5e4d-a012" hidden="false">
       <description>This Model may not be selected to Attack if this Unit has performed a Movement Action this Activation.</description>
+    </rule>
+    <rule name="Landing Craft" id="30ea-a7ac-210a-a932" hidden="false">
+      <description>Units that Disembark from this Unit spend no Movement to do so.</description>
+    </rule>
+    <rule name="Specialist Grenadier" id="6133-5acb-7342-ed63" hidden="false">
+      <description>This Model is a Grenadier, and may not be selected for Attack Actions. Grenade Weapons used by this Unit are considered to have a Range of 12&quot;.</description>
+    </rule>
+    <rule name="Terror X" id="0ce4-7d3b-2b96-0e5a" hidden="false">
+      <description>Troop Units that target this Unit must pass a X+ Terror Check modified by their Bravery Bonus; on failure, they must immediately perform a Fallback Reaction at a cost of 1 Action. The Unit must move the maximum distance rolled for the Fallback.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -791,15 +801,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
             <modifier type="replace" value="1" field="description" arg="X"/>
           </modifiers>
         </infoLink>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Patch-Up" hidden="false" id="9b1a-4c9c-4d07-7022">
-      <infoLinks>
-        <infoLink name="Patch-Up" id="Patch-Up" hidden="false" type="rule" targetId="296f-6c65-a341-cfab"/>
       </infoLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>

@@ -105,8 +105,7 @@ Concussion Token: When this Unit Activates, remove all Concussion Tokens applied
       <description>When this Weapon is selected to make an Attack, place a Blast Token for each instance of this Weapon within Range and Line of Sight. You must select these Tokens to resolve Attacks with. This Weapon is considered to have the Inaccurate Special Rule.</description>
     </rule>
     <rule name="One-Handed" id="2082-d275-920b-519d" hidden="false">
-      <description>Troop Models may select two Weapons to Attack with if both of them have this Special Rule.
-</description>
+      <description>Troop Models may select two Weapons to Attack with if both of them have this Special Rule.</description>
     </rule>
     <rule name="Flames" id="7235-63bc-0668-6ac4" hidden="false">
       <description>When making an Attack with this weapon, all Hits succeed automatically, then apply a Burning Token. When a Model carrying a Weapon with this Special Rule is Destroyed, apply a Burning Token to the Unit it was a part of, and any Units within 3&quot;.
@@ -167,7 +166,7 @@ Attacks that originate from within 3&quot; of this Token, or draw Line of Sight 
       <description>After succeeding a Hit check with this Weapon Profile, apply a Slag Token. You may not apply more than One Slag Token per Weapon Profile per Attack Action.</description>
     </rule>
     <rule name="Suppressive" id="4911-2380-864d-8b44" hidden="false">
-      <description>After Attacking a Unit with this Weapon, apply a Suppression Token. You may not apply more than Four Suppression Tokens per Attack Action.</description>
+      <description>After resolving an Attack with Suppressive Weapons, for each Suppressive Weapon, apply a Suppression Token.</description>
     </rule>
     <rule name="Warding" id="f86d-acd5-05b1-927c" hidden="false">
       <description>When an Enemy Unit enters engagement range with a Unit equipped with this Weapon, immediately perform a Free Attack Action with this weapon against that Unit. This Attack occurs before all others are resolved.</description>
@@ -194,31 +193,21 @@ Attacks that originate from within 3&quot; of this Token, or draw Line of Sight 
       <description>When making an Attack with this Weapon, Units targeted by this Attack do not receive the benefit of being Obscured.</description>
     </rule>
     <rule name="Suppression Token" id="9efa-0473-ec44-0cd5" hidden="false">
-      <description>When this Unit Activates, roll a Suppression Check. Afterwards, for each Token applied to it, the following effects are applied until the end of its Activation.
+      <description>Any time you attempt to apply this Token to a Unit, you must roll a Suppression Check. A Unit may not have more Suppression Tokens applied to it than it has Models.
 
-
-1: Suppressed: This Unit may not perform Difficult Actions.
-
-
-2: Pinned Down: Free Actions this Unit takes must be performed as Standard Actions.
-
-
-3:Trapped: This Unit may not perform the Move Action. (It may still perform the Dash Action)
-
-
-4: Broken: For each additional token past the 3rd, roll a Morale Check.
-
-
-Once all effects are resolved, remove all tokens from this Unit.</description>
+If a Unit has Suppression Tokens applied to it, the following rules apply:
+* This Unit is considered &quot;Suppressed&quot;.
+* While this Unit is Suppressed, all of its Ranged Weapons have the Inaccurate Special Rule, and for each Suppression Token applied to it, its Movement Value is reduced by 1&quot;.
+* When this Unit Activates, if the number of Suppression Tokens applied to it is equal to the number of Models in the Unit, it must roll a Morale Check.</description>
     </rule>
     <rule name="Sustained Fire" id="ced7-eb92-01df-0845" hidden="false">
-      <description>When performing an Attack Action, this Weapon may choose to gain the Inaccurate Special Rule. If it does, this Weapon applies an Additional Suppression Token.</description>
+      <description>When performing an Attack Action, this Weapon may choose to gain the Inaccurate Special Rule. If it does, this Weapon applies an additional Suppression Token.</description>
     </rule>
     <rule name="Morale Check" id="929b-91fe-5a4d-d0e2" hidden="false">
-      <description>Roll a 4+ Check on a D10, on a failure, one Model in this Unit flees and is removed from the Battlefield.</description>
+      <description>For each Model in this Unit, roll a 6+ Check modified by this Unit&apos;s Bravery Bonus. For each Failure, one Model in this Unit flees and is removed from the Battlefield.</description>
     </rule>
     <rule name="Suppression Check" id="3427-2463-7d70-6479" hidden="false">
-      <description>Roll a D10, on an 8+, shed this Token.</description>
+      <description>The score to pass this check is 5 + the Target&apos;s Bravery Bonus. On failure, the token is not applied.</description>
     </rule>
     <rule name="Spin Up" id="57cc-2904-33dc-1450" hidden="false">
       <description>When performing an Attack Action with this Weapon, you may expend any number of additional Actions. For each that you do, add another instance of this Weapon to the Attack pool.</description>
@@ -243,6 +232,9 @@ Once all effects are resolved, remove all tokens from this Unit.</description>
     </rule>
     <rule name="Innate Weapon" id="911e-9a8d-1992-85f5" hidden="false">
       <description>This Weapon may always be selected to Attack with, regardless of other Weapon selections.</description>
+    </rule>
+    <rule name="Blast" id="c55c-3ee4-a9f5-7d51" hidden="false">
+      <description>When making an Attack with this Weapon, place a Blast Token within range, then resolve an Attack with this profile against all Units with X&quot; of that Blast Token. When all eligible Attacks have been resolved, remove the Blast Token.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

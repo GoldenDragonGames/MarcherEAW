@@ -891,6 +891,19 @@
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="The Khan&apos;s Blade" hidden="false" id="3ab3-cd4e-b42b-1de3">
+      <infoLinks>
+        <infoLink name="The Khan&apos;s Blade" id="c0b8-e2fb-d723-d531" hidden="false" type="profile" targetId="0147-49bf-ff90-e464"/>
+        <infoLink name="Charge!" id="6841-dd58-2aff-4541" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
+        <infoLink name="Warding" id="1d0a-8f96-7caa-0f47" hidden="false" type="rule" targetId="f86d-acd5-05b1-927c"/>
+      </infoLinks>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="16"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="2.5cm Autocannon" typeId="Weapon" typeName="Weapon" hidden="false" id="c7dc-5d08-9dc2-07bc">
@@ -1463,6 +1476,16 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
         <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">Variable, Flat. (Straight: 3&quot; x 10&quot;, Curved: 7.5&quot; X 11&quot;)</characteristic>
       </characteristics>
     </profile>
+    <profile name="The Khan&apos;s Blade" typeId="Weapon" typeName="Weapon" hidden="false" id="0147-49bf-ff90-e464">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">5</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!, Warding</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <entryLinks>
     <entryLink import="true" name="Guards Rifles Squad" hidden="false" id="ff45-0e43-0638-fd49" type="selectionEntry" targetId="b18e-b628-8989-5914">
@@ -1576,7 +1599,7 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="7641-8b0a-eb35-6c14" primary="false" name="RUS"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Lieutenant Lyudmila Pavlichenko" hidden="false" id="63e8-7d59-5073-6490" type="selectionEntry" targetId="f4fb-d2ad-c88e-af98">
+    <entryLink import="true" name="Lieutenant Lyudmila Pavlichenko" hidden="true" id="63e8-7d59-5073-6490" type="selectionEntry" targetId="f4fb-d2ad-c88e-af98">
       <categoryLinks>
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="3145-b499-324c-6ec5" primary="true" name="Hero"/>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="d103-4cdd-a65b-2be7" primary="false" name="RUS"/>
@@ -1600,13 +1623,13 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
       <categoryLinks>
         <categoryLink targetId="51a0-4deb-b01b-931e" id="72fd-c7c9-7c2e-3d02" primary="false" name="RUS"/>
         <categoryLink targetId="7616-a9f8-6205-af0e" id="816b-cfb9-ac70-04b1" primary="false" name="Tracked"/>
-        <categoryLink targetId="c2bc-81f4-b62b-dc46" id="a2ac-21b5-f31e-3135" primary="false" name="Carriage"/>
         <categoryLink targetId="7110-7fe8-80e2-5e81" id="bed1-cfbe-f268-ac48" primary="true" name="CORE Support"/>
         <categoryLink targetId="8136-fed2-db8d-c7a0" id="e88a-3f97-70d6-ef3a" primary="false" name="AUX Armor"/>
         <categoryLink targetId="a74d-0d07-e5d9-0032" id="5b1e-d808-cadd-2115" primary="false" name="AUX Infantry"/>
         <categoryLink targetId="c87d-0c37-d91f-b4cd" id="2210-70a2-ba10-99fe" primary="false" name="AUX Mechanized"/>
         <categoryLink targetId="dc85-2f8f-8f0d-4b19" id="ead9-a9e7-cc45-ec67" primary="false" name="AUX Recon"/>
         <categoryLink targetId="9565-ab3a-3c1b-b959" id="51e2-e7d1-e628-40aa" primary="false" name="AUX Artillery"/>
+        <categoryLink targetId="de0d-e12c-a964-4e46" id="951d-f1dd-e76a-24bd" primary="false" name="Vehicle"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="8136-fed2-db8d-c7a0" field="category">
@@ -2050,7 +2073,7 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
         <categoryLink targetId="b200-6914-09f3-4db0" id="865f-7a88-468a-011b" primary="true" name="Army Specialization"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="3rd Caucasus Cossack Division (Mikhailovich)" hidden="false" id="213c-0901-527e-a929" type="selectionEntry" targetId="95a0-858f-8ee0-973b" sortIndex="3">
+    <entryLink import="true" name="3rd Caucasus Cossack Division (Sandroviks)" hidden="false" id="213c-0901-527e-a929" type="selectionEntry" targetId="95a0-858f-8ee0-973b" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="c439-f22b-a197-73aa" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
@@ -2421,6 +2444,85 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
         </modifierGroup>
       </modifierGroups>
     </entryLink>
+    <entryLink import="true" name="21cm Morser" hidden="false" id="a76f-a1da-018b-e86d" collective="false" targetId="2b90-28f4-5032-a79e" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="CORE Artillery" hidden="false" id="bcfe-15e2-cc0f-3209" targetId="8679-d614-ae03-de2c" primary="true"/>
+        <categoryLink name="HRE" hidden="false" id="865a-12e8-ffd4-0bff" targetId="496e-47e7-7a85-4016" primary="false"/>
+        <categoryLink name="Siege" hidden="false" id="14d9-37cb-1e58-91bd" targetId="6458-4093-473e-e12f" primary="false"/>
+        <categoryLink name="Carriage" hidden="false" id="8852-0643-3d35-9cb0" targetId="c2bc-81f4-b62b-dc46" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="48f5-3131-be0b-5951" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="prepend" value="Lend-Lease" field="name"/>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Countess Aleksandra Razumovsky" hidden="true" id="d200-43de-39ff-6db8" type="selectionEntry" targetId="7e1b-4d2f-83a4-0739">
+      <categoryLinks>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="de29-7b0b-3add-b5d6" primary="true" name="Hero"/>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="73fc-0a0b-3bcc-b6d3" primary="false" name="Command"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="2491-f430-f1dd-16bb" primary="false" name="Attache"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true" childName="Recon Platoon"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true" childName="Mechanized Platoon"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true" includeChildSelections="true" childName="Armor Platoon"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="289f-7e3d-d55d-8fdd" shared="true" childName="Alaskan Defense Corps 17th Division " includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Sergeltiin Khan" hidden="true" id="35b7-311b-2d78-3f93" type="selectionEntry" targetId="629a-7880-a147-13d3">
+      <categoryLinks>
+        <categoryLink name="Hero" hidden="false" id="e013-6497-e354-92db" targetId="33a5-8b7e-49bb-c30d" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true" childName="Recon Platoon"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true" childName="Mechanized Platoon"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5c09-48b8-c239-c24f" shared="true" childName="1st Kheshig Mounted Guard Division (New Khanate)" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Van Wyk" hidden="false" id="a792-cae0-69d2-a59a" type="selectionEntry" targetId="f03c-4e56-6d3b-47a6">
+      <categoryLinks>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="b94c-f644-a444-40e4" primary="true" name="Hero"/>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="422a-b010-b067-dfaa" primary="false" name="Command"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="bd23-48ed-929b-214c" primary="false" name="Attache"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Hieromonk Zhenya Morozov" hidden="false" id="d01a-7507-a7b8-f603" type="selectionEntry" targetId="cac5-f2e4-4669-a0b5">
+      <categoryLinks>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="6e3b-e711-e0f9-a61e" primary="true" name="Hero"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedRules>
     <rule name="Corporate Sear" id="9c29-d160-9e29-625e" hidden="false">
@@ -2433,7 +2535,7 @@ Area, Light Terrain, Subterranean, Rough</characteristic>
       <description>This Unit may take the Freeze Action as a Standard Action. When this Unit performs the Freeze Action, apply one Suppression token to every Unit within X inches of this Model.</description>
     </rule>
     <rule name="Blessed Relic" id="6ba4-7959-19ce-304b" hidden="false">
-      <description>This Unit gets +1 to its Suppression Checks.</description>
+      <description>This Unit gets +1 to its Bravery Score.</description>
     </rule>
     <rule name="Adjustable Sights" id="58d3-a00a-c0c4-e7d9" hidden="false">
       <description>When making an attack action with this weapon at less than half of its maximum range, this unit gains an Aim Token.</description>
@@ -2731,6 +2833,7 @@ This Unit may not take Upgrades.</description>
           </categoryLinks>
           <entryLinks>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="d8ac-485b-7c41-052c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
+            <entryLink import="true" name="Dozer Blade" hidden="false" id="138e-d8c0-2c50-cb2a" type="selectionEntry" targetId="919a-9ba1-f9df-bc7b"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="T-40 &quot;St. Mikhail&quot; Heavy Tank" hidden="false" id="a99c-423c-d435-a24d">
@@ -2912,7 +3015,7 @@ This Unit may not take Upgrades.</description>
           </infoLinks>
           <rules>
             <rule name="Heavy Casting" id="038e-2093-1bbb-62ed" hidden="false">
-              <description>Attacks made against this Unit by Weapons with 8AP or lower reduce their Damage profile by 2, to a minimum of 1.</description>
+              <description>Attacks made against this Unit by Weapons with 8AP or lower reduce their Damage profile by 2, to a minimum of 1 for the duration of this Attack.</description>
             </rule>
           </rules>
           <costs>
@@ -3058,14 +3161,13 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Siege Vehicle Actions" id="9c94-905a-9cac-0df5" hidden="false" type="profile" targetId="ad55-69e8-9339-6df7"/>
             <infoLink name="Heavy Carriage" id="e29d-7b17-7709-d0c2" hidden="false" type="rule" targetId="ffeb-7559-d07e-4e60"/>
-            <infoLink name="Prototype" id="a9d7-ad2b-cde1-d3c3" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <profiles>
             <profile name="U-19 &quot;St. Barbara&quot; Tracked Howitzer" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="76e0-3b25-b79e-22b4">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-3x U-19 &quot;St. Barbara&quot; Tracked Howitzer</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Artillery, Carriage, Tracked, Siege, Heavy</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">N/A</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">110x170mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-3</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
@@ -3232,6 +3334,7 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Siege Carriage Actions" id="b0f9-266d-c5e0-9161" hidden="false" type="profile" targetId="8aaf-072f-5000-d2b9"/>
             <infoLink name="Pack Gun" id="c868-b31a-274e-e7de" hidden="false" type="rule" targetId="9fea-0d08-bc4c-84f5"/>
+            <infoLink name="Prototype" id="5e3a-5351-a052-150f" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="3a88-d16f-bc0b-8d29" primary="false" name="Medium"/>
@@ -3458,12 +3561,13 @@ This Unit may not take Upgrades.</description>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <profiles>
-                <profile name="Guards Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2977-ac09-0cca-1dac">
+                <profile name="Guards Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="2977-ac09-0cca-1dac">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3573,12 +3677,13 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c987-9060-9ad3-31a8-max" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Snowbringer Starets" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6b91-1a46-f26c-eeae">
+                <profile name="Snowbringer Starets" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="6b91-1a46-f26c-eeae">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                   </characteristics>
                   <comment>Medium, Fast</comment>
                 </profile>
@@ -3637,12 +3742,13 @@ This Unit may not take Upgrades.</description>
                 </entryLink>
               </entryLinks>
               <profiles>
-                <profile name="Oprichnik Huntsmaster" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="051c-b0f2-aa77-3044">
+                <profile name="Oprichnik Huntsmaster" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="051c-b0f2-aa77-3044">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">14&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">14&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+5</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3754,12 +3860,13 @@ This Unit may not take Upgrades.</description>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
               <profiles>
-                <profile name="Assault Engineer-Sapper Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="774c-7346-99b2-c939">
+                <profile name="Assault Engineer-Sapper Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="774c-7346-99b2-c939">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3837,12 +3944,13 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="10b4-aa7f-0bd3-68b2-max" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Cossak Hetman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="99e2-43df-af24-9402">
+                <profile name="Cossak Hetman" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="99e2-43df-af24-9402">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">6</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3880,7 +3988,7 @@ This Unit may not take Upgrades.</description>
             <profile name="Streltsy Sotnik" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="60f9-8712-4f79-9874">
               <characteristics>
                 <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Support, Attache (Troop), Command</characteristic>
-                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">35x60mm</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">40mm</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
@@ -3961,12 +4069,13 @@ This Unit may not take Upgrades.</description>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <profiles>
-                <profile name="Streltsy Sotnik" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a5f-026c-2679-d16b">
+                <profile name="Streltsy Sotnik" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="4a5f-026c-2679-d16b">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">4&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4179,12 +4288,13 @@ This Unit may not take Upgrades.</description>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <profiles>
-                <profile name="Druzhina Battlesuit Commander" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6e53-b6e3-732f-9303">
+                <profile name="Druzhina Battlesuit Commander" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="6e53-b6e3-732f-9303">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4247,12 +4357,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3749-a49b-cc56-4b14" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Yefreitor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5256-a4d5-0536-b1d2">
+                    <profile name="Yefreitor" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5256-a4d5-0536-b1d2">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4324,12 +4435,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0015-9fc2-aa54-b119" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Ryadovoy Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="42f2-3282-2fa5-b853">
+                    <profile name="Ryadovoy Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="42f2-3282-2fa5-b853">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4394,12 +4506,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="c9a0-7951-f56b-a7fe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Ryadovoy" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="dad6-24d4-9985-61bf">
+                    <profile name="Ryadovoy" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="dad6-24d4-9985-61bf">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4436,12 +4549,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="f3f5-37d9-2d56-5ea1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Ryadovoy" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b482-c6ed-e3ee-9025">
+                    <profile name="Ryadovoy" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="b482-c6ed-e3ee-9025">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4484,7 +4598,7 @@ This Unit may not take Upgrades.</description>
           </costs>
           <rules>
             <rule name="Uraaa!" id="3e44-3a59-7df2-bd1e" hidden="false">
-              <description>If this Unit moves more than 4&quot; in a straight line, all of its equipped weapons with the Melee keyword gain the Charge! Special Rule.</description>
+              <description>Select a Hostile Unit more than 4&quot; away from this one. Until the end of this Activation, when this Unit enters Engagement Range of the selected Unit, their Melee Weapons are considered to have the Charge! Special Rule.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4518,12 +4632,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Grenader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8c61-6f12-6b35-4672">
+                    <profile name="Grenader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="8c61-6f12-6b35-4672">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4603,12 +4718,13 @@ This Unit may not take Upgrades.</description>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Grenader Yefreitor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="67f7-8df5-856c-911d">
+                    <profile name="Grenader Yefreitor" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="67f7-8df5-856c-911d">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4632,12 +4748,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Grenader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8f44-4a05-13c3-b027">
+                    <profile name="Grenader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="8f44-4a05-13c3-b027">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4762,12 +4879,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c5dc-e692-0546-54be-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Cossak Vsadnik" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="59ba-f50c-2cc2-afad">
+                    <profile name="Cossak Vsadnik" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="59ba-f50c-2cc2-afad">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4811,12 +4929,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4cb-3a0a-5d1e-3239" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Cossak Starshina" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="56ed-db51-1d50-cf01">
+                    <profile name="Cossak Starshina" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="56ed-db51-1d50-cf01">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4868,7 +4987,10 @@ This Unit may not take Upgrades.</description>
           </costs>
           <rules>
             <rule name="Veter Voyny" id="400d-eb85-b865-fe33" hidden="false">
-              <description>When this Unit moves into Engagement range of Enemy Units, each Enemy Unit gains a Suppression Token, and do not lose Suppression Tokens when they activate while Engaged with this Unit.</description>
+              <description>When this Unit enters Engagement Range of one or more Enemy Units, apply a Suppression Token to each Unit.
+
+
+Enemy Units Engaged with this Unit may not shed Suppression Tokens.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -4913,12 +5035,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Huntsman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3550-fa66-f256-dcf2">
+                    <profile name="Huntsman" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3550-fa66-f256-dcf2">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">14&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">14&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+5</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4945,12 +5068,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Hunt Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cc59-d224-5068-faa3">
+                    <profile name="Hunt Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="cc59-d224-5068-faa3">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">14&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">14&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+5</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5000,7 +5124,6 @@ This Unit may not take Upgrades.</description>
           <entryLinks>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="bbf1-7670-0929-d891" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="On Assignment" hidden="false" id="2914-4cbb-7b7e-bd40" type="selectionEntry" targetId="1028-1780-6646-aacf"/>
-            <entryLink import="true" name="Rare Materiel X" hidden="false" id="a279-fd7b-f069-ce2b" type="selectionEntry" targetId="74d0-0f15-1f3b-2484"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="f94f-807f-eca3-d850" id="7a3e-4a72-fce7-9cf6" primary="false" name="Medium"/>
@@ -5500,12 +5623,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Contractor Sniper" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0149-c6ba-f1d7-ec8a">
+                    <profile name="Contractor Sniper" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="0149-c6ba-f1d7-ec8a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5548,12 +5672,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Contractor Observer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="48d8-ce8e-86cc-c370">
+                    <profile name="Contractor Observer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="48d8-ce8e-86cc-c370">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5606,12 +5731,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Streltsy Tank Hunter Strelets" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="448f-5861-2f00-7dc8">
+                    <profile name="Streltsy Tank Hunter Strelets" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="448f-5861-2f00-7dc8">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">4&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5699,12 +5825,13 @@ This Unit may not take Upgrades.</description>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Streltsy Tank Hunter Desyatnik" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a60c-9fcc-7a1c-ca5c">
+                    <profile name="Streltsy Tank Hunter Desyatnik" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a60c-9fcc-7a1c-ca5c">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">4&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5728,7 +5855,7 @@ This Unit may not take Upgrades.</description>
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Desyatnik, 2-4x Strelets</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Support, (AUX) Infantry, (AUX) Mechanized, Troop, Battlesuit, Heavy</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">35x60mm</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
@@ -5736,7 +5863,6 @@ This Unit may not take Upgrades.</description>
           </profiles>
           <infoLinks>
             <infoLink name="Crewed Weapon Troop Actions" id="a0f6-428a-80d6-99d2" hidden="false" type="profile" targetId="7959-03e6-fdc4-3adf"/>
-            <infoLink name="Prototype" id="5e12-f7a2-2cd0-2ab2" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="503d-e65e-a2c4-319e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
@@ -5895,12 +6021,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Assault Engineer-Sapper" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="faf4-4978-2616-7483">
+                    <profile name="Assault Engineer-Sapper" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="faf4-4978-2616-7483">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5938,12 +6065,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Assault Engineer-Sapper Yefreitor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8c1e-8361-dc24-253a">
+                    <profile name="Assault Engineer-Sapper Yefreitor" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="8c1e-8361-dc24-253a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5997,12 +6125,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Assault Engineer-Sapper Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3da5-b5c1-81df-185a">
+                    <profile name="Assault Engineer-Sapper Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3da5-b5c1-81df-185a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6103,6 +6232,7 @@ This Unit may not take Upgrades.</description>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="2c64-7e34-376e-be4c" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Fortification Reference" hidden="false" id="9a28-a7d4-7219-6d30" type="selectionEntry" targetId="0aea-85e9-a44d-1c1f"/>
             <entryLink import="true" name="Catastrophic Detonation" hidden="false" id="0098-305b-68f2-8674" type="selectionEntry" targetId="6361-ef6f-71fb-f939"/>
+            <entryLink import="true" name="Dozer Blade" hidden="false" id="4b18-dde2-243e-3ed2" type="selectionEntry" targetId="919a-9ba1-f9df-bc7b"/>
           </entryLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -6127,7 +6257,6 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3afa-9a32-fffb-f9d9-max" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Pintle Mount" hidden="false" id="2b36-1106-44b5-ef4b" type="selectionEntry" targetId="3a03-4678-5dfa-9ed2"/>
               </entryLinks>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d01-294a-c8c1-2cc0-min" includeChildSelections="false"/>
@@ -6239,7 +6368,6 @@ This Unit may not take Upgrades.</description>
                 <modifier type="append" value="12" field="name"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Prototype" id="f3ce-f8cf-cad6-a7d7" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
             <infoLink name="Freeze" id="046a-764b-ceda-e5bc" hidden="false" type="rule" targetId="f31c-1dc3-9251-1d62"/>
           </infoLinks>
           <costs>
@@ -6265,12 +6393,13 @@ This Unit may not take Upgrades.</description>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="aa87-4f66-5963-620f-max" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Guards Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5a91-2725-3aaa-0fc9">
+                <profile name="Guards Heavy Weapon Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5a91-2725-3aaa-0fc9">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6446,6 +6575,7 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Carriage Actions" id="afbc-6403-f873-0f4e" hidden="false" type="profile" targetId="1761-68e7-b0e6-e086"/>
             <infoLink name="Pack Gun" id="4108-9693-06ba-c6e6" hidden="false" type="rule" targetId="9fea-0d08-bc4c-84f5"/>
+            <infoLink name="Prototype" id="e2fa-1233-fe34-06ae" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="fb15-df2e-f0ec-1893" primary="false" name="Light"/>
@@ -6529,6 +6659,7 @@ This Unit may not take Upgrades.</description>
           <infoLinks>
             <infoLink name="Carriage Actions" id="a6ea-b3b9-2a64-f2a1" hidden="false" type="profile" targetId="1761-68e7-b0e6-e086"/>
             <infoLink name="Pack Gun" id="b8ad-ae81-aa71-8eee" hidden="false" type="rule" targetId="9fea-0d08-bc4c-84f5"/>
+            <infoLink name="Prototype" id="5326-5fe9-3025-dd4b" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <modifiers>
             <modifier type="append" value="Carriage" field="name">
@@ -6662,12 +6793,13 @@ This Unit may not take Upgrades.</description>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Druzhina Battlesuit" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a7e9-0557-2a31-3903">
+                    <profile name="Druzhina Battlesuit" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a7e9-0557-2a31-3903">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6762,12 +6894,13 @@ This Unit may not take Upgrades.</description>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Druzhina Battlesuit Yefreitor" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fd79-2d01-5498-78e8">
+                    <profile name="Druzhina Battlesuit Yefreitor" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="fd79-2d01-5498-78e8">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6812,7 +6945,7 @@ This Unit may not take Upgrades.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Troop Actions" id="0eb0-f5f2-31b1-8519" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="Vehicle Actions" id="0eb0-f5f2-31b1-8519" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="BTR- 39 &quot;St. Evgeniy&quot; Armored Personnel Carrier" hidden="false" id="f2b8-39b5-c5d9-4341">
@@ -7076,12 +7209,13 @@ This Unit may not take Upgrades.</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Contractor Rifleman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="db5e-42d8-84da-f00e">
+                    <profile name="Contractor Rifleman" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="db5e-42d8-84da-f00e">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7157,12 +7291,13 @@ This Unit may not take Upgrades.</description>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Contractor Squad Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a413-60e7-18c2-6575">
+                    <profile name="Contractor Squad Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a413-60e7-18c2-6575">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7178,12 +7313,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5014-af67-2037-7a4a" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Contractor Medic" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1272-e402-13ec-4ae0">
+                    <profile name="Contractor Medic" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="1272-e402-13ec-4ae0">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7221,12 +7357,13 @@ This Unit may not take Upgrades.</description>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="d4e5-e328-6c83-8e7e" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Contractor Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a39d-cfb9-17e0-8ad8">
+                    <profile name="Contractor Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a39d-cfb9-17e0-8ad8">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7328,7 +7465,7 @@ This Unit may not take Upgrades.</description>
             <profile name="Lieutenant Lyudmila Pavlichenko" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="220d-6e66-e322-f19a">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Lieutenant Lyudmila Pavlichenko</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (CORE) Recon, Troop, Hero</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (CORE) Infantry, Troop, Hero</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
@@ -7336,8 +7473,8 @@ This Unit may not take Upgrades.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Troop Actions" id="a73a-7270-db6c-9fac" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
             <infoLink name="Independent Hero" id="b55a-3852-2aa4-c880" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
+            <infoLink name="Hero Actions" id="fbb5-6e3d-8ef0-bc70" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="9bf1-e2b5-cf50-abe3" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
@@ -7362,12 +7499,13 @@ This Unit may not take Upgrades.</description>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Lieutenant Lyudmila Pavlichenko" hidden="false" id="2a0c-65b6-58b6-28af">
               <profiles>
-                <profile name="Lieutenant Lyudmila Pavlichenko" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7a57-ca66-27ee-1e4e">
+                <profile name="Lieutenant Lyudmila Pavlichenko" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="7a57-ca66-27ee-1e4e">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7386,9 +7524,377 @@ This Unit may not take Upgrades.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Countess Aleksandra Razumovsky" hidden="false" id="7e1b-4d2f-83a4-0739"/>
-        <selectionEntry type="upgrade" import="true" name="Sergeltiin Khan" hidden="false" id="629a-7880-a147-13d3"/>
-        <selectionEntry type="upgrade" import="true" name="Hieromonk Zhenya Morozov" hidden="false" id="cac5-f2e4-4669-a0b5"/>
+        <selectionEntry type="upgrade" import="true" name="Countess Aleksandra Razumovsky" hidden="false" id="7e1b-4d2f-83a4-0739">
+          <entryLinks>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="2a4c-4453-a0b7-cf2e" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c55-5a0a-41f8-00e0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b565-d4d0-72f4-0f43"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="1a08-f040-b27c-70cd" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
+            <infoLink name="Hero Actions" id="69f5-f8b8-9b88-d3b0" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+            <infoLink name="Slippery" id="36d6-0726-2fc4-3eaf" hidden="false" type="rule" targetId="e1f9-41ef-ff64-d030"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Countess Aleksandra Razumovsky" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="5f3d-4ff2-c0b1-1fb0">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Armor, (CORE) Mechanized, (CORE) Recon, Attache (Vehicle), Hero</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Countess Aleksandra Razumovsky" hidden="false" id="44bc-8c58-9cd8-e813">
+              <profiles>
+                <profile name="Countess Aleksandra Razumovsky" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="dff5-a4a6-3c5b-0025">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Nagant M1895 Revolver" hidden="false" id="d54c-fafa-db66-d057" type="selectionEntry" targetId="d779-79c6-140c-22bd">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3975-40f8-03e0-cd20-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3975-40f8-03e0-cd20-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="95b7-e8a1-31c2-065c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95b7-e8a1-31c2-065c-max" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Businka and Kroshka" id="c0b8-0c5e-2ce7-a0fc" hidden="false">
+              <description>Once per Activation, select an Enemy Unit within 18&quot; and LOS, then place the tokens for Businka and Kroshka in base-to-base contact with that Unit. While those tokens are applied, that Unit is Immobilized; its EV is lowered by 2, and it may not choose to perform any Movement Actions. The tokens remain applied while this Unit is within 18&quot; and LOS of them.</description>
+            </rule>
+            <rule name="Alaskan Boyar" id="beef-8f8b-01cd-ec3f" hidden="false">
+              <description>Countess Aleksandra Razumovsky must be your Field Commander. Countess Aleksandra Razumovsky may only be taken if your selected Army Specialization is Alaskan Defense Corps 17th Division.
+
+Each time you lose a Victory Point, your opponent must roll a Check where the score is 4 plus the amount of VP you have lost; on failure, they also lose a Victory Point. </description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="70"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="213b-0c90-e243-67bd" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Sergeltiin Khan" hidden="false" id="629a-7880-a147-13d3">
+          <rules>
+            <rule name="The Punishment of God" id="d6dd-6f75-a348-dc6e" hidden="false">
+              <description>Weapons equipped to Cavalry Units in this Army are considered to have the Suppressive Special Rule. Each time an Enemy Fortification is destroyed, gain 1 SP.</description>
+            </rule>
+            <rule name="Dust Off" id="0b07-fef1-f7f9-059e" hidden="false">
+              <description>After an Attack Action is resolved in which Sergeltiin Khan&apos;s Mounted Model is reduced to 0 HP, replace it with his On-Foot Model. This model&apos;s HP is reset to its original value, its EV is set to 6, and its MV is set to 6&quot;. This Unit loses the Cavalry Keyword and gains the Troop Keyword.</description>
+            </rule>
+            <rule name="Khagan" id="c17b-3731-b749-efee" hidden="false">
+              <description>Sergeltiin Khan must be your Field Commander. Sergeltiin Khan may only be taken in this Army if your specialization is 1st Kheshig Mounted Guard Division (New Khanate).This Unit may reroll 1s on all Checks.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile name="Sergeltiin Khan" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="2af4-9604-edf7-7a2e">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Sergeltiin Khan</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Recon, (CORE) Mechanized, Cavalry, Command, Hero</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">75x42mm Oval (Mounted), 40mm (On-Foot)</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Sergeltiin Khan" hidden="false" id="06cc-6a0a-ed1c-06fa">
+              <profiles>
+                <profile name="Sergeltiin Khan (On-Foot)" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4d7e-9b32-6091-5157">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Sergeltiin Khan (Mounted)" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="29c9-054e-58a3-59a9">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">10</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">12</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Kulakov Infantry Grenade Launcher" hidden="false" id="ff7c-2206-6d7e-b700" type="selectionEntry" targetId="0861-166d-4d87-e4ad">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ca9-2588-fec4-bad6-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ca9-2588-fec4-bad6-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="The Khan&apos;s Blade" hidden="false" id="93bf-c59f-d356-c591" type="selectionEntry" targetId="3ab3-cd4e-b42b-1de3">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ecae-64ca-b945-77cf-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ecae-64ca-b945-77cf-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="163"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ab44-de38-5ea4-e8f2-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab44-de38-5ea4-e8f2-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="80"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Terror X" id="ea36-f8bd-90e6-eb90" hidden="false" type="rule" targetId="0ce4-7d3b-2b96-0e5a">
+              <modifiers>
+                <modifier type="replace" value="6" field="name" arg="X"/>
+                <modifier type="replace" value="6" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Independent Hero" id="420e-f736-05ac-ddae" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
+            <infoLink name="Hero Actions" id="5e46-6afe-6f8d-169f" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="697e-dcc4-9cfc-628a" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9312-c1aa-40dc-db24" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink targetId="70eb-c264-a9cb-1bfe" id="595f-4a3d-ae96-9609" primary="false" name="Command"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hieromonk Nikon Lazarev" hidden="false" id="cac5-f2e4-4669-a0b5">
+          <entryLinks>
+            <entryLink import="true" name="Dishonorable Conduct" hidden="false" id="3cbc-c27f-9caa-d396" type="selectionEntry" targetId="3d98-c0b1-084c-b9a1"/>
+            <entryLink import="true" name="Hippocratic Oath" hidden="false" id="ff19-8370-b971-baea" type="selectionEntry" targetId="2d78-0e18-8831-9b06"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Hero Actions" id="06a4-e74a-12b4-692c" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+            <infoLink name="Patch-Up" id="258e-df34-b88c-9bd6" hidden="false" type="rule" targetId="296f-6c65-a341-cfab"/>
+            <infoLink name="Independent Hero" id="c901-b6a8-7e5e-b533" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="54cb-9a06-3c2d-4e57" includeChildSelections="true"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Hieromonk Nikon Lazarev" hidden="false" id="5526-d77f-e8eb-9c9a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d79-3780-dd25-80b2-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d79-3780-dd25-80b2-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Hieromonk Nikon Lazarev" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="0235-0e5d-d4e6-1a0a">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="10"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Exaposteilarion" id="48e2-253b-b925-1a16" hidden="false">
+              <description>Whenever this Unit performs the Patch-Up Action. Each Friendly Unit within 12” and LOS may choose one of the following: 
+* Remove a Suppression Token.
+* Gain an Aim Token.
+* Gain an Order Token.</description>
+            </rule>
+            <rule name="Healing Touch" id="6ec7-9957-5a51-448a" hidden="false">
+              <description>This Unit may perform the Patch Up Action any number of times each Round. (These are not Free Actions, you must still spend Actions to do so)</description>
+            </rule>
+            <rule name="Man of the Cloth" id="e757-f2c3-b8c9-ba2b" hidden="false">
+              <description>Hieromonk Nikon Lazarev may not be your Field Commander. Hieromonk Nikon Lazarev may only be taken if your selected Army Specialization is 12th Ural Motor-Rifle Division (Nastyeviks).
+
+Each time a Unit in this Army performs Last Rites, this Unit must immediately perform a Free Patch-Up Action targeting the closest eligible damaged Unit. This Unit may perform the Patch-Up Action on both Friendly and Enemy Units. </description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile name="Hieromonk Nikon Lazarev" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="a704-f892-bb11-90c3">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Hieromonk Nikon Lazarev</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, Hero, Troop</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="80"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Van Wyk" hidden="false" id="f03c-4e56-6d3b-47a6">
+          <infoLinks>
+            <infoLink name="Designated Leader" id="9795-89e7-8c28-e5ba" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
+            <infoLink name="Hero Actions" id="60cc-9b60-482b-9604" hidden="false" targetId="ca2a-7f10-72a9-2a56" type="profile"/>
+            <infoLink name="Formation (Specified)" id="98f2-05c4-0677-3ebc" hidden="false" type="rule" targetId="5ffd-5449-427f-b767">
+              <modifiers>
+                <modifier type="append" value="Corporate Mercenaries" field="name"/>
+                <modifier type="append" value="Corporate Mercenaries" field="description"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="274d-1be6-cd7d-7693" includeChildSelections="true"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Van Wyk" hidden="false" id="85b4-6068-45d2-c258">
+              <profiles>
+                <profile name="Van Wyk" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="6254-504d-42b0-ee57">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">6</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Combat Hatchet" hidden="false" id="899d-927d-1dc6-d6d8" type="selectionEntry" targetId="27e1-3659-7203-d14f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5445-9524-1752-c1ff" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46b8-c0d9-0e14-12ae" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Sidearm" id="599b-30f2-466c-4e2b" hidden="false" defaultSelectionEntryId="0593-aec0-bed5-701a" collective="true">
+                  <entryLinks>
+                    <entryLink import="true" name="FT-33 Plasma Pistol" hidden="false" id="e0bd-500b-a960-e2ab" type="selectionEntry" targetId="0a66-62b1-69b2-b273">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bb7-6961-0ca4-1f72" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="FT-30 Energy Pistol" hidden="false" id="0496-8c90-fa77-5adc" type="selectionEntry" targetId="7d58-faad-a3b1-dcbe">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c89c-df04-cf04-2005" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="MT-38 Shotgun Revolver" hidden="false" id="631d-d2a5-a1f5-8ba3" type="selectionEntry" targetId="0a03-0c2e-123d-7fc6">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c31-1c5e-8d91-3dd2" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="0.5tsk Beam Pistol" hidden="false" id="3a4c-fb18-ef70-5fec" type="selectionEntry" targetId="0522-b673-582a-ca69">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2847-5081-4204-487e" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a55e-a9bd-c47e-6745" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ec2-259f-f7aa-e9c8" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Custom AK-37 Assault Rifle" hidden="false" id="5d72-3720-279f-93d2">
+                  <profiles>
+                    <profile name="Custom AK-37 Assault Rifle" typeId="Weapon" typeName="Weapon" hidden="false" id="4bf1-1ed4-82d5-26db">
+                      <characteristics>
+                        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">36&quot;</characteristic>
+                        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">3</characteristic>
+                        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">3</characteristic>
+                        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">3</characteristic>
+                        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reliable, Sniper</characteristic>
+                        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Ranged, Rifle, Kinetic</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Reliable" id="af9b-d013-e17a-1418" hidden="false" type="rule" targetId="6859-e990-52c3-68cb"/>
+                    <infoLink name="Sniper" id="faa2-3238-376c-06ad" hidden="false" type="rule" targetId="3a32-9522-280e-50ce"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0fef-a8ca-d716-bc5e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fef-a8ca-d716-bc5e-max" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="Munitions" typeId="Points" value="30"/>
+                    <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                    <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                    <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90cb-4828-6902-e453-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90cb-4828-6902-e453-max" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="39"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Leverage Your Assets" id="a6a6-be01-6bb2-1b3f" hidden="false">
+              <description>Each time this Unit uses the Private Military Contractors Special Rule to perform an Action, instead of spending the resources to do so, record the cost, this is now Debt, then continue as normal. 
+
+
+* Interest Due: At the beginning of the next Command Phase, roll an X+ Check where X is equal to Debt you have accrued. Add or subtract an amount of SP to your Debt equal to the amount this Check was failed or succeeded by. 
+
+
+* Shifting Loyalties: At the start of the Command Phase, you may choose to pay your Debt. If you fail to fully pay your Debt, your Opponent may choose to cover the amount you owe. If they do, they immediately gain control of this Unit. If both Players decline to cover the debt, this Unit immediately Activates. Once Activated, it must perform an Attack Action targeting the nearest friendly Unit, and then an Attack Action targeting the nearest Enemy Unit.</description>
+            </rule>
+            <rule name="You Don&apos;t Don&apos;t Pay Enough For Me To Lead" id="6811-42dc-4454-3dcc" hidden="false">
+              <description>Van Wyk may not be your Field Commander.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="10"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Transports" id="ab82-a2fb-6461-f8a5" hidden="false">
@@ -7909,6 +8415,9 @@ This Unit may not take Upgrades.</description>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Rail Segment" id="540b-8fdd-1c1b-c73d" hidden="false" type="profile" targetId="d79e-4ea8-c1ef-2fb5"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <rules>
@@ -7937,6 +8446,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             <infoLink name="Prototype" id="3914-5b8c-dc5d-a1ba" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
             <infoLink name="Train Tracks" id="1a01-b3bb-b603-cd2a" hidden="false" type="rule" targetId="6086-8cc5-1110-441f"/>
             <infoLink name="Rolling Might" id="5b38-f722-7dd6-2bc9" hidden="false" type="rule" targetId="302b-8478-e4f8-f998"/>
+            <infoLink name="Railhead" id="d311-704a-5cb8-427e" hidden="false" type="profile" targetId="1a0b-015f-4935-3a7e"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8967-7880-4f4b-8b21" includeChildSelections="false"/>
@@ -8477,7 +8987,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="3rd Caucasus Cossack Division (Mikhailovich)" hidden="false" id="95a0-858f-8ee0-973b" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="3rd Caucasus Cossack Division (Sandroviks)" hidden="false" id="95a0-858f-8ee0-973b" sortIndex="3">
           <rules>
             <rule name="Zaporozhian Cossacks" id="1c2a-8e8a-1467-cb17" hidden="false">
               <description>CORE Recon Units in your army get +1 to hit for each time they have moved this round. 
@@ -8486,7 +8996,7 @@ Additional Rail Segments may be built by Engineer Units at the cost of 2SP per R
 Cossack Units in your army reroll failed Armor Penetration Checks</description>
             </rule>
             <rule name="New Aged Cavalry" id="b557-2276-8137-f577" hidden="false">
-              <description>If a Cossack Unit is within 6’’ of a Walker Unit when targeted with a ranged attack, you can elect for the Walker to be the target of the attack instead. 
+              <description>If a Cossack Unit is within 6’’ of a Friendly Walker Unit when targeted with a ranged attack, you can elect for the Walker to be the target of the attack instead. 
 
 
 CORE Recon Units with the Vehicle keyword gain an aim token whenever they end a movement within 6” of a Cossack Unit.</description>
@@ -8643,12 +9153,13 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Medic" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2f09-b4b3-ac3c-295a">
+                    <profile name="Medic" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="2f09-b4b3-ac3c-295a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8695,12 +9206,13 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fc9d-af1c-5ca7-aa5a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Flagbearer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c125-e8e7-87e8-0ac3">
+            <profile name="Flagbearer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="c125-e8e7-87e8-0ac3">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
               </characteristics>
             </profile>
             <profile name="Flagbearer with the Tsar&apos;s Standard" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="d109-6f6f-cf03-bf85">
@@ -8842,12 +9354,13 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Druzhina Battlesuit" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1a89-0bca-53ae-db67">
+                    <profile name="Druzhina Battlesuit" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="1a89-0bca-53ae-db67">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8874,13 +9387,11 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Pravoslavny Kapellan Element" hidden="false" id="c0e3-f487-cac0-d840" collective="false">
           <profiles>
-            <profile name="Pravoslavny Kapellan" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="f4c5-9d4c-ac44-2a43">
+            <profile name="Pravoslavny Kapellan" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="f4c5-9d4c-ac44-2a43">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1-4 Pravoslavny Kapellan</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">RUS, (CORE) Infantry, (AUX) Recon, Attache, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1-4</characteristic>
-                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">RUS, (CORE) Infantry, (AUX) Recon, Attache, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">4</characteristic>
               </characteristics>
             </profile>
             <profile name="Pravoslavny Kapellan Element" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c0e9-f9c8-6ac9-f66a">
@@ -8909,12 +9420,13 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="3cb4-8fe6-7b5e-3a43" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Pravoslavny Kapellan" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3744-24d3-8034-f8a7">
+                    <profile name="Pravoslavny Kapellan" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3744-24d3-8034-f8a7">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -9011,12 +9523,13 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a91-5938-db09-6e3e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Corporate Officers" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bb05-662d-e592-3746">
+                    <profile name="Corporate Officers" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="bb05-662d-e592-3746">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -9118,12 +9631,13 @@ Commander must be a Cossack Hetman OR Sergeltiin Khan." field="error">
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f638-9d94-eca1-e209" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Guards Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="b10e-40b8-69de-7e62">
+                    <profile name="Guards Heavy Weapon Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="b10e-40b8-69de-7e62">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -9220,11 +9734,6 @@ Units with the RUS keyword may automatically shed one Suppression Token each tim
             <characteristic name="Score To Maintain" typeId="c1f2-cd31-ea40-488c">N/A</characteristic>
             <characteristic name="Effect" typeId="477a-4bf9-6e6e-9caf">All Ranged Attacks are Obscured once.</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Score To Increase" typeId="6596-e4c2-0d38-b0e1">5+</attribute>
-            <attribute name="Score To Maintain" typeId="021c-fd32-87c4-0f42">N/A</attribute>
-            <attribute name="Effect" typeId="1b2f-32d3-e902-e27a">All Ranged Attacks are Obscured Once</attribute>
-          </attributes>
         </profile>
         <profile name="Category 2" typeId="c141-3197-a403-b085" typeName="The Blizzard" hidden="false" id="8579-e1b8-e84f-3690">
           <characteristics>
@@ -9232,11 +9741,6 @@ Units with the RUS keyword may automatically shed one Suppression Token each tim
             <characteristic name="Score To Maintain" typeId="c1f2-cd31-ea40-488c">5+</characteristic>
             <characteristic name="Effect" typeId="477a-4bf9-6e6e-9caf">Every time a Unit Activates, apply one Suppression Token to it.</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Score To Increase" typeId="6596-e4c2-0d38-b0e1">6+</attribute>
-            <attribute name="Score To Maintain" typeId="021c-fd32-87c4-0f42">5+</attribute>
-            <attribute name="Effect" typeId="1b2f-32d3-e902-e27a">Every time a Unit Activates, apply one Suppression Token to it.</attribute>
-          </attributes>
         </profile>
         <profile name="Category 3" typeId="c141-3197-a403-b085" typeName="The Blizzard" hidden="false" id="4034-9439-509d-1608">
           <characteristics>

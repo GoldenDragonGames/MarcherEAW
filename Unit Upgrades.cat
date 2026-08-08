@@ -164,7 +164,7 @@
                 <infoLink name="Forward Observer" id="2c87-64a0-18b1-6bb0" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
               </infoLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="15"/>
+                <cost name="Munitions" typeId="Points" value="10"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -238,15 +238,6 @@
               </modifiers>
             </entryLink>
             <entryLink import="true" name="Combat Stimulants" hidden="false" id="c656-1ff7-6c46-8020" type="selectionEntry" targetId="2224-d1b8-6afd-f09c"/>
-            <entryLink import="true" name="Rifle Grenades" hidden="false" id="56a2-7822-b842-631f" type="selectionEntry" targetId="e8f1-21c6-884c-77b6">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="forces" scope="primary-catalogue" childId="4fc5-7684-3b46-838d" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -332,7 +323,11 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Battle Hardened" hidden="false" id="02b4-d2f5-2bf5-d014" type="selectionEntry" targetId="72a2-3ebd-6239-c7df"/>
+            <entryLink import="true" name="Battle Hardened" hidden="false" id="02b4-d2f5-2bf5-d014" type="selectionEntry" targetId="72a2-3ebd-6239-c7df">
+              <modifiers>
+                <modifier type="increment" value="1" field="8380-51e1-15bd-f6c7" affects="self.entries.profiles.Troop/Cavalry Model" scope="unit"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="Attached Radio Operator" hidden="true" id="06b0-d1c6-bb94-1ca6" type="selectionEntry" targetId="e2f4-188d-70ee-7a7d">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f20d-05e6-97cf-ff41" includeChildSelections="false"/>
@@ -556,7 +551,7 @@
                 <infoLink name="Forward Observer" id="abc2-8b22-8961-a993" hidden="false" type="rule" targetId="75bb-9390-ced5-4e8e"/>
               </infoLinks>
               <costs>
-                <cost name="Munitions" typeId="Points" value="15"/>
+                <cost name="Munitions" typeId="Points" value="10"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                 <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                 <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1163,11 +1158,12 @@
     <selectionEntry type="upgrade" import="true" name="Sashimono" hidden="false" id="9d7b-d6d5-a3b2-53de">
       <rules>
         <rule name="Sashimono" id="7bde-ecce-f980-593c" hidden="false">
-          <description>When this Unit makes a Melee Attack, apply a Suppression Token to the target of the Attack.</description>
+          <description>When this Unit enters Engagement with an Enemy Unit, apply one Suppression Token to the Enemy Unit per Model in this Unit.
+</description>
         </rule>
       </rules>
       <costs>
-        <cost name="Munitions" typeId="Points" value="25"/>
+        <cost name="Munitions" typeId="Points" value="0"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1175,6 +1171,13 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a753-1b1d-a12a-164d" includeChildSelections="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="increment" value="5" field="Points">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" childName="model"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="false" id="c9b6-4225-5278-d6b4" collective="true">
       <infoLinks>
@@ -1297,7 +1300,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medical Bag" hidden="false" id="d619-a81c-0ed7-a998" collective="false">
       <infoLinks>
-        <infoLink name="Patch-Up" id="da45-43ad-248d-f1e9" hidden="false" targetId="296f-6c65-a341-cfab" type="rule"/>
+        <infoLink name="Patch Up" id="1d93-cbfa-4df1-b7a3" hidden="false" type="profile" targetId="fae7-318e-da76-3416"/>
       </infoLinks>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -1305,6 +1308,11 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+      <rules>
+        <rule name="Medical Bag" id="d2a5-23cb-b96a-efba" hidden="false">
+          <description>This Unit has the Patch Up Action.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Trench Rails" hidden="false" id="fd5f-36f6-fd56-b3eb">
       <infoLinks>
@@ -1448,7 +1456,7 @@
         <infoLink name="Up-Armored" id="1dfa-6b37-f5a3-67c5" hidden="false" type="rule" targetId="1f7c-515a-0ef2-8614"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="20"/>
+        <cost name="Munitions" typeId="Points" value="10"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -1470,7 +1478,7 @@
       </costs>
       <rules>
         <rule name="Combat Stimulants" id="9bc4-df69-58e6-b72f" hidden="false">
-          <description>Once per Game, this Unit may reroll all failed Suppression Checks.</description>
+          <description>Once per Game, this Unit may reroll all failed Morale Checks.</description>
         </rule>
       </rules>
       <constraints>
@@ -1585,22 +1593,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rifle Grenades" hidden="false" id="e8f1-21c6-884c-77b6">
-      <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-      <rules>
-        <rule name="Rifle Grenades" id="648a-f402-854e-6513" hidden="false">
-          <description>Designate one non-Leader Model in this Unit as a Grenadier, so long as that Model has not been destroyed, Grenade Weapons used by this Unit have a Range of 12&quot;.</description>
-        </rule>
-      </rules>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d92d-80b2-d9f7-551c" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>

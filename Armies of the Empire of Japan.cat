@@ -990,6 +990,17 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d8b3-9771-5b32-be54" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rifle Grenades" hidden="false" id="04da-3a30-0a66-a66e">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Specialist Grenadier" id="66e3-8185-eb46-38fd" hidden="false" type="rule" targetId="6133-5acb-7342-ed63"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="Type 93 Marksman Rifle" typeId="Weapon" typeName="Weapon" hidden="false" id="7820-1f95-853f-66f5">
@@ -1572,17 +1583,25 @@
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="84cc-b98c-e106-14c6" primary="true" name="Hero"/>
         <categoryLink targetId="6cee-690d-b6de-aa15" id="39a4-ff16-7e13-6ad0" primary="false" name="Attache"/>
       </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="26a5-76cb-5d13-b4a7" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7284-b2af-8bcd-1900" shared="true" includeChildSelections="true" includeChildForces="true" childName="IJA 4th Division “Muramasa-Heidan”"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true" includeChildSelections="true" childName="Infantry Platoon"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true" childName="Recon Platoon"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="IJA Heishi Infantry Section" hidden="false" id="a926-4eb-ff99-65ca" type="selectionEntry" targetId="e735-2906-750-5b5b">
       <categoryLinks>
@@ -1876,18 +1895,25 @@
         <categoryLink targetId="d34f-eedb-f296-27aa" id="922a-d882-0e29-314b" primary="false" name="IJA"/>
         <categoryLink targetId="6cee-690d-b6de-aa15" id="8a81-6769-56e7-cd7f" primary="false" name="Attache"/>
       </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="7ce6-55a5-44aa-7258" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5906-bda1-3922-141e" shared="true" includeChildSelections="true" includeChildForces="true" childName="IJA 1st Tank Division “Taku”"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true" includeChildSelections="true" childName="Armor Platoon"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true" childName="Mechanized Platoon"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="IJM Hōshu Heavy Weapon Section" hidden="false" id="5bde-1bc7-b43c-4aa5" type="selectionEntry" targetId="1d2c-bb00-d450-38f4">
       <categoryLinks>
@@ -1993,17 +2019,18 @@
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="470b-850a-2a64-81de" primary="true" name="Hero"/>
         <categoryLink targetId="6cee-690d-b6de-aa15" id="1be2-070d-2be6-c1e4" primary="false" name="Attache"/>
       </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="7110-7fe8-80e2-5e81" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4672-81af-aaba-bb1f" shared="true" includeChildSelections="true" includeChildForces="true" childName="IJN Special Naval Landing Force “Jōriku Sentai Dai-Ichiban”"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="c571-bda4-1e0f-ed1f" shared="true" includeChildSelections="true" childName="Support Platoon"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="IJM Shugo-Yoroi Warsuit Commander" hidden="true" id="6385-e890-dc2e-5d84" type="selectionEntry" targetId="ffb8-1c2d-2796-d72a">
       <categoryLinks>
@@ -2145,7 +2172,6 @@
       <categoryLinks>
         <categoryLink targetId="71cc-1c64-2438-4030" id="01be-2404-22a2-58c7" primary="false" name="Cavalry"/>
         <categoryLink targetId="f273-43c7-03e5-764e" id="8472-5973-ccd5-b846" primary="false" name="EOJ"/>
-        <categoryLink targetId="7da2-822e-291f-eccc" id="a360-994b-d82f-62db" primary="false" name="Walker"/>
         <categoryLink targetId="54db-5889-a382-77cb" id="9d98-4017-9c29-61a5" primary="true" name="CORE Recon"/>
         <categoryLink targetId="2aa2-d811-87ac-0844" id="dad3-8979-0049-cddc" primary="false" name="Scout"/>
         <categoryLink targetId="c87d-0c37-d91f-b4cd" id="ed1a-25f6-0b4a-709c" primary="false" name="AUX Mechanized"/>
@@ -2182,7 +2208,7 @@
         <categoryLink targetId="d34f-eedb-f296-27aa" id="a7e9-09ac-d88b-7aeb" primary="false" name="IJA"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="IJA 11th Army “Ro-gun” 3rd Division" hidden="false" id="8069-5e1a-5bf4-3855" type="selectionEntry" targetId="7284-b2af-8bcd-1900" sortIndex="1">
+    <entryLink import="true" name="IJA 4th Division “Muramasa-Heidan”" hidden="false" id="8069-5e1a-5bf4-3855" type="selectionEntry" targetId="7284-b2af-8bcd-1900" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Army Specialization" hidden="false" id="6e1f-dda7-5485-db6b" targetId="b200-6914-09f3-4db0" primary="true"/>
       </categoryLinks>
@@ -2468,6 +2494,26 @@
         <categoryLink name="Crewed Weapon" hidden="false" id="233a-581a-dfbd-9b19" targetId="0210-dcc7-546b-3981" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Major Wakasugi" hidden="true" id="e9a9-a352-dd1b-f9bb" type="selectionEntry" targetId="4b7c-edbe-4404-1954">
+      <categoryLinks>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="079f-ddba-c128-7ab0" primary="true" name="Hero"/>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="9bc7-409a-273e-615a" primary="false" name="Command"/>
+        <categoryLink targetId="6cee-690d-b6de-aa15" id="098e-ea8b-0e3e-d413" primary="false" name="Attache"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true" childName="Mechanized Platoon"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="b546-2955-e4ad-2f31" shared="true" includeChildSelections="true" childName="Urinke Imperial Command Detachment"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="2250-4111-e2c2-bb10" shared="true" includeChildSelections="true" childName="Infantry Platoon"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Armor" id="df92-d73d-c573-93e9" hidden="false">
@@ -2494,8 +2540,8 @@
             <infoLink name="Cook Off" id="0338-a921-9008-c34e" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
           </infoLinks>
           <rules>
-            <rule name="Flanking" id="9fd9-5059-26de-c9a7" hidden="false">
-              <description>If this Unit ends a Movement Action more than 10&quot; away from its position at the start of the Round, it may take a Free Capture Action.</description>
+            <rule name="Sossen" id="9fd9-5059-26de-c9a7" hidden="false">
+              <description>If this Unit ends a Movement Action more than 8&quot; away from its position at the start of the Round, it may take the Capture Action as a Free Action.</description>
             </rule>
           </rules>
           <selectionEntries>
@@ -2739,7 +2785,7 @@
             <infoLink name="Limited Elevation" id="4325-861e-9254-3bcb" hidden="false" type="rule" targetId="d90a-8467-4874-4efd"/>
           </infoLinks>
           <rules>
-            <rule name="Infantry Assault Support" id="c4fb-700c-aa06-7b4" hidden="false">
+            <rule name="Nioh" id="c4fb-700c-aa06-7b4" hidden="false">
               <description>Troop Units within 6&quot; of this Unit may reroll failed Reflex Checks.</description>
             </rule>
           </rules>
@@ -3087,7 +3133,7 @@
           </selectionEntries>
           <rules>
             <rule name="Dug In Hull" id="5241-0595-c67a-8f35" hidden="false">
-              <description>When this Unit takes the Button Up Reaction, it gains 3 points of Armor instead of 2.</description>
+              <description>When this Unit takes the Button Up Reaction, the AV provided by Button-Up is increased to 3.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -3134,12 +3180,13 @@
                     <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5e1b-27d8-3df6-b024" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Hōshu Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="90ff-5b0c-5c20-6d7e">
+                    <profile name="Hōshu Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="90ff-5b0c-5c20-6d7e">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                       <comment>Small, Slow, +1</comment>
                     </profile>
@@ -3597,12 +3644,13 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Rikusentai Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5dda-de62-5c35-b444">
+            <profile name="Rikusentai Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5dda-de62-5c35-b444">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
               </characteristics>
               <comment>Small, Normal</comment>
             </profile>
@@ -3662,12 +3710,13 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Heishi Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="91c0-b3da-1724-ac3d">
+            <profile name="Heishi Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="91c0-b3da-1724-ac3d">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
               </characteristics>
               <comment>Small, Normal, +1</comment>
             </profile>
@@ -3814,12 +3863,13 @@
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
-            <profile name="Shugo-yoroi Commander" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5394-285d-2801-7f07">
+            <profile name="Shugo-yoroi Commander" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5394-285d-2801-7f07">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">10</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">10</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3938,12 +3988,13 @@
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
-            <profile name="IJN Breaching Engineer Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="7d82-ae94-87fb-53a2">
+            <profile name="IJN Breaching Engineer Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="7d82-ae94-87fb-53a2">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
               </characteristics>
               <comment>Small, Normal, +1</comment>
             </profile>
@@ -3999,6 +4050,7 @@
           </profiles>
           <infoLinks>
             <infoLink name="Scout Vehicle Actions" id="eb25-9973-e91e-e45d" hidden="false" type="profile" targetId="e02c-5a58-9b36-5c37"/>
+            <infoLink name="Grapple" id="17be-0de0-9161-3f16" hidden="false" type="profile" targetId="fe67-09ef-f9a3-522e"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="IJN Type 97 Heike Amphibious Assault Gun" hidden="false" id="a40a-935e-2b9b-4e47">
@@ -4106,7 +4158,7 @@
           </selectionEntries>
           <rules>
             <rule name="Grasping Claws" id="05af-21ad-e8a8-40ea" hidden="false">
-              <description>As a Free Action, this Unit may attach an Enemy Vehicle within Engagement Range with less than 16HP to itself as if they are being Towed. When this Unit moves your Opponent must move the attached Unit along with it to a point you specify within this Unit&apos;s Engagement Range.</description>
+              <description>This Unit has Grapple as a Free Action. When this Unit performs the Grapple Action it may only select Vehicle Units with less than 16HP.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4319,7 +4371,7 @@
           </selectionEntries>
           <entryLinks>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="7809-939f-fdd4-752d" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
-            <entryLink import="true" name="Intel Gathering" hidden="false" id="04fa-f52a-282e-466e" type="selectionEntry" targetId="b90c-367c-cace-eac1"/>
+            <entryLink import="true" name="Intelligence" hidden="false" id="04fa-f52a-282e-466e" type="selectionEntry" targetId="65f3-25c2-05a8-cf41"/>
           </entryLinks>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="e504-ddc6-a299-4f1c" primary="false" name="Light"/>
@@ -4391,12 +4443,13 @@
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Teishin Hohei" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4fe7-7dd1-0c1e-0cbd">
+                    <profile name="Teishin Hohei" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="4fe7-7dd1-0c1e-0cbd">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4445,12 +4498,13 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Teishin Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="24ab-9eeb-1a93-2d94">
+                    <profile name="Teishin Gunsō" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="24ab-9eeb-1a93-2d94">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                       <comment>Small, Normal, +1</comment>
                     </profile>
@@ -4514,12 +4568,13 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Teishin Hōshu" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ebf5-f73b-5fb4-0eed">
+                    <profile name="Teishin Hōshu" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="ebf5-f73b-5fb4-0eed">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4539,7 +4594,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <rules>
-            <rule name="Fade Away" id="4e15-5d5f-a2c1-d13c" hidden="false">
+            <rule name="Seiei Muhi" id="4e15-5d5f-a2c1-d13c" hidden="false">
               <description>When this unit performs a movement Action that could move them to or past the board edge, you may remove this Unit from the battlefield and place them En Route. They may be set up during the Setup Phase within 4” of the board edge, and 8” away from enemy models.</description>
             </rule>
           </rules>
@@ -4562,7 +4617,7 @@
             <profile name="IJM Type 1 Tekkiba Walker Team" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="e56d-0a5e-37d0-56d5">
               <characteristics>
                 <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Tekkiba Walker Leader, 2-4x Tekkiba Walker</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJM, (CORE) Recon, (AUX) Mechanized, (CORE) Retainer, Cavalry, Walker, Scout, Medium</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">IJM, (CORE) Recon, (AUX) Mechanized, (CORE) Retainer, Cavalry, Scout, Medium</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">50mm</characteristic>
                 <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">3-5</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">3</characteristic>
@@ -4626,12 +4681,13 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Tekkiba Walker Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="795c-2405-2bf4-554a">
+                    <profile name="Tekkiba Walker Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="795c-2405-2bf4-554a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">10&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                       <comment>Small, Fast, +1</comment>
                     </profile>
@@ -4685,12 +4741,13 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Tekkiba Walker" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0410-9747-323f-a4ac">
+                    <profile name="Tekkiba Walker" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="0410-9747-323f-a4ac">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">10&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4727,11 +4784,6 @@
           </categoryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Yabusame" hidden="false" id="d6aa-27c8-49b1-ae7c">
-              <rules>
-                <rule name="Yabusame" id="3107-09d6-689c-0ccd" hidden="false">
-                  <description>If this Unit has performed both a Move and Dash Action this Round, it may perform a Free Aim Action.</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="Munitions" typeId="Points" value="10"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -4742,6 +4794,9 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6493-ce9e-0079-04ac-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6493-ce9e-0079-04ac-max" includeChildSelections="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Yabusame" id="2ef9-d352-39d6-30fe" hidden="false" type="rule" targetId="e66e-375b-51e7-8e99"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -4759,12 +4814,13 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3795-c6bc-72ab-6a69-max" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Tekkiba Walker Sniper" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="355b-707c-8f3e-c56c">
+                <profile name="Tekkiba Walker Sniper" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="355b-707c-8f3e-c56c">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">10&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">10&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                   </characteristics>
                   <comment>Small, Fast, +1</comment>
                 </profile>
@@ -4791,11 +4847,6 @@
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Yabusame" hidden="false" id="d2ee-9a32-0a2b-200a">
-              <rules>
-                <rule name="Yabusame" id="e66e-375b-51e7-8e99" hidden="false">
-                  <description>If this Unit has performed both a Move and Dash Action this Round, it may perform a Free Aim Action.</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="Munitions" typeId="Points" value="10"/>
                 <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -4806,6 +4857,9 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="999e-fa8c-b3cb-816d-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="999e-fa8c-b3cb-816d-max" includeChildSelections="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Yabusame" id="50f8-4fe4-c200-7bde" hidden="false" type="rule" targetId="e66e-375b-51e7-8e99"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <infoLinks>
@@ -5549,12 +5603,13 @@
                     </modifier>
                   </modifiers>
                   <profiles>
-                    <profile name="Engineer Hohei" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a252-5767-6e4b-8e9a">
+                    <profile name="Engineer Hohei" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a252-5767-6e4b-8e9a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5617,12 +5672,13 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Engineer Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a1c9-6887-6722-d139">
+                    <profile name="Engineer Gunsō" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a1c9-6887-6722-d139">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5646,12 +5702,13 @@
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Engineer Hōshu with Flamethrower" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9efe-91a2-1f24-9d62">
+                    <profile name="Engineer Hōshu with Flamethrower" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="9efe-91a2-1f24-9d62">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6072,7 +6129,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Heroes" id="7265-9c59-51d6-953a" hidden="false">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="IJA Captain Higuchi Ryuusuke" hidden="false" id="43be-a0d6-f15c-d685">
+        <selectionEntry type="upgrade" import="true" name="IJA Captain Higuchi Ryuusuke" hidden="false" id="43be-a0d6-f15c-d685">
           <infoLinks>
             <infoLink name="Hero Actions" id="67ac-9210-67f7-42e3" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
             <infoLink name="Designated Leader" id="93e9-0ba3-0de2-7a9d" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
@@ -6090,14 +6147,6 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Captain Higuchi Ryuusuke" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2644-2d8f-c602-a479">
-              <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
-              </characteristics>
-            </profile>
             <profile name="IJA Captain Higuchi Ryuusuke" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="bd79-82bb-49d2-d8c3">
               <characteristics>
                 <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">IJA, (CORE) Infantry, (AUX) Recon, Attache (Troop), Hero, Command</characteristic>
@@ -6121,41 +6170,60 @@
                 <entryLink import="true" name="Officer 3" hidden="false" id="a6d1-7a9d-b251-80fb" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
               </entryLinks>
             </selectionEntry>
+            <selectionEntry type="model" import="true" name="Captain Higuchi Ryuusuke" hidden="false" id="88fc-33be-a849-3a34">
+              <entryLinks>
+                <entryLink import="true" name="Chitangatana" hidden="false" id="1847-de6f-321f-c4bf" type="selectionEntry" targetId="6b66-f04-114e-af13">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90aa-1bee-5d60-adce-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90aa-1bee-5d60-adce-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="e64f-eb68-254b-7416" type="selectionEntry" targetId="47ca-8cd6-8c1a-8b67">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15b0-5950-fdf5-dd95-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15b0-5950-fdf5-dd95-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Sidearm" id="7c6c-8b97-cfb6-50dc" hidden="false" defaultSelectionEntryId="8761-eea-e2e7-2051">
+                  <entryLinks>
+                    <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="8761-eea-e2e7-2051" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6"/>
+                    <entryLink import="true" name="Koishikawa Type 3 Plasma Pistol" hidden="false" id="5a99-2fdd-5c16-dc26" type="selectionEntry" targetId="3db-dc5-c6d1-2218"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5097-4fa8-c273-1a76" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29a9-3854-eea-577" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <profiles>
+                <profile name="Captain Higuchi Ryuusuke" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="2644-2d8f-c602-a479">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c099-fbc1-2cd0-20fc-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c099-fbc1-2cd0-20fc-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
           </selectionEntries>
           <rules>
             <rule name="Higuchi Sokudo!" id="6af3-71fc-e820-b3f7" hidden="false">
-              <description>When they activate, each Unit who received an Order from Captain Higuchi Ryuusuke may immediately make a Free Move Action. If Captain Higuchi Ryuusuke is your Field Commander, they may also make a Free Melee Attack Action.</description>
+              <description>When they activate, each Unit who received an Order from Captain Higuchi Ryuusuke may immediately make a Free Move Action. If Captain Higuchi Ryuusuke is your Field Commander, Units who received an Order Token from him may also make a Free Melee Attack Action at any point during their Activation.</description>
             </rule>
           </rules>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a7f0-d6b7-57b-356b" includeChildSelections="true"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sidearm" id="7c6c-8b97-cfb6-50dc" hidden="false" defaultSelectionEntryId="8761-eea-e2e7-2051">
-              <entryLinks>
-                <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="8761-eea-e2e7-2051" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6"/>
-                <entryLink import="true" name="Koishikawa Type 3 Plasma Pistol" hidden="false" id="5a99-2fdd-5c16-dc26" type="selectionEntry" targetId="3db-dc5-c6d1-2218"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5097-4fa8-c273-1a76" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29a9-3854-eea-577" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <entryLinks>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="51b3-1c7f-99f9-b242" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
-            <entryLink import="true" name="Chitangatana" hidden="false" id="1847-de6f-321f-c4bf" type="selectionEntry" targetId="6b66-f04-114e-af13">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90aa-1bee-5d60-adce-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90aa-1bee-5d60-adce-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Fragmentation Grenade" hidden="false" id="e64f-eb68-254b-7416" type="selectionEntry" targetId="47ca-8cd6-8c1a-8b67">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15b0-5950-fdf5-dd95-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15b0-5950-fdf5-dd95-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Inter-service Rivalry (Army)" hidden="false" id="b047-1fbb-1a35-faf8" type="selectionEntry" targetId="0119-cccb-3175-b7d5"/>
           </entryLinks>
         </selectionEntry>
@@ -6167,12 +6235,6 @@
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="e5a1-30a9-c58b-4327" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
-            <entryLink import="true" name="Shin-Gunto" hidden="false" id="9f59-5033-0dc2-c13c" collective="false" targetId="5c07-dfbc-2346-645e" type="selectionEntry">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0409-3a03-7000-c1d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5359-a309-80bc-7577" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Inter-service Rivalry (Army)" hidden="false" id="5cb3-7b9f-af57-e891" type="selectionEntry" targetId="0119-cccb-3175-b7d5"/>
           </entryLinks>
           <profiles>
@@ -6183,32 +6245,12 @@
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
-            <profile name="IJA Colonel Kaeda Harunobu" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ff8d-9edc-9fab-3837">
-              <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">4&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
           <rules>
             <rule name="Command Gunbai" id="afa9-7784-3c4a-082e" hidden="false">
-              <description>During the Command Phase Colonel Kaeda Harunobu may issue an Order to up to four Allied Troop Units within his line of sight. Each Unit issued an Order in this way may immediately make a 3&quot; Move directly towards an Enemy Unit you select. If Colonel Kaeda Harunobu is your Field Commander, they may instead make a 6&quot; Move.</description>
+              <description>During the Command Phase Colonel Kaeda Harunobu may issue an Order to up to five Allied Troop Units within his line of sight. Each Unit issued an Order in this way may immediately make a Free 3&quot; Movement directly towards an Enemy Unit you select. If Colonel Kaeda Harunobu is your Field Commander, they may instead make a 6&quot; Movement.</description>
             </rule>
           </rules>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sidearm" id="5271-4f55-8dd8-4ee9" hidden="false" defaultSelectionEntryId="5033-15c6-e404-d9f1">
-              <entryLinks>
-                <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="5033-15c6-e404-d9f1" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6"/>
-                <entryLink import="true" name="Koishikawa Type 3 Plasma Pistol" hidden="false" id="324b-4b8e-dfa7-43c9" type="selectionEntry" targetId="3db-dc5-c6d1-2218"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09d0-6318-ec90-c69c" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6eec-cc93-af20-1f1e" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <costs>
             <cost name="Munitions" typeId="Points" value="125"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -6218,6 +6260,45 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f037-7c64-625e-8d34" includeChildSelections="true"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Colonel Kaeda Harunobu" hidden="false" id="1368-2fe7-6028-826a">
+              <profiles>
+                <profile name="IJA Colonel Kaeda Harunobu" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="44f4-b938-3d24-a9e3">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">4&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="53bb-6cc5-56d4-ba72-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53bb-6cc5-56d4-ba72-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Shin-Gunto" hidden="false" id="9f59-5033-0dc2-c13c" collective="false" targetId="5c07-dfbc-2346-645e" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0409-3a03-7000-c1d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5359-a309-80bc-7577" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Sidearm" id="5271-4f55-8dd8-4ee9" hidden="false" defaultSelectionEntryId="5033-15c6-e404-d9f1">
+                  <entryLinks>
+                    <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="5033-15c6-e404-d9f1" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6"/>
+                    <entryLink import="true" name="Koishikawa Type 3 Plasma Pistol" hidden="false" id="324b-4b8e-dfa7-43c9" type="selectionEntry" targetId="3db-dc5-c6d1-2218"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09d0-6318-ec90-c69c" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6eec-cc93-af20-1f1e" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="IJN Captain Kaeda Goemon" hidden="false" id="a1c7-61ad-e73c-8753">
           <infoLinks>
@@ -6272,12 +6353,13 @@
                 </entryLink>
               </entryLinks>
               <profiles>
-                <profile name="IJN Captain Kaeda Goemon" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fb14-5c44-7862-9b66">
+                <profile name="IJN Captain Kaeda Goemon" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="fb14-5c44-7862-9b66">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">9</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">9</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                   </characteristics>
                   <comment>Small, Very Fast</comment>
                 </profile>
@@ -6295,7 +6377,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="IJN Lieutenant Matsumaru Atoi" hidden="false" id="c8a1-c04c-7f08-4f81">
+        <selectionEntry type="upgrade" import="true" name="IJN Lieutenant Matsumaru Atoi" hidden="false" id="c8a1-c04c-7f08-4f81">
           <infoLinks>
             <infoLink name="Hero Actions" id="1225-066b-e72c-85c4" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
             <infoLink name="Designated Leader" id="699d-3db8-4ecb-615d" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
@@ -6313,14 +6395,6 @@
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="IJN Lieutenant Matsumaru Atoi" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6776-1d63-ae0d-2b42">
-              <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
-              </characteristics>
-            </profile>
             <profile name="IJN Lieutenant Matsumaru Atoi" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="574a-b6d0-2ebd-fbdf">
               <characteristics>
                 <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">IJN, (CORE) Support, Attache (Troop), Command, Hero</characteristic>
@@ -6331,16 +6405,10 @@
           </profiles>
           <rules>
             <rule name="Yukidanuki" id="7003-ccf5-4573-b6e9" hidden="false">
-              <description>While Lieutenant Matsumaru Atoi&apos;s Model is on the battlefield, Engineer Units in your Army may Build Anti-Tank and Anti-Personnel Minefields for 1 fewer Supply Points. If Lieutenant Matsumaru Atoi is your Field Commander, Engineer Units may Build Anti-Tank and Anti-Personnel Minefields up to 6&quot; away from themselves instead of 3&quot;.</description>
+              <description>Engineer Units in your Army may Build Anti-Tank and Anti-Personnel Minefields for 1 fewer Supply Points. If Lieutenant Matsumaru Atoi is your Field Commander, Engineer Units may Build Anti-Tank and Anti-Personnel Minefields up to 6&quot; away from themselves instead of 3&quot;.</description>
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="6bf8-912e-5580-ed7d" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ab8-c582-03d0-fe0b-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ab8-c582-03d0-fe0b-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="d6cd-af43-c836-5797" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
           </entryLinks>
           <selectionEntries>
@@ -6358,10 +6426,146 @@
                 <entryLink import="true" name="Officer 3" hidden="false" id="b995-31cb-c25c-8a74" type="selectionEntry" targetId="73c6-712f-a0d6-6ebf"/>
               </entryLinks>
             </selectionEntry>
+            <selectionEntry type="model" import="true" name="Lieutenant Matsumaru Atoi" hidden="false" id="05b9-846f-b34e-d288">
+              <entryLinks>
+                <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="6bf8-912e-5580-ed7d" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ab8-c582-03d0-fe0b-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ab8-c582-03d0-fe0b-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <profiles>
+                <profile name="IJN Lieutenant Matsumaru Atoi" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="6776-1d63-ae0d-2b42">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3c42-e739-596a-f5b1-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c42-e739-596a-f5b1-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
           </selectionEntries>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="11b0-868c-6362-19f2" includeChildSelections="true"/>
           </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Major Wakasugi" hidden="false" id="4b7c-edbe-4404-1954">
+          <modifiers>
+            <modifier type="set" value="Prince Mikasa" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="af48-8935-19ff-49ba" shared="true" childName="Imperial Guard 5th Division “Konoe Shidan”" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Major Wakasugi" hidden="false" id="2d81-4d9f-4523-095c">
+              <profiles>
+                <profile name="Major Wakasugi" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="2c82-db04-e485-94ef">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="Prince Mikasa" field="name">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="af48-8935-19ff-49ba" shared="true" childName="Imperial Guard 5th Division “Konoe Shidan”" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="Prince Mikasa" field="name">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="af48-8935-19ff-49ba" shared="true" childName="Imperial Guard 5th Division “Konoe Shidan”" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4661-f080-6c76-8cee-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4661-f080-6c76-8cee-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Shin-Gunto" hidden="false" id="c902-41a4-26d9-3146" type="selectionEntry" targetId="5c07-dfbc-2346-645e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc67-06fd-5c17-ae7d-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc67-06fd-5c17-ae7d-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Nambu Type 14 Energy Pistol" hidden="false" id="9493-1498-e848-aeca" type="selectionEntry" targetId="47a5-a82a-1d4f-e9b6">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="23b7-26f2-c631-a3f3-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23b7-26f2-c631-a3f3-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="18"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="O3 - Rikugun-Shōsa" hidden="false" id="4cac-b486-0c13-10c9" collective="false">
+              <costs>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Officer 4" hidden="false" id="fdac-88c7-935d-e979" type="selectionEntry" targetId="a898-5898-e382-9e23"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19c1-bdbc-24fa-27d4-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19c1-bdbc-24fa-27d4-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <profiles>
+            <profile name="Major Wakasugi" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="1734-250f-51cb-cc34">
+              <characteristics>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">EOJ, (CORE) Infantry, (CORE) Mechanized, (CORE) Retainer, Troop, Hero</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">32mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Designated Leader" id="cd17-993c-acfe-31dc" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
+            <infoLink name="Command Actions" id="ed71-ffe2-f77a-5f4d" hidden="false" type="profile" targetId="237b-8d1e-014e-539d"/>
+          </infoLinks>
+          <rules>
+            <rule name="Imperial Connections" id="0e4e-1b9a-3035-35d5" hidden="false">
+              <description>When selecting Emergent Orders you may always pick from the entire list. Your Opponent may not pick the same Emergent Order as you.</description>
+            </rule>
+            <rule name="The Prince Revealed" id="3da1-9693-374b-d997" hidden="false">
+              <description>If your selected Specialization is the Imperial Guard 5th Division “Konoe Shidan”, each Unit in your Army may, once per Round, perform a Reaction for Free. Additionally, Prince Mikasa must be your Field Commander.
+
+
+If this Unit is destroyed, you lose 3 VP.</description>
+            </rule>
+          </rules>
+          <entryLinks>
+            <entryLink import="true" name="Logistics" hidden="false" id="5573-606a-3f6a-1a1e" type="selectionEntry" targetId="45b3-057e-82e3-152b"/>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="da2c-341a-73e1-2624" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+            <entryLink import="true" name="Inter-service Rivalry (Army)" hidden="false" id="f32f-ccc1-cabc-b20a" type="selectionEntry" targetId="0119-cccb-3175-b7d5"/>
+          </entryLinks>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6395,12 +6599,13 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c4c-3e7f-909f-3119" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Rikusentai Heisō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="6c3c-1271-bdeb-43cc">
+                    <profile name="Rikusentai Heisō" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="6c3c-1271-bdeb-43cc">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                       <comment>Small, Normal, +1</comment>
                     </profile>
@@ -6447,12 +6652,13 @@
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9775-41a0-f80e-a0f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Naval Hōshu" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0c9b-140f-ce82-6e8d">
+                    <profile name="Rikusentai Hōshu" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="0c9b-140f-ce82-6e8d">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6518,12 +6724,13 @@
                     <constraint type="min" value="7" field="selections" scope="parent" shared="true" id="0def-370c-39c0-e745" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Naval Infantryman" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9bc2-1907-07bc-46b0">
+                    <profile name="Rikusentai Suihei" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="9bc2-1907-07bc-46b0">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6582,7 +6789,7 @@
           </costs>
           <rules>
             <rule name="Hōjutsu" id="c50c-79cf-d844-0c9b" hidden="false">
-              <description>If this Unit begins its Activation in Cover or moves into Cover, it gains an Aim Token.</description>
+              <description>Once per Round, if this Unit is in Cover, it gains an Aim Token.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -6623,12 +6830,13 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="537a-991d-54c0-6494" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="bb76-46d9-1974-7fa4">
+                    <profile name="Heishi Gunsō" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="bb76-46d9-1974-7fa4">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                       <comment>Small, Normal, +1</comment>
                     </profile>
@@ -6697,12 +6905,13 @@
                     <constraint type="min" value="7" field="selections" scope="parent" shared="true" id="f0b3-436d-947c-b52a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Hohei" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8813-438-3e9-5868">
+                    <profile name="Heishi Hohei" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="8813-438-3e9-5868">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6764,12 +6973,13 @@
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="81e1-1ea6-696e-d472" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Hōshu" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ba90-e88d-3521-4f5d">
+                    <profile name="Heishi Hōshu" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="ba90-e88d-3521-4f5d">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6849,7 +7059,7 @@
           </costs>
           <rules>
             <rule name="Kessen" id="aeb-da3e-2e48-8b31" hidden="false">
-              <description>If this Unit begins its Activation within Engagement Range of an Enemy Unit, it may make a Free Melee Attack Action. (This does not prevent this Unit from Attacking again later in its turn.)</description>
+              <description>If this Unit begins its Activation within Engagement Range of an Enemy Unit, it may make a Free Melee Attack Action.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -7065,6 +7275,7 @@
           </profiles>
           <infoLinks>
             <infoLink name="Vehicle Actions" id="8a2c-f3c0-f06f-0474" hidden="false" type="profile" targetId="ed5a-9492-6407-a9f1"/>
+            <infoLink name="Landing Craft" id="f2a8-1828-547c-ec98" hidden="false" type="rule" targetId="30ea-a7ac-210a-a932"/>
           </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
@@ -7150,9 +7361,6 @@
             </selectionEntry>
           </selectionEntries>
           <rules>
-            <rule name="Landing Craft" id="115c-36b1-9c42-c75e" hidden="false">
-              <description>Units that disembark from this Unit may be setup within 6&quot; of this Unit instead of 3&quot;</description>
-            </rule>
             <rule name="Beachhead" id="7683-d691-de0d-968b" hidden="false">
               <description>Troop Units within 6&quot; of this Unit may shed the first Suppression Token applied to them each Round without rolling.</description>
             </rule>
@@ -7172,6 +7380,12 @@
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
+            <profile name="Wrestle" typeId="1e78-f7f5-b081-afe4" typeName="Reaction" hidden="false" id="5ed4-51e6-6cde-004e">
+              <characteristics>
+                <characteristic name="Trigger" typeId="95ce-77b7-e0e4-3c1b">Upon being selected as the target of a Melee Attack.</characteristic>
+                <characteristic name="Effect" typeId="84f0-157a-5005-b9a9">Select a Unit within Engagement Range of this Unit to Wrestle with. Both Units must immediately roll a D10. This Unit adds 1 to their roll for every model remaining. The Unit with the lowest total roll is moved 3&quot; away from the other to a point their Opponent specifies.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Troop Actions" id="f619-f338-0b64-fdfb" hidden="false" targetId="0936-84e8-76d0-501a" type="profile"/>
@@ -7189,12 +7403,13 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5353-4ac2-23d7-9d38-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Shugo-Yoroi Warsuit Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9a59-8c5e-9eb2-5df9">
+                    <profile name="Shugo-Yoroi Warsuit Gunsō" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="9a59-8c5e-9eb2-5df9">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                       </characteristics>
                       <comment>Small, Normal, +1</comment>
                     </profile>
@@ -7261,12 +7476,13 @@
                     <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="6c52-e974-3c90-24ae-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Shugo-Yoroi Warsuit" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1570-744c-c5d8-3655">
+                    <profile name="Shugo-Yoroi Warsuit" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="1570-744c-c5d8-3655">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7340,7 +7556,7 @@
           </entryLinks>
           <rules>
             <rule name="Dohyō-iri" id="7d70-a2e5-21de-9a02" hidden="false">
-              <description>While this Unit is within 3&quot; of an Objective and either performs or is the target of a Melee Attack Action, it may choose to Wrestle. If it does, after the entire attack is resolved, each player much roll a D10, and then add the number of HP of their Unit that participated in the attack to the result. The Unit whose total result is lowest is moved 3&quot; straight away from the Objective.</description>
+              <description>This Unit has the Wrestle Action as a Free Action or a Free Reaction. This Unit must be within 3&quot; of an Objective to use the Wrestle Action.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -7451,12 +7667,13 @@
         <selectionEntry type="unit" import="true" name="IJM Imperial Retainer Section" hidden="false" id="ca41-e100-bd7a-cdd0">
           <rules>
             <rule name="The Emperor&apos;s Will" id="3939-362b-abf7-84c5" hidden="false">
-              <description>As a Reaction, this Unit may perform a Free Attack Action targeting the Unit that triggered the Reaction.</description>
+              <description>This Unit has the Retaliate Reaction.</description>
             </rule>
           </rules>
           <infoLinks>
             <infoLink name="Prototype" id="9389-3ee9-497d-761e" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
             <infoLink name="Troop Actions" id="4b66-2f50-1c55-1053" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="Retaliate" id="42ea-3d03-151b-d0ff" hidden="false" type="profile" targetId="8434-6577-7814-d53d"/>
           </infoLinks>
           <profiles>
             <profile name="IJM Imperial Retainer Section" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="041e-e8cd-48dc-eee5">
@@ -7512,12 +7729,13 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Retainer Hohei" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ae10-4a06-206b-9b28">
+                    <profile name="Retainer Hohei" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="ae10-4a06-206b-9b28">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7573,12 +7791,13 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Retainer Gunsō" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3057-46a5-5393-9225">
+                    <profile name="Retainer Gunsō" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3057-46a5-5393-9225">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                       <comment>Small, Normal, +1</comment>
                     </profile>
@@ -7609,12 +7828,13 @@
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Retainer Hohei" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3751-9ced-0632-3afd">
+                    <profile name="Retainer Hohei" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3751-9ced-0632-3afd">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">7</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">7</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8113,7 +8333,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Army Specializations" id="b6b6-cead-9011-c778" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="IJA 11th Army “Ro-gun” 3rd Division" hidden="false" id="7284-b2af-8bcd-1900" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="IJA 4th Division “Muramasa-Heidan”" hidden="false" id="7284-b2af-8bcd-1900" sortIndex="1">
           <rules>
             <rule name="Bushi Katagi" id="7567-ab78-c28b-3b43" hidden="false">
               <description>Vehicle units in your army gain the Intelligence Special Rule.
@@ -8301,12 +8521,13 @@ Liquid Plasma: Plasma weapons gain Close In</description>
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Medic" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9e49-2366-79ec-8b9b">
+                    <profile name="Medic" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="9e49-2366-79ec-8b9b">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8350,12 +8571,13 @@ Liquid Plasma: Plasma weapons gain Close In</description>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="30e0-98ed-645e-73de" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Hōshu Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="355f-ba9a-3427-29af">
+                    <profile name="Hōshu Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="355f-ba9a-3427-29af">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8468,12 +8690,13 @@ Liquid Plasma: Plasma weapons gain Close In</description>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="cde8-617f-26ae-bf3f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Flagbearer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3a8a-f140-b19f-5a92">
+            <profile name="Flagbearer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3a8a-f140-b19f-5a92">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">5</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">5</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
               </characteristics>
             </profile>
             <profile name="Flagbearer with Imperial Standard" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="c3df-c456-67e5-4c39">
@@ -8494,7 +8717,7 @@ Liquid Plasma: Plasma weapons gain Close In</description>
             <selectionEntry type="upgrade" import="true" name="Imperial Standard" hidden="false" id="f7a7-7947-5591-bfdb">
               <rules>
                 <rule name="Imperial Standard" id="cb7a-e85f-47bd-57d3" hidden="false">
-                  <description>Friendly Units within 12&quot; of an Imperial Standard may re-roll Rolls made to recover Reactions as a part of its Trained Reflexes National Idea.</description>
+                  <description>Friendly Units within 12&quot; of an Imperial Standard may re-roll 1s and 2s for Reflex Checks.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -8543,12 +8766,13 @@ Liquid Plasma: Plasma weapons gain Close In</description>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a9ff-3aa1-0886-52d0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Shugo-Yoroi Warsuit" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f0ae-22dd-088f-b0e2">
+                    <profile name="Shugo-Yoroi Warsuit" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="f0ae-22dd-088f-b0e2">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">8</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+4</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8661,4 +8885,9 @@ Liquid Plasma: Plasma weapons gain Close In</description>
       </modifiers>
     </infoLink>
   </infoLinks>
+  <sharedRules>
+    <rule name="Yabusame" id="e66e-375b-51e7-8e99" hidden="false">
+      <description>If this Unit has performed both a Move and Dash Action this Round, it may perform a Free Aim Action.</description>
+    </rule>
+  </sharedRules>
 </catalogue>

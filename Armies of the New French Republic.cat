@@ -215,17 +215,18 @@
         <categoryLink targetId="33a5-8b7e-49bb-c30d" id="ee50-e294-9184-e1d3" primary="true" name="Hero"/>
         <categoryLink targetId="6cee-690d-b6de-aa15" id="25e6-c950-4ee0-267c" primary="false" name="Attache"/>
       </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="7950-f6f1-38c2-f2dd" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d8a4-2c4f-d3d4-9db4" shared="true" childName="4e Division Cuirassée &quot;Chevaliers&quot;" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="fae0-4a12-4ae4-5f9b" shared="true" includeChildSelections="true" childName="Armor Platoon"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Major Marie Courtemanche" hidden="false" id="8c64-4967-ceb9-778e" type="selectionEntry" targetId="42b0-6cfa-62df-10c3">
       <categoryLinks>
@@ -420,7 +421,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Dragoons Vanguard Squad" hidden="false" id="2e84-acc4-69b8-9041" type="selectionEntry" targetId="e4c3-053d-4c2b-c4f6">
+    <entryLink import="true" name="Vanguard Dragoons Squad" hidden="false" id="2e84-acc4-69b8-9041" type="selectionEntry" targetId="e4c3-053d-4c2b-c4f6">
       <categoryLinks>
         <categoryLink targetId="7ce6-55a5-44aa-7258" id="2bb6-29a5-eb75-af6e" primary="true" name="CORE Mechanized"/>
         <categoryLink targetId="2018-9722-0c01-f30e" id="bd94-8d3a-ca50-8202" primary="false" name="NFR"/>
@@ -554,7 +555,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Dragoons Vanguard Officer" hidden="true" id="3ecd-af0a-1d93-46af" type="selectionEntry" targetId="78af-f7e6-b1ca-8ff1">
+    <entryLink import="true" name="Vanguard Dragoons Officer" hidden="true" id="3ecd-af0a-1d93-46af" type="selectionEntry" targetId="78af-f7e6-b1ca-8ff1">
       <categoryLinks>
         <categoryLink targetId="70eb-c264-a9cb-1bfe" id="8de4-2f39-0b07-49e8" primary="true" name="Command"/>
         <categoryLink targetId="2018-9722-0c01-f30e" id="8272-8f87-a8e2-dab4" primary="false" name="NFR"/>
@@ -719,7 +720,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Willys GPV Scout Squad" hidden="false" id="aaca-f247-5808-61b5" collective="false" targetId="b767-f195-b638-70ba" type="selectionEntry">
+    <entryLink import="true" name="Willys GPV Scout Section" hidden="false" id="aaca-f247-5808-61b5" collective="false" targetId="b767-f195-b638-70ba" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="CORE Recon" hidden="false" id="1452-3976-e323-9e45" targetId="54db-5889-a382-77cb" primary="true"/>
         <categoryLink name="Vehicle" hidden="false" id="3157-2ae0-3ce2-ca1e" targetId="de0d-e12c-a964-4e46" primary="false"/>
@@ -910,6 +911,48 @@
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="c2bc-81f4-b62b-dc46" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Colonel Jean-Claude Gaultier" hidden="true" id="5d41-c86c-25d0-b19d" type="selectionEntry" targetId="e2ba-17a6-6940-9186">
+      <categoryLinks>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="59d5-94b9-faf8-a00d" primary="true" name="Hero"/>
+        <categoryLink targetId="70eb-c264-a9cb-1bfe" id="898b-3f48-40d4-c2d8" primary="false" name="Command"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b372-a86b-8f3a-2adb" shared="true" childName="3e Régiment Étranger d&apos;Infanterie “Lionhearts”" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true" childName="Recon Platoon"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="The Heroes of Tabarka" hidden="true" id="9c8e-bd1e-2436-3c41" type="selectionEntry" targetId="f1bd-2e14-6a88-fd8c">
+      <categoryLinks>
+        <categoryLink targetId="33a5-8b7e-49bb-c30d" id="467a-49f8-b3d9-4db9" primary="true" name="Hero"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="df9c-5241-555f-2018" shared="true" includeChildSelections="true" childName="Recon Platoon"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="29bb-b3e2-3fbb-9ad5" shared="true" includeChildSelections="true" childName="Mechanized Platoon"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="beb7-8924-1eaa-59d1" shared="true" childName="NAB 2e Division Marocaine" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1132,11 +1175,16 @@
         <infoLink name="Heat Ray" id="d032-7ba0-d9d8-03e4" hidden="false" type="rule" targetId="56bf-a271-a758-6f38"/>
       </infoLinks>
       <costs>
-        <cost name="Munitions" typeId="Points" value="59"/>
+        <cost name="Munitions" typeId="Points" value="69"/>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+      <rules>
+        <rule name="Industrial Drill" id="2c35-d7d5-f1a9-81dd" hidden="false">
+          <description>This Unit may perform a Free Demolish Action against every Terrain Feature that comes within 1&quot; of the Drill on this Model. You may not resolve more than one Demolish Action in this way against a single Terrain Feature each round.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="MAS 38 &quot;Claqueur&quot; Automatic Grenade Launcher" hidden="false" id="77db-73a-f45e-b17d" collective="true">
       <costs>
@@ -1667,7 +1715,7 @@
     <selectionEntry type="upgrade" import="true" name="Tricolor" hidden="false" id="5890-7094-0157-d442">
       <rules>
         <rule name="Tricolor" id="a4a7-57c8-b8a5-a5d7" hidden="false">
-          <description>When a Unit within 12&quot; a Tricolor shares an Aim token, if it is the first time this Round, it gains an Aim token.</description>
+          <description>Each time a Unit within 12&quot; a Tricolor shares an Aim token, if it is the first time this Round, it gains an Aim token.</description>
         </rule>
       </rules>
       <costs>
@@ -1771,6 +1819,17 @@
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rifle Grenades" hidden="false" id="12ce-1b0d-9d5b-3636">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Specialist Grenadier" id="b835-194a-0aa2-ee6a" hidden="false" type="rule" targetId="6133-5acb-7342-ed63"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -1900,7 +1959,7 @@
         <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">4</characteristic>
         <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">5</characteristic>
         <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1D10+2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Heat Ray, Industrial Drill</characteristic>
         <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
       </characteristics>
     </profile>
@@ -2274,7 +2333,7 @@
     <profile name="Expanded Taupe" typeId="1269-adf9-ff97-be76" typeName="Fortification" hidden="false" id="e631-fd44-683d-6bbc">
       <characteristics>
         <characteristic name="Supply Cost" typeId="56dd-c8a0-4289-fb06">N/A</characteristic>
-        <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Medium and Light Vehicle Units, Cavalry Units, and Troop Units in your Army within 3&quot; of a Taupe Hub may travel through the Secret Tunnels. If they do, select another Expanded Taupe (Or normal Taupe for Troops) within Range, and set the Unit up within 3&quot; of that Token. The Range of this ability is 15&quot; per Action spent to travel. A Unit may not travel in this way more than once per Round.
+        <characteristic name="Effect" typeId="6ebb-50ef-b07e-23ab">Medium and Light Vehicle Units, Cavalry Units, and Troop Units in your Army within 3&quot; of an Expanded Taupe may travel through the Secret Tunnels. If they do, select another Expanded Taupe (Or normal Taupe for Troops) within Range, and set the Unit up within 3&quot; of that Token. The Range of this ability is 15&quot; per Action spent to travel. A Unit may not travel in this way more than once per Round.
 
 Area, Light Terrain, Subterranean</characteristic>
         <characteristic name="Dimensions" typeId="0e74-2a74-ad59-2775">100mm Circular</characteristic>
@@ -2327,6 +2386,9 @@ Area, Light Terrain, Subterranean</characteristic>
     </rule>
     <rule name="Citoyens, aux armes!" id="824a-1c57-2f1e-f874" hidden="false">
       <description>If this Unit is targeted by a Non-Artillery Unit that is more than 16&quot; away from it, they must roll a D10 to Determine Affiliation, on a 6+, they fail to recognize the Partisans as combatants, and must select a different target for their Attack. If a Unit succeeds this check, it does not need to repeat it for future Attacks that target this Unit.</description>
+    </rule>
+    <rule name="Faire le zouave" id="64f9-13f9-9267-3683" hidden="false">
+      <description>After this Unit resolves a Ranged Attack Action, it may perform a Free Move Action.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntryGroups>
@@ -3120,12 +3182,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5228-0b19-0111-96b7" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Mortier Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fab9-43d1-152a-a092">
+                    <profile name="Mortier Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="fab9-43d1-152a-a092">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                       <comment>Small, Slow</comment>
                     </profile>
@@ -3216,12 +3279,13 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Zouave Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0e25-6d39-7fe9-36f1">
+            <profile name="Zouave Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="0e25-6d39-7fe9-36f1">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
               </characteristics>
             </profile>
             <profile name="Zouave Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="20dc-a59d-77bc-d468">
@@ -3333,12 +3397,13 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Monowheel Chasseur Chief Scout" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c72d-8040-955d-41ba">
+            <profile name="Monowheel Chasseur Chief Scout" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="c72d-8040-955d-41ba">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
               </characteristics>
             </profile>
             <profile name="Monowheel Chasseurs" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="7996-26fe-7bd7-9a65">
@@ -3460,12 +3525,13 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Republican Guard Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="13e-877-a409-f123">
+            <profile name="Republican Guard Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="13e-877-a409-f123">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
               </characteristics>
             </profile>
             <profile name="Republican Guard Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="5654-84a9-65b2-d482">
@@ -3523,12 +3589,13 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Sapeur Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="fa72-0374-a824-e827">
+            <profile name="Sapeur Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="fa72-0374-a824-e827">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
               </characteristics>
             </profile>
             <profile name="Sapeur Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="2fc5-393a-10a5-0cae">
@@ -3574,12 +3641,13 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Partisan Cell Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8376-24b4-86bc-c8b1">
+            <profile name="Partisan Cell Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="8376-24b4-86bc-c8b1">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-2</characteristic>
               </characteristics>
             </profile>
             <profile name="Partisan Cell Leader" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="7173-691d-b7e0-ceaf">
@@ -3598,7 +3666,7 @@ Area, Light Terrain, Subterranean</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="Dragoons Vanguard Officer" hidden="false" id="78af-f7e6-b1ca-8ff1" sortIndex="8">
+        <selectionEntry type="model" import="true" name="Vanguard Dragoons Officer" hidden="false" id="78af-f7e6-b1ca-8ff1" sortIndex="8">
           <entryLinks>
             <entryLink import="true" name="CKF Sword" hidden="false" id="79fc-0ef2-aedb-100b" collective="false" targetId="6bda-666f-54ca-bd29" type="selectionEntry">
               <constraints>
@@ -3623,12 +3691,13 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Dragoons Vanguard Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ffcf-2877-aa68-34a6">
+            <profile name="Dragoons Vanguard Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="ffcf-2877-aa68-34a6">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
               </characteristics>
             </profile>
             <profile name="Dragoons Vanguard Officer" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="2079-f1b5-add9-27d6">
@@ -3704,12 +3773,13 @@ Area, Light Terrain, Subterranean</characteristic>
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
-            <profile name="Égalité Power Suit Officer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c3ba-e8f9-79cd-ac6e">
+            <profile name="Égalité Power Suit Officer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="c3ba-e8f9-79cd-ac6e">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3769,12 +3839,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a8d-4f96-7349-5d00-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Republican Guard Sergent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="eb83-6384-fa1e-c5dc">
+                    <profile name="Republican Guard Sergent" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="eb83-6384-fa1e-c5dc">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3834,12 +3905,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="min" value="7" field="selections" scope="parent" shared="true" id="6921-1e03-9394-023e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Republican Guard Fantassin" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="3cf9-8d8e-0ff9-edc5">
+                    <profile name="Republican Guard Fantassin" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="3cf9-8d8e-0ff9-edc5">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3920,12 +3992,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2be6-cfd1-a2fb-fbfe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Republican Guard Fantassin Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cc-ccd5-1bba-e2b1">
+                    <profile name="Republican Guard Fantassin Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="cc-ccd5-1bba-e2b1">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3963,6 +4036,11 @@ Area, Light Terrain, Subterranean</characteristic>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="742c-db3b-7d25-10c3" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
+                        <entryLink import="true" name="Rifle Grenades" hidden="false" id="ed48-4b0d-09ae-b827" type="selectionEntry" targetId="12ce-1b0d-9d5b-3636">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ed9-f80c-4c3a-ded0" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f641-3eda-a7e8-56e8-min" includeChildSelections="false"/>
@@ -3989,7 +4067,7 @@ Area, Light Terrain, Subterranean</characteristic>
           </costs>
           <rules>
             <rule name="La Terreur est Nécessaire!" id="2393-c3b0-b942-b66f" hidden="false">
-              <description>After resolving an Attack Action with this Unit, gain an Aim Token.</description>
+              <description>After resolving an Attack Action with this Unit, it gains an Aim Token.</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4028,12 +4106,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a47-f6f5-9a30-d37-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Partisan Ring Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="db39-d3aa-9676-6809">
+                    <profile name="Partisan Ring Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="db39-d3aa-9676-6809">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4078,12 +4157,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="abf9-9c69-8e36-761e-max"/>
                   </constraints>
                   <profiles>
-                    <profile name="Partisan" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9839-7ca9-a64e-6a6c">
+                    <profile name="Partisan" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="9839-7ca9-a64e-6a6c">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4137,12 +4217,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Partisan Gunner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1234-ea95-ac00-271b">
+                    <profile name="Partisan Gunner" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="1234-ea95-ac00-271b">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">1</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">1</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-3</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4206,6 +4287,7 @@ Area, Light Terrain, Subterranean</characteristic>
           </profiles>
           <infoLinks>
             <infoLink name="Troop Actions" id="19b7-f88-5f5e-3973" hidden="false" targetId="0936-84e8-76d0-501a" type="profile"/>
+            <infoLink name="Faire le zouave" id="45f5-cb76-aae3-09c8" hidden="false" type="rule" targetId="64f9-13f9-9267-3683"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="c467-354c-219-3f3a" hidden="false" collective="false" import="true" defaultSelectionEntryId="16be-90a-3a80-ef7c">
@@ -4220,12 +4302,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="460c-65f9-97ef-3817" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Zouave Sergent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5856-b6e-9597-3d73">
+                    <profile name="Zouave Sergent" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5856-b6e-9597-3d73">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                       <comment>Small, Fast</comment>
                     </profile>
@@ -4283,12 +4366,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="df72-2850-7cfd-8af8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Zouave" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="d5df-f585-c29f-8459">
+                    <profile name="Zouave" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="d5df-f585-c29f-8459">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4331,12 +4415,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="89dc-e29c-4c3c-e3dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Zouave Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e27e-505f-c6fb-6405">
+                    <profile name="Zouave Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="e27e-505f-c6fb-6405">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4374,6 +4459,11 @@ Area, Light Terrain, Subterranean</characteristic>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef0d-eae2-27be-932c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                         </entryLink>
+                        <entryLink import="true" name="Rifle Grenades" hidden="false" id="eec3-e83b-5e99-145d" type="selectionEntry" targetId="12ce-1b0d-9d5b-3636">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02e0-8af9-0ce2-9a30" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c25-b4bc-3ef6-d3ed-min" includeChildSelections="false"/>
@@ -4398,11 +4488,6 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
-          <rules>
-            <rule name="Faire le zouave" id="f784-e708-fe54-fcd5" hidden="false">
-              <description>When this Unit makes an Ranged Attack Action, it may perform a free Move Action.</description>
-            </rule>
-          </rules>
           <entryLinks>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="cd19-2fdf-6084-aad5" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
           </entryLinks>
@@ -4433,7 +4518,7 @@ Area, Light Terrain, Subterranean</characteristic>
           </infoLinks>
           <rules>
             <rule name="Vive la Révolution" id="b0d8-def7-cbb8-60cf" hidden="false">
-              <description>If this Unit moves at least 8&quot; in a straight line during its turn, it may take the Dash action for free.</description>
+              <description>If this Unit moves at least 8&quot; in a straight line during its turn, it may perform a Free Dash Action</description>
             </rule>
           </rules>
           <entryLinks>
@@ -4514,12 +4599,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Monowheel Chasseur" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="c736-3f8b-a39b-d6e9">
+                    <profile name="Monowheel Chasseur" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="c736-3f8b-a39b-d6e9">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                       <comment>Small, Very Fast</comment>
                     </profile>
@@ -4614,12 +4700,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Monowheel Chasseur" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5f0a-7fbd-a98f-ed44">
+                    <profile name="Monowheel Chasseur Sergent" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5f0a-7fbd-a98f-ed44">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">12&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">8</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                       <comment>Small, Very Fast</comment>
                     </profile>
@@ -4721,7 +4808,11 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd9e-4113-0919-c543-max" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Iris Rocket Propelled Charge" hidden="false" id="45f4-7ca5-2913-04fd" type="selectionEntry" targetId="f09a-6b3c-a9f7-485a"/>
+                    <entryLink import="true" name="Iris Rocket Propelled Charge" hidden="false" id="45f4-7ca5-2913-04fd" type="selectionEntry" targetId="f09a-6b3c-a9f7-485a">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7232-e347-88f1-3a9d" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -4770,12 +4861,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5791-ef45-f664-09a3" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Tireur Ring Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5f00-9f56-8da9-5a5c">
+                    <profile name="Tireur Ring Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5f00-9f56-8da9-5a5c">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-2</characteristic>
                       </characteristics>
                       <comment>Small, Normal</comment>
                     </profile>
@@ -4813,12 +4905,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9608-38b4-d655-2ca3"/>
                   </constraints>
                   <profiles>
-                    <profile name="Partisan Tireur" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="645c-085d-8dd7-19ed">
+                    <profile name="Partisan Tireur" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="645c-085d-8dd7-19ed">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4880,6 +4973,7 @@ Area, Light Terrain, Subterranean</characteristic>
         <selectionEntry type="unit" import="true" name="Zouave Sniper Team" hidden="false" id="649b-687c-ac7e-1cf6" sortIndex="3">
           <infoLinks>
             <infoLink name="Troop Actions" id="ac40-f96e-0749-5041" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
+            <infoLink name="Faire le zouave" id="7b37-b959-f1e5-ab2d" hidden="false" type="rule" targetId="64f9-13f9-9267-3683"/>
           </infoLinks>
           <costs>
             <cost name="Munitions" typeId="Points" value="10"/>
@@ -4887,11 +4981,6 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
-          <rules>
-            <rule name="Faire le zouave" id="239b-69e3-0942-5c93" hidden="false">
-              <description>When this Unit makes an Ranged Attack Action, it may perform a free Move Action.</description>
-            </rule>
-          </rules>
           <entryLinks>
             <entryLink import="true" name="Equipment, Upgrades, and Designations" hidden="false" id="49e2-d51e-5707-f55e" type="selectionEntryGroup" targetId="f9bd-97ad-a621-5069"/>
             <entryLink import="true" name="Hunter" hidden="false" id="3066-0b8f-5883-b973" type="selectionEntry" targetId="d2ec-e98c-8d5e-61f0"/>
@@ -4911,12 +5000,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2912-b44a-2d7d-f838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Zouave Sniper" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="0381-140a-522c-6554">
+                    <profile name="Zouave Sniper" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="0381-140a-522c-6554">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                       <comment>Small, Fast</comment>
                     </profile>
@@ -4942,12 +5032,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="570c-3b12-ff00-8b5a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Zouave Spotter" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="1cb6-1e85-2847-10fc">
+                    <profile name="Zouave Spotter" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="1cb6-1e85-2847-10fc">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4989,6 +5080,31 @@ Area, Light Terrain, Subterranean</characteristic>
           <categoryLinks>
             <categoryLink targetId="7584-5824-f5d2-050a" id="b3e0-46e9-b921-1b78" primary="false" name="Light"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Decoy" hidden="false" id="d24e-5dba-4db5-bfc3">
+              <rules>
+                <rule name="Decoy" id="9ae0-41bd-f3de-9b41" hidden="false">
+                  <description>During deployment, place a Decoy Token anywhere on the Battlefield within 16&quot; of this Unit. If, when this Unit is Attacked, the Decoy is closer to the Attacker than this Unit, they must select the Decoy as the target of the Attack instead. The Decoy is treated as being an independent Troop Unit for the purposes of these Attacks, but is not an actual Unit, and does not count as a Unit or Model for the purposes of Suppression, Objectives or Scoring. When the Decoy is reduced to 0 HP it is destroyed and removed from the Battlefield.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="5"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Decoy" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="edf1-766f-d4a0-8777">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">0&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">2</characteristic>
+                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
+                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="AM40 Lafayette Armored Car" hidden="false" id="c40c-5ffc-b5f7-4799" sortIndex="6">
           <profiles>
@@ -5098,9 +5214,6 @@ Area, Light Terrain, Subterranean</characteristic>
               <description>This Unit does not have a penalty when Attacked from its Rear Armor.</description>
             </rule>
           </rules>
-          <infoLinks>
-            <infoLink name="Prototype" id="f6e7-4320-81f7-6171" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
-          </infoLinks>
           <costs>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
@@ -5141,18 +5254,19 @@ Area, Light Terrain, Subterranean</characteristic>
                 <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="9c05-c0a0-eedd-6f68" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Sergent" hidden="false" id="dbb2-a68-9108-51ba" collective="false" sortIndex="1">
+                <selectionEntry type="model" import="true" name="Sapeur Sergent" hidden="false" id="dbb2-a68-9108-51ba" collective="false" sortIndex="1">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d3-b00d-f3a4-539d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2a8-1351-43f7-9364" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Sergent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="2818-5672-3189-83ba">
+                    <profile name="Sapeur Sergent" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="2818-5672-3189-83ba">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                       <comment>Small, Normal</comment>
                     </profile>
@@ -5189,12 +5303,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f7f4-fdc5-e95-f06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Sapper" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="8ba7-a6a-45c2-6fa7">
+                    <profile name="Sapeur Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="8ba7-a6a-45c2-6fa7">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5219,12 +5334,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="min" value="7" field="selections" scope="parent" shared="true" id="b31c-606a-4830-5fdd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Sapper" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="cff9-77b0-af6c-e826">
+                    <profile name="Sapeur" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="cff9-77b0-af6c-e826">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5531,12 +5647,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9db2-db32-3f21-e1ef" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Saboteur Ring Leader" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="40cc-61b3-7ed9-ad42">
+                    <profile name="Saboteur Ring Leader" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="40cc-61b3-7ed9-ad42">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5567,12 +5684,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="abd9-44dd-64bb-22f4"/>
                   </constraints>
                   <profiles>
-                    <profile name="Partisan Saboteur" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e787-8edb-d8ef-b43a">
+                    <profile name="Partisan Saboteur" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="e787-8edb-d8ef-b43a">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">-1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5669,12 +5787,13 @@ Area, Light Terrain, Subterranean</characteristic>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <profiles>
-                    <profile name="Republican Guard Heavy Weapons Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f147-2802-b10a-3305">
+                    <profile name="Republican Guard Heavy Weapons Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="f147-2802-b10a-3305">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                       <comment>Small, Normal</comment>
                     </profile>
@@ -5838,30 +5957,11 @@ Area, Light Terrain, Subterranean</characteristic>
     </selectionEntryGroup>
     <selectionEntryGroup name="Heroes" id="4e16-07bd-2c08-a6ba" hidden="false">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Major Marie Courtemanche" hidden="false" id="42b0-6cfa-62df-10c3">
+        <selectionEntry type="upgrade" import="true" name="Major Marie Courtemanche" hidden="false" id="42b0-6cfa-62df-10c3">
           <entryLinks>
-            <entryLink import="true" name="CKF Sword" hidden="false" id="ca04-69aa-68ee-2d6a" collective="false" targetId="6bda-666f-54ca-bd29" type="selectionEntry">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94d4-5698-c033-dd0f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b01-14bb-11c-2c04" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Modele 1921 Energy Pistol" hidden="false" id="7370-b412-e6d6-631e" collective="false" targetId="da28-df59-a553-5d18" type="selectionEntry">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbec-aece-8ed5-cf91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3004-b993-1b5c-e4b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="16a2-3a24-28fe-ad14" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd4b-8cf9-77d2-9051-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd4b-8cf9-77d2-9051-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="7ae2-fe8c-579a-24c8" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
-            <entryLink import="true" name="Flare Gun" hidden="false" id="58ac-e334-f196-a719" type="selectionEntry" targetId="6752-4fbf-1ef8-74f1"/>
             <entryLink import="true" name="Flexible Hero" hidden="false" id="98fc-5ea3-5076-8c33" type="selectionEntry" targetId="6b7f-275e-7716-94b3"/>
-            <entryLink import="true" name="Tricolor" hidden="false" id="0f9c-4a41-387e-021f" type="selectionEntry" targetId="5890-7094-0157-d442"/>
+            <entryLink import="true" name="Flare Gun" hidden="false" id="58ac-e334-f196-a719" type="selectionEntry" targetId="6752-4fbf-1ef8-74f1"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Hero Actions" id="0e4c-f021-2a9d-5f1f" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
@@ -5873,14 +5973,6 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <profiles>
-            <profile name="Major Marie Courtemanche" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="65de-cbce-d6c5-627d">
-              <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-              </characteristics>
-            </profile>
             <profile name="Major Marie Courtemanche" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="4844-b96d-960d-9eec">
               <characteristics>
                 <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Infantry, (AUX) Support, Attache (Troop), Hero, Command</characteristic>
@@ -5891,12 +5983,52 @@ Area, Light Terrain, Subterranean</characteristic>
           </profiles>
           <rules>
             <rule name="S&apos;engager Pour Servir" id="5e45-a1b0-79b8-e081" hidden="false">
-              <description>Whenever a Unit within 12&quot; of Major Marie Courtemanche loses a Model, it may shed a Suppression Token. If Major Marie Courtemanche is your Field Commander, this applies to all Units in your Army.</description>
+              <description>Each time a Unit within 12&quot; of Major Marie Courtemanche loses a Model, it may shed a Suppression Token. If Major Marie Courtemanche is your Field Commander, this applies to all Units in your Army.</description>
             </rule>
           </rules>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="321d-71bd-747-c4d8" includeChildSelections="true"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Major Marie Courtemanche" hidden="false" id="904a-953d-4dfb-ae04">
+              <entryLinks>
+                <entryLink import="true" name="CKF Sword" hidden="false" id="ca04-69aa-68ee-2d6a" collective="false" targetId="6bda-666f-54ca-bd29" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94d4-5698-c033-dd0f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b01-14bb-11c-2c04" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="16a2-3a24-28fe-ad14" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd4b-8cf9-77d2-9051-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd4b-8cf9-77d2-9051-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Modele 1921 Energy Pistol" hidden="false" id="7370-b412-e6d6-631e" collective="false" targetId="da28-df59-a553-5d18" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbec-aece-8ed5-cf91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3004-b993-1b5c-e4b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Tricolor" hidden="false" id="0f9c-4a41-387e-021f" type="selectionEntry" targetId="5890-7094-0157-d442"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2572-0fbb-61c2-4b03-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2572-0fbb-61c2-4b03-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Major Marie Courtemanche" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a0f2-34ee-6d9a-a539">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Agent Fabien" hidden="false" id="0d58-a47e-6324-028d">
           <entryLinks>
@@ -5921,31 +6053,27 @@ Area, Light Terrain, Subterranean</characteristic>
             <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
           </costs>
           <profiles>
-            <profile name="Agent Fabien" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="b201-521a-0e79-ea88">
+            <profile name="Agent Fabien" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="b201-521a-0e79-ea88">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Agent Fabien</characteristic>
-                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Partisan, (CORE) Infantry, (AUX) Recon, Troop, Hero, Command</characteristic>
-                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">25mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
-                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4"/>
+                <characteristic name="Keywords" typeId="d6ab-192f-515b-f06b">NFR, (CORE) Partisan, (CORE) Infantry, (AUX) Recon, Troop, Hero, Command</characteristic>
+                <characteristic name="Base Size" typeId="7451-1f52-67d5-01a8">25mm</characteristic>
+                <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <rules>
             <rule name="Partisan Activity" id="74a7-bee1-1202-18a5" hidden="false">
-              <description>At the start of the game, Agent Fabien and any Unit he is Attached to must be deployed Undercover (in reserves). At the end of pregame Deployment, place one of each of the Red Menace Tokens Face down and more than 8&quot; from Enemy Units. When an Enemy moves within 3&quot; of a token, or as an Activation, you may reveal a Token.
+              <description>At the start of the game, Agent Fabien and any Unit he is Attached are considered Undercover, and are not deployed onto the Battlefield. At the end of the first Setup Phase, place one of each of the Red Menace Tokens Face down and more than 8&quot; from Enemy Units. When an Enemy moves within 3&quot; of a token, or as an Activation, you may reveal a Token.
 
 Red Menace Tokens:
-Improvised Bomb- Make an attack treating the token as a blast template with the following template. S4 AP4 D4, Blast 3, High Explosive, Close In.
+Improvised Bomb: Make an attack treating the token as a blast template with the following template. S4 AP4 D4, Blast 3, High Explosive, Close In.
 
+Red Scare: All Enemy Units within 3&quot; gain 1D5 Suppression tokens.
 
-Red Scare- All enemy units within 3&quot; gain a suppression token.
-
-
-In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all Attached Models in cohesion. This Unit may activate immediately, interrupting your opponent&apos;s turn. Once this activation is finished, your opponent may finish their activation as normal.</description>
+In Plain Sight: Replace this token with Agent Fabien&apos;s Unit. This Unit may activate immediately, interrupting your Opponent&apos;s turn. Once this Activation is finished, your Opponent may finish their Activation as normal.</description>
             </rule>
             <rule name="Ringleader" id="5f01-56d9-4975-25a8" hidden="false">
-              <description>If Agent Fabien is your Field Commander, every time a CORE Partisan Unit in your Army selects an Enemy Unit as the target of an Attack, it gains an Aim token. You may spend an Aim Token to improve one of their Weapon Profiles by one until the Attack is resolved.</description>
+              <description>If Agent Fabien is your Field Commander, every time a CORE Partisan Unit in your Army selects an Enemy Unit as the target of an Attack, it gains an Aim token. When resolving an Attack with a Partisan Unit, you may spend an Aim Token to improve one of their Weapon Profiles&apos; Values by one until the Attack is resolved.</description>
             </rule>
           </rules>
           <constraints>
@@ -5968,12 +6096,13 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 </entryLink>
               </entryLinks>
               <profiles>
-                <profile name="Agent Fabien" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="eb01-5458-c67d-9a61">
+                <profile name="Agent Fabien" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="eb01-5458-c67d-9a61">
                   <characteristics>
-                    <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                    <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                    <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">2</characteristic>
-                    <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">2</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5990,15 +6119,21 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="Colonel Charles De Gaulle" hidden="false" id="2ac7-d8ba-713c-c7e2">
+        <selectionEntry type="upgrade" import="true" name="Colonel Charles De Gaulle" hidden="false" id="2ac7-d8ba-713c-c7e2">
           <costs>
-            <cost name="Munitions" typeId="Points" value="170"/>
+            <cost name="Munitions" typeId="Points" value="140"/>
             <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
             <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
           </costs>
           <rules>
             <rule name="L&apos;Audace" id="2177-abe8-908-4b5e" hidden="false">
-              <description>During the Command Phase Colonel Charles De Gaulle may issue an Order to up to Four Vehicle Units. Units that receive an Order from him may spend an Aim Token to add 2&quot; to their Movement Characteristic until the end of the Round. If Colonel Charles De Gaulle is your Field Commander, they may do this one additional time.</description>
+              <description>Units that have received an Order Token from this Unit this Round may spend up to two Aim Tokens to improve their Movement Value. Each time they do so, their MV is improved by 2&quot; until the end of this Round.</description>
+            </rule>
+            <rule name="Modern Cuirassier" id="b7e0-c7ef-694b-1d0d" hidden="false">
+              <description>Colonel Charles De Gaulle must be your Field Commander. Colonel Charles De Gaulle may only be taken if your army specialization is 4e Division Cuirassée &quot;Chevaliers&quot;.
+
+When CORE Armor Units in your Army apply Vehicle Shock to a Unit, they are considered one Weight Class higher. </description>
             </rule>
           </rules>
           <profiles>
@@ -6009,25 +6144,11 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
                 <characteristic name="Maximum Number in Platoon" typeId="d3f4-a3f4-2fe1-5fee">1</characteristic>
               </characteristics>
             </profile>
-            <profile name="Colonel Charles De Gaulle" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="71e2-73be-4e8c-56bc">
-              <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a554-2aef-39e0-d6ae" includeChildSelections="true"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Modele 1921 Energy Pistol" hidden="false" id="345c-c9ec-02d7-c09f" type="selectionEntry" targetId="da28-df59-a553-5d18">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de61-442a-204b-a513-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de61-442a-204b-a513-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Nominate Field Commander" hidden="false" id="c41f-a557-effa-c2a2" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
           </entryLinks>
           <infoLinks>
@@ -6035,8 +6156,304 @@ In Plain Sight- Replace the token with Agent Fabien&apos;s model, and deploy all
             <infoLink name="Slippery" id="14e5-fac6-d1de-96f2" hidden="false" type="rule" targetId="e1f9-41ef-ff64-d030"/>
             <infoLink name="Hero Actions" id="6e18-2802-edf1-2781" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
           </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="O4 - Colonel" hidden="false" id="579f-49cf-6207-b9e4" collective="false">
+              <costs>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Officer 5" hidden="false" id="314b-032f-729d-e1e3" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d0d4-3d18-72ff-690c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0d4-3d18-72ff-690c-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Colonel Charles De Gaulle" hidden="false" id="406e-2c6c-064f-8d7e">
+              <entryLinks>
+                <entryLink import="true" name="Modele 1921 Energy Pistol" hidden="false" id="345c-c9ec-02d7-c09f" type="selectionEntry" targetId="da28-df59-a553-5d18">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de61-442a-204b-a513-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de61-442a-204b-a513-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <profiles>
+                <profile name="Colonel Charles De Gaulle" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="71e2-73be-4e8c-56bc">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3593-7cf6-90c3-6a96-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3593-7cf6-90c3-6a96-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Egalite hero" hidden="false" id="f1bd-2e14-6a88-fd8c"/>
+        <selectionEntry type="upgrade" import="true" name="The Heroes of Tabarka" hidden="false" id="f1bd-2e14-6a88-fd8c">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Yassine El Mansouri" hidden="false" id="f216-9b01-4e35-b40b">
+              <entryLinks>
+                <entryLink import="true" name="M35A Recoilless Rifle" hidden="false" id="f9ec-6e36-d139-d9c9" type="selectionEntry" targetId="5456-b788-b016-d54e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="29fb-6d85-c146-6995-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29fb-6d85-c146-6995-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="MAS 38 &quot;Claqueur&quot; Automatic Grenade Launcher" hidden="false" id="b17f-23e5-2820-6e44" type="selectionEntry" targetId="77db-73a-f45e-b17d">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0767-7549-ef2b-845e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0767-7549-ef2b-845e-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="CKF Sword" hidden="false" id="5f63-9637-3366-b01a" type="selectionEntry" targetId="6bda-666f-54ca-bd29"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d1e0-64ca-b7a9-9685-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1e0-64ca-b7a9-9685-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Yassine El Mansouri" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="b275-edc4-cce9-7591">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="19"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Malak El Mansouri" hidden="false" id="8a3b-094a-9063-09f2">
+              <entryLinks>
+                <entryLink import="true" name="Combat Shield" hidden="false" id="d365-001e-56fe-b047" type="selectionEntry" targetId="8766-febd-3b85-6fe9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="425b-fe32-127b-8b52-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="425b-fe32-127b-8b52-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="MAS 35 Inspirateur SMG" hidden="false" id="ec77-1775-5504-319e" type="selectionEntry" targetId="59cb-4b56-9cbf-d25a">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3dcc-322b-2791-0a82-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3dcc-322b-2791-0a82-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Power Suit Sledgehammer" hidden="false" id="cd99-d518-420a-0571" type="selectionEntry" targetId="6608-a019-2f0c-92cc">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1519-b03e-c193-9c46-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1519-b03e-c193-9c46-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8eef-58a9-400c-6145-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8eef-58a9-400c-6145-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Malak El Mansouri" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="533e-ce2a-cb6b-cf3a">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">8</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">6</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="44"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Custom-Built Equipment" id="ad68-4afb-6042-06d7" hidden="false">
+              <description>Each time this Unit Activates, select one Weapon, until the end of this Activation, you may spend any number of Aim Tokens to increase that Weapon&apos;s AP.
+
+Models in this Unit may select any number of Weapons they are equipped with when performing Attack Actions.</description>
+            </rule>
+            <rule name="Sibling Rivalry" id="c048-610f-64fb-05a5" hidden="false">
+              <description>Each time a Model in this Unit Destroys an Enemy Model in an Attack Action, the other may Reroll 1s to Hit and Pen until that Action is resolved.</description>
+            </rule>
+            <rule name="Beloved by the People" id="8d2d-ca38-010d-e582" hidden="false">
+              <description>The Heroes of Tabarka may not be your Field Commander. The Heroes of Tabarka may only be taken if your selected Army Specialization is NAB 2e Division Marocaine.
+
+This Unit gains Capture as a Free Action. Each time you capture an Objective with this Unit, all Friendly Units within 6&quot; of this one gain an Aim Token.</description>
+            </rule>
+          </rules>
+          <entryLinks>
+            <entryLink import="true" name="Jump Packs" hidden="false" id="97dd-a089-febc-e532" type="selectionEntry" targetId="f632-e702-4d46-59da">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c35-8fb6-aa27-7fa0-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c35-8fb6-aa27-7fa0-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="The Heroes of Tabarka" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="1b50-f0b0-366d-df38">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Malak El Mansouri, 1x Yassine El Mansouri</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, Hero, Troop, Battlesuit</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">40mm</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">2</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Hero Actions" id="5f14-8ab0-0d8d-69fb" hidden="false" type="profile" targetId="ca2a-7f10-72a9-2a56"/>
+            <infoLink name="Independent Hero" id="d537-8098-9907-968a" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a157-197f-a88e-c9ed" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="30"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Colonel Jean-Claude Gaultier" hidden="false" id="e2ba-17a6-6940-9186">
+          <rules>
+            <rule name="Champion Boxer" id="175c-f927-3baa-955c" hidden="false">
+              <description>Enemy Units may not perform Counter Strikes or Routing Attacks against this Unit.</description>
+            </rule>
+            <rule name="Heart of a Lion" id="ba71-be34-0ef1-ffd9" hidden="false">
+              <description>Colonel Jean-Claude Gaultier must be your Field Commander. Colonel Jean-Claude Gaultier may only be taken if your selected Army Specialization is 3e Régiment Étranger d&apos;Infanterie “Lionhearts”
+
+This Unit may issue Orders at a range of 16&quot;. All Zouave and Monowheel Units in this Army may reroll 1s and 2s for Melee Attacks.</description>
+            </rule>
+            <rule name="Daring Dismount" id="99f0-327c-a28a-00bb" hidden="false">
+              <description>Once per Game, when Colonel Jean-Claude Gaultier performs a Charge Attack, you may choose for him to dismount, if you do, replace his Mounted Model with his On-Foot Model, he loses the Cavalry Keyword and gains the Troop Keyword. Until this Attack is resolved, double the Hits value of his Lance Fist Weapon.</description>
+            </rule>
+            <rule name="Heavyweight" id="15f6-90ea-3d2c-1a27" hidden="false">
+              <description>When Jean-Claude is on foot, his Lance Fist gains Warding. Any time he is the target of a melee attack, roll a D5 and reduce the Hits profile of any weapons targeting him by the result, to a minimum of 1.</description>
+            </rule>
+          </rules>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Colonel Jean-Claude Gaultier" hidden="false" id="a8a6-b853-9561-a9fb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1858-eb2c-12c0-470a-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1858-eb2c-12c0-470a-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Lance-Fist" hidden="false" id="5d61-f9ce-360c-64cc">
+                  <profiles>
+                    <profile name="Lance-Fist" typeId="Weapon" typeName="Weapon" hidden="false" id="0055-926c-b87f-85bb">
+                      <characteristics>
+                        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+                        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">HP</characteristic>
+                        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">4</characteristic>
+                        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">4</characteristic>
+                        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!, Critical Shot</characteristic>
+                        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="55ca-04a6-2b6f-d756-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55ca-04a6-2b6f-d756-max" includeChildSelections="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Charge!" id="ff30-d4e0-30dd-efc1" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
+                    <infoLink name="Critical Shot" id="0fe0-96bf-c45e-dee1" hidden="false" type="rule" targetId="03aa-1bbc-a35a-39d0"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <profiles>
+                <profile name="Colonel Jean-Claude Gaultier On Foot" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="6873-95c5-2f1c-258b">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Colonel Jean-Claude Gaultier Mounted" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="2d41-d99b-a4ea-7a90">
+                  <characteristics>
+                    <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">12&quot;</characteristic>
+                    <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">8</characteristic>
+                    <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                    <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">8</characteristic>
+                    <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Spinning Tread" hidden="false" id="7d52-e8d1-963c-86a8" type="selectionEntry" targetId="5c22-a7d5-dcf9-1283">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f011-b30d-1f58-6868-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f011-b30d-1f58-6868-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Munitions" typeId="Points" value="69"/>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="O4 - Colonel" hidden="false" id="1814-f3c0-70a8-a604" collective="false">
+              <costs>
+                <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+                <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+                <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Officer 5" hidden="false" id="3dbb-a600-91ce-d9b4" type="selectionEntry" targetId="060e-3ae9-cd61-3cb3"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11a1-ec4c-3dd5-1fff-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11a1-ec4c-3dd5-1fff-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a539-ed66-c29a-9b64" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Nominate Field Commander" hidden="false" id="b936-2b7b-5207-8c1e" type="selectionEntry" targetId="a8f2-8cd0-efc0-4a1b"/>
+          </entryLinks>
+          <profiles>
+            <profile name="Colonel Jean-Claude Gaultier" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="caf4-42ad-7807-a3c0">
+              <characteristics>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Colonel Jean-Claude Gaultier</characteristic>
+                <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Recon, Cavalry, Hero, Command.</characteristic>
+                <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">60x35mm Oval Mounted, 25mm On-Foot</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">1</characteristic>
+                <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Munitions" typeId="Points" value="20"/>
+            <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+            <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+            <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="1"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Independent Hero" id="751d-6a08-2e81-f1f2" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Transports" id="154c-76a7-9c90-880b" hidden="false">
@@ -6392,7 +6809,7 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
           </infoLinks>
           <rules>
             <rule name="Tunneling" id="50e4-2891-a8a0-5ddc" hidden="false">
-              <description>As a Difficult Action, this Unit may Tunnel. If it does, place it En Route, and then place a Taupe Hub Fortification where this Unit was.</description>
+              <description>As a Difficult Action, this Unit may Tunnel. If it does, place it En Route, and then place an Expanded Taupe Fortification where this Unit was.</description>
             </rule>
             <rule name="Dieu des Taupes" id="33f0-e232-9b8c-1662" hidden="false">
               <description>When this Model is deployed using its Burrowing ability, instead of placing a Taupe Fortification, instead place an Expanded Taupe Fortification.</description>
@@ -6648,16 +7065,15 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Dragoons Vanguard Squad" hidden="false" id="e4c3-053d-4c2b-c4f6" sortIndex="1">
+        <selectionEntry type="unit" import="true" name="Vanguard Dragoons Squad" hidden="false" id="e4c3-053d-4c2b-c4f6" sortIndex="1">
           <infoLinks>
             <infoLink name="Troop Actions" id="9a8e-061a-892b-0722" hidden="false" type="profile" targetId="0936-84e8-76d0-501a"/>
-            <infoLink name="Prototype" id="e34c-fbb4-c9c1-6bfe" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Squad Members" id="71fc-fefd-555d-8082" hidden="false" collective="false" import="true" defaultSelectionEntryId="e8de-0735-b00d-6c9f">
               <constraints>
                 <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="00b5-e62b-3cd1-c97b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="5688-f511-732f-4e51" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="5688-f511-732f-4e51" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Dragoon Sergent" hidden="false" id="6dca-cd9e-240a-750d" collective="false" sortIndex="1">
@@ -6666,12 +7082,13 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1bd8-872e-5e94-10ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Dragoon Sergent" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="e962-23d0-1600-f798">
+                    <profile name="Dragoon Sergent" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="e962-23d0-1600-f798">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6750,15 +7167,16 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                 <selectionEntry type="model" import="true" name="Dragoon" hidden="false" id="e8de-0735-b00d-6c9f" collective="false" sortIndex="2">
                   <constraints>
                     <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="f318-67e6-8f6b-69e2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="0c6d-94fe-3be2-0f77" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="0c6d-94fe-3be2-0f77" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Dragoon" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="f279-cdbd-4f72-d1a3">
+                    <profile name="Dragoon" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="f279-cdbd-4f72-d1a3">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6826,12 +7244,13 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e8b9-15f0-58f9-749f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Dragoon Specialist" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="ce8b-3d97-a416-ad0e">
+                    <profile name="Dragoon Specialist" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="ce8b-3d97-a416-ad0e">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">3</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">3</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6873,6 +7292,11 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                           </constraints>
                         </entryLink>
                         <entryLink import="true" name="Clair Automatic Shotgun" hidden="false" id="280f-5245-adaf-9264" type="selectionEntry" targetId="dd74-1767-ebff-8550"/>
+                        <entryLink import="true" name="Rifle Grenades" hidden="false" id="ffb0-25cc-d807-1ae0" type="selectionEntry" targetId="12ce-1b0d-9d5b-3636">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a832-e597-9d65-c258" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5123-8a9a-64e2-436f-min" includeChildSelections="false"/>
@@ -6893,16 +7317,19 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
           </selectionEntryGroups>
           <rules>
             <rule name="Vanguards of the Revolution" id="9284-2891-ee9d-ba21" hidden="false">
-              <description>When this Unit spends an Aim Token, it may remove a Suppression Token from itself or a Troop Unit within 6&quot; of itself.</description>
+              <description>Each this Unit spends an Aim Token, it may remove a Token from a Troop Unit within 6&quot; of itself.</description>
+            </rule>
+            <rule name="Ils Ne Passeront Pas" id="663f-d0b8-4ab8-f2cc" hidden="false">
+              <description>When an Enemy Unit attempts to Capture an Objective, if this Unit is Contesting that Objective, it may only perform the Capture Action as a Difficult Action.</description>
             </rule>
           </rules>
           <profiles>
-            <profile name="Dragoon Vanguard Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7e54-26d9-6d5e-ee0b">
+            <profile name="Vanguard Dragoon Squad" typeId="0322-11e4-8667-bbe3" typeName="Unit Composition" hidden="false" id="7e54-26d9-6d5e-ee0b">
               <characteristics>
-                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Dragoon Sergent, 5-9x Dragoons, 0-4x Dragoon Specialists</characteristic>
+                <characteristic name="Composition" typeId="1f57-7b47-fc27-63ac">1x Dragoon Sergent, 3-9x Dragoons, 0-4x Dragoon Specialists</characteristic>
                 <characteristic name="Keywords" typeId="8b2b-8745-edb5-df14">NFR, (CORE) Mechanized, (AUX) Infantry, Troop, Heavy</characteristic>
                 <characteristic name="Base Size" typeId="d264-e5f6-d2b5-2624">32mm</characteristic>
-                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">10</characteristic>
+                <characteristic name="Models in Unit" typeId="79fc-3188-cd1e-2b49">5</characteristic>
                 <characteristic name="Upgrade Slots" typeId="a4fe-57aa-eb89-f8f4">1</characteristic>
               </characteristics>
             </profile>
@@ -6928,12 +7355,13 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                   <selectionEntries>
                     <selectionEntry type="model" import="true" name="Égalité Power Suit Gunner" hidden="false" id="b691-8134-a447-afa4" defaultAmount="1" collective="true">
                       <profiles>
-                        <profile name="Égalité Power Suit Gunner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="9d59-02da-2d4d-5ae7">
+                        <profile name="Égalité Power Suit Gunner" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="9d59-02da-2d4d-5ae7">
                           <characteristics>
-                            <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                            <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                            <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                            <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                            <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                            <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                            <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                            <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                            <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6967,20 +7395,16 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                     </selectionEntry>
                     <selectionEntry type="model" import="true" name="Égalité Power Suit Protector" hidden="false" id="f54c-7999-caf6-4e5e" defaultAmount="1" collective="true">
                       <profiles>
-                        <profile name="Égalité Power Suit Protector" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="4a26-5b39-a897-f812">
+                        <profile name="Égalité Power Suit Protector" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="4a26-5b39-a897-f812">
                           <characteristics>
-                            <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                            <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">7</characteristic>
-                            <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                            <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                            <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                            <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">7</characteristic>
+                            <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                            <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                            <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
-                      <rules>
-                        <rule name="Protector" id="9e48-9111-7ec1-9b16" hidden="false">
-                          <description>When this Unit is selected as the target of an Attack by a Unit within this Model&apos;s front 90 degrees, increase this Model&apos;s Armor value by 3, that Unit&apos;s Attack may not apply Suppression Tokens.</description>
-                        </rule>
-                      </rules>
                       <selectionEntryGroups>
                         <selectionEntryGroup name="Weapon Options" id="29af-c37d-a831-0999" hidden="false" defaultSelectionEntryId="486d-2035-9836-2012">
                           <entryLinks>
@@ -7017,7 +7441,7 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                         </selectionEntryGroup>
                       </selectionEntryGroups>
                       <costs>
-                        <cost name="Munitions" typeId="Points" value="35"/>
+                        <cost name="Munitions" typeId="Points" value="43"/>
                         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
                         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
@@ -7026,6 +7450,9 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5875-fd9e-1931-015a-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5875-fd9e-1931-015a-max" includeChildSelections="false"/>
                       </constraints>
+                      <infoLinks>
+                        <infoLink name="Armored Guardian" id="7c0c-838b-3410-c4ba" hidden="false" type="rule" targetId="97f8-e657-8b6a-e3cc"/>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -7083,23 +7510,20 @@ Troop Units that were issued an Order by this Officer gain Build as a Standard A
             <rule name="Élan Vital" id="7733-0c63-0f99-4983" hidden="false">
               <description>During the Scoring phase if every Unit you control on the battlefield has fulfilled at least one of the following conditions, gain a point of Élan:
 
-
-* The unit is within 6” of another friendly Unit.
-* The unit performed an Attack Action this round.
-* This unit is within 3” of an objective.</description>
+* The Unit is within 6” of another friendly Unit.
+* The Unit performed an Attack Action this round.
+* This Unit is within 3” of an objective.</description>
             </rule>
             <rule name="Vital Force" id="f34d-2259-1352-4b15" hidden="false">
               <description>For each point of Élan gain the following benefits:
 * At 1 point of Élan gain the following benefit:
 * All Units gain an Aim Token in the Command Phase.
 
-
 * At 2 points gain the following benefit:
-* When a unit becomes affected by a Flare Gun it also gains an Aim Token.
-
+* When a Unit becomes affected by a Flare Gun it also gains an Aim Token.
 
 * At 3 points gain the following benefit:
-* Any amount of aim tokens may be spent to increase the armor penetration on their weapon profiles. (May spend any combination to raise Armor, and any number to raise to hit.)</description>
+* Any amount of Aim Tokens may be spent to increase the armor penetration on their weapon profiles. (May spend any combination to raise AP, and any number to raise to hit.)</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -7135,7 +7559,7 @@ Troop Units in your Army may travel through Secret Tunnels twice each Round, but
             <profile name="Knock out the Beams!" typeId="60a8-a233-a953-97f1" typeName="Special Requisition" hidden="false" id="6b63-9a24-ac61-6d27">
               <characteristics>
                 <characteristic name="Cost" typeId="fdc2-ccd7-0950-5670">1 IP</characteristic>
-                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Select a Taupe Fortification. Apply a Bombard Token to every Terrain Feature within 4&quot; of the Taupe, and perform a Free Attack with the Tunnel Collapse Profile against every Unit within 4&quot; of the Taupe. The Taupe is Destroyed after these interactions are resolved.</characteristic>
+                <characteristic name="Effects" typeId="8280-2b12-dd95-5313">Select a Taupe Fortification. Apply a Bombard Token to every Terrain Feature within 4&quot; of the Taupe, and perform a Free Attack with the Tunnel Collapse Profile against every Unit within 4&quot; of the Taupe. Models destroyed by this Attack do not leave Wreckage on the Battlefield. The Taupe is Destroyed after these interactions are resolved.</characteristic>
               </characteristics>
             </profile>
             <profile name="Tunnel Collapse" typeId="Weapon" typeName="Weapon" hidden="false" id="deb2-4aa4-bc92-4e35">
@@ -7161,7 +7585,7 @@ Each time a friendly Vehicle Unit targets a Unit with an Attack Action, add a Hu
               <description>When a Tracked Vehicle Unit Activates, it may remove 1 Suppression Token from any Friendly Units within 8”.
 
 
-Tracked Vehicles, and all melee weapons they are equipped with, are treated as having the Charge! Special Rule and always Attack first when they are Engaged with an Enemy Unit.</description>
+Tracked Vehicles, and all Melee Weapons they are equipped with, are treated as having the Charge! Special Rule and always Attack first when they are Engaged with an Enemy Unit.</description>
             </rule>
           </rules>
           <modifiers>
@@ -7195,9 +7619,7 @@ Units in this army with the Tracked keyword may pass through terrain and choose 
             <rule name="Defenders of the North" id="2cfc-9e1a-2309-b6eb" hidden="false">
               <description>Monowheel Chasseurs, CAIM 38 &quot;Danton&quot; Chasseur de Char Walkers, AMR 36 Coccinelle Tankette Squads, and AM40 Lafayette Armored Cars gain an Aim Token after making an Attack Action
 
-
 Troops units gain an Aim Token after performing the Capture Action
-
 
 Units gain an Aim Token after performing the Overwatch Action</description>
             </rule>
@@ -7216,14 +7638,12 @@ Units gain an Aim Token after performing the Overwatch Action</description>
         <selectionEntry type="upgrade" import="true" name="5e Régiment de Tirailleurs Tonkinois" hidden="false" id="efe9-81c5-2847-d55c" sortIndex="7">
           <rules>
             <rule name="Bane of the Bonapartist" id="5ee5-9722-b436-950e" hidden="false">
-              <description>Enemy Units must reroll successful Suppression and Morale Checks.</description>
+              <description>Enemy Units must reroll successful Morale Checks.</description>
             </rule>
             <rule name="Guerilla Warfare" id="757c-8f45-014c-2c74" hidden="false">
               <description>Troop Units in your army gain +1 to the AP on their weapons when targeting a Unit with the Vehicle Keyword. 
 
-
 When a Unit in your army that is receiving Cover targets an enemy unit that is not receiving the benefits of cover with an attack action, the attacking Unit gains an aim token. 
-
 
 When a Troops Unit in your army uses a reaction to make itself ineligible as a target, apply a Concussive token to the Attacking Unit.</description>
             </rule>
@@ -7266,12 +7686,13 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                     </entryLink>
                   </entryLinks>
                   <profiles>
-                    <profile name="Medic" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="5ef6-1fdd-082b-1617">
+                    <profile name="Medic" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="5ef6-1fdd-082b-1617">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+0</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7315,12 +7736,13 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                     <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="4c6f-e6c4-4c5c-cfc1" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Heavy Weapon Team" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="60c2-2688-ee7d-47ce">
+                    <profile name="Heavy Weapon Team" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="60c2-2688-ee7d-47ce">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">5</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">4</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">5</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">4</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+1</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7417,12 +7839,13 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ad89-80e8-451d-b8c4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Flagbearer" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="24f6-7650-2f88-103a">
+            <profile name="Flagbearer" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="24f6-7650-2f88-103a">
               <characteristics>
-                <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">2</characteristic>
+                <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">2</characteristic>
+                <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
               </characteristics>
             </profile>
             <profile name="Flagbearer with Tricolor" typeId="312c-13ed-50aa-27a6" typeName="Attache Composition" hidden="false" id="30bd-bf20-12c6-44e9">
@@ -7466,12 +7889,13 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Égalité Power Suit Gunner" hidden="false" id="c2b6-d877-8a40-9221" defaultAmount="1">
                   <profiles>
-                    <profile name="Égalité Power Suit Gunner" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="a8d7-6ace-908b-a6ef">
+                    <profile name="Égalité Power Suit Gunner" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="a8d7-6ace-908b-a6ef">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">6</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7509,6 +7933,14 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="47bb-693d-8a20-3fa9" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="fa86-9723-0c32-6eab" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Égalité Protector Element" hidden="false" id="8c71-e10b-b2d6-e9d5">
           <constraints>
@@ -7528,20 +7960,16 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Égalité Power Suit Protector" hidden="false" id="bc6c-77ea-7216-d07c" defaultAmount="1">
                   <profiles>
-                    <profile name="Égalité Power Suit Protector" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="20d8-ef37-0950-62c4">
+                    <profile name="Égalité Power Suit Protector" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="20d8-ef37-0950-62c4">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">8&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">6</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">5</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">8&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">9</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">5</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                  <rules>
-                    <rule name="Protector" id="1e08-3fc8-e4c6-c3ce" hidden="false">
-                      <description>When this Unit is selected as the target of an Attack by a Unit within this Model&apos;s front 90 degrees, increase this Model&apos;s Armor value by 3.</description>
-                    </rule>
-                  </rules>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapon Options" id="23ea-9aed-4983-c3aa" hidden="false" defaultSelectionEntryId="dea7-8e91-4710-435e">
                       <selectionEntries>
@@ -7583,9 +8011,6 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                     <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
                     <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
                   </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="Suppressible" hidden="false" id="6cc1-2a11-aa06-ee16" type="selectionEntry" targetId="3799-df76-e0bf-a122"/>
-                  </entryLinks>
                   <infoLinks>
                     <infoLink name="Armored Guardian" id="99bf-3623-4595-553b" hidden="false" type="rule" targetId="97f8-e657-8b6a-e3cc"/>
                   </infoLinks>
@@ -7600,6 +8025,14 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
           <entryLinks>
             <entryLink import="true" name="Distributed Elements" hidden="false" id="8428-1254-f259-2412" type="selectionEntry" targetId="3f9f-cf3c-404c-1b83"/>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Formation (Restricted)" id="8095-8a21-838b-f6ce" hidden="false" type="rule" targetId="13fd-2906-0702-b7c8">
+              <modifiers>
+                <modifier type="append" value="Battlesuit" field="name" arg="X"/>
+                <modifier type="append" value="Battlesuit" field="description" arg="X"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Infantry Commissaire Element" hidden="false" id="cd9f-b703-126e-e802" collective="false">
           <profiles>
@@ -7623,12 +8056,13 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="009b-f69c-775f-3f31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Infantry Commissaire" typeId="d3fb-06f3-cc24-ab32" typeName="Model" hidden="false" id="073e-5c9c-d3b6-b6ef">
+                    <profile name="Infantry Commissaire" typeId="693c-f415-e060-4206" typeName="Troop/Cavalry Model" hidden="false" id="073e-5c9c-d3b6-b6ef">
                       <characteristics>
-                        <characteristic name="Movement Value" typeId="3e68-f430-0d7c-5747">6&quot;</characteristic>
-                        <characteristic name="Evasion Value" typeId="c7f9-7a63-2269-6a82">6</characteristic>
-                        <characteristic name="Armor Value" typeId="af2e-1c49-9a61-0dba">3</characteristic>
-                        <characteristic name="Hit Points" typeId="190f-e5ac-64bb-efa8">4</characteristic>
+                        <characteristic name="Movement Value" typeId="6fed-4bc9-d4e7-3976">6&quot;</characteristic>
+                        <characteristic name="Evasion Value" typeId="2703-8fe7-b372-59df">6</characteristic>
+                        <characteristic name="Armor Value" typeId="fb5c-a278-652c-7566">3</characteristic>
+                        <characteristic name="Hit Points" typeId="9f0f-6776-59bd-fc20">4</characteristic>
+                        <characteristic name="Bravery Bonus" typeId="8380-51e1-15bd-f6c7">+2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7661,7 +8095,7 @@ When a Troops Unit in your army uses a reaction to make itself ineligible as a t
                   </selectionEntryGroups>
                   <rules>
                     <rule name="Inspire Élan" id="89f5-0a26-b905-702a" hidden="false">
-                      <description>This Unit rolls Suppression Checks individually. For each failed Suppression Check, +1 to all Suppression Checks until the end of this Unit&apos;s Activation.</description>
+                      <description>For each Suppression Token applied to this Unit, improve its Bravery Bonus by 1 until that Token is removed.</description>
                     </rule>
                   </rules>
                   <infoLinks>
