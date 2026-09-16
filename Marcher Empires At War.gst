@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Marcher: Empires At War v1.9.7" id="969e-2588-ed56-37c3" authorContact="goldendragontabletopgames@gmail.com" authorName="Golden Dragon Games Team" authorUrl="GoldenDragonGames.Net" battleScribeVersion="2.03" hidden="false" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Marcher: Empires At War v1.9.7.1" id="969e-2588-ed56-37c3" authorContact="goldendragontabletopgames@gmail.com" authorName="Golden Dragon Games Team" authorUrl="GoldenDragonGames.Net" battleScribeVersion="2.03" hidden="false" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Check out our stuff through http://linktr.ee/goldendragongames</readme>
   <categoryEntries>
     <categoryEntry name="CORE Armor" id="7950-f6f1-38c2-f2dd" hidden="false"/>
