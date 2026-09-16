@@ -1,76 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="54dd-0c6d-c00e-e51f" name="Shared Weapons and Weapon Special Rules" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="66fd-b75b-f882-3404" collective="true">
-      <infoLinks>
-        <infoLink name="Bayonet" id="a992-b9bd-850f-7da4" hidden="false" type="profile" targetId="3137-3620-f900-f5b0"/>
-        <infoLink name="Charge!" id="ebc7-2871-7f0f-376f" hidden="false" type="rule" targetId="6a90-de57-2154-3db3"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2858-2c85-b0d7-2143-min-max" includeChildSelections="false"/>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b721-1d3a-12c9-288d" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="1"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Entrenching Tool" hidden="false" id="109e-cea5-0e25-727b" collective="true">
-      <infoLinks>
-        <infoLink name="Entrenching Tool" id="191c-8f4c-0552-4711" hidden="false" targetId="0b5d-250c-1a7d-1270" type="profile"/>
-        <infoLink name="One-Handed" id="b44d-2018-1a7f-b3bc" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
-      </infoLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="2"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Steel Fists" hidden="false" id="7331-ef5d-7185-bbb8" collective="true">
-      <infoLinks>
-        <infoLink name="Steel Fists" id="f173-e04e-190d-1dd9" hidden="false" targetId="ca5f-7842-d773-86ec" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="2"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Combat Shield" hidden="false" id="8766-febd-3b85-6fe9" collective="true">
-      <infoLinks>
-        <infoLink name="Combat Shield" id="71d9-a219-c2ae-95e8" hidden="false" type="profile" targetId="32f2-eb79-77ff-f463"/>
-        <infoLink name="One-Handed" id="b7d4-a351-5a1e-ede6" hidden="false" type="rule" targetId="2082-d275-920b-519d"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="744f-f826-9cb9-d477" type="selectionEntry" targetId="01e5-5a61-0629-9f24"/>
-      </entryLinks>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="1"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Reinforced" hidden="false" id="01e5-5a61-0629-9f24">
-      <infoLinks>
-        <infoLink name="Reinforced" id="fe8c-4c8e-b291-e5ef" hidden="false" type="rule" targetId="8980-2d6d-00bc-ee76"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bad2-00ba-6ece-5e49-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="3"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-  </sharedSelectionEntries>
+<catalogue name="Shared Weapons and Weapon Special Rules" id="54dd-0c6d-c00e-e51f" battleScribeVersion="2.03" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="1" library="true" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedProfiles>
+    <profile name="Anti-Tank Grenade" id="c0f6-4740-65bb-2819" hidden="false" typeId="Weapon" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">4&quot;</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">8</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">6</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Grenade</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bayonet" id="3137-3620-f900-f5b0" hidden="false" typeId="Weapon" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Kinetic, Bladed</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Entrenching Tool" id="0b5d-250c-1a7d-1270" hidden="false" typeId="Weapon" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">One-Handed</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Steel Fists" id="ca5f-7842-d773-86ec" hidden="false" typeId="Weapon" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Combat Shield" id="32f2-eb79-77ff-f463" hidden="false" typeId="Weapon" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
+        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
+        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
+        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reinforced, One-Handed</characteristic>
+        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Deploy Anchors" id="94fc-766e-deeb-4c71" hidden="false" typeId="029d-f6a3-b018-ca50" typeName="Action">
+      <characteristics>
+        <characteristic name="Effect" typeId="9f82-6862-14ed-dd50">This Unit may immediately perform a 45 degree Pivot. This Unit may not perform any additional Movement Actions this Round. This Unit is allowed to perform Attacks with Locking Weapons until the end of this Round.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Charge Capacitors" id="70ff-78fc-6ff0-113a" hidden="false" typeId="029d-f6a3-b018-ca50" typeName="Action">
+      <characteristics>
+        <characteristic name="Effect" typeId="9f82-6862-14ed-dd50">Roll three 7+ Charge Checks; for each success, gain a Charged Token
+</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
   <sharedRules>
     <rule name="Ablation Beam" id="a397-8716-ab3d-2773" hidden="false">
       <description>When performing an Attack with Weapons with this Special Rule, each instance of a Weapon forms a separate Attack pool. For each successful Hit Check made by this Weapon, score an additional Hit and increase this Weapon&apos;s AP Profile by 1 for the rest of this Attack.</description>
@@ -219,10 +211,10 @@ If a Unit has Suppression Tokens applied to it, the following rules apply:
       <description>For each Bombard Token a Terrain Feature has, its Cover Level is reduced by one. If a Terrain Feature&apos;s Cover Level is lowered to 0, it is destroyed and removed from the Battlefield.</description>
     </rule>
     <rule name="Spray Token" id="f34c-af2a-18ad-414f" hidden="false">
-      <description>All Attacks this Unit performs are subject to one additional level of Obscuration.</description>
+      <description>All Attacks this Unit performs are subject to one additional level of Obscuration. Shed this Token at the end of this Unit&apos;s Activation.</description>
     </rule>
     <rule name="Charged Coils" id="9b0a-d697-e429-2a1b" hidden="false">
-      <description>Units Equipped with this Weapon gain Charge Coils as a Standard Action. To perform a Charge Coils Action, roll three 7+ Charge Checks; for each success, the next time an Attack Action is performed with this Weapon, apply an additional Slag Token.</description>
+      <description>Units Equipped with this Weapon gain Charge Capacitors as a Standard Action. When this Unit performs an Attack with this Weapon, it may spend Charged Tokens. For each Token spent in this way it may apply one additional Slag Token.</description>
     </rule>
     <rule name="Slag Token" id="babf-a0e1-14f4-5e5f" hidden="false">
       <description>This Unit&apos;s Armor Value is reduced by 1. Shed this Token on this Unit&apos;s Activation.</description>
@@ -236,57 +228,86 @@ If a Unit has Suppression Tokens applied to it, the following rules apply:
     <rule name="Blast" id="c55c-3ee4-a9f5-7d51" hidden="false">
       <description>When making an Attack with this Weapon, place a Blast Token within range, then resolve an Attack with this profile against all Units with X&quot; of that Blast Token. When all eligible Attacks have been resolved, remove the Blast Token.</description>
     </rule>
+    <rule name="Degrading X" id="ec60-213d-dfad-2a02" hidden="false">
+      <description>Each time you resolve an Attack Action with this weapon, reduce one of its Non-Range Profiles by X for the remainder of the game.</description>
+      <alias>Degrading</alias>
+    </rule>
+    <rule name="Locking" id="3e6b-1e39-8925-3b7a" hidden="false">
+      <description>In order to perform an Attack Action with this Weapon, this Unit must have also performed the Deploy Anchors Standard Action this Round.</description>
+    </rule>
+    <rule name="Amplified Beam" id="268b-ab91-da1a-6cb1" hidden="false">
+      <description>Units Equipped with this Weapon gain Charge Capacitors as a Standard Action. When this Unit performs an Attack with this Weapon, it may spend Charged Tokens. For each Token spent in this way this Weapon automatically scores an additional Hit.</description>
+    </rule>
   </sharedRules>
-  <sharedProfiles>
-    <profile name="Anti-Tank Grenade" typeId="Weapon" typeName="Weapon" hidden="false" id="c0f6-4740-65bb-2819">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">4&quot;</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">8</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">6</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Critical Shot</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Grenade</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Bayonet" typeId="Weapon" typeName="Weapon" hidden="false" id="3137-3620-f900-f5b0">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Charge!</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Kinetic, Bladed</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Entrenching Tool" typeId="Weapon" typeName="Weapon" hidden="false" id="0b5d-250c-1a7d-1270">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">One-Handed</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Bladed, Kinetic</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Steel Fists" typeId="Weapon" typeName="Weapon" hidden="false" id="ca5f-7842-d773-86ec">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">2</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">1</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1"/>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Combat Shield" typeId="Weapon" typeName="Weapon" hidden="false" id="32f2-eb79-77ff-f463">
-      <characteristics>
-        <characteristic name="Range" typeId="23fd-52ca-c658-ab9b">E</characteristic>
-        <characteristic name="Hits" typeId="60de-dad6-12a2-68b4">2</characteristic>
-        <characteristic name="Armor Penetration" typeId="a8b4-f834-f9e0-2df8">1</characteristic>
-        <characteristic name="Damage" typeId="92d5-d0e9-5e47-86ca">2</characteristic>
-        <characteristic name="Special Rules" typeId="d007-3244-18f1-86d1">Reinforced, One-Handed</characteristic>
-        <characteristic name="Keywords" typeId="bd5a-5880-4285-ad9f">Melee, Blunt, Kinetic</characteristic>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
+  <sharedSelectionEntries>
+    <selectionEntry name="Bayonet" id="66fd-b75b-f882-3404" collective="true" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="2858-2c85-b0d7-2143-min-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+        <constraint id="b721-1d3a-12c9-288d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Bayonet" id="a992-b9bd-850f-7da4" hidden="false" targetId="3137-3620-f900-f5b0" type="profile"/>
+        <infoLink name="Charge!" id="ebc7-2871-7f0f-376f" hidden="false" targetId="6a90-de57-2154-3db3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Entrenching Tool" id="109e-cea5-0e25-727b" collective="true" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Entrenching Tool" id="191c-8f4c-0552-4711" hidden="false" targetId="0b5d-250c-1a7d-1270" type="profile"/>
+        <infoLink name="One-Handed" id="b44d-2018-1a7f-b3bc" hidden="false" targetId="2082-d275-920b-519d" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Steel Fists" id="7331-ef5d-7185-bbb8" collective="true" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="2"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Steel Fists" id="f173-e04e-190d-1dd9" hidden="false" targetId="ca5f-7842-d773-86ec" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Combat Shield" id="8766-febd-3b85-6fe9" collective="true" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="1"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="744f-f826-9cb9-d477" hidden="false" import="true" targetId="01e5-5a61-0629-9f24" type="selectionEntry"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Combat Shield" id="71d9-a219-c2ae-95e8" hidden="false" targetId="32f2-eb79-77ff-f463" type="profile"/>
+        <infoLink name="One-Handed" id="b7d4-a351-5a1e-ede6" hidden="false" targetId="2082-d275-920b-519d" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Reinforced" id="01e5-5a61-0629-9f24" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="bad2-00ba-6ece-5e49-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="bad2-00ba-6ece-5e49-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="3"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Reinforced" id="fe8c-4c8e-b291-e5ef" hidden="false" targetId="8980-2d6d-00bc-ee76" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
 </catalogue>

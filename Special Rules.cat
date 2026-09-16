@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="1270-948e-6bd6-7ecc" name="Special Rules" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Special Rules" id="1270-948e-6bd6-7ecc" battleScribeVersion="2.03" gameSystemId="969e-2588-ed56-37c3" gameSystemRevision="1" library="true" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Aerial Deployment" id="7659-e620-db7c-3cfe" hidden="false">
       <description>Instead of deploying this Unit at the start of the game, you may declare that this model is in En Route. During any Setup Phase after the first Round you may deploy this unit anywhere on the battlefield no closer than 8&quot; from an Enemy Unit.</description>
@@ -159,8 +159,7 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
       <description>This Unit does not presently have an official model from Golden Dragon Games</description>
     </rule>
     <rule name="Raise the Banner" id="8126-75b0-4721-8842" hidden="false">
-      <description>All Units within 12&quot; of this Flag may use this Model&apos;s Bravery Bonus instead of their own.
-</description>
+      <description>All Units within 12&quot; of this Flag may use this Model&apos;s Bravery Bonus instead of their own.</description>
     </rule>
     <rule name="Rapid Deployment" id="bed7-c4f3-15ed-2888" hidden="false">
       <description>At the start of the first Action Phase, this Unit may immediately take a Free Move action. They may not end this movement within Engagement Range of an Enemy Unit.</description>
@@ -186,9 +185,6 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     </rule>
     <rule name="Supply Gathering" id="3f5f-2e30-c979-3f80" hidden="false">
       <description>As a Standard Action, gain a Supply Point (SP)</description>
-    </rule>
-    <rule name="Suppressible" id="c339-f785-b459-a2a0" hidden="false">
-      <description>This Unit may gain and be affected by Suppression Tokens.</description>
     </rule>
     <rule name="Tank Destroyer" id="338c-b939-0d55-cde3" hidden="false">
       <description>This Unit may take the Overwatch Action as a Standard Action.</description>
@@ -285,15 +281,15 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
     <rule name="Terror X" id="0ce4-7d3b-2b96-0e5a" hidden="false">
       <description>Troop Units that target this Unit must pass a X+ Terror Check modified by their Bravery Bonus; on failure, they must immediately perform a Fallback Reaction at a cost of 1 Action. The Unit must move the maximum distance rolled for the Fallback.</description>
     </rule>
+    <rule name="Everybody Out!" id="e2a3-fef0-dc07-add3" hidden="false">
+      <description>When this Unit is Deployed, all Models Embarked within it must immediately Disembark. This does not cost them an Action.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Aerial Deployment" hidden="false" id="4a83-5712-b9b5-9366">
-      <infoLinks>
-        <infoLink name="Aerial Deployment" id="Aerial Deployment" hidden="false" type="rule" targetId="7659-e620-db7c-3cfe"/>
-      </infoLinks>
+    <selectionEntry name="Aerial Deployment" id="4a83-5712-b9b5-9366" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -301,14 +297,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="All-Terrain-Vehicle" hidden="false" id="502b-c542-355b-8804">
       <infoLinks>
-        <infoLink name="All-Terrain-Vehicle" id="All-Terrain-Vehicle" hidden="false" type="rule" targetId="972a-0b3a-3523-56c4"/>
+        <infoLink name="Aerial Deployment" id="Aerial Deployment" hidden="false" targetId="7659-e620-db7c-3cfe" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="All-Terrain-Vehicle" id="502b-c542-355b-8804" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="3"/>
@@ -316,14 +312,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Armored Recovery Vehicle" hidden="false" id="49fb-dd70-4039-feaf">
       <infoLinks>
-        <infoLink name="Armored Recovery Vehicle" id="Armored Recovery Vehicle" hidden="false" type="rule" targetId="678f-05f0-b381-d9ce"/>
+        <infoLink name="All-Terrain-Vehicle" id="All-Terrain-Vehicle" hidden="false" targetId="972a-0b3a-3523-56c4" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Armored Recovery Vehicle" id="49fb-dd70-4039-feaf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -331,23 +327,23 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Automated Kill-Zone" hidden="false" id="9d0a-67cc-94b1-3ef6">
       <infoLinks>
-        <infoLink name="Automated Kill-Zone" id="Automated Kill-Zone" hidden="false" type="rule" targetId="7f86-a20d-20cf-f425"/>
+        <infoLink name="Armored Recovery Vehicle" id="Armored Recovery Vehicle" hidden="false" targetId="678f-05f0-b381-d9ce" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Automated Kill-Zone" id="9d0a-67cc-94b1-3ef6" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bailout" hidden="false" id="2cd2-087b-e9a1-6072">
       <infoLinks>
-        <infoLink name="Bailout" id="Bailout" hidden="false" type="rule" targetId="e024-3b5a-3d53-c103"/>
+        <infoLink name="Automated Kill-Zone" id="Automated Kill-Zone" hidden="false" targetId="7f86-a20d-20cf-f425" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bailout" id="2cd2-087b-e9a1-6072" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -355,14 +351,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Battlefield Preparation" hidden="false" id="e29a-356e-d59f-6017">
       <infoLinks>
-        <infoLink name="Battlefield Preparation" id="Battlefield Preparation" hidden="false" type="rule" targetId="df67-26f7-b945-7b74"/>
+        <infoLink name="Bailout" id="Bailout" hidden="false" targetId="e024-3b5a-3d53-c103" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Battlefield Preparation" id="e29a-356e-d59f-6017" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="3"/>
@@ -370,14 +366,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Battlefield Scanners" hidden="false" id="0fd9-0c79-4cce-8907">
       <infoLinks>
-        <infoLink name="Battlefield Scanners" id="Battlefield Scanners" hidden="false" type="rule" targetId="55ab-d297-8493-eecc"/>
+        <infoLink name="Battlefield Preparation" id="Battlefield Preparation" hidden="false" targetId="df67-26f7-b945-7b74" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Battlefield Scanners" id="0fd9-0c79-4cce-8907" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -385,14 +381,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Big Game Hunter" hidden="false" id="4f71-b8b7-07c0-7d5e">
       <infoLinks>
-        <infoLink name="Big Game Hunter" id="Big Game Hunter" hidden="false" type="rule" targetId="7061-202c-dbbf-9c6e"/>
+        <infoLink name="Battlefield Scanners" id="Battlefield Scanners" hidden="false" targetId="55ab-d297-8493-eecc" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Big Game Hunter" id="4f71-b8b7-07c0-7d5e" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -400,18 +396,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bulwark 1" hidden="false" id="b9b0-158c-a4b1-de50">
       <infoLinks>
-        <infoLink name="Bulwark X" id="Bulwark" hidden="false" type="rule" targetId="aec5-cc4d-2950-d314">
-          <modifiers>
-            <modifier type="replace" value="1" field="name" arg="X"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Big Game Hunter" id="Big Game Hunter" hidden="false" targetId="7061-202c-dbbf-9c6e" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bulwark 1" id="b9b0-158c-a4b1-de50" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -419,14 +411,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Burrowing" hidden="false" id="fa56-afdd-817a-77fe">
       <infoLinks>
-        <infoLink name="Burrowing" id="Burrowing" hidden="false" type="rule" targetId="7566-ca13-0639-188c"/>
+        <infoLink name="Bulwark X" id="Bulwark" hidden="false" targetId="aec5-cc4d-2950-d314" type="rule">
+          <modifiers>
+            <modifier arg="X" field="name" type="replace" value="1"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Burrowing" id="fa56-afdd-817a-77fe" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -434,32 +430,32 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Catastrophic Detonation" hidden="false" id="6361-ef6f-71fb-f939">
       <infoLinks>
-        <infoLink name="Catastrophic Detonation" id="Catastrophic Detonation" hidden="false" type="rule" targetId="1e80-eb25-7926-0850"/>
+        <infoLink name="Burrowing" id="Burrowing" hidden="false" targetId="7566-ca13-0639-188c" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Catastrophic Detonation" id="6361-ef6f-71fb-f939" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Coaxial Mount" hidden="false" id="7738-852a-1046-280c">
       <infoLinks>
-        <infoLink name="Coaxial Mount" id="Coaxial Mount" hidden="false" type="rule" targetId="427c-1744-659c-f265"/>
+        <infoLink name="Catastrophic Detonation" id="Catastrophic Detonation" hidden="false" targetId="1e80-eb25-7926-0850" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Coaxial Mount" id="7738-852a-1046-280c" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Command Car" hidden="false" id="2d90-b66d-145e-84f2">
       <infoLinks>
-        <infoLink name="Command Car" id="Command Car" hidden="false" type="rule" targetId="b3a8-6d2c-8217-042c"/>
+        <infoLink name="Coaxial Mount" id="Coaxial Mount" hidden="false" targetId="427c-1744-659c-f265" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Command Car" id="2d90-b66d-145e-84f2" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="20"/>
@@ -467,82 +463,82 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Formation (Specified)" hidden="false" id="a200-b89a-7c03-48eb">
       <infoLinks>
-        <infoLink name="Formation (Specified)" id="Command Squad" hidden="false" type="rule" targetId="5ffd-5449-427f-b767"/>
+        <infoLink name="Command Car" id="Command Car" hidden="false" targetId="b3a8-6d2c-8217-042c" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Formation (Specified)" id="a200-b89a-7c03-48eb" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Cook Off" hidden="false" id="5cc5-c3b7-4853-c117">
       <infoLinks>
-        <infoLink name="Cook Off" id="Cook Off" hidden="false" type="rule" targetId="6b8c-f368-911d-de1c"/>
+        <infoLink name="Formation (Specified)" id="Command Squad" hidden="false" targetId="5ffd-5449-427f-b767" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Cook Off" id="5cc5-c3b7-4853-c117" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Crushing Footfalls" hidden="false" id="e06d-d3a7-530e-7174">
       <infoLinks>
-        <infoLink name="Crushing Footfalls" id="Crushing Footfalls" hidden="false" type="rule" targetId="e746-74b4-9340-0b9c"/>
+        <infoLink name="Cook Off" id="Cook Off" hidden="false" targetId="6b8c-f368-911d-de1c" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Crushing Footfalls" id="e06d-d3a7-530e-7174" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Cumbersome" hidden="false" id="d9ac-f2e2-048b-ab48">
       <infoLinks>
-        <infoLink name="Cumbersome" id="Cumbersome" hidden="false" type="rule" targetId="a105-2c5d-bb1d-e679"/>
+        <infoLink name="Crushing Footfalls" id="Crushing Footfalls" hidden="false" targetId="e746-74b4-9340-0b9c" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Cumbersome" id="d9ac-f2e2-048b-ab48" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bailout (Dangerous)" hidden="false" id="5a82-466c-c50e-1653">
       <infoLinks>
-        <infoLink name="Bailout (Dangerous)" id="Bailout (Dangerous)" hidden="false" type="rule" targetId="6100-8e4c-f566-2b4a"/>
+        <infoLink name="Cumbersome" id="Cumbersome" hidden="false" targetId="a105-2c5d-bb1d-e679" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bailout (Dangerous)" id="5a82-466c-c50e-1653" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Designated Leader" hidden="false" id="1850-d6c7-bb96-3786">
       <infoLinks>
-        <infoLink name="Designated Leader" id="Designated Leader" hidden="false" type="rule" targetId="1f95-fa4a-51e0-80f8"/>
+        <infoLink name="Bailout (Dangerous)" id="Bailout (Dangerous)" hidden="false" targetId="6100-8e4c-f566-2b4a" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Designated Leader" id="1850-d6c7-bb96-3786" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dishonorable Conduct" hidden="false" id="3d98-c0b1-084c-b9a1">
       <infoLinks>
-        <infoLink name="Dishonorable Conduct" id="Dishonorable Conduct" hidden="false" type="rule" targetId="b8f8-a0c3-8f84-ba71"/>
+        <infoLink name="Designated Leader" id="Designated Leader" hidden="false" targetId="1f95-fa4a-51e0-80f8" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Dishonorable Conduct" id="3d98-c0b1-084c-b9a1" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Embarkable" hidden="false" id="8325-9b73-9773-1dda">
       <infoLinks>
-        <infoLink name="Embarkable" id="Embarkable" hidden="false" type="rule" targetId="1437-6e22-3bef-ad8b"/>
+        <infoLink name="Dishonorable Conduct" id="Dishonorable Conduct" hidden="false" targetId="b8f8-a0c3-8f84-ba71" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Embarkable" id="8325-9b73-9773-1dda" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -550,32 +546,39 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Flexible Hero" hidden="false" id="1872-24ec-d0a5-52ee">
       <infoLinks>
-        <infoLink name="Flexible Hero" id="Flexible Hero" hidden="false" type="rule" targetId="efe9-c813-2eee-25dc"/>
+        <infoLink name="Embarkable" id="Embarkable" hidden="false" targetId="1437-6e22-3bef-ad8b" type="rule"/>
       </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="model" childName="model" field="selections" includeChildSelections="true" scope="parent" shared="true" type="greaterThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Flexible Hero" id="1872-24ec-d0a5-52ee" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Forward Observer" hidden="false" id="f81a-d50a-6191-87ad">
       <infoLinks>
-        <infoLink name="Forward Observer" id="Forward Observer" hidden="false" type="rule" targetId="06cc-f6e7-91a7-93c8"/>
+        <infoLink name="Flexible Hero" id="Flexible Hero" hidden="false" targetId="efe9-c813-2eee-25dc" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Forward Observer" id="f81a-d50a-6191-87ad" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Forward Positions" hidden="false" id="a3af-8a65-8d3d-8c7e">
       <infoLinks>
-        <infoLink name="Forward Positions" id="Forward Positions" hidden="false" type="rule" targetId="6834-a3ab-58a5-6849"/>
+        <infoLink name="Forward Observer" id="Forward Observer" hidden="false" targetId="06cc-f6e7-91a7-93c8" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Forward Positions" id="a3af-8a65-8d3d-8c7e" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="12"/>
@@ -583,14 +586,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Gun Shield" hidden="false" id="6ed0-897e-1e51-686c">
       <infoLinks>
-        <infoLink name="Gun Shield" id="Gun Shield" hidden="false" type="rule" targetId="93e5-0065-1a9d-9a1b"/>
+        <infoLink name="Forward Positions" id="Forward Positions" hidden="false" targetId="6834-a3ab-58a5-6849" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Gun Shield" id="6ed0-897e-1e51-686c" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -598,65 +601,41 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Heavy Carriage" hidden="false" id="976a-6907-bd89-6823">
       <infoLinks>
-        <infoLink name="Heavy Carriage" id="Heavy Carriage" hidden="false" type="rule" targetId="ffeb-7559-d07e-4e60"/>
+        <infoLink name="Gun Shield" id="Gun Shield" hidden="false" targetId="93e5-0065-1a9d-9a1b" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Heavy Carriage" id="976a-6907-bd89-6823" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Hippocratic Oath" hidden="false" id="2d78-0e18-8831-9b06">
       <infoLinks>
-        <infoLink name="Hippocratic Oath" id="Hippocratic Oath" hidden="false" type="rule" targetId="88b2-7240-2107-9262"/>
+        <infoLink name="Heavy Carriage" id="Heavy Carriage" hidden="false" targetId="ffeb-7559-d07e-4e60" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Hippocratic Oath" id="2d78-0e18-8831-9b06" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Hitch" hidden="false" id="67a0-fa8f-0603-889e">
       <infoLinks>
-        <infoLink name="Hitch" id="Hitch" hidden="false" type="rule" targetId="fcb1-fb43-02f5-c52a"/>
+        <infoLink name="Hippocratic Oath" id="Hippocratic Oath" hidden="false" targetId="88b2-7240-2107-9262" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Hitch" id="67a0-fa8f-0603-889e" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Hunter" hidden="false" id="d2ec-e98c-8d5e-61f0">
       <infoLinks>
-        <infoLink name="Hunter" id="Hunter" hidden="false" type="rule" targetId="84cf-7abc-e526-e12f"/>
+        <infoLink name="Hitch" id="Hitch" hidden="false" targetId="fcb1-fb43-02f5-c52a" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Independent Hero" hidden="false" id="b4c8-f417-9a48-5733">
-      <infoLinks>
-        <infoLink name="Independent Hero" id="Independent Hero" hidden="false" type="rule" targetId="f6c8-1880-1355-e3a2"/>
-      </infoLinks>
+    <selectionEntry name="Hunter" id="d2ec-e98c-8d5e-61f0" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Intel Gathering" hidden="false" id="b90c-367c-cace-eac1">
-      <infoLinks>
-        <infoLink name="Intel Gathering" id="Intel Gathering" hidden="false" type="rule" targetId="05b0-6a7a-880f-304c"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -664,83 +643,23 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Intelligence" hidden="false" id="65f3-25c2-05a8-cf41">
       <infoLinks>
-        <infoLink name="Intelligence" id="Intelligence" hidden="false" type="rule" targetId="814e-ef53-3526-90f8"/>
+        <infoLink name="Hunter" id="Hunter" hidden="false" targetId="84cf-7abc-e526-e12f" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Independent Hero" id="b4c8-f417-9a48-5733" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light on their Feet" hidden="false" id="30ee-72db-2e7c-ce0a">
       <infoLinks>
-        <infoLink name="Light on their Feet" id="Light on their Feet" hidden="false" type="rule" targetId="14e9-14bf-78dd-c693"/>
+        <infoLink name="Independent Hero" id="Independent Hero" hidden="false" targetId="f6c8-1880-1355-e3a2" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Limited Elevation" hidden="false" id="34a5-b1e6-efa8-bbfb">
-      <infoLinks>
-        <infoLink name="Limited Elevation" id="Limited Elevation" hidden="false" type="rule" targetId="d90a-8467-4874-4efd"/>
-      </infoLinks>
+    <selectionEntry name="Intel Gathering" id="b90c-367c-cace-eac1" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Logistics" hidden="false" id="45b3-057e-82e3-152b">
-      <infoLinks>
-        <infoLink name="Logistics" id="Logistics" hidden="false" type="rule" targetId="af13-fb89-f837-db7e"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Lookout" hidden="false" id="ae79-249f-aed4-eeea">
-      <infoLinks>
-        <infoLink name="Lookout" id="Lookout" hidden="false" type="rule" targetId="8036-018e-4f5b-1296"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="10"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Low Profile" hidden="false" id="6f3e-8837-6518-e31e">
-      <infoLinks>
-        <infoLink name="Low Profile" id="Low Profile" hidden="false" type="rule" targetId="25bb-2209-81ba-ee30"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -748,28 +667,107 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mounted Attache" hidden="false" id="b69b-5572-3654-508a">
       <infoLinks>
-        <infoLink name="Mounted Attache" id="Mounted Attache" hidden="false" type="rule" targetId="0172-64b2-5794-a915"/>
+        <infoLink name="Intel Gathering" id="Intel Gathering" hidden="false" targetId="05b0-6a7a-880f-304c" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Intelligence" id="65f3-25c2-05a8-cf41" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 4" hidden="false" id="a898-5898-e382-9e23">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
       <infoLinks>
-        <infoLink name="Officer X" id="2360-f0d4-5ea3-ef98" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
-          <modifiers>
-            <modifier type="replace" value="4" field="name" arg="X"/>
-            <modifier type="replace" value="4" field="description" arg="X"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Intelligence" id="Intelligence" hidden="false" targetId="814e-ef53-3526-90f8" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Light on their Feet" id="30ee-72db-2e7c-ce0a" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Light on their Feet" id="Light on their Feet" hidden="false" targetId="14e9-14bf-78dd-c693" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Limited Elevation" id="34a5-b1e6-efa8-bbfb" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Limited Elevation" id="Limited Elevation" hidden="false" targetId="d90a-8467-4874-4efd" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Logistics" id="45b3-057e-82e3-152b" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Logistics" id="Logistics" hidden="false" targetId="af13-fb89-f837-db7e" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Lookout" id="ae79-249f-aed4-eeea" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="10"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Lookout" id="Lookout" hidden="false" targetId="8036-018e-4f5b-1296" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Low Profile" id="6f3e-8837-6518-e31e" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Low Profile" id="Low Profile" hidden="false" targetId="25bb-2209-81ba-ee30" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Mounted Attache" id="b69b-5572-3654-508a" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Mounted Attache" id="Mounted Attache" hidden="false" targetId="0172-64b2-5794-a915" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Officer 4" id="a898-5898-e382-9e23" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="75"/>
@@ -777,14 +775,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="On Assignment" hidden="false" id="1028-1780-6646-aacf">
       <infoLinks>
-        <infoLink name="On Assignment" id="On Assignment" hidden="false" type="rule" targetId="0448-1717-5e42-e0e0"/>
+        <infoLink name="Officer X" id="2360-f0d4-5ea3-ef98" hidden="false" targetId="6de5-545b-2ac4-744e" type="rule">
+          <modifiers>
+            <modifier arg="X" field="name" type="replace" value="4"/>
+            <modifier arg="X" field="description" type="replace" value="4"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="On Assignment" id="1028-1780-6646-aacf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -792,28 +795,28 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Open Topped 1" hidden="false" id="e13c-3734-a7a3-be4a">
       <infoLinks>
-        <infoLink name="Open Topped X" id="Open Topped " hidden="false" type="rule" targetId="7608-aac0-48a4-2e10">
+        <infoLink name="On Assignment" id="On Assignment" hidden="false" targetId="0448-1717-5e42-e0e0" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Open Topped 1" id="e13c-3734-a7a3-be4a" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Open Topped X" id="Open Topped " hidden="false" targetId="7608-aac0-48a4-2e10" type="rule">
           <modifiers>
-            <modifier type="replace" value="1" field="name" arg="X"/>
-            <modifier type="replace" value="1" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="1"/>
+            <modifier arg="X" field="description" type="replace" value="1"/>
           </modifiers>
         </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Personal Shield Generator" hidden="false" id="09b9-0f8f-b6e7-9daf">
-      <infoLinks>
-        <infoLink name="Personal Shield Generator" id="Personal Shield Generator" hidden="false" type="rule" targetId="e8c1-89c2-d8a1-75c2"/>
-      </infoLinks>
+    <selectionEntry name="Personal Shield Generator" id="09b9-0f8f-b6e7-9daf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -821,14 +824,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Protector" hidden="false" id="7995-3fda-2edc-5570">
       <infoLinks>
-        <infoLink name="Protector" id="Protector" hidden="false" type="rule" targetId="ae91-3aa7-cd14-cd8c"/>
+        <infoLink name="Personal Shield Generator" id="Personal Shield Generator" hidden="false" targetId="e8c1-89c2-d8a1-75c2" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Protector" id="7995-3fda-2edc-5570" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -836,47 +839,23 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Prototype" hidden="false" id="665d-709e-b6a3-0168">
       <infoLinks>
-        <infoLink name="Prototype" id="Prototype" hidden="false" type="rule" targetId="4612-4b7b-8ffe-ed3c"/>
+        <infoLink name="Protector" id="Protector" hidden="false" targetId="ae91-3aa7-cd14-cd8c" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Prototype" id="665d-709e-b6a3-0168" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rapid Deployment" hidden="false" id="fc04-d423-d161-6603">
       <infoLinks>
-        <infoLink name="Rapid Deployment" id="Rapid Deployment" hidden="false" type="rule" targetId="bed7-c4f3-15ed-2888"/>
+        <infoLink name="Prototype" id="Prototype" hidden="false" targetId="4612-4b7b-8ffe-ed3c" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rapid Fortification" hidden="false" id="8178-d7a2-e241-4990">
-      <infoLinks>
-        <infoLink name="Rapid Fortification" id="Rapid Fortification" hidden="false" type="rule" targetId="1306-6680-4b8c-9636"/>
-      </infoLinks>
+    <selectionEntry name="Rapid Deployment" id="fc04-d423-d161-6603" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rapid Reconnaissance" hidden="false" id="7a8c-929c-26ae-3860">
-      <infoLinks>
-        <infoLink name="Rapid Reconnaissance" id="Rapid Reconnaissance" hidden="false" type="rule" targetId="8a4a-3ae1-c2de-6436"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -884,32 +863,56 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rare Materiel X" hidden="false" id="74d0-0f15-1f3b-2484">
       <infoLinks>
-        <infoLink name="Rare Materiel X" id="Rare Materiel" hidden="false" type="rule" targetId="e1ea-7376-65cf-20b1"/>
+        <infoLink name="Rapid Deployment" id="Rapid Deployment" hidden="false" targetId="bed7-c4f3-15ed-2888" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Rapid Fortification" id="8178-d7a2-e241-4990" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rupture" hidden="false" id="aa08-f579-df5f-39e8">
       <infoLinks>
-        <infoLink name="Rupture" id="Rupture" hidden="false" type="rule" targetId="a49f-3cb5-cb1f-7b2f"/>
+        <infoLink name="Rapid Fortification" id="Rapid Fortification" hidden="false" targetId="1306-6680-4b8c-9636" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Rapid Reconnaissance" id="7a8c-929c-26ae-3860" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bailout (Safe)" hidden="false" id="e9de-35c8-4bd3-82e6">
+      <costs>
+        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
       <infoLinks>
-        <infoLink name="Bailout (Safe)" id="Bailout (Safe)" hidden="false" type="rule" targetId="8e16-6a0a-60b0-dedb"/>
+        <infoLink name="Rapid Reconnaissance" id="Rapid Reconnaissance" hidden="false" targetId="8a4a-3ae1-c2de-6436" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Rare Materiel X" id="74d0-0f15-1f3b-2484" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Rare Materiel X" id="Rare Materiel" hidden="false" targetId="e1ea-7376-65cf-20b1" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Rupture" id="aa08-f579-df5f-39e8" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Rupture" id="Rupture" hidden="false" targetId="a49f-3cb5-cb1f-7b2f" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bailout (Safe)" id="e9de-35c8-4bd3-82e6" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -917,23 +920,23 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Slippery" hidden="false" id="da8a-810a-5b7c-9e24">
       <infoLinks>
-        <infoLink name="Slippery" id="Slippery" hidden="false" type="rule" targetId="e1f9-41ef-ff64-d030"/>
+        <infoLink name="Bailout (Safe)" id="Bailout (Safe)" hidden="false" targetId="8e16-6a0a-60b0-dedb" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Slippery" id="da8a-810a-5b7c-9e24" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Supply Gathering" hidden="false" id="d5d8-7605-d440-d507">
       <infoLinks>
-        <infoLink name="Supply Gathering" id="Supply Gathering" hidden="false" type="rule" targetId="3f5f-2e30-c979-3f80"/>
+        <infoLink name="Slippery" id="Slippery" hidden="false" targetId="e1f9-41ef-ff64-d030" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Supply Gathering" id="d5d8-7605-d440-d507" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -941,14 +944,29 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Suppressible" hidden="false" id="3799-df76-e0bf-a122">
       <infoLinks>
-        <infoLink name="Suppressible" id="Suppressible" hidden="false" type="rule" targetId="c339-f785-b459-a2a0"/>
+        <infoLink name="Supply Gathering" id="Supply Gathering" hidden="false" targetId="3f5f-2e30-c979-3f80" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Tank Destroyer" id="a8ba-5c26-f8dd-99cf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="Munitions" typeId="Points" value="5"/>
+        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
+        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
+        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Tank Destroyer" id="Tank Destroyer" hidden="false" targetId="338c-b939-0d55-cde3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Thin Armor" id="1cfb-f20e-94b6-d1bc" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="-10"/>
@@ -956,29 +974,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Tank Destroyer" hidden="false" id="a8ba-5c26-f8dd-99cf">
       <infoLinks>
-        <infoLink name="Tank Destroyer" id="Tank Destroyer" hidden="false" type="rule" targetId="338c-b939-0d55-cde3"/>
+        <infoLink name="Thin Armor" id="Thin Armor" hidden="false" targetId="a202-a363-cb17-876f" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="5"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Thin Armor" hidden="false" id="1cfb-f20e-94b6-d1bc">
-      <infoLinks>
-        <infoLink name="Thin Armor" id="Thin Armor" hidden="false" type="rule" targetId="a202-a363-cb17-876f"/>
-      </infoLinks>
+    <selectionEntry name="Trailer" id="dc21-0be8-4fb7-6be9" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="-10"/>
@@ -986,33 +989,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Trailer" hidden="false" id="dc21-0be8-4fb7-6be9">
       <infoLinks>
-        <infoLink name="Trailer" id="Trailer" hidden="false" type="rule" targetId="f4f8-4eb7-5192-b746"/>
+        <infoLink name="Trailer" id="Trailer" hidden="false" targetId="f4f8-4eb7-5192-b746" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
-      </constraints>
-      <costs>
-        <cost name="Munitions" typeId="Points" value="-10"/>
-        <cost name="Supply" typeId="284c-5503-e866-a2e0" value="0"/>
-        <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
-        <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
-      </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Transport 1" hidden="false" id="541e-312e-c51e-dfec">
-      <infoLinks>
-        <infoLink name="Transport X" id="1903-9464-290e-c25b" hidden="false" type="rule" targetId="1fce-f78c-f02d-eeae">
-          <modifiers>
-            <modifier type="replace" value="1" field="name" arg="X"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
+    <selectionEntry name="Transport 1" id="541e-312e-c51e-dfec" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -1020,23 +1004,27 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Singular" hidden="false" id="5550-a658-0f07-f03f">
       <infoLinks>
-        <infoLink name="Singular" id="Unmanageable" hidden="false" type="rule" targetId="7a26-c952-fe2c-529f"/>
+        <infoLink name="Transport X" id="1903-9464-290e-c25b" hidden="false" targetId="1fce-f78c-f02d-eeae" type="rule">
+          <modifiers>
+            <modifier arg="X" field="name" type="replace" value="1"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Singular" id="5550-a658-0f07-f03f" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="(CORE) Flex" hidden="false" id="1d43-75f9-c9b2-b3ba">
       <infoLinks>
-        <infoLink name="(CORE) Flex" id="(CORE) Flex" hidden="false" type="rule" targetId="18aa-27f1-0ef7-3fa1"/>
+        <infoLink name="Singular" id="Unmanageable" hidden="false" targetId="7a26-c952-fe2c-529f" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="(CORE) Flex" id="1d43-75f9-c9b2-b3ba" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="103b-def3-aed1-41f3-max" includeChildSelections="false"/>
+        <constraint id="103b-def3-aed1-41f3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="103b-def3-aed1-41f3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -1044,33 +1032,29 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 4/6" hidden="false" id="69bb-53ff-a987-5a16">
       <infoLinks>
-        <infoLink name="Dial In X" id="Dial In" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
-          <modifiers>
-            <modifier type="replace" value="4/6" field="name" arg="X"/>
-            <modifier type="replace" value="4" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="6" field="description" arg="X"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="(CORE) Flex" id="(CORE) Flex" hidden="false" targetId="18aa-27f1-0ef7-3fa1" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Dial In 4/6" id="69bb-53ff-a987-5a16" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5908-a12f-a022-3124-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5908-a12f-a022-3124-max" includeChildSelections="false"/>
+        <constraint id="5908-a12f-a022-3124-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="5908-a12f-a022-3124-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Transport 3" hidden="false" id="c21a-a23a-7d6d-f1c9">
       <infoLinks>
-        <infoLink name="Transport X" id="180d-189e-3134-33f9" hidden="false" type="rule" targetId="1fce-f78c-f02d-eeae">
+        <infoLink name="Dial In X" id="Dial In" hidden="false" targetId="ff6d-dccf-e9fa-094b" type="rule">
           <modifiers>
-            <modifier type="replace" value="3" field="name" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="4/6"/>
+            <modifier arg="X" field="description" position="1" type="replace" value="4"/>
+            <modifier arg="X" field="description" type="replace" value="6"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Transport 3" id="c21a-a23a-7d6d-f1c9" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f0a-20d6-70bd-788b" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3961-d53d-4814-4460" includeChildSelections="false"/>
+        <constraint id="0f0a-20d6-70bd-788b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="3961-d53d-4814-4460" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -1078,18 +1062,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Transport 2" hidden="false" id="0e7b-c3e3-d42c-d86f">
       <infoLinks>
-        <infoLink name="Transport X" id="2c2f-f471-3e34-dbc5" hidden="false" type="rule" targetId="1fce-f78c-f02d-eeae">
+        <infoLink name="Transport X" id="180d-189e-3134-33f9" hidden="false" targetId="1fce-f78c-f02d-eeae" type="rule">
           <modifiers>
-            <modifier type="replace" value="2" field="name" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="3"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Transport 2" id="0e7b-c3e3-d42c-d86f" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d7b4-3cb7-7af5-8937" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19f5-904b-9c8d-83f3" includeChildSelections="false"/>
+        <constraint id="d7b4-3cb7-7af5-8937" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="19f5-904b-9c8d-83f3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -1097,19 +1081,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 3" hidden="false" id="73c6-712f-a0d6-6ebf">
       <infoLinks>
-        <infoLink name="Officer X" id="7094-2326-9dda-6262" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
+        <infoLink name="Transport X" id="2c2f-f471-3e34-dbc5" hidden="false" targetId="1fce-f78c-f02d-eeae" type="rule">
           <modifiers>
-            <modifier type="replace" value="3" field="name" arg="X"/>
-            <modifier type="replace" value="3" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="2"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Officer 3" id="73c6-712f-a0d6-6ebf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be99-7647-b9ec-e0dc" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ae5-b550-1b55-b33b" includeChildSelections="false"/>
+        <constraint id="be99-7647-b9ec-e0dc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="4ae5-b550-1b55-b33b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="55"/>
@@ -1117,19 +1100,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 5" hidden="false" id="060e-3ae9-cd61-3cb3">
       <infoLinks>
-        <infoLink name="Officer X" id="daff-ee2e-1de4-e7e3" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
+        <infoLink name="Officer X" id="7094-2326-9dda-6262" hidden="false" targetId="6de5-545b-2ac4-744e" type="rule">
           <modifiers>
-            <modifier type="replace" value="5" field="name" arg="X"/>
-            <modifier type="replace" value="5" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="3"/>
+            <modifier arg="X" field="description" type="replace" value="3"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Officer 5" id="060e-3ae9-cd61-3cb3" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74a9-82b1-b23b-4a73" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e93-096f-eb71-3304" includeChildSelections="false"/>
+        <constraint id="74a9-82b1-b23b-4a73" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="2e93-096f-eb71-3304" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="90"/>
@@ -1137,19 +1120,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 6" hidden="false" id="59ee-415f-f275-219b">
       <infoLinks>
-        <infoLink name="Officer X" id="5c1b-61ef-3f1c-b669" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
+        <infoLink name="Officer X" id="daff-ee2e-1de4-e7e3" hidden="false" targetId="6de5-545b-2ac4-744e" type="rule">
           <modifiers>
-            <modifier type="replace" value="6" field="name" arg="X"/>
-            <modifier type="replace" value="6" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="5"/>
+            <modifier arg="X" field="description" type="replace" value="5"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Officer 6" id="59ee-415f-f275-219b" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c79f-d5ae-3c2a-f31c" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ab1-06a5-8be5-d775" includeChildSelections="false"/>
+        <constraint id="c79f-d5ae-3c2a-f31c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="2ab1-06a5-8be5-d775" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="100"/>
@@ -1157,19 +1140,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 7" hidden="false" id="4af0-1a59-8ab9-eb2d">
       <infoLinks>
-        <infoLink name="Officer X" id="ff9e-3493-439d-8af9" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
+        <infoLink name="Officer X" id="5c1b-61ef-3f1c-b669" hidden="false" targetId="6de5-545b-2ac4-744e" type="rule">
           <modifiers>
-            <modifier type="replace" value="7" field="name" arg="X"/>
-            <modifier type="replace" value="7" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="6"/>
+            <modifier arg="X" field="description" type="replace" value="6"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Officer 7" id="4af0-1a59-8ab9-eb2d" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0efb-c377-33b5-607e" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23bd-d893-66f4-e4e4" includeChildSelections="false"/>
+        <constraint id="0efb-c377-33b5-607e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="23bd-d893-66f4-e4e4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="105"/>
@@ -1177,19 +1160,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Officer 2" hidden="false" id="3bf2-8b19-6749-94c7">
       <infoLinks>
-        <infoLink name="Officer X" id="3fec-3bac-99c2-e7a2" hidden="false" type="rule" targetId="6de5-545b-2ac4-744e">
+        <infoLink name="Officer X" id="ff9e-3493-439d-8af9" hidden="false" targetId="6de5-545b-2ac4-744e" type="rule">
           <modifiers>
-            <modifier type="replace" value="2" field="name" arg="X"/>
-            <modifier type="replace" value="2" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="7"/>
+            <modifier arg="X" field="description" type="replace" value="7"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Officer 2" id="3bf2-8b19-6749-94c7" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1cf9-c6b8-b752-1074" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f982-6503-6b40-6153" includeChildSelections="false"/>
+        <constraint id="1cf9-c6b8-b752-1074" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="f982-6503-6b40-6153" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="30"/>
@@ -1197,18 +1180,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bulwark 2" hidden="false" id="864a-d7b1-6988-7b9b">
       <infoLinks>
-        <infoLink name="Bulwark X" id="2654-58dc-43ed-a034" hidden="false" type="rule" targetId="aec5-cc4d-2950-d314">
+        <infoLink name="Officer X" id="3fec-3bac-99c2-e7a2" hidden="false" targetId="6de5-545b-2ac4-744e" type="rule">
           <modifiers>
-            <modifier type="replace" value="2" field="name" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="2"/>
+            <modifier arg="X" field="description" type="replace" value="2"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bulwark 2" id="864a-d7b1-6988-7b9b" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="376b-c356-34b0-739b" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4f2-bbe9-30da-5cd9" includeChildSelections="false"/>
+        <constraint id="376b-c356-34b0-739b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="d4f2-bbe9-30da-5cd9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -1216,18 +1200,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bulwark 3" hidden="false" id="97cb-415f-1725-b6e7">
       <infoLinks>
-        <infoLink name="Bulwark X" id="ebe4-4848-87fa-05dc" hidden="false" type="rule" targetId="aec5-cc4d-2950-d314">
+        <infoLink name="Bulwark X" id="2654-58dc-43ed-a034" hidden="false" targetId="aec5-cc4d-2950-d314" type="rule">
           <modifiers>
-            <modifier type="replace" value="3" field="name" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="2"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bulwark 3" id="97cb-415f-1725-b6e7" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e4cc-d3d6-6f4d-b5a5" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3246-eb1c-e52e-ea11" includeChildSelections="false"/>
+        <constraint id="e4cc-d3d6-6f4d-b5a5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="3246-eb1c-e52e-ea11" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="15"/>
@@ -1235,18 +1219,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bulwark 4" hidden="false" id="9dae-6eae-480f-44f6">
       <infoLinks>
-        <infoLink name="Bulwark X" id="d4b1-c4ac-ab61-ea2e" hidden="false" type="rule" targetId="aec5-cc4d-2950-d314">
+        <infoLink name="Bulwark X" id="ebe4-4848-87fa-05dc" hidden="false" targetId="aec5-cc4d-2950-d314" type="rule">
           <modifiers>
-            <modifier type="replace" value="4" field="name" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="3"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bulwark 4" id="9dae-6eae-480f-44f6" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f3b-d6ab-0195-6692" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ce8-fa84-c6ca-1df1" includeChildSelections="false"/>
+        <constraint id="9f3b-d6ab-0195-6692" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="9ce8-fa84-c6ca-1df1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="20"/>
@@ -1254,19 +1238,18 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Open Topped 2" hidden="false" id="632b-f2b5-80c9-02b4">
       <infoLinks>
-        <infoLink name="Open Topped X" id="fd88-1521-004e-3d85" hidden="false" type="rule" targetId="7608-aac0-48a4-2e10">
+        <infoLink name="Bulwark X" id="d4b1-c4ac-ab61-ea2e" hidden="false" targetId="aec5-cc4d-2950-d314" type="rule">
           <modifiers>
-            <modifier type="replace" value="2" field="name" arg="X"/>
-            <modifier type="replace" value="2" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="4"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Open Topped 2" id="632b-f2b5-80c9-02b4" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db61-68f2-d70f-37eb" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c28-df70-23c0-7a6a" includeChildSelections="false"/>
+        <constraint id="db61-68f2-d70f-37eb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="7c28-df70-23c0-7a6a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -1274,19 +1257,19 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Open Topped 3" hidden="false" id="e18d-5058-92c9-3c50">
       <infoLinks>
-        <infoLink name="Open Topped X" id="ef84-282e-2483-eb87" hidden="false" type="rule" targetId="7608-aac0-48a4-2e10">
+        <infoLink name="Open Topped X" id="fd88-1521-004e-3d85" hidden="false" targetId="7608-aac0-48a4-2e10" type="rule">
           <modifiers>
-            <modifier type="replace" value="3" field="name" arg="X"/>
-            <modifier type="replace" value="3" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="2"/>
+            <modifier arg="X" field="description" type="replace" value="2"/>
           </modifiers>
         </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Open Topped 3" id="e18d-5058-92c9-3c50" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef77-4697-ce1c-9673" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a034-e0d7-0d6c-cf11" includeChildSelections="false"/>
+        <constraint id="ef77-4697-ce1c-9673" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="a034-e0d7-0d6c-cf11" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="10"/>
@@ -1294,95 +1277,100 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Distributed Elements" hidden="false" id="3f9f-cf3c-404c-1b83">
       <infoLinks>
-        <infoLink name="Distributed Elements" id="ed8c-799a-7b08-a1a4" hidden="false" type="rule" targetId="d9d0-c54d-43af-97d9"/>
+        <infoLink name="Open Topped X" id="ef84-282e-2483-eb87" hidden="false" targetId="7608-aac0-48a4-2e10" type="rule">
+          <modifiers>
+            <modifier arg="X" field="name" type="replace" value="3"/>
+            <modifier arg="X" field="description" type="replace" value="3"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Distributed Elements" id="3f9f-cf3c-404c-1b83" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cedd-4a0f-9c92-bf8b-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cedd-4a0f-9c92-bf8b-max" includeChildSelections="false"/>
+        <constraint id="cedd-4a0f-9c92-bf8b-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="cedd-4a0f-9c92-bf8b-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Distributed Command" hidden="false" id="94dd-b01f-0a6a-fb0d">
       <infoLinks>
-        <infoLink name="Distributed Command" id="21a3-2453-7712-5542" hidden="false" type="rule" targetId="843a-aa4f-52ab-704e"/>
+        <infoLink name="Distributed Elements" id="ed8c-799a-7b08-a1a4" hidden="false" targetId="d9d0-c54d-43af-97d9" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Distributed Command" id="94dd-b01f-0a6a-fb0d" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="541b-4b9e-be07-b50e-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="541b-4b9e-be07-b50e-max" includeChildSelections="false"/>
+        <constraint id="541b-4b9e-be07-b50e-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="541b-4b9e-be07-b50e-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Gun Tractor" hidden="false" id="8a8f-481f-009a-471c">
       <infoLinks>
-        <infoLink name="Gun Tractor" id="b4dd-a3dc-6bcf-75e7" hidden="false" type="rule" targetId="3420-b82e-13ac-47b2"/>
+        <infoLink name="Distributed Command" id="21a3-2453-7712-5542" hidden="false" targetId="843a-aa4f-52ab-704e" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Gun Tractor" id="8a8f-481f-009a-471c" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f19-2afc-0f1d-5a40-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f19-2afc-0f1d-5a40-max" includeChildSelections="false"/>
+        <constraint id="0f19-2afc-0f1d-5a40-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="0f19-2afc-0f1d-5a40-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Submersible" hidden="false" id="4393-7847-e162-0daf">
       <infoLinks>
-        <infoLink name="Submersible" id="bf47-bae9-a336-ce79" hidden="false" type="rule" targetId="7ae0-7f6c-c4aa-0009"/>
+        <infoLink name="Gun Tractor" id="b4dd-a3dc-6bcf-75e7" hidden="false" targetId="3420-b82e-13ac-47b2" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Submersible" id="4393-7847-e162-0daf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da98-1aef-2503-f146-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da98-1aef-2503-f146-max" includeChildSelections="false"/>
+        <constraint id="da98-1aef-2503-f146-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="da98-1aef-2503-f146-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Amphibious" hidden="false" id="5184-5ebc-7fff-d910">
       <infoLinks>
-        <infoLink name="Amphibious" id="5248-1b47-4e31-e673" hidden="false" type="rule" targetId="2dc5-c4d9-8aed-acf3"/>
+        <infoLink name="Submersible" id="bf47-bae9-a336-ce79" hidden="false" targetId="7ae0-7f6c-c4aa-0009" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Amphibious" id="5184-5ebc-7fff-d910" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="498a-b983-9c5f-929a-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="498a-b983-9c5f-929a-max" includeChildSelections="false"/>
+        <constraint id="498a-b983-9c5f-929a-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="498a-b983-9c5f-929a-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Amphibious Assault" hidden="false" id="01e7-a8e0-6ee0-d381">
       <infoLinks>
-        <infoLink name="Amphibious Assault" id="3b51-22ea-9a9d-431d" hidden="false" type="rule" targetId="ad32-2660-48d5-ff7b"/>
+        <infoLink name="Amphibious" id="5248-1b47-4e31-e673" hidden="false" targetId="2dc5-c4d9-8aed-acf3" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Amphibious Assault" id="01e7-a8e0-6ee0-d381" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a945-0024-51e8-a99b-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a945-0024-51e8-a99b-max" includeChildSelections="false"/>
+        <constraint id="a945-0024-51e8-a99b-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="a945-0024-51e8-a99b-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Crash Landing" hidden="false" id="b970-d336-823b-3ce3">
       <infoLinks>
-        <infoLink name="Crash Landing" id="8c55-c18c-ac8c-dd88" hidden="false" type="rule" targetId="3d65-30df-710f-6fff"/>
+        <infoLink name="Amphibious Assault" id="3b51-22ea-9a9d-431d" hidden="false" targetId="ad32-2660-48d5-ff7b" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Crash Landing" id="b970-d336-823b-3ce3" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f99-46d8-bc37-7be3-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f99-46d8-bc37-7be3-max" includeChildSelections="false"/>
+        <constraint id="4f99-46d8-bc37-7be3-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="4f99-46d8-bc37-7be3-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bailout (Aerial)" hidden="false" id="5c1e-3431-d20e-c18a">
       <infoLinks>
-        <infoLink name="Bailout (Aerial)" id="6a2c-9d22-ee55-8d63" hidden="false" type="rule" targetId="dfa3-76f0-a139-f719"/>
+        <infoLink name="Crash Landing" id="8c55-c18c-ac8c-dd88" hidden="false" targetId="3d65-30df-710f-6fff" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bailout (Aerial)" id="5c1e-3431-d20e-c18a" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5ab-a277-28c8-3d42-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5ab-a277-28c8-3d42-max" includeChildSelections="false"/>
+        <constraint id="c5ab-a277-28c8-3d42-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="c5ab-a277-28c8-3d42-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Sealed" hidden="false" id="e0c5-8061-435d-80b1">
       <infoLinks>
-        <infoLink name="Sealed" id="82da-5b81-056a-a0a0" hidden="false" type="rule" targetId="429e-1178-6b2a-e940"/>
+        <infoLink name="Bailout (Aerial)" id="6a2c-9d22-ee55-8d63" hidden="false" targetId="dfa3-76f0-a139-f719" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Sealed" id="e0c5-8061-435d-80b1" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6d0-850a-4b86-d773-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6d0-850a-4b86-d773-max" includeChildSelections="false"/>
+        <constraint id="e6d0-850a-4b86-d773-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="e6d0-850a-4b86-d773-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Flak Shells" hidden="false" id="c0bd-425f-8737-21bc">
       <infoLinks>
-        <infoLink name="Flak Shells" id="cc32-45b2-ee61-3dc9" hidden="false" type="rule" targetId="62d1-9898-61a2-0033"/>
+        <infoLink name="Sealed" id="82da-5b81-056a-a0a0" hidden="false" targetId="429e-1178-6b2a-e940" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Flak Shells" id="c0bd-425f-8737-21bc" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="606c-64a9-6624-1221-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="606c-64a9-6624-1221-max" includeChildSelections="false"/>
+        <constraint id="606c-64a9-6624-1221-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="606c-64a9-6624-1221-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="5"/>
@@ -1390,14 +1378,14 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Setting Up!" hidden="false" id="56bf-4407-084a-e7ab">
       <infoLinks>
-        <infoLink name="Setting Up!" id="0675-18b2-c84e-f322" hidden="false" type="rule" targetId="7278-007d-f597-4cb3"/>
+        <infoLink name="Flak Shells" id="cc32-45b2-ee61-3dc9" hidden="false" targetId="62d1-9898-61a2-0033" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Setting Up!" id="56bf-4407-084a-e7ab" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c459-3ce9-e6a6-b19d-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c459-3ce9-e6a6-b19d-max" includeChildSelections="false"/>
+        <constraint id="c459-3ce9-e6a6-b19d-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="c459-3ce9-e6a6-b19d-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="Munitions" typeId="Points" value="-5"/>
@@ -1405,117 +1393,120 @@ These rules do not apply to Weapons with the Flames or Gas Special Rules.</descr
         <cost name="Intel" typeId="2f82-38f2-c47a-db0a" value="0"/>
         <cost name="Activations" typeId="a4ae-e848-77a7-6d45" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dispersed Transport" hidden="false" id="9563-cf38-fd09-8533">
       <infoLinks>
-        <infoLink name="Dispersed Transport" id="958b-dc3a-12e7-707f" hidden="false" type="rule" targetId="a52e-192e-3784-7fe0"/>
+        <infoLink name="Setting Up!" id="0675-18b2-c84e-f322" hidden="false" targetId="7278-007d-f597-4cb3" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d206-6cc7-7a3a-a601-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d206-6cc7-7a3a-a601-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 8/10" hidden="false" id="dbe4-b002-79a9-5cf9">
+    <selectionEntry name="Dispersed Transport" id="9563-cf38-fd09-8533" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="d206-6cc7-7a3a-a601-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="d206-6cc7-7a3a-a601-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <infoLinks>
-        <infoLink name="Dial In X" id="c8a4-8687-cb61-67cb" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+        <infoLink name="Dispersed Transport" id="958b-dc3a-12e7-707f" hidden="false" targetId="a52e-192e-3784-7fe0" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Dial In 8/10" id="dbe4-b002-79a9-5cf9" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="f422-a03c-a9ad-aaef-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="f422-a03c-a9ad-aaef-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Dial In X" id="c8a4-8687-cb61-67cb" hidden="false" targetId="ff6d-dccf-e9fa-094b" type="rule">
           <modifiers>
-            <modifier type="replace" value="8/10" field="name" arg="X"/>
-            <modifier type="replace" value="8" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="10" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="8/10"/>
+            <modifier arg="X" field="description" position="1" type="replace" value="8"/>
+            <modifier arg="X" field="description" type="replace" value="10"/>
           </modifiers>
         </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f422-a03c-a9ad-aaef-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f422-a03c-a9ad-aaef-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 12/14" hidden="false" id="9a0d-2598-17f5-b309">
+    <selectionEntry name="Dial In 12/14" id="9a0d-2598-17f5-b309" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="435a-bed7-91c9-3b3d-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="435a-bed7-91c9-3b3d-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <infoLinks>
-        <infoLink name="Dial In X" id="9ea0-8e5f-9f8a-1b96" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+        <infoLink name="Dial In X" id="9ea0-8e5f-9f8a-1b96" hidden="false" targetId="ff6d-dccf-e9fa-094b" type="rule">
           <modifiers>
-            <modifier type="replace" value="12/14" field="name" arg="X"/>
-            <modifier type="replace" value="12" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="14" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="12/14"/>
+            <modifier arg="X" field="description" position="1" type="replace" value="12"/>
+            <modifier arg="X" field="description" type="replace" value="14"/>
           </modifiers>
         </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="435a-bed7-91c9-3b3d-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="435a-bed7-91c9-3b3d-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 10/12" hidden="false" id="b5de-401d-ebc8-6737">
+    <selectionEntry name="Dial In 10/12" id="b5de-401d-ebc8-6737" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="b1a7-6a8a-0c76-7253-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="b1a7-6a8a-0c76-7253-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <infoLinks>
-        <infoLink name="Dial In X" id="f737-2904-1f91-0619" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+        <infoLink name="Dial In X" id="f737-2904-1f91-0619" hidden="false" targetId="ff6d-dccf-e9fa-094b" type="rule">
           <modifiers>
-            <modifier type="replace" value="10/12" field="name" arg="X"/>
-            <modifier type="replace" value="10" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="12" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="10/12"/>
+            <modifier arg="X" field="description" position="1" type="replace" value="10"/>
+            <modifier arg="X" field="description" type="replace" value="12"/>
           </modifiers>
         </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b1a7-6a8a-0c76-7253-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1a7-6a8a-0c76-7253-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 6/8" hidden="false" id="f65e-0bb8-88ef-d0ca">
+    <selectionEntry name="Dial In 6/8" id="f65e-0bb8-88ef-d0ca" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="4fbf-cc11-3cbf-8e33-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="4fbf-cc11-3cbf-8e33-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <infoLinks>
-        <infoLink name="Dial In X" id="6ceb-1734-c97b-ab48" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+        <infoLink name="Dial In X" id="6ceb-1734-c97b-ab48" hidden="false" targetId="ff6d-dccf-e9fa-094b" type="rule">
           <modifiers>
-            <modifier type="replace" value="6/8" field="name" arg="X"/>
-            <modifier type="replace" value="6" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="8" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="6/8"/>
+            <modifier arg="X" field="description" position="1" type="replace" value="6"/>
+            <modifier arg="X" field="description" type="replace" value="8"/>
           </modifiers>
         </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fbf-cc11-3cbf-8e33-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fbf-cc11-3cbf-8e33-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dial In 14/16" hidden="false" id="33e7-53a4-76be-084b">
+    <selectionEntry name="Dial In 14/16" id="33e7-53a4-76be-084b" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="bca3-04ed-f11d-9933-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="bca3-04ed-f11d-9933-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <infoLinks>
-        <infoLink name="Dial In X" id="c8d1-b681-4373-685c" hidden="false" type="rule" targetId="ff6d-dccf-e9fa-094b">
+        <infoLink name="Dial In X" id="c8d1-b681-4373-685c" hidden="false" targetId="ff6d-dccf-e9fa-094b" type="rule">
           <modifiers>
-            <modifier type="replace" value="14/16" field="name" arg="X"/>
-            <modifier type="replace" value="14" field="description" arg="X" position="1"/>
-            <modifier type="replace" value="16" field="description" arg="X"/>
+            <modifier arg="X" field="name" type="replace" value="14/16"/>
+            <modifier arg="X" field="description" position="1" type="replace" value="14"/>
+            <modifier arg="X" field="description" type="replace" value="16"/>
           </modifiers>
         </infoLink>
       </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bca3-04ed-f11d-9933-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bca3-04ed-f11d-9933-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Fixed Loadout" hidden="false" id="3598-8a56-38dd-4abf">
-      <infoLinks>
-        <infoLink name="Fixed Loadout" id="8877-0bf2-b781-7f87" hidden="false" type="rule" targetId="ef41-70ca-bb42-13b3"/>
-      </infoLinks>
+    <selectionEntry name="Fixed Loadout" id="3598-8a56-38dd-4abf" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3572-89df-c7c7-ada5-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3572-89df-c7c7-ada5-max" includeChildSelections="false"/>
+        <constraint id="3572-89df-c7c7-ada5-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="3572-89df-c7c7-ada5-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Fixed Loadout" id="8877-0bf2-b781-7f87" hidden="false" targetId="ef41-70ca-bb42-13b3" type="rule"/>
+      </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Untrained" hidden="false" id="bf3c-7d43-835f-bf5a">
-      <infoLinks>
-        <infoLink name="Untrained" id="5b51-44d7-853e-27ef" hidden="false" type="rule" targetId="64d9-bdf9-0795-bbe2"/>
-      </infoLinks>
+    <selectionEntry name="Untrained" id="bf3c-7d43-835f-bf5a" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc9a-9286-5580-f510-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc9a-9286-5580-f510-max" includeChildSelections="false"/>
+        <constraint id="dc9a-9286-5580-f510-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="dc9a-9286-5580-f510-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Untrained" id="5b51-44d7-853e-27ef" hidden="false" targetId="64d9-bdf9-0795-bbe2" type="rule"/>
+      </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Armored Personnel Carrier" hidden="false" id="21d6-a843-1ec9-e0a0">
-      <infoLinks>
-        <infoLink name="Armored Personnel Carrier" id="cbb5-8db9-fa27-e8c3" hidden="false" type="rule" targetId="9da2-bcd3-ff52-8355"/>
-      </infoLinks>
+    <selectionEntry name="Armored Personnel Carrier" id="21d6-a843-1ec9-e0a0" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38c3-1388-5339-025a-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38c3-1388-5339-025a-max" includeChildSelections="false"/>
+        <constraint id="38c3-1388-5339-025a-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="38c3-1388-5339-025a-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Armored Personnel Carrier" id="cbb5-8db9-fa27-e8c3" hidden="false" targetId="9da2-bcd3-ff52-8355" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
